@@ -1,0 +1,56 @@
+[1.037s] Invoking command in '/home/robofei/Downloads/GC/build/messages': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/Downloads/GC/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/Downloads/GC/build/messages -- -j4 -l4
+[1.143s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.234s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.235s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.883s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.900s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.910s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.321s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.486s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[2.909s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[2.909s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name messages
+[2.909s]   --arguments-file
+[2.910s]   /home/robofei/Downloads/GC/build/messages/rosidl_adapter__arguments__messages.json
+[2.910s]   --output-dir
+[2.910s]   /home/robofei/Downloads/GC/build/messages/rosidl_adapter/messages
+[2.910s]   --output-file
+[2.910s]   /home/robofei/Downloads/GC/build/messages/rosidl_adapter/messages.idls)
+[2.910s]   returned error code 1:
+[2.911s] 
+[2.911s]   Error processing 'bytes secondary_state_mode' of
+[2.911s]   'messages/HumanoidLeagueMsgs': ''bytes' is an invalid message name.  It
+[2.911s]   should have the pattern '^[A-Z][A-Za-z0-9]*$''
+[2.911s] 
+[2.912s]   Traceback (most recent call last):
+[2.912s] 
+[2.912s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[2.912s]       return _run_code(code, main_globals, None,
+[2.912s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[2.913s]       exec(code, run_globals)
+[2.913s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[2.913s]       sys.exit(main())
+[2.913s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[2.913s]       abs_idl_file = convert_to_idl(
+[2.913s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[2.914s]       return convert_msg_to_idl(
+[2.914s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[2.914s]       msg = parse_message_string(package_name, input_file.stem, content)
+[2.914s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 516, in parse_message_string
+[2.914s]       Type(type_string, context_package_name=pkg_name),
+[2.914s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 276, in __init__
+[2.914s]       super(Type, self).__init__(
+[2.915s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 204, in __init__
+[2.916s]       raise InvalidResourceName(
+[2.916s] 
+[2.916s]   rosidl_adapter.parser.InvalidResourceName: 'bytes' is an invalid message
+[2.917s]   name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[2.917s] 
+[2.917s] Call Stack (most recent call first):
+[2.917s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[2.919s]   CMakeLists.txt:22 (rosidl_generate_interfaces)
+[2.919s] 
+[2.920s] 
+[2.920s] -- Configuring incomplete, errors occurred!
+[2.921s] See also "/home/robofei/Downloads/GC/build/messages/CMakeFiles/CMakeOutput.log".
+[2.938s] make: *** [Makefile:748: cmake_check_build_system] Error 1
+[2.939s] Invoked command in '/home/robofei/Downloads/GC/build/messages' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/Downloads/GC/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/Downloads/GC/build/messages -- -j4 -l4

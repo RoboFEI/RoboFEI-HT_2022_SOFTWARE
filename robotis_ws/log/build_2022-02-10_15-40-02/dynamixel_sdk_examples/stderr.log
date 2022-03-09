@@ -1,0 +1,20 @@
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:17:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   17 |       [01;31m[Kpublisher_[m[K = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10);
+      |       [01;31m[K^~~~~~~~~~[m[K
+      |       [32m[Krcl_publisher_t[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:18:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+   18 |       [01;31m[Ktimer_[m[K = this->create_wall_timer(
+      |       [01;31m[K^~~~~~[m[K
+      |       [32m[Ktimer_t[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback()[m[K’:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:25:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage[m[K’ was not declared in this scope
+   25 |       [01;31m[Kmessage[m[K = dynamixel_sdk_custom_interfaces::msg::SetPosition();
+      |       [01;31m[K^~~~~~~[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:28:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   28 |         [01;31m[Kpublisher_[m[K->publish(message);
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Krcl_publisher_t[m[K
+make[2]: *** [CMakeFiles/minimal_pub.dir/build.make:63: CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_pub.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

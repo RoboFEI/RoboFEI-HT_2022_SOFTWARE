@@ -1,0 +1,37 @@
+[35m[1mScanning dependencies of target minimal_pub[0m
+[ 50%] Built target read_write_node
+[ 75%] [32mBuilding CXX object CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o[0m
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:33:23:[m[K [01;31m[Kerror: [m[K‘[01m[Ktutorial_interfaces[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_interfaces[m[K’?
+   33 |     rclcpp::Publisher<[01;31m[Ktutorial_interfaces[m[K::msg::Num>::SharedPtr publisher_;         // CHANGE
+      |                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |                       [32m[Krcl_interfaces[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:33:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   33 |     rclcpp::Publisher<tutorial_interfaces::msg::Num[01;31m[K>[m[K::SharedPtr publisher_;         // CHANGE
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:33:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   33 |     rclcpp::Publisher<tutorial_interfaces::msg::Num>::[01;31m[KSharedPtr[m[K publisher_;         // CHANGE
+      |                                                       [01;31m[K^~~~~~~~~[m[K
+      |                                                                [32m[K;[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:33:65:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ does not name a type; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   33 |  rclcpp::Publisher<tutorial_interfaces::msg::Num>::SharedPtr [01;31m[Kpublisher_[m[K;         // CHANGE
+      |                                                              [01;31m[K^~~~~~~~~~[m[K
+      |                                                              [32m[Krcl_publisher_t[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:16:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   16 |       [01;31m[Kpublisher_[m[K = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10);
+      |       [01;31m[K^~~~~~~~~~[m[K
+      |       [32m[Krcl_publisher_t[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:18:7:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""ms[m[K’
+   18 |       [01;31m[K500ms[m[K, std::bind(&MinimalPublisher::timer_callback, this));
+      |       [01;31m[K^~~~~[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback()[m[K’:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:24:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage[m[K’ was not declared in this scope
+   24 |       [01;31m[Kmessage[m[K = dynamixel_sdk_custom_interfaces::msg::SetPosition();
+      |       [01;31m[K^~~~~~~[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:27:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   27 |         [01;31m[Kpublisher_[m[K->publish(message);
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Krcl_publisher_t[m[K
+make[2]: *** [CMakeFiles/minimal_pub.dir/build.make:63: CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_pub.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

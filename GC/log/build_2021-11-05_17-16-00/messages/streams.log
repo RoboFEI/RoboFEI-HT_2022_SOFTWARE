@@ -1,0 +1,55 @@
+[0.611s] Invoking command in '/home/amd/Documentos/GC/build/messages': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/amd/Documentos/GC/build/messages -- -j2 -l2
+[0.693s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.748s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.748s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.218s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.218s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.241s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.752s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.904s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[2.366s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[2.372s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name messages
+[2.374s]   --arguments-file
+[2.375s]   /home/amd/Documentos/GC/build/messages/rosidl_adapter__arguments__messages.json
+[2.375s]   --output-dir /home/amd/Documentos/GC/build/messages/rosidl_adapter/messages
+[2.375s]   --output-file
+[2.376s]   /home/amd/Documentos/GC/build/messages/rosidl_adapter/messages.idls)
+[2.378s]   returned error code 1:
+[2.379s] 
+[2.382s]   Error processing 'unit8 seconds_till_unpenalized' of
+[2.384s]   'messages/HumanoidLeagueMsgs': ''unit8' is an invalid message name.  It
+[2.388s]   should have the pattern '^[A-Z][A-Za-z0-9]*$''
+[2.390s] 
+[2.390s]   Traceback (most recent call last):
+[2.390s] 
+[2.390s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[2.391s]       return _run_code(code, main_globals, None,
+[2.391s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[2.391s]       exec(code, run_globals)
+[2.392s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[2.394s]       sys.exit(main())
+[2.396s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[2.398s]       abs_idl_file = convert_to_idl(
+[2.398s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[2.400s]       return convert_msg_to_idl(
+[2.400s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[2.401s]       msg = parse_message_string(package_name, input_file.stem, content)
+[2.404s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 516, in parse_message_string
+[2.406s]       Type(type_string, context_package_name=pkg_name),
+[2.406s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 276, in __init__
+[2.406s]       super(Type, self).__init__(
+[2.407s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 204, in __init__
+[2.407s]       raise InvalidResourceName(
+[2.408s] 
+[2.409s]   rosidl_adapter.parser.InvalidResourceName: 'unit8' is an invalid message
+[2.410s]   name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[2.411s] 
+[2.411s] Call Stack (most recent call first):
+[2.417s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[2.423s]   CMakeLists.txt:22 (rosidl_generate_interfaces)
+[2.423s] 
+[2.425s] 
+[2.427s] -- Configuring incomplete, errors occurred!
+[2.428s] See also "/home/amd/Documentos/GC/build/messages/CMakeFiles/CMakeOutput.log".
+[2.428s] make: *** [Makefile:748: cmake_check_build_system] Erro 1
+[2.441s] Invoked command in '/home/amd/Documentos/GC/build/messages' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/amd/Documentos/GC/build/messages -- -j2 -l2

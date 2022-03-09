@@ -1,0 +1,562 @@
+[0.000000] (-) TimerEvent: {}
+[0.000652] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.000738] (messages) JobQueued: {'identifier': 'messages', 'dependencies': OrderedDict()}
+[0.000776] (controller) JobStarted: {'identifier': 'controller'}
+[0.025574] (messages) JobStarted: {'identifier': 'messages'}
+[0.090000] (-) TimerEvent: {}
+[0.190651] (-) TimerEvent: {}
+[0.291089] (-) TimerEvent: {}
+[0.391476] (-) TimerEvent: {}
+[0.491865] (-) TimerEvent: {}
+[0.592313] (-) TimerEvent: {}
+[0.692887] (-) TimerEvent: {}
+[0.735827] (messages) JobProgress: {'identifier': 'messages', 'progress': 'cmake'}
+[0.736762] (messages) Command: {'cmd': ['/usr/bin/cmake', '/home/amd/Downloads/GC/src/messages/messages', '-DCMAKE_INSTALL_PREFIX=/home/amd/Downloads/GC/install/messages'], 'cwd': '/home/amd/Downloads/GC/build/messages', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'pt_BR:pt:en'), ('USER', 'amd'), ('SSH_AGENT_PID', '1185'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/amd'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '913'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=db00906a0b31862e2f326ffe6184796a'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'amd'), ('JOURNAL_STREAM', '8:33703'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'amd'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/amd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/AMD:@/tmp/.ICE-unix/1230,unix/AMD:/tmp/.ICE-unix/1230'), ('INVOCATION_ID', '4ba77b5aa11b43aa9f6f9dbcd03d3e86'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3b50cee7_1d48_4a71_b4b1_a1f1d1eda348'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'pt_BR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.86'), ('GAME_CONTROLLER_HOME', '/home/amd/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr'), ('PWD', '/home/amd/Downloads/GC/build/messages'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=db00906a0b31862e2f326ffe6184796a'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.767891] (controller) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/controller', 'build', '--build-base', '/home/amd/Downloads/GC/build/controller/build', 'install', '--prefix', '/home/amd/Downloads/GC/install/controller', '--record', '/home/amd/Downloads/GC/build/controller/install.log', '--single-version-externally-managed'], 'cwd': '/home/amd/Downloads/GC/src/controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'pt_BR:pt:en', 'USER': 'amd', 'SSH_AGENT_PID': '1185', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/amd', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '913', 'DBUS_STARTER_BUS_TYPE': 'session', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=db00906a0b31862e2f326ffe6184796a', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'amd', 'JOURNAL_STREAM': '8:33703', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'amd', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/amd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/AMD:@/tmp/.ICE-unix/1230,unix/AMD:/tmp/.ICE-unix/1230', 'INVOCATION_ID': '4ba77b5aa11b43aa9f6f9dbcd03d3e86', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/3b50cee7_1d48_4a71_b4b1_a1f1d1eda348', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'pt_BR.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.86', 'GAME_CONTROLLER_HOME': '/home/amd/GameController', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'JAVA_HOME': '/usr', 'PWD': '/home/amd/Downloads/GC/build/controller', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=db00906a0b31862e2f326ffe6184796a', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/amd/Downloads/GC/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[0.793078] (-) TimerEvent: {}
+[0.893522] (-) TimerEvent: {}
+[0.993965] (-) TimerEvent: {}
+[1.094365] (-) TimerEvent: {}
+[1.194865] (-) TimerEvent: {}
+[1.295438] (-) TimerEvent: {}
+[1.395948] (-) TimerEvent: {}
+[1.462802] (controller) StdoutLine: {'line': b'running egg_info\n'}
+[1.465521] (controller) StdoutLine: {'line': b'writing ../../build/controller/controller.egg-info/PKG-INFO\n'}
+[1.466661] (controller) StdoutLine: {'line': b'writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt\n'}
+[1.467618] (controller) StdoutLine: {'line': b'writing entry points to ../../build/controller/controller.egg-info/entry_points.txt\n'}
+[1.468527] (controller) StdoutLine: {'line': b'writing requirements to ../../build/controller/controller.egg-info/requires.txt\n'}
+[1.469243] (controller) StdoutLine: {'line': b'writing top-level names to ../../build/controller/controller.egg-info/top_level.txt\n'}
+[1.496678] (-) TimerEvent: {}
+[1.575428] (controller) StdoutLine: {'line': b"reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'\n"}
+[1.579448] (controller) StdoutLine: {'line': b"writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'\n"}
+[1.580785] (controller) StdoutLine: {'line': b'running build\n'}
+[1.581600] (controller) StdoutLine: {'line': b'running build_py\n'}
+[1.583595] (controller) StdoutLine: {'line': b'running install\n'}
+[1.585584] (controller) StdoutLine: {'line': b'running install_lib\n'}
+[1.589189] (controller) StdoutLine: {'line': b'running install_data\n'}
+[1.591316] (controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.596059] (controller) StdoutLine: {'line': b"removing '/home/amd/Downloads/GC/install/controller/lib/python3.8/site-packages/controller-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[1.596761] (-) TimerEvent: {}
+[1.597763] (controller) StdoutLine: {'line': b'Copying ../../build/controller/controller.egg-info to /home/amd/Downloads/GC/install/controller/lib/python3.8/site-packages/controller-0.0.0-py3.8.egg-info\n'}
+[1.600153] (controller) StdoutLine: {'line': b'running install_scripts\n'}
+[1.652926] (controller) StdoutLine: {'line': b'Installing talker script to /home/amd/Downloads/GC/install/controller/lib/controller\n'}
+[1.654474] (controller) StdoutLine: {'line': b"writing list of installed files to '/home/amd/Downloads/GC/build/controller/install.log'\n"}
+[1.696921] (-) TimerEvent: {}
+[1.717349] (controller) CommandEnded: {'returncode': 0}
+[1.762066] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[1.797088] (-) TimerEvent: {}
+[1.897459] (-) TimerEvent: {}
+[1.997803] (-) TimerEvent: {}
+[2.098193] (-) TimerEvent: {}
+[2.198541] (-) TimerEvent: {}
+[2.298929] (-) TimerEvent: {}
+[2.399326] (-) TimerEvent: {}
+[2.499697] (-) TimerEvent: {}
+[2.600117] (-) TimerEvent: {}
+[2.700621] (-) TimerEvent: {}
+[2.739119] (messages) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.3.0\n'}
+[2.800784] (-) TimerEvent: {}
+[2.901212] (-) TimerEvent: {}
+[3.001764] (-) TimerEvent: {}
+[3.102286] (-) TimerEvent: {}
+[3.202685] (-) TimerEvent: {}
+[3.303051] (-) TimerEvent: {}
+[3.403401] (-) TimerEvent: {}
+[3.503851] (-) TimerEvent: {}
+[3.604202] (-) TimerEvent: {}
+[3.704628] (-) TimerEvent: {}
+[3.805166] (-) TimerEvent: {}
+[3.905755] (-) TimerEvent: {}
+[4.006332] (-) TimerEvent: {}
+[4.107167] (-) TimerEvent: {}
+[4.207723] (-) TimerEvent: {}
+[4.293793] (messages) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.3.0\n'}
+[4.307871] (-) TimerEvent: {}
+[4.408464] (-) TimerEvent: {}
+[4.408973] (messages) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[4.508575] (-) TimerEvent: {}
+[4.609074] (-) TimerEvent: {}
+[4.624130] (messages) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[4.630181] (messages) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.709276] (-) TimerEvent: {}
+[4.809839] (-) TimerEvent: {}
+[4.888890] (messages) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.910222] (-) TimerEvent: {}
+[4.935024] (messages) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.950533] (messages) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.987217] (messages) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[5.010163] (-) TimerEvent: {}
+[5.110770] (-) TimerEvent: {}
+[5.200357] (messages) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[5.202963] (messages) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.210979] (-) TimerEvent: {}
+[5.311571] (-) TimerEvent: {}
+[5.412156] (-) TimerEvent: {}
+[5.471875] (messages) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.510893] (messages) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.512370] (-) TimerEvent: {}
+[5.519265] (messages) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.612568] (-) TimerEvent: {}
+[5.713284] (-) TimerEvent: {}
+[5.813831] (-) TimerEvent: {}
+[5.817652] (messages) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[5.913969] (-) TimerEvent: {}
+[6.014557] (-) TimerEvent: {}
+[6.114950] (-) TimerEvent: {}
+[6.215432] (-) TimerEvent: {}
+[6.315802] (-) TimerEvent: {}
+[6.340940] (messages) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[6.341373] (messages) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[6.415924] (-) TimerEvent: {}
+[6.516343] (-) TimerEvent: {}
+[6.616683] (-) TimerEvent: {}
+[6.717039] (-) TimerEvent: {}
+[6.817421] (-) TimerEvent: {}
+[6.917790] (-) TimerEvent: {}
+[7.018453] (-) TimerEvent: {}
+[7.118898] (-) TimerEvent: {}
+[7.207489] (messages) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[7.219065] (-) TimerEvent: {}
+[7.253869] (messages) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.319185] (-) TimerEvent: {}
+[7.409878] (messages) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[7.419328] (-) TimerEvent: {}
+[7.519765] (-) TimerEvent: {}
+[7.620202] (-) TimerEvent: {}
+[7.720589] (-) TimerEvent: {}
+[7.820996] (-) TimerEvent: {}
+[7.921438] (-) TimerEvent: {}
+[8.021994] (-) TimerEvent: {}
+[8.122692] (-) TimerEvent: {}
+[8.223247] (-) TimerEvent: {}
+[8.323615] (-) TimerEvent: {}
+[8.340367] (messages) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[8.423761] (-) TimerEvent: {}
+[8.445184] (messages) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[8.523933] (-) TimerEvent: {}
+[8.624312] (-) TimerEvent: {}
+[8.724686] (-) TimerEvent: {}
+[8.825228] (-) TimerEvent: {}
+[8.874332] (messages) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.926550] (-) TimerEvent: {}
+[9.027254] (-) TimerEvent: {}
+[9.081867] (messages) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[9.127378] (-) TimerEvent: {}
+[9.227742] (-) TimerEvent: {}
+[9.328636] (-) TimerEvent: {}
+[9.429222] (-) TimerEvent: {}
+[9.529668] (-) TimerEvent: {}
+[9.581318] (messages) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[9.629833] (-) TimerEvent: {}
+[9.730283] (-) TimerEvent: {}
+[9.830798] (-) TimerEvent: {}
+[9.931463] (-) TimerEvent: {}
+[10.032101] (-) TimerEvent: {}
+[10.039285] (messages) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[10.127541] (messages) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[10.133805] (-) TimerEvent: {}
+[10.233586] (messages) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[10.233935] (-) TimerEvent: {}
+[10.257266] (messages) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[10.334251] (-) TimerEvent: {}
+[10.435493] (-) TimerEvent: {}
+[10.470995] (messages) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[10.471431] (messages) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[10.471781] (messages) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[10.471972] (messages) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[10.535635] (-) TimerEvent: {}
+[10.539812] (messages) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[10.635756] (-) TimerEvent: {}
+[10.737586] (-) TimerEvent: {}
+[10.837998] (-) TimerEvent: {}
+[10.938679] (-) TimerEvent: {}
+[11.039326] (-) TimerEvent: {}
+[11.107677] (messages) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[11.139446] (-) TimerEvent: {}
+[11.239798] (-) TimerEvent: {}
+[11.340149] (-) TimerEvent: {}
+[11.440556] (-) TimerEvent: {}
+[11.540899] (-) TimerEvent: {}
+[11.556777] (messages) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[11.586344] (messages) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[11.593656] (messages) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[11.610731] (messages) StdoutLine: {'line': b'-- Configuring done\n'}
+[11.641010] (-) TimerEvent: {}
+[11.741350] (-) TimerEvent: {}
+[11.841712] (-) TimerEvent: {}
+[11.844176] (messages) StdoutLine: {'line': b'-- Generating done\n'}
+[11.854290] (messages) StdoutLine: {'line': b'-- Build files have been written to: /home/amd/Downloads/GC/build/messages\n'}
+[11.888948] (messages) CommandEnded: {'returncode': 0}
+[11.891132] (messages) JobProgress: {'identifier': 'messages', 'progress': 'build'}
+[11.891200] (messages) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/amd/Downloads/GC/build/messages', '--', '-j2', '-l2'], 'cwd': '/home/amd/Downloads/GC/build/messages', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'pt_BR:pt:en'), ('USER', 'amd'), ('SSH_AGENT_PID', '1185'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/amd'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '913'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=db00906a0b31862e2f326ffe6184796a'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'amd'), ('JOURNAL_STREAM', '8:33703'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'amd'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/amd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/AMD:@/tmp/.ICE-unix/1230,unix/AMD:/tmp/.ICE-unix/1230'), ('INVOCATION_ID', '4ba77b5aa11b43aa9f6f9dbcd03d3e86'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3b50cee7_1d48_4a71_b4b1_a1f1d1eda348'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'pt_BR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.86'), ('GAME_CONTROLLER_HOME', '/home/amd/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr'), ('PWD', '/home/amd/Downloads/GC/build/messages'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=db00906a0b31862e2f326ffe6184796a'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[11.941881] (-) TimerEvent: {}
+[12.019830] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__cpp\x1b[0m\n'}
+[12.041998] (-) TimerEvent: {}
+[12.048793] (messages) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[12.142132] (-) TimerEvent: {}
+[12.242553] (-) TimerEvent: {}
+[12.342994] (-) TimerEvent: {}
+[12.443366] (-) TimerEvent: {}
+[12.543776] (-) TimerEvent: {}
+[12.644286] (-) TimerEvent: {}
+[12.744628] (-) TimerEvent: {}
+[12.844969] (-) TimerEvent: {}
+[12.945300] (-) TimerEvent: {}
+[13.045648] (-) TimerEvent: {}
+[13.146053] (-) TimerEvent: {}
+[13.149138] (messages) StdoutLine: {'line': b'[  3%] Built target messages__cpp\n'}
+[13.178650] (messages) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[13.246203] (-) TimerEvent: {}
+[13.346636] (-) TimerEvent: {}
+[13.447020] (-) TimerEvent: {}
+[13.547377] (-) TimerEvent: {}
+[13.647715] (-) TimerEvent: {}
+[13.748168] (-) TimerEvent: {}
+[13.848515] (-) TimerEvent: {}
+[13.949247] (-) TimerEvent: {}
+[14.009530] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_generator_c\x1b[0m\n'}
+[14.049479] (-) TimerEvent: {}
+[14.082793] (messages) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/messages__rosidl_generator_c.dir/rosidl_generator_c/messages/msg/detail/humanoid_league_msgs__functions.c.o\x1b[0m\n'}
+[14.149606] (-) TimerEvent: {}
+[14.250001] (-) TimerEvent: {}
+[14.350480] (-) TimerEvent: {}
+[14.432686] (messages) StdoutLine: {'line': b'[ 12%] \x1b[32m\x1b[1mLinking C shared library libmessages__rosidl_generator_c.so\x1b[0m\n'}
+[14.450644] (-) TimerEvent: {}
+[14.550654] (messages) StdoutLine: {'line': b'[ 12%] Built target messages__rosidl_generator_c\n'}
+[14.550890] (-) TimerEvent: {}
+[14.582758] (messages) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[14.651019] (-) TimerEvent: {}
+[14.752819] (-) TimerEvent: {}
+[14.853299] (-) TimerEvent: {}
+[14.953965] (-) TimerEvent: {}
+[15.054321] (-) TimerEvent: {}
+[15.154689] (-) TimerEvent: {}
+[15.204298] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_cpp\x1b[0m\n'}
+[15.254814] (-) TimerEvent: {}
+[15.260493] (messages) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages/msg/humanoid_league_msgs__type_support.cpp.o\x1b[0m\n'}
+[15.354984] (-) TimerEvent: {}
+[15.455447] (-) TimerEvent: {}
+[15.555799] (-) TimerEvent: {}
+[15.656148] (-) TimerEvent: {}
+[15.756529] (-) TimerEvent: {}
+[15.856942] (-) TimerEvent: {}
+[15.960801] (-) TimerEvent: {}
+[16.061150] (-) TimerEvent: {}
+[16.161500] (-) TimerEvent: {}
+[16.261840] (-) TimerEvent: {}
+[16.362188] (-) TimerEvent: {}
+[16.462581] (-) TimerEvent: {}
+[16.562964] (-) TimerEvent: {}
+[16.663336] (-) TimerEvent: {}
+[16.763721] (-) TimerEvent: {}
+[16.864092] (-) TimerEvent: {}
+[16.964479] (-) TimerEvent: {}
+[17.064863] (-) TimerEvent: {}
+[17.165255] (-) TimerEvent: {}
+[17.265636] (-) TimerEvent: {}
+[17.366054] (-) TimerEvent: {}
+[17.466437] (-) TimerEvent: {}
+[17.566839] (-) TimerEvent: {}
+[17.573617] (messages) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking CXX shared library libmessages__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[17.667013] (-) TimerEvent: {}
+[17.723835] (messages) StdoutLine: {'line': b'[ 22%] Built target messages__rosidl_typesupport_cpp\n'}
+[17.765348] (messages) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[17.767161] (-) TimerEvent: {}
+[17.867636] (-) TimerEvent: {}
+[17.972782] (-) TimerEvent: {}
+[18.073348] (-) TimerEvent: {}
+[18.173951] (-) TimerEvent: {}
+[18.274381] (-) TimerEvent: {}
+[18.374961] (-) TimerEvent: {}
+[18.475482] (-) TimerEvent: {}
+[18.517589] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[18.575605] (-) TimerEvent: {}
+[18.590128] (messages) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/messages__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages/msg/detail/dds_fastrtps/humanoid_league_msgs__type_support.cpp.o\x1b[0m\n'}
+[18.675818] (-) TimerEvent: {}
+[18.776774] (-) TimerEvent: {}
+[18.877317] (-) TimerEvent: {}
+[18.977691] (-) TimerEvent: {}
+[19.078356] (-) TimerEvent: {}
+[19.178861] (-) TimerEvent: {}
+[19.279244] (-) TimerEvent: {}
+[19.379649] (-) TimerEvent: {}
+[19.480068] (-) TimerEvent: {}
+[19.580562] (-) TimerEvent: {}
+[19.681202] (-) TimerEvent: {}
+[19.781581] (-) TimerEvent: {}
+[19.881995] (-) TimerEvent: {}
+[19.982366] (-) TimerEvent: {}
+[20.082778] (-) TimerEvent: {}
+[20.175516] (messages) StdoutLine: {'line': b'[ 32%] \x1b[32m\x1b[1mLinking CXX shared library libmessages__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[20.182898] (-) TimerEvent: {}
+[20.283304] (-) TimerEvent: {}
+[20.383802] (-) TimerEvent: {}
+[20.484275] (-) TimerEvent: {}
+[20.524393] (messages) StdoutLine: {'line': b'[ 32%] Built target messages__rosidl_typesupport_fastrtps_cpp\n'}
+[20.547748] (messages) StdoutLine: {'line': b'[ 35%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[20.584430] (-) TimerEvent: {}
+[20.684777] (-) TimerEvent: {}
+[20.785149] (-) TimerEvent: {}
+[20.885506] (-) TimerEvent: {}
+[20.985903] (-) TimerEvent: {}
+[21.086286] (-) TimerEvent: {}
+[21.186650] (-) TimerEvent: {}
+[21.187013] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[21.235038] (messages) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages/msg/detail/humanoid_league_msgs__type_support.cpp.o\x1b[0m\n'}
+[21.286812] (-) TimerEvent: {}
+[21.387406] (-) TimerEvent: {}
+[21.488108] (-) TimerEvent: {}
+[21.588536] (-) TimerEvent: {}
+[21.688919] (-) TimerEvent: {}
+[21.789327] (-) TimerEvent: {}
+[21.890037] (-) TimerEvent: {}
+[21.992515] (-) TimerEvent: {}
+[22.092941] (-) TimerEvent: {}
+[22.111821] (messages) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking CXX shared library libmessages__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[22.193055] (-) TimerEvent: {}
+[22.236578] (messages) StdoutLine: {'line': b'[ 41%] Built target messages__rosidl_typesupport_introspection_cpp\n'}
+[22.269194] (messages) StdoutLine: {'line': b'[ 45%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[22.293243] (-) TimerEvent: {}
+[22.393661] (-) TimerEvent: {}
+[22.494044] (-) TimerEvent: {}
+[22.594517] (-) TimerEvent: {}
+[22.695104] (-) TimerEvent: {}
+[22.795755] (-) TimerEvent: {}
+[22.896191] (-) TimerEvent: {}
+[22.996579] (-) TimerEvent: {}
+[23.072395] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[23.096740] (-) TimerEvent: {}
+[23.106133] (messages) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages/msg/detail/humanoid_league_msgs__type_support.c.o\x1b[0m\n'}
+[23.197571] (-) TimerEvent: {}
+[23.213803] (messages) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking C shared library libmessages__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[23.291136] (messages) StdoutLine: {'line': b'[ 51%] Built target messages__rosidl_typesupport_introspection_c\n'}
+[23.296976] (-) TimerEvent: {}
+[23.319542] (messages) StdoutLine: {'line': b'[ 54%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[23.397441] (-) TimerEvent: {}
+[23.497821] (-) TimerEvent: {}
+[23.598345] (-) TimerEvent: {}
+[23.698909] (-) TimerEvent: {}
+[23.800442] (-) TimerEvent: {}
+[23.900921] (-) TimerEvent: {}
+[24.001285] (-) TimerEvent: {}
+[24.036395] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_c\x1b[0m\n'}
+[24.063161] (messages) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/messages__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages/msg/humanoid_league_msgs__type_support.cpp.o\x1b[0m\n'}
+[24.104826] (-) TimerEvent: {}
+[24.156772] (messages) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libmessages__rosidl_typesupport_c.so\x1b[0m\n'}
+[24.204954] (-) TimerEvent: {}
+[24.250794] (messages) StdoutLine: {'line': b'[ 61%] Built target messages__rosidl_typesupport_c\n'}
+[24.276054] (messages) StdoutLine: {'line': b'[ 64%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[24.305059] (-) TimerEvent: {}
+[24.405419] (-) TimerEvent: {}
+[24.505786] (-) TimerEvent: {}
+[24.606156] (-) TimerEvent: {}
+[24.706581] (-) TimerEvent: {}
+[24.807044] (-) TimerEvent: {}
+[24.907452] (-) TimerEvent: {}
+[24.975176] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[25.009439] (-) TimerEvent: {}
+[25.022158] (messages) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages/msg/detail/humanoid_league_msgs__type_support_c.cpp.o\x1b[0m\n'}
+[25.109567] (-) TimerEvent: {}
+[25.210648] (-) TimerEvent: {}
+[25.311030] (-) TimerEvent: {}
+[25.411504] (-) TimerEvent: {}
+[25.511949] (-) TimerEvent: {}
+[25.612429] (-) TimerEvent: {}
+[25.712788] (-) TimerEvent: {}
+[25.813170] (-) TimerEvent: {}
+[25.913561] (-) TimerEvent: {}
+[26.013951] (-) TimerEvent: {}
+[26.102931] (messages) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libmessages__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[26.114064] (-) TimerEvent: {}
+[26.214447] (-) TimerEvent: {}
+[26.314851] (-) TimerEvent: {}
+[26.363560] (messages) StdoutLine: {'line': b'[ 70%] Built target messages__rosidl_typesupport_fastrtps_c\n'}
+[26.387400] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages\x1b[0m\n'}
+[26.411448] (messages) StdoutLine: {'line': b'[ 70%] Built target messages\n'}
+[26.415117] (-) TimerEvent: {}
+[26.433677] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__py\x1b[0m\n'}
+[26.457591] (messages) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[26.515232] (-) TimerEvent: {}
+[26.615598] (-) TimerEvent: {}
+[26.715960] (-) TimerEvent: {}
+[26.816501] (-) TimerEvent: {}
+[26.916845] (-) TimerEvent: {}
+[27.017190] (-) TimerEvent: {}
+[27.117545] (-) TimerEvent: {}
+[27.217901] (-) TimerEvent: {}
+[27.318278] (-) TimerEvent: {}
+[27.418661] (-) TimerEvent: {}
+[27.519170] (-) TimerEvent: {}
+[27.619560] (-) TimerEvent: {}
+[27.719907] (-) TimerEvent: {}
+[27.820283] (-) TimerEvent: {}
+[27.920617] (-) TimerEvent: {}
+[28.020985] (-) TimerEvent: {}
+[28.121397] (-) TimerEvent: {}
+[28.221875] (-) TimerEvent: {}
+[28.322462] (-) TimerEvent: {}
+[28.422831] (-) TimerEvent: {}
+[28.523324] (-) TimerEvent: {}
+[28.623688] (-) TimerEvent: {}
+[28.724060] (-) TimerEvent: {}
+[28.824386] (-) TimerEvent: {}
+[28.924817] (-) TimerEvent: {}
+[29.027860] (messages) StdoutLine: {'line': b'[ 74%] Built target messages__py\n'}
+[29.028127] (-) TimerEvent: {}
+[29.059115] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__python\x1b[0m\n'}
+[29.128303] (-) TimerEvent: {}
+[29.152950] (messages) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/messages__python.dir/rosidl_generator_py/messages/msg/_humanoid_league_msgs_s.c.o\x1b[0m\n'}
+[29.228414] (-) TimerEvent: {}
+[29.328768] (-) TimerEvent: {}
+[29.429260] (-) TimerEvent: {}
+[29.531712] (-) TimerEvent: {}
+[29.632155] (-) TimerEvent: {}
+[29.732518] (-) TimerEvent: {}
+[29.832889] (-) TimerEvent: {}
+[29.933263] (-) TimerEvent: {}
+[29.945426] (messages) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/messages/libmessages__python.so\x1b[0m\n'}
+[30.033399] (-) TimerEvent: {}
+[30.071981] (messages) StdoutLine: {'line': b'[ 80%] Built target messages__python\n'}
+[30.098304] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[30.133497] (-) TimerEvent: {}
+[30.138296] (messages) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/messages__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/messages/_messages_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[30.233609] (-) TimerEvent: {}
+[30.334337] (-) TimerEvent: {}
+[30.355729] (messages) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/messages/messages_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[30.434500] (-) TimerEvent: {}
+[30.439029] (messages) StdoutLine: {'line': b'[ 87%] Built target messages__rosidl_typesupport_c__pyext\n'}
+[30.465888] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[30.514410] (messages) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/messages__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/messages/_messages_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[30.534615] (-) TimerEvent: {}
+[30.635367] (-) TimerEvent: {}
+[30.718763] (messages) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/messages/messages_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[30.735527] (-) TimerEvent: {}
+[30.803110] (messages) StdoutLine: {'line': b'[ 93%] Built target messages__rosidl_typesupport_introspection_c__pyext\n'}
+[30.823813] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[30.835642] (-) TimerEvent: {}
+[30.870313] (messages) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/messages__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/messages/_messages_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[30.935764] (-) TimerEvent: {}
+[31.036324] (-) TimerEvent: {}
+[31.075863] (messages) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/messages/messages_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[31.136462] (-) TimerEvent: {}
+[31.237113] (-) TimerEvent: {}
+[31.245426] (messages) StdoutLine: {'line': b'[100%] Built target messages__rosidl_typesupport_fastrtps_c__pyext\n'}
+[31.282866] (messages) CommandEnded: {'returncode': 0}
+[31.337287] (-) TimerEvent: {}
+[31.430496] (messages) JobProgress: {'identifier': 'messages', 'progress': 'install'}
+[31.437457] (-) TimerEvent: {}
+[31.459287] (messages) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/amd/Downloads/GC/build/messages'], 'cwd': '/home/amd/Downloads/GC/build/messages', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'pt_BR:pt:en'), ('USER', 'amd'), ('SSH_AGENT_PID', '1185'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/amd'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '913'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=db00906a0b31862e2f326ffe6184796a'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'amd'), ('JOURNAL_STREAM', '8:33703'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'amd'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/amd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/AMD:@/tmp/.ICE-unix/1230,unix/AMD:/tmp/.ICE-unix/1230'), ('INVOCATION_ID', '4ba77b5aa11b43aa9f6f9dbcd03d3e86'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3b50cee7_1d48_4a71_b4b1_a1f1d1eda348'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'pt_BR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.86'), ('GAME_CONTROLLER_HOME', '/home/amd/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr'), ('PWD', '/home/amd/Downloads/GC/build/messages'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=db00906a0b31862e2f326ffe6184796a'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[31.483932] (messages) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[31.484541] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/ament_index/resource_index/rosidl_interfaces/messages\n'}
+[31.484962] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages\n'}
+[31.485389] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg\n'}
+[31.485816] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/humanoid_league_msgs.h\n'}
+[31.488857] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg/rosidl_generator_c__visibility_control.h\n'}
+[31.490636] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail\n'}
+[31.493615] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__functions.c\n'}
+[31.493854] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__functions.h\n'}
+[31.494015] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__type_support.h\n'}
+[31.497002] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__struct.h\n'}
+[31.497236] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/environment/library_path.sh\n'}
+[31.500827] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/share/messages/environment/library_path.dsv\n'}
+[31.503102] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_generator_c.so\n'}
+[31.505284] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_generator_c.so" to ""\n'}
+[31.505668] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages\n'}
+[31.505832] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg\n'}
+[31.506006] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[31.506186] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail\n'}
+[31.506352] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__rosidl_typesupport_fastrtps_c.h\n'}
+[31.506511] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_fastrtps_c.so\n'}
+[31.506684] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[31.506887] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages\n'}
+[31.507050] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg\n'}
+[31.507223] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[31.507410] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail\n'}
+[31.507607] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[31.516977] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/dds_fastrtps\n'}
+[31.517175] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_fastrtps_cpp.so\n'}
+[31.517352] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[31.517533] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages\n'}
+[31.517715] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg\n'}
+[31.517916] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[31.518114] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail\n'}
+[31.518295] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__rosidl_typesupport_introspection_c.h\n'}
+[31.518473] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__type_support.c\n'}
+[31.518641] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_introspection_c.so\n'}
+[31.518804] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_introspection_c.so" to ""\n'}
+[31.518978] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_c.so\n'}
+[31.519149] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_c.so" to ""\n'}
+[31.519323] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages\n'}
+[31.519521] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg\n'}
+[31.519695] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/humanoid_league_msgs.hpp\n'}
+[31.519903] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail\n'}
+[31.520087] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__traits.hpp\n'}
+[31.520268] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__struct.hpp\n'}
+[31.520436] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__builder.hpp\n'}
+[31.530319] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages\n'}
+[31.530531] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg\n'}
+[31.530872] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail\n'}
+[31.531103] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__rosidl_typesupport_introspection_cpp.hpp\n'}
+[31.531298] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__type_support.cpp\n'}
+[31.531481] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_introspection_cpp.so\n'}
+[31.531671] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[31.531847] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_cpp.so\n'}
+[31.533092] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/amd/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_cpp.so" to ""\n'}
+[31.533389] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/environment/pythonpath.sh\n'}
+[31.533598] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/share/messages/environment/pythonpath.dsv\n'}
+[31.533779] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/__init__.py\n'}
+[31.540934] (-) TimerEvent: {}
+[31.612499] (messages) StdoutLine: {'line': b"Compiling '/home/amd/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/__init__.py'...\n"}
+[31.631712] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/msg\n'}
+[31.631972] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/msg/_humanoid_league_msgs_s.c\n'}
+[31.632117] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/msg/_humanoid_league_msgs.py\n'}
+[31.632251] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/msg/__init__.py\n'}
+[31.632384] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[31.632521] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/amd/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[31.632668] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[31.632845] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/amd/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[31.632964] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[31.633094] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/amd/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[31.633213] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/lib/libmessages__python.so\n'}
+[31.634103] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/amd/Downloads/GC/install/messages/lib/libmessages__python.so" to ""\n'}
+[31.634704] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/msg/HumanoidLeagueMsgs.idl\n'}
+[31.636555] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/msg/HumanoidLeagueMsgs.msg\n'}
+[31.637088] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/ament_index/resource_index/package_run_dependencies/messages\n'}
+[31.641044] (-) TimerEvent: {}
+[31.641506] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/ament_index/resource_index/parent_prefix_path/messages\n'}
+[31.642022] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/environment/ament_prefix_path.sh\n'}
+[31.642503] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/share/messages/environment/ament_prefix_path.dsv\n'}
+[31.643364] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/environment/path.sh\n'}
+[31.643888] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/share/messages/environment/path.dsv\n'}
+[31.644616] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/local_setup.bash\n'}
+[31.645208] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/share/messages/local_setup.sh\n'}
+[31.646050] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/local_setup.zsh\n'}
+[31.647165] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/share/messages/local_setup.dsv\n'}
+[31.648401] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/share/messages/package.dsv\n'}
+[31.652265] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/ament_index/resource_index/packages/messages\n'}
+[31.653520] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_generator_cExport.cmake\n'}
+[31.654407] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_generator_cExport-noconfig.cmake\n'}
+[31.655448] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cExport.cmake\n'}
+[31.655956] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[31.658948] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cExport.cmake\n'}
+[31.659644] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[31.660649] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_generator_cppExport.cmake\n'}
+[31.661455] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[31.662183] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[31.663184] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cppExport.cmake\n'}
+[31.663794] (messages) StdoutLine: {'line': b'-- Installing: /home/amd/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[31.664746] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/rosidl_cmake-extras.cmake\n'}
+[31.665241] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[31.665787] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[31.666360] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[31.668493] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[31.670509] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[31.671301] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[31.675922] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/messagesConfig.cmake\n'}
+[31.676330] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/cmake/messagesConfig-version.cmake\n'}
+[31.676786] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/amd/Downloads/GC/install/messages/share/messages/package.xml\n'}
+[31.680737] (messages) CommandEnded: {'returncode': 0}
+[31.743104] (-) TimerEvent: {}
+[31.843638] (-) TimerEvent: {}
+[31.890666] (messages) JobEnded: {'identifier': 'messages', 'rc': 0}
+[31.894577] (-) EventReactorShutdown: {}

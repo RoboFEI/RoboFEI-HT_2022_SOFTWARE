@@ -1,0 +1,93 @@
+[0.015s] Invoking command in '/home/robofei/robotis_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/robotis_ws/install/dynamixel_sdk:/home/robofei/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[0.045s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.069s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.257s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.265s] -- Found dynamixel_sdk: 3.7.40 (/home/robofei/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)
+[0.267s] -- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[0.290s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.293s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.425s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.475s] -- Found rclcpp: 2.4.0 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.514s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.516s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.682s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.752s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.753s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.753s] -- Configured cppcheck include dirs: /home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/include
+[0.753s] -- Configured cppcheck exclude dirs and/or files: 
+[0.754s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.754s] -- Configured cpplint exclude dirs and/or files: 
+[0.755s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.755s] -- Added test 'lint_cmake' to check CMake code style
+[0.756s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.757s] -- Added test 'uncrustify' to check C / C++ code style
+[0.757s] -- Configured uncrustify additional arguments: 
+[0.757s] -- Added test 'xmllint' to check XML markup files
+[0.760s] -- Configuring done
+[0.773s] -- Generating done
+[0.775s] -- Build files have been written to: /home/robofei/robotis_ws/build/dynamixel_sdk_examples
+[0.800s] [35m[1mScanning dependencies of target minimal_pub[0m
+[0.822s] [ 50%] Built target read_write_node
+[0.840s] [ 75%] [32mBuilding CXX object CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o[0m
+[0.959s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:31:24:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+[0.960s]    31 |         message.data = [01;35m[K'{id: {2, 6}, position: {300, 500}}'[m[K;
+[0.960s]       |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.960s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:34:24:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+[0.960s]    34 |         message.data = [01;35m[K'{id: {2, 6}, position: {300, 2500}}'[m[K;
+[0.960s]       |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.159s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[2.159s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:19:34:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KMinimalPublisher[m[K’ does not have any field named ‘[01m[Kcount_[m[K’
+[2.159s]    19 |     : Node("minimal_publisher"), [01;31m[Kcount_[m[K(0)
+[2.159s]       |                                  [01;31m[K^~~~~~[m[K
+[2.162s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:21:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[2.162s]    21 |       [01;31m[Kpublisher_[m[K = this->create_publisher<SetPosition>("read_write_node", 10);
+[2.162s]       |       [01;31m[K^~~~~~~~~~[m[K
+[2.163s]       |       [32m[Krcl_publisher_t[m[K
+[2.163s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:21:43:[m[K [01;31m[Kerror: [m[K‘[01m[KSetPosition[m[K’ was not declared in this scope; did you mean ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K’?
+[2.163s]    21 |       publisher_ = this->create_publisher<[01;31m[KSetPosition[m[K>("read_write_node", 10);
+[2.163s]       |                                           [01;31m[K^~~~~~~~~~~[m[K
+[2.163s]       |                                           [32m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K
+[2.163s] In file included from [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp:7[m[K,
+[2.164s]                  from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:6[m[K:
+[2.164s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:125:7:[m[K [01;36m[Knote: [m[K‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K’ declared here
+[2.164s]   125 | using [01;36m[KSetPosition[m[K =
+[2.164s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[2.164s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:21:77:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KMinimalPublisher::create_publisher<<expression error> >(const char [16], int)[m[K’
+[2.164s]    21 |       publisher_ = this->create_publisher<SetPosition>("read_write_node", 10[01;31m[K)[m[K;
+[2.164s]       |                                                                             [01;31m[K^[m[K
+[2.164s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[2.164s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[2.164s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.165s]                  from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:7[m[K:
+[2.165s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[2.165s]   184 |   [01;36m[Kcreate_publisher[m[K(
+[2.165s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[2.165s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.165s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:21:77:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.165s]    21 |       publisher_ = this->create_publisher<SetPosition>("read_write_node", 10[01;31m[K)[m[K;
+[2.165s]       |                                                                             [01;31m[K^[m[K
+[2.166s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:22:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[2.166s]    22 |       [01;31m[Ktimer_[m[K = this->create_wall_timer(
+[2.166s]       |       [01;31m[K^~~~~~[m[K
+[2.166s]       |       [32m[Ktimer_t[m[K
+[2.166s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:23:7:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""ms[m[K’
+[2.166s]    23 |       [01;31m[K500ms[m[K, std::bind(&MinimalPublisher::timer_callback, this));
+[2.166s]       |       [01;31m[K^~~~~[m[K
+[2.173s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback()[m[K’:
+[2.173s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:29:22:[m[K [01;31m[Kerror: [m[K‘[01m[KSetPosition[m[K’ was not declared in this scope; did you mean ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K’?
+[2.173s]    29 |       auto message = [01;31m[KSetPosition[m[K();
+[2.173s]       |                      [01;31m[K^~~~~~~~~~~[m[K
+[2.173s]       |                      [32m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K
+[2.173s] In file included from [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp:7[m[K,
+[2.174s]                  from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:6[m[K:
+[2.174s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:125:7:[m[K [01;36m[Knote: [m[K‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K’ declared here
+[2.174s]   125 | using [01;36m[KSetPosition[m[K =
+[2.174s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[2.176s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:33:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[2.177s]    33 |         [01;31m[Kpublisher_[m[K->publish(message);
+[2.177s]       |         [01;31m[K^~~~~~~~~~[m[K
+[2.177s]       |         [32m[Krcl_publisher_t[m[K
+[2.568s] make[2]: *** [CMakeFiles/minimal_pub.dir/build.make:63: CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o] Error 1
+[2.568s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_pub.dir/all] Error 2
+[2.568s] make: *** [Makefile:141: all] Error 2
+[2.571s] Invoked command in '/home/robofei/robotis_ws/build/dynamixel_sdk_examples' returned '2': CMAKE_PREFIX_PATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/robotis_ws/install/dynamixel_sdk:/home/robofei/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4

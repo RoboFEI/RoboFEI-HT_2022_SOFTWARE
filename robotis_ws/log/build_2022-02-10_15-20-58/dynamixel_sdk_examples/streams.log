@@ -1,0 +1,67 @@
+[0.016s] Invoking command in '/home/robofei/robotis_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/robotis_ws/install/dynamixel_sdk:/home/robofei/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[0.065s] [35m[1mScanning dependencies of target minimal_pub[0m
+[0.085s] [ 50%] Built target read_write_node
+[0.095s] [ 75%] [32mBuilding CXX object CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o[0m
+[0.215s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:31:24:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+[0.215s]    31 |         message.data = [01;35m[K'{id: {2, 6}, position: {300, 500}}'[m[K;
+[0.216s]       |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.216s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:34:24:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+[0.216s]    34 |         message.data = [01;35m[K'{id: {2, 6}, position: {300, 2500}}'[m[K;
+[0.216s]       |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.447s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[1.447s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:21:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[1.447s]    21 |       [01;31m[Kpublisher_[m[K = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("read_write_node", 10);
+[1.448s]       |       [01;31m[K^~~~~~~~~~[m[K
+[1.448s]       |       [32m[Krcl_publisher_t[m[K
+[1.453s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:22:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[1.453s]    22 |       [01;31m[Ktimer_[m[K = this->create_wall_timer(
+[1.453s]       |       [01;31m[K^~~~~~[m[K
+[1.453s]       |       [32m[Ktimer_t[m[K
+[1.453s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:23:7:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""ms[m[K’
+[1.453s]    23 |       [01;31m[K500ms[m[K, std::bind(&MinimalPublisher::timer_callback, this));
+[1.453s]       |       [01;31m[K^~~~~[m[K
+[1.459s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback()[m[K’:
+[1.459s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:31:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kdata[m[K’
+[1.460s]    31 |         message.[01;31m[Kdata[m[K = '{id: {2, 6}, position: {300, 500}}';
+[1.460s]       |                 [01;31m[K^~~~[m[K
+[1.460s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[1.460s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[1.460s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.460s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.460s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.461s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.461s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.461s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.461s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.461s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.461s]                  from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:7[m[K:
+[1.461s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:32:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kdata[m[K’
+[1.461s]    32 |      RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.[01;31m[Kdata[m[K.c_str());
+[1.461s]       |                                                                  [01;31m[K^~~~[m[K
+[1.461s] 
+[1.463s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:33:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[1.463s]    33 |         [01;31m[Kpublisher_[m[K->publish(message);
+[1.464s]       |         [01;31m[K^~~~~~~~~~[m[K
+[1.464s]       |         [32m[Krcl_publisher_t[m[K
+[1.464s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:34:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kdata[m[K’
+[1.464s]    34 |         message.[01;31m[Kdata[m[K = '{id: {2, 6}, position: {300, 2500}}';
+[1.464s]       |                 [01;31m[K^~~~[m[K
+[1.464s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[1.465s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[1.465s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.465s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.465s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.465s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.465s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.465s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.465s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.466s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.466s]                  from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:7[m[K:
+[1.466s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:35:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kdata[m[K’
+[1.466s]    35 |      RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.[01;31m[Kdata[m[K.c_str());
+[1.466s]       |                                                                  [01;31m[K^~~~[m[K
+[1.466s] 
+[2.282s] make[2]: *** [CMakeFiles/minimal_pub.dir/build.make:63: CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o] Error 1
+[2.282s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_pub.dir/all] Error 2
+[2.282s] make: *** [Makefile:141: all] Error 2
+[2.286s] Invoked command in '/home/robofei/robotis_ws/build/dynamixel_sdk_examples' returned '2': CMAKE_PREFIX_PATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/robotis_ws/install/dynamixel_sdk:/home/robofei/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4

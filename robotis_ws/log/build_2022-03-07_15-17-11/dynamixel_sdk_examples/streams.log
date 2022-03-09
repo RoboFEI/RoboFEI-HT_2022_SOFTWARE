@@ -1,0 +1,108 @@
+[0.015s] Invoking command in '/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[0.072s] [35m[1mScanning dependencies of target read_write_node[0m
+[0.086s] [ 50%] Built target minimal_pub
+[0.106s] [ 75%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[1.454s] In file included from [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_bulk_read.h:29[m[K,
+[1.454s]                  from [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h:26[m[K,
+[1.454s]                  from [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:36[m[K:
+[1.455s] [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In lambda function:
+[1.455s] [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h:46:30:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+[1.455s]    46 | #define DXL_LOBYTE(w)       [01;31m[K((uint8_t)(((uint64_t)(w)) & 0xff))[m[K
+[1.455s]       |                             [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.455s]       |                              [01;31m[K|[m[K
+[1.455s]       |                              [01;31m[Kuint8_t {aka unsigned char}[m[K
+[1.455s] [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:93:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KDXL_LOBYTE[m[K’
+[1.456s]    93 |       param_goal_position0[0] = [01;36m[KDXL_LOBYTE[m[K(DXL_LOWORD(position0));
+[1.456s]       |                                 [01;36m[K^~~~~~~~~~[m[K
+[1.456s] [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h:47:30:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+[1.456s]    47 | #define DXL_HIBYTE(w)       [01;31m[K((uint8_t)((((uint64_t)(w)) >> 8) & 0xff))[m[K
+[1.456s]       |                             [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.456s]       |                              [01;31m[K|[m[K
+[1.456s]       |                              [01;31m[Kuint8_t {aka unsigned char}[m[K
+[1.457s] [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:94:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KDXL_HIBYTE[m[K’
+[1.457s]    94 |       param_goal_position0[1] = [01;36m[KDXL_HIBYTE[m[K(DXL_LOWORD(position0));
+[1.457s]       |                                 [01;36m[K^~~~~~~~~~[m[K
+[1.457s] [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h:46:30:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+[1.457s]    46 | #define DXL_LOBYTE(w)       [01;31m[K((uint8_t)(((uint64_t)(w)) & 0xff))[m[K
+[1.457s]       |                             [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.457s]       |                              [01;31m[K|[m[K
+[1.457s]       |                              [01;31m[Kuint8_t {aka unsigned char}[m[K
+[1.458s] [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:95:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KDXL_LOBYTE[m[K’
+[1.458s]    95 |       param_goal_position0[2] = [01;36m[KDXL_LOBYTE[m[K(DXL_HIWORD(position0));
+[1.458s]       |                                 [01;36m[K^~~~~~~~~~[m[K
+[1.458s] [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h:47:30:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+[1.458s]    47 | #define DXL_HIBYTE(w)       [01;31m[K((uint8_t)((((uint64_t)(w)) >> 8) & 0xff))[m[K
+[1.458s]       |                             [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.458s]       |                              [01;31m[K|[m[K
+[1.459s]       |                              [01;31m[Kuint8_t {aka unsigned char}[m[K
+[1.459s] [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:96:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KDXL_HIBYTE[m[K’
+[1.459s]    96 |       param_goal_position0[3] = [01;36m[KDXL_HIBYTE[m[K(DXL_HIWORD(position0));
+[1.459s]       |                                 [01;36m[K^~~~~~~~~~[m[K
+[1.459s] [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h:46:30:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+[1.459s]    46 | #define DXL_LOBYTE(w)       [01;31m[K((uint8_t)(((uint64_t)(w)) & 0xff))[m[K
+[1.459s]       |                             [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.459s]       |                              [01;31m[K|[m[K
+[1.460s]       |                              [01;31m[Kuint8_t {aka unsigned char}[m[K
+[1.460s] [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:98:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KDXL_LOBYTE[m[K’
+[1.460s]    98 |       param_goal_position1[0] = [01;36m[KDXL_LOBYTE[m[K(DXL_LOWORD(position1));
+[1.460s]       |                                 [01;36m[K^~~~~~~~~~[m[K
+[1.460s] [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h:47:30:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+[1.460s]    47 | #define DXL_HIBYTE(w)       [01;31m[K((uint8_t)((((uint64_t)(w)) >> 8) & 0xff))[m[K
+[1.460s]       |                             [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.460s]       |                              [01;31m[K|[m[K
+[1.461s]       |                              [01;31m[Kuint8_t {aka unsigned char}[m[K
+[1.461s] [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:99:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KDXL_HIBYTE[m[K’
+[1.461s]    99 |       param_goal_position1[1] = [01;36m[KDXL_HIBYTE[m[K(DXL_LOWORD(position1));
+[1.461s]       |                                 [01;36m[K^~~~~~~~~~[m[K
+[1.461s] [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h:46:30:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+[1.461s]    46 | #define DXL_LOBYTE(w)       [01;31m[K((uint8_t)(((uint64_t)(w)) & 0xff))[m[K
+[1.461s]       |                             [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.461s]       |                              [01;31m[K|[m[K
+[1.462s]       |                              [01;31m[Kuint8_t {aka unsigned char}[m[K
+[1.462s] [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:100:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KDXL_LOBYTE[m[K’
+[1.462s]   100 |       param_goal_position1[2] = [01;36m[KDXL_LOBYTE[m[K(DXL_HIWORD(position1));
+[1.462s]       |                                 [01;36m[K^~~~~~~~~~[m[K
+[1.462s] [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h:47:30:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+[1.462s]    47 | #define DXL_HIBYTE(w)       [01;31m[K((uint8_t)((((uint64_t)(w)) >> 8) & 0xff))[m[K
+[1.462s]       |                             [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.462s]       |                              [01;31m[K|[m[K
+[1.463s]       |                              [01;31m[Kuint8_t {aka unsigned char}[m[K
+[1.463s] [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:101:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KDXL_HIBYTE[m[K’
+[1.463s]   101 |       param_goal_position1[3] = [01;36m[KDXL_HIBYTE[m[K(DXL_HIWORD(position1));
+[1.463s]       |                                 [01;36m[K^~~~~~~~~~[m[K
+[1.463s] [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h:46:30:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+[1.463s]    46 | #define DXL_LOBYTE(w)       [01;31m[K((uint8_t)(((uint64_t)(w)) & 0xff))[m[K
+[1.463s]       |                             [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.464s]       |                              [01;31m[K|[m[K
+[1.464s]       |                              [01;31m[Kuint8_t {aka unsigned char}[m[K
+[1.464s] [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:103:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KDXL_LOBYTE[m[K’
+[1.464s]   103 |       param_goal_position2[0] = [01;36m[KDXL_LOBYTE[m[K(DXL_LOWORD(position2));
+[1.464s]       |                                 [01;36m[K^~~~~~~~~~[m[K
+[1.464s] [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h:47:30:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+[1.464s]    47 | #define DXL_HIBYTE(w)       [01;31m[K((uint8_t)((((uint64_t)(w)) >> 8) & 0xff))[m[K
+[1.464s]       |                             [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.464s]       |                              [01;31m[K|[m[K
+[1.465s]       |                              [01;31m[Kuint8_t {aka unsigned char}[m[K
+[1.465s] [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:104:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KDXL_HIBYTE[m[K’
+[1.465s]   104 |       param_goal_position2[1] = [01;36m[KDXL_HIBYTE[m[K(DXL_LOWORD(position2));
+[1.465s]       |                                 [01;36m[K^~~~~~~~~~[m[K
+[1.465s] [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h:46:30:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+[1.465s]    46 | #define DXL_LOBYTE(w)       [01;31m[K((uint8_t)(((uint64_t)(w)) & 0xff))[m[K
+[1.465s]       |                             [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.465s]       |                              [01;31m[K|[m[K
+[1.466s]       |                              [01;31m[Kuint8_t {aka unsigned char}[m[K
+[1.466s] [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:105:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KDXL_LOBYTE[m[K’
+[1.466s]   105 |       param_goal_position2[2] = [01;36m[KDXL_LOBYTE[m[K(DXL_HIWORD(position2));
+[1.466s]       |                                 [01;36m[K^~~~~~~~~~[m[K
+[1.466s] [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h:47:30:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+[1.466s]    47 | #define DXL_HIBYTE(w)       [01;31m[K((uint8_t)((((uint64_t)(w)) >> 8) & 0xff))[m[K
+[1.466s]       |                             [01;31m[K~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.466s]       |                              [01;31m[K|[m[K
+[1.467s]       |                              [01;31m[Kuint8_t {aka unsigned char}[m[K
+[1.467s] [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:106:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KDXL_HIBYTE[m[K’
+[1.467s]   106 |       param_goal_position2[3] = [01;36m[KDXL_HIBYTE[m[K(DXL_HIWORD(position2));
+[1.467s]       |                                 [01;36m[K^~~~~~~~~~[m[K
+[2.951s] make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+[2.951s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/read_write_node.dir/all] Error 2
+[2.951s] make: *** [Makefile:141: all] Error 2
+[2.953s] Invoked command in '/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples' returned '2': CMAKE_PREFIX_PATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4

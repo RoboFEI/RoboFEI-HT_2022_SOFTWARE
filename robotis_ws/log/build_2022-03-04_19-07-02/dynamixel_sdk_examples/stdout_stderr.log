@@ -1,0 +1,37 @@
+[35m[1mScanning dependencies of target read_write_node[0m
+[ 50%] Built target minimal_pub
+[ 75%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In lambda function:
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:95:76:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type[m[K’ {aka ‘[01m[Kint[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+   95 |       dxl_addparam_result = group_sync_write.addParam((uint8_t)msg->id[0], (int32_t)msg->position[0]);
+In file included from [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h:29[m[K,
+                 from [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:36[m[K:
+[01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h:89:45:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kbool dynamixel::GroupSyncWrite::addParam(uint8_t, uint8_t*)[m[K’
+   89 |   bool    addParam    (uint8_t id, [01;36m[Kuint8_t *data[m[K);
+      |                                    [01;36m[K~~~~~~~~~^~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:97:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct rclcpp::Logger[m[K’ has no member named ‘[01m[Kwarn[m[K’
+   97 |         get_logger().[01;31m[Kwarn[m[K("Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[0]);
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:100:76:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type[m[K’ {aka ‘[01m[Kint[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+  100 |       dxl_addparam_result = group_sync_write.addParam((uint8_t)msg->id[1], (int32_t)msg->position[1]);
+In file included from [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h:29[m[K,
+                 from [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:36[m[K:
+[01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h:89:45:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kbool dynamixel::GroupSyncWrite::addParam(uint8_t, uint8_t*)[m[K’
+   89 |   bool    addParam    (uint8_t id, [01;36m[Kuint8_t *data[m[K);
+      |                                    [01;36m[K~~~~~~~~~^~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:102:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct rclcpp::Logger[m[K’ has no member named ‘[01m[Kwarn[m[K’
+  102 |         get_logger().[01;31m[Kwarn[m[K("Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[1]);
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:105:76:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type[m[K’ {aka ‘[01m[Kint[m[K’} to ‘[01m[Kuint8_t*[m[K’ {aka ‘[01m[Kunsigned char*[m[K’} [[01;31m[K-fpermissive[m[K]
+  105 |       dxl_addparam_result = group_sync_write.addParam((uint8_t)msg->id[2], (int32_t)msg->position[2]);
+In file included from [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h:29[m[K,
+                 from [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:36[m[K:
+[01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h:89:45:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kbool dynamixel::GroupSyncWrite::addParam(uint8_t, uint8_t*)[m[K’
+   89 |   bool    addParam    (uint8_t id, [01;36m[Kuint8_t *data[m[K);
+      |                                    [01;36m[K~~~~~~~~~^~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:107:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct rclcpp::Logger[m[K’ has no member named ‘[01m[Kwarn[m[K’
+  107 |         get_logger().[01;31m[Kwarn[m[K("Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[2]);
+      |                      [01;31m[K^~~~[m[K
+make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/read_write_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

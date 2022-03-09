@@ -1,0 +1,61 @@
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In constructor ‘[01m[KReadWriteNode::ReadWriteNode()[m[K’:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:79:39:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kmsg[m[K’
+   79 |     [this](int SetPosition::SharedPtr [01;31m[Kmsg[m[K) -> void
+      |                                       [01;31m[K^~~[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:79:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kmsg[m[K’
+   79 |     [this][34m[K([m[Kint SetPosition::SharedPtr[01;31m[K [m[K[32m[Kmsg[m[K) -> void
+      |           [34m[K~[m[K                          [01;31m[K^[m[K[32m[K~~~[m[K
+      |                                      [32m[K)[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In lambda function:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:79:39:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[Kmsg[m[K’
+   79 |     [this](int SetPosition::SharedPtr [01;31m[Kmsg[m[K) -> void
+      |                                       [01;31m[K^~~[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In constructor ‘[01m[KReadWriteNode::ReadWriteNode()[m[K’:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:79:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kmsg[m[K’
+   79 |     [this](int SetPosition::SharedPtr[01;31m[K [m[K[32m[Kmsg[m[K) -> void
+      |                                      [01;31m[K^[m[K[32m[K~~~[m[K
+      |                                      [32m[K)[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:76:43:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   76 |     this->create_subscription<SetPosition>[01;36m[K([m[K
+      |                                           [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:32[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+/opt/ros/foxy/include/rclcpp/function_traits.hpp: In instantiation of ‘[01m[Kstruct rclcpp::function_traits::function_traits<void (ReadWriteNode::ReadWriteNode()::<lambda(...)>::*)(...) const>[m[K’:
+[01m[K/opt/ros/foxy/include/rclcpp/function_traits.hpp:51:9:[m[K   required from ‘[01m[Kstruct rclcpp::function_traits::function_traits<ReadWriteNode::ReadWriteNode()::<lambda(...)> >[m[K’
+[01m[K/opt/ros/foxy/include/rclcpp/subscription_traits.hpp:97:8:[m[K   required from ‘[01m[Kstruct rclcpp::subscription_traits::has_message_type<ReadWriteNode::ReadWriteNode()::<lambda(...)>, std::allocator<void>, void, void, void, void>[m[K’
+[01m[K/opt/ros/foxy/include/rclcpp/node.hpp:204:5:[m[K   required by substitution of ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class CallbackMessageT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<SubscriptionT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; CallbackT = ReadWriteNode::ReadWriteNode()::<lambda(...)>; AllocatorT = std::allocator<void>; CallbackMessageT = <missing>; SubscriptionT = <missing>; MessageMemoryStrategyT = <missing>][m[K’
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:79:42:[m[K   required from here
+[01m[K/opt/ros/foxy/include/rclcpp/function_traits.hpp:52:40:[m[K [01;31m[Kerror: [m[K‘[01m[Koperator()[m[K’ is not a member of ‘[01m[Kvoid (ReadWriteNode::ReadWriteNode()::<lambda(...)>::*)(...) const[m[K’
+   52 |     typename function_traits<decltype( [01;31m[K&FunctionT::operator()[m[K)>::arguments>::type;
+      |                                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/foxy/include/rclcpp/function_traits.hpp:52:40:[m[K [01;31m[Kerror: [m[K‘[01m[Koperator()[m[K’ is not a member of ‘[01m[Kvoid (ReadWriteNode::ReadWriteNode()::<lambda(...)>::*)(...) const[m[K’
+[01m[K/opt/ros/foxy/include/rclcpp/function_traits.hpp:52:40:[m[K [01;31m[Kerror: [m[K‘[01m[Koperator()[m[K’ is not a member of ‘[01m[Kvoid (ReadWriteNode::ReadWriteNode()::<lambda(...)>::*)(...) const[m[K’
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:79:42:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KReadWriteNode::create_subscription<ReadWriteNode::SetPosition>(const char [13], const rclcpp::QoS&, ReadWriteNode::ReadWriteNode()::<lambda(...)>)[m[K’
+   79 |     [this](int SetPosition::SharedPtr msg[01;31m[K)[m[K -> void
+      |                                          [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/opt/ros/foxy/include/rclcpp/node.hpp:213:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class CallbackMessageT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<SubscriptionT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+  213 |   [01;36m[Kcreate_subscription[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/foxy/include/rclcpp/node.hpp:213:3:[m[K [01;36m[Knote: [m[K  substitution of deduced template arguments resulted in errors seen above
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:79:47:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kvoid[m[K’
+   79 |     [this](int SetPosition::SharedPtr msg) -> [01;31m[Kvoid[m[K
+      |                                               [01;31m[K^~~~[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:111:5:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+  111 |     [01;31m[K)[m[K;
+      |     [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/read_write_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

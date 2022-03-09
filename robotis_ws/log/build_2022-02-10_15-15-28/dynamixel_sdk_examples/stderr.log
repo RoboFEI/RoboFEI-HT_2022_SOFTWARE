@@ -1,0 +1,61 @@
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:31:24:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+   31 |         message.data = [01;35m[K'{id: {2, 6}, position: {300, 500}}'[m[K;
+      |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:34:24:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+   34 |         message.data = [01;35m[K'{id: {2, 6}, position: {300, 2500}}'[m[K;
+      |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:19:34:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KMinimalPublisher[m[K’ does not have any field named ‘[01m[Kcount_[m[K’
+   19 |     : Node("minimal_publisher"), [01;31m[Kcount_[m[K(0)
+      |                                  [01;31m[K^~~~~~[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:21:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   21 |       [01;31m[Kpublisher_[m[K = this->create_publisher<SetPosition>("read_write_node", 10);
+      |       [01;31m[K^~~~~~~~~~[m[K
+      |       [32m[Krcl_publisher_t[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:21:43:[m[K [01;31m[Kerror: [m[K‘[01m[KSetPosition[m[K’ was not declared in this scope; did you mean ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K’?
+   21 |       publisher_ = this->create_publisher<[01;31m[KSetPosition[m[K>("read_write_node", 10);
+      |                                           [01;31m[K^~~~~~~~~~~[m[K
+      |                                           [32m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K
+In file included from [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp:7[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:6[m[K:
+[01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:125:7:[m[K [01;36m[Knote: [m[K‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K’ declared here
+  125 | using [01;36m[KSetPosition[m[K =
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:21:77:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KMinimalPublisher::create_publisher<<expression error> >(const char [16], int)[m[K’
+   21 |       publisher_ = this->create_publisher<SetPosition>("read_write_node", 10[01;31m[K)[m[K;
+      |                                                                             [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:7[m[K:
+[01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+  184 |   [01;36m[Kcreate_publisher[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:21:77:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   21 |       publisher_ = this->create_publisher<SetPosition>("read_write_node", 10[01;31m[K)[m[K;
+      |                                                                             [01;31m[K^[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:22:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+   22 |       [01;31m[Ktimer_[m[K = this->create_wall_timer(
+      |       [01;31m[K^~~~~~[m[K
+      |       [32m[Ktimer_t[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:23:7:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""ms[m[K’
+   23 |       [01;31m[K500ms[m[K, std::bind(&MinimalPublisher::timer_callback, this));
+      |       [01;31m[K^~~~~[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback()[m[K’:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:29:22:[m[K [01;31m[Kerror: [m[K‘[01m[KSetPosition[m[K’ was not declared in this scope; did you mean ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K’?
+   29 |       auto message = [01;31m[KSetPosition[m[K();
+      |                      [01;31m[K^~~~~~~~~~~[m[K
+      |                      [32m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K
+In file included from [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp:7[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:6[m[K:
+[01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:125:7:[m[K [01;36m[Knote: [m[K‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K’ declared here
+  125 | using [01;36m[KSetPosition[m[K =
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:33:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   33 |         [01;31m[Kpublisher_[m[K->publish(message);
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Krcl_publisher_t[m[K
+make[2]: *** [CMakeFiles/minimal_pub.dir/build.make:63: CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_pub.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

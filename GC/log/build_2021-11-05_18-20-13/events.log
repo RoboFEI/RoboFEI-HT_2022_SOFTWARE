@@ -1,0 +1,573 @@
+[0.000000] (-) TimerEvent: {}
+[0.000608] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.000713] (messages) JobQueued: {'identifier': 'messages', 'dependencies': OrderedDict()}
+[0.000765] (controller) JobStarted: {'identifier': 'controller'}
+[0.061736] (messages) JobStarted: {'identifier': 'messages'}
+[0.091994] (-) TimerEvent: {}
+[0.192756] (-) TimerEvent: {}
+[0.293317] (-) TimerEvent: {}
+[0.394921] (-) TimerEvent: {}
+[0.498058] (-) TimerEvent: {}
+[0.604721] (-) TimerEvent: {}
+[0.705368] (-) TimerEvent: {}
+[0.805750] (-) TimerEvent: {}
+[0.888166] (messages) JobProgress: {'identifier': 'messages', 'progress': 'cmake'}
+[0.888524] (messages) JobProgress: {'identifier': 'messages', 'progress': 'build'}
+[0.890440] (messages) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robofei/Downloads/GC/build/messages', '--', '-j4', '-l4'], 'cwd': '/home/robofei/Downloads/GC/build/messages', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1781'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robofei/Downloads/GC/install/messages/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1591'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=5a23dc03d357522306cc7b8761856022'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/robofei/Downloads/GC/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:45791'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1825,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1825'), ('INVOCATION_ID', '2fa98b60b410479a9cd45dde6bd5aebd'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/5eb5d394_f610_44e3_9561_ca6eb0e553b6'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.394'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robofei/Downloads/GC/install/messages:/home/robofei/Downloads/GC/install/controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/Downloads/GC/build/messages'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=5a23dc03d357522306cc7b8761856022'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages:/home/robofei/Downloads/GC/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robofei/Downloads/GC/install/messages:/home/robofei/Downloads/GC/install/controller:/opt/ros/foxy')]), 'shell': False}
+[0.906226] (-) TimerEvent: {}
+[0.944885] (controller) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/controller', 'build', '--build-base', '/home/robofei/Downloads/GC/build/controller/build', 'install', '--prefix', '/home/robofei/Downloads/GC/install/controller', '--record', '/home/robofei/Downloads/GC/build/controller/install.log', '--single-version-externally-managed'], 'cwd': '/home/robofei/Downloads/GC/src/controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'robofei', 'LC_TIME': 'pt_BR.UTF-8', 'SSH_AGENT_PID': '1781', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/robofei/Downloads/GC/install/messages/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/robofei', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'pt_BR.UTF-8', 'MANAGERPID': '1591', 'LC_CTYPE': 'pt_BR.UTF-8', 'DBUS_STARTER_BUS_TYPE': 'session', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=5a23dc03d357522306cc7b8761856022', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/robofei/Downloads/GC/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'robofei', 'JOURNAL_STREAM': '8:45791', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'robofei', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1825,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1825', 'INVOCATION_ID': '2fa98b60b410479a9cd45dde6bd5aebd', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'pt_BR.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/5eb5d394_f610_44e3_9561_ca6eb0e553b6', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.394', 'GAME_CONTROLLER_HOME': '/home/robofei/GameController', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/robofei/Downloads/GC/install/messages:/home/robofei/Downloads/GC/install/controller:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'pt_BR.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'WEBOTS_HOME': '/home/robofei/webots', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'QT_IM_MODULE': 'ibus', 'JAVA_HOME': '/usr/lib/jvm/java-11-openjdk-amd64', 'PWD': '/home/robofei/Downloads/GC/build/controller', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=5a23dc03d357522306cc7b8761856022', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robofei/Downloads/GC/install/controller/lib/python3.8/site-packages:/home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages:/home/robofei/Downloads/GC/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'pt_BR.UTF-8', 'LC_PAPER': 'pt_BR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/robofei/Downloads/GC/install/messages'}, 'shell': False}
+[1.006204] (-) TimerEvent: {}
+[1.096853] (messages) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[1.106264] (-) TimerEvent: {}
+[1.167859] (messages) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[1.168356] (messages) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.206378] (-) TimerEvent: {}
+[1.306858] (-) TimerEvent: {}
+[1.407562] (-) TimerEvent: {}
+[1.507914] (-) TimerEvent: {}
+[1.608247] (-) TimerEvent: {}
+[1.708592] (-) TimerEvent: {}
+[1.808934] (-) TimerEvent: {}
+[1.909271] (-) TimerEvent: {}
+[1.992611] (messages) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[2.005804] (messages) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.009407] (-) TimerEvent: {}
+[2.018709] (messages) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[2.111961] (-) TimerEvent: {}
+[2.212589] (-) TimerEvent: {}
+[2.312992] (-) TimerEvent: {}
+[2.415973] (-) TimerEvent: {}
+[2.516370] (-) TimerEvent: {}
+[2.547871] (controller) StdoutLine: {'line': b'running egg_info\n'}
+[2.554008] (messages) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.556236] (controller) StdoutLine: {'line': b'writing ../../build/controller/controller.egg-info/PKG-INFO\n'}
+[2.557527] (controller) StdoutLine: {'line': b'writing dependency_links to ../../build/controller/controller.egg-info/dependency_links.txt\n'}
+[2.560570] (controller) StdoutLine: {'line': b'writing entry points to ../../build/controller/controller.egg-info/entry_points.txt\n'}
+[2.562060] (controller) StdoutLine: {'line': b'writing requirements to ../../build/controller/controller.egg-info/requires.txt\n'}
+[2.565289] (controller) StdoutLine: {'line': b'writing top-level names to ../../build/controller/controller.egg-info/top_level.txt\n'}
+[2.617726] (-) TimerEvent: {}
+[2.678428] (messages) StdoutLine: {'line': b'-- Found std_msgs: 2.0.4 (/opt/ros/foxy/share/std_msgs/cmake)\n'}
+[2.718277] (-) TimerEvent: {}
+[2.767716] (controller) StdoutLine: {'line': b"reading manifest file '../../build/controller/controller.egg-info/SOURCES.txt'\n"}
+[2.771171] (controller) StdoutLine: {'line': b"writing manifest file '../../build/controller/controller.egg-info/SOURCES.txt'\n"}
+[2.772714] (controller) StdoutLine: {'line': b'running build\n'}
+[2.773471] (controller) StdoutLine: {'line': b'running build_py\n'}
+[2.775319] (controller) StdoutLine: {'line': b'running install\n'}
+[2.778404] (controller) StdoutLine: {'line': b'running install_lib\n'}
+[2.792543] (controller) StdoutLine: {'line': b'running install_data\n'}
+[2.794891] (controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.801048] (controller) StdoutLine: {'line': b"removing '/home/robofei/Downloads/GC/install/controller/lib/python3.8/site-packages/controller-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[2.802946] (controller) StdoutLine: {'line': b'Copying ../../build/controller/controller.egg-info to /home/robofei/Downloads/GC/install/controller/lib/python3.8/site-packages/controller-0.0.0-py3.8.egg-info\n'}
+[2.805933] (controller) StdoutLine: {'line': b'running install_scripts\n'}
+[2.819281] (-) TimerEvent: {}
+[2.884661] (controller) StdoutLine: {'line': b'Installing talker script to /home/robofei/Downloads/GC/install/controller/lib/controller\n'}
+[2.886509] (controller) StdoutLine: {'line': b"writing list of installed files to '/home/robofei/Downloads/GC/build/controller/install.log'\n"}
+[2.919423] (-) TimerEvent: {}
+[2.976720] (controller) CommandEnded: {'returncode': 0}
+[3.019819] (-) TimerEvent: {}
+[3.026302] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[3.119976] (-) TimerEvent: {}
+[3.220934] (-) TimerEvent: {}
+[3.298011] (messages) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[3.321043] (-) TimerEvent: {}
+[3.421578] (-) TimerEvent: {}
+[3.522631] (-) TimerEvent: {}
+[3.624300] (-) TimerEvent: {}
+[3.725197] (-) TimerEvent: {}
+[3.827207] (-) TimerEvent: {}
+[3.927861] (-) TimerEvent: {}
+[4.029264] (-) TimerEvent: {}
+[4.071558] (messages) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[4.129364] (-) TimerEvent: {}
+[4.229949] (-) TimerEvent: {}
+[4.330574] (-) TimerEvent: {}
+[4.431148] (-) TimerEvent: {}
+[4.533012] (-) TimerEvent: {}
+[4.633790] (-) TimerEvent: {}
+[4.734807] (-) TimerEvent: {}
+[4.835816] (-) TimerEvent: {}
+[4.936366] (-) TimerEvent: {}
+[5.029252] (messages) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.036593] (-) TimerEvent: {}
+[5.137668] (-) TimerEvent: {}
+[5.238107] (-) TimerEvent: {}
+[5.338870] (-) TimerEvent: {}
+[5.361251] (messages) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.437515] (messages) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[5.438140] (messages) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[5.438935] (-) TimerEvent: {}
+[5.539376] (-) TimerEvent: {}
+[5.562813] (messages) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.563243] (messages) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[5.563491] (messages) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[5.639537] (-) TimerEvent: {}
+[5.678464] (messages) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[5.715900] (messages) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[5.724199] (messages) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[5.736563] (messages) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[5.739676] (-) TimerEvent: {}
+[5.783351] (messages) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.839786] (-) TimerEvent: {}
+[5.940360] (-) TimerEvent: {}
+[6.041249] (-) TimerEvent: {}
+[6.142124] (-) TimerEvent: {}
+[6.178932] (messages) StdoutLine: {'line': b'-- Generating done\n'}
+[6.201282] (messages) StdoutLine: {'line': b'-- Build files have been written to: /home/robofei/Downloads/GC/build/messages\n'}
+[6.243869] (-) TimerEvent: {}
+[6.298416] (messages) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[6.344519] (-) TimerEvent: {}
+[6.445174] (-) TimerEvent: {}
+[6.545743] (-) TimerEvent: {}
+[6.646741] (-) TimerEvent: {}
+[6.747692] (-) TimerEvent: {}
+[6.848826] (-) TimerEvent: {}
+[6.950073] (-) TimerEvent: {}
+[7.054327] (-) TimerEvent: {}
+[7.160455] (-) TimerEvent: {}
+[7.263638] (-) TimerEvent: {}
+[7.368661] (-) TimerEvent: {}
+[7.469631] (-) TimerEvent: {}
+[7.570340] (-) TimerEvent: {}
+[7.671127] (-) TimerEvent: {}
+[7.772101] (-) TimerEvent: {}
+[7.874790] (-) TimerEvent: {}
+[7.975411] (-) TimerEvent: {}
+[8.076248] (-) TimerEvent: {}
+[8.177052] (-) TimerEvent: {}
+[8.277751] (-) TimerEvent: {}
+[8.378456] (-) TimerEvent: {}
+[8.479241] (-) TimerEvent: {}
+[8.580632] (-) TimerEvent: {}
+[8.681763] (-) TimerEvent: {}
+[8.695254] (messages) StdoutLine: {'line': b'[  3%] Built target messages__cpp\n'}
+[8.731800] (messages) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[8.782089] (-) TimerEvent: {}
+[8.882876] (-) TimerEvent: {}
+[8.983573] (-) TimerEvent: {}
+[9.084658] (-) TimerEvent: {}
+[9.187099] (-) TimerEvent: {}
+[9.288981] (-) TimerEvent: {}
+[9.389683] (-) TimerEvent: {}
+[9.490359] (-) TimerEvent: {}
+[9.591067] (-) TimerEvent: {}
+[9.691791] (-) TimerEvent: {}
+[9.792223] (-) TimerEvent: {}
+[9.892840] (-) TimerEvent: {}
+[9.993302] (-) TimerEvent: {}
+[10.093858] (-) TimerEvent: {}
+[10.195990] (-) TimerEvent: {}
+[10.296643] (-) TimerEvent: {}
+[10.398278] (-) TimerEvent: {}
+[10.498619] (-) TimerEvent: {}
+[10.600036] (-) TimerEvent: {}
+[10.700497] (-) TimerEvent: {}
+[10.801089] (-) TimerEvent: {}
+[10.901535] (-) TimerEvent: {}
+[11.001911] (-) TimerEvent: {}
+[11.102408] (-) TimerEvent: {}
+[11.155179] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_generator_c\x1b[0m\n'}
+[11.202704] (-) TimerEvent: {}
+[11.227046] (messages) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/messages__rosidl_generator_c.dir/rosidl_generator_c/messages/msg/detail/humanoid_league_msgs__functions.c.o\x1b[0m\n'}
+[11.302863] (-) TimerEvent: {}
+[11.388091] (messages) StdoutLine: {'line': b'[ 12%] \x1b[32m\x1b[1mLinking C shared library libmessages__rosidl_generator_c.so\x1b[0m\n'}
+[11.403206] (-) TimerEvent: {}
+[11.504065] (-) TimerEvent: {}
+[11.604698] (-) TimerEvent: {}
+[11.638050] (messages) StdoutLine: {'line': b'[ 12%] Built target messages__rosidl_generator_c\n'}
+[11.682345] (messages) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[11.704845] (-) TimerEvent: {}
+[11.805634] (-) TimerEvent: {}
+[11.906709] (-) TimerEvent: {}
+[12.007818] (-) TimerEvent: {}
+[12.110667] (-) TimerEvent: {}
+[12.212449] (-) TimerEvent: {}
+[12.313328] (-) TimerEvent: {}
+[12.414145] (-) TimerEvent: {}
+[12.514950] (-) TimerEvent: {}
+[12.615814] (-) TimerEvent: {}
+[12.716765] (-) TimerEvent: {}
+[12.817552] (-) TimerEvent: {}
+[12.918673] (-) TimerEvent: {}
+[12.947373] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[13.004226] (messages) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/messages__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages/msg/detail/humanoid_league_msgs__type_support.cpp.o\x1b[0m\n'}
+[13.018943] (-) TimerEvent: {}
+[13.119668] (-) TimerEvent: {}
+[13.220396] (-) TimerEvent: {}
+[13.320927] (-) TimerEvent: {}
+[13.421625] (-) TimerEvent: {}
+[13.522117] (-) TimerEvent: {}
+[13.622866] (-) TimerEvent: {}
+[13.724150] (-) TimerEvent: {}
+[13.824691] (-) TimerEvent: {}
+[13.925373] (-) TimerEvent: {}
+[14.025880] (-) TimerEvent: {}
+[14.126631] (-) TimerEvent: {}
+[14.227119] (-) TimerEvent: {}
+[14.327642] (-) TimerEvent: {}
+[14.389353] (messages) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking CXX shared library libmessages__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[14.427759] (-) TimerEvent: {}
+[14.528273] (-) TimerEvent: {}
+[14.628891] (-) TimerEvent: {}
+[14.666002] (messages) StdoutLine: {'line': b'[ 22%] Built target messages__rosidl_typesupport_introspection_cpp\n'}
+[14.694357] (messages) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[14.729042] (-) TimerEvent: {}
+[14.832417] (-) TimerEvent: {}
+[14.934105] (-) TimerEvent: {}
+[15.035180] (-) TimerEvent: {}
+[15.135935] (-) TimerEvent: {}
+[15.236715] (-) TimerEvent: {}
+[15.337414] (-) TimerEvent: {}
+[15.438063] (-) TimerEvent: {}
+[15.538617] (-) TimerEvent: {}
+[15.639497] (-) TimerEvent: {}
+[15.740633] (-) TimerEvent: {}
+[15.841571] (-) TimerEvent: {}
+[15.897346] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[15.939948] (messages) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding C object CMakeFiles/messages__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages/msg/detail/humanoid_league_msgs__type_support.c.o\x1b[0m\n'}
+[15.941836] (-) TimerEvent: {}
+[16.042002] (messages) StdoutLine: {'line': b'[ 32%] \x1b[32m\x1b[1mLinking C shared library libmessages__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[16.042255] (-) TimerEvent: {}
+[16.142707] (-) TimerEvent: {}
+[16.235328] (messages) StdoutLine: {'line': b'[ 32%] Built target messages__rosidl_typesupport_introspection_c\n'}
+[16.242880] (-) TimerEvent: {}
+[16.260802] (messages) StdoutLine: {'line': b'[ 35%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[16.342997] (-) TimerEvent: {}
+[16.443557] (-) TimerEvent: {}
+[16.544067] (-) TimerEvent: {}
+[16.644674] (-) TimerEvent: {}
+[16.745176] (-) TimerEvent: {}
+[16.845642] (-) TimerEvent: {}
+[16.946092] (-) TimerEvent: {}
+[17.046560] (-) TimerEvent: {}
+[17.147045] (-) TimerEvent: {}
+[17.247434] (-) TimerEvent: {}
+[17.347891] (-) TimerEvent: {}
+[17.414182] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_c\x1b[0m\n'}
+[17.448658] (-) TimerEvent: {}
+[17.508449] (messages) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/messages__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages/msg/humanoid_league_msgs__type_support.cpp.o\x1b[0m\n'}
+[17.548820] (-) TimerEvent: {}
+[17.649558] (-) TimerEvent: {}
+[17.744936] (messages) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking CXX shared library libmessages__rosidl_typesupport_c.so\x1b[0m\n'}
+[17.749812] (-) TimerEvent: {}
+[17.850650] (-) TimerEvent: {}
+[17.921402] (messages) StdoutLine: {'line': b'[ 41%] Built target messages__rosidl_typesupport_c\n'}
+[17.950957] (-) TimerEvent: {}
+[17.986848] (messages) StdoutLine: {'line': b'[ 45%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[18.051054] (-) TimerEvent: {}
+[18.151776] (-) TimerEvent: {}
+[18.252524] (-) TimerEvent: {}
+[18.355224] (-) TimerEvent: {}
+[18.455988] (-) TimerEvent: {}
+[18.557306] (-) TimerEvent: {}
+[18.658106] (-) TimerEvent: {}
+[18.758513] (-) TimerEvent: {}
+[18.858884] (-) TimerEvent: {}
+[18.959281] (-) TimerEvent: {}
+[19.059633] (-) TimerEvent: {}
+[19.160035] (-) TimerEvent: {}
+[19.260407] (-) TimerEvent: {}
+[19.360892] (-) TimerEvent: {}
+[19.453834] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[19.461013] (-) TimerEvent: {}
+[19.500726] (messages) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/messages__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages/msg/detail/dds_fastrtps/humanoid_league_msgs__type_support.cpp.o\x1b[0m\n'}
+[19.561239] (-) TimerEvent: {}
+[19.662959] (-) TimerEvent: {}
+[19.765952] (-) TimerEvent: {}
+[19.866482] (-) TimerEvent: {}
+[19.967107] (-) TimerEvent: {}
+[20.069197] (-) TimerEvent: {}
+[20.169750] (-) TimerEvent: {}
+[20.270330] (-) TimerEvent: {}
+[20.370816] (-) TimerEvent: {}
+[20.471361] (-) TimerEvent: {}
+[20.571978] (-) TimerEvent: {}
+[20.672815] (-) TimerEvent: {}
+[20.773238] (-) TimerEvent: {}
+[20.873600] (-) TimerEvent: {}
+[20.974920] (-) TimerEvent: {}
+[21.075610] (-) TimerEvent: {}
+[21.176148] (-) TimerEvent: {}
+[21.276659] (-) TimerEvent: {}
+[21.377138] (-) TimerEvent: {}
+[21.456656] (messages) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libmessages__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[21.477325] (-) TimerEvent: {}
+[21.578585] (-) TimerEvent: {}
+[21.679365] (-) TimerEvent: {}
+[21.780295] (-) TimerEvent: {}
+[21.808175] (messages) StdoutLine: {'line': b'[ 51%] Built target messages__rosidl_typesupport_fastrtps_cpp\n'}
+[21.868801] (messages) StdoutLine: {'line': b'[ 54%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[21.880558] (-) TimerEvent: {}
+[21.981539] (-) TimerEvent: {}
+[22.082890] (-) TimerEvent: {}
+[22.185096] (-) TimerEvent: {}
+[22.285700] (-) TimerEvent: {}
+[22.386241] (-) TimerEvent: {}
+[22.486727] (-) TimerEvent: {}
+[22.587841] (-) TimerEvent: {}
+[22.688537] (-) TimerEvent: {}
+[22.789040] (-) TimerEvent: {}
+[22.889951] (-) TimerEvent: {}
+[22.931732] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_cpp\x1b[0m\n'}
+[22.981149] (messages) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/messages__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages/msg/humanoid_league_msgs__type_support.cpp.o\x1b[0m\n'}
+[22.990110] (-) TimerEvent: {}
+[23.091563] (-) TimerEvent: {}
+[23.192082] (-) TimerEvent: {}
+[23.292747] (-) TimerEvent: {}
+[23.393146] (-) TimerEvent: {}
+[23.493885] (-) TimerEvent: {}
+[23.594672] (-) TimerEvent: {}
+[23.695227] (-) TimerEvent: {}
+[23.797387] (-) TimerEvent: {}
+[23.898306] (-) TimerEvent: {}
+[23.999080] (-) TimerEvent: {}
+[24.092445] (messages) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libmessages__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[24.101148] (-) TimerEvent: {}
+[24.202167] (-) TimerEvent: {}
+[24.205643] (messages) StdoutLine: {'line': b'[ 61%] Built target messages__rosidl_typesupport_cpp\n'}
+[24.239993] (messages) StdoutLine: {'line': b'[ 64%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[24.302355] (-) TimerEvent: {}
+[24.403232] (-) TimerEvent: {}
+[24.503967] (-) TimerEvent: {}
+[24.606158] (-) TimerEvent: {}
+[24.706635] (-) TimerEvent: {}
+[24.807103] (-) TimerEvent: {}
+[24.907754] (-) TimerEvent: {}
+[25.008378] (-) TimerEvent: {}
+[25.108989] (-) TimerEvent: {}
+[25.209724] (-) TimerEvent: {}
+[25.310189] (-) TimerEvent: {}
+[25.410650] (-) TimerEvent: {}
+[25.511186] (-) TimerEvent: {}
+[25.611999] (-) TimerEvent: {}
+[25.682324] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[25.712097] (-) TimerEvent: {}
+[25.789533] (messages) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/messages__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages/msg/detail/humanoid_league_msgs__type_support_c.cpp.o\x1b[0m\n'}
+[25.812219] (-) TimerEvent: {}
+[25.916531] (-) TimerEvent: {}
+[26.016944] (-) TimerEvent: {}
+[26.117707] (-) TimerEvent: {}
+[26.218262] (-) TimerEvent: {}
+[26.318734] (-) TimerEvent: {}
+[26.419343] (-) TimerEvent: {}
+[26.519836] (-) TimerEvent: {}
+[26.620408] (-) TimerEvent: {}
+[26.722413] (-) TimerEvent: {}
+[26.822991] (-) TimerEvent: {}
+[26.883063] (messages) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libmessages__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[26.923079] (-) TimerEvent: {}
+[27.023696] (-) TimerEvent: {}
+[27.124719] (-) TimerEvent: {}
+[27.162238] (messages) StdoutLine: {'line': b'[ 70%] Built target messages__rosidl_typesupport_fastrtps_c\n'}
+[27.224982] (-) TimerEvent: {}
+[27.263848] (messages) StdoutLine: {'line': b'[ 70%] Built target messages\n'}
+[27.325260] (-) TimerEvent: {}
+[27.360234] (messages) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[27.425394] (-) TimerEvent: {}
+[27.526185] (-) TimerEvent: {}
+[27.626732] (-) TimerEvent: {}
+[27.727505] (-) TimerEvent: {}
+[27.828422] (-) TimerEvent: {}
+[27.931701] (-) TimerEvent: {}
+[28.033388] (-) TimerEvent: {}
+[28.134129] (-) TimerEvent: {}
+[28.234901] (-) TimerEvent: {}
+[28.336050] (-) TimerEvent: {}
+[28.437648] (-) TimerEvent: {}
+[28.538659] (-) TimerEvent: {}
+[28.641000] (-) TimerEvent: {}
+[28.741708] (-) TimerEvent: {}
+[28.842437] (-) TimerEvent: {}
+[28.943824] (-) TimerEvent: {}
+[29.044688] (-) TimerEvent: {}
+[29.147317] (-) TimerEvent: {}
+[29.248650] (-) TimerEvent: {}
+[29.349309] (-) TimerEvent: {}
+[29.449895] (-) TimerEvent: {}
+[29.550404] (-) TimerEvent: {}
+[29.650852] (-) TimerEvent: {}
+[29.751333] (-) TimerEvent: {}
+[29.851885] (-) TimerEvent: {}
+[29.952395] (-) TimerEvent: {}
+[30.054237] (-) TimerEvent: {}
+[30.154921] (-) TimerEvent: {}
+[30.255891] (-) TimerEvent: {}
+[30.344748] (messages) StdoutLine: {'line': b'[ 74%] Built target messages__py\n'}
+[30.356052] (-) TimerEvent: {}
+[30.457038] (-) TimerEvent: {}
+[30.476765] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__python\x1b[0m\n'}
+[30.557141] (-) TimerEvent: {}
+[30.612746] (messages) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/messages__python.dir/rosidl_generator_py/messages/msg/_humanoid_league_msgs_s.c.o\x1b[0m\n'}
+[30.657246] (-) TimerEvent: {}
+[30.758265] (-) TimerEvent: {}
+[30.859814] (-) TimerEvent: {}
+[30.961347] (-) TimerEvent: {}
+[31.061838] (-) TimerEvent: {}
+[31.162335] (-) TimerEvent: {}
+[31.233666] (messages) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/messages/libmessages__python.so\x1b[0m\n'}
+[31.262461] (-) TimerEvent: {}
+[31.363007] (-) TimerEvent: {}
+[31.463604] (-) TimerEvent: {}
+[31.564107] (-) TimerEvent: {}
+[31.664798] (-) TimerEvent: {}
+[31.713827] (messages) StdoutLine: {'line': b'[ 80%] Built target messages__python\n'}
+[31.764856] (-) TimerEvent: {}
+[31.818853] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[31.864980] (-) TimerEvent: {}
+[31.904594] (messages) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/messages__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/messages/_messages_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[31.965106] (-) TimerEvent: {}
+[32.065645] (-) TimerEvent: {}
+[32.166446] (-) TimerEvent: {}
+[32.216277] (messages) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/messages/messages_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[32.266564] (-) TimerEvent: {}
+[32.367247] (-) TimerEvent: {}
+[32.404465] (messages) StdoutLine: {'line': b'[ 87%] Built target messages__rosidl_typesupport_c__pyext\n'}
+[32.450713] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[32.467419] (-) TimerEvent: {}
+[32.521026] (messages) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/messages__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/messages/_messages_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[32.567512] (-) TimerEvent: {}
+[32.668394] (-) TimerEvent: {}
+[32.758012] (messages) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/messages/messages_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[32.768692] (-) TimerEvent: {}
+[32.869926] (-) TimerEvent: {}
+[32.970620] (-) TimerEvent: {}
+[33.025773] (messages) StdoutLine: {'line': b'[ 93%] Built target messages__rosidl_typesupport_fastrtps_c__pyext\n'}
+[33.071864] (-) TimerEvent: {}
+[33.073080] (messages) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[33.172104] (-) TimerEvent: {}
+[33.201980] (messages) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/messages__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/messages/_messages_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[33.272226] (-) TimerEvent: {}
+[33.372789] (-) TimerEvent: {}
+[33.473572] (-) TimerEvent: {}
+[33.579484] (-) TimerEvent: {}
+[33.658763] (messages) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/messages/messages_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[33.679592] (-) TimerEvent: {}
+[33.779978] (-) TimerEvent: {}
+[33.830427] (messages) StdoutLine: {'line': b'[100%] Built target messages__rosidl_typesupport_introspection_c__pyext\n'}
+[33.860759] (messages) CommandEnded: {'returncode': 0}
+[33.880389] (-) TimerEvent: {}
+[33.981062] (-) TimerEvent: {}
+[34.081523] (-) TimerEvent: {}
+[34.140291] (messages) JobProgress: {'identifier': 'messages', 'progress': 'install'}
+[34.173686] (messages) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robofei/Downloads/GC/build/messages'], 'cwd': '/home/robofei/Downloads/GC/build/messages', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1781'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robofei/Downloads/GC/install/messages/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1591'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=5a23dc03d357522306cc7b8761856022'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/robofei/Downloads/GC/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:45791'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1825,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1825'), ('INVOCATION_ID', '2fa98b60b410479a9cd45dde6bd5aebd'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/5eb5d394_f610_44e3_9561_ca6eb0e553b6'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.394'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robofei/Downloads/GC/install/messages:/home/robofei/Downloads/GC/install/controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/Downloads/GC/build/messages'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=5a23dc03d357522306cc7b8761856022'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages:/home/robofei/Downloads/GC/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robofei/Downloads/GC/install/messages:/home/robofei/Downloads/GC/install/controller:/opt/ros/foxy')]), 'shell': False}
+[34.181662] (-) TimerEvent: {}
+[34.208368] (messages) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[34.208647] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/ament_index/resource_index/rosidl_interfaces/messages\n'}
+[34.208829] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages\n'}
+[34.208999] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg\n'}
+[34.209161] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail\n'}
+[34.209333] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__struct.h\n'}
+[34.209502] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__functions.h\n'}
+[34.209671] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__functions.c\n'}
+[34.209813] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__type_support.h\n'}
+[34.209956] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg/rosidl_generator_c__visibility_control.h\n'}
+[34.210099] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/humanoid_league_msgs.h\n'}
+[34.210235] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/environment/library_path.sh\n'}
+[34.210399] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/environment/library_path.dsv\n'}
+[34.210553] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_generator_c.so\n'}
+[34.210711] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_generator_c.so" to ""\n'}
+[34.210866] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages\n'}
+[34.211027] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg\n'}
+[34.211188] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail\n'}
+[34.211349] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__rosidl_typesupport_fastrtps_c.h\n'}
+[34.211909] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[34.212115] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_fastrtps_c.so\n'}
+[34.212650] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[34.213167] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages\n'}
+[34.213510] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg\n'}
+[34.213844] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[34.214159] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail\n'}
+[34.214535] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[34.215067] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/dds_fastrtps\n'}
+[34.216088] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_fastrtps_cpp.so\n'}
+[34.218263] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[34.219053] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages\n'}
+[34.220262] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg\n'}
+[34.220775] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail\n'}
+[34.221163] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__type_support.c\n'}
+[34.221946] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__rosidl_typesupport_introspection_c.h\n'}
+[34.222353] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[34.222536] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_introspection_c.so\n'}
+[34.233102] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_introspection_c.so" to ""\n'}
+[34.233392] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_c.so\n'}
+[34.233558] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_c.so" to ""\n'}
+[34.233702] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages\n'}
+[34.233844] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg\n'}
+[34.234000] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail\n'}
+[34.234162] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__struct.hpp\n'}
+[34.234309] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__traits.hpp\n'}
+[34.234449] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__builder.hpp\n'}
+[34.234589] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/humanoid_league_msgs.hpp\n'}
+[34.234751] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages\n'}
+[34.234919] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg\n'}
+[34.235078] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail\n'}
+[34.235214] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__type_support.cpp\n'}
+[34.235382] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__rosidl_typesupport_introspection_cpp.hpp\n'}
+[34.235554] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_introspection_cpp.so\n'}
+[34.235726] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[34.235900] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_cpp.so\n'}
+[34.236062] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Downloads/GC/install/messages/lib/libmessages__rosidl_typesupport_cpp.so" to ""\n'}
+[34.236289] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/environment/pythonpath.sh\n'}
+[34.236502] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/environment/pythonpath.dsv\n'}
+[34.236666] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/__init__.py\n'}
+[34.282378] (-) TimerEvent: {}
+[34.318952] (messages) StdoutLine: {'line': b"Compiling '/home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/__init__.py'...\n"}
+[34.331351] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/msg\n'}
+[34.331667] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/msg/_humanoid_league_msgs.py\n'}
+[34.331970] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/msg/_humanoid_league_msgs_s.c\n'}
+[34.332148] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/msg/__init__.py\n'}
+[34.333034] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[34.333844] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[34.334623] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[34.335968] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[34.336626] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[34.337929] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Downloads/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[34.338264] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/lib/libmessages__python.so\n'}
+[34.338902] (messages) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Downloads/GC/install/messages/lib/libmessages__python.so" to ""\n'}
+[34.339182] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/msg/HumanoidLeagueMsgs.idl\n'}
+[34.339422] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/msg/HumanoidLeagueMsgs.msg\n'}
+[34.339711] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/ament_index/resource_index/package_run_dependencies/messages\n'}
+[34.340015] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/ament_index/resource_index/parent_prefix_path/messages\n'}
+[34.340247] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/environment/ament_prefix_path.sh\n'}
+[34.340451] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/environment/ament_prefix_path.dsv\n'}
+[34.340920] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/environment/path.sh\n'}
+[34.341253] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/environment/path.dsv\n'}
+[34.341533] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/local_setup.bash\n'}
+[34.341765] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/local_setup.sh\n'}
+[34.341939] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/local_setup.zsh\n'}
+[34.342236] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/local_setup.dsv\n'}
+[34.342408] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/package.dsv\n'}
+[34.342712] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/ament_index/resource_index/packages/messages\n'}
+[34.342899] (messages) StdoutLine: {'line': b'-- Old export file "/home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_generator_cExport.cmake" will be replaced.  Removing files [/home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_generator_cExport-noconfig.cmake].\n'}
+[34.343123] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_generator_cExport.cmake\n'}
+[34.343274] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_generator_cExport-noconfig.cmake\n'}
+[34.343589] (messages) StdoutLine: {'line': b'-- Old export file "/home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cExport.cmake" will be replaced.  Removing files [/home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cExport-noconfig.cmake].\n'}
+[34.343851] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cExport.cmake\n'}
+[34.344117] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[34.344656] (messages) StdoutLine: {'line': b'-- Old export file "/home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cExport.cmake" will be replaced.  Removing files [/home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cExport-noconfig.cmake].\n'}
+[34.344929] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cExport.cmake\n'}
+[34.345162] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[34.345887] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_generator_cppExport.cmake\n'}
+[34.346666] (messages) StdoutLine: {'line': b'-- Old export file "/home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cppExport.cmake" will be replaced.  Removing files [/home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cppExport-noconfig.cmake].\n'}
+[34.347421] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[34.347685] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[34.348050] (messages) StdoutLine: {'line': b'-- Old export file "/home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cppExport.cmake" will be replaced.  Removing files [/home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cppExport-noconfig.cmake].\n'}
+[34.348980] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cppExport.cmake\n'}
+[34.350269] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[34.350605] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/rosidl_cmake-extras.cmake\n'}
+[34.351152] (messages) StdoutLine: {'line': b'-- Installing: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[34.352145] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[34.352390] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[34.352572] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[34.352738] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[34.352908] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[34.353073] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/messagesConfig.cmake\n'}
+[34.353237] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/cmake/messagesConfig-version.cmake\n'}
+[34.353440] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Downloads/GC/install/messages/share/messages/package.xml\n'}
+[34.370328] (messages) CommandEnded: {'returncode': 0}
+[34.382658] (-) TimerEvent: {}
+[34.483432] (-) TimerEvent: {}
+[34.584442] (-) TimerEvent: {}
+[34.684826] (-) TimerEvent: {}
+[34.786845] (-) TimerEvent: {}
+[34.801298] (messages) JobEnded: {'identifier': 'messages', 'rc': 0}
+[34.803310] (-) EventReactorShutdown: {}

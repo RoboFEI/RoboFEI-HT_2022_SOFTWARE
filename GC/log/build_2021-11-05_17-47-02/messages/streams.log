@@ -1,0 +1,54 @@
+[0.324s] Invoking command in '/home/robofei/Downloads/GC/build/messages': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/Downloads/GC/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/Downloads/GC/build/messages -- -j4 -l4
+[0.379s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.418s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.418s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.933s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.937s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.945s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.244s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.348s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[1.590s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[1.590s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name messages
+[1.590s]   --arguments-file
+[1.590s]   /home/robofei/Downloads/GC/build/messages/rosidl_adapter__arguments__messages.json
+[1.590s]   --output-dir
+[1.591s]   /home/robofei/Downloads/GC/build/messages/rosidl_adapter/messages
+[1.591s]   --output-file
+[1.591s]   /home/robofei/Downloads/GC/build/messages/rosidl_adapter/messages.idls)
+[1.591s]   returned error code 1:
+[1.591s] 
+[1.591s]   Error processing 'uint8 teamColor' of 'messages/HumanoidLeagueMsgs':
+[1.591s]   ''teamColor' is an invalid field name.  It should have the pattern
+[1.591s]   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[1.591s] 
+[1.592s]   Traceback (most recent call last):
+[1.592s] 
+[1.592s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[1.592s]       return _run_code(code, main_globals, None,
+[1.592s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[1.592s]       exec(code, run_globals)
+[1.592s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.592s]       sys.exit(main())
+[1.593s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.593s]       abs_idl_file = convert_to_idl(
+[1.593s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[1.593s]       return convert_msg_to_idl(
+[1.593s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[1.593s]       msg = parse_message_string(package_name, input_file.stem, content)
+[1.593s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 515, in parse_message_string
+[1.593s]       fields.append(Field(
+[1.593s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 353, in __init__
+[1.594s]       raise NameError(
+[1.594s] 
+[1.594s]   NameError: 'teamColor' is an invalid field name.  It should have the
+[1.595s]   pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[1.595s] 
+[1.595s] Call Stack (most recent call first):
+[1.595s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[1.595s]   CMakeLists.txt:22 (rosidl_generate_interfaces)
+[1.595s] 
+[1.595s] 
+[1.595s] -- Configuring incomplete, errors occurred!
+[1.595s] See also "/home/robofei/Downloads/GC/build/messages/CMakeFiles/CMakeOutput.log".
+[1.606s] make: *** [Makefile:748: cmake_check_build_system] Error 1
+[1.607s] Invoked command in '/home/robofei/Downloads/GC/build/messages' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/Downloads/GC/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/Downloads/GC/build/messages -- -j4 -l4

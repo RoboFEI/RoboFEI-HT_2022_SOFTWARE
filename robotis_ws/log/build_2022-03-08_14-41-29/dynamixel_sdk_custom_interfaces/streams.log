@@ -1,0 +1,59 @@
+[0.026s] Invoking command in '/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_custom_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_custom_interfaces -- -j4 -l4
+[0.050s] CMake Warning (dev) at CMakeLists.txt:24:
+[0.050s]   Syntax Warning in cmake code at column 24
+[0.050s] 
+[0.050s]   Argument not separated from preceding token by whitespace.
+[0.050s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.051s] 
+[0.056s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.081s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.289s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.297s] -- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)
+[0.321s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.325s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.460s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.487s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.521s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[0.720s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[0.720s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[0.720s]   dynamixel_sdk_custom_interfaces --arguments-file
+[0.720s]   /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter__arguments__dynamixel_sdk_custom_interfaces.json
+[0.720s]   --output-dir
+[0.720s]   /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces
+[0.721s]   --output-file
+[0.721s]   /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces.idls)
+[0.721s]   returned error code 1:
+[0.721s] 
+[0.721s]   Traceback (most recent call last):
+[0.721s] 
+[0.721s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[0.721s]       return _run_code(code, main_globals, None,
+[0.721s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[0.721s]       exec(code, run_globals)
+[0.721s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.721s]       sys.exit(main())
+[0.722s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[0.722s]       abs_idl_file = convert_to_idl(
+[0.722s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[0.722s]       return convert_msg_to_idl(
+[0.722s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[0.722s]       msg = parse_message_string(package_name, input_file.stem, content)
+[0.722s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 540, in parse_message_string
+[0.722s]       msg = MessageSpecification(pkg_name, msg_name, fields, constants)
+[0.722s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 387, in __init__
+[0.722s]       self.base_type = BaseType(
+[0.722s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 204, in __init__
+[0.722s]       raise InvalidResourceName(
+[0.723s] 
+[0.723s]   rosidl_adapter.parser.InvalidResourceName: 'SetPosition_original' is an
+[0.723s]   invalid message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[0.723s] 
+[0.723s] Call Stack (most recent call first):
+[0.723s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.723s]   CMakeLists.txt:32 (rosidl_generate_interfaces)
+[0.723s] 
+[0.723s] 
+[0.723s] -- Configuring incomplete, errors occurred!
+[0.723s] See also "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_custom_interfaces/CMakeFiles/CMakeOutput.log".
+[0.728s] make: *** [Makefile:988: cmake_check_build_system] Error 1
+[0.730s] Invoked command in '/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_custom_interfaces' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_custom_interfaces -- -j4 -l4

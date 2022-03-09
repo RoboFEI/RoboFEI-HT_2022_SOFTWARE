@@ -1,0 +1,514 @@
+[35m[1mScanning dependencies of target read_write_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In lambda function:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:86:45:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+   86 |         goal_position[i] = (unsigned int)msg[01;31m[K->[m[Kposition[i];  // Convert int32 -> uint32
+      |                                             [01;31m[K^~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:12:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 |         msg[01;31m[K->[m[Kid[0], msg->id[1], msg->id[2], msg->id[3], msg->id[4], msg->id[5], msg->id[6], msg->id[7], msg->id[8], msg->id[9], msg->id[10], msg->id[11], msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |            [01;31m[K^~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:24:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 |         msg->id[0], msg[01;31m[K->[m[Kid[1], msg->id[2], msg->id[3], msg->id[4], msg->id[5], msg->id[6], msg->id[7], msg->id[8], msg->id[9], msg->id[10], msg->id[11], msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                        [01;31m[K^~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:36:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 |         msg->id[0], msg->id[1], msg[01;31m[K->[m[Kid[2], msg->id[3], msg->id[4], msg->id[5], msg->id[6], msg->id[7], msg->id[8], msg->id[9], msg->id[10], msg->id[11], msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                    [01;31m[K^~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:48:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 |         msg->id[0], msg->id[1], msg->id[2], msg[01;31m[K->[m[Kid[3], msg->id[4], msg->id[5], msg->id[6], msg->id[7], msg->id[8], msg->id[9], msg->id[10], msg->id[11], msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                [01;31m[K^~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:60:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 |         msg->id[0], msg->id[1], msg->id[2], msg->id[3], msg[01;31m[K->[m[Kid[4], msg->id[5], msg->id[6], msg->id[7], msg->id[8], msg->id[9], msg->id[10], msg->id[11], msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                            [01;31m[K^~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:72:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | g->id[0], msg->id[1], msg->id[2], msg->id[3], msg->id[4], msg[01;31m[K->[m[Kid[5], msg->id[6], msg->id[7], msg->id[8], msg->id[9], msg->id[10], msg->id[11], msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:84:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | g->id[1], msg->id[2], msg->id[3], msg->id[4], msg->id[5], msg[01;31m[K->[m[Kid[6], msg->id[7], msg->id[8], msg->id[9], msg->id[10], msg->id[11], msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:96:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | g->id[2], msg->id[3], msg->id[4], msg->id[5], msg->id[6], msg[01;31m[K->[m[Kid[7], msg->id[8], msg->id[9], msg->id[10], msg->id[11], msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:108:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | g->id[3], msg->id[4], msg->id[5], msg->id[6], msg->id[7], msg[01;31m[K->[m[Kid[8], msg->id[9], msg->id[10], msg->id[11], msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:120:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | g->id[4], msg->id[5], msg->id[6], msg->id[7], msg->id[8], msg[01;31m[K->[m[Kid[9], msg->id[10], msg->id[11], msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:132:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | g->id[5], msg->id[6], msg->id[7], msg->id[8], msg->id[9], msg[01;31m[K->[m[Kid[10], msg->id[11], msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:145:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | ->id[6], msg->id[7], msg->id[8], msg->id[9], msg->id[10], msg[01;31m[K->[m[Kid[11], msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:158:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | >id[7], msg->id[8], msg->id[9], msg->id[10], msg->id[11], msg[01;31m[K->[m[Kposition[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:176:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | , msg->id[9], msg->id[10], msg->id[11], msg->position[0], msg[01;31m[K->[m[Kposition[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:194:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | >id[10], msg->id[11], msg->position[0], msg->position[1], msg[01;31m[K->[m[Kposition[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:212:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | 1], msg->position[0], msg->position[1], msg->position[2], msg[01;31m[K->[m[Kposition[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:230:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | 0], msg->position[1], msg->position[2], msg->position[3], msg[01;31m[K->[m[Kposition[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:248:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | 1], msg->position[2], msg->position[3], msg->position[4], msg[01;31m[K->[m[Kposition[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:266:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | 2], msg->position[3], msg->position[4], msg->position[5], msg[01;31m[K->[m[Kposition[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:284:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | 3], msg->position[4], msg->position[5], msg->position[6], msg[01;31m[K->[m[Kposition[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:302:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | 4], msg->position[5], msg->position[6], msg->position[7], msg[01;31m[K->[m[Kposition[8], msg->position[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:320:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | 5], msg->position[6], msg->position[7], msg->position[8], msg[01;31m[K->[m[Kposition[9], msg->position[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:338:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | 6], msg->position[7], msg->position[8], msg->position[9], msg[01;31m[K->[m[Kposition[10], msg->position[11]);
+      |                                                              [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:357:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kvolatile SharedPtr[m[K’ {aka ‘[01m[Kvolatile std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> > >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  108 | [7], msg->position[8], msg->position[9], msg->position[10], msg[01;31m[K->[m[Kposition[11]);
+      |                                                                [01;31m[K^~[m[K
+
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:33[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1012:7:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kstd::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type* std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::operator->() const [with _Tp = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; bool <anonymous> = false; bool <anonymous> = false; std::__shared_ptr_access<_Tp, _Lp, <anonymous>, <anonymous> >::element_type = dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >][m[K’
+ 1012 |       [01;36m[Koperator[m[K->() const noexcept
+      |       [01;36m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/read_write_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

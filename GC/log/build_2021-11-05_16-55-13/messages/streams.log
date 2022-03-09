@@ -1,0 +1,50 @@
+[0.711s] Invoking command in '/home/robofei/Downloads/GC/build/messages': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/Downloads/GC/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/Downloads/GC/build/messages -- -j4 -l4
+[0.803s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.861s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.862s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.527s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.534s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.546s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.926s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.046s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[2.669s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[2.669s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name messages
+[2.669s]   --arguments-file
+[2.669s]   /home/robofei/Downloads/GC/build/messages/rosidl_adapter__arguments__messages.json
+[2.669s]   --output-dir
+[2.670s]   /home/robofei/Downloads/GC/build/messages/rosidl_adapter/messages
+[2.670s]   --output-file
+[2.670s]   /home/robofei/Downloads/GC/build/messages/rosidl_adapter/messages.idls)
+[2.670s]   returned error code 1:
+[2.670s] 
+[2.670s]   Traceback (most recent call last):
+[2.670s] 
+[2.671s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[2.671s]       return _run_code(code, main_globals, None,
+[2.671s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[2.671s]       exec(code, run_globals)
+[2.671s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[2.671s]       sys.exit(main())
+[2.671s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[2.672s]       abs_idl_file = convert_to_idl(
+[2.672s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[2.673s]       return convert_msg_to_idl(
+[2.673s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[2.673s]       msg = parse_message_string(package_name, input_file.stem, content)
+[2.673s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 540, in parse_message_string
+[2.673s]       msg = MessageSpecification(pkg_name, msg_name, fields, constants)
+[2.674s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 402, in __init__
+[2.674s]       raise ValueError(
+[2.674s] 
+[2.674s]   ValueError: the fields iterable contains duplicate names:
+[2.674s]   secondary_state_mode
+[2.674s] 
+[2.674s] Call Stack (most recent call first):
+[2.675s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[2.675s]   CMakeLists.txt:22 (rosidl_generate_interfaces)
+[2.675s] 
+[2.675s] 
+[2.676s] -- Configuring incomplete, errors occurred!
+[2.676s] See also "/home/robofei/Downloads/GC/build/messages/CMakeFiles/CMakeOutput.log".
+[2.692s] make: *** [Makefile:748: cmake_check_build_system] Error 1
+[2.699s] Invoked command in '/home/robofei/Downloads/GC/build/messages' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/Downloads/GC/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/Downloads/GC/build/messages -- -j4 -l4

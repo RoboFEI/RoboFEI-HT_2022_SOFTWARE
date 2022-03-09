@@ -1,0 +1,22 @@
+[0.024s] Invoking command in '/home/robofei/robotis_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/robotis_ws/install/dynamixel_sdk:/home/robofei/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[0.074s] [35m[1mScanning dependencies of target read_write_node[0m
+[0.114s] [ 50%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[1.514s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In constructor ‘[01m[KReadWriteNode::ReadWriteNode()[m[K’:
+[1.515s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:5:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KReadWriteNode::create_subscription<ReadWriteNode::SetPosition>(const char [13], ReadWriteNode::ReadWriteNode()::<lambda(dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::SharedPtr)>)[m[K’
+[1.515s]   108 |     [01;31m[K)[m[K;
+[1.515s]       |     [01;31m[K^[m[K
+[1.515s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.515s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[1.516s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.516s]                  from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[1.516s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:213:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class CallbackMessageT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<SubscriptionT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+[1.516s]   213 |   [01;36m[Kcreate_subscription[m[K(
+[1.516s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.516s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:213:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.517s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:108:5:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 2 provided
+[1.517s]   108 |     [01;36m[K)[m[K;
+[1.517s]       |     [01;36m[K^[m[K
+[1.939s] make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+[1.940s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/read_write_node.dir/all] Error 2
+[1.940s] make: *** [Makefile:141: all] Error 2
+[1.943s] Invoked command in '/home/robofei/robotis_ws/build/dynamixel_sdk_examples' returned '2': CMAKE_PREFIX_PATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/robotis_ws/install/dynamixel_sdk:/home/robofei/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4

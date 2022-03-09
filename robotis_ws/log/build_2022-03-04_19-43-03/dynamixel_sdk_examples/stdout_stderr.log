@@ -1,0 +1,41 @@
+[35m[1mScanning dependencies of target read_write_node[0m
+[ 50%] Built target minimal_pub
+[ 75%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In lambda function:
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:102:16:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[Kuint32_t position0[m[K’
+  102 |       uint32_t [01;31m[Kposition0[m[K = (unsigned int)msg->position[0]; // Convert int32 -> uint32
+      |                [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:95:13:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Kint32_t position0[m[K’
+   95 |     int32_t [01;36m[Kposition0[m[K = 0;
+      |             [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:107:16:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[Kuint32_t position1[m[K’
+  107 |       uint32_t [01;31m[Kposition1[m[K = (unsigned int)msg->position[1]; // Convert int32 -> uint32
+      |                [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:96:13:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Kint32_t position1[m[K’
+   96 |     int32_t [01;36m[Kposition1[m[K = 0;
+      |             [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:112:16:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[Kuint32_t position2[m[K’
+  112 |       uint32_t [01;31m[Kposition2[m[K = (unsigned int)msg->position[2]; // Convert int32 -> uint32
+      |                [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:97:13:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Kint32_t position2[m[K’
+   97 |     int32_t [01;36m[Kposition2[m[K = 0;
+      |             [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:119:62:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+  119 |       dxl_addparam_result = group_sync_write.addParam(uint8_t[01;31m[K)[m[Kmsg->id[0], param_goal_position0);
+      |                                                              [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:134:16:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[Kuint32_t position1[m[K’
+  134 |       uint32_t [01;31m[Kposition1[m[K = (unsigned int)msg->position1; // Convert int32 -> uint32
+      |                [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:96:13:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Kint32_t position1[m[K’
+   96 |     int32_t [01;36m[Kposition1[m[K = 0;
+      |             [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:134:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kposition1[m[K’; did you mean ‘[01m[Kposition[m[K’?
+  134 |       uint32_t position1 = (unsigned int)msg->[01;31m[Kposition1[m[K; // Convert int32 -> uint32
+      |                                               [01;31m[K^~~~~~~~~[m[K
+      |                                               [32m[Kposition[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:95:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kposition0[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   95 |     int32_t [01;35m[Kposition0[m[K = 0;
+      |             [01;35m[K^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/read_write_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

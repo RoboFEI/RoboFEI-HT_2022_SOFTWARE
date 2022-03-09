@@ -1,0 +1,705 @@
+[0.000000] (-) TimerEvent: {}
+[0.000342] (dynamixel_sdk) JobQueued: {'identifier': 'dynamixel_sdk', 'dependencies': OrderedDict()}
+[0.000445] (dynamixel_sdk_custom_interfaces) JobQueued: {'identifier': 'dynamixel_sdk_custom_interfaces', 'dependencies': OrderedDict()}
+[0.000689] (dynamixel_sdk_examples) JobQueued: {'identifier': 'dynamixel_sdk_examples', 'dependencies': OrderedDict([('dynamixel_sdk', '/home/robofei/Music/robotis_ws/install/dynamixel_sdk'), ('dynamixel_sdk_custom_interfaces', '/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces')])}
+[0.000869] (dynamixel_sdk) JobStarted: {'identifier': 'dynamixel_sdk'}
+[0.011886] (dynamixel_sdk_custom_interfaces) JobStarted: {'identifier': 'dynamixel_sdk_custom_interfaces'}
+[0.020468] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'cmake'}
+[0.021314] (dynamixel_sdk) Command: {'cmd': ['/usr/bin/cmake', '/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/robofei/Music/robotis_ws/install/dynamixel_sdk'], 'cwd': '/home/robofei/Music/robotis_ws/build/dynamixel_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1766'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1572'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:46876'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1805,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '8996850f2694475181f54fd180076ba3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4027d2f8_f261_4839_8056_cbb9a3d61845'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.140'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/Music/robotis_ws/build/dynamixel_sdk'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.030671] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'cmake'}
+[0.031166] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_custom_interfaces', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces'], 'cwd': '/home/robofei/Music/robotis_ws/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1766'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1572'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:46876'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1805,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '8996850f2694475181f54fd180076ba3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4027d2f8_f261_4839_8056_cbb9a3d61845'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.140'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/Music/robotis_ws/build/dynamixel_sdk_custom_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.099799] (-) TimerEvent: {}
+[0.200177] (-) TimerEvent: {}
+[0.300445] (-) TimerEvent: {}
+[0.400714] (-) TimerEvent: {}
+[0.501019] (-) TimerEvent: {}
+[0.601465] (-) TimerEvent: {}
+[0.702494] (-) TimerEvent: {}
+[0.803656] (-) TimerEvent: {}
+[0.904592] (-) TimerEvent: {}
+[1.005755] (-) TimerEvent: {}
+[1.106883] (-) TimerEvent: {}
+[1.207834] (-) TimerEvent: {}
+[1.308718] (-) TimerEvent: {}
+[1.409695] (-) TimerEvent: {}
+[1.509966] (-) TimerEvent: {}
+[1.610262] (-) TimerEvent: {}
+[1.615127] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.3.0\n'}
+[1.615377] (dynamixel_sdk) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.3.0\n'}
+[1.710361] (-) TimerEvent: {}
+[1.810783] (-) TimerEvent: {}
+[1.911053] (-) TimerEvent: {}
+[2.011361] (-) TimerEvent: {}
+[2.111766] (-) TimerEvent: {}
+[2.212090] (-) TimerEvent: {}
+[2.312512] (-) TimerEvent: {}
+[2.413735] (-) TimerEvent: {}
+[2.514821] (-) TimerEvent: {}
+[2.615775] (-) TimerEvent: {}
+[2.716690] (-) TimerEvent: {}
+[2.818183] (-) TimerEvent: {}
+[2.919578] (-) TimerEvent: {}
+[2.960291] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.3.0\n'}
+[2.960563] (dynamixel_sdk) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.3.0\n'}
+[3.019728] (-) TimerEvent: {}
+[3.076420] (dynamixel_sdk) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[3.077742] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[3.119908] (-) TimerEvent: {}
+[3.214917] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[3.216752] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.219900] (dynamixel_sdk) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[3.220123] (-) TimerEvent: {}
+[3.221483] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.320251] (-) TimerEvent: {}
+[3.328236] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[3.333017] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[3.343149] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[3.350353] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[3.352567] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[3.352844] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[3.372260] (dynamixel_sdk) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[3.372730] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[3.420372] (-) TimerEvent: {}
+[3.475626] (dynamixel_sdk) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[3.477279] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[3.480799] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[3.482133] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[3.520477] (-) TimerEvent: {}
+[3.587166] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.587353] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.612579] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.612791] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.613516] (dynamixel_sdk) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.613701] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.620563] (-) TimerEvent: {}
+[3.663645] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[3.663878] (dynamixel_sdk) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[3.720658] (-) TimerEvent: {}
+[3.754115] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[3.754433] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.754632] (dynamixel_sdk) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[3.754788] (dynamixel_sdk) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.820860] (-) TimerEvent: {}
+[3.921136] (-) TimerEvent: {}
+[4.021406] (-) TimerEvent: {}
+[4.117684] (dynamixel_sdk) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[4.117986] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[4.121517] (-) TimerEvent: {}
+[4.221854] (-) TimerEvent: {}
+[4.256113] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)\n'}
+[4.321961] (-) TimerEvent: {}
+[4.357823] (dynamixel_sdk) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.393711] (dynamixel_sdk) StdoutLine: {'line': b'-- Generating done\n'}
+[4.394942] (dynamixel_sdk) StdoutLine: {'line': b'-- Build files have been written to: /home/robofei/Music/robotis_ws/build/dynamixel_sdk\n'}
+[4.398146] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[4.398753] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'build'}
+[4.399499] (dynamixel_sdk) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robofei/Music/robotis_ws/build/dynamixel_sdk', '--', '-j4', '-l4'], 'cwd': '/home/robofei/Music/robotis_ws/build/dynamixel_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1766'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1572'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:46876'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1805,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '8996850f2694475181f54fd180076ba3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4027d2f8_f261_4839_8056_cbb9a3d61845'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.140'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/Music/robotis_ws/build/dynamixel_sdk'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[4.422090] (-) TimerEvent: {}
+[4.431008] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.447990] (dynamixel_sdk) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk\x1b[0m\n'}
+[4.490620] (dynamixel_sdk) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.o\x1b[0m\n'}
+[4.490890] (dynamixel_sdk) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o\x1b[0m\n'}
+[4.495168] (dynamixel_sdk) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.o\x1b[0m\n'}
+[4.499200] (dynamixel_sdk) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.o\x1b[0m\n'}
+[4.522174] (-) TimerEvent: {}
+[4.529007] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[4.622281] (-) TimerEvent: {}
+[4.722656] (-) TimerEvent: {}
+[4.823124] (-) TimerEvent: {}
+[4.923843] (-) TimerEvent: {}
+[5.024159] (-) TimerEvent: {}
+[5.124473] (-) TimerEvent: {}
+[5.224888] (-) TimerEvent: {}
+[5.325847] (-) TimerEvent: {}
+[5.426910] (-) TimerEvent: {}
+[5.527976] (-) TimerEvent: {}
+[5.629064] (-) TimerEvent: {}
+[5.730634] (-) TimerEvent: {}
+[5.831657] (-) TimerEvent: {}
+[5.932632] (-) TimerEvent: {}
+[6.033791] (-) TimerEvent: {}
+[6.134126] (-) TimerEvent: {}
+[6.143212] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[6.234243] (-) TimerEvent: {}
+[6.282494] (dynamixel_sdk) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.o\x1b[0m\n'}
+[6.334349] (-) TimerEvent: {}
+[6.414941] (dynamixel_sdk) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.o\x1b[0m\n'}
+[6.418007] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[6.434453] (-) TimerEvent: {}
+[6.460598] (dynamixel_sdk) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.o\x1b[0m\n'}
+[6.534561] (-) TimerEvent: {}
+[6.634887] (-) TimerEvent: {}
+[6.735252] (-) TimerEvent: {}
+[6.835516] (-) TimerEvent: {}
+[6.935788] (-) TimerEvent: {}
+[6.994106] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.035913] (-) TimerEvent: {}
+[7.136414] (-) TimerEvent: {}
+[7.237245] (-) TimerEvent: {}
+[7.337530] (-) TimerEvent: {}
+[7.372009] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[7.437648] (-) TimerEvent: {}
+[7.519410] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[7.537738] (-) TimerEvent: {}
+[7.638056] (-) TimerEvent: {}
+[7.738406] (-) TimerEvent: {}
+[7.838743] (-) TimerEvent: {}
+[7.939076] (-) TimerEvent: {}
+[7.988572] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[8.039206] (-) TimerEvent: {}
+[8.049516] (dynamixel_sdk) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.o\x1b[0m\n'}
+[8.108989] (dynamixel_sdk) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.o\x1b[0m\n'}
+[8.139322] (-) TimerEvent: {}
+[8.239691] (-) TimerEvent: {}
+[8.339988] (-) TimerEvent: {}
+[8.372619] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[8.436804] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.440082] (-) TimerEvent: {}
+[8.463920] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[8.485190] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[8.540195] (-) TimerEvent: {}
+[8.548550] (dynamixel_sdk) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libdynamixel_sdk.so\x1b[0m\n'}
+[8.613190] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[8.613502] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[8.613655] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[8.613775] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[8.640302] (-) TimerEvent: {}
+[8.660321] (dynamixel_sdk) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk\n'}
+[8.661793] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[8.676576] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[8.724220] (dynamixel_sdk) JobProgress: {'identifier': 'dynamixel_sdk', 'progress': 'install'}
+[8.737083] (dynamixel_sdk) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robofei/Music/robotis_ws/build/dynamixel_sdk'], 'cwd': '/home/robofei/Music/robotis_ws/build/dynamixel_sdk', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1766'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1572'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:46876'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1805,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '8996850f2694475181f54fd180076ba3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4027d2f8_f261_4839_8056_cbb9a3d61845'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.140'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/Music/robotis_ws/build/dynamixel_sdk'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[8.740922] (-) TimerEvent: {}
+[8.748671] (dynamixel_sdk) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.749355] (dynamixel_sdk) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[8.750208] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/dynamixel_sdk.h\n'}
+[8.761652] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_read.h\n'}
+[8.772091] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_bulk_write.h\n'}
+[8.782017] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_read.h\n'}
+[8.792068] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/group_sync_write.h\n'}
+[8.802161] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/packet_handler.h\n'}
+[8.812108] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler.h\n'}
+[8.821913] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_arduino.h\n'}
+[8.832038] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_linux.h\n'}
+[8.841019] (-) TimerEvent: {}
+[8.842528] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_mac.h\n'}
+[8.852315] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/port_handler_windows.h\n'}
+[8.852754] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[8.862284] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol1_packet_handler.h\n'}
+[8.873640] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/include//dynamixel_sdk/protocol2_packet_handler.h\n'}
+[8.883758] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/lib/libdynamixel_sdk.so\n'}
+[8.897093] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.sh\n'}
+[8.897381] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/library_path.dsv\n'}
+[8.907609] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk\n'}
+[8.917776] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk\n'}
+[8.927794] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.sh\n'}
+[8.928115] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/ament_prefix_path.dsv\n'}
+[8.938938] (dynamixel_sdk) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.sh\n'}
+[8.939281] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/environment/path.dsv\n'}
+[8.941118] (-) TimerEvent: {}
+[8.949548] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.bash\n'}
+[8.950896] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[8.956788] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/robofei/Music/robotis_ws/build/dynamixel_sdk_custom_interfaces\n'}
+[8.959922] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.sh\n'}
+[8.965358] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[8.966330] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'build'}
+[8.967066] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robofei/Music/robotis_ws/build/dynamixel_sdk_custom_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/robofei/Music/robotis_ws/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1766'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1572'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:46876'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1805,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '8996850f2694475181f54fd180076ba3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4027d2f8_f261_4839_8056_cbb9a3d61845'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.140'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/Music/robotis_ws/build/dynamixel_sdk_custom_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[8.972601] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.zsh\n'}
+[8.986498] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/local_setup.dsv\n'}
+[8.999984] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv\n'}
+[9.013063] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/ament_index/resource_index/packages/dynamixel_sdk\n'}
+[9.024320] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces__cpp\x1b[0m\n'}
+[9.025103] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[9.027513] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[9.041097] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[9.041303] (-) TimerEvent: {}
+[9.041652] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[9.055573] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig.cmake\n'}
+[9.070202] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake/dynamixel_sdkConfig-version.cmake\n'}
+[9.080476] (dynamixel_sdk) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/package.xml\n'}
+[9.095596] (dynamixel_sdk) CommandEnded: {'returncode': 0}
+[9.141459] (-) TimerEvent: {}
+[9.175607] (dynamixel_sdk) JobEnded: {'identifier': 'dynamixel_sdk', 'rc': 0}
+[9.241518] (-) TimerEvent: {}
+[9.341867] (-) TimerEvent: {}
+[9.442169] (-) TimerEvent: {}
+[9.542476] (-) TimerEvent: {}
+[9.642792] (-) TimerEvent: {}
+[9.743096] (-) TimerEvent: {}
+[9.784742] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces__rosidl_generator_c\x1b[0m\n'}
+[9.795714] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[  5%] Built target dynamixel_sdk_custom_interfaces__cpp\n'}
+[9.801715] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.c.o\x1b[0m\n'}
+[9.802041] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.c.o\x1b[0m\n'}
+[9.810411] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[9.814607] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[9.843187] (-) TimerEvent: {}
+[9.943486] (-) TimerEvent: {}
+[10.019855] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[10.022805] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[10.043593] (-) TimerEvent: {}
+[10.128395] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[10.143695] (-) TimerEvent: {}
+[10.145927] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp.o\x1b[0m\n'}
+[10.155870] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 23%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c\n'}
+[10.169922] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o\x1b[0m\n'}
+[10.243788] (-) TimerEvent: {}
+[10.334668] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[10.343883] (-) TimerEvent: {}
+[10.376945] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dynamixel_sdk_custom_interfaces/msg/detail/dds_fastrtps/set_position__type_support.cpp.o\x1b[0m\n'}
+[10.444004] (-) TimerEvent: {}
+[10.448259] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[10.468118] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.cpp.o\x1b[0m\n'}
+[10.544224] (-) TimerEvent: {}
+[10.645820] (-) TimerEvent: {}
+[10.746284] (-) TimerEvent: {}
+[10.769714] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.cpp.o\x1b[0m\n'}
+[10.846393] (-) TimerEvent: {}
+[10.849190] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32m\x1b[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[10.946503] (-) TimerEvent: {}
+[10.950084] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[10.965757] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 38%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp\n'}
+[10.983180] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[11.046599] (-) TimerEvent: {}
+[11.146908] (-) TimerEvent: {}
+[11.247227] (-) TimerEvent: {}
+[11.322283] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32m\x1b[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[11.347334] (-) TimerEvent: {}
+[11.425671] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dynamixel_sdk_custom_interfaces/srv/detail/dds_fastrtps/get_position__type_support.cpp.o\x1b[0m\n'}
+[11.434176] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 46%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[11.447512] (-) TimerEvent: {}
+[11.460218] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[11.478160] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp.o\x1b[0m\n'}
+[11.498699] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o\x1b[0m\n'}
+[11.540556] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[11.547688] (-) TimerEvent: {}
+[11.549094] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[11.559808] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.c.o\x1b[0m\n'}
+[11.564950] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.c.o\x1b[0m\n'}
+[11.611524] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 58%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c\n'}
+[11.629733] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking C shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[11.647791] (-) TimerEvent: {}
+[11.676181] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 61%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[11.747906] (-) TimerEvent: {}
+[11.848258] (-) TimerEvent: {}
+[11.948602] (-) TimerEvent: {}
+[12.025313] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[12.048726] (-) TimerEvent: {}
+[12.149024] (-) TimerEvent: {}
+[12.179960] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 64%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[12.192055] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[12.249120] (-) TimerEvent: {}
+[12.349462] (-) TimerEvent: {}
+[12.449760] (-) TimerEvent: {}
+[12.550097] (-) TimerEvent: {}
+[12.576758] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[12.597496] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support_c.cpp.o\x1b[0m\n'}
+[12.597762] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support_c.cpp.o\x1b[0m\n'}
+[12.650188] (-) TimerEvent: {}
+[12.750528] (-) TimerEvent: {}
+[12.850870] (-) TimerEvent: {}
+[12.951222] (-) TimerEvent: {}
+[13.051574] (-) TimerEvent: {}
+[13.059482] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[13.151692] (-) TimerEvent: {}
+[13.168219] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 74%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[13.179883] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces\x1b[0m\n'}
+[13.192096] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 74%] Built target dynamixel_sdk_custom_interfaces\n'}
+[13.203859] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces__py\x1b[0m\n'}
+[13.215618] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[13.251785] (-) TimerEvent: {}
+[13.352075] (-) TimerEvent: {}
+[13.452407] (-) TimerEvent: {}
+[13.552659] (-) TimerEvent: {}
+[13.652957] (-) TimerEvent: {}
+[13.753253] (-) TimerEvent: {}
+[13.853583] (-) TimerEvent: {}
+[13.954110] (-) TimerEvent: {}
+[14.054377] (-) TimerEvent: {}
+[14.154922] (-) TimerEvent: {}
+[14.255551] (-) TimerEvent: {}
+[14.356662] (-) TimerEvent: {}
+[14.457407] (-) TimerEvent: {}
+[14.557672] (-) TimerEvent: {}
+[14.657952] (-) TimerEvent: {}
+[14.758214] (-) TimerEvent: {}
+[14.766645] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 76%] Built target dynamixel_sdk_custom_interfaces__py\n'}
+[14.779007] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces__python\x1b[0m\n'}
+[14.800101] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__python.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/srv/_get_position_s.c.o\x1b[0m\n'}
+[14.800671] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__python.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/msg/_set_position_s.c.o\x1b[0m\n'}
+[14.858307] (-) TimerEvent: {}
+[14.958631] (-) TimerEvent: {}
+[15.058955] (-) TimerEvent: {}
+[15.159358] (-) TimerEvent: {}
+[15.238869] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/dynamixel_sdk_custom_interfaces/libdynamixel_sdk_custom_interfaces__python.so\x1b[0m\n'}
+[15.259476] (-) TimerEvent: {}
+[15.282827] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 84%] Built target dynamixel_sdk_custom_interfaces__python\n'}
+[15.295389] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[15.299433] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[15.299674] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[15.316272] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[15.323932] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[15.330250] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[15.359587] (-) TimerEvent: {}
+[15.429922] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[15.459694] (-) TimerEvent: {}
+[15.466485] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[15.471863] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 97%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext\n'}
+[15.479905] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[15.508527] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[15.552073] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[15.559834] (-) TimerEvent: {}
+[15.564266] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[15.628287] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'install'}
+[15.628733] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robofei/Music/robotis_ws/build/dynamixel_sdk_custom_interfaces'], 'cwd': '/home/robofei/Music/robotis_ws/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1766'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1572'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:46876'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1805,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '8996850f2694475181f54fd180076ba3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4027d2f8_f261_4839_8056_cbb9a3d61845'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.140'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/Music/robotis_ws/build/dynamixel_sdk_custom_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[15.640414] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.641166] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[15.641824] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[15.652845] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.h\n'}
+[15.659947] (-) TimerEvent: {}
+[15.662711] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.h\n'}
+[15.672584] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.h\n'}
+[15.682486] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[15.692503] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.h\n'}
+[15.702463] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.h\n'}
+[15.712449] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.h\n'}
+[15.722456] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.h\n'}
+[15.732314] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.h\n'}
+[15.742326] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.sh\n'}
+[15.742614] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.dsv\n'}
+[15.753213] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_c.h\n'}
+[15.760049] (-) TimerEvent: {}
+[15.764094] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[15.774243] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_c.h\n'}
+[15.784804] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[15.796398] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[15.806776] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[15.817138] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[15.827757] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[15.838625] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h\n'}
+[15.848709] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[15.858478] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h\n'}
+[15.860142] (-) TimerEvent: {}
+[15.868742] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp\n'}
+[15.878758] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp\n'}
+[15.888877] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp\n'}
+[15.902162] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp\n'}
+[15.912082] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp\n'}
+[15.921907] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp\n'}
+[15.931850] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp\n'}
+[15.941643] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.hpp\n'}
+[15.951897] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[15.960255] (-) TimerEvent: {}
+[15.962107] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[15.972639] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.sh\n'}
+[15.983378] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.dsv\n'}
+[15.994315] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/__init__.py\n'}
+[16.005080] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/__init__.py\n'}
+[16.015148] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position.py\n'}
+[16.025464] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv/__init__.py\n'}
+[16.035534] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv/_get_position.py\n'}
+[16.045570] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[16.055825] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[16.060385] (-) TimerEvent: {}
+[16.067653] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[16.077915] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__python.so\n'}
+[16.088353] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl\n'}
+[16.098741] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl\n'}
+[16.108795] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg\n'}
+[16.118563] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv\n'}
+[16.128491] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Request.msg\n'}
+[16.138302] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Response.msg\n'}
+[16.148090] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_custom_interfaces\n'}
+[16.157865] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_custom_interfaces\n'}
+[16.160515] (-) TimerEvent: {}
+[16.167704] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.sh\n'}
+[16.168151] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.dsv\n'}
+[16.178148] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.sh\n'}
+[16.178524] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.dsv\n'}
+[16.188905] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.bash\n'}
+[16.199387] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.sh\n'}
+[16.209524] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.zsh\n'}
+[16.219446] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.dsv\n'}
+[16.229088] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv\n'}
+[16.238769] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/packages/dynamixel_sdk_custom_interfaces\n'}
+[16.248612] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[16.258558] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[16.260645] (-) TimerEvent: {}
+[16.268370] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[16.281759] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[16.292583] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[16.303356] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[16.313673] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[16.323767] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig.cmake\n'}
+[16.333424] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig-version.cmake\n'}
+[16.343161] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.xml\n'}
+[16.352732] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so\n'}
+[16.353161] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so" to ""\n'}
+[16.353473] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[16.353989] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[16.354269] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so\n'}
+[16.354715] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[16.355051] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[16.355562] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[16.355857] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so\n'}
+[16.356330] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[16.360719] (-) TimerEvent: {}
+[16.387941] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b"Compiling '/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/__init__.py'...\n"}
+[16.392845] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport.cmake\n'}
+[16.393115] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[16.393403] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[16.393602] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[16.393968] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[16.394153] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[16.394524] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cppExport.cmake\n'}
+[16.394839] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[16.395034] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[16.395393] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[16.395594] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[16.397825] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[16.460894] (-) TimerEvent: {}
+[16.489125] (dynamixel_sdk_custom_interfaces) JobEnded: {'identifier': 'dynamixel_sdk_custom_interfaces', 'rc': 0}
+[16.491473] (dynamixel_sdk_examples) JobStarted: {'identifier': 'dynamixel_sdk_examples'}
+[16.501901] (dynamixel_sdk_examples) JobProgress: {'identifier': 'dynamixel_sdk_examples', 'progress': 'cmake'}
+[16.502199] (dynamixel_sdk_examples) Command: {'cmd': ['/usr/bin/cmake', '/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/robofei/Music/robotis_ws/install/dynamixel_sdk_examples'], 'cwd': '/home/robofei/Music/robotis_ws/build/dynamixel_sdk_examples', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1766'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/Music/robotis_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1572'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:46876'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1805,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '8996850f2694475181f54fd180076ba3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4027d2f8_f261_4839_8056_cbb9a3d61845'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.140'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/Music/robotis_ws/install/dynamixel_sdk:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/Music/robotis_ws/build/dynamixel_sdk_examples'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/Music/robotis_ws/install/dynamixel_sdk:/opt/ros/foxy')]), 'shell': False}
+[16.560988] (-) TimerEvent: {}
+[16.577277] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.3.0\n'}
+[16.645107] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.3.0\n'}
+[16.650218] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[16.661084] (-) TimerEvent: {}
+[16.732119] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[16.733130] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[16.761177] (-) TimerEvent: {}
+[16.814558] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[16.834965] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[16.835345] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[16.838049] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[16.861285] (-) TimerEvent: {}
+[16.926831] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[16.928042] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[16.961387] (-) TimerEvent: {}
+[17.019703] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[17.033229] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[17.033882] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[17.036445] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[17.061485] (-) TimerEvent: {}
+[17.065841] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[17.066107] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[17.161589] (-) TimerEvent: {}
+[17.261874] (-) TimerEvent: {}
+[17.264672] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[17.289466] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Found dynamixel_sdk: 3.7.40 (/home/robofei/Music/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)\n'}
+[17.291850] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)\n'}
+[17.328248] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[17.335521] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[17.362006] (-) TimerEvent: {}
+[17.434201] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[17.462105] (-) TimerEvent: {}
+[17.470778] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[17.562195] (-) TimerEvent: {}
+[17.565042] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[17.662319] (-) TimerEvent: {}
+[17.694788] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[17.762542] (-) TimerEvent: {}
+[17.863203] (-) TimerEvent: {}
+[17.903609] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[17.917663] (dynamixel_sdk_examples) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[17.950153] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[17.963316] (-) TimerEvent: {}
+[18.030693] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[18.031027] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[18.063420] (-) TimerEvent: {}
+[18.111512] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[18.111782] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[18.163515] (-) TimerEvent: {}
+[18.175176] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[18.175448] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[18.251504] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[18.252789] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[18.263590] (-) TimerEvent: {}
+[18.363898] (-) TimerEvent: {}
+[18.464374] (-) TimerEvent: {}
+[18.565171] (-) TimerEvent: {}
+[18.665514] (-) TimerEvent: {}
+[18.758413] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[18.765866] (-) TimerEvent: {}
+[18.866427] (-) TimerEvent: {}
+[18.966772] (-) TimerEvent: {}
+[18.981869] (dynamixel_sdk_examples) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[18.983274] (dynamixel_sdk_examples) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[18.983723] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/include\n'}
+[18.983843] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[18.984907] (dynamixel_sdk_examples) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[18.985028] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[18.985625] (dynamixel_sdk_examples) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[18.986338] (dynamixel_sdk_examples) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[18.988057] (dynamixel_sdk_examples) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[18.989152] (dynamixel_sdk_examples) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[18.989271] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[18.989861] (dynamixel_sdk_examples) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[18.993510] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Configuring done\n'}
+[19.008273] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Generating done\n'}
+[19.010396] (dynamixel_sdk_examples) StdoutLine: {'line': b'-- Build files have been written to: /home/robofei/Music/robotis_ws/build/dynamixel_sdk_examples\n'}
+[19.018683] (dynamixel_sdk_examples) CommandEnded: {'returncode': 0}
+[19.019408] (dynamixel_sdk_examples) JobProgress: {'identifier': 'dynamixel_sdk_examples', 'progress': 'build'}
+[19.019757] (dynamixel_sdk_examples) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robofei/Music/robotis_ws/build/dynamixel_sdk_examples', '--', '-j4', '-l4'], 'cwd': '/home/robofei/Music/robotis_ws/build/dynamixel_sdk_examples', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1766'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/Music/robotis_ws/install/dynamixel_sdk/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1572'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:46876'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1805,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1805'), ('INVOCATION_ID', '8996850f2694475181f54fd180076ba3'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4027d2f8_f261_4839_8056_cbb9a3d61845'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.140'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/Music/robotis_ws/install/dynamixel_sdk:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/Music/robotis_ws/build/dynamixel_sdk_examples'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=317ac9880b157ed6eaf2f61a622756fd'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robofei/Music/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/Music/robotis_ws/install/dynamixel_sdk:/opt/ros/foxy')]), 'shell': False}
+[19.065733] (dynamixel_sdk_examples) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target read_write_node\x1b[0m\n'}
+[19.066036] (dynamixel_sdk_examples) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target minimal_pub\x1b[0m\n'}
+[19.066850] (-) TimerEvent: {}
+[19.111037] (dynamixel_sdk_examples) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o\x1b[0m\n'}
+[19.118455] (dynamixel_sdk_examples) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o\x1b[0m\n'}
+[19.166970] (-) TimerEvent: {}
+[19.267309] (-) TimerEvent: {}
+[19.367582] (-) TimerEvent: {}
+[19.467886] (-) TimerEvent: {}
+[19.568177] (-) TimerEvent: {}
+[19.668642] (-) TimerEvent: {}
+[19.769626] (-) TimerEvent: {}
+[19.870636] (-) TimerEvent: {}
+[19.971557] (-) TimerEvent: {}
+[20.072667] (-) TimerEvent: {}
+[20.173659] (-) TimerEvent: {}
+[20.274075] (-) TimerEvent: {}
+[20.374331] (-) TimerEvent: {}
+[20.474667] (-) TimerEvent: {}
+[20.574988] (-) TimerEvent: {}
+[20.675319] (-) TimerEvent: {}
+[20.775636] (-) TimerEvent: {}
+[20.875958] (-) TimerEvent: {}
+[20.976323] (-) TimerEvent: {}
+[21.076617] (-) TimerEvent: {}
+[21.176967] (-) TimerEvent: {}
+[21.277307] (-) TimerEvent: {}
+[21.377649] (-) TimerEvent: {}
+[21.477995] (-) TimerEvent: {}
+[21.578342] (-) TimerEvent: {}
+[21.678689] (-) TimerEvent: {}
+[21.779052] (-) TimerEvent: {}
+[21.879371] (-) TimerEvent: {}
+[21.979717] (-) TimerEvent: {}
+[22.006436] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MinimalPublisher::timer_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[22.007170] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:28:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_id_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kunsigned char\x1b[m\x1b[K\xe2\x80\x99} in assignment\n'}
+[22.007346] (dynamixel_sdk_examples) StderrLine: {'line': b'   28 |         message.id = {2, 4, 6\x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[22.007507] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[22.007652] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:29:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_position_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99} in assignment\n'}
+[22.007806] (dynamixel_sdk_examples) StderrLine: {'line': b'   29 |         message.position = {1024, 1024, 2593\x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[22.007946] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[22.014167] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:32:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_id_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kunsigned char\x1b[m\x1b[K\xe2\x80\x99} in assignment\n'}
+[22.014546] (dynamixel_sdk_examples) StderrLine: {'line': b'   32 |         message.id = {2, 4, 6\x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[22.014708] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[22.014853] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:33:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_position_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99} in assignment\n'}
+[22.015004] (dynamixel_sdk_examples) StderrLine: {'line': b'   33 |         message.position = {1024, 1024, 3553\x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[22.015147] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[22.015283] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:38:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_id_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kunsigned char\x1b[m\x1b[K\xe2\x80\x99} in assignment\n'}
+[22.015430] (dynamixel_sdk_examples) StderrLine: {'line': b'   38 |           message.id = {2, 4, 6\x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[22.015567] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[22.015679] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:39:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_position_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99} in assignment\n'}
+[22.015794] (dynamixel_sdk_examples) StderrLine: {'line': b'   39 |           message.position = {1900, 1950, 2200\x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[22.015903] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[22.045802] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[22.046138] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:93:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kposition1\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Kposition\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[22.046332] (dynamixel_sdk_examples) StderrLine: {'line': b'   93 |       uint32_t position0 = (unsigned int)msg->\x1b[01;31m\x1b[Kposition1\x1b[m\x1b[K; // Convert int32 -> uint32\n'}
+[22.046557] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[22.046707] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                               \x1b[32m\x1b[Kposition\x1b[m\x1b[K\n'}
+[22.046919] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:98:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kposition2\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Kposition\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[22.047086] (dynamixel_sdk_examples) StderrLine: {'line': b'   98 |       uint32_t position1 = (unsigned int)msg->\x1b[01;31m\x1b[Kposition2\x1b[m\x1b[K; // Convert int32 -> uint32\n'}
+[22.047234] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[22.047374] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                               \x1b[32m\x1b[Kposition\x1b[m\x1b[K\n'}
+[22.047527] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:103:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kposition3\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Kposition\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[22.047765] (dynamixel_sdk_examples) StderrLine: {'line': b'  103 |       uint32_t position2 = (unsigned int)msg->\x1b[01;31m\x1b[Kposition3\x1b[m\x1b[K; // Convert int32 -> uint32\n'}
+[22.047995] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[22.048148] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                               \x1b[32m\x1b[Kposition\x1b[m\x1b[K\n'}
+[22.048291] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:109:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_id_type {aka unsigned char}[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[22.048437] (dynamixel_sdk_examples) StderrLine: {'line': b'  109 |       dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[0\x1b[01;31m\x1b[K]\x1b[m\x1b[K, param_goal_position0);\n'}
+[22.048728] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[22.048900] (dynamixel_sdk_examples) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[22.049046] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[22.049191] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[22.049330] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[22.049618] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[22.049771] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[22.049915] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[22.050058] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[22.050200] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[22.050343] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[22.050483] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38\x1b[m\x1b[K:\n'}
+[22.050624] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:111:106:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kid1\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Kid\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[22.050774] (dynamixel_sdk_examples) StderrLine: {'line': b'  111 |         RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->\x1b[01;31m\x1b[Kid1\x1b[m\x1b[K);\n'}
+[22.050916] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                                                                                          \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[22.051060] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:114:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_id_type {aka unsigned char}[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[22.051206] (dynamixel_sdk_examples) StderrLine: {'line': b'  114 |       dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[1\x1b[01;31m\x1b[K]\x1b[m\x1b[K, param_goal_position1);\n'}
+[22.051350] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[22.051506] (dynamixel_sdk_examples) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[22.051642] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[22.052027] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[22.052175] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[22.052312] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[22.052447] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[22.052577] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[22.052721] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[22.052862] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[22.053000] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[22.053137] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38\x1b[m\x1b[K:\n'}
+[22.053283] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:116:106:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kid2\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Kid\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[22.053433] (dynamixel_sdk_examples) StderrLine: {'line': b'  116 |         RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->\x1b[01;31m\x1b[Kid2\x1b[m\x1b[K);\n'}
+[22.053588] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                                                                                          \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[22.053736] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:119:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_id_type {aka unsigned char}[int]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[22.053885] (dynamixel_sdk_examples) StderrLine: {'line': b'  119 |       dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[2\x1b[01;31m\x1b[K]\x1b[m\x1b[K, param_goal_position2);\n'}
+[22.054027] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[22.054167] (dynamixel_sdk_examples) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[22.054308] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[22.054448] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[22.054582] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[22.054717] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[22.054867] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[22.055006] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[22.055148] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[22.055291] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[22.055431] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[22.055572] (dynamixel_sdk_examples) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38\x1b[m\x1b[K:\n'}
+[22.055714] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:121:106:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kid3\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Kid\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[22.055863] (dynamixel_sdk_examples) StderrLine: {'line': b'  121 |         RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->\x1b[01;31m\x1b[Kid3\x1b[m\x1b[K);\n'}
+[22.056006] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                                                                                          \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[22.056147] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:133:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kid1\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Kid\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[22.056304] (dynamixel_sdk_examples) StderrLine: {'line': b'  133 |         msg->\x1b[01;31m\x1b[Kid1\x1b[m\x1b[K, msg->id2, msg->id3, msg->position1, msg->position2, msg->position3);\n'}
+[22.056447] (dynamixel_sdk_examples) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[22.056586] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:133:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kid2\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Kid\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[22.056750] (dynamixel_sdk_examples) StderrLine: {'line': b'  133 |         msg->id1, msg->\x1b[01;31m\x1b[Kid2\x1b[m\x1b[K, msg->id3, msg->position1, msg->position2, msg->position3);\n'}
+[22.056892] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[22.057036] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:133:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kid3\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Kid\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[22.057173] (dynamixel_sdk_examples) StderrLine: {'line': b'  133 |         msg->id1, msg->id2, msg->\x1b[01;31m\x1b[Kid3\x1b[m\x1b[K, msg->position1, msg->position2, msg->position3);\n'}
+[22.057305] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[22.057432] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:133:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kposition1\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Kposition\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[22.057580] (dynamixel_sdk_examples) StderrLine: {'line': b'  133 |         msg->id1, msg->id2, msg->id3, msg->\x1b[01;31m\x1b[Kposition1\x1b[m\x1b[K, msg->position2, msg->position3);\n'}
+[22.057722] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[22.057862] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:133:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kposition2\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Kposition\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[22.058011] (dynamixel_sdk_examples) StderrLine: {'line': b'  133 |         msg->id1, msg->id2, msg->id3, msg->position1, msg->\x1b[01;31m\x1b[Kposition2\x1b[m\x1b[K, msg->position3);\n'}
+[22.058155] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[22.058297] (dynamixel_sdk_examples) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:133:76:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kposition3\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Kposition\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[22.058450] (dynamixel_sdk_examples) StderrLine: {'line': b'  133 |         msg->id1, msg->id2, msg->id3, msg->position1, msg->position2, msg->\x1b[01;31m\x1b[Kposition3\x1b[m\x1b[K);\n'}
+[22.058591] (dynamixel_sdk_examples) StderrLine: {'line': b'      |                                                                            \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[22.079830] (-) TimerEvent: {}
+[22.180185] (-) TimerEvent: {}
+[22.280639] (-) TimerEvent: {}
+[22.380994] (-) TimerEvent: {}
+[22.481420] (-) TimerEvent: {}
+[22.581765] (-) TimerEvent: {}
+[22.682117] (-) TimerEvent: {}
+[22.782472] (-) TimerEvent: {}
+[22.882842] (-) TimerEvent: {}
+[22.983176] (-) TimerEvent: {}
+[23.046887] (dynamixel_sdk_examples) StderrLine: {'line': b'make[2]: *** [CMakeFiles/minimal_pub.dir/build.make:63: CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o] Error 1\n'}
+[23.047205] (dynamixel_sdk_examples) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_pub.dir/all] Error 2\n'}
+[23.047324] (dynamixel_sdk_examples) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[23.083308] (-) TimerEvent: {}
+[23.183594] (-) TimerEvent: {}
+[23.283921] (-) TimerEvent: {}
+[23.384244] (-) TimerEvent: {}
+[23.484523] (-) TimerEvent: {}
+[23.584842] (-) TimerEvent: {}
+[23.685168] (-) TimerEvent: {}
+[23.712649] (dynamixel_sdk_examples) StderrLine: {'line': b'make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1\n'}
+[23.712914] (dynamixel_sdk_examples) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/read_write_node.dir/all] Error 2\n'}
+[23.713154] (dynamixel_sdk_examples) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[23.714984] (dynamixel_sdk_examples) CommandEnded: {'returncode': 2}
+[23.753010] (dynamixel_sdk_examples) JobEnded: {'identifier': 'dynamixel_sdk_examples', 'rc': 2}
+[23.763815] (-) EventReactorShutdown: {}

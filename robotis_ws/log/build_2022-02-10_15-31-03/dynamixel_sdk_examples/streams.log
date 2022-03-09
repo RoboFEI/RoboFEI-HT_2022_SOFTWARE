@@ -1,0 +1,34 @@
+[0.016s] Invoking command in '/home/robofei/robotis_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/robotis_ws/install/dynamixel_sdk:/home/robofei/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[0.062s] [35m[1mScanning dependencies of target minimal_pub[0m
+[0.083s] [ 50%] Built target read_write_node
+[0.092s] [ 75%] [32mBuilding CXX object CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o[0m
+[1.414s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[1.414s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:21:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[1.414s]    21 |       [01;31m[Kpublisher_[m[K = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10);
+[1.414s]       |       [01;31m[K^~~~~~~~~~[m[K
+[1.414s]       |       [32m[Krcl_publisher_t[m[K
+[1.419s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:22:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[1.419s]    22 |       [01;31m[Ktimer_[m[K = this->create_wall_timer(
+[1.419s]       |       [01;31m[K^~~~~~[m[K
+[1.419s]       |       [32m[Ktimer_t[m[K
+[1.431s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback()[m[K’:
+[1.431s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:29:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage[m[K’ was not declared in this scope
+[1.431s]    29 |       [01;31m[Kmessage[m[K = SetPosition();
+[1.432s]       |       [01;31m[K^~~~~~~[m[K
+[1.432s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:29:17:[m[K [01;31m[Kerror: [m[K‘[01m[KSetPosition[m[K’ was not declared in this scope; did you mean ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K’?
+[1.432s]    29 |       message = [01;31m[KSetPosition[m[K();
+[1.432s]       |                 [01;31m[K^~~~~~~~~~~[m[K
+[1.432s]       |                 [32m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K
+[1.432s] In file included from [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp:7[m[K,
+[1.432s]                  from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:7[m[K:
+[1.432s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:125:7:[m[K [01;36m[Knote: [m[K‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition[m[K’ declared here
+[1.432s]   125 | using [01;36m[KSetPosition[m[K =
+[1.432s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[1.435s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:32:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[1.435s]    32 |         [01;31m[Kpublisher_[m[K->publish(message);
+[1.435s]       |         [01;31m[K^~~~~~~~~~[m[K
+[1.436s]       |         [32m[Krcl_publisher_t[m[K
+[2.301s] make[2]: *** [CMakeFiles/minimal_pub.dir/build.make:63: CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o] Error 1
+[2.301s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_pub.dir/all] Error 2
+[2.301s] make: *** [Makefile:141: all] Error 2
+[2.303s] Invoked command in '/home/robofei/robotis_ws/build/dynamixel_sdk_examples' returned '2': CMAKE_PREFIX_PATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/robotis_ws/install/dynamixel_sdk:/home/robofei/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4

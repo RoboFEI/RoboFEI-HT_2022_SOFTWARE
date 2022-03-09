@@ -1,0 +1,35 @@
+[0.016s] Invoking command in '/home/robofei/robotis_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/robotis_ws/install/dynamixel_sdk:/home/robofei/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[0.063s] [35m[1mScanning dependencies of target minimal_pub[0m
+[0.083s] [ 50%] Built target read_write_node
+[0.092s] [ 75%] [32mBuilding CXX object CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o[0m
+[1.391s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback()[m[K’:
+[1.391s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:24:27:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’})
+[1.392s]    24 |     message = this->count_[01;31m[K++[m[K;                                        // CHANGE
+[1.392s]       |                           [01;31m[K^~[m[K
+[1.392s] In file included from [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp:7[m[K,
+[1.392s]                  from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:5[m[K:
+[1.392s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >& dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::operator=(const dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >&)[m[K’
+[1.392s]    31 | struct [01;36m[KSetPosition_[m[K
+[1.392s]       |        [01;36m[K^~~~~~~~~~~~[m[K
+[1.392s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:31:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kconst dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >&[m[K’
+[1.392s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >& dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::operator=(dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >&&)[m[K’
+[1.392s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:31:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >&&[m[K’
+[1.392s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[1.393s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[1.393s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.393s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.393s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.393s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.393s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.393s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.393s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.393s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.393s]                  from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:4[m[K:
+[1.393s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:25:65:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ has no member named ‘[01m[Knum[m[K’
+[1.393s]    25 |  RCLCPP_INFO(this->get_logger(), "Publishing: '%d'", message.[01;31m[Knum[m[K);    // CHANGE
+[1.393s]       |                                                              [01;31m[K^~~[m[K
+[1.393s] 
+[2.272s] make[2]: *** [CMakeFiles/minimal_pub.dir/build.make:63: CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o] Error 1
+[2.272s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_pub.dir/all] Error 2
+[2.272s] make: *** [Makefile:141: all] Error 2
+[2.274s] Invoked command in '/home/robofei/robotis_ws/build/dynamixel_sdk_examples' returned '2': CMAKE_PREFIX_PATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/robotis_ws/install/dynamixel_sdk:/home/robofei/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4

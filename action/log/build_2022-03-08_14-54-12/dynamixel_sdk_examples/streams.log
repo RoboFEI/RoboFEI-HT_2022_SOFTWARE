@@ -1,0 +1,243 @@
+[0.013s] Invoking command in '/home/robofei/ROS2/action/build/dynamixel_sdk_examples': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/action/install/dynamixel_sdk:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/action/install/dynamixel_sdk:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/action/install/dynamixel_sdk/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/dynamixel_sdk_examples -- -j4 -l4
+[0.161s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.197s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.396s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.429s] -- Found dynamixel_sdk: 3.7.40 (/home/robofei/ROS2/action/install/dynamixel_sdk/share/dynamixel_sdk/cmake)
+[0.449s] -- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[0.498s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.502s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.634s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.682s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.722s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.724s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.886s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.961s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.967s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.967s] -- Configured cppcheck include dirs: /home/robofei/ROS2/action/src/dynamixel_sdk_examples/include;/home/robofei/ROS2/action/src/dynamixel_sdk_examples/Framework;/home/robofei/ROS2/action/src/dynamixel_sdk_examples/Linux
+[0.967s] -- Configured cppcheck exclude dirs and/or files: 
+[0.973s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.973s] -- Configured cpplint exclude dirs and/or files: 
+[0.974s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.976s] -- Added test 'lint_cmake' to check CMake code style
+[0.977s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.983s] -- Added test 'uncrustify' to check C / C++ code style
+[0.983s] -- Configured uncrustify additional arguments: 
+[0.984s] -- Added test 'xmllint' to check XML markup files
+[0.995s] -- Configuring done
+[1.051s] -- Generating done
+[1.056s] -- Build files have been written to: /home/robofei/ROS2/action/build/dynamixel_sdk_examples
+[1.092s] [35m[1mScanning dependencies of target cmd_node[0m
+[1.125s] [ 50%] [32mBuilding CXX object CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o[0m
+[1.752s] In file included from [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:8[m[K:
+[1.752s] [01m[K/opt/ros/foxy/include/rcutils/types/char_array.h:41:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K*[m[K’ token
+[1.752s]    41 |   size_t [01;31m[Kbuffer_capacity[m[K;
+[1.752s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.752s] [01m[K/opt/ros/foxy/include/rcutils/types/char_array.h:41:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K*[m[K’ token
+[1.752s] [01m[K/opt/ros/foxy/include/rcutils/types/char_array.h:74:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K([m[K’ token
+[1.752s]    74 |   size_t [01;31m[Kbuffer_capacity[m[K,
+[1.752s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.752s] [01m[K/opt/ros/foxy/include/rcutils/types/char_array.h:74:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K([m[K’ token
+[1.753s] In file included from [01m[K/opt/ros/foxy/include/rcutils/types.h:24[m[K,
+[1.753s]                  from [01m[K/opt/ros/foxy/include/rcutils/time.h:26[m[K,
+[1.753s]                  from [01m[K/opt/ros/foxy/include/rcutils/logging.h:25[m[K,
+[1.753s]                  from [01m[K/opt/ros/foxy/include/rmw/types.h:28[m[K,
+[1.753s]                  from [01m[K/opt/ros/foxy/include/rcl/types.h:18[m[K,
+[1.753s]                  from [01m[K/opt/ros/foxy/include/rcl/arguments.h:20[m[K,
+[1.753s]                  from [01m[K/opt/ros/foxy/include/rcl/context.h:26[m[K,
+[1.753s]                  from [01m[K/opt/ros/foxy/include/rcl/guard_condition.h:24[m[K,
+[1.753s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:29[m[K,
+[1.753s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.754s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.754s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.754s]                  from [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:17[m[K:
+[1.754s] [01m[K/opt/ros/foxy/include/rcutils/types/char_array.h:72:24:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.754s]    72 | rcutils_char_array_init[01;36m[K([m[K
+[1.754s]       |                        [01;36m[K^[m[K
+[1.754s] In file included from [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:8[m[K:
+[1.754s] [01m[K/opt/ros/foxy/include/rcutils/types/char_array.h:74:10:[m[K [01;31m[Kerror: [m[Kinitializer provided for function
+[1.754s]    74 |   size_t [01;31m[Kbuffer_capacity[m[K,
+[1.754s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.754s] [01m[K/opt/ros/foxy/include/rcutils/types/char_array.h:74:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[K->[m[K’ token
+[1.754s]    74 |   size_t [01;31m[Kbuffer_capacity[m[K,
+[1.754s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.754s] [01m[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:33:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K*[m[K’ token
+[1.754s]    33 |   size_t [01;31m[Kbuffer_capacity[m[K;
+[1.755s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.755s] [01m[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:33:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K*[m[K’ token
+[1.755s] [01m[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:65:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K([m[K’ token
+[1.755s]    65 |   size_t [01;31m[Kbuffer_capacity[m[K,
+[1.755s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.755s] [01m[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:65:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K([m[K’ token
+[1.755s] In file included from [01m[K/opt/ros/foxy/include/rcutils/types.h:29[m[K,
+[1.755s]                  from [01m[K/opt/ros/foxy/include/rcutils/time.h:26[m[K,
+[1.755s]                  from [01m[K/opt/ros/foxy/include/rcutils/logging.h:25[m[K,
+[1.755s]                  from [01m[K/opt/ros/foxy/include/rmw/types.h:28[m[K,
+[1.755s]                  from [01m[K/opt/ros/foxy/include/rcl/types.h:18[m[K,
+[1.755s]                  from [01m[K/opt/ros/foxy/include/rcl/arguments.h:20[m[K,
+[1.755s]                  from [01m[K/opt/ros/foxy/include/rcl/context.h:26[m[K,
+[1.755s]                  from [01m[K/opt/ros/foxy/include/rcl/guard_condition.h:24[m[K,
+[1.755s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:29[m[K,
+[1.755s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.756s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.756s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.756s]                  from [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:17[m[K:
+[1.756s] [01m[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:63:25:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.756s]    63 | rcutils_uint8_array_init[01;36m[K([m[K
+[1.756s]       |                         [01;36m[K^[m[K
+[1.756s] In file included from [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:8[m[K:
+[1.756s] [01m[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:65:10:[m[K [01;31m[Kerror: [m[Kinitializer provided for function
+[1.756s]    65 |   size_t [01;31m[Kbuffer_capacity[m[K,
+[1.756s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.756s] [01m[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:65:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[K->[m[K’ token
+[1.756s]    65 |   size_t [01;31m[Kbuffer_capacity[m[K,
+[1.756s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.483s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:25:26:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.483s]    25 | const std::string azul = [01;35m[K"\e[0;36m"[m[K;
+[2.484s]       |                          [01;35m[K^~~~~~~~~~[m[K
+[2.484s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:26:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.484s]    26 | const std::string azulE = [01;35m[K"\e[0;34m"[m[K;
+[2.484s]       |                           [01;35m[K^~~~~~~~~~[m[K
+[2.484s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:27:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.484s]    27 | const std::string amare = [01;35m[K"\e[0;33m"[m[K;
+[2.484s]       |                           [01;35m[K^~~~~~~~~~[m[K
+[2.484s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:28:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.484s]    28 | const std::string verde = [01;35m[K"\e[0;32m"[m[K;
+[2.484s]       |                           [01;35m[K^~~~~~~~~~[m[K
+[2.484s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:29:25:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.484s]    29 | const std::string red = [01;35m[K"\e[0;31m"[m[K;
+[2.485s]       |                         [01;35m[K^~~~~~~~~~[m[K
+[2.485s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:30:26:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.485s]    30 | const std::string gray = [01;35m[K"\e[0;37m"[m[K;
+[2.485s]       |                          [01;35m[K^~~~~~~~~~[m[K
+[2.485s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:31:26:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.485s]    31 | const std::string nulo = [01;35m[K"\e[0m"[m[K;
+[2.485s]       |                          [01;35m[K^~~~~~~[m[K
+[2.485s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:33:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.485s]    33 | const std::string Lazul = [01;35m[K"\e[96m"[m[K;
+[2.485s]       |                           [01;35m[K^~~~~~~~[m[K
+[2.485s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:34:28:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.485s]    34 | const std::string LazulE = [01;35m[K"\e[94m"[m[K;
+[2.485s]       |                            [01;35m[K^~~~~~~~[m[K
+[2.486s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:35:28:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.486s]    35 | const std::string Lamare = [01;35m[K"\e[93m"[m[K;
+[2.486s]       |                            [01;35m[K^~~~~~~~[m[K
+[2.486s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:36:28:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.486s]    36 | const std::string Lverde = [01;35m[K"\e[92m"[m[K;
+[2.486s]       |                            [01;35m[K^~~~~~~~[m[K
+[2.486s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:37:26:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.486s]    37 | const std::string Lred = [01;35m[K"\e[91m"[m[K;
+[2.486s]       |                          [01;35m[K^~~~~~~~[m[K
+[2.486s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:38:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.486s]    38 | const std::string Lgray = [01;35m[K"\e[97m"[m[K;
+[2.486s]       |                           [01;35m[K^~~~~~~~[m[K
+[2.486s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:53:54:[m[K [01;31m[Kerror: [m[K‘[01m[KSetPositionOriginal[m[K’ is not a member of ‘[01m[Kdynamixel_sdk_custom_interfaces::msg[m[K’
+[2.486s]    53 | auto message = dynamixel_sdk_custom_interfaces::msg::[01;31m[KSetPositionOriginal[m[K();
+[2.486s]       |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.487s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:64:61:[m[K [01;31m[Kerror: [m[K‘[01m[KSetPositionOriginal[m[K’ is not a member of ‘[01m[Kdynamixel_sdk_custom_interfaces::msg[m[K’
+[2.487s]    64 |     rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::[01;31m[KSetPositionOriginal[m[K>::SharedPtr publisher_;
+[2.487s]       |                                                             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.487s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:64:61:[m[K [01;31m[Kerror: [m[K‘[01m[KSetPositionOriginal[m[K’ is not a member of ‘[01m[Kdynamixel_sdk_custom_interfaces::msg[m[K’
+[2.487s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:64:80:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.487s]    64 | her<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal[01;31m[K>[m[K::SharedPtr publisher_;
+[2.487s]       |                                                              [01;31m[K^[m[K
+[2.487s] 
+[2.487s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:64:83:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[2.487s]    64 | <dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>::[01;31m[KSharedPtr[m[K publisher_;
+[2.487s]       |                                                              [01;31m[K^~~~~~~~~[m[K
+[2.487s]       |                                                                       [32m[K;[m[K
+[2.489s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:64:93:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ does not name a type; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[2.489s]    64 | _sdk_custom_interfaces::msg::SetPositionOriginal>::SharedPtr [01;31m[Kpublisher_[m[K;
+[2.489s]       |                                                              [01;31m[K^~~~~~~~~~[m[K
+[2.490s]       |                                                              [32m[Krcl_publisher_t[m[K
+[2.495s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:[m[K In constructor ‘[01m[KAction_Editor_Pub::Action_Editor_Pub()[m[K’:
+[2.495s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:61:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[2.495s]    61 |      [01;31m[Kpublisher_[m[K = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>("set_unique_position", 10);
+[2.495s]       |      [01;31m[K^~~~~~~~~~[m[K
+[2.495s]       |      [32m[Krcl_publisher_t[m[K
+[2.495s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:61:80:[m[K [01;31m[Kerror: [m[K‘[01m[KSetPositionOriginal[m[K’ is not a member of ‘[01m[Kdynamixel_sdk_custom_interfaces::msg[m[K’
+[2.495s]    61 | this->create_publisher<dynamixel_sdk_custom_interfaces::msg::[01;31m[KSetPositionOriginal[m[K>("set_unique_position", 10);
+[2.495s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.495s] 
+[2.496s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:61:80:[m[K [01;31m[Kerror: [m[K‘[01m[KSetPositionOriginal[m[K’ is not a member of ‘[01m[Kdynamixel_sdk_custom_interfaces::msg[m[K’
+[2.496s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:61:126:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KAction_Editor_Pub::create_publisher<<expression error> >(const char [20], int)[m[K’
+[2.496s]    61 | terfaces::msg::SetPositionOriginal>("set_unique_position", 10[01;31m[K)[m[K;
+[2.496s]       |                                                              [01;31m[K^[m[K
+[2.496s] 
+[2.496s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[2.496s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[2.496s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.496s]                  from [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:17[m[K:
+[2.496s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[2.497s]   184 |   [01;36m[Kcreate_publisher[m[K(
+[2.497s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[2.497s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.497s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:61:126:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.497s]    61 | terfaces::msg::SetPositionOriginal>("set_unique_position", 10[01;31m[K)[m[K;
+[2.497s]       |                                                              [01;31m[K^[m[K
+[2.497s] 
+[2.499s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:[m[K In member function ‘[01m[Kvoid Action_Editor_Pub::DrawIntro()[m[K’:
+[2.499s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:314:10:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.499s]   314 |   system([01;35m[K"printf '\e[8;27;80t'"[m[K);
+[2.499s]       |          [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.503s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:[m[K In member function ‘[01m[Kvoid Action_Editor_Pub::DrawStep(int)[m[K’:
+[2.503s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:473:26:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+[2.503s]   473 |    if([01;35m[Kstep->position[id] + MotionManager::GetInstance()->m_Offset[id][m[K & Action::INVALID_BIT_MASK)
+[2.503s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.503s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:475:31:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+[2.503s]   475 |    else if([01;35m[Kstep->position[id] + MotionManager::GetInstance()->m_Offset[id][m[K & Action::TORQUE_OFF_BIT_MASK)
+[2.503s]       |            [01;35m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.509s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:[m[K In member function ‘[01m[Kvoid Action_Editor_Pub::SetValue(int)[m[K’:
+[2.510s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:718:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[2.510s]   718 |      [01;31m[Kpublisher_[m[K->publish(message);
+[2.510s]       |      [01;31m[K^~~~~~~~~~[m[K
+[2.510s]       |      [32m[Krcl_publisher_t[m[K
+[2.510s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:715:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.510s]   715 |      int [01;35m[Kerror[m[K;
+[2.510s]       |          [01;35m[K^~~~~[m[K
+[2.510s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:780:42:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+[2.510s]   780 |      if(!([01;35m[KPage.step[i].position[row + 1] + MotionManager::GetInstance()->m_Offset[row + 1][m[K & Action::INVALID_BIT_MASK))
+[2.510s]       |           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.511s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:[m[K In member function ‘[01m[Kvoid Action_Editor_Pub::ToggleTorque()[m[K’:
+[2.511s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:883:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kid[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.511s]   883 |   int [01;35m[Kid[m[K = Row + 1;
+[2.511s]       |       [01;35m[K^~[m[K
+[2.512s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:[m[K In member function ‘[01m[Kvoid Action_Editor_Pub::PlayCmd()[m[K’:
+[2.513s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:989:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.513s]   989 |   int [01;35m[Kvalue[m[K;
+[2.513s]       |       [01;35m[K^~~~~[m[K
+[2.513s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:[m[K In member function ‘[01m[Kvoid Action_Editor_Pub::OnOffCmd(bool, int, int*)[m[K’:
+[2.513s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:1113:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kon[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.514s]  1113 |  void OnOffCmd([01;35m[Kbool on[m[K, int num_param, int *list)
+[2.514s]       |                [01;35m[K~~~~~^~[m[K
+[2.514s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:1113:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knum_param[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.514s]  1113 |  void OnOffCmd(bool on, [01;35m[Kint num_param[m[K, int *list)
+[2.514s]       |                         [01;35m[K~~~~^~~~~~~~~[m[K
+[2.514s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:1113:45:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klist[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.514s]  1113 |  void OnOffCmd(bool on, int num_param, [01;35m[Kint *list[m[K)
+[2.514s]       |                                        [01;35m[K~~~~~^~~~[m[K
+[2.514s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:[m[K In member function ‘[01m[Kvoid Action_Editor_Pub::WriteStepCmd(int)[m[K’:
+[2.514s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:1123:25:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+[2.514s]  1123 |    if([01;35m[KStep.position[id] + MotionManager::GetInstance()->m_Offset[id][m[K & Action::TORQUE_OFF_BIT_MASK)
+[2.514s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.515s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:[m[K In member function ‘[01m[Kvoid Action_Editor_Pub::InsertStepCmd(int)[m[K’:
+[2.515s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:1180:25:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+[2.515s]  1180 |    if([01;35m[KStep.position[id] + MotionManager::GetInstance()->m_Offset[id][m[K & Action::TORQUE_OFF_BIT_MASK)
+[2.515s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.515s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:[m[K In member function ‘[01m[Kvoid Action_Editor_Pub::GoCmd(int)[m[K’:
+[2.516s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:1306:37:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K+[m[K’ in operand of ‘[01m[K&[m[K’ [[01;35m[K-Wparentheses[m[K]
+[2.516s]  1306 |    if([01;35m[KPage.step[index].position[id] + MotionManager::GetInstance()->m_Offset[id][m[K & Action::INVALID_BIT_MASK)
+[2.516s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.516s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:1314:19:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[int][m[K’ for array subscript
+[2.516s]  1314 |    wGoalPosition[n[01;31m[K][m[K = Page.step[index].position[id] + MotionManager::GetInstance()->m_Offset[id];
+[2.516s]       |                   [01;31m[K^[m[K
+[2.520s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:1321:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[2.520s]  1321 |     [01;31m[Kpublisher_[m[K->publish(message);
+[2.521s]       |     [01;31m[K^~~~~~~~~~[m[K
+[2.521s]       |     [32m[Krcl_publisher_t[m[K
+[2.521s] [01m[K/home/robofei/ROS2/action/src/dynamixel_sdk_examples/src/cmd_process.cpp:1299:22:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KwStartPosition[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.521s]  1299 |   int wGoalPosition, [01;35m[KwStartPosition[m[K;
+[2.521s]       |                      [01;35m[K^~~~~~~~~~~~~~[m[K
+[2.941s] make[2]: *** [CMakeFiles/cmd_node.dir/build.make:63: CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o] Error 1
+[2.942s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/cmd_node.dir/all] Error 2
+[2.942s] make: *** [Makefile:141: all] Error 2
+[2.944s] Invoked command in '/home/robofei/ROS2/action/build/dynamixel_sdk_examples' returned '2': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/action/install/dynamixel_sdk:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/action/install/dynamixel_sdk:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/action/install/dynamixel_sdk/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/dynamixel_sdk_examples -- -j4 -l4

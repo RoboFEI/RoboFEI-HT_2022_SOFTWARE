@@ -1,0 +1,30 @@
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found dynamixel_sdk: 3.7.40 (/home/robofei/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)
+-- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rclcpp: 2.4.0 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+CMake Error at CMakeLists.txt:33 (add_executable):
+  add_executable cannot create target "read_write_node" because another
+  target with the same name already exists.  The existing target is an
+  executable created in source directory
+  "/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples".  See
+  documentation for policy CMP0002 for more details.
+
+
+CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_targets.cmake:67 (message):
+  ament_cmake_symlink_install_targets() 'min_pub' is not a target
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/symlink_install/install.cmake:37 (ament_cmake_symlink_install_targets)
+  CMakeLists.txt:41 (install)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/robofei/robotis_ws/build/dynamixel_sdk_examples/CMakeFiles/CMakeOutput.log".
+See also "/home/robofei/robotis_ws/build/dynamixel_sdk_examples/CMakeFiles/CMakeError.log".
+make: *** [Makefile:266: cmake_check_build_system] Error 1

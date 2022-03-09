@@ -1,0 +1,54 @@
+[0.503s] Invoking command in '/home/robofei/Downloads/GC/build/messages': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/Downloads/GC/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/Downloads/GC/build/messages -- -j4 -l4
+[0.603s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.674s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.674s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.115s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.121s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.129s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.323s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.399s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[1.695s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[1.695s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name messages
+[1.695s]   --arguments-file
+[1.695s]   /home/robofei/Downloads/GC/build/messages/rosidl_adapter__arguments__messages.json
+[1.696s]   --output-dir
+[1.696s]   /home/robofei/Downloads/GC/build/messages/rosidl_adapter/messages
+[1.696s]   --output-file
+[1.696s]   /home/robofei/Downloads/GC/build/messages/rosidl_adapter/messages.idls)
+[1.696s]   returned error code 1:
+[1.696s] 
+[1.696s]   Error processing 'uint8 secondaryStateTeam' of
+[1.696s]   'messages/HumanoidLeagueMsgs': ''secondaryStateTeam' is an invalid field
+[1.697s]   name.  It should have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[1.697s] 
+[1.697s]   Traceback (most recent call last):
+[1.697s] 
+[1.697s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[1.697s]       return _run_code(code, main_globals, None,
+[1.697s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[1.698s]       exec(code, run_globals)
+[1.698s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.699s]       sys.exit(main())
+[1.699s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.699s]       abs_idl_file = convert_to_idl(
+[1.699s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[1.699s]       return convert_msg_to_idl(
+[1.699s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[1.699s]       msg = parse_message_string(package_name, input_file.stem, content)
+[1.699s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 515, in parse_message_string
+[1.700s]       fields.append(Field(
+[1.700s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 353, in __init__
+[1.700s]       raise NameError(
+[1.700s] 
+[1.700s]   NameError: 'secondaryStateTeam' is an invalid field name.  It should have
+[1.700s]   the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[1.700s] 
+[1.700s] Call Stack (most recent call first):
+[1.700s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[1.701s]   CMakeLists.txt:22 (rosidl_generate_interfaces)
+[1.701s] 
+[1.701s] 
+[1.701s] -- Configuring incomplete, errors occurred!
+[1.701s] See also "/home/robofei/Downloads/GC/build/messages/CMakeFiles/CMakeOutput.log".
+[1.707s] make: *** [Makefile:748: cmake_check_build_system] Error 1
+[1.711s] Invoked command in '/home/robofei/Downloads/GC/build/messages' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/Downloads/GC/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/Downloads/GC/build/messages -- -j4 -l4

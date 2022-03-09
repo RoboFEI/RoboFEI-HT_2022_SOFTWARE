@@ -1,0 +1,53 @@
+[0.874s] Invoking command in '/home/amd/Downloads/GC/build/messages': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amd/Downloads/GC/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/amd/Downloads/GC/build/messages -- -j2 -l2
+[1.046s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.208s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.209s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.625s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[2.646s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.674s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[3.270s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.431s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[4.113s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[4.114s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name messages
+[4.115s]   --arguments-file
+[4.115s]   /home/amd/Downloads/GC/build/messages/rosidl_adapter__arguments__messages.json
+[4.115s]   --output-dir /home/amd/Downloads/GC/build/messages/rosidl_adapter/messages
+[4.115s]   --output-file
+[4.120s]   /home/amd/Downloads/GC/build/messages/rosidl_adapter/messages.idls)
+[4.120s]   returned error code 1:
+[4.120s] 
+[4.120s]   Error processing 'int64 gameState' of 'messages/HumanoidLeagueMsgs':
+[4.121s]   ''gameState' is an invalid field name.  It should have the pattern
+[4.122s]   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[4.122s] 
+[4.125s]   Traceback (most recent call last):
+[4.127s] 
+[4.127s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[4.133s]       return _run_code(code, main_globals, None,
+[4.133s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[4.134s]       exec(code, run_globals)
+[4.134s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[4.134s]       sys.exit(main())
+[4.135s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[4.135s]       abs_idl_file = convert_to_idl(
+[4.135s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[4.135s]       return convert_msg_to_idl(
+[4.135s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[4.135s]       msg = parse_message_string(package_name, input_file.stem, content)
+[4.136s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 515, in parse_message_string
+[4.136s]       fields.append(Field(
+[4.136s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 353, in __init__
+[4.136s]       raise NameError(
+[4.136s] 
+[4.136s]   NameError: 'gameState' is an invalid field name.  It should have the
+[4.136s]   pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[4.137s] 
+[4.137s] Call Stack (most recent call first):
+[4.137s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[4.137s]   CMakeLists.txt:22 (rosidl_generate_interfaces)
+[4.137s] 
+[4.138s] 
+[4.138s] -- Configuring incomplete, errors occurred!
+[4.138s] See also "/home/amd/Downloads/GC/build/messages/CMakeFiles/CMakeOutput.log".
+[4.148s] make: *** [Makefile:748: cmake_check_build_system] Erro 1
+[4.161s] Invoked command in '/home/amd/Downloads/GC/build/messages' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/amd/Downloads/GC/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/amd/Downloads/GC/build/messages -- -j2 -l2

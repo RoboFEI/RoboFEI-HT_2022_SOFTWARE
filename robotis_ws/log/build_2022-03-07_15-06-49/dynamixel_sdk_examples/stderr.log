@@ -1,0 +1,20 @@
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:58:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kdynamixel::GroupSyncWrite::GroupSyncWrite()[m[K’
+   58 | dynamixel::GroupSyncWrite [01;31m[KgroupSyncWrite[m[K;
+      |                           [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h:29[m[K,
+                 from [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:36[m[K:
+[01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h:62:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kdynamixel::GroupSyncWrite::GroupSyncWrite(dynamixel::PortHandler*, dynamixel::PacketHandler*, uint16_t, uint16_t)[m[K’
+   62 |   [01;36m[KGroupSyncWrite[m[K(PortHandler *port, PacketHandler *ph, uint16_t start_address, uint16_t data_length);
+      |   [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h:62:3:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 0 provided
+[01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h:37:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kdynamixel::GroupSyncWrite::GroupSyncWrite(const dynamixel::GroupSyncWrite&)[m[K’
+   37 | class WINDECLSPEC [01;36m[KGroupSyncWrite[m[K
+      |                   [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h:37:19:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:196:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kgroup_sync_write[m[K’ is not a member of ‘[01m[Kdynamixel::GroupSyncWrite[m[K’
+  196 |   groupSyncWrite = dynamixel::GroupSyncWrite::[01;31m[Kgroup_sync_write[m[K(portHandler, packetHandler, ADDR_GOAL_POSITION, 4);
+      |                                               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/read_write_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

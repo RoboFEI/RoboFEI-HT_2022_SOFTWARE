@@ -1,0 +1,14 @@
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/protocol2_packet_handler.cpp:898:5:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint dynamixel::Protocol2PacketHandler::write4ByteTxRx(dynamixel::PortHandler*, uint8_t*, uint16_t, uint32_t*, uint8_t*)[m[K’
+  898 | int [01;31m[KProtocol2PacketHandler[m[K::write4ByteTxRx(PortHandler *port, uint8_t * id, uint16_t address, uint32_t * data, uint8_t *error)
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/protocol2_packet_handler.cpp:21[m[K:
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/include/dynamixel_sdk/protocol2_packet_handler.h:465:7:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvirtual int dynamixel::Protocol2PacketHandler::write4ByteTxRx(dynamixel::PortHandler*, uint8_t, uint16_t, uint32_t, uint8_t*)[m[K’
+  465 |   int [01;36m[Kwrite4ByteTxRx[m[K      (PortHandler *port, uint8_t id, uint16_t address, uint32_t data, uint8_t *error = 0);
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/protocol2_packet_handler.cpp:21[m[K:
+[01m[K/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/include/dynamixel_sdk/protocol2_packet_handler.h:34:19:[m[K [01;36m[Knote: [m[K‘[01m[Kclass dynamixel::Protocol2PacketHandler[m[K’ defined here
+   34 | class WINDECLSPEC [01;36m[KProtocol2PacketHandler[m[K : public PacketHandler
+      |                   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/dynamixel_sdk.dir/build.make:89: CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/dynamixel_sdk.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

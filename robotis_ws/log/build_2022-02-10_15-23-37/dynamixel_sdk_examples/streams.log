@@ -1,0 +1,53 @@
+[0.016s] Invoking command in '/home/robofei/robotis_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/robotis_ws/install/dynamixel_sdk:/home/robofei/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[0.063s] [35m[1mScanning dependencies of target minimal_pub[0m
+[0.084s] [ 50%] Built target read_write_node
+[0.093s] [ 75%] [32mBuilding CXX object CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o[0m
+[0.212s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:31:19:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+[0.212s]    31 |         message = [01;35m[K'{id: {2, 6}, position: {300, 500}}'[m[K;
+[0.212s]       |                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.212s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:33:19:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+[0.212s]    33 |         message = [01;35m[K'{id: {2, 6}, position: {300, 2500}}'[m[K;
+[0.212s]       |                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.411s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[1.411s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:21:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[1.412s]    21 |       [01;31m[Kpublisher_[m[K = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10);
+[1.412s]       |       [01;31m[K^~~~~~~~~~[m[K
+[1.412s]       |       [32m[Krcl_publisher_t[m[K
+[1.416s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:22:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[1.416s]    22 |       [01;31m[Ktimer_[m[K = this->create_wall_timer(
+[1.416s]       |       [01;31m[K^~~~~~[m[K
+[1.416s]       |       [32m[Ktimer_t[m[K
+[1.417s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:23:7:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""ms[m[K’
+[1.417s]    23 |       [01;31m[K500ms[m[K, std::bind(&MinimalPublisher::timer_callback, this));
+[1.417s]       |       [01;31m[K^~~~~[m[K
+[1.423s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback()[m[K’:
+[1.423s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:31:19:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ and ‘[01m[Kint[m[K’)
+[1.423s]    31 |         message = [01;31m[K'{id: {2, 6}, position: {300, 500}}'[m[K;
+[1.423s]       |                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.423s] In file included from [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp:7[m[K,
+[1.423s]                  from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:6[m[K:
+[1.424s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >& dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::operator=(const dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >&)[m[K’
+[1.424s]    31 | struct [01;36m[KSetPosition_[m[K
+[1.424s]       |        [01;36m[K^~~~~~~~~~~~[m[K
+[1.424s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:31:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >&[m[K’
+[1.424s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >& dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::operator=(dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >&&)[m[K’
+[1.424s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:31:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >&&[m[K’
+[1.426s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:32:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[1.426s]    32 |         [01;31m[Kpublisher_[m[K->publish(message);
+[1.426s]       |         [01;31m[K^~~~~~~~~~[m[K
+[1.426s]       |         [32m[Krcl_publisher_t[m[K
+[1.426s] [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:33:19:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ and ‘[01m[Kint[m[K’)
+[1.426s]    33 |         message = [01;31m[K'{id: {2, 6}, position: {300, 2500}}'[m[K;
+[1.426s]       |                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.427s] In file included from [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp:7[m[K,
+[1.427s]                  from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:6[m[K:
+[1.427s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >& dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::operator=(const dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >&)[m[K’
+[1.427s]    31 | struct [01;36m[KSetPosition_[m[K
+[1.427s]       |        [01;36m[K^~~~~~~~~~~~[m[K
+[1.427s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:31:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >&[m[K’
+[1.427s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >& dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::operator=(dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >&&)[m[K’
+[1.427s] [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp:31:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >&&[m[K’
+[2.229s] make[2]: *** [CMakeFiles/minimal_pub.dir/build.make:63: CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o] Error 1
+[2.229s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_pub.dir/all] Error 2
+[2.229s] make: *** [Makefile:141: all] Error 2
+[2.232s] Invoked command in '/home/robofei/robotis_ws/build/dynamixel_sdk_examples' returned '2': CMAKE_PREFIX_PATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/robotis_ws/install/dynamixel_sdk:/home/robofei/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4

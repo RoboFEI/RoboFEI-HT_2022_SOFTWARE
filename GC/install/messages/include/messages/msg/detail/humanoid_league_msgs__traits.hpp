@@ -1,0 +1,1 @@
+/home/robofei/Downloads/GC/build/messages/rosidl_generator_cpp/messages/msg/detail/humanoid_league_msgs__traits.hpp

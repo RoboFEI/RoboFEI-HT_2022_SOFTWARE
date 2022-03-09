@@ -1,0 +1,13 @@
+[35m[1mScanning dependencies of target minimal_pub[0m
+[ 50%] Built target read_write_node
+[ 75%] [32mBuilding CXX object CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o[0m
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback()[m[K’:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:24:26:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<unsigned char>, unsigned char>::value_type[m[K’ {aka ‘[01m[Kunsigned char[m[K’} in assignment
+   24 |     message.id[2] = {2, 6[01;31m[K}[m[K;
+      |                          [01;31m[K^[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp:25:36:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type[m[K’ {aka ‘[01m[Kint[m[K’} in assignment
+   25 |     message.position[2] = {300, 500[01;31m[K}[m[K;
+      |                                    [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/minimal_pub.dir/build.make:63: CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_pub.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

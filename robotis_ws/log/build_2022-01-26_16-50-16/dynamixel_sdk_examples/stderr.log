@@ -1,0 +1,40 @@
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In lambda function:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:84:18:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kgoal_position[m[K’ [[01;35m[K-Wvla[m[K]
+   84 |         uint32_t [01;35m[Kgoal_position[m[K[i] = {(unsigned int)msg->position[i]};  // Convert int32 -> uint32
+      |                  [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:94:9:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kuint32_t*[m[K’ {aka ‘[01m[Kunsigned int*[m[K’} to ‘[01m[Kuint32_t[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;31m[K-fpermissive[m[K]
+   94 |         [01;31m[Kgoal_position[m[K,
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+      |         [01;31m[K|[m[K
+      |         [01;31m[Kuint32_t* {aka unsigned int*}[m[K
+In file included from [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_bulk_read.h:29[m[K,
+                 from [01m[K/home/robofei/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h:26[m[K,
+                 from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:34[m[K:
+[01m[K/home/robofei/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h:507:90:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvirtual int dynamixel::PacketHandler::write4ByteTxRx(dynamixel::PortHandler*, uint8_t, uint16_t, uint32_t, uint8_t*)[m[K’
+  507 |   (PortHandler *port, uint8_t id, uint16_t address, [01;36m[Kuint32_t data[m[K, uint8_t *error = 0) = 0;
+      |                                                     [01;36m[K~~~~~~~~~^~~~[m[K
+
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In constructor ‘[01m[KReadWriteNode::ReadWriteNode()[m[K’:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:111:31:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KReadWriteNode::~ReadWriteNode()[m[K’
+  111 | ReadWriteNode::~ReadWriteNode([01;31m[K)[m[K
+      |                               [01;31m[K^[m[K
+In file included from [01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:39[m[K:
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/include/read_write_node.hpp:36:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual ReadWriteNode::~ReadWriteNode()[m[K’
+   36 |   virtual [01;36m[K~[m[KReadWriteNode();
+      |           [01;36m[K^[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/include/read_write_node.hpp:36:11:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:116:1:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  116 | [01;31m[K{[m[K
+      | [01;31m[K^[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:149:1:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  149 | [01;31m[K{[m[K
+      | [01;31m[K^[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:193:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  193 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+[01m[K/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:63:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   63 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/read_write_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

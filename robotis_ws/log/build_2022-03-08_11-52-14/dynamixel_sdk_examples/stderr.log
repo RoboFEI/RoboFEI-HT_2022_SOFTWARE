@@ -1,0 +1,95 @@
+make[2]: *** No rule to make target '/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/minimal_pub.cpp', needed by 'CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o'.  Stop.
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_pub.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In lambda function:
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:93:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kposition1[m[K’; did you mean ‘[01m[Kposition[m[K’?
+   93 |       uint32_t position0 = (unsigned int)msg->[01;31m[Kposition1[m[K; // Convert int32 -> uint32
+      |                                               [01;31m[K^~~~~~~~~[m[K
+      |                                               [32m[Kposition[m[K
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:98:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kposition2[m[K’; did you mean ‘[01m[Kposition[m[K’?
+   98 |       uint32_t position1 = (unsigned int)msg->[01;31m[Kposition2[m[K; // Convert int32 -> uint32
+      |                                               [01;31m[K^~~~~~~~~[m[K
+      |                                               [32m[Kposition[m[K
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:103:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kposition3[m[K’; did you mean ‘[01m[Kposition[m[K’?
+  103 |       uint32_t position2 = (unsigned int)msg->[01;31m[Kposition3[m[K; // Convert int32 -> uint32
+      |                                               [01;31m[K^~~~~~~~~[m[K
+      |                                               [32m[Kposition[m[K
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:109:71:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_id_type {aka unsigned char}[int][m[K’ for array subscript
+  109 | _addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[0[01;31m[K][m[K, param_goal_position0);
+      |                                                              [01;31m[K^[m[K
+
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:111:106:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kid1[m[K’; did you mean ‘[01m[Kid[m[K’?
+  111 | led to addparam to groupSyncWrite for Dynamixel ID %d", msg->[01;31m[Kid1[m[K);
+      |                                                              [01;31m[K^~~[m[K
+
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:114:71:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_id_type {aka unsigned char}[int][m[K’ for array subscript
+  114 | _addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[1[01;31m[K][m[K, param_goal_position1);
+      |                                                              [01;31m[K^[m[K
+
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:116:106:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kid2[m[K’; did you mean ‘[01m[Kid[m[K’?
+  116 | led to addparam to groupSyncWrite for Dynamixel ID %d", msg->[01;31m[Kid2[m[K);
+      |                                                              [01;31m[K^~~[m[K
+
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:119:71:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_id_type {aka unsigned char}[int][m[K’ for array subscript
+  119 | _addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[2[01;31m[K][m[K, param_goal_position2);
+      |                                                              [01;31m[K^[m[K
+
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:38[m[K:
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:121:106:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kid3[m[K’; did you mean ‘[01m[Kid[m[K’?
+  121 | led to addparam to groupSyncWrite for Dynamixel ID %d", msg->[01;31m[Kid3[m[K);
+      |                                                              [01;31m[K^~~[m[K
+
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:133:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kid1[m[K’; did you mean ‘[01m[Kid[m[K’?
+  133 |         msg->[01;31m[Kid1[m[K, msg->id2, msg->id3, msg->position1, msg->position2, msg->position3);
+      |              [01;31m[K^~~[m[K
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:133:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kid2[m[K’; did you mean ‘[01m[Kid[m[K’?
+  133 |         msg->id1, msg->[01;31m[Kid2[m[K, msg->id3, msg->position1, msg->position2, msg->position3);
+      |                        [01;31m[K^~~[m[K
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:133:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kid3[m[K’; did you mean ‘[01m[Kid[m[K’?
+  133 |         msg->id1, msg->id2, msg->[01;31m[Kid3[m[K, msg->position1, msg->position2, msg->position3);
+      |                                  [01;31m[K^~~[m[K
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:133:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kposition1[m[K’; did you mean ‘[01m[Kposition[m[K’?
+  133 |         msg->id1, msg->id2, msg->id3, msg->[01;31m[Kposition1[m[K, msg->position2, msg->position3);
+      |                                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:133:60:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kposition2[m[K’; did you mean ‘[01m[Kposition[m[K’?
+  133 |         msg->id1, msg->id2, msg->id3, msg->position1, msg->[01;31m[Kposition2[m[K, msg->position3);
+      |                                                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/Music/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/read_write_node.cpp:133:76:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct dynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kposition3[m[K’; did you mean ‘[01m[Kposition[m[K’?
+  133 |  msg->id1, msg->id2, msg->id3, msg->position1, msg->position2, msg->[01;31m[Kposition3[m[K);
+      |                                                                     [01;31m[K^~~~~~~~~[m[K
+
+make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/read_write_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,86 @@
+[11.076s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[11.076s] DEBUG:colcon:Parsed command line arguments: Namespace(ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f9713162400>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f9713162400>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f9713162940>)
+[11.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[11.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[11.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[11.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[11.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[11.220s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[11.220s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/robofei/Downloads/GC/src/controller'
+[11.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[11.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[11.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[11.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[11.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[11.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[11.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[11.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[11.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[11.367s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_python' and name 'controller'
+[11.367s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[11.367s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[11.367s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[11.367s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[11.367s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[11.645s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_args' from command line to 'None'
+[11.645s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target' from command line to 'None'
+[11.646s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[11.646s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_cache' from command line to 'False'
+[11.646s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_first' from command line to 'False'
+[11.647s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_force_configure' from command line to 'False'
+[11.647s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'ament_cmake_args' from command line to 'None'
+[11.647s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_cmake_args' from command line to 'None'
+[11.647s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[11.648s] DEBUG:colcon.colcon_core.verb:Building package 'controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robofei/Downloads/GC/src/controller/build/controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robofei/Downloads/GC/src/controller/install/controller', 'merge_install': False, 'path': '/home/robofei/Downloads/GC/src/controller', 'symlink_install': False, 'test_result_base': None}
+[11.649s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[11.651s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[11.651s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/robofei/Downloads/GC/src/controller' with build type 'ament_python'
+[11.652s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'ament_prefix_path')
+[11.803s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[11.805s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/Downloads/GC/src/controller/install/controller/share/controller/hook/ament_prefix_path.ps1'
+[11.836s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/Downloads/GC/src/controller/install/controller/share/controller/hook/ament_prefix_path.dsv'
+[11.858s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/Downloads/GC/src/controller/install/controller/share/controller/hook/ament_prefix_path.sh'
+[11.865s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.865s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.921s] DEBUG:colcon.colcon_core.shell:Ignoring prefix path '/opt/ros/foxy'
+[12.210s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/robofei/Downloads/GC/src/controller'
+[12.211s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[12.211s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[12.213s] DEBUG:colcon.colcon_core.shell:Ignoring prefix path '/opt/ros/foxy'
+[12.219s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/Downloads/GC/src/controller': PYTHONPATH=/home/robofei/Downloads/GC/src/controller/install/controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/controller build --build-base /home/robofei/Downloads/GC/src/controller/build/controller/build install --prefix /home/robofei/Downloads/GC/src/controller/install/controller --record /home/robofei/Downloads/GC/src/controller/build/controller/install.log --single-version-externally-managed
+[13.112s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/Downloads/GC/src/controller' returned '0': PYTHONPATH=/home/robofei/Downloads/GC/src/controller/install/controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/controller build --build-base /home/robofei/Downloads/GC/src/controller/build/controller/build install --prefix /home/robofei/Downloads/GC/src/controller/install/controller --record /home/robofei/Downloads/GC/src/controller/build/controller/install.log --single-version-externally-managed
+[13.264s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/Downloads/GC/src/controller/install/controller' for CMake module files
+[13.266s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/Downloads/GC/src/controller/install/controller' for CMake config files
+[13.278s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/Downloads/GC/src/controller/install/controller/lib'
+[13.279s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/Downloads/GC/src/controller/install/controller/bin'
+[13.280s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/Downloads/GC/src/controller/install/controller/lib/pkgconfig/controller.pc'
+[13.280s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/Downloads/GC/src/controller/install/controller/lib/python3.8/site-packages'
+[13.280s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'pythonpath')
+[13.284s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/Downloads/GC/src/controller/install/controller/share/controller/hook/pythonpath.ps1'
+[13.286s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/Downloads/GC/src/controller/install/controller/share/controller/hook/pythonpath.dsv'
+[13.287s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/Downloads/GC/src/controller/install/controller/share/controller/hook/pythonpath.sh'
+[13.288s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller)
+[13.291s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/Downloads/GC/src/controller/install/controller/share/controller/package.ps1'
+[13.308s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/Downloads/GC/src/controller/install/controller/share/controller/package.dsv'
+[13.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/Downloads/GC/src/controller/install/controller/share/controller/package.sh'
+[13.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/Downloads/GC/src/controller/install/controller/share/controller/package.bash'
+[13.345s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/Downloads/GC/src/controller/install/controller/share/controller/package.zsh'
+[13.376s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/Downloads/GC/src/controller/install/controller/share/colcon-core/packages/controller)
+[13.378s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[13.380s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[13.381s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[13.381s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[13.453s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[13.453s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[13.454s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[13.488s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[13.489s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robofei/Downloads/GC/src/controller/install/local_setup.ps1'
+[13.505s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/robofei/Downloads/GC/src/controller/install/_local_setup_util_ps1.py'
+[13.528s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robofei/Downloads/GC/src/controller/install/setup.ps1'
+[13.530s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robofei/Downloads/GC/src/controller/install/local_setup.sh'
+[13.550s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/robofei/Downloads/GC/src/controller/install/_local_setup_util_sh.py'
+[13.551s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robofei/Downloads/GC/src/controller/install/setup.sh'
+[13.554s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robofei/Downloads/GC/src/controller/install/local_setup.bash'
+[13.588s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robofei/Downloads/GC/src/controller/install/setup.bash'
+[13.600s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robofei/Downloads/GC/src/controller/install/local_setup.zsh'
+[13.606s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robofei/Downloads/GC/src/controller/install/setup.zsh'
