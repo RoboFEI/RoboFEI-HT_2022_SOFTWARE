@@ -1,0 +1,297 @@
+[0.012s] Invoking command in '/home/robofei/ROS2/action/build/control': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.060s] [35m[1mScanning dependencies of target action_node[0m
+[0.094s] [ 50%] [32mBuilding CXX object CMakeFiles/action_node.dir/src/main.cpp.o[0m
+[0.827s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:335:35:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+[0.827s]   335 |             if(read_int(movement==[01;35m[K'goodbye'[m[K) == 20)
+[0.827s]       |                                   [01;35m[K^~~~~~~~~[m[K
+[0.828s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:499:21:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+[0.828s]   499 |     last_movement = [01;35m[K'pose_stand_up'[m[K;
+[0.828s]       |                     [01;35m[K^~~~~~~~~~~~~~~[m[K
+[0.828s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:500:16:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
+[0.828s]   500 |     movement = [01;35m[K'pose_stand_up'[m[K;
+[0.828s]       |                [01;35m[K^~~~~~~~~~~~~~~[m[K
+[2.680s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In constructor ‘[01m[KActionNode::ActionNode()[m[K’:
+[2.680s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:68:69:[m[K [01;31m[Kerror: [m[K‘[01m[K_1[m[K’ was not declared in this scope
+[2.680s]    68 |       "/decision", 10, std::bind(&ActionNode::topic_callback, this, [01;31m[K_1[m[K));
+[2.681s]       |                                                                     [01;31m[K^~[m[K
+[2.681s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:68:69:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[2.681s] In file included from [01m[K/usr/include/boost/mpl/aux_/include_preprocessed.hpp:37[m[K,
+[2.681s]                  from [01m[K/usr/include/boost/mpl/placeholders.hpp:43[m[K,
+[2.681s]                  from [01m[K/usr/include/boost/iterator/iterator_categories.hpp:16[m[K,
+[2.681s]                  from [01m[K/usr/include/boost/iterator/iterator_facade.hpp:13[m[K,
+[2.681s]                  from [01m[K/usr/include/boost/range/iterator_range_core.hpp:27[m[K,
+[2.681s]                  from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+[2.681s]                  from [01m[K/usr/include/boost/program_options/value_semantic.hpp:14[m[K,
+[2.681s]                  from [01m[K/usr/include/boost/program_options/options_description.hpp:13[m[K,
+[2.681s]                  from [01m[K/usr/include/boost/program_options.hpp:15[m[K,
+[2.681s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:41[m[K:
+[2.681s] [01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:29:16:[m[K [01;36m[Knote: [m[K  ‘[01m[Kmpl_::_1[m[K’
+[2.681s]    29 | typedef arg<1> [01;36m[K_1[m[K;
+[2.681s]       |                [01;36m[K^~[m[K
+[2.681s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/context.hpp:19[m[K,
+[2.682s]                  from [01m[K/opt/ros/foxy/include/rclcpp/contexts/default_context.hpp:18[m[K,
+[2.682s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:32[m[K,
+[2.682s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.682s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.682s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.682s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:32[m[K:
+[2.682s] [01m[K/usr/include/c++/9/functional:211:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::placeholders::_1[m[K’
+[2.682s]   211 |     extern const _Placeholder<1> [01;36m[K_1[m[K;
+[2.682s]       |                                  [01;36m[K^~[m[K
+[2.682s] In file included from [01m[K/usr/include/boost/mpl/aux_/include_preprocessed.hpp:37[m[K,
+[2.682s]                  from [01m[K/usr/include/boost/mpl/placeholders.hpp:43[m[K,
+[2.682s]                  from [01m[K/usr/include/boost/iterator/iterator_categories.hpp:16[m[K,
+[2.682s]                  from [01m[K/usr/include/boost/iterator/iterator_facade.hpp:13[m[K,
+[2.682s]                  from [01m[K/usr/include/boost/range/iterator_range_core.hpp:27[m[K,
+[2.682s]                  from [01m[K/usr/include/boost/lexical_cast.hpp:30[m[K,
+[2.683s]                  from [01m[K/usr/include/boost/program_options/value_semantic.hpp:14[m[K,
+[2.683s]                  from [01m[K/usr/include/boost/program_options/options_description.hpp:13[m[K,
+[2.683s]                  from [01m[K/usr/include/boost/program_options.hpp:15[m[K,
+[2.683s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:41[m[K:
+[2.683s] [01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:29:16:[m[K [01;36m[Knote: [m[K  ‘[01m[Kmpl_::_1[m[K’
+[2.683s]    29 | typedef arg<1> [01;36m[K_1[m[K;
+[2.683s]       |                [01;36m[K^~[m[K
+[2.683s] [01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:29:16:[m[K [01;36m[Knote: [m[K  ‘[01m[Kmpl_::_1[m[K’
+[2.684s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:69:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[2.684s]    69 |       [01;31m[Kpublisher_[m[K = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10);
+[2.684s]       |       [01;31m[K^~~~~~~~~~[m[K
+[2.684s]       |       [32m[Krcl_publisher_t[m[K
+[2.711s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:69:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kdynamixel_sdk_custom_interfaces[m[K’ was not declared in this scope
+[2.711s]    69 |       publisher_ = this->create_publisher<[01;31m[Kdynamixel_sdk_custom_interfaces[m[K::msg::SetPosition>("set_position", 10);
+[2.711s]       |                                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.711s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:69:26:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[2.711s]    69 |       publisher_ = this->[01;31m[Kcreate_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>[m[K("set_position", 10);
+[2.711s]       |                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.712s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:69:112:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KActionNode::create_publisher<<expression error> >(const char [13], int)[m[K’
+[2.712s]    69 | l_sdk_custom_interfaces::msg::SetPosition>("set_position", 10[01;31m[K)[m[K;
+[2.712s]       |                                                              [01;31m[K^[m[K
+[2.712s] 
+[2.712s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[2.712s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.712s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:32[m[K:
+[2.712s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[2.712s]   184 |   [01;36m[Kcreate_publisher[m[K(
+[2.712s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[2.712s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.712s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:69:112:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.712s]    69 | l_sdk_custom_interfaces::msg::SetPosition>("set_position", 10[01;31m[K)[m[K;
+[2.712s]       |                                                              [01;31m[K^[m[K
+[2.712s] 
+[2.714s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In member function ‘[01m[Kvoid ActionNode::topic_callback(std_msgs::msg::String_<std::allocator<void> >::SharedPtr) const[m[K’:
+[2.714s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:74:34:[m[K [01;31m[Kerror: [m[Kincompatible types in assignment of ‘[01m[Kconst char*[m[K’ to ‘[01m[Kchar [20][m[K’
+[2.714s]    74 |       movement = msg->data.c_str([01;31m[K)[m[K);
+[2.714s]       |                                  [01;31m[K^[m[K
+[2.717s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:79:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kvariables[m[K’ was not declared in this scope
+[2.717s]    79 |     if([01;31m[Kvariables[m[K.count("k")) //verifica se foi chamado o argumento de controle pelo teclado
+[2.718s]       |        [01;31m[K^~~~~~~~~[m[K
+[2.720s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:82:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbuffer[m[K’ was not declared in this scope; did you mean ‘[01m[Ksetbuffer[m[K’?
+[2.720s]    82 |         [01;31m[Kbuffer[m[K=0;
+[2.720s]       |         [01;31m[K^~~~~~[m[K
+[2.720s]       |         [32m[Ksetbuffer[m[K
+[2.723s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:85:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kkbhit[m[K’ was not declared in this scope
+[2.723s]    85 |             int key = [01;31m[Kkbhit[m[K();
+[2.723s]       |                       [01;31m[K^~~~~[m[K
+[2.728s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:95:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ksame_moviment[m[K’ was not declared in this scope
+[2.728s]    95 |   [01;31m[Ksame_moviment[m[K=false;
+[2.728s]       |   [01;31m[K^~~~~~~~~~~~~[m[K
+[2.734s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:100:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ksame_moviment[m[K’ was not declared in this scope
+[2.734s]   100 |   [01;31m[Ksame_moviment[m[K=true;
+[2.734s]       |   [01;31m[K^~~~~~~~~~~~~[m[K
+[2.736s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:109:21:[m[K [01;31m[Kerror: [m[K‘[01m[KactionMove[m[K’ was not declared in this scope; did you mean ‘[01m[KActionMove[m[K’?
+[2.737s]   109 |                     [01;31m[KactionMove[m[K.standupFront(stop_gait);
+[2.737s]       |                     [01;31m[K^~~~~~~~~~[m[K
+[2.737s]       |                     [32m[KActionMove[m[K
+[2.740s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:109:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kstop_gait[m[K’ was not declared in this scope
+[2.740s]   109 |                     actionMove.standupFront([01;31m[Kstop_gait[m[K);
+[2.740s]       |                                             [01;31m[K^~~~~~~~~[m[K
+[2.743s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:117:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kcm730[m[K’ was not declared in this scope
+[2.743s]   117 |                     actionMove.kick_right_strong(&[01;31m[Kcm730[m[K, stop_gait);
+[2.743s]       |                                                   [01;31m[K^~~~~[m[K
+[2.745s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:133:21:[m[K [01;31m[Kerror: [m[K‘[01m[KgaitMove[m[K’ was not declared in this scope; did you mean ‘[01m[KGaitMove[m[K’?
+[2.745s]   133 |                     [01;31m[KgaitMove[m[K.walk_foward_fast(stop_gait, same_moviment);
+[2.745s]       |                     [01;31m[K^~~~~~~~[m[K
+[2.746s]       |                     [32m[KGaitMove[m[K
+[2.751s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:133:58:[m[K [01;31m[Kerror: [m[K‘[01m[Ksame_moviment[m[K’ was not declared in this scope
+[2.751s]   133 |                     gaitMove.walk_foward_fast(stop_gait, [01;31m[Ksame_moviment[m[K);
+[2.751s]       |                                                          [01;31m[K^~~~~~~~~~~~~[m[K
+[2.752s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:210:28:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning ‘[01m[Kvoid[m[K’ [[01;31m[K-fpermissive[m[K]
+[2.752s]   210 |                     return [01;31m[K0[m[K;
+[2.752s]       |                            [01;31m[K^[m[K
+[2.752s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:215:32:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.752s]   215 |                         cout<< [01;35m[K" | \e[1;31mTecla incorreta - verifique quais teclas controlam o robo\e[0m"[m[K<<endl;
+[2.752s]       |                                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.752s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:215:32:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.755s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:220:113:[m[K [01;31m[Kerror: [m[K‘[01m[Kcm730[m[K’ was not declared in this scope
+[2.755s]   220 | =0 && Walking::GetInstance()->IsRunning()==0 && check_servo(&[01;31m[Kcm730[m[K, idServo, stop_gait)!=0)
+[2.755s]       |                                                              [01;31m[K^~~~~[m[K
+[2.755s] 
+[2.758s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:220:120:[m[K [01;31m[Kerror: [m[K‘[01m[KidServo[m[K’ was not declared in this scope
+[2.758s]   220 | alking::GetInstance()->IsRunning()==0 && check_servo(&cm730, [01;31m[KidServo[m[K, stop_gait)!=0)
+[2.758s]       |                                                              [01;31m[K^~~~~~~[m[K
+[2.758s] 
+[2.761s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:220:129:[m[K [01;31m[Kerror: [m[K‘[01m[Kstop_gait[m[K’ was not declared in this scope
+[2.761s]   220 | g::GetInstance()->IsRunning()==0 && check_servo(&cm730, idServo, [01;31m[Kstop_gait[m[K)!=0)
+[2.762s]       |                                                                  [01;31m[K^~~~~~~~~[m[K
+[2.762s] 
+[2.766s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:220:100:[m[K [01;31m[Kerror: [m[K‘[01m[Kcheck_servo[m[K’ was not declared in this scope
+[2.766s]   220 | >IsRunning()==0 && Walking::GetInstance()->IsRunning()==0 && [01;31m[Kcheck_servo[m[K(&cm730, idServo, stop_gait)!=0)
+[2.766s]       |                                                              [01;31m[K^~~~~~~~~~~[m[K
+[2.766s] 
+[2.766s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:221:24:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning ‘[01m[Kvoid[m[K’ [[01;31m[K-fpermissive[m[K]
+[2.766s]   221 |                 return [01;31m[K0[m[K;
+[2.767s]       |                        [01;31m[K^[m[K
+[2.769s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:230:5:[m[K [01;31m[Kerror: [m[K‘[01m[KlogInit[m[K’ was not declared in this scope
+[2.769s]   230 |     [01;31m[KlogInit[m[K(); // save the time when start the control process
+[2.769s]       |     [01;31m[K^~~~~~~[m[K
+[2.774s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:234:28:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_movement[m[K’ was not declared in this scope; did you mean ‘[01m[Kmovement[m[K’?
+[2.774s]   234 |             if(movement == [01;31m[Klast_movement[m[K)
+[2.775s]       |                            [01;31m[K^~~~~~~~~~~~~[m[K
+[2.775s]       |                            [32m[Kmovement[m[K
+[2.780s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:235:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ksame_moviment[m[K’ was not declared in this scope
+[2.780s]   235 |                 [01;31m[Ksame_moviment[m[K = true;
+[2.780s]       |                 [01;31m[K^~~~~~~~~~~~~[m[K
+[2.786s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:238:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ksame_moviment[m[K’ was not declared in this scope
+[2.786s]   238 |                 [01;31m[Ksame_moviment[m[K = false;
+[2.786s]       |                 [01;31m[K^~~~~~~~~~~~~[m[K
+[2.791s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:240:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcount_read[m[K’ was not declared in this scope; did you mean ‘[01m[Kini_read[m[K’?
+[2.791s]   240 |                 [01;31m[Kcount_read[m[K=0;
+[2.791s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[2.791s]       |                 [32m[Kini_read[m[K
+[2.793s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:242:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kbuffer[m[K’ was not declared in this scope; did you mean ‘[01m[Ksetbuffer[m[K’?
+[2.793s]   242 |             [01;31m[Kbuffer[m[K = movement;
+[2.794s]       |             [01;31m[K^~~~~~[m[K
+[2.794s]       |             [32m[Ksetbuffer[m[K
+[2.794s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:335:35:[m[K [01;31m[Kerror: [m[KISO C++ forbids comparison between pointer and integer [[01;31m[K-fpermissive[m[K]
+[2.794s]   335 |             if(read_int(movement==[01;31m[K'goodbye'[m[K) == 20)
+[2.794s]       |                                   [01;31m[K^~~~~~~~~[m[K
+[2.794s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:335:33:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kbool[m[K’ to ‘[01m[Kint*[m[K’
+[2.794s]   335 |             if(read_int([01;31m[Kmovement=='goodbye'[m[K) == 20)
+[2.794s]       |                         [01;31m[K~~~~~~~~^~~~~~~~~~~[m[K
+[2.794s]       |                                 [01;31m[K|[m[K
+[2.794s]       |                                 [01;31m[Kbool[m[K
+[2.794s] In file included from [01m[K/home/robofei/ROS2/action/src/control/include/ActionMove.hpp:24[m[K,
+[2.794s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:42[m[K:
+[2.794s] [01m[K/home/robofei/ROS2/action/src/control/include/blackboard.h:238:14:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kint read_int(int*, int)[m[K’
+[2.795s]   238 | int read_int([01;36m[Kint*[m[K, int);
+[2.795s]       |              [01;36m[K^~~~[m[K
+[2.797s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:336:17:[m[K [01;31m[Kerror: [m[K‘[01m[KgoodBye[m[K’ was not declared in this scope
+[2.797s]   336 |                 [01;31m[KgoodBye[m[K();
+[2.797s]       |                 [01;31m[K^~~~~~~[m[K
+[2.800s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:348:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcount_read[m[K’ was not declared in this scope; did you mean ‘[01m[Kini_read[m[K’?
+[2.800s]   348 |             [01;31m[Kcount_read[m[K++;
+[2.801s]       |             [01;31m[K^~~~~~~~~~[m[K
+[2.801s]       |             [32m[Kini_read[m[K
+[2.801s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:349:51:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.801s]   349 |             std::cout << "\rReading BlackBoard" <<[01;35m[K"[\e[38;5;82m"[m[K<< count_read<<"\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+[2.801s]       |                                                   [01;35m[K^~~~~~~~~~~~~~[m[K
+[2.801s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:349:80:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.801s]   349 | out << "\rReading BlackBoard" <<"[\e[38;5;82m"<< count_read<<[01;35m[K"\e[0m] | Tempo ocioso"[m[K<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+[2.801s]       |                                                              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.801s] 
+[2.801s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:349:105:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.801s]   349 | ard" <<"[\e[38;5;82m"<< count_read<<"\e[0m] | Tempo ocioso"<<[01;35m[K"[\e[38;5;82m"[m[K<< count_read*step_time/1000<<"s\e[0m]";
+[2.801s]       |                                                              [01;35m[K^~~~~~~~~~~~~~[m[K
+[2.801s] 
+[2.804s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:349:133:[m[K [01;31m[Kerror: [m[K‘[01m[Kstep_time[m[K’ was not declared in this scope; did you mean ‘[01m[Kstrptime[m[K’?
+[2.804s]   349 | t_read<<"\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*[01;31m[Kstep_time[m[K/1000<<"s\e[0m]";
+[2.804s]       |                                                              [01;31m[K^~~~~~~~~[m[K
+[2.804s]       |                                                              [32m[Kstrptime[m[K
+[2.804s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:349:149:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.804s]   349 | "\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<[01;35m[K"s\e[0m]"[m[K;
+[2.804s]       |                                                                      [01;35m[K^~~~~~~~~[m[K
+[2.804s] 
+[2.805s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K At global scope:
+[2.805s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:383:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+[2.805s]   383 | }[01;35m[K;[m[K
+[2.806s]       |  [01;35m[K^[m[K
+[2.806s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kvoid sighandler(int)[m[K’:
+[2.806s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:396:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.806s]   396 | void sighandler([01;35m[Kint sig[m[K)
+[2.806s]       |                 [01;35m[K~~~~^~~[m[K
+[2.808s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kvoid goodbye()[m[K’:
+[2.808s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:403:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[2.808s]   403 |     [01;31m[Ktimer_[m[K = this->create_wall_timer(
+[2.809s]       |     [01;31m[K^~~~~~[m[K
+[2.809s]       |     [32m[Ktimer_t[m[K
+[2.809s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:403:14:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.809s]   403 |     timer_ = [01;31m[Kthis[m[K->create_wall_timer(
+[2.809s]       |              [01;31m[K^~~~[m[K
+[2.809s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:404:25:[m[K [01;31m[Kerror: [m[K‘[01m[KMinimalPublisher[m[K’ has not been declared
+[2.809s]   404 |       500ms, std::bind(&[01;31m[KMinimalPublisher[m[K::timer_callback, this));
+[2.809s]       |                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[2.809s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:404:59:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.809s]   404 |       500ms, std::bind(&MinimalPublisher::timer_callback, [01;31m[Kthis[m[K));
+[2.809s]       |                                                           [01;31m[K^~~~[m[K
+[2.809s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kvoid timer_callback()[m[K’:
+[2.809s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:410:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kdynamixel_sdk_custom_interfaces[m[K’ has not been declared
+[2.809s]   410 |     auto message = [01;31m[Kdynamixel_sdk_custom_interfaces[m[K::msg::SetPosition();
+[2.810s]       |                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.811s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:414:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[2.811s]   414 |         [01;31m[Kpublisher_[m[K->publish(message);
+[2.812s]       |         [01;31m[K^~~~~~~~~~[m[K
+[2.812s]       |         [32m[Krcl_publisher_t[m[K
+[2.837s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:429:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kdynamixel_sdk_custom_interfaces[m[K’ was not declared in this scope
+[2.837s]   429 |   rclcpp::Publisher<[01;31m[Kdynamixel_sdk_custom_interfaces[m[K::msg::SetPosition>::SharedPtr publisher_;         // CHANGE
+[2.837s]       |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.837s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:429:70:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.837s]   429 | ::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition[01;31m[K>[m[K::SharedPtr publisher_;         // CHANGE
+[2.838s]       |                                                              [01;31m[K^[m[K
+[2.838s] 
+[2.838s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:429:83:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before ‘[01m[Kpublisher_[m[K’
+[2.838s]   429 | ynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr [01;31m[Kpublisher_[m[K;         // CHANGE
+[2.838s]       |                                                              [01;31m[K^~~~~~~~~~[m[K
+[2.838s] 
+[2.838s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:430:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcount_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.838s]   430 |   size_t [01;35m[Kcount_[m[K;
+[2.838s]       |          [01;35m[K^~~~~~[m[K
+[2.839s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[2.839s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:486:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KGaitMove::GaitMove(minIni*&)[m[K’
+[2.839s]   486 |     GaitMove gaitMove(ini[01;31m[K)[m[K;
+[2.839s]       |                          [01;31m[K^[m[K
+[2.839s] In file included from [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:43[m[K:
+[2.839s] [01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:36:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KGaitMove::GaitMove(int*, minIni*)[m[K’
+[2.839s]    36 |         [01;36m[KGaitMove[m[K(int *mem_t, minIni* ini);
+[2.839s]       |         [01;36m[K^~~~~~~~[m[K
+[2.839s] [01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:36:9:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[2.839s] [01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:31:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr GaitMove::GaitMove(const GaitMove&)[m[K’
+[2.840s]    31 | class [01;36m[KGaitMove[m[K
+[2.840s]       |       [01;36m[K^~~~~~~~[m[K
+[2.840s] [01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:31:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KminIni*[m[K’ to ‘[01m[Kconst GaitMove&[m[K’
+[2.840s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:499:21:[m[K [01;31m[Kerror: [m[Kincompatible types in assignment of ‘[01m[Kint[m[K’ to ‘[01m[Kchar [20][m[K’
+[2.840s]   499 |     last_movement = [01;31m[K'pose_stand_up'[m[K;
+[2.840s]       |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.840s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:500:16:[m[K [01;31m[Kerror: [m[Kincompatible types in assignment of ‘[01m[Kint[m[K’ to ‘[01m[Kchar [20][m[K’
+[2.840s]   500 |     movement = [01;31m[K'pose_stand_up'[m[K;
+[2.840s]       |                [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.844s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:448:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstop_gait[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.844s]   448 |     bool [01;35m[Kstop_gait[m[K = true;
+[2.844s]       |          [01;35m[K^~~~~~~~~[m[K
+[2.844s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:449:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KServoport[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.844s]   449 |     char *[01;35m[KServoport[m[K;
+[2.844s]       |           [01;35m[K^~~~~~~~~[m[K
+[2.844s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:450:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.844s]   450 |     int [01;35m[Kvalue[m[K;
+[2.844s]       |         [01;35m[K^~~~~[m[K
+[2.844s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:451:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KidServo[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.844s]   451 |     int [01;35m[KidServo[m[K;
+[2.844s]       |         [01;35m[K^~~~~~~[m[K
+[2.844s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:452:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kflag_stop[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.844s]   452 |     bool [01;35m[Kflag_stop[m[K = 0;
+[2.845s]       |          [01;35m[K^~~~~~~~~[m[K
+[2.845s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:455:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ksame_moviment[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.845s]   455 |     bool [01;35m[Ksame_moviment[m[K = false;
+[2.845s]       |          [01;35m[K^~~~~~~~~~~~~[m[K
+[2.845s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:456:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbuffer[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.845s]   456 |     unsigned int [01;35m[Kbuffer[m[K = 10000;
+[2.845s]       |                  [01;35m[K^~~~~~[m[K
+[2.845s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:457:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcount_read[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.845s]   457 |     unsigned int [01;35m[Kcount_read[m[K=0;
+[2.845s]       |                  [01;35m[K^~~~~~~~~~[m[K
+[2.845s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:458:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstep_time[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.845s]   458 |     unsigned int [01;35m[Kstep_time[m[K=20; // Determina a frequencia de leitura do blackboard
+[2.845s]       |                  [01;35m[K^~~~~~~~~[m[K
+[3.356s] make[2]: *** [CMakeFiles/action_node.dir/build.make:63: CMakeFiles/action_node.dir/src/main.cpp.o] Error 1
+[3.356s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/action_node.dir/all] Error 2
+[3.356s] make: *** [Makefile:141: all] Error 2
+[3.358s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4

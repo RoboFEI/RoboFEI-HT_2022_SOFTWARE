@@ -1,0 +1,54 @@
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In member function ‘[01m[Kvoid ActionNode::topic_callback(std_msgs::msg::String_<std::allocator<void> >::SharedPtr) const[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:90:5:[m[K [01;31m[Kerror: [m[K‘[01m[KlogInit[m[K’ was not declared in this scope
+   90 |     [01;31m[KlogInit[m[K(); // save the time when start the control process
+      |     [01;31m[K^~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:194:26:[m[K [01;35m[Kwarning: [m[Kcomparison with string literal results in unspecified behavior [[01;35m[K-Waddress[m[K]
+  194 |             if(movement==[01;35m[K"goodbye"[m[K)
+      |                          [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:195:17:[m[K [01;31m[Kerror: [m[K‘[01m[KgoodBye[m[K’ was not declared in this scope
+  195 |                 [01;31m[KgoodBye[m[K();
+      |                 [01;31m[K^~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:208:51:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+  208 |             std::cout << "\rReading BlackBoard" <<[01;35m[K"[\e[38;5;82m"[m[K<< count_read<<"\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+      |                                                   [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:208:80:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+  208 | out << "\rReading BlackBoard" <<"[\e[38;5;82m"<< count_read<<[01;35m[K"\e[0m] | Tempo ocioso"[m[K<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+      |                                                              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:208:105:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+  208 | ard" <<"[\e[38;5;82m"<< count_read<<"\e[0m] | Tempo ocioso"<<[01;35m[K"[\e[38;5;82m"[m[K<< count_read*step_time/1000<<"s\e[0m]";
+      |                                                              [01;35m[K^~~~~~~~~~~~~~[m[K
+
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:208:149:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+  208 | "\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<[01;35m[K"s\e[0m]"[m[K;
+      |                                                                      [01;35m[K^~~~~~~~~[m[K
+
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:226:5:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  226 |     [01;31m[K{[m[K
+      |     [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:242:19:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  242 |     void goodbye()[01;31m[K{[m[K
+      |                   [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:249:5:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  249 |     [01;31m[K{[m[K
+      |     [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kvoid sighandler(int)[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:277:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  277 | void sighandler([01;35m[Kint sig[m[K)
+      |                 [01;35m[K~~~~^~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:331:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KGaitMove::GaitMove(minIni*&)[m[K’
+  331 |     GaitMove gaitMove(ini[01;31m[K)[m[K;
+      |                          [01;31m[K^[m[K
+In file included from [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:43[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:36:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KGaitMove::GaitMove(int*, minIni*)[m[K’
+   36 |         [01;36m[KGaitMove[m[K(int *mem_t, minIni* ini);
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:36:9:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:31:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr GaitMove::GaitMove(const GaitMove&)[m[K’
+   31 | class [01;36m[KGaitMove[m[K
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:31:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KminIni*[m[K’ to ‘[01m[Kconst GaitMove&[m[K’
+make[2]: *** [CMakeFiles/action_node.dir/build.make:63: CMakeFiles/action_node.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/action_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -11,7 +11,11 @@ CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o: /home/robofei/ROS2/action/install
 CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp
 CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp
 CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp
+CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__builder.hpp
+CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__struct.hpp
+CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__traits.hpp
 CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp
+CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position_sync.hpp
 CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp
 CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp
 CMakeFiles/cmd_node.dir/src/cmd_process.cpp.o: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp

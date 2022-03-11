@@ -1,0 +1,351 @@
+[0.000000] (-) TimerEvent: {}
+[0.000433] (custom_interfaces) JobQueued: {'identifier': 'custom_interfaces', 'dependencies': OrderedDict()}
+[0.000509] (control) JobQueued: {'identifier': 'control', 'dependencies': OrderedDict([('custom_interfaces', '/home/robofei/ROS2/action/install/custom_interfaces')])}
+[0.001158] (custom_interfaces) JobStarted: {'identifier': 'custom_interfaces'}
+[0.012287] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'cmake'}
+[0.012829] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'build'}
+[0.013957] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robofei/ROS2/action/build/custom_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/robofei/ROS2/action/build/custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1769'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1582'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=329b7a62da405853ccfaca42622b8403'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:47686'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1808,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1808'), ('INVOCATION_ID', '6794626c9ee1443c9fb42e31aacaa227'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e494e5f1_f685_4dde_bb1f_692775c8eb1b'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.389'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/ROS2/action/build/custom_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=329b7a62da405853ccfaca42622b8403'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.075725] (custom_interfaces) StdoutLine: {'line': b'[  2%] Built target custom_interfaces__cpp\n'}
+[0.077182] (custom_interfaces) StdoutLine: {'line': b'[ 12%] Built target custom_interfaces__rosidl_generator_c\n'}
+[0.099952] (-) TimerEvent: {}
+[0.109613] (custom_interfaces) StdoutLine: {'line': b'[ 23%] Built target custom_interfaces__rosidl_typesupport_cpp\n'}
+[0.111049] (custom_interfaces) StdoutLine: {'line': b'[ 34%] Built target custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.115352] (custom_interfaces) StdoutLine: {'line': b'[ 44%] Built target custom_interfaces__rosidl_typesupport_c\n'}
+[0.121874] (custom_interfaces) StdoutLine: {'line': b'[ 55%] Built target custom_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.140258] (custom_interfaces) StdoutLine: {'line': b'[ 65%] Built target custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.153578] (custom_interfaces) StdoutLine: {'line': b'[ 76%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.176614] (custom_interfaces) StdoutLine: {'line': b'[ 76%] Built target custom_interfaces\n'}
+[0.199515] (custom_interfaces) StdoutLine: {'line': b'[ 78%] Built target custom_interfaces__py\n'}
+[0.200051] (-) TimerEvent: {}
+[0.231654] (custom_interfaces) StdoutLine: {'line': b'[ 87%] Built target custom_interfaces__python\n'}
+[0.263822] (custom_interfaces) StdoutLine: {'line': b'[ 91%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.269600] (custom_interfaces) StdoutLine: {'line': b'[ 95%] Built target custom_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.269994] (custom_interfaces) StdoutLine: {'line': b'[100%] Built target custom_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.282410] (custom_interfaces) CommandEnded: {'returncode': 0}
+[0.300242] (-) TimerEvent: {}
+[0.368166] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'install'}
+[0.379612] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robofei/ROS2/action/build/custom_interfaces'], 'cwd': '/home/robofei/ROS2/action/build/custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1769'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1582'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=329b7a62da405853ccfaca42622b8403'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:47686'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1808,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1808'), ('INVOCATION_ID', '6794626c9ee1443c9fb42e31aacaa227'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e494e5f1_f685_4dde_bb1f_692775c8eb1b'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.389'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/ROS2/action/build/custom_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=329b7a62da405853ccfaca42622b8403'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.391103] (custom_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.391882] (custom_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.392284] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/custom_interfaces\n'}
+[0.393060] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__functions.h\n'}
+[0.393316] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__struct.h\n'}
+[0.393667] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__type_support.h\n'}
+[0.393926] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position_sync__functions.h\n'}
+[0.394100] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position_sync__struct.h\n'}
+[0.394341] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position_sync__type_support.h\n'}
+[0.394582] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.394873] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/set_position.h\n'}
+[0.395164] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/set_position_sync.h\n'}
+[0.395380] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/srv/detail/get_position__functions.h\n'}
+[0.395621] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/srv/detail/get_position__struct.h\n'}
+[0.395911] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/srv/detail/get_position__type_support.h\n'}
+[0.396146] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/srv/get_position.h\n'}
+[0.396571] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/environment/library_path.sh\n'}
+[0.396911] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/environment/library_path.dsv\n'}
+[0.397928] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_c.h\n'}
+[0.398196] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position_sync__rosidl_typesupport_fastrtps_c.h\n'}
+[0.398488] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.398765] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_c.h\n'}
+[0.399239] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[0.400182] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.400319] (-) TimerEvent: {}
+[0.400592] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position_sync__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.400750] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.400921] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.401578] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.402267] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h\n'}
+[0.402592] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position_sync__rosidl_typesupport_introspection_c.h\n'}
+[0.402853] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.403066] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h\n'}
+[0.403950] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__builder.hpp\n'}
+[0.404164] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__struct.hpp\n'}
+[0.404488] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__traits.hpp\n'}
+[0.404787] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position_sync__builder.hpp\n'}
+[0.404982] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position_sync__struct.hpp\n'}
+[0.405405] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position_sync__traits.hpp\n'}
+[0.405724] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/set_position.hpp\n'}
+[0.405981] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/set_position_sync.hpp\n'}
+[0.406191] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/srv/detail/get_position__builder.hpp\n'}
+[0.406430] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/srv/detail/get_position__struct.hpp\n'}
+[0.406751] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/srv/detail/get_position__traits.hpp\n'}
+[0.406956] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/srv/get_position.hpp\n'}
+[0.407573] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.407799] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position_sync__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.408037] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/include/custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.408405] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.sh\n'}
+[0.408777] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.dsv\n'}
+[0.409092] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/__init__.py\n'}
+[0.409766] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/msg/__init__.py\n'}
+[0.410080] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/msg/_set_position.py\n'}
+[0.410308] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/msg/_set_position_sync.py\n'}
+[0.410932] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/srv/__init__.py\n'}
+[0.411201] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/srv/_get_position.py\n'}
+[0.411712] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.412317] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.412872] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.413428] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/lib/libcustom_interfaces__python.so\n'}
+[0.413846] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/msg/SetPosition.idl\n'}
+[0.414214] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/msg/SetPositionSync.idl\n'}
+[0.414557] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/srv/GetPosition.idl\n'}
+[0.414877] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/msg/SetPosition.msg\n'}
+[0.415298] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/msg/SetPositionSync.msg\n'}
+[0.415610] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/srv/GetPosition.srv\n'}
+[0.415922] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/srv/GetPosition_Request.msg\n'}
+[0.416272] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/srv/GetPosition_Response.msg\n'}
+[0.416590] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/ament_index/resource_index/package_run_dependencies/custom_interfaces\n'}
+[0.416923] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/ament_index/resource_index/parent_prefix_path/custom_interfaces\n'}
+[0.417256] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.sh\n'}
+[0.417585] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.dsv\n'}
+[0.417915] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/environment/path.sh\n'}
+[0.418453] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/environment/path.dsv\n'}
+[0.418911] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/local_setup.bash\n'}
+[0.419405] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/local_setup.sh\n'}
+[0.419933] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/local_setup.zsh\n'}
+[0.420326] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/local_setup.dsv\n'}
+[0.420626] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/package.dsv\n'}
+[0.431258] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/ament_index/resource_index/packages/custom_interfaces\n'}
+[0.431674] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[0.432014] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.432318] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.432649] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.432970] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.433409] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.433783] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.434114] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig.cmake\n'}
+[0.434581] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig-version.cmake\n'}
+[0.434748] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/package.xml\n'}
+[0.435125] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so\n'}
+[0.435605] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[0.436106] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so\n'}
+[0.436681] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[0.437173] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so\n'}
+[0.473502] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_generator_cExport.cmake\n'}
+[0.473783] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.473940] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.474020] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.474171] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[0.474244] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.474352] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_generator_cppExport.cmake\n'}
+[0.474522] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.474637] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.474769] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[0.474886] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.477647] (custom_interfaces) CommandEnded: {'returncode': 0}
+[0.500504] (-) TimerEvent: {}
+[0.589298] (custom_interfaces) JobEnded: {'identifier': 'custom_interfaces', 'rc': 0}
+[0.590699] (control) JobStarted: {'identifier': 'control'}
+[0.599251] (control) JobProgress: {'identifier': 'control', 'progress': 'cmake'}
+[0.600121] (control) JobProgress: {'identifier': 'control', 'progress': 'build'}
+[0.600532] (control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robofei/ROS2/action/build/control', '--', '-j4', '-l4'], 'cwd': '/home/robofei/ROS2/action/build/control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1769'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robofei/ROS2/action/install/custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1582'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=329b7a62da405853ccfaca42622b8403'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:47686'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1808,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1808'), ('INVOCATION_ID', '6794626c9ee1443c9fb42e31aacaa227'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e494e5f1_f685_4dde_bb1f_692775c8eb1b'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.389'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/ROS2/action/build/control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=329b7a62da405853ccfaca42622b8403'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy')]), 'shell': False}
+[0.604046] (-) TimerEvent: {}
+[0.637995] (control) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.664068] (control) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.704139] (-) TimerEvent: {}
+[0.804419] (-) TimerEvent: {}
+[0.880499] (control) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.890696] (control) StdoutLine: {'line': b'-- Found custom_interfaces: 3.7.40 (/home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake)\n'}
+[0.904525] (-) TimerEvent: {}
+[0.916048] (control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.921026] (control) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.004627] (-) TimerEvent: {}
+[1.091071] (control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.104766] (-) TimerEvent: {}
+[1.147474] (control) StdoutLine: {'line': b'-- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[1.194908] (control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[1.196448] (control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.204914] (-) TimerEvent: {}
+[1.305243] (-) TimerEvent: {}
+[1.388049] (control) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[1.405351] (-) TimerEvent: {}
+[1.469308] (control) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.481393] (control) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.482069] (control) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/robofei/ROS2/action/src/control/include;/home/robofei/ROS2/action/src/control/include/Control;/home/robofei/ROS2/action/src/control/include/build_Framework;/home/robofei/ROS2/action/src/control/Framework;/home/robofei/ROS2/action/src/control/Linux\n'}
+[1.482257] (control) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.494399] (control) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.494585] (control) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.496275] (control) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.499976] (control) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.502823] (control) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[1.505463] (-) TimerEvent: {}
+[1.514896] (control) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.515112] (control) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.517814] (control) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.521659] (control) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.530320] (control) StdoutLine: {'line': b'-- Generating done\n'}
+[1.532725] (control) StdoutLine: {'line': b'-- Build files have been written to: /home/robofei/ROS2/action/build/control\n'}
+[1.563256] (control) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target action_node\x1b[0m\n'}
+[1.585245] (control) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/action_node.dir/src/main.cpp.o\x1b[0m\n'}
+[1.605599] (-) TimerEvent: {}
+[1.705918] (-) TimerEvent: {}
+[1.806185] (-) TimerEvent: {}
+[1.906510] (-) TimerEvent: {}
+[2.006828] (-) TimerEvent: {}
+[2.107148] (-) TimerEvent: {}
+[2.207462] (-) TimerEvent: {}
+[2.307750] (-) TimerEvent: {}
+[2.408102] (-) TimerEvent: {}
+[2.508376] (-) TimerEvent: {}
+[2.608690] (-) TimerEvent: {}
+[2.708998] (-) TimerEvent: {}
+[2.809241] (-) TimerEvent: {}
+[2.909578] (-) TimerEvent: {}
+[3.009887] (-) TimerEvent: {}
+[3.110182] (-) TimerEvent: {}
+[3.210488] (-) TimerEvent: {}
+[3.310798] (-) TimerEvent: {}
+[3.411099] (-) TimerEvent: {}
+[3.511398] (-) TimerEvent: {}
+[3.611701] (-) TimerEvent: {}
+[3.712005] (-) TimerEvent: {}
+[3.812316] (-) TimerEvent: {}
+[3.912588] (-) TimerEvent: {}
+[4.012897] (-) TimerEvent: {}
+[4.113213] (-) TimerEvent: {}
+[4.213510] (-) TimerEvent: {}
+[4.271698] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ActionNode::topic_callback(std_msgs::msg::String_<std::allocator<void> >::SharedPtr) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.271950] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:189:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison with string literal results in unspecified behavior [\x1b[01;35m\x1b[K-Waddress\x1b[m\x1b[K]\n'}
+[4.272040] (control) StderrLine: {'line': b'  189 |             if(movement==\x1b[01;35m\x1b[K"goodbye"\x1b[m\x1b[K)\n'}
+[4.272118] (control) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.272204] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:203:51:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[4.272290] (control) StderrLine: {'line': b'  203 |             std::cout << "\\rReading BlackBoard" <<\x1b[01;35m\x1b[K"[\\e[38;5;82m"\x1b[m\x1b[K<< count_read<<"\\e[0m] | Tempo ocioso"<<"[\\e[38;5;82m"<< count_read*step_time/1000<<"s\\e[0m]";\n'}
+[4.272385] (control) StderrLine: {'line': b'      |                                                   \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.272620] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:203:80:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[4.272735] (control) StderrLine: {'line': b'  203 | out << "\\rReading BlackBoard" <<"[\\e[38;5;82m"<< count_read<<\x1b[01;35m\x1b[K"\\e[0m] | Tempo ocioso"\x1b[m\x1b[K<<"[\\e[38;5;82m"<< count_read*step_time/1000<<"s\\e[0m]";\n'}
+[4.272827] (control) StderrLine: {'line': b'      |                                                              \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.272906] (control) StderrLine: {'line': b'\n'}
+[4.272975] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:203:105:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[4.273044] (control) StderrLine: {'line': b'  203 | ard" <<"[\\e[38;5;82m"<< count_read<<"\\e[0m] | Tempo ocioso"<<\x1b[01;35m\x1b[K"[\\e[38;5;82m"\x1b[m\x1b[K<< count_read*step_time/1000<<"s\\e[0m]";\n'}
+[4.273113] (control) StderrLine: {'line': b'      |                                                              \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.273208] (control) StderrLine: {'line': b'\n'}
+[4.273310] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:203:149:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[4.273382] (control) StderrLine: {'line': b'  203 | "\\e[0m] | Tempo ocioso"<<"[\\e[38;5;82m"<< count_read*step_time/1000<<\x1b[01;35m\x1b[K"s\\e[0m]"\x1b[m\x1b[K;\n'}
+[4.273461] (control) StderrLine: {'line': b'      |                                                                      \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.273529] (control) StderrLine: {'line': b'\n'}
+[4.280805] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ActionNode::goodBye() const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.280980] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:236:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcount_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[4.281064] (control) StderrLine: {'line': b'  236 |     size_t \x1b[01;35m\x1b[Kcount_\x1b[m\x1b[K;\n'}
+[4.281150] (control) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.282383] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid sighandler(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.282533] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:263:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Ksig\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[4.282655] (control) StderrLine: {'line': b'  263 | void sighandler(\x1b[01;35m\x1b[Kint sig\x1b[m\x1b[K)\n'}
+[4.282814] (control) StderrLine: {'line': b'      |                 \x1b[01;35m\x1b[K~~~~^~~\x1b[m\x1b[K\n'}
+[4.289715] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.289897] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:281:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kstop_gait\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[4.289980] (control) StderrLine: {'line': b'  281 |     bool \x1b[01;35m\x1b[Kstop_gait\x1b[m\x1b[K = true;\n'}
+[4.290052] (control) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.290119] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:282:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KServoport\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[4.290187] (control) StderrLine: {'line': b'  282 |     char *\x1b[01;35m\x1b[KServoport\x1b[m\x1b[K;\n'}
+[4.290254] (control) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.290333] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:283:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[4.290401] (control) StderrLine: {'line': b'  283 |     int \x1b[01;35m\x1b[Kvalue\x1b[m\x1b[K;\n'}
+[4.290467] (control) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.290532] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:284:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KidServo\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[4.290600] (control) StderrLine: {'line': b'  284 |     int \x1b[01;35m\x1b[KidServo\x1b[m\x1b[K;\n'}
+[4.290668] (control) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.290733] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:285:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kflag_stop\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[4.290807] (control) StderrLine: {'line': b'  285 |     bool \x1b[01;35m\x1b[Kflag_stop\x1b[m\x1b[K = 0;\n'}
+[4.290872] (control) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.290937] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/main.cpp:286:18:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kbuffer\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[4.291003] (control) StderrLine: {'line': b'  286 |     unsigned int \x1b[01;35m\x1b[Kbuffer\x1b[m\x1b[K = 10000;\n'}
+[4.291069] (control) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.313654] (-) TimerEvent: {}
+[4.413960] (-) TimerEvent: {}
+[4.514271] (-) TimerEvent: {}
+[4.614574] (-) TimerEvent: {}
+[4.714904] (-) TimerEvent: {}
+[4.815205] (-) TimerEvent: {}
+[4.915521] (-) TimerEvent: {}
+[5.015831] (-) TimerEvent: {}
+[5.116203] (-) TimerEvent: {}
+[5.216664] (-) TimerEvent: {}
+[5.317443] (-) TimerEvent: {}
+[5.417746] (-) TimerEvent: {}
+[5.518067] (-) TimerEvent: {}
+[5.618361] (-) TimerEvent: {}
+[5.718694] (-) TimerEvent: {}
+[5.819018] (-) TimerEvent: {}
+[5.919377] (-) TimerEvent: {}
+[6.019746] (-) TimerEvent: {}
+[6.120088] (-) TimerEvent: {}
+[6.220609] (-) TimerEvent: {}
+[6.321054] (-) TimerEvent: {}
+[6.421409] (-) TimerEvent: {}
+[6.521706] (-) TimerEvent: {}
+[6.622024] (-) TimerEvent: {}
+[6.722366] (-) TimerEvent: {}
+[6.822661] (-) TimerEvent: {}
+[6.922937] (-) TimerEvent: {}
+[7.023224] (-) TimerEvent: {}
+[7.123510] (-) TimerEvent: {}
+[7.223777] (-) TimerEvent: {}
+[7.324083] (-) TimerEvent: {}
+[7.424374] (-) TimerEvent: {}
+[7.524671] (-) TimerEvent: {}
+[7.624963] (-) TimerEvent: {}
+[7.725705] (-) TimerEvent: {}
+[7.826211] (-) TimerEvent: {}
+[7.926529] (-) TimerEvent: {}
+[8.026796] (-) TimerEvent: {}
+[8.127141] (-) TimerEvent: {}
+[8.227431] (-) TimerEvent: {}
+[8.327782] (-) TimerEvent: {}
+[8.428097] (-) TimerEvent: {}
+[8.528404] (-) TimerEvent: {}
+[8.628973] (-) TimerEvent: {}
+[8.729588] (-) TimerEvent: {}
+[8.829927] (-) TimerEvent: {}
+[8.930225] (-) TimerEvent: {}
+[9.030526] (-) TimerEvent: {}
+[9.130936] (-) TimerEvent: {}
+[9.231228] (-) TimerEvent: {}
+[9.331548] (-) TimerEvent: {}
+[9.431867] (-) TimerEvent: {}
+[9.532202] (-) TimerEvent: {}
+[9.556401] (control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable action_node\x1b[0m\n'}
+[9.632351] (-) TimerEvent: {}
+[9.732712] (-) TimerEvent: {}
+[9.833058] (-) TimerEvent: {}
+[9.866950] (control) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `main':\n"}
+[9.867259] (control) StderrLine: {'line': b"main.cpp:(.text+0x387): undefined reference to `boost::program_options::options_description::m_default_line_length'\n"}
+[9.868007] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x392): undefined reference to `boost::program_options::options_description::m_default_line_length'\n"}
+[9.868169] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x3d9): undefined reference to `boost::program_options::options_description::options_description(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int)'\n"}
+[9.868312] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x406): undefined reference to `boost::program_options::options_description::add_options()'\n"}
+[9.868441] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x42a): undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, char const*)'\n"}
+[9.868566] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x440): undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, char const*)'\n"}
+[9.868689] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x456): undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, char const*)'\n"}
+[9.868816] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x46c): undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, char const*)'\n"}
+[9.868943] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x482): undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, char const*)'\n"}
+[9.869073] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x491): undefined reference to `boost::program_options::variables_map::variables_map()'\n"}
+[9.869249] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x51d): undefined reference to `boost::program_options::store(boost::program_options::basic_parsed_options<char> const&, boost::program_options::variables_map&, bool)'\n"}
+[9.869831] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x54a): undefined reference to `boost::program_options::notify(boost::program_options::variables_map&)'\n"}
+[9.870030] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x563): undefined reference to `GaitMove::GaitMove(minIni*)'\n"}
+[9.870171] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x572): undefined reference to `Robot::LinuxMotionTimer::LinuxMotionTimer()'\n"}
+[9.870301] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x58c): undefined reference to `Robot::LinuxMotionTimer::Initialize(Robot::MotionManager*)'\n"}
+[9.870432] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x59b): undefined reference to `Robot::LinuxMotionTimer::Start()'\n"}
+[9.870572] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x6fb): undefined reference to `Robot::LinuxMotionTimer::~LinuxMotionTimer()'\n"}
+[9.870703] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x894): undefined reference to `Robot::LinuxMotionTimer::~LinuxMotionTimer()'\n"}
+[9.870832] (control) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `Robot::MotionManager::GetInstance()':\n"}
+[9.870958] (control) StderrLine: {'line': b"main.cpp:(.text._ZN5Robot13MotionManager11GetInstanceEv[_ZN5Robot13MotionManager11GetInstanceEv]+0xb): undefined reference to `Robot::MotionManager::m_UniqueInstance'\n"}
+[9.871086] (control) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `boost::program_options::basic_command_line_parser<char>::basic_command_line_parser(int, char const* const*)':\n"}
+[9.871212] (control) StderrLine: {'line': b"main.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcEC2EiPKPKc[_ZN5boost15program_options25basic_command_line_parserIcEC5EiPKPKc]+0x94): undefined reference to `boost::program_options::detail::cmdline::cmdline(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)'\n"}
+[9.871356] (control) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `boost::program_options::basic_command_line_parser<char>::options(boost::program_options::options_description const&)':\n"}
+[9.871486] (control) StderrLine: {'line': b"main.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcE7optionsERKNS0_19options_descriptionE[_ZN5boost15program_options25basic_command_line_parserIcE7optionsERKNS0_19options_descriptionE]+0x23): undefined reference to `boost::program_options::detail::cmdline::set_options_description(boost::program_options::options_description const&)'\n"}
+[9.871605] (control) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `boost::program_options::basic_command_line_parser<char>::style(int)':\n"}
+[9.871719] (control) StderrLine: {'line': b"main.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcE5styleEi[_ZN5boost15program_options25basic_command_line_parserIcE5styleEi]+0x20): undefined reference to `boost::program_options::detail::cmdline::style(int)'\n"}
+[9.871926] (control) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `boost::program_options::basic_command_line_parser<char>::extra_parser(boost::function1<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>)':\n"}
+[9.872007] (control) StderrLine: {'line': b"main.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcE12extra_parserENS_9function1ISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_ERKSA_EE[_ZN5boost15program_options25basic_command_line_parserIcE12extra_parserENS_9function1ISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_ERKSA_EE]+0x46): undefined reference to `boost::program_options::detail::cmdline::set_additional_parser(boost::function1<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>)'\n"}
+[9.872085] (control) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `boost::program_options::basic_command_line_parser<char>::run()':\n"}
+[9.872163] (control) StderrLine: {'line': b"main.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcE3runEv[_ZN5boost15program_options25basic_command_line_parserIcE3runEv]+0x2c): undefined reference to `boost::program_options::detail::cmdline::get_canonical_option_prefix()'\n"}
+[9.872235] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcE3runEv[_ZN5boost15program_options25basic_command_line_parserIcE3runEv]+0x58): undefined reference to `boost::program_options::detail::cmdline::run()'\n"}
+[9.872306] (control) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > boost::program_options::to_internal<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)':\n"}
+[9.872379] (control) StderrLine: {'line': b"main.cpp:(.text._ZN5boost15program_options11to_internalINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESt6vectorIS7_SaIS7_EERKS8_IT_SaISB_EE[_ZN5boost15program_options11to_internalINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESt6vectorIS7_SaIS7_EERKS8_IT_SaISB_EE]+0x70): undefined reference to `boost::program_options::to_internal(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[9.872455] (control) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `boost::program_options::variables_map::~variables_map()':\n"}
+[9.872523] (control) StderrLine: {'line': b"main.cpp:(.text._ZN5boost15program_options13variables_mapD2Ev[_ZN5boost15program_options13variables_mapD5Ev]+0x13): undefined reference to `vtable for boost::program_options::variables_map'\n"}
+[9.872592] (control) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[9.873184] (control) StderrLine: {'line': b'make[2]: *** [CMakeFiles/action_node.dir/build.make:136: action_node] Error 1\n'}
+[9.873490] (control) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/action_node.dir/all] Error 2\n'}
+[9.873702] (control) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[9.875687] (control) CommandEnded: {'returncode': 2}
+[9.906946] (control) JobEnded: {'identifier': 'control', 'rc': 2}
+[9.919004] (-) EventReactorShutdown: {}

@@ -1,0 +1,55 @@
+[0.015s] Invoking command in '/home/robofei/ROS2/action/build/control': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.064s] [35m[1mScanning dependencies of target action_node[0m
+[0.096s] [ 50%] [32mBuilding CXX object CMakeFiles/action_node.dir/src/main.cpp.o[0m
+[2.404s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In member function ‘[01m[Kvoid ActionNode::topic_callback(std_msgs::msg::String_<std::allocator<void> >::SharedPtr) const[m[K’:
+[2.404s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:195:26:[m[K [01;35m[Kwarning: [m[Kcomparison with string literal results in unspecified behavior [[01;35m[K-Waddress[m[K]
+[2.404s]   195 |             if(movement==[01;35m[K"goodbye"[m[K)
+[2.404s]       |                          [01;35m[K^~~~~~~~~[m[K
+[2.407s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:196:17:[m[K [01;31m[Kerror: [m[K‘[01m[KgoodBye[m[K’ was not declared in this scope
+[2.407s]   196 |                 [01;31m[KgoodBye[m[K();
+[2.407s]       |                 [01;31m[K^~~~~~~[m[K
+[2.407s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:209:51:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.407s]   209 |             std::cout << "\rReading BlackBoard" <<[01;35m[K"[\e[38;5;82m"[m[K<< count_read<<"\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+[2.407s]       |                                                   [01;35m[K^~~~~~~~~~~~~~[m[K
+[2.407s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:209:80:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.408s]   209 | out << "\rReading BlackBoard" <<"[\e[38;5;82m"<< count_read<<[01;35m[K"\e[0m] | Tempo ocioso"[m[K<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+[2.408s]       |                                                              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.408s] 
+[2.408s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:209:105:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.408s]   209 | ard" <<"[\e[38;5;82m"<< count_read<<"\e[0m] | Tempo ocioso"<<[01;35m[K"[\e[38;5;82m"[m[K<< count_read*step_time/1000<<"s\e[0m]";
+[2.408s]       |                                                              [01;35m[K^~~~~~~~~~~~~~[m[K
+[2.408s] 
+[2.408s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:209:149:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[2.408s]   209 | "\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<[01;35m[K"s\e[0m]"[m[K;
+[2.408s]       |                                                                      [01;35m[K^~~~~~~~~[m[K
+[2.408s] 
+[2.411s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kvoid goodBye()[m[K’:
+[2.411s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:251:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[2.412s]   251 |         [01;31m[Ktimer_[m[K = this->create_wall_timer(
+[2.412s]       |         [01;31m[K^~~~~~[m[K
+[2.412s]       |         [32m[Ktimer_t[m[K
+[2.412s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:251:18:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.412s]   251 |         timer_ = [01;31m[Kthis[m[K->create_wall_timer(
+[2.412s]       |                  [01;31m[K^~~~[m[K
+[2.412s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:252:39:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_callback[m[K’ is not a member of ‘[01m[KActionNode[m[K’
+[2.412s]   252 |         500ms, std::bind(&ActionNode::[01;31m[Ktimer_callback[m[K, this));
+[2.412s]       |                                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.412s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:252:55:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[2.412s]   252 |         500ms, std::bind(&ActionNode::timer_callback, [01;31m[Kthis[m[K));
+[2.412s]       |                                                       [01;31m[K^~~~[m[K
+[2.415s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kvoid timer_callback()[m[K’:
+[2.415s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:262:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[2.415s]   262 |             [01;31m[Kpublisher_[m[K->publish(message);
+[2.415s]       |             [01;31m[K^~~~~~~~~~[m[K
+[2.415s]       |             [32m[Krcl_publisher_t[m[K
+[2.415s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:273:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcount_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.415s]   273 |     size_t [01;35m[Kcount_[m[K;
+[2.415s]       |            [01;35m[K^~~~~~[m[K
+[2.415s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kvoid sighandler(int)[m[K’:
+[2.416s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:278:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.416s]   278 | void sighandler([01;35m[Kint sig[m[K)
+[2.416s]       |                 [01;35m[K~~~~^~~[m[K
+[4.308s] make[2]: *** [CMakeFiles/action_node.dir/build.make:63: CMakeFiles/action_node.dir/src/main.cpp.o] Error 1
+[4.308s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/action_node.dir/all] Error 2
+[4.309s] make: *** [Makefile:141: all] Error 2
+[4.311s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4

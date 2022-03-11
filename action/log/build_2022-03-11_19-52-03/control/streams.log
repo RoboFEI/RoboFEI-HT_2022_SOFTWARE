@@ -1,0 +1,117 @@
+[0.013s] Invoking command in '/home/robofei/ROS2/action/build/control': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.047s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.073s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.290s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.300s] -- Found custom_interfaces: 3.7.40 (/home/robofei/ROS2/action/install/custom_interfaces/share/custom_interfaces/cmake)
+[0.325s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.330s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.500s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.557s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.604s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.606s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.797s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.879s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.891s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.891s] -- Configured cppcheck include dirs: /home/robofei/ROS2/action/src/control/include;/home/robofei/ROS2/action/src/control/include/Control;/home/robofei/ROS2/action/src/control/include/build_Framework;/home/robofei/ROS2/action/src/control/Framework;/home/robofei/ROS2/action/src/control/Linux
+[0.892s] -- Configured cppcheck exclude dirs and/or files: 
+[0.904s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.904s] -- Configured cpplint exclude dirs and/or files: 
+[0.906s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.909s] -- Added test 'lint_cmake' to check CMake code style
+[0.912s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.924s] -- Added test 'uncrustify' to check C / C++ code style
+[0.924s] -- Configured uncrustify additional arguments: 
+[0.927s] -- Added test 'xmllint' to check XML markup files
+[0.931s] -- Configuring done
+[0.940s] -- Generating done
+[0.942s] -- Build files have been written to: /home/robofei/ROS2/action/build/control
+[0.973s] [35m[1mScanning dependencies of target action_node[0m
+[0.995s] [ 50%] [32mBuilding CXX object CMakeFiles/action_node.dir/src/main.cpp.o[0m
+[3.681s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In member function ‘[01m[Kvoid ActionNode::topic_callback(std_msgs::msg::String_<std::allocator<void> >::SharedPtr) const[m[K’:
+[3.681s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:189:26:[m[K [01;35m[Kwarning: [m[Kcomparison with string literal results in unspecified behavior [[01;35m[K-Waddress[m[K]
+[3.681s]   189 |             if(movement==[01;35m[K"goodbye"[m[K)
+[3.681s]       |                          [01;35m[K^~~~~~~~~[m[K
+[3.682s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:203:51:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[3.682s]   203 |             std::cout << "\rReading BlackBoard" <<[01;35m[K"[\e[38;5;82m"[m[K<< count_read<<"\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+[3.682s]       |                                                   [01;35m[K^~~~~~~~~~~~~~[m[K
+[3.682s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:203:80:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[3.682s]   203 | out << "\rReading BlackBoard" <<"[\e[38;5;82m"<< count_read<<[01;35m[K"\e[0m] | Tempo ocioso"[m[K<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+[3.682s]       |                                                              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.682s] 
+[3.682s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:203:105:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[3.682s]   203 | ard" <<"[\e[38;5;82m"<< count_read<<"\e[0m] | Tempo ocioso"<<[01;35m[K"[\e[38;5;82m"[m[K<< count_read*step_time/1000<<"s\e[0m]";
+[3.682s]       |                                                              [01;35m[K^~~~~~~~~~~~~~[m[K
+[3.683s] 
+[3.683s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:203:149:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[3.683s]   203 | "\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<[01;35m[K"s\e[0m]"[m[K;
+[3.683s]       |                                                                      [01;35m[K^~~~~~~~~[m[K
+[3.683s] 
+[3.690s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In member function ‘[01m[Kvoid ActionNode::goodBye() const[m[K’:
+[3.690s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:236:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcount_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[3.690s]   236 |     size_t [01;35m[Kcount_[m[K;
+[3.690s]       |            [01;35m[K^~~~~~[m[K
+[3.692s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kvoid sighandler(int)[m[K’:
+[3.692s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:263:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[3.692s]   263 | void sighandler([01;35m[Kint sig[m[K)
+[3.692s]       |                 [01;35m[K~~~~^~~[m[K
+[3.699s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[3.699s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:281:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstop_gait[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[3.699s]   281 |     bool [01;35m[Kstop_gait[m[K = true;
+[3.699s]       |          [01;35m[K^~~~~~~~~[m[K
+[3.699s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:282:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KServoport[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[3.699s]   282 |     char *[01;35m[KServoport[m[K;
+[3.700s]       |           [01;35m[K^~~~~~~~~[m[K
+[3.700s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:283:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[3.700s]   283 |     int [01;35m[Kvalue[m[K;
+[3.700s]       |         [01;35m[K^~~~~[m[K
+[3.700s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:284:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KidServo[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[3.700s]   284 |     int [01;35m[KidServo[m[K;
+[3.700s]       |         [01;35m[K^~~~~~~[m[K
+[3.700s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:285:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kflag_stop[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[3.700s]   285 |     bool [01;35m[Kflag_stop[m[K = 0;
+[3.700s]       |          [01;35m[K^~~~~~~~~[m[K
+[3.700s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:286:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbuffer[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[3.700s]   286 |     unsigned int [01;35m[Kbuffer[m[K = 10000;
+[3.700s]       |                  [01;35m[K^~~~~~[m[K
+[8.966s] [100%] [32m[1mLinking CXX executable action_node[0m
+[9.276s] /usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `main':
+[9.277s] main.cpp:(.text+0x387): undefined reference to `boost::program_options::options_description::m_default_line_length'
+[9.277s] /usr/bin/ld: main.cpp:(.text+0x392): undefined reference to `boost::program_options::options_description::m_default_line_length'
+[9.278s] /usr/bin/ld: main.cpp:(.text+0x3d9): undefined reference to `boost::program_options::options_description::options_description(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, unsigned int)'
+[9.278s] /usr/bin/ld: main.cpp:(.text+0x406): undefined reference to `boost::program_options::options_description::add_options()'
+[9.278s] /usr/bin/ld: main.cpp:(.text+0x42a): undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, char const*)'
+[9.278s] /usr/bin/ld: main.cpp:(.text+0x440): undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, char const*)'
+[9.278s] /usr/bin/ld: main.cpp:(.text+0x456): undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, char const*)'
+[9.278s] /usr/bin/ld: main.cpp:(.text+0x46c): undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, char const*)'
+[9.278s] /usr/bin/ld: main.cpp:(.text+0x482): undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, char const*)'
+[9.278s] /usr/bin/ld: main.cpp:(.text+0x491): undefined reference to `boost::program_options::variables_map::variables_map()'
+[9.279s] /usr/bin/ld: main.cpp:(.text+0x51d): undefined reference to `boost::program_options::store(boost::program_options::basic_parsed_options<char> const&, boost::program_options::variables_map&, bool)'
+[9.279s] /usr/bin/ld: main.cpp:(.text+0x54a): undefined reference to `boost::program_options::notify(boost::program_options::variables_map&)'
+[9.279s] /usr/bin/ld: main.cpp:(.text+0x563): undefined reference to `GaitMove::GaitMove(minIni*)'
+[9.280s] /usr/bin/ld: main.cpp:(.text+0x572): undefined reference to `Robot::LinuxMotionTimer::LinuxMotionTimer()'
+[9.280s] /usr/bin/ld: main.cpp:(.text+0x58c): undefined reference to `Robot::LinuxMotionTimer::Initialize(Robot::MotionManager*)'
+[9.280s] /usr/bin/ld: main.cpp:(.text+0x59b): undefined reference to `Robot::LinuxMotionTimer::Start()'
+[9.280s] /usr/bin/ld: main.cpp:(.text+0x6fb): undefined reference to `Robot::LinuxMotionTimer::~LinuxMotionTimer()'
+[9.280s] /usr/bin/ld: main.cpp:(.text+0x894): undefined reference to `Robot::LinuxMotionTimer::~LinuxMotionTimer()'
+[9.280s] /usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `Robot::MotionManager::GetInstance()':
+[9.280s] main.cpp:(.text._ZN5Robot13MotionManager11GetInstanceEv[_ZN5Robot13MotionManager11GetInstanceEv]+0xb): undefined reference to `Robot::MotionManager::m_UniqueInstance'
+[9.280s] /usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `boost::program_options::basic_command_line_parser<char>::basic_command_line_parser(int, char const* const*)':
+[9.281s] main.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcEC2EiPKPKc[_ZN5boost15program_options25basic_command_line_parserIcEC5EiPKPKc]+0x94): undefined reference to `boost::program_options::detail::cmdline::cmdline(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)'
+[9.281s] /usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `boost::program_options::basic_command_line_parser<char>::options(boost::program_options::options_description const&)':
+[9.281s] main.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcE7optionsERKNS0_19options_descriptionE[_ZN5boost15program_options25basic_command_line_parserIcE7optionsERKNS0_19options_descriptionE]+0x23): undefined reference to `boost::program_options::detail::cmdline::set_options_description(boost::program_options::options_description const&)'
+[9.281s] /usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `boost::program_options::basic_command_line_parser<char>::style(int)':
+[9.281s] main.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcE5styleEi[_ZN5boost15program_options25basic_command_line_parserIcE5styleEi]+0x20): undefined reference to `boost::program_options::detail::cmdline::style(int)'
+[9.281s] /usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `boost::program_options::basic_command_line_parser<char>::extra_parser(boost::function1<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>)':
+[9.281s] main.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcE12extra_parserENS_9function1ISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_ERKSA_EE[_ZN5boost15program_options25basic_command_line_parserIcE12extra_parserENS_9function1ISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_ERKSA_EE]+0x46): undefined reference to `boost::program_options::detail::cmdline::set_additional_parser(boost::function1<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&>)'
+[9.281s] /usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `boost::program_options::basic_command_line_parser<char>::run()':
+[9.281s] main.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcE3runEv[_ZN5boost15program_options25basic_command_line_parserIcE3runEv]+0x2c): undefined reference to `boost::program_options::detail::cmdline::get_canonical_option_prefix()'
+[9.282s] /usr/bin/ld: main.cpp:(.text._ZN5boost15program_options25basic_command_line_parserIcE3runEv[_ZN5boost15program_options25basic_command_line_parserIcE3runEv]+0x58): undefined reference to `boost::program_options::detail::cmdline::run()'
+[9.282s] /usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > boost::program_options::to_internal<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)':
+[9.282s] main.cpp:(.text._ZN5boost15program_options11to_internalINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESt6vectorIS7_SaIS7_EERKS8_IT_SaISB_EE[_ZN5boost15program_options11to_internalINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEESt6vectorIS7_SaIS7_EERKS8_IT_SaISB_EE]+0x70): undefined reference to `boost::program_options::to_internal(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[9.282s] /usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `boost::program_options::variables_map::~variables_map()':
+[9.282s] main.cpp:(.text._ZN5boost15program_options13variables_mapD2Ev[_ZN5boost15program_options13variables_mapD5Ev]+0x13): undefined reference to `vtable for boost::program_options::variables_map'
+[9.282s] collect2: error: ld returned 1 exit status
+[9.283s] make[2]: *** [CMakeFiles/action_node.dir/build.make:136: action_node] Error 1
+[9.283s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/action_node.dir/all] Error 2
+[9.283s] make: *** [Makefile:141: all] Error 2
+[9.285s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4

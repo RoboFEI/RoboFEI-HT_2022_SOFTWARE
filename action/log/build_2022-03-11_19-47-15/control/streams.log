@@ -1,0 +1,80 @@
+[0.014s] Invoking command in '/home/robofei/ROS2/action/build/control': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.064s] [35m[1mScanning dependencies of target action_node[0m
+[0.096s] [ 50%] [32mBuilding CXX object CMakeFiles/action_node.dir/src/main.cpp.o[0m
+[1.555s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In member function ‘[01m[Kvoid ActionNode::topic_callback(std_msgs::msg::String_<std::allocator<void> >::SharedPtr) const[m[K’:
+[1.555s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:188:26:[m[K [01;35m[Kwarning: [m[Kcomparison with string literal results in unspecified behavior [[01;35m[K-Waddress[m[K]
+[1.555s]   188 |             if(movement==[01;35m[K"goodbye"[m[K)
+[1.555s]       |                          [01;35m[K^~~~~~~~~[m[K
+[1.556s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:202:51:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.556s]   202 |             std::cout << "\rReading BlackBoard" <<[01;35m[K"[\e[38;5;82m"[m[K<< count_read<<"\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+[1.556s]       |                                                   [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.556s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:202:80:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.556s]   202 | out << "\rReading BlackBoard" <<"[\e[38;5;82m"<< count_read<<[01;35m[K"\e[0m] | Tempo ocioso"[m[K<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+[1.556s]       |                                                              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.556s] 
+[1.556s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:202:105:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.556s]   202 | ard" <<"[\e[38;5;82m"<< count_read<<"\e[0m] | Tempo ocioso"<<[01;35m[K"[\e[38;5;82m"[m[K<< count_read*step_time/1000<<"s\e[0m]";
+[1.556s]       |                                                              [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.557s] 
+[1.557s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:202:149:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.557s]   202 | "\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<[01;35m[K"s\e[0m]"[m[K;
+[1.557s]       |                                                                      [01;35m[K^~~~~~~~~[m[K
+[1.557s] 
+[1.564s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In member function ‘[01m[Kvoid ActionNode::goodBye() const[m[K’:
+[1.564s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:235:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcount_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.564s]   235 |     size_t [01;35m[Kcount_[m[K;
+[1.564s]       |            [01;35m[K^~~~~~[m[K
+[1.566s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kvoid sighandler(int)[m[K’:
+[1.566s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:262:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.566s]   262 | void sighandler([01;35m[Kint sig[m[K)
+[1.566s]       |                 [01;35m[K~~~~^~~[m[K
+[1.566s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.566s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:305:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kboost[m[K’ has not been declared
+[1.566s]   305 |     namespace po=[01;31m[Kboost[m[K::program_options;
+[1.567s]       |                  [01;31m[K^~~~~[m[K
+[1.567s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:305:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kprogram_options[m[K’ is not a namespace-name
+[1.567s]   305 |     namespace po=boost::[01;31m[Kprogram_options[m[K;
+[1.567s]       |                         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.567s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:307:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpo[m[K’ has not been declared
+[1.567s]   307 |     [01;31m[Kpo[m[K::options_description desc("options");
+[1.567s]       |     [01;31m[K^~[m[K
+[1.568s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:308:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kdesc[m[K’ was not declared in this scope
+[1.568s]   308 |     [01;31m[Kdesc[m[K.add_options()
+[1.568s]       |     [01;31m[K^~~~[m[K
+[1.568s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:316:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpo[m[K’ has not been declared
+[1.568s]   316 |     [01;31m[Kpo[m[K::variables_map variables;
+[1.568s]       |     [01;31m[K^~[m[K
+[1.568s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:317:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpo[m[K’ has not been declared
+[1.568s]   317 |     [01;31m[Kpo[m[K::store(po::parse_command_line(argc, argv, desc), variables);
+[1.568s]       |     [01;31m[K^~[m[K
+[1.569s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:317:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kpo[m[K’ has not been declared
+[1.569s]   317 |     po::store([01;31m[Kpo[m[K::parse_command_line(argc, argv, desc), variables);
+[1.569s]       |               [01;31m[K^~[m[K
+[1.570s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:317:57:[m[K [01;31m[Kerror: [m[K‘[01m[Kvariables[m[K’ was not declared in this scope
+[1.570s]   317 |     po::store(po::parse_command_line(argc, argv, desc), [01;31m[Kvariables[m[K);
+[1.570s]       |                                                         [01;31m[K^~~~~~~~~[m[K
+[1.570s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:318:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpo[m[K’ has not been declared
+[1.570s]   318 |     [01;31m[Kpo[m[K::notify(variables);
+[1.570s]       |     [01;31m[K^~[m[K
+[1.574s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:280:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstop_gait[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.575s]   280 |     bool [01;35m[Kstop_gait[m[K = true;
+[1.575s]       |          [01;35m[K^~~~~~~~~[m[K
+[1.575s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:281:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KServoport[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.575s]   281 |     char *[01;35m[KServoport[m[K;
+[1.575s]       |           [01;35m[K^~~~~~~~~[m[K
+[1.575s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:282:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.575s]   282 |     int [01;35m[Kvalue[m[K;
+[1.575s]       |         [01;35m[K^~~~~[m[K
+[1.575s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:283:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KidServo[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.575s]   283 |     int [01;35m[KidServo[m[K;
+[1.575s]       |         [01;35m[K^~~~~~~[m[K
+[1.575s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:284:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kflag_stop[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.575s]   284 |     bool [01;35m[Kflag_stop[m[K = 0;
+[1.575s]       |          [01;35m[K^~~~~~~~~[m[K
+[1.575s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:285:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbuffer[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.575s]   285 |     unsigned int [01;35m[Kbuffer[m[K = 10000;
+[1.576s]       |                  [01;35m[K^~~~~~[m[K
+[3.276s] make[2]: *** [CMakeFiles/action_node.dir/build.make:63: CMakeFiles/action_node.dir/src/main.cpp.o] Error 1
+[3.276s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/action_node.dir/all] Error 2
+[3.276s] make: *** [Makefile:141: all] Error 2
+[3.278s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4

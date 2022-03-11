@@ -1,0 +1,43 @@
+[35m[1mScanning dependencies of target action_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/action_node.dir/src/main.cpp.o[0m
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:95:13:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[KlogInit[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+   95 |     logInit([01;31m[K)[m[K; // save the time when start the control process
+      |             [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:96:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kwhile[m[K’
+   96 |     [01;31m[Kwhile[m[K(1)
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:230:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid ActionNode::logInit()[m[K’ cannot be overloaded with ‘[01m[Kint ActionNode::logInit()[m[K’
+  230 |     void [01;31m[KlogInit[m[K()
+      |          [01;31m[K^~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:95:5:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint ActionNode::logInit()[m[K’
+   95 |     [01;36m[KlogInit[m[K(); // save the time when start the control process
+      |     [01;36m[K^~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In member function ‘[01m[Kvoid ActionNode::goodbye()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:248:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+  248 |         [01;31m[Ktimer_[m[K = this->create_wall_timer(
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[Ktimer_t[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In member function ‘[01m[Kvoid ActionNode::timer_callback()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:271:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcount_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  271 |     size_t [01;35m[Kcount_[m[K;
+      |            [01;35m[K^~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kvoid sighandler(int)[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:277:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  277 | void sighandler([01;35m[Kint sig[m[K)
+      |                 [01;35m[K~~~~^~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:331:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KGaitMove::GaitMove(minIni*&)[m[K’
+  331 |     GaitMove gaitMove(ini[01;31m[K)[m[K;
+      |                          [01;31m[K^[m[K
+In file included from [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:43[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:36:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KGaitMove::GaitMove(int*, minIni*)[m[K’
+   36 |         [01;36m[KGaitMove[m[K(int *mem_t, minIni* ini);
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:36:9:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:31:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr GaitMove::GaitMove(const GaitMove&)[m[K’
+   31 | class [01;36m[KGaitMove[m[K
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:31:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KminIni*[m[K’ to ‘[01m[Kconst GaitMove&[m[K’
+make[2]: *** [CMakeFiles/action_node.dir/build.make:63: CMakeFiles/action_node.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/action_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
