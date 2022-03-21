@@ -311,61 +311,61 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install(DIRECTORY "include/" "DESTINATION" "include/")
-ament_cmake_symlink_install_directory("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" DIRECTORY "include/" "DESTINATION" "include/")
+ament_cmake_symlink_install_directory("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" DIRECTORY "include/" "DESTINATION" "include/")
 
 # install("TARGETS" "dynamixel_sdk" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
 include("/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/opt/ros/foxy/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/opt/ros/foxy/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/opt/ros/foxy/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/dynamixel_sdk/environment")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/dynamixel_sdk/environment")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/dynamixel_sdk")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/dynamixel_sdk")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/dynamixel_sdk")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/dynamixel_sdk")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/dynamixel_sdk")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/dynamixel_sdk")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/dynamixel_sdk")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/dynamixel_sdk")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/dynamixel_sdk")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/dynamixel_sdk")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/dynamixel_sdk")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/dynamixel_sdk")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/dynamixel_sdk")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/dynamixel_sdk")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/dynamixel_sdk")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/packages/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/packages/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_index/share/ament_index/resource_index/packages/dynamixel_sdk" "DESTINATION" "share/ament_index/resource_index/packages")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
 
 # install(FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig.cmake" "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig-version.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig.cmake" "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig-version.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig.cmake" "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_core/dynamixel_sdkConfig-version.cmake" "DESTINATION" "share/dynamixel_sdk/cmake")
 
-# install(FILES "/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/package.xml" "DESTINATION" "share/dynamixel_sdk")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/package.xml" "DESTINATION" "share/dynamixel_sdk")
+# install(FILES "/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/package.xml" "DESTINATION" "share/dynamixel_sdk")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk" FILES "/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/package.xml" "DESTINATION" "share/dynamixel_sdk")

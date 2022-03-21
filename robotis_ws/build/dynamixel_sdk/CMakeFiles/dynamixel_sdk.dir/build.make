@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk
+CMAKE_SOURCE_DIR = /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk
@@ -58,121 +58,121 @@ include CMakeFiles/dynamixel_sdk.dir/progress.make
 include CMakeFiles/dynamixel_sdk.dir/flags.make
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.o: CMakeFiles/dynamixel_sdk.dir/flags.make
-CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.o: /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/packet_handler.cpp
+CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.o: /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/packet_handler.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.o -c /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/packet_handler.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.o -c /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/packet_handler.cpp
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/packet_handler.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/packet_handler.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.i
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/packet_handler.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/packet_handler.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.s
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.o: CMakeFiles/dynamixel_sdk.dir/flags.make
-CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.o: /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/protocol1_packet_handler.cpp
+CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.o: /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/protocol1_packet_handler.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.o -c /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/protocol1_packet_handler.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.o -c /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/protocol1_packet_handler.cpp
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/protocol1_packet_handler.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/protocol1_packet_handler.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.i
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/protocol1_packet_handler.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/protocol1_packet_handler.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.s
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o: CMakeFiles/dynamixel_sdk.dir/flags.make
-CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o: /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/protocol2_packet_handler.cpp
+CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o: /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/protocol2_packet_handler.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o -c /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/protocol2_packet_handler.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o -c /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/protocol2_packet_handler.cpp
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/protocol2_packet_handler.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/protocol2_packet_handler.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.i
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/protocol2_packet_handler.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/protocol2_packet_handler.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.s
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.o: CMakeFiles/dynamixel_sdk.dir/flags.make
-CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.o: /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_sync_read.cpp
+CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.o: /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_sync_read.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.o -c /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_sync_read.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.o -c /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_sync_read.cpp
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_sync_read.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_sync_read.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.i
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_sync_read.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_sync_read.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.s
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.o: CMakeFiles/dynamixel_sdk.dir/flags.make
-CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.o: /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_sync_write.cpp
+CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.o: /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_sync_write.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.o -c /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_sync_write.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.o -c /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_sync_write.cpp
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_sync_write.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_sync_write.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.i
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_sync_write.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_sync_write.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.s
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.o: CMakeFiles/dynamixel_sdk.dir/flags.make
-CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.o: /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_bulk_read.cpp
+CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.o: /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_bulk_read.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.o -c /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_bulk_read.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.o -c /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_bulk_read.cpp
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_bulk_read.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_bulk_read.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.i
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_bulk_read.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_bulk_read.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.s
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.o: CMakeFiles/dynamixel_sdk.dir/flags.make
-CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.o: /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_bulk_write.cpp
+CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.o: /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_bulk_write.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.o -c /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_bulk_write.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.o -c /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_bulk_write.cpp
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_bulk_write.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_bulk_write.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.i
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/group_bulk_write.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/group_bulk_write.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.s
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.o: CMakeFiles/dynamixel_sdk.dir/flags.make
-CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.o: /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/port_handler.cpp
+CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.o: /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/port_handler.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.o -c /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/port_handler.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.o -c /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/port_handler.cpp
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/port_handler.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/port_handler.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.i
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/port_handler.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/port_handler.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.s
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.o: CMakeFiles/dynamixel_sdk.dir/flags.make
-CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.o: /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/port_handler_linux.cpp
+CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.o: /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/port_handler_linux.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.o -c /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/port_handler_linux.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.o -c /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/port_handler_linux.cpp
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/port_handler_linux.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/port_handler_linux.cpp > CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.i
 
 CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk/src/dynamixel_sdk/port_handler_linux.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/src/dynamixel_sdk/port_handler_linux.cpp -o CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.s
 
 # Object files for target dynamixel_sdk
 dynamixel_sdk_OBJECTS = \
@@ -213,6 +213,6 @@ CMakeFiles/dynamixel_sdk.dir/clean:
 .PHONY : CMakeFiles/dynamixel_sdk.dir/clean
 
 CMakeFiles/dynamixel_sdk.dir/depend:
-	cd /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk /home/robofei/ROS2/robotis_ws/src/DynamixelSDK/dynamixel_sdk /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/dynamixel_sdk.dir/depend
 
