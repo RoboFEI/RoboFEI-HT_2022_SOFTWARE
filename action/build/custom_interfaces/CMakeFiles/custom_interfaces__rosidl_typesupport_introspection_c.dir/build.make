@@ -66,15 +66,15 @@ rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__ro
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/rosidl_typesupport_introspection_c/resource/srv__rosidl_typesupport_introspection_c.h.em
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h: rosidl_adapter/custom_interfaces/msg/SetPosition.idl
-rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h: rosidl_adapter/custom_interfaces/msg/SetPositionSync.idl
+rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h: rosidl_adapter/custom_interfaces/msg/Decision.idl
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h: rosidl_adapter/custom_interfaces/srv/GetPosition.idl
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robofei/ROS2/action/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C introspection for ROS interfaces"
 	/usr/bin/python3 /opt/ros/foxy/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/robofei/ROS2/action/build/custom_interfaces/rosidl_typesupport_introspection_c__arguments.json
 
-rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__rosidl_typesupport_introspection_c.h
+rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__rosidl_typesupport_introspection_c.h
 
 rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h
@@ -82,8 +82,8 @@ rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__ro
 rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__type_support.c: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__type_support.c
 
-rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c
+rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c
 
 rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__type_support.c: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__type_support.c
@@ -101,18 +101,18 @@ CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_type
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/robofei/ROS2/action/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__type_support.c -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__type_support.c.s
 
-CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
-CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c.o: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/action/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c.o   -c /home/robofei/ROS2/action/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.o: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/action/build/custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.o   -c /home/robofei/ROS2/action/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c
 
-CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/robofei/ROS2/action/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c > CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c.i
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/robofei/ROS2/action/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c > CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.i
 
-CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/robofei/ROS2/action/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c.s
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/robofei/ROS2/action/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c -o CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.s
 
 CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__type_support.c.o: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__type_support.c.o: rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__type_support.c
@@ -130,14 +130,14 @@ CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_type
 # Object files for target custom_interfaces__rosidl_typesupport_introspection_c
 custom_interfaces__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__type_support.c.o" \
-"CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c.o" \
+"CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.o" \
 "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__type_support.c.o"
 
 # External object files for target custom_interfaces__rosidl_typesupport_introspection_c
 custom_interfaces__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
 
 libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__type_support.c.o
-libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c.o
+libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.o
 libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__type_support.c.o
 libcustom_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/build.make
 libcustom_interfaces__rosidl_typesupport_introspection_c.so: libcustom_interfaces__rosidl_generator_c.so
@@ -167,10 +167,10 @@ CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/clean:
 .PHONY : CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/clean
 
 CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h
-CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__rosidl_typesupport_introspection_c.h
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__rosidl_typesupport_introspection_c.h
 CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h
 CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__type_support.c
-CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c
+CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c
 CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__type_support.c
 	cd /home/robofei/ROS2/action/build/custom_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robofei/ROS2/action/src/custom_interfaces /home/robofei/ROS2/action/src/custom_interfaces /home/robofei/ROS2/action/build/custom_interfaces /home/robofei/ROS2/action/build/custom_interfaces /home/robofei/ROS2/action/build/custom_interfaces/CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/depend

@@ -1,0 +1,57 @@
+[0.015s] Invoking command in '/home/robofei/ROS2/action/build/control': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.063s] [35m[1mScanning dependencies of target action_node[0m
+[0.097s] [ 50%] [32mBuilding CXX object CMakeFiles/action_node.dir/src/main.cpp.o[0m
+[1.640s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In member function ‘[01m[Kvoid ActionNode::topic_callback(std_msgs::msg::String_<std::allocator<void> >::SharedPtr) const[m[K’:
+[1.640s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:188:26:[m[K [01;35m[Kwarning: [m[Kcomparison with string literal results in unspecified behavior [[01;35m[K-Waddress[m[K]
+[1.640s]   188 |             if(movement==[01;35m[K"goodbye"[m[K)
+[1.640s]       |                          [01;35m[K^~~~~~~~~[m[K
+[1.640s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:202:51:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.641s]   202 |             std::cout << "\rReading BlackBoard" <<[01;35m[K"[\e[38;5;82m"[m[K<< count_read<<"\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+[1.641s]       |                                                   [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.641s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:202:80:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.641s]   202 | out << "\rReading BlackBoard" <<"[\e[38;5;82m"<< count_read<<[01;35m[K"\e[0m] | Tempo ocioso"[m[K<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+[1.641s]       |                                                              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.641s] 
+[1.641s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:202:105:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.641s]   202 | ard" <<"[\e[38;5;82m"<< count_read<<"\e[0m] | Tempo ocioso"<<[01;35m[K"[\e[38;5;82m"[m[K<< count_read*step_time/1000<<"s\e[0m]";
+[1.641s]       |                                                              [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.641s] 
+[1.641s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:202:149:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.641s]   202 | "\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<[01;35m[K"s\e[0m]"[m[K;
+[1.641s]       |                                                                      [01;35m[K^~~~~~~~~[m[K
+[1.641s] 
+[1.648s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In member function ‘[01m[Kvoid ActionNode::goodBye() const[m[K’:
+[1.649s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:235:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcount_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.649s]   235 |     size_t [01;35m[Kcount_[m[K;
+[1.649s]       |            [01;35m[K^~~~~~[m[K
+[1.651s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kvoid sighandler(int)[m[K’:
+[1.651s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:262:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.651s]   262 | void sighandler([01;35m[Kint sig[m[K)
+[1.651s]       |                 [01;35m[K~~~~^~~[m[K
+[1.656s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.656s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:280:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstop_gait[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.656s]   280 |     bool [01;35m[Kstop_gait[m[K = true;
+[1.656s]       |          [01;35m[K^~~~~~~~~[m[K
+[1.656s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:281:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KServoport[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.657s]   281 |     char *[01;35m[KServoport[m[K;
+[1.657s]       |           [01;35m[K^~~~~~~~~[m[K
+[1.657s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:282:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.657s]   282 |     int [01;35m[Kvalue[m[K;
+[1.657s]       |         [01;35m[K^~~~~[m[K
+[1.657s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:283:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KidServo[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.657s]   283 |     int [01;35m[KidServo[m[K;
+[1.657s]       |         [01;35m[K^~~~~~~[m[K
+[1.657s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:284:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kflag_stop[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.657s]   284 |     bool [01;35m[Kflag_stop[m[K = 0;
+[1.657s]       |          [01;35m[K^~~~~~~~~[m[K
+[1.657s] [01m[K/home/robofei/ROS2/action/src/control/src/main.cpp:285:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbuffer[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.657s]   285 |     unsigned int [01;35m[Kbuffer[m[K = 10000;
+[1.657s]       |                  [01;35m[K^~~~~~[m[K
+[6.185s] [100%] [32m[1mLinking CXX executable action_node[0m
+[6.490s] /usr/bin/ld: CMakeFiles/action_node.dir/src/main.cpp.o: in function `main':
+[6.490s] main.cpp:(.text+0x391): undefined reference to `GaitMove::GaitMove(minIni*)'
+[6.490s] collect2: error: ld returned 1 exit status
+[6.492s] make[2]: *** [CMakeFiles/action_node.dir/build.make:136: action_node] Error 1
+[6.492s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/action_node.dir/all] Error 2
+[6.492s] make: *** [Makefile:141: all] Error 2
+[6.495s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4

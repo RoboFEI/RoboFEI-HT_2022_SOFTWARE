@@ -1,13 +1,13 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.o"
   "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__type_support.c.o"
-  "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c.o"
   "CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__type_support.c.o"
   "libcustom_interfaces__rosidl_typesupport_introspection_c.pdb"
   "libcustom_interfaces__rosidl_typesupport_introspection_c.so"
+  "rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c"
   "rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__type_support.c"
-  "rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__rosidl_typesupport_introspection_c.h"
-  "rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position_sync__type_support.c"
   "rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/custom_interfaces/srv/detail/get_position__type_support.c"
 )

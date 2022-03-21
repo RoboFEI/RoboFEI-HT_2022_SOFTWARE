@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/custom_interfaces__python.dir/rosidl_generator_py/custom_interfaces/msg/_decision_s.c.o"
   "CMakeFiles/custom_interfaces__python.dir/rosidl_generator_py/custom_interfaces/msg/_set_position_s.c.o"
-  "CMakeFiles/custom_interfaces__python.dir/rosidl_generator_py/custom_interfaces/msg/_set_position_sync_s.c.o"
   "CMakeFiles/custom_interfaces__python.dir/rosidl_generator_py/custom_interfaces/srv/_get_position_s.c.o"
   "rosidl_generator_py/custom_interfaces/libcustom_interfaces__python.pdb"
   "rosidl_generator_py/custom_interfaces/libcustom_interfaces__python.so"

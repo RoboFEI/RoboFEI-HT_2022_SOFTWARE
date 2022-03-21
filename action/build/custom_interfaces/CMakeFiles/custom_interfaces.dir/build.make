@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/robofei/ROS2/action/build/custom_interfaces
 include CMakeFiles/custom_interfaces.dir/progress.make
 
 CMakeFiles/custom_interfaces: /home/robofei/ROS2/action/src/custom_interfaces/msg/SetPosition.msg
-CMakeFiles/custom_interfaces: /home/robofei/ROS2/action/src/custom_interfaces/msg/SetPositionSync.msg
+CMakeFiles/custom_interfaces: /home/robofei/ROS2/action/src/custom_interfaces/msg/Decision.msg
 CMakeFiles/custom_interfaces: /home/robofei/ROS2/action/src/custom_interfaces/srv/GetPosition.srv
 CMakeFiles/custom_interfaces: rosidl_cmake/srv/GetPosition_Request.msg
 CMakeFiles/custom_interfaces: rosidl_cmake/srv/GetPosition_Response.msg

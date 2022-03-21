@@ -163,39 +163,39 @@ _register_msg_type__msg__set_position(PyObject * pymodule)
 // #include "rosidl_runtime_c/service_type_support_struct.h"
 // already included above
 // #include "rosidl_runtime_c/action_type_support_struct.h"
-#include "custom_interfaces/msg/detail/set_position_sync__type_support.h"
-#include "custom_interfaces/msg/detail/set_position_sync__struct.h"
-#include "custom_interfaces/msg/detail/set_position_sync__functions.h"
+#include "custom_interfaces/msg/detail/decision__type_support.h"
+#include "custom_interfaces/msg/detail/decision__struct.h"
+#include "custom_interfaces/msg/detail/decision__functions.h"
 
-static void * custom_interfaces__msg__set_position_sync__create_ros_message(void)
+static void * custom_interfaces__msg__decision__create_ros_message(void)
 {
-  return custom_interfaces__msg__SetPositionSync__create();
+  return custom_interfaces__msg__Decision__create();
 }
 
-static void custom_interfaces__msg__set_position_sync__destroy_ros_message(void * raw_ros_message)
+static void custom_interfaces__msg__decision__destroy_ros_message(void * raw_ros_message)
 {
-  custom_interfaces__msg__SetPositionSync * ros_message = (custom_interfaces__msg__SetPositionSync *)raw_ros_message;
-  custom_interfaces__msg__SetPositionSync__destroy(ros_message);
+  custom_interfaces__msg__Decision * ros_message = (custom_interfaces__msg__Decision *)raw_ros_message;
+  custom_interfaces__msg__Decision__destroy(ros_message);
 }
 
 ROSIDL_GENERATOR_C_IMPORT
-bool custom_interfaces__msg__set_position_sync__convert_from_py(PyObject * _pymsg, void * ros_message);
+bool custom_interfaces__msg__decision__convert_from_py(PyObject * _pymsg, void * ros_message);
 ROSIDL_GENERATOR_C_IMPORT
-PyObject * custom_interfaces__msg__set_position_sync__convert_to_py(void * raw_ros_message);
+PyObject * custom_interfaces__msg__decision__convert_to_py(void * raw_ros_message);
 
 
 ROSIDL_GENERATOR_C_IMPORT
 const rosidl_message_type_support_t *
-ROSIDL_GET_MSG_TYPE_SUPPORT(custom_interfaces, msg, SetPositionSync);
+ROSIDL_GET_MSG_TYPE_SUPPORT(custom_interfaces, msg, Decision);
 
 int8_t
-_register_msg_type__msg__set_position_sync(PyObject * pymodule)
+_register_msg_type__msg__decision(PyObject * pymodule)
 {
   int8_t err;
 
   PyObject * pyobject_create_ros_message = NULL;
   pyobject_create_ros_message = PyCapsule_New(
-    (void *)&custom_interfaces__msg__set_position_sync__create_ros_message,
+    (void *)&custom_interfaces__msg__decision__create_ros_message,
     NULL, NULL);
   if (!pyobject_create_ros_message) {
     // previously added objects will be removed when the module is destroyed
@@ -203,7 +203,7 @@ _register_msg_type__msg__set_position_sync(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "create_ros_message_msg__msg__set_position_sync",
+    "create_ros_message_msg__msg__decision",
     pyobject_create_ros_message);
   if (err) {
     // the created capsule needs to be decremented
@@ -214,7 +214,7 @@ _register_msg_type__msg__set_position_sync(PyObject * pymodule)
 
   PyObject * pyobject_destroy_ros_message = NULL;
   pyobject_destroy_ros_message = PyCapsule_New(
-    (void *)&custom_interfaces__msg__set_position_sync__destroy_ros_message,
+    (void *)&custom_interfaces__msg__decision__destroy_ros_message,
     NULL, NULL);
   if (!pyobject_destroy_ros_message) {
     // previously added objects will be removed when the module is destroyed
@@ -222,7 +222,7 @@ _register_msg_type__msg__set_position_sync(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "destroy_ros_message_msg__msg__set_position_sync",
+    "destroy_ros_message_msg__msg__decision",
     pyobject_destroy_ros_message);
   if (err) {
     // the created capsule needs to be decremented
@@ -233,7 +233,7 @@ _register_msg_type__msg__set_position_sync(PyObject * pymodule)
 
   PyObject * pyobject_convert_from_py = NULL;
   pyobject_convert_from_py = PyCapsule_New(
-    (void *)&custom_interfaces__msg__set_position_sync__convert_from_py,
+    (void *)&custom_interfaces__msg__decision__convert_from_py,
     NULL, NULL);
   if (!pyobject_convert_from_py) {
     // previously added objects will be removed when the module is destroyed
@@ -241,7 +241,7 @@ _register_msg_type__msg__set_position_sync(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "convert_from_py_msg__msg__set_position_sync",
+    "convert_from_py_msg__msg__decision",
     pyobject_convert_from_py);
   if (err) {
     // the created capsule needs to be decremented
@@ -252,7 +252,7 @@ _register_msg_type__msg__set_position_sync(PyObject * pymodule)
 
   PyObject * pyobject_convert_to_py = NULL;
   pyobject_convert_to_py = PyCapsule_New(
-    (void *)&custom_interfaces__msg__set_position_sync__convert_to_py,
+    (void *)&custom_interfaces__msg__decision__convert_to_py,
     NULL, NULL);
   if (!pyobject_convert_to_py) {
     // previously added objects will be removed when the module is destroyed
@@ -260,7 +260,7 @@ _register_msg_type__msg__set_position_sync(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "convert_to_py_msg__msg__set_position_sync",
+    "convert_to_py_msg__msg__decision",
     pyobject_convert_to_py);
   if (err) {
     // the created capsule needs to be decremented
@@ -271,7 +271,7 @@ _register_msg_type__msg__set_position_sync(PyObject * pymodule)
 
   PyObject * pyobject_type_support = NULL;
   pyobject_type_support = PyCapsule_New(
-    (void *)ROSIDL_GET_MSG_TYPE_SUPPORT(custom_interfaces, msg, SetPositionSync),
+    (void *)ROSIDL_GET_MSG_TYPE_SUPPORT(custom_interfaces, msg, Decision),
     NULL, NULL);
   if (!pyobject_type_support) {
     // previously added objects will be removed when the module is destroyed
@@ -279,7 +279,7 @@ _register_msg_type__msg__set_position_sync(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "type_support_msg__msg__set_position_sync",
+    "type_support_msg__msg__decision",
     pyobject_type_support);
   if (err) {
     // the created capsule needs to be decremented
@@ -616,7 +616,7 @@ PyInit_custom_interfaces_s__rosidl_typesupport_introspection_c(void)
     return NULL;
   }
 
-  err = _register_msg_type__msg__set_position_sync(pymodule);
+  err = _register_msg_type__msg__decision(pymodule);
   if (err) {
     Py_XDECREF(pymodule);
     return NULL;

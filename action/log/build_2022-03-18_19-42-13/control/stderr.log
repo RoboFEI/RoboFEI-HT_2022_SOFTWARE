@@ -1,0 +1,34 @@
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:20:32:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KMinimalPublisher[m[K’ does not have any field named ‘[01m[Kcount_[m[K’
+   20 |   : Node("minimal_publisher"), [01;31m[Kcount_[m[K(0)
+      |                                [01;31m[K^~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:23:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   23 |     [01;31m[Kpublisher_[m[K = this->create_publisher<custom_interfaces::msg::SetPosition>("set_position", 10);
+      |     [01;31m[K^~~~~~~~~~[m[K
+      |     [32m[Krcl_publisher_t[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:30:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_subscription_t[m[K’?
+   30 |     [01;31m[Ksubscription_[m[K = this->create_subscription<custom_interfaces::msg::Decision>(
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+      |     [32m[Krcl_subscription_t[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:[m[K In lambda function:
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:47:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ is not captured
+   47 |           [01;31m[Kpublisher_[m[K->publish(message);
+      |           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:33:10:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   33 |     [this[01;36m[K][m[K(const std::shared_ptr<custom_interfaces::msg::Decision> msg) -> void
+      |          [01;36m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:23:5:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>publisher_[m[K’ declared here
+   23 |     [01;36m[Kpublisher_[m[K = this->create_publisher<custom_interfaces::msg::SetPosition>("set_position", 10);
+      |     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:51:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ is not captured
+   51 |           [01;31m[Kpublisher_[m[K->publish(message);
+      |           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:33:10:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   33 |     [this[01;36m[K][m[K(const std::shared_ptr<custom_interfaces::msg::Decision> msg) -> void
+      |          [01;36m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:23:5:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>publisher_[m[K’ declared here
+   23 |     [01;36m[Kpublisher_[m[K = this->create_publisher<custom_interfaces::msg::SetPosition>("set_position", 10);
+      |     [01;36m[K^~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/minimal_publisher.dir/build.make:63: CMakeFiles/minimal_publisher.dir/src/minimal_pub.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:105: CMakeFiles/minimal_publisher.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

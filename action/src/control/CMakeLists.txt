@@ -27,15 +27,15 @@ include_directories(Framework)
 include_directories(Linux)
 
 # Build
-add_executable(action_node src/main.cpp)
-ament_target_dependencies(action_node
+add_executable(minimal_publisher src/minimal_pub.cpp)
+ament_target_dependencies(minimal_publisher
   custom_interfaces
   rclcpp
 )
 
 # Install
 install(TARGETS
-  action_node
+  minimal_publisher
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -373,8 +373,8 @@ include("/home/robofei/ROS2/action/build/custom_interfaces/ament_cmake_symlink_i
 # install(FILES "/home/robofei/ROS2/action/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/SetPosition.idl" "DESTINATION" "share/custom_interfaces/msg")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/custom_interfaces" FILES "/home/robofei/ROS2/action/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/SetPosition.idl" "DESTINATION" "share/custom_interfaces/msg")
 
-# install(FILES "/home/robofei/ROS2/action/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/SetPositionSync.idl" "DESTINATION" "share/custom_interfaces/msg")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/custom_interfaces" FILES "/home/robofei/ROS2/action/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/SetPositionSync.idl" "DESTINATION" "share/custom_interfaces/msg")
+# install(FILES "/home/robofei/ROS2/action/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/Decision.idl" "DESTINATION" "share/custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/custom_interfaces" FILES "/home/robofei/ROS2/action/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/Decision.idl" "DESTINATION" "share/custom_interfaces/msg")
 
 # install(FILES "/home/robofei/ROS2/action/build/custom_interfaces/rosidl_adapter/custom_interfaces/srv/GetPosition.idl" "DESTINATION" "share/custom_interfaces/srv")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/custom_interfaces" FILES "/home/robofei/ROS2/action/build/custom_interfaces/rosidl_adapter/custom_interfaces/srv/GetPosition.idl" "DESTINATION" "share/custom_interfaces/srv")
@@ -382,8 +382,8 @@ ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/custom_interfac
 # install(FILES "/home/robofei/ROS2/action/src/custom_interfaces/msg/SetPosition.msg" "DESTINATION" "share/custom_interfaces/msg")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/custom_interfaces" FILES "/home/robofei/ROS2/action/src/custom_interfaces/msg/SetPosition.msg" "DESTINATION" "share/custom_interfaces/msg")
 
-# install(FILES "/home/robofei/ROS2/action/src/custom_interfaces/msg/SetPositionSync.msg" "DESTINATION" "share/custom_interfaces/msg")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/custom_interfaces" FILES "/home/robofei/ROS2/action/src/custom_interfaces/msg/SetPositionSync.msg" "DESTINATION" "share/custom_interfaces/msg")
+# install(FILES "/home/robofei/ROS2/action/src/custom_interfaces/msg/Decision.msg" "DESTINATION" "share/custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/custom_interfaces" FILES "/home/robofei/ROS2/action/src/custom_interfaces/msg/Decision.msg" "DESTINATION" "share/custom_interfaces/msg")
 
 # install(FILES "/home/robofei/ROS2/action/src/custom_interfaces/srv/GetPosition.srv" "DESTINATION" "share/custom_interfaces/srv")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/custom_interfaces" FILES "/home/robofei/ROS2/action/src/custom_interfaces/srv/GetPosition.srv" "DESTINATION" "share/custom_interfaces/srv")

@@ -1,0 +1,37 @@
+[35m[1mScanning dependencies of target minimal_publisher[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/minimal_publisher.dir/src/minimal_pub.cpp.o[0m
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:68:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+   68 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:16:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   16 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:19:32:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KMinimalPublisher[m[K’ does not have any field named ‘[01m[Kcount_[m[K’
+   19 |   : Node("minimal_publisher"), [01;31m[Kcount_[m[K(0)
+      |                                [01;31m[K^~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:21:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   21 |     [01;31m[Kpublisher_[m[K = this->create_publisher<custom_interfaces::msg::SetPosition>("set_position", 10);
+      |     [01;31m[K^~~~~~~~~~[m[K
+      |     [32m[Krcl_publisher_t[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:24:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_subscription_t[m[K’?
+   24 |     [01;31m[Ksubscription_[m[K = this->create_subscription<custom_interfaces::msg::Decision>(
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+      |     [32m[Krcl_subscription_t[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:25:53:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic_callback[m[K’ is not a member of ‘[01m[KMinimalPublisher[m[K’
+   25 |       "/decision", 10, std::bind(&MinimalPublisher::[01;31m[Ktopic_callback[m[K, this, _1));
+      |                                                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:26:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+   26 |     [01;31m[Ktimer_[m[K = this->create_wall_timer(
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[Ktimer_t[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:28:3:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K}[m[K’ token
+   28 |   [01;31m[K}[m[K
+      |   [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:[m[K At global scope:
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:68:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+   68 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/minimal_publisher.dir/build.make:63: CMakeFiles/minimal_publisher.dir/src/minimal_pub.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:105: CMakeFiles/minimal_publisher.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

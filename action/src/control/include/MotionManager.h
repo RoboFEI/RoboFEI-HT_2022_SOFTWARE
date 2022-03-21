@@ -27,7 +27,6 @@ namespace Robot
 	private:
 		static MotionManager* m_UniqueInstance;
 		std::list<MotionModule*> m_Modules;
-		CM730 *m_CM730;
 		bool m_ProcessEnable;
 		bool m_Enabled;
 		int m_FBGyroCenter;
@@ -68,7 +67,7 @@ namespace Robot
 
 		static MotionManager* GetInstance() { return m_UniqueInstance; }
 
-		bool Initialize(CM730 *cm730, bool fadeIn = true);
+		bool Initialize(bool fadeIn = true);
 		bool Reinitialize();
 		void Restartrobot();
         void Process();

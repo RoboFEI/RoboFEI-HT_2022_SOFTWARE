@@ -310,7 +310,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "action_node" "DESTINATION" "lib/control")
+# install("TARGETS" "minimal_publisher" "DESTINATION" "lib/control")
 include("/home/robofei/ROS2/action/build/control/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

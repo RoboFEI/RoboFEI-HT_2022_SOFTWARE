@@ -1,0 +1,24 @@
+[35m[1mScanning dependencies of target minimal_publisher[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/minimal_publisher.dir/src/minimal_pub.cpp.o[0m
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::topic_callback(std::shared_ptr<custom_interfaces::msg::Decision_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:35:47:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst MinimalPublisher[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+   35 |       500ms, std::bind(timer_callback_goodbye([01;31m[K)[m[K, this));
+      |                                               [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:44:8:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid MinimalPublisher::timer_callback_goodbye()[m[K’
+   44 |   void [01;36m[Ktimer_callback_goodbye[m[K()
+      |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:35:54:[m[K [01;31m[Kerror: [m[Kinvalid use of void expression
+   35 |       500ms, std::bind(timer_callback_goodbye(), this[01;31m[K)[m[K);
+      |                                                      [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:39:44:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst MinimalPublisher[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+   39 |       500ms, std::bind(timer_callback_stop([01;31m[K)[m[K, this));
+      |                                            [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:67:8:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid MinimalPublisher::timer_callback_stop()[m[K’
+   67 |   void [01;36m[Ktimer_callback_stop[m[K()
+      |        [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:39:51:[m[K [01;31m[Kerror: [m[Kinvalid use of void expression
+   39 |       500ms, std::bind(timer_callback_stop(), this[01;31m[K)[m[K);
+      |                                                   [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/minimal_publisher.dir/build.make:63: CMakeFiles/minimal_publisher.dir/src/minimal_pub.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:105: CMakeFiles/minimal_publisher.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -31,16 +31,16 @@ Arquivo fonte contendo o programa que controla os servos do corpo do robô
 
 #include "rclcpp/rclcpp.hpp"
 #include "custom_interfaces/msg/set_position.hpp"
+#include "custom_interfaces/msg/decision.hpp"
 #include "std_msgs/msg/string.hpp"
 
 //#include "MX28.h"
-#include "MotionManager.h"
-#include "LinuxMotionTimer.h"
+//#include "MotionManager.h"
+//#include "LinuxMotionTimer.h"
 //#include "LinuxCM730.h"
 //#include <blackboard.h>
-#include <boost/program_options.hpp> //tratamento de argumentos linha de comando
-#include "ActionMove.hpp"
-#include "GaitMove.hpp"
+//#include <boost/program_options.hpp> //tratamento de argumentos linha de comando
+//#include "GaitMove.hpp"
 
 #ifdef MX28_1024
 #define MOTION_FILE_PATH    "../../Control/Data/motion_1024.bin"
@@ -54,13 +54,13 @@ Arquivo fonte contendo o programa que controla os servos do corpo do robô
 
 #define LIMITE_TEMP 80    // Define a temperatura maxima dos motores
 
-using namespace Robot;
+//using namespace Robot;
 using namespace std;
 using std::placeholders::_1;
 
 
-const char* movement;
-const char* last_movement;
+uint8_t movement;
+uint8_t last_movement;
 bool same_moviment = false;
 unsigned int count_read=0;
 unsigned int step_time=20; // Determina a frequencia de leitura do blackboard
@@ -71,18 +71,18 @@ class ActionNode : public rclcpp::Node
     ActionNode()
     : Node("action_node")
     {
-      subscription_ = this->create_subscription<std_msgs::msg::String>(
-      "decision", 10, std::bind(&ActionNode::topic_callback, this, _1));
+      subscription_ = this->create_subscription<custom_interfaces::msg::Decision>(
+      "/decision", 10, std::bind(&ActionNode::topic_callback, this, _1));
       publisher_ = this->create_publisher<custom_interfaces::msg::SetPosition>("set_position", 10);
     } 
 
     private:
-    void topic_callback(const std_msgs::msg::String::SharedPtr msg) const
+    void topic_callback(const std::shared_ptr<custom_interfaces::msg::Decision> msg) const
     {
-        movement = msg->data.c_str();
+        movement = msg->decision;
         //***************************************************************************************
         //-------------------------Controle pela decisão-----------------------------------------
-        logInit(); // save the time when start the control process
+        //logInit(); // save the time when start the control process
         while(1)
         {
                 //Confere se o movimento atual e o mesmo do anterior----------
@@ -186,7 +186,7 @@ class ActionNode : public rclcpp::Node
             // if(read_int(mem, DECISION_ACTION_A) == 19)
             //     actionMove.greetings(stop_gait);
 
-            if(movement=="goodbye")
+            if(movement==1)
                 goodBye();
 
             // if(read_int(mem, DECISION_ACTION_A) == 21)
@@ -199,10 +199,10 @@ class ActionNode : public rclcpp::Node
             // write_int(mem, CONTROL_WORKING, 1);
 
             //Imprime na tela o tempo que esta ocioso por nao receber uma nova instrucao da decisao-------
-            count_read++;
-            std::cout << "\rReading BlackBoard" <<"[\e[38;5;82m"<< count_read<<"\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
-            fflush (stdout);
-            usleep(step_time*1000); //Operando na frequencia de 1/step_time Hertz
+            // count_read++;
+            // std::cout << "\rReading BlackBoard" <<"[\e[38;5;82m"<< count_read<<"\e[0m] | Tempo ocioso"<<"[\e[38;5;82m"<< count_read*step_time/1000<<"s\e[0m]";
+            // fflush (stdout);
+            // usleep(step_time*1000); //Operando na frequencia de 1/step_time Hertz
             //--------------------------------------------------------------------------------------------
     
             //--------------------------------------------------------------------------------------------------
@@ -236,24 +236,24 @@ class ActionNode : public rclcpp::Node
     size_t count_;
     }
 
-    void logInit() const
-    {
-            std::fstream File;
-            time_t _tm =time(NULL);
-            struct tm * curtime = localtime ( &_tm );
-            File.open("../../Control/Control.log", std::ios::app | std::ios::out);
-            if (File.good() && File.is_open())
-            {
-                File << "Inicializando o processo do controle "<<" --- ";
-                File << asctime(curtime);
-                File.flush();
-                File.close();
-            }
-            else
-            printf("Erro ao Salvar o arquivo\n");
-    }
+    // void logInit() const
+    // {
+    //         std::fstream File;
+    //         time_t _tm =time(NULL);
+    //         struct tm * curtime = localtime ( &_tm );
+    //         File.open("../../Control/Control.log", std::ios::app | std::ios::out);
+    //         if (File.good() && File.is_open())
+    //         {
+    //             File << "Inicializando o processo do controle "<<" --- ";
+    //             File << asctime(curtime);
+    //             File.flush();
+    //             File.close();
+    //         }
+    //         else
+    //         printf("Erro ao Salvar o arquivo\n");
+    // }
 
-    rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscription_;
+    rclcpp::Subscription<custom_interfaces::msg::Decision>::SharedPtr subscription_;
     rclcpp::Publisher<custom_interfaces::msg::SetPosition>::SharedPtr publisher_;  
     rclcpp::TimerBase::SharedPtr timer_;
 };
@@ -297,41 +297,41 @@ int main(int argc, char **argv)
     //---------------------------
 
     //Configurando para prioridade maxima para executar este processo-------
-    sprintf(string1,"echo fei 123456| sudo -S renice -20 -p %d", getpid());
-    system(string1);//prioridade
+    // sprintf(string1,"echo fei 123456| sudo -S renice -20 -p %d", getpid());
+    // system(string1);//prioridade
 
-    printf( "\n===== ROBOFEI-HT Control Process =====\n\n");
+    // printf( "\n===== ROBOFEI-HT Control Process =====\n\n");
 
     //-------------para entrada de argumentos-----------------------------------
-    namespace po=boost::program_options;
+    // namespace po=boost::program_options;
 
-    po::options_description desc("options");
-    desc.add_options()
-    ("help", "produce help message")
-    ("k", "Inicia com o controle do robô pelo teclado")
-    ("v", "Verifica a tensao nos servos do corpo")
-    ("t", "Verifica a temperatura dos servos do corpo")
-    ("g", "Inicia o controle para usar com a interface grafica")
-    ;
+    // po::options_description desc("options");
+    // desc.add_options()
+    // ("help", "produce help message")
+    // ("k", "Inicia com o controle do robô pelo teclado")
+    // ("v", "Verifica a tensao nos servos do corpo")
+    // ("t", "Verifica a temperatura dos servos do corpo")
+    // ("g", "Inicia o controle para usar com a interface grafica")
+    // ;
   
-    po::variables_map variables;
-    po::store(po::parse_command_line(argc, argv, desc), variables);
-    po::notify(variables); 
+    // po::variables_map variables;
+    // po::store(po::parse_command_line(argc, argv, desc), variables);
+    // po::notify(variables); 
     //--------------------------------------------------------------------------
 
     //    MotionManager::GetInstance()->LoadINISettings(ini);
 
     //Criando objeto da classe dos movimentos de caminhada----------------------
-    GaitMove gaitMove(ini);
+    //GaitMove gaitMove(ini);
     //**************************************************************************
 
 //    MotionManager::GetInstance()->LoadINISettings(ini);
 //    Walking::GetInstance()->LoadINISettings(ini); 
 //    MotionManager::GetInstance()->AddModule((MotionModule*)Action::GetInstance());
 //    MotionManager::GetInstance()->AddModule((MotionModule*)Walking::GetInstance());
-    LinuxMotionTimer linuxMotionTimer;
-    linuxMotionTimer.Initialize(MotionManager::GetInstance());
-    linuxMotionTimer.Start();
+    // LinuxMotionTimer linuxMotionTimer;
+    // linuxMotionTimer.Initialize(MotionManager::GetInstance());
+    // linuxMotionTimer.Start();
     /////////////////////////////////////////////////////////////////////
 
     //actionMove.poseStandup(stop_gait); /* Init(stand up) pose */

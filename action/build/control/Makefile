@@ -168,19 +168,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named action_node
-
-# Build rule for target.
-action_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 action_node
-.PHONY : action_node
-
-# fast build rule for target.
-action_node/fast:
-	$(MAKE) -f CMakeFiles/action_node.dir/build.make CMakeFiles/action_node.dir/build
-.PHONY : action_node/fast
-
-#=============================================================================
 # Target rules for targets named control_uninstall
 
 # Build rule for target.
@@ -192,6 +179,19 @@ control_uninstall: cmake_check_build_system
 control_uninstall/fast:
 	$(MAKE) -f CMakeFiles/control_uninstall.dir/build.make CMakeFiles/control_uninstall.dir/build
 .PHONY : control_uninstall/fast
+
+#=============================================================================
+# Target rules for targets named minimal_publisher
+
+# Build rule for target.
+minimal_publisher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minimal_publisher
+.PHONY : minimal_publisher
+
+# fast build rule for target.
+minimal_publisher/fast:
+	$(MAKE) -f CMakeFiles/minimal_publisher.dir/build.make CMakeFiles/minimal_publisher.dir/build
+.PHONY : minimal_publisher/fast
 
 #=============================================================================
 # Target rules for targets named uninstall
@@ -206,32 +206,32 @@ uninstall/fast:
 	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
 
-src/main.o: src/main.cpp.o
+src/minimal_pub.o: src/minimal_pub.cpp.o
 
-.PHONY : src/main.o
+.PHONY : src/minimal_pub.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/action_node.dir/build.make CMakeFiles/action_node.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/minimal_pub.cpp.o:
+	$(MAKE) -f CMakeFiles/minimal_publisher.dir/build.make CMakeFiles/minimal_publisher.dir/src/minimal_pub.cpp.o
+.PHONY : src/minimal_pub.cpp.o
 
-src/main.i: src/main.cpp.i
+src/minimal_pub.i: src/minimal_pub.cpp.i
 
-.PHONY : src/main.i
+.PHONY : src/minimal_pub.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/action_node.dir/build.make CMakeFiles/action_node.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/minimal_pub.cpp.i:
+	$(MAKE) -f CMakeFiles/minimal_publisher.dir/build.make CMakeFiles/minimal_publisher.dir/src/minimal_pub.cpp.i
+.PHONY : src/minimal_pub.cpp.i
 
-src/main.s: src/main.cpp.s
+src/minimal_pub.s: src/minimal_pub.cpp.s
 
-.PHONY : src/main.s
+.PHONY : src/minimal_pub.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/action_node.dir/build.make CMakeFiles/action_node.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/minimal_pub.cpp.s:
+	$(MAKE) -f CMakeFiles/minimal_publisher.dir/build.make CMakeFiles/minimal_publisher.dir/src/minimal_pub.cpp.s
+.PHONY : src/minimal_pub.cpp.s
 
 # Help Target
 help:
@@ -246,12 +246,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... action_node"
 	@echo "... control_uninstall"
+	@echo "... minimal_publisher"
 	@echo "... uninstall"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/minimal_pub.o"
+	@echo "... src/minimal_pub.i"
+	@echo "... src/minimal_pub.s"
 .PHONY : help
 
 

@@ -1,0 +1,42 @@
+[0.016s] Invoking command in '/home/robofei/ROS2/action/build/control': CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/home/robofei/ROS2/action/install/control:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.063s] [35m[1mScanning dependencies of target minimal_publisher[0m
+[0.096s] [ 50%] [32mBuilding CXX object CMakeFiles/minimal_publisher.dir/src/minimal_pub.cpp.o[0m
+[1.424s] [01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[1.424s] [01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:25:5:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Ksubscription_[m[K’
+[1.424s]    25 |     [01;31m[Ksubscription_[m[K = this->create_subscription<custom_interfaces::msg::Decision>(
+[1.424s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[1.427s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[1.427s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[1.428s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.428s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.428s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.428s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.428s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.428s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.428s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.428s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.428s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:7[m[K:
+[1.429s] [01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::topic_callback(std::shared_ptr<custom_interfaces::msg::Decision_<std::allocator<void> > >) const[m[K’:
+[1.429s] [01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:31:42:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kcustom_interfaces::msg::Decision_<std::allocator<void> >::_decision_type[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Kconst char*[m[K’ [[01;31m[K-fpermissive[m[K]
+[1.429s]    31 |     RCLCPP_INFO(this->get_logger(), [01;31m[Kmsg->decision[m[K);
+[1.429s]       |                                     [01;31m[K~~~~~^~~~~~~~[m[K
+[1.429s]       |                                          [01;31m[K|[m[K
+[1.429s]       |                                          [01;31m[Kcustom_interfaces::msg::Decision_<std::allocator<void> >::_decision_type {aka unsigned char}[m[K
+[1.429s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:36[m[K,
+[1.430s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[1.430s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.430s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.430s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.430s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.430s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.430s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.430s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.431s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.431s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/minimal_pub.cpp:7[m[K:
+[1.431s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:296:27:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kconst char* rclcpp::get_c_string(const char*)[m[K’
+[1.431s]   296 | get_c_string([01;36m[Kconst char * string_in[m[K);
+[1.431s]       |              [01;36m[K~~~~~~~~~~~~~^~~~~~~~~[m[K
+[2.292s] make[2]: *** [CMakeFiles/minimal_publisher.dir/build.make:63: CMakeFiles/minimal_publisher.dir/src/minimal_pub.cpp.o] Error 1
+[2.292s] make[1]: *** [CMakeFiles/Makefile2:105: CMakeFiles/minimal_publisher.dir/all] Error 2
+[2.292s] make: *** [Makefile:141: all] Error 2
+[2.294s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/home/robofei/ROS2/action/install/control:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
