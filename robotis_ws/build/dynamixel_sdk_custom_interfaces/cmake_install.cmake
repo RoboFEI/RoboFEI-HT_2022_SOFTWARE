@@ -1,4 +1,4 @@
-# Install script for directory: /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk_custom_interfaces
+# Install script for directory: /home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_custom_interfaces
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

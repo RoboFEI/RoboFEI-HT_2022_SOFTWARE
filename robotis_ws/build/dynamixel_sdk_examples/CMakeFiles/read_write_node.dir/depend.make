@@ -16,8 +16,8 @@ CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robofei/ROS2/rob
 CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp
 CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp
 CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.hpp
-CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk_examples/include/read_write_node.hpp
-CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk_examples/src/read_write_node.cpp
+CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/include/read_write_node.hpp
+CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp
 CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__builder.hpp
 CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__struct.hpp
 CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__traits.hpp

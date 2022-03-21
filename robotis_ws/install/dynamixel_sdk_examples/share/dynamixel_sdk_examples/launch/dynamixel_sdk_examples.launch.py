@@ -1,1 +1,1 @@
-/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk_examples/launch/dynamixel_sdk_examples.launch.py
+/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/launch/dynamixel_sdk_examples.launch.py

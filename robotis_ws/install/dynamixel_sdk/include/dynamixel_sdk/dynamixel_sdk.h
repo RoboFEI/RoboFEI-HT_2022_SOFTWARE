@@ -1,1 +1,1 @@
-/home/robofei/ROS2/robotis_ws/src/Dynamixel/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h
+/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h
