@@ -10,11 +10,11 @@ def generate_launch_description():
         executable="read_write_node",
         output = 'screen'
     )
-    minimal_publisher = Node(
+    minimal_pub = Node(
         package="dynamixel_sdk_examples",
         executable="minimal_pub",
         output = 'screen'
     )
     ld.add_action(read_write_node)
-    ld.add_action(minimal_publisher)
+    ld.add_action(minimal_pub)
     return ld

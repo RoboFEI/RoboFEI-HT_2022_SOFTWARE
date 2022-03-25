@@ -31,6 +31,11 @@ ament_target_dependencies(read_write_node
   rclcpp
 )
 
+add_executable(minimal_pub src/minimal_pub.cpp)
+ament_target_dependencies(minimal_pub
+  dynamixel_sdk_custom_interfaces
+  rclcpp
+)
 
 # Install launch files.
 install(DIRECTORY

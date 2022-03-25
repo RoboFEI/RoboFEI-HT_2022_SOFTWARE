@@ -19,11 +19,10 @@
 //
 // Open terminal #1
 // $ ros2 run dynamixel_sdk_examples read_write_node
-// ros2 topic pub -1 decision custom_interfaces/Decision "{decision: 1}"
 //
 // Open terminal #2 (run one of below commands at a time)
 // $ ros2 topic pub -1 /set_position dynamixel_sdk_custom_interfaces/SetPosition "{id: {6, 2}, position: {300, 500}}"
-// $ ros2 topic pub -1 /set_position dynamixel_sdk_custom_interfaces/SetPosition "{id: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}, position: {300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300}}"
+// $ ros2 topic pub -1 /set_position dynamixel_sdk_custom_interfaces/SetPosition "{id: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}, position: {1300, 1500, 1400, 1350, 1520, 1480, 1301, 1504, 1402, 1320, 1570, 1407, 1304, 1574, 1458, 1355, 1523, 1470}}"
 // $ ros2 topic pub -1 /set_position dynamixel_sdk_custom_interfaces/SetPosition "{id: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, position: {2500, 1900, 2100, 2048, 2047, 2046, 2049, 2050, 2051, 2052, 2045, 2044}}"
 // $ ros2 topic pub -1 /set_position dynamixel_sdk_custom_interfaces/SetPosition "{id: {1, 2, 5, 6}, position: {2500, 1900, 2048, 2048}}"
 //
@@ -56,12 +55,10 @@
 
 dynamixel::PortHandler * portHandler;
 dynamixel::PacketHandler * packetHandler;
-dynamixel::GroupSyncWrite groupSyncWrite(portHandler, packetHandler, ADDR_GOAL_POSITION, 4);
 
 uint8_t dxl_error = 0;
-uint32_t goal_position[3] = {0};
+uint32_t goal_position[18] = {0};
 int dxl_comm_result = COMM_TX_FAIL;
-int dxl_addparam_result = false;
 
 ReadWriteNode::ReadWriteNode()
 : Node("read_write_node")
@@ -81,67 +78,41 @@ ReadWriteNode::ReadWriteNode()
     QOS_RKL10V,
     [this](const std::shared_ptr<SetPosition> msg) -> void 
     {
-
       uint8_t dxl_error = 0;
 
-      for(int i=0; i<=2; i++){
+      // Position Value of X series is 4 byte data.
+      // For AX & MX(1.0) use 2 byte data(uint16_t) for the Position Value 
+      for(int i=0; i<=17; i++){
         goal_position[i] = (unsigned int)msg->position[i];  // Convert int32 -> uint32
       }
 
-      uint8_t param_goal_position0[4]; 
-      uint8_t param_goal_position1[4];
-      uint8_t param_goal_position2[4]; 
-
-      //for(int i=0; i<=2; i++){
-        // Write Goal Position (length : 4 bytes)
-        // When writing 2 byte data to AX / MX(1.0), use write2ByteTxRx() instead.
-      uint32_t position0 = (unsigned int)msg->position[0]; // Convert int32 -> uint32
-      param_goal_position0[0] = DXL_LOBYTE(DXL_LOWORD(position0));
-      param_goal_position0[1] = DXL_HIBYTE(DXL_LOWORD(position0));
-      param_goal_position0[2] = DXL_LOBYTE(DXL_HIWORD(position0));
-      param_goal_position0[3] = DXL_HIBYTE(DXL_HIWORD(position0));
-      uint32_t position1 = (unsigned int)msg->position[1]; // Convert int32 -> uint32
-      param_goal_position1[0] = DXL_LOBYTE(DXL_LOWORD(position1));
-      param_goal_position1[1] = DXL_HIBYTE(DXL_LOWORD(position1));
-      param_goal_position1[2] = DXL_LOBYTE(DXL_HIWORD(position1));
-      param_goal_position1[3] = DXL_HIBYTE(DXL_HIWORD(position1));
-      uint32_t position2 = (unsigned int)msg->position[2]; // Convert int32 -> uint32
-      param_goal_position2[0] = DXL_LOBYTE(DXL_LOWORD(position2));
-      param_goal_position2[1] = DXL_HIBYTE(DXL_LOWORD(position2));
-      param_goal_position2[2] = DXL_LOBYTE(DXL_HIWORD(position2));
-      param_goal_position2[3] = DXL_HIBYTE(DXL_HIWORD(position2));
-
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[0], param_goal_position0);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[0]);
-      }
-
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[1], param_goal_position1);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[1]);
-      }
-
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[2], param_goal_position2);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[2]);
-      }
-
-      dxl_comm_result = groupSyncWrite.txPacket();
-      //}
+       for(int i=0; i<=17; i++){
+         // Write Goal Position (length : 4 bytes)
+         // When writing 2 byte data to AX / MX(1.0), use write2ByteTxRx() instead.
+         dxl_comm_result =
+         packetHandler->write4ByteTxRx(
+           portHandler,
+           (uint8_t) msg->id[i],
+           ADDR_GOAL_POSITION,
+           goal_position[i],
+           &dxl_error
+         );
+       }
 
       if (dxl_comm_result != COMM_SUCCESS) {
         RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getTxRxResult(dxl_comm_result));
       } else if (dxl_error != 0) {
         RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getRxPacketError(dxl_error));
       } else {
-        RCLCPP_INFO(this->get_logger(), "Set [ID: {%d, %d, %d}] [Goal Position: {%d, %d, %d}]", 
-        msg->id[0], msg->id[1], msg->id[2], msg->position[0], msg->position[1], msg->position[2]);
+        RCLCPP_INFO(this->get_logger(), "Set [ID: {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}] [Goal Position: {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}]", 
+          msg->id[0], msg->id[1], msg->id[2], msg->id[3], msg->id[4], msg->id[5], msg->id[6], msg->id[7], msg->id[8], msg->id[9], msg->id[10],
+          msg->id[11], msg->id[12], msg->id[13], msg->id[14], msg->id[15], msg->id[16], msg->id[17],
+          msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], 
+          msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11],
+          msg->position[12], msg->position[13], msg->position[14], msg->position[15], msg->position[16], msg->position[17]);
       }
-
-      groupSyncWrite.clearParam();
     }
     );
-
 }
 
 // RCLCPP_INFO(this->get_logger(), "Set [ID: {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}] [Goal Position: {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}]", 

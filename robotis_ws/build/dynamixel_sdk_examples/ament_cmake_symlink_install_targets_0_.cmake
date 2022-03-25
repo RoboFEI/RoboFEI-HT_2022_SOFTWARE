@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/robofei/Music/robotis_ws/build/dynamixel_sdk_examples/read_write_node" "/home/robofei/Music/robotis_ws/build/dynamixel_sdk_examples/minimal_pub" "TARGETS" "read_write_node" "minimal_pub" "DESTINATION" "lib/dynamixel_sdk_examples")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples/minimal_publisher" "TARGETS" "minimal_publisher" "DESTINATION" "lib/dynamixel_sdk_examples")

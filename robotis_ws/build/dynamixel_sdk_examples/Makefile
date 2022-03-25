@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named minimal_pub
+
+# Build rule for target.
+minimal_pub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 minimal_pub
+.PHONY : minimal_pub
+
+# fast build rule for target.
+minimal_pub/fast:
+	$(MAKE) -f CMakeFiles/minimal_pub.dir/build.make CMakeFiles/minimal_pub.dir/build
+.PHONY : minimal_pub/fast
+
+#=============================================================================
 # Target rules for targets named read_write_node
 
 # Build rule for target.
@@ -205,6 +218,33 @@ uninstall: cmake_check_build_system
 uninstall/fast:
 	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
+
+src/minimal_pub.o: src/minimal_pub.cpp.o
+
+.PHONY : src/minimal_pub.o
+
+# target to build an object file
+src/minimal_pub.cpp.o:
+	$(MAKE) -f CMakeFiles/minimal_pub.dir/build.make CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o
+.PHONY : src/minimal_pub.cpp.o
+
+src/minimal_pub.i: src/minimal_pub.cpp.i
+
+.PHONY : src/minimal_pub.i
+
+# target to preprocess a source file
+src/minimal_pub.cpp.i:
+	$(MAKE) -f CMakeFiles/minimal_pub.dir/build.make CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.i
+.PHONY : src/minimal_pub.cpp.i
+
+src/minimal_pub.s: src/minimal_pub.cpp.s
+
+.PHONY : src/minimal_pub.s
+
+# target to generate assembly for a file
+src/minimal_pub.cpp.s:
+	$(MAKE) -f CMakeFiles/minimal_pub.dir/build.make CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.s
+.PHONY : src/minimal_pub.cpp.s
 
 src/read_write_node.o: src/read_write_node.cpp.o
 
@@ -244,11 +284,15 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... minimal_pub"
 	@echo "... read_write_node"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... dynamixel_sdk_examples_uninstall"
 	@echo "... uninstall"
+	@echo "... src/minimal_pub.o"
+	@echo "... src/minimal_pub.i"
+	@echo "... src/minimal_pub.s"
 	@echo "... src/read_write_node.o"
 	@echo "... src/read_write_node.i"
 	@echo "... src/read_write_node.s"

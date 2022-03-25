@@ -3,6 +3,7 @@
 #include <chrono>
 #include <memory>
 #include <thread>
+#include <functional>
 
 #include "rclcpp/rclcpp.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
@@ -13,9 +14,10 @@ class MinimalPublisher : public rclcpp::Node
 {
 public:
   MinimalPublisher()
-  : Node("minimal_publisher"), count_(0)
+  : Node("minimal_publisher")
   {
-    publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10);    // CHANGE
+    RCLCPP_INFO(this->get_logger(), "Run read minimal publisher");
+    publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
     timer_ = this->create_wall_timer(
       500ms, std::bind(&MinimalPublisher::timer_callback, this));
   }
@@ -23,28 +25,18 @@ public:
 private:
   void timer_callback()
   {
-    auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                               
-    for (int i=1; i<=4; i++){
-        message.id = {2, 4, 6};          
-        message.position = {1024, 1024, 2593};   
-        publisher_->publish(message);
-        std::this_thread::sleep_for(std::chrono::seconds(1));
-        message.id = {2, 4, 6};          
-        message.position = {1024, 1024, 3553};   
-        publisher_->publish(message);
-        std::this_thread::sleep_for(std::chrono::seconds(1));
-        // RCLCPP_INFO(this->get_logger(), "%d", i);
-        if (i%4==0){
-          message.id = {2, 4, 6};          
-          message.position = {1900, 1950, 2200};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(10));
-        }
-    }
+    auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();   
+      message.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18};          
+      message.position = {1024, 1024, 2593, 1024, 1024, 2593, 1024, 1024, 2593, 1024, 1024, 2593, 1024, 1024, 2593, 1024, 1024, 2593};   
+      // for (int i=0; i<=18; i++){
+      //   printf("ID: %d", message.id[i]);
+      //   printf("ID: %d", message.position[i]);
+      // }
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(1));
   }
   rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_;         // CHANGE
-  size_t count_;
+  rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_;     
 };
 
 int main(int argc, char * argv[])
