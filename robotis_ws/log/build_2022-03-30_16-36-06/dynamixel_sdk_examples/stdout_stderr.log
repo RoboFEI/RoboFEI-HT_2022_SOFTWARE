@@ -1,0 +1,21 @@
+[35m[1mScanning dependencies of target read_write_node[0m
+[ 50%] Built target minimal_pub
+[ 75%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:59:1:[m[K [01;31m[Kerror: [m[K‘[01m[KGroupSyncWrite[m[K’ does not name a type
+   59 | [01;31m[KGroupSyncWrite[m[K groupSyncWrite(portHandler, packetHandler, ADDR_GOAL_POSITION, 4);
+      | [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In lambda function:
+[01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:114:29:[m[K [01;31m[Kerror: [m[K‘[01m[KgroupSyncWrite[m[K’ was not declared in this scope
+  114 |       dxl_addparam_result = [01;31m[KgroupSyncWrite[m[K.addParam((uint8_t)msg->id[0], param_goal_position0);
+      |                             [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In function ‘[01m[Kvoid setupDynamixel(uint8_t)[m[K’:
+[01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:162:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kdxl_comm_result[m[K’ was not declared in this scope
+  162 |   [01;31m[Kdxl_comm_result[m[K = packetHandler->write1ByteTxRx(
+      |   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:198:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kdxl_comm_result[m[K’ was not declared in this scope
+  198 |   [01;31m[Kdxl_comm_result[m[K = portHandler->openPort();
+      |   [01;31m[K^~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/read_write_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

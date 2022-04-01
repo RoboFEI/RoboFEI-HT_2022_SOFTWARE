@@ -1,0 +1,58 @@
+[0.016s] Invoking command in '/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[0.063s] [35m[1mScanning dependencies of target read_write_node[0m
+[0.083s] [ 50%] Built target minimal_pub
+[0.093s] [ 75%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[1.408s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:57:1:[m[K [01;31m[Kerror: [m[K‘[01m[KPortHandler[m[K’ does not name a type
+[1.408s]    57 | [01;31m[KPortHandler[m[K * portHandler = dynamixel::PortHandler::getPortHandler(DEVICE_NAME);
+[1.408s]       | [01;31m[K^~~~~~~~~~~[m[K
+[1.409s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:58:1:[m[K [01;31m[Kerror: [m[K‘[01m[KPacketHandler[m[K’ does not name a type
+[1.409s]    58 | [01;31m[KPacketHandler[m[K * packetHandler = dynamixel::PacketHandler::getPacketHandler(PROTOCOL_VERSION);
+[1.409s]       | [01;31m[K^~~~~~~~~~~~~[m[K
+[1.411s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:60:1:[m[K [01;31m[Kerror: [m[K‘[01m[KGroupSyncWrite[m[K’ does not name a type
+[1.411s]    60 | [01;31m[KGroupSyncWrite[m[K groupSyncWrite(portHandler, packetHandler, ADDR_GOAL_POSITION, 4);
+[1.411s]       | [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.423s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In lambda function:
+[1.423s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:115:29:[m[K [01;31m[Kerror: [m[K‘[01m[KgroupSyncWrite[m[K’ was not declared in this scope
+[1.423s]   115 |       dxl_addparam_result = [01;31m[KgroupSyncWrite[m[K.addParam((uint8_t)msg->id[0], param_goal_position0);
+[1.423s]       |                             [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.428s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[1.428s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[1.428s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.428s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.429s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.429s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.429s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.429s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.429s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.429s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.429s]                  from [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:39[m[K:
+[1.429s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:133:47:[m[K [01;31m[Kerror: [m[K‘[01m[KpacketHandler[m[K’ was not declared in this scope
+[1.429s]   133 |         RCLCPP_INFO(this->get_logger(), "%s", [01;31m[KpacketHandler[m[K->getTxRxResult(dxl_comm_result));
+[1.429s]       |                                               [01;31m[K^~~~~~~~~~~~~[m[K
+[1.432s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:136:47:[m[K [01;31m[Kerror: [m[K‘[01m[KpacketHandler[m[K’ was not declared in this scope
+[1.432s]   136 |         RCLCPP_INFO(this->get_logger(), "%s", [01;31m[KpacketHandler[m[K->getRxPacketError(dxl_error));
+[1.432s]       |                                               [01;31m[K^~~~~~~~~~~~~[m[K
+[1.439s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In function ‘[01m[Kvoid setupDynamixel(uint8_t)[m[K’:
+[1.439s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:163:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kdxl_comm_result[m[K’ was not declared in this scope
+[1.439s]   163 |   [01;31m[Kdxl_comm_result[m[K = packetHandler->write1ByteTxRx(
+[1.439s]       |   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.441s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:163:21:[m[K [01;31m[Kerror: [m[K‘[01m[KpacketHandler[m[K’ was not declared in this scope
+[1.441s]   163 |   dxl_comm_result = [01;31m[KpacketHandler[m[K->write1ByteTxRx(
+[1.441s]       |                     [01;31m[K^~~~~~~~~~~~~[m[K
+[1.443s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:164:5:[m[K [01;31m[Kerror: [m[K‘[01m[KportHandler[m[K’ was not declared in this scope
+[1.443s]   164 |     [01;31m[KportHandler[m[K,
+[1.444s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[1.448s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.448s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:197:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kdxl_comm_result[m[K’ was not declared in this scope
+[1.448s]   197 |   [01;31m[Kdxl_comm_result[m[K = portHandler->openPort();
+[1.448s]       |   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.450s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:197:21:[m[K [01;31m[Kerror: [m[K‘[01m[KportHandler[m[K’ was not declared in this scope
+[1.450s]   197 |   dxl_comm_result = [01;31m[KportHandler[m[K->openPort();
+[1.450s]       |                     [01;31m[K^~~~~~~~~~~[m[K
+[1.459s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:223:3:[m[K [01;31m[Kerror: [m[K‘[01m[KpacketHandler[m[K’ was not declared in this scope
+[1.459s]   223 |   [01;31m[KpacketHandler[m[K->write1ByteTxRx(
+[1.459s]       |   [01;31m[K^~~~~~~~~~~~~[m[K
+[2.926s] make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+[2.926s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/read_write_node.dir/all] Error 2
+[2.926s] make: *** [Makefile:141: all] Error 2
+[2.928s] Invoked command in '/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples' returned '2': CMAKE_PREFIX_PATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4

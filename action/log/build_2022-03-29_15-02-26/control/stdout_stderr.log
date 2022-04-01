@@ -1,0 +1,203 @@
+[35m[1mScanning dependencies of target motion[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/motion.dir/src/MotionManager.cpp.o[0m
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In constructor ‘[01m[KControl::Control()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:28:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kini[m[K’ was not declared in this scope; did you mean ‘[01m[Kint[m[K’?
+   28 |     GaitMove gaitMove([01;31m[Kini[m[K);
+      |                       [01;31m[K^~~[m[K
+      |                       [32m[Kint[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:36:43:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionModule[m[K’ has not been declared
+   36 | const int TORQUE_ADAPTION_CYCLES = 1000 / [01;31m[KMotionModule[m[K::TIME_UNIT;
+      |                                           [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:45:1:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionManager[m[K’ does not name a type
+   45 | [01;31m[KMotionManager[m[K::MotionManager()
+      | [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:173:1:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionManager[m[K’ does not name a type
+  173 | [01;31m[KMotionManager[m[K::~MotionManager()
+      | [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:177:1:[m[K [01;31m[Kerror: [m[K‘[01m[Ks[m[K’ does not name a type
+  177 | [01;31m[Ks[m[K
+      | [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:[m[K In function ‘[01m[Kbool Reinitialize()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:235:5:[m[K [01;31m[Kerror: [m[K‘[01m[Km_ProcessEnable[m[K’ was not declared in this scope
+  235 |     [01;31m[Km_ProcessEnable[m[K = false;
+      |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:239:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  239 |     int [01;35m[Kvalue[m[K, error;
+      |         [01;35m[K^~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:239:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  239 |     int value, [01;35m[Kerror[m[K;
+      |                [01;35m[K^~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:[m[K In function ‘[01m[Kvoid Restartrobot()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:268:5:[m[K [01;31m[Kerror: [m[K‘[01m[Km_torque_count[m[K’ was not declared in this scope
+  268 |     [01;31m[Km_torque_count[m[K=0;
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:[m[K In function ‘[01m[Kvoid StartLogging()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:284:9:[m[K [01;31m[Kerror: [m[K‘[01m[Km_LogFileStream[m[K’ was not declared in this scope
+  284 |         [01;31m[Km_LogFileStream[m[K.open(szFile, std::ios::out);
+      |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:285:18:[m[K [01;31m[Kerror: [m[K‘[01m[KJointData[m[K’ has not been declared
+  285 |     for(int id = [01;31m[KJointData[m[K::ID_MIN; id <= JointData::ID_MAX-2; id++)//tirando a cabeça
+      |                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:285:43:[m[K [01;31m[Kerror: [m[K‘[01m[KJointData[m[K’ has not been declared
+  285 |     for(int id = JointData::ID_MIN; id <= [01;31m[KJointData[m[K::ID_MAX-2; id++)//tirando a cabeça
+      |                                           [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:289:5:[m[K [01;31m[Kerror: [m[K‘[01m[Km_IsLogging[m[K’ was not declared in this scope
+  289 |     [01;31m[Km_IsLogging[m[K = true;
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In member function ‘[01m[Kvoid Control::timer_callback_goodbye()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:71:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcount_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   71 |     size_t [01;35m[Kcount_[m[K;
+      |            [01;35m[K^~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:[m[K In function ‘[01m[Kvoid StopLogging()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:294:5:[m[K [01;31m[Kerror: [m[K‘[01m[Km_IsLogging[m[K’ was not declared in this scope
+  294 |     [01;31m[Km_IsLogging[m[K = false;
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:295:5:[m[K [01;31m[Kerror: [m[K‘[01m[Km_LogFileStream[m[K’ was not declared in this scope
+  295 |     [01;31m[Km_LogFileStream[m[K.close();
+      |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:[m[K In function ‘[01m[Kvoid LoadINISettings(minIni*)[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:300:40:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kvoid LoadINISettings(minIni*)[m[K’
+  300 |     LoadINISettings(ini, OFFSET_SECTION[01;31m[K)[m[K;
+      |                                        [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:298:6:[m[K [01;36m[Knote: [m[Kdeclared here
+  298 | void [01;36m[KLoadINISettings[m[K(minIni* ini)
+      |      [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:[m[K In function ‘[01m[Kvoid LoadINISettings(minIni*, const string&)[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:306:17:[m[K [01;31m[Kerror: [m[K‘[01m[KJointData[m[K’ has not been declared
+  306 |     for(int i = [01;31m[KJointData[m[K::ID_MIN; i <= JointData::ID_MAX-2; i++)//tirando a cabeça
+      |                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:306:41:[m[K [01;31m[Kerror: [m[K‘[01m[KJointData[m[K’ has not been declared
+  306 |     for(int i = JointData::ID_MIN; i <= [01;31m[KJointData[m[K::ID_MAX-2; i++)//tirando a cabeça
+      |                                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:310:81:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Offset[m[K’ was not declared in this scope
+  310 | = ini->geti(section, key, INVALID_VALUE)) != INVALID_VALUE)  [01;31m[Km_Offset[m[K[i] = ivalue;
+      |                                                              [01;31m[K^~~~~~~~[m[K
+
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:312:9:[m[K [01;31m[Kerror: [m[K‘[01m[Km_angleEstimator[m[K’ was not declared in this scope; did you mean ‘[01m[KAngleEstimator[m[K’?
+  312 |         [01;31m[Km_angleEstimator[m[K.LoadINISettings(ini, section + "_angle");
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |         [32m[KAngleEstimator[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:[m[K In function ‘[01m[Kvoid SaveINISettings(minIni*)[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:316:40:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kvoid SaveINISettings(minIni*)[m[K’
+  316 |     SaveINISettings(ini, OFFSET_SECTION[01;31m[K)[m[K;
+      |                                        [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:314:6:[m[K [01;36m[Knote: [m[Kdeclared here
+  314 | void [01;36m[KSaveINISettings[m[K(minIni* ini)
+      |      [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:[m[K In function ‘[01m[Kvoid SaveINISettings(minIni*, const string&)[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:320:17:[m[K [01;31m[Kerror: [m[K‘[01m[KJointData[m[K’ has not been declared
+  320 |     for(int i = [01;31m[KJointData[m[K::ID_MIN; i <= JointData::ID_MAX-2; i++)//tirando a cabeça
+      |                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:320:41:[m[K [01;31m[Kerror: [m[K‘[01m[KJointData[m[K’ has not been declared
+  320 |     for(int i = JointData::ID_MIN; i <= [01;31m[KJointData[m[K::ID_MAX-2; i++)//tirando a cabeça
+      |                                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:324:32:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Offset[m[K’ was not declared in this scope
+  324 |         ini->put(section, key, [01;31m[Km_Offset[m[K[i]);
+      |                                [01;31m[K^~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:326:9:[m[K [01;31m[Kerror: [m[K‘[01m[Km_angleEstimator[m[K’ was not declared in this scope; did you mean ‘[01m[KAngleEstimator[m[K’?
+  326 |         [01;31m[Km_angleEstimator[m[K.SaveINISettings(ini, section + "_angle");
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |         [32m[KAngleEstimator[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:[m[K At global scope:
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:338:16:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KAddModule[m[K’ declared void
+  338 | void AddModule([01;31m[KMotionModule[m[K *module)
+      |                [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:338:16:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionModule[m[K’ was not declared in this scope; did you mean ‘[01m[KRobot::MotionModule[m[K’?
+  338 | void AddModule([01;31m[KMotionModule[m[K *module)
+      |                [01;31m[K^~~~~~~~~~~~[m[K
+      |                [32m[KRobot::MotionModule[m[K
+In file included from [01m[K/home/robofei/ROS2/action/src/control/include/MotionManager.h:15[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:27[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/include/MotionModule.h:15:8:[m[K [01;36m[Knote: [m[K‘[01m[KRobot::MotionModule[m[K’ declared here
+   15 |  class [01;36m[KMotionModule[m[K
+      |        [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:338:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kmodule[m[K’ was not declared in this scope; did you mean ‘[01m[Kmodfl[m[K’?
+  338 | void AddModule(MotionModule *[01;31m[Kmodule[m[K)
+      |                              [01;31m[K^~~~~~[m[K
+      |                              [32m[Kmodfl[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:346:19:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KRemoveModule[m[K’ declared void
+  346 | void RemoveModule([01;31m[KMotionModule[m[K *module)
+      |                   [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:346:19:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionModule[m[K’ was not declared in this scope; did you mean ‘[01m[KRobot::MotionModule[m[K’?
+  346 | void RemoveModule([01;31m[KMotionModule[m[K *module)
+      |                   [01;31m[K^~~~~~~~~~~~[m[K
+      |                   [32m[KRobot::MotionModule[m[K
+In file included from [01m[K/home/robofei/ROS2/action/src/control/include/MotionManager.h:15[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:27[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/include/MotionModule.h:15:8:[m[K [01;36m[Knote: [m[K‘[01m[KRobot::MotionModule[m[K’ declared here
+   15 |  class [01;36m[KMotionModule[m[K
+      |        [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:346:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kmodule[m[K’ was not declared in this scope; did you mean ‘[01m[Kmodfl[m[K’?
+  346 | void RemoveModule(MotionModule *[01;31m[Kmodule[m[K)
+      |                                 [01;31m[K^~~~~~[m[K
+      |                                 [32m[Kmodfl[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:[m[K In function ‘[01m[Kvoid SetJointDisable(int)[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:353:8:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Modules[m[K’ was not declared in this scope
+  353 |     if([01;31m[Km_Modules[m[K.size() != 0)
+      |        [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:355:23:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionModule[m[K’ was not declared in this scope; did you mean ‘[01m[KRobot::MotionModule[m[K’?
+  355 |         for(std::list<[01;31m[KMotionModule[m[K*>::iterator i = m_Modules.begin(); i != m_Modules.end(); i++)
+      |                       [01;31m[K^~~~~~~~~~~~[m[K
+      |                       [32m[KRobot::MotionModule[m[K
+In file included from [01m[K/home/robofei/ROS2/action/src/control/include/MotionManager.h:15[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:27[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/include/MotionModule.h:15:8:[m[K [01;36m[Knote: [m[K‘[01m[KRobot::MotionModule[m[K’ declared here
+   15 |  class [01;36m[KMotionModule[m[K
+      |        [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:355:36:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  355 |         for(std::list<MotionModule*[01;31m[K>[m[K::iterator i = m_Modules.begin(); i != m_Modules.end(); i++)
+      |                                    [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:355:36:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:355:48:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before ‘[01m[Ki[m[K’
+  355 |         for(std::list<MotionModule*>::iterator [01;31m[Ki[m[K = m_Modules.begin(); i != m_Modules.end(); i++)
+      |                                                [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:355:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Ki[m[K’
+  355 |         for(std::list<MotionModule*>::iterator[01;31m[K [m[K[32m[Ki[m[K = m_Modules.begin(); i != m_Modules.end(); i++)
+      |                                               [01;31m[K^[m[K[32m[K~[m[K
+      |                                               [32m[K;[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:355:48:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+  355 |         for(std::list<MotionModule*>::iterator [01;31m[Ki[m[K = m_Modules.begin(); i != m_Modules.end(); i++)
+      |                                                [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:355:91:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+  355 | odule*>::iterator i = m_Modules.begin(); i != m_Modules.end()[01;31m[K;[m[K i++)
+      |                                                              [01;31m[K^[m[K
+      |                                                              [32m[K)[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:355:9:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kfor[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  355 |         [01;35m[Kfor[m[K(std::list<MotionModule*>::iterator i = m_Modules.begin(); i != m_Modules.end(); i++)
+      |         [01;35m[K^~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:355:93:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kfor[m[K’
+  355 | ule*>::iterator i = m_Modules.begin(); i != m_Modules.end(); [01;36m[Ki[m[K++)
+      |                                                              [01;36m[K^[m[K
+
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:355:93:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:351:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kindex[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  351 | void SetJointDisable([01;35m[Kint index[m[K)
+      |                      [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:450:42:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionManager[m[K’ was not declared in this scope; did you mean ‘[01m[KRobot::MotionManager[m[K’?
+  450 |   auto motion_manager = std::make_shared<[01;31m[KMotionManager[m[K>();
+      |                                          [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                          [32m[KRobot::MotionManager[m[K
+In file included from [01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:27[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/include/MotionManager.h:25:8:[m[K [01;36m[Knote: [m[K‘[01m[KRobot::MotionManager[m[K’ declared here
+   25 |  class [01;36m[KMotionManager[m[K
+      |        [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:450:57:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+  450 |   auto motion_manager = std::make_shared<MotionManager>([01;31m[K)[m[K;
+      |                                                         [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:15[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+  714 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/robofei/ROS2/action/src/control/src/MotionManager.cpp:450:57:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  450 |   auto motion_manager = std::make_shared<MotionManager>([01;31m[K)[m[K;
+      |                                                         [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/motion.dir/build.make:63: CMakeFiles/motion.dir/src/MotionManager.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/motion.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/control.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,19 @@
+[01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:60:42:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before ‘[01m[K([m[K’ token
+   60 | dynamixel::GroupSyncWrite::GroupSyncWrite[01;31m[K([m[KportHandler, packetHandler, ADDR_GOAL_POSITION, 4);
+      |                                          [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In lambda function:
+[01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:115:29:[m[K [01;31m[Kerror: [m[K‘[01m[KGroupSyncWrite[m[K’ was not declared in this scope; did you mean ‘[01m[Kdynamixel::GroupSyncWrite[m[K’?
+  115 |       dxl_addparam_result = [01;31m[KGroupSyncWrite[m[K.addParam((uint8_t)msg->id[0], param_goal_position0);
+      |                             [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                             [32m[Kdynamixel::GroupSyncWrite[m[K
+In file included from [01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h:29[m[K,
+                 from [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:37[m[K:
+[01m[K/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h:37:19:[m[K [01;36m[Knote: [m[K‘[01m[Kdynamixel::GroupSyncWrite[m[K’ declared here
+   37 | class WINDECLSPEC [01;36m[KGroupSyncWrite[m[K
+      |                   [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:143:7:[m[K [01;31m[Kerror: [m[K‘[01m[KgroupSyncWrite[m[K’ was not declared in this scope
+  143 |       [01;31m[KgroupSyncWrite[m[K.clearParam();
+      |       [01;31m[K^~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/read_write_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

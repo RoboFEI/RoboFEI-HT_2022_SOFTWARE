@@ -27,15 +27,23 @@ include_directories(Framework)
 include_directories(Linux)
 
 # Build
-add_executable(minimal_publisher src/minimal_pub.cpp)
-ament_target_dependencies(minimal_publisher
+add_executable(control src/control.cpp)
+ament_target_dependencies(control
+  custom_interfaces
+  rclcpp
+)
+
+# Build
+add_executable(motion src/MotionManager.cpp)
+ament_target_dependencies(motion
   custom_interfaces
   rclcpp
 )
 
 # Install
 install(TARGETS
-  minimal_publisher
+  control
+  motion
   DESTINATION lib/${PROJECT_NAME}
 )
 

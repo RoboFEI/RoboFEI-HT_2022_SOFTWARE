@@ -1,0 +1,41 @@
+[0.015s] Invoking command in '/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[0.064s] [35m[1mScanning dependencies of target read_write_node[0m
+[0.084s] [ 50%] Built target minimal_pub
+[0.094s] [ 75%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[1.417s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In lambda function:
+[1.417s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:114:44:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KaddParam[m[K’ in ‘[01m[KgroupSyncWrite[m[K’, which is of pointer type ‘[01m[Kdynamixel::GroupSyncWrite*[m[K’ (maybe you meant to use ‘[01m[K->[m[K’ ?)
+[1.417s]   114 |       dxl_addparam_result = groupSyncWrite.[01;31m[KaddParam[m[K((uint8_t)msg->id[0], param_goal_position0);
+[1.418s]       |                                            [01;31m[K^~~~~~~~[m[K
+[1.418s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:119:44:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KaddParam[m[K’ in ‘[01m[KgroupSyncWrite[m[K’, which is of pointer type ‘[01m[Kdynamixel::GroupSyncWrite*[m[K’ (maybe you meant to use ‘[01m[K->[m[K’ ?)
+[1.418s]   119 |       dxl_addparam_result = groupSyncWrite.[01;31m[KaddParam[m[K((uint8_t)msg->id[1], param_goal_position1);
+[1.418s]       |                                            [01;31m[K^~~~~~~~[m[K
+[1.418s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:124:44:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KaddParam[m[K’ in ‘[01m[KgroupSyncWrite[m[K’, which is of pointer type ‘[01m[Kdynamixel::GroupSyncWrite*[m[K’ (maybe you meant to use ‘[01m[K->[m[K’ ?)
+[1.418s]   124 |       dxl_addparam_result = groupSyncWrite.[01;31m[KaddParam[m[K((uint8_t)msg->id[2], param_goal_position2);
+[1.418s]       |                                            [01;31m[K^~~~~~~~[m[K
+[1.419s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:129:40:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KtxPacket[m[K’ in ‘[01m[KgroupSyncWrite[m[K’, which is of pointer type ‘[01m[Kdynamixel::GroupSyncWrite*[m[K’ (maybe you meant to use ‘[01m[K->[m[K’ ?)
+[1.419s]   129 |       dxl_comm_result = groupSyncWrite.[01;31m[KtxPacket[m[K();
+[1.419s]       |                                        [01;31m[K^~~~~~~~[m[K
+[1.420s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:142:22:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KclearParam[m[K’ in ‘[01m[KgroupSyncWrite[m[K’, which is of pointer type ‘[01m[Kdynamixel::GroupSyncWrite*[m[K’ (maybe you meant to use ‘[01m[K->[m[K’ ?)
+[1.420s]   142 |       groupSyncWrite.[01;31m[KclearParam[m[K();
+[1.420s]       |                      [01;31m[K^~~~~~~~~~[m[K
+[1.427s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In function ‘[01m[Kvoid setupDynamixel(uint8_t)[m[K’:
+[1.427s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:162:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kdxl_comm_result[m[K’ was not declared in this scope
+[1.427s]   162 |   [01;31m[Kdxl_comm_result[m[K = packetHandler->write1ByteTxRx(
+[1.427s]       |   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.429s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.429s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:196:111:[m[K [01;31m[Kerror: [m[Kcannot call constructor ‘[01m[Kdynamixel::GroupSyncWrite::GroupSyncWrite[m[K’ directly [[01;31m[K-fpermissive[m[K]
+[1.429s]   196 |   groupSyncWrite = dynamixel::GroupSyncWrite::GroupSyncWrite(portHandler, packetHandler, ADDR_GOAL_POSITION, 4[01;31m[K)[m[K;
+[1.429s]       |                                                                                                               [01;31m[K^[m[K
+[1.429s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:196:111:[m[K [01;36m[Knote: [m[Kfor a function-style cast, remove the redundant ‘[01m[K::GroupSyncWrite[m[K’
+[1.429s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:196:61:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kdynamixel::GroupSyncWrite[m[K’ to ‘[01m[Kdynamixel::GroupSyncWrite*[m[K’ in assignment
+[1.429s]   196 |   groupSyncWrite = [01;31m[Kdynamixel::GroupSyncWrite::GroupSyncWrite(portHandler, packetHandler, ADDR_GOAL_POSITION, 4)[m[K;
+[1.430s]       |                    [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.430s]       |                                                             [01;31m[K|[m[K
+[1.430s]       |                                                             [01;31m[Kdynamixel::GroupSyncWrite[m[K
+[1.431s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:199:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kdxl_comm_result[m[K’ was not declared in this scope
+[1.431s]   199 |   [01;31m[Kdxl_comm_result[m[K = portHandler->openPort();
+[1.431s]       |   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.899s] make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+[2.899s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/read_write_node.dir/all] Error 2
+[2.899s] make: *** [Makefile:141: all] Error 2
+[2.901s] Invoked command in '/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples' returned '2': CMAKE_PREFIX_PATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4

@@ -80,6 +80,28 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -112,28 +134,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,6 +168,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named motion
+
+# Build rule for target.
+motion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 motion
+.PHONY : motion
+
+# fast build rule for target.
+motion/fast:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/build
+.PHONY : motion/fast
+
+#=============================================================================
+# Target rules for targets named control
+
+# Build rule for target.
+control: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control
+.PHONY : control
+
+# fast build rule for target.
+control/fast:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/build
+.PHONY : control/fast
+
+#=============================================================================
 # Target rules for targets named control_uninstall
 
 # Build rule for target.
@@ -179,19 +205,6 @@ control_uninstall: cmake_check_build_system
 control_uninstall/fast:
 	$(MAKE) -f CMakeFiles/control_uninstall.dir/build.make CMakeFiles/control_uninstall.dir/build
 .PHONY : control_uninstall/fast
-
-#=============================================================================
-# Target rules for targets named minimal_publisher
-
-# Build rule for target.
-minimal_publisher: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 minimal_publisher
-.PHONY : minimal_publisher
-
-# fast build rule for target.
-minimal_publisher/fast:
-	$(MAKE) -f CMakeFiles/minimal_publisher.dir/build.make CMakeFiles/minimal_publisher.dir/build
-.PHONY : minimal_publisher/fast
 
 #=============================================================================
 # Target rules for targets named uninstall
@@ -206,32 +219,59 @@ uninstall/fast:
 	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
 
-src/minimal_pub.o: src/minimal_pub.cpp.o
+src/MotionManager.o: src/MotionManager.cpp.o
 
-.PHONY : src/minimal_pub.o
+.PHONY : src/MotionManager.o
 
 # target to build an object file
-src/minimal_pub.cpp.o:
-	$(MAKE) -f CMakeFiles/minimal_publisher.dir/build.make CMakeFiles/minimal_publisher.dir/src/minimal_pub.cpp.o
-.PHONY : src/minimal_pub.cpp.o
+src/MotionManager.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/MotionManager.cpp.o
+.PHONY : src/MotionManager.cpp.o
 
-src/minimal_pub.i: src/minimal_pub.cpp.i
+src/MotionManager.i: src/MotionManager.cpp.i
 
-.PHONY : src/minimal_pub.i
+.PHONY : src/MotionManager.i
 
 # target to preprocess a source file
-src/minimal_pub.cpp.i:
-	$(MAKE) -f CMakeFiles/minimal_publisher.dir/build.make CMakeFiles/minimal_publisher.dir/src/minimal_pub.cpp.i
-.PHONY : src/minimal_pub.cpp.i
+src/MotionManager.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/MotionManager.cpp.i
+.PHONY : src/MotionManager.cpp.i
 
-src/minimal_pub.s: src/minimal_pub.cpp.s
+src/MotionManager.s: src/MotionManager.cpp.s
 
-.PHONY : src/minimal_pub.s
+.PHONY : src/MotionManager.s
 
 # target to generate assembly for a file
-src/minimal_pub.cpp.s:
-	$(MAKE) -f CMakeFiles/minimal_publisher.dir/build.make CMakeFiles/minimal_publisher.dir/src/minimal_pub.cpp.s
-.PHONY : src/minimal_pub.cpp.s
+src/MotionManager.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/MotionManager.cpp.s
+.PHONY : src/MotionManager.cpp.s
+
+src/control.o: src/control.cpp.o
+
+.PHONY : src/control.o
+
+# target to build an object file
+src/control.cpp.o:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/control.cpp.o
+.PHONY : src/control.cpp.o
+
+src/control.i: src/control.cpp.i
+
+.PHONY : src/control.i
+
+# target to preprocess a source file
+src/control.cpp.i:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/control.cpp.i
+.PHONY : src/control.cpp.i
+
+src/control.s: src/control.cpp.s
+
+.PHONY : src/control.s
+
+# target to generate assembly for a file
+src/control.cpp.s:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/control.cpp.s
+.PHONY : src/control.cpp.s
 
 # Help Target
 help:
@@ -241,17 +281,21 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... motion"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... test"
+	@echo "... control"
 	@echo "... control_uninstall"
-	@echo "... minimal_publisher"
 	@echo "... uninstall"
-	@echo "... src/minimal_pub.o"
-	@echo "... src/minimal_pub.i"
-	@echo "... src/minimal_pub.s"
+	@echo "... src/MotionManager.o"
+	@echo "... src/MotionManager.i"
+	@echo "... src/MotionManager.s"
+	@echo "... src/control.o"
+	@echo "... src/control.i"
+	@echo "... src/control.s"
 .PHONY : help
 
 
