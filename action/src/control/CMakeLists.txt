@@ -17,9 +17,10 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(custom_interfaces REQUIRED)
+find_package(dynamixel_sdk_custom_interfaces REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 include_directories(include)
@@ -29,21 +30,21 @@ include_directories(Linux)
 # Build
 add_executable(control src/control.cpp)
 ament_target_dependencies(control
-  custom_interfaces
+  dynamixel_sdk_custom_interfaces
   rclcpp
+  sensor_msgs
 )
 
 # Build
-add_executable(motion src/MotionManager.cpp)
-ament_target_dependencies(motion
-  custom_interfaces
-  rclcpp
-)
+#add_executable(motion src/MotionManager.cpp)
+#ament_target_dependencies(motion
+#  dynamixel_sdk_custom_interfaces
+#  rclcpp
+#)
 
 # Install
 install(TARGETS
   control
-  motion
   DESTINATION lib/${PROJECT_NAME}
 )
 

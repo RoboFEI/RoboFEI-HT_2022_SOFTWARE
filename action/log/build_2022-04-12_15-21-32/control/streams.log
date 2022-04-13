@@ -1,0 +1,14 @@
+[0.015s] Invoking command in '/home/robofei/ROS2/action/build/control': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.057s] [35m[1mScanning dependencies of target control[0m
+[0.089s] [ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[1.433s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In member function ‘[01m[Kvoid Control::topic_callback_imu(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[1.433s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:41:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >[m[K’ has no member named ‘[01m[Kangular_velocity[m[K’
+[1.433s]    41 |       float IMU_ACCEL_Z = imu_msg_.[01;31m[Kangular_velocity[m[K.z;
+[1.433s]       |                                    [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[1.434s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:41:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_ACCEL_Z[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.434s]    41 |       float [01;35m[KIMU_ACCEL_Z[m[K = imu_msg_.angular_velocity.z;
+[1.434s]       |             [01;35m[K^~~~~~~~~~~[m[K
+[3.469s] make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1
+[3.470s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/control.dir/all] Error 2
+[3.470s] make: *** [Makefile:141: all] Error 2
+[3.472s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4

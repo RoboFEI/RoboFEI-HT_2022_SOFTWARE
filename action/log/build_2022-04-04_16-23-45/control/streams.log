@@ -1,0 +1,76 @@
+[0.013s] Invoking command in '/home/robofei/ROS2/action/build/control': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.058s] [35m[1mScanning dependencies of target control[0m
+[0.059s] make[2]: *** No rule to make target '/home/robofei/ROS2/action/src/control/src/MotionManager.cpp', needed by 'CMakeFiles/motion.dir/src/MotionManager.cpp.o'.  Stop.
+[0.059s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/motion.dir/all] Error 2
+[0.059s] make[1]: *** Waiting for unfinished jobs....
+[0.089s] [ 25%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[1.381s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:44:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+[1.381s]    44 |   }
+[1.381s]       |    [01;31m[K^[m[K
+[1.381s]       |    [32m[K;[m[K
+[1.381s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In constructor ‘[01m[KControl::Control()[m[K’:
+[1.381s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:25:22:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KControl[m[K’ does not have any field named ‘[01m[Kcount_[m[K’
+[1.382s]    25 |   : Node("control"), [01;31m[Kcount_[m[K(0)
+[1.382s]       |                      [01;31m[K^~~~~~[m[K
+[1.385s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:28:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_subscription_t[m[K’?
+[1.385s]    28 |     [01;31m[Ksubscription_[m[K = this->create_subscription<custom_interfaces::msg::Decision>(
+[1.385s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[1.385s]       |     [32m[Krcl_subscription_t[m[K
+[1.385s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:29:44:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic_callback[m[K’ is not a member of ‘[01m[KControl[m[K’
+[1.385s]    29 |       "/decision", 10, std::bind(&Control::[01;31m[Ktopic_callback[m[K, this, _1));
+[1.385s]       |                                            [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.385s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K At global scope:
+[1.385s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:46:84:[m[K [01;31m[Kerror: [m[Knon-member function ‘[01m[Kvoid topic_callback(std::shared_ptr<custom_interfaces::msg::Decision_<std::allocator<void> > >)[m[K’ cannot have cv-qualifier
+[1.385s]    46 | ack(const std::shared_ptr<custom_interfaces::msg::Decision> msg) [01;31m[Kconst[m[K
+[1.385s]       |                                                                  [01;31m[K^~~~~[m[K
+[1.385s] 
+[1.388s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[1.388s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[1.388s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.388s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.388s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.388s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.388s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.388s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.388s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.388s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.389s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:8[m[K:
+[1.389s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In function ‘[01m[Kvoid topic_callback(std::shared_ptr<custom_interfaces::msg::Decision_<std::allocator<void> > >)[m[K’:
+[1.389s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:51:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[1.389s]    51 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "I heard %d", (int)msg->decision);
+[1.389s]       |                 [01;31m[K^~~~[m[K
+[1.389s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:51:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[1.389s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:51:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.389s]    51 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "I heard %d", (int)msg->decision);
+[1.389s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[1.389s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:51:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.389s]    51 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "I heard %d", (int)msg->decision);
+[1.389s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[1.389s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:51:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.389s]    51 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "I heard %d", (int)msg->decision);
+[1.389s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[1.390s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[1.390s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[1.390s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.390s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.390s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.390s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.390s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.390s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.390s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.390s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.390s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:8[m[K:
+[1.390s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:51:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[1.390s]    51 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "I heard %d", (int)msg->decision);
+[1.390s]       |                 [01;31m[K^~~~[m[K
+[1.391s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:51:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[1.391s]    51 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "I heard %d", (int)msg->decision);
+[1.391s]       |                 [01;31m[K^~~~[m[K
+[1.402s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K At global scope:
+[1.402s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:91:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[1.403s]    91 | [01;31m[K}[m[K;
+[1.403s]       | [01;31m[K^[m[K
+[1.789s] make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1
+[1.789s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/control.dir/all] Error 2
+[1.789s] make: *** [Makefile:141: all] Error 2
+[1.791s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4

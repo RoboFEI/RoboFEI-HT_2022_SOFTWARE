@@ -17,11 +17,16 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'id'
+// Member 'position'
+#include "rosidl_runtime_c/primitives_sequence.h"
+
 // Struct defined in msg/SetPosition in the package dynamixel_sdk_custom_interfaces.
 typedef struct dynamixel_sdk_custom_interfaces__msg__SetPosition
 {
-  uint8_t id;
-  int32_t position;
+  rosidl_runtime_c__uint8__Sequence id;
+  rosidl_runtime_c__int32__Sequence position;
 } dynamixel_sdk_custom_interfaces__msg__SetPosition;
 
 // Struct for a sequence of dynamixel_sdk_custom_interfaces__msg__SetPosition.

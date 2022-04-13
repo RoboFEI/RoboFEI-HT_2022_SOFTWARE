@@ -355,9 +355,6 @@ ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_c
 # install(DIRECTORY "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_generator_py/dynamixel_sdk_custom_interfaces/msg/" "DESTINATION" "lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg" "PATTERN" "*.py")
 ament_cmake_symlink_install_directory("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" DIRECTORY "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_generator_py/dynamixel_sdk_custom_interfaces/msg/" "DESTINATION" "lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg" "PATTERN" "*.py")
 
-# install(DIRECTORY "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_generator_py/dynamixel_sdk_custom_interfaces/srv/" "DESTINATION" "lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv" "PATTERN" "*.py")
-ament_cmake_symlink_install_directory("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" DIRECTORY "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_generator_py/dynamixel_sdk_custom_interfaces/srv/" "DESTINATION" "lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv" "PATTERN" "*.py")
-
 # install("TARGETS" "dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces")
 include("/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
@@ -373,26 +370,14 @@ include("/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/ament_c
 # install(FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 
-# install(FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/SetPositionSync.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/SetPositionSync.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
-
-# install(FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
+# install(FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/Decision.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/Decision.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 
 # install(FILES "/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 
-# install(FILES "/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces/msg/SetPositionSync.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces/msg/SetPositionSync.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
-
-# install(FILES "/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
-
-# install(FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_cmake/srv/GetPosition_Request.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_cmake/srv/GetPosition_Request.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
-
-# install(FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_cmake/srv/GetPosition_Response.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_cmake/srv/GetPosition_Response.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
+# install(FILES "/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces/msg/Decision.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces/msg/Decision.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 
 # install(FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_custom_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_custom_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

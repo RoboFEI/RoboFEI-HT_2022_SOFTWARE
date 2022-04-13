@@ -1,0 +1,20 @@
+[0.013s] Invoking command in '/home/robofei/ROS2/action/build/control': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.059s] [35m[1mScanning dependencies of target control[0m
+[0.092s] [ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[1.453s] In file included from [01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:26[m[K,
+[1.453s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:14[m[K:
+[1.453s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In member function ‘[01m[Kvoid Control::topic_callback_imu(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[1.453s] [01m[K/home/robofei/ROS2/action/src/control/include/blackboard.h:109:21:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before numeric constant
+[1.453s]   109 | #define IMU_ACCEL_Z [01;31m[K6[m[K
+[1.453s]       |                     [01;31m[K^[m[K
+[1.453s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:42:13:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KIMU_ACCEL_Z[m[K’
+[1.453s]    42 |       float [01;36m[KIMU_ACCEL_Z[m[K = imu_msg_.angular_velocity.z;
+[1.454s]       |             [01;36m[K^~~~~~~~~~~[m[K
+[1.454s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:40:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kimu_msg_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.454s]    40 | topic_callback_imu([01;35m[Kconst std::shared_ptr<sensor_msgs::msg::Imu> imu_msg_[m[K) const
+[1.454s]       |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[1.454s] 
+[3.492s] make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1
+[3.493s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/control.dir/all] Error 2
+[3.493s] make: *** [Makefile:141: all] Error 2
+[3.495s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4

@@ -1,0 +1,48 @@
+CMake Warning at /opt/ros/foxy/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:50 (add_executable):
+  Cannot generate a safe runtime search path for target um7_test_comms
+  because there is a cycle in the constraint graph:
+
+    dir 0 is [/opt/ros/foxy/lib]
+      dir 1 must precede it due to runtime library [libserial.so]
+    dir 1 is [/opt/ros/noetic/lib]
+      dir 0 must precede it due to runtime library [libclass_loader.so]
+    dir 2 is [/opt/ros/foxy/lib/x86_64-linux-gnu]
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:37 (_ament_add_gtest_executable)
+  /opt/ros/foxy/share/ament_cmake_gtest/cmake/ament_add_gtest.cmake:68 (ament_add_gtest_executable)
+  CMakeLists.txt:67 (ament_add_gtest)
+
+
+CMake Warning at /opt/ros/foxy/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:50 (add_executable):
+  Cannot generate a safe runtime search path for target um7_test_registers
+  because there is a cycle in the constraint graph:
+
+    dir 0 is [/opt/ros/foxy/lib]
+      dir 1 must precede it due to runtime library [libserial.so]
+    dir 1 is [/opt/ros/noetic/lib]
+      dir 0 must precede it due to runtime library [libclass_loader.so]
+    dir 2 is [/opt/ros/foxy/lib/x86_64-linux-gnu]
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:37 (_ament_add_gtest_executable)
+  /opt/ros/foxy/share/ament_cmake_gtest/cmake/ament_add_gtest.cmake:68 (ament_add_gtest_executable)
+  CMakeLists.txt:59 (ament_add_gtest)
+
+
+CMake Warning at CMakeLists.txt:26 (add_library):
+  Cannot generate a safe runtime search path for target um7_driver because
+  there is a cycle in the constraint graph:
+
+    dir 0 is [/opt/ros/foxy/lib]
+      dir 1 must precede it due to runtime library [libserial.so]
+    dir 1 is [/opt/ros/noetic/lib]
+      dir 0 must precede it due to runtime library [libclass_loader.so]
+    dir 2 is [/home/robofei/ROS2/um7/build/um7]
+    dir 3 is [/opt/ros/foxy/lib/x86_64-linux-gnu]
+
+  Some of these libraries may not be found correctly.
+
+

@@ -79,23 +79,22 @@ control_EXTERNAL_OBJECTS =
 
 control: CMakeFiles/control.dir/src/control.cpp.o
 control: CMakeFiles/control.dir/build.make
-control: /home/robofei/ROS2/action/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so
-control: /home/robofei/ROS2/action/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so
-control: /home/robofei/ROS2/action/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so
-control: /home/robofei/ROS2/action/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so
+control: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so
+control: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so
+control: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so
+control: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so
 control: /opt/ros/foxy/lib/librclcpp.so
-control: /home/robofei/ROS2/action/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so
+control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
+control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_c.so
+control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
+control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_cpp.so
+control: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so
 control: /opt/ros/foxy/lib/liblibstatistics_collector.so
 control: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_c.so
 control: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_generator_c.so
 control: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_c.so
 control: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_cpp.so
 control: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_cpp.so
-control: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
-control: /opt/ros/foxy/lib/libstd_msgs__rosidl_generator_c.so
-control: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_c.so
-control: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
-control: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_cpp.so
 control: /opt/ros/foxy/lib/librcl.so
 control: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
 control: /opt/ros/foxy/lib/librcl_interfaces__rosidl_generator_c.so
@@ -118,6 +117,18 @@ control: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_generator_c.so
 control: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_c.so
 control: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so
 control: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
+control: /opt/ros/foxy/lib/libtracetools.so
+control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_generator_c.so
+control: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
+control: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_generator_c.so
+control: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_c.so
+control: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
+control: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
+control: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
+control: /opt/ros/foxy/lib/libstd_msgs__rosidl_generator_c.so
+control: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_c.so
+control: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
+control: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_cpp.so
 control: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 control: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_generator_c.so
 control: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
@@ -130,7 +141,6 @@ control: /opt/ros/foxy/lib/librosidl_typesupport_c.so
 control: /opt/ros/foxy/lib/librosidl_runtime_c.so
 control: /opt/ros/foxy/lib/librcpputils.so
 control: /opt/ros/foxy/lib/librcutils.so
-control: /opt/ros/foxy/lib/libtracetools.so
 control: CMakeFiles/control.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robofei/ROS2/action/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable control"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/control.dir/link.txt --verbose=$(VERBOSE)

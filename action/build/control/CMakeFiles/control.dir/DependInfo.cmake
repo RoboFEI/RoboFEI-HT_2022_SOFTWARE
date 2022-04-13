@@ -20,7 +20,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/robofei/ROS2/action/src/control/include"
   "/home/robofei/ROS2/action/src/control/Framework"
   "/home/robofei/ROS2/action/src/control/Linux"
-  "/home/robofei/ROS2/action/install/custom_interfaces/include"
+  "/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include"
   "/opt/ros/foxy/include"
   )
 

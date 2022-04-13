@@ -1,0 +1,18 @@
+[35m[1mScanning dependencies of target control[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+In file included from [01m[K/home/robofei/ROS2/action/src/control/include/GaitMove.hpp:26[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:14[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In member function ‘[01m[Kvoid Control::topic_callback_imu(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/include/blackboard.h:109:21:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before numeric constant
+  109 | #define IMU_ACCEL_Z [01;31m[K6[m[K
+      |                     [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:42:13:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KIMU_ACCEL_Z[m[K’
+   42 |       float [01;36m[KIMU_ACCEL_Z[m[K = imu_msg_.angular_velocity.z;
+      |             [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:40:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kimu_msg_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   40 | topic_callback_imu([01;35m[Kconst std::shared_ptr<sensor_msgs::msg::Imu> imu_msg_[m[K) const
+      |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/control.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -12,6 +12,11 @@
 #include "dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.h"
 
 
+// Include directives for member types
+// Member `id`
+// Member `position`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -37,7 +42,7 @@ static rosidl_typesupport_introspection_c__MessageMember SetPosition__rosidl_typ
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
-    false,  // is array
+    true,  // is array
     0,  // array size
     false,  // is upper bound
     offsetof(dynamixel_sdk_custom_interfaces__msg__SetPosition, id),  // bytes offset in struct
@@ -52,7 +57,7 @@ static rosidl_typesupport_introspection_c__MessageMember SetPosition__rosidl_typ
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
-    false,  // is array
+    true,  // is array
     0,  // array size
     false,  // is upper bound
     offsetof(dynamixel_sdk_custom_interfaces__msg__SetPosition, position),  // bytes offset in struct

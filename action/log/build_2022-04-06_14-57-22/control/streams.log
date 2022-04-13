@@ -1,0 +1,651 @@
+[0.122s] Invoking command in '/home/robofei/ROS2/action/build/control': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.653s] [35m[1mScanning dependencies of target control[0m
+[0.817s] [ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[3.850s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In member function ‘[01m[Kvoid Control::topic_callback(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> > >) const[m[K’:
+[3.850s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:70:14:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Time[m[K’ was not declared in this scope; did you mean ‘[01m[Kmktime[m[K’?
+[3.850s]    70 |           if([01;31m[Km_Time[m[K == 0)
+[3.850s]       |              [01;31m[K^~~~~~[m[K
+[3.850s]       |              [32m[Kmktime[m[K
+[3.854s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:72:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kupdate_param_time[m[K’ was not declared in this scope
+[3.854s]    72 |               [01;31m[Kupdate_param_time[m[K();
+[3.854s]       |               [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[3.856s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:73:15:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Phase[m[K’ was not declared in this scope
+[3.856s]    73 |               [01;31m[Km_Phase[m[K = PHASE0;
+[3.856s]       |               [01;31m[K^~~~~~~[m[K
+[3.858s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:73:25:[m[K [01;31m[Kerror: [m[K‘[01m[KPHASE0[m[K’ was not declared in this scope
+[3.858s]    73 |               m_Phase = [01;31m[KPHASE0[m[K;
+[3.858s]       |                         [01;31m[K^~~~~~[m[K
+[3.861s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:74:18:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Ctrl_Running[m[K’ was not declared in this scope
+[3.862s]    74 |               if([01;31m[Km_Ctrl_Running[m[K == false)
+[3.862s]       |                  [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.866s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:76:22:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Amplitude[m[K’ was not declared in this scope
+[3.866s]    76 |                   if([01;31m[Km_X_Move_Amplitude[m[K == 0 && m_Y_Move_Amplitude == 0 && m_A_Move_Amplitude == 0)
+[3.866s]       |                      [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[3.870s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:76:49:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Amplitude[m[K’ was not declared in this scope
+[3.870s]    76 |                   if(m_X_Move_Amplitude == 0 && [01;31m[Km_Y_Move_Amplitude[m[K == 0 && m_A_Move_Amplitude == 0)
+[3.870s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[3.874s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:76:76:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Amplitude[m[K’ was not declared in this scope
+[3.874s]    76 |     if(m_X_Move_Amplitude == 0 && m_Y_Move_Amplitude == 0 && [01;31m[Km_A_Move_Amplitude[m[K == 0)
+[3.874s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[3.874s] 
+[3.877s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:78:23:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Real_Running[m[K’ was not declared in this scope
+[3.877s]    78 |                       [01;31m[Km_Real_Running[m[K = false;
+[3.878s]       |                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.881s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:82:23:[m[K [01;31m[Kerror: [m[K‘[01m[KX_MOVE_AMPLITUDE[m[K’ was not declared in this scope
+[3.881s]    82 |                       [01;31m[KX_MOVE_AMPLITUDE[m[K = 0;
+[3.882s]       |                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[3.885s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:83:23:[m[K [01;31m[Kerror: [m[K‘[01m[KY_MOVE_AMPLITUDE[m[K’ was not declared in this scope
+[3.885s]    83 |                       [01;31m[KY_MOVE_AMPLITUDE[m[K = 0;
+[3.885s]       |                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[3.889s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:84:23:[m[K [01;31m[Kerror: [m[K‘[01m[KA_MOVE_AMPLITUDE[m[K’ was not declared in this scope
+[3.889s]    84 |                       [01;31m[KA_MOVE_AMPLITUDE[m[K = 0;
+[3.889s]       |                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[3.893s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:88:30:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Phase_Time1[m[K’ was not declared in this scope
+[3.893s]    88 |           else if(m_Time >= ([01;31m[Km_Phase_Time1[m[K - TIME_UNIT/2) && m_Time < (m_Phase_Time1 + TIME_UNIT/2))
+[3.893s]       |                              [01;31m[K^~~~~~~~~~~~~[m[K
+[3.897s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:90:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kupdate_param_move[m[K’ was not declared in this scope
+[3.897s]    90 |               [01;31m[Kupdate_param_move[m[K();
+[3.897s]       |               [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[3.899s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:91:15:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Phase[m[K’ was not declared in this scope
+[3.899s]    91 |               [01;31m[Km_Phase[m[K = PHASE1;
+[3.899s]       |               [01;31m[K^~~~~~~[m[K
+[3.900s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:91:25:[m[K [01;31m[Kerror: [m[K‘[01m[KPHASE1[m[K’ was not declared in this scope
+[3.900s]    91 |               m_Phase = [01;31m[KPHASE1[m[K;
+[3.900s]       |                         [01;31m[K^~~~~~[m[K
+[3.903s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:93:30:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Phase_Time2[m[K’ was not declared in this scope
+[3.904s]    93 |           else if(m_Time >= ([01;31m[Km_Phase_Time2[m[K - TIME_UNIT/2) && m_Time < (m_Phase_Time2 + TIME_UNIT/2))
+[3.904s]       |                              [01;31m[K^~~~~~~~~~~~~[m[K
+[3.908s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:95:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kupdate_param_time[m[K’ was not declared in this scope
+[3.908s]    95 |               [01;31m[Kupdate_param_time[m[K();
+[3.908s]       |               [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[3.910s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:97:15:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Phase[m[K’ was not declared in this scope
+[3.910s]    97 |               [01;31m[Km_Phase[m[K = PHASE2;
+[3.910s]       |               [01;31m[K^~~~~~~[m[K
+[3.911s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:97:25:[m[K [01;31m[Kerror: [m[K‘[01m[KPHASE2[m[K’ was not declared in this scope
+[3.911s]    97 |               m_Phase = [01;31m[KPHASE2[m[K;
+[3.912s]       |                         [01;31m[K^~~~~~[m[K
+[3.915s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:98:18:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Ctrl_Running[m[K’ was not declared in this scope
+[3.915s]    98 |               if([01;31m[Km_Ctrl_Running[m[K == false)
+[3.915s]       |                  [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.919s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:100:22:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Amplitude[m[K’ was not declared in this scope
+[3.919s]   100 |                   if([01;31m[Km_X_Move_Amplitude[m[K == 0 && m_Y_Move_Amplitude == 0 && m_A_Move_Amplitude == 0)
+[3.919s]       |                      [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[3.923s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:100:49:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Amplitude[m[K’ was not declared in this scope
+[3.923s]   100 |                   if(m_X_Move_Amplitude == 0 && [01;31m[Km_Y_Move_Amplitude[m[K == 0 && m_A_Move_Amplitude == 0)
+[3.923s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[3.927s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:100:76:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Amplitude[m[K’ was not declared in this scope
+[3.927s]   100 |     if(m_X_Move_Amplitude == 0 && m_Y_Move_Amplitude == 0 && [01;31m[Km_A_Move_Amplitude[m[K == 0)
+[3.927s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[3.928s] 
+[3.931s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:102:23:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Real_Running[m[K’ was not declared in this scope
+[3.931s]   102 |                       [01;31m[Km_Real_Running[m[K = false;
+[3.931s]       |                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.934s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:106:23:[m[K [01;31m[Kerror: [m[K‘[01m[KX_MOVE_AMPLITUDE[m[K’ was not declared in this scope
+[3.935s]   106 |                       [01;31m[KX_MOVE_AMPLITUDE[m[K = 0;
+[3.935s]       |                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[3.938s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:107:23:[m[K [01;31m[Kerror: [m[K‘[01m[KY_MOVE_AMPLITUDE[m[K’ was not declared in this scope
+[3.938s]   107 |                       [01;31m[KY_MOVE_AMPLITUDE[m[K = 0;
+[3.939s]       |                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[3.942s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:108:23:[m[K [01;31m[Kerror: [m[K‘[01m[KA_MOVE_AMPLITUDE[m[K’ was not declared in this scope
+[3.942s]   108 |                       [01;31m[KA_MOVE_AMPLITUDE[m[K = 0;
+[3.942s]       |                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[3.946s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:112:30:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Phase_Time3[m[K’ was not declared in this scope
+[3.946s]   112 |           else if(m_Time >= ([01;31m[Km_Phase_Time3[m[K - TIME_UNIT/2) && m_Time < (m_Phase_Time3 + TIME_UNIT/2))
+[3.946s]       |                              [01;31m[K^~~~~~~~~~~~~[m[K
+[3.950s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:114:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kupdate_param_move[m[K’ was not declared in this scope
+[3.950s]   114 |               [01;31m[Kupdate_param_move[m[K();
+[3.950s]       |               [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[3.952s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:115:15:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Phase[m[K’ was not declared in this scope
+[3.952s]   115 |               [01;31m[Km_Phase[m[K = PHASE3;
+[3.952s]       |               [01;31m[K^~~~~~~[m[K
+[3.954s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:115:25:[m[K [01;31m[Kerror: [m[K‘[01m[KPHASE3[m[K’ was not declared in this scope
+[3.954s]   115 |               m_Phase = [01;31m[KPHASE3[m[K;
+[3.954s]       |                         [01;31m[K^~~~~~[m[K
+[3.960s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:117:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kupdate_param_balance[m[K’ was not declared in this scope
+[3.960s]   117 |           [01;31m[Kupdate_param_balance[m[K();
+[3.960s]       |           [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[3.961s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:120:25:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Time[m[K’ was not declared in this scope; did you mean ‘[01m[Kmktime[m[K’?
+[3.961s]   120 |           x_swap = wsin([01;31m[Km_Time[m[K, m_X_Swap_PeriodTime, m_X_Swap_Phase_Shift, m_X_Swap_Amplitude, m_X_Swap_Amplitude_Shift);
+[3.961s]       |                         [01;31m[K^~~~~~[m[K
+[3.961s]       |                         [32m[Kmktime[m[K
+[3.966s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:120:33:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Swap_PeriodTime[m[K’ was not declared in this scope
+[3.966s]   120 |           x_swap = wsin(m_Time, [01;31m[Km_X_Swap_PeriodTime[m[K, m_X_Swap_Phase_Shift, m_X_Swap_Amplitude, m_X_Swap_Amplitude_Shift);
+[3.966s]       |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[3.971s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:120:54:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Swap_Phase_Shift[m[K’ was not declared in this scope
+[3.971s]   120 |           x_swap = wsin(m_Time, m_X_Swap_PeriodTime, [01;31m[Km_X_Swap_Phase_Shift[m[K, m_X_Swap_Amplitude, m_X_Swap_Amplitude_Shift);
+[3.971s]       |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[3.975s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:120:76:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Swap_Amplitude[m[K’ was not declared in this scope
+[3.976s]   120 | ap = wsin(m_Time, m_X_Swap_PeriodTime, m_X_Swap_Phase_Shift, [01;31m[Km_X_Swap_Amplitude[m[K, m_X_Swap_Amplitude_Shift);
+[3.976s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[3.976s] 
+[3.981s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:120:96:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Swap_Amplitude_Shift[m[K’ was not declared in this scope
+[3.982s]   120 | X_Swap_PeriodTime, m_X_Swap_Phase_Shift, m_X_Swap_Amplitude, [01;31m[Km_X_Swap_Amplitude_Shift[m[K);
+[3.982s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.982s] 
+[3.983s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:120:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kwsin[m[K’ was not declared in this scope; did you mean ‘[01m[Ksin[m[K’?
+[3.983s]   120 |           x_swap = [01;31m[Kwsin[m[K(m_Time, m_X_Swap_PeriodTime, m_X_Swap_Phase_Shift, m_X_Swap_Amplitude, m_X_Swap_Amplitude_Shift);
+[3.983s]       |                    [01;31m[K^~~~[m[K
+[3.983s]       |                    [32m[Ksin[m[K
+[3.987s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:121:33:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Swap_PeriodTime[m[K’ was not declared in this scope
+[3.988s]   121 |           y_swap = wsin(m_Time, [01;31m[Km_Y_Swap_PeriodTime[m[K, m_Y_Swap_Phase_Shift, m_Y_Swap_Amplitude, m_Y_Swap_Amplitude_Shift);
+[3.988s]       |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[3.995s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:121:54:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Swap_Phase_Shift[m[K’ was not declared in this scope
+[3.995s]   121 |           y_swap = wsin(m_Time, m_Y_Swap_PeriodTime, [01;31m[Km_Y_Swap_Phase_Shift[m[K, m_Y_Swap_Amplitude, m_Y_Swap_Amplitude_Shift);
+[3.995s]       |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[3.997s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:121:76:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Swap_Amplitude[m[K’ was not declared in this scope
+[3.997s]   121 | ap = wsin(m_Time, m_Y_Swap_PeriodTime, m_Y_Swap_Phase_Shift, [01;31m[Km_Y_Swap_Amplitude[m[K, m_Y_Swap_Amplitude_Shift);
+[3.997s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[3.997s] 
+[4.003s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:121:96:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Swap_Amplitude_Shift[m[K’ was not declared in this scope
+[4.003s]   121 | Y_Swap_PeriodTime, m_Y_Swap_Phase_Shift, m_Y_Swap_Amplitude, [01;31m[Km_Y_Swap_Amplitude_Shift[m[K);
+[4.003s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.003s] 
+[4.008s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:33:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Swap_PeriodTime[m[K’ was not declared in this scope
+[4.008s]   122 |           z_swap = wsin(m_Time, [01;31m[Km_Z_Swap_PeriodTime[m[K, m_Z_Swap_Phase_Shift, m_Z_Swap_Amplitude, m_Z_Swap_Amplitude_Shift);
+[4.008s]       |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.013s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:54:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Swap_Phase_Shift[m[K’ was not declared in this scope
+[4.013s]   122 |           z_swap = wsin(m_Time, m_Z_Swap_PeriodTime, [01;31m[Km_Z_Swap_Phase_Shift[m[K, m_Z_Swap_Amplitude, m_Z_Swap_Amplitude_Shift);
+[4.013s]       |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.017s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:76:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Swap_Amplitude[m[K’ was not declared in this scope
+[4.017s]   122 | ap = wsin(m_Time, m_Z_Swap_PeriodTime, m_Z_Swap_Phase_Shift, [01;31m[Km_Z_Swap_Amplitude[m[K, m_Z_Swap_Amplitude_Shift);
+[4.017s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.017s] 
+[4.023s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:96:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Swap_Amplitude_Shift[m[K’ was not declared in this scope
+[4.023s]   122 | Z_Swap_PeriodTime, m_Z_Swap_Phase_Shift, m_Z_Swap_Amplitude, [01;31m[Km_Z_Swap_Amplitude_Shift[m[K);
+[4.023s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.023s] 
+[4.028s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:127:24:[m[K [01;31m[Kerror: [m[K‘[01m[Km_SSP_Time_Start_L[m[K’ was not declared in this scope
+[4.028s]   127 |           if(m_Time <= [01;31m[Km_SSP_Time_Start_L[m[K)
+[4.028s]       |                        [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.032s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:129:51:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_PeriodTime[m[K’ was not declared in this scope
+[4.032s]   129 |               x_move_l = wsin(m_SSP_Time_Start_L, [01;31m[Km_X_Move_PeriodTime[m[K, m_X_Move_Phase_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.032s]       |                                                   [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.037s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:129:72:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.037s]   129 |     x_move_l = wsin(m_SSP_Time_Start_L, m_X_Move_PeriodTime, [01;31m[Km_X_Move_Phase_Shift[m[K + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.037s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.037s] 
+[4.038s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:129:99:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+[4.038s]   129 | ime_Start_L, m_X_Move_PeriodTime, m_X_Move_Phase_Shift + 2 * [01;31m[KPI[m[K / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.039s]       |                                                              [01;31m[K^~[m[K
+[4.039s] 
+[4.043s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:129:146:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Amplitude[m[K’ was not declared in this scope
+[4.043s]   129 | e_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_X_Move_Amplitude[m[K, m_X_Move_Amplitude_Shift);
+[4.043s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.043s] 
+[4.049s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:129:166:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.049s]   129 | _X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, [01;31m[Km_X_Move_Amplitude_Shift[m[K);
+[4.049s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.049s] 
+[4.054s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:130:51:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_PeriodTime[m[K’ was not declared in this scope
+[4.055s]   130 |               y_move_l = wsin(m_SSP_Time_Start_L, [01;31m[Km_Y_Move_PeriodTime[m[K, m_Y_Move_Phase_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);
+[4.055s]       |                                                   [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.060s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:130:72:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.060s]   130 |     y_move_l = wsin(m_SSP_Time_Start_L, m_Y_Move_PeriodTime, [01;31m[Km_Y_Move_Phase_Shift[m[K + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);
+[4.060s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.060s] 
+[4.064s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:130:146:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Amplitude[m[K’ was not declared in this scope
+[4.064s]   130 | e_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_Y_Move_Amplitude[m[K, m_Y_Move_Amplitude_Shift);
+[4.064s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.064s] 
+[4.070s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:130:166:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.070s]   130 | _Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, [01;31m[Km_Y_Move_Amplitude_Shift[m[K);
+[4.070s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.070s] 
+[4.075s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:131:51:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_PeriodTime[m[K’ was not declared in this scope
+[4.075s]   131 |               z_move_l = wsin(m_SSP_Time_Start_L, [01;31m[Km_Z_Move_PeriodTime[m[K, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);
+[4.075s]       |                                                   [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.080s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:131:72:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.080s]   131 |     z_move_l = wsin(m_SSP_Time_Start_L, m_Z_Move_PeriodTime, [01;31m[Km_Z_Move_Phase_Shift[m[K + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);
+[4.080s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.080s] 
+[4.084s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:131:146:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Amplitude[m[K’ was not declared in this scope
+[4.084s]   131 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_Z_Move_Amplitude[m[K, m_Z_Move_Amplitude_Shift);
+[4.084s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.084s] 
+[4.090s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:131:166:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.090s]   131 | _Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, [01;31m[Km_Z_Move_Amplitude_Shift[m[K);
+[4.090s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.090s] 
+[4.095s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:132:51:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_PeriodTime[m[K’ was not declared in this scope
+[4.095s]   132 |               c_move_l = wsin(m_SSP_Time_Start_L, [01;31m[Km_A_Move_PeriodTime[m[K, m_A_Move_Phase_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);
+[4.095s]       |                                                   [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.100s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:132:72:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.100s]   132 |     c_move_l = wsin(m_SSP_Time_Start_L, m_A_Move_PeriodTime, [01;31m[Km_A_Move_Phase_Shift[m[K + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);
+[4.100s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.100s] 
+[4.104s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:132:146:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Amplitude[m[K’ was not declared in this scope
+[4.104s]   132 | e_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_A_Move_Amplitude[m[K, m_A_Move_Amplitude_Shift);
+[4.104s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.104s] 
+[4.110s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:132:166:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.110s]   132 | _A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, [01;31m[Km_A_Move_Amplitude_Shift[m[K);
+[4.110s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.110s] 
+[4.114s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:135:31:[m[K [01;31m[Kerror: [m[K‘[01m[Km_SSP_Time_Start_R[m[K’ was not declared in this scope
+[4.114s]   135 |               z_move_r = wsin([01;31m[Km_SSP_Time_Start_R[m[K, m_Z_Move_PeriodTime, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_R, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);
+[4.114s]       |                               [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.118s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:140:29:[m[K [01;31m[Kerror: [m[K‘[01m[Km_SSP_Time_End_L[m[K’ was not declared in this scope
+[4.119s]   140 |           else if(m_Time <= [01;31m[Km_SSP_Time_End_L[m[K)
+[4.119s]       |                             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[4.123s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:142:39:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_PeriodTime[m[K’ was not declared in this scope
+[4.123s]   142 |               x_move_l = wsin(m_Time, [01;31m[Km_X_Move_PeriodTime[m[K, m_X_Move_Phase_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.124s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.128s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:142:60:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.129s]   142 |               x_move_l = wsin(m_Time, m_X_Move_PeriodTime, [01;31m[Km_X_Move_Phase_Shift[m[K + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.129s]       |                                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.130s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:142:87:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+[4.130s]   142 | wsin(m_Time, m_X_Move_PeriodTime, m_X_Move_Phase_Shift + 2 * [01;31m[KPI[m[K / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.130s]       |                                                              [01;31m[K^~[m[K
+[4.130s] 
+[4.134s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:142:134:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Amplitude[m[K’ was not declared in this scope
+[4.134s]   142 | e_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_X_Move_Amplitude[m[K, m_X_Move_Amplitude_Shift);
+[4.134s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.134s] 
+[4.140s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:142:154:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.140s]   142 | _X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, [01;31m[Km_X_Move_Amplitude_Shift[m[K);
+[4.140s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.140s] 
+[4.145s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:143:39:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_PeriodTime[m[K’ was not declared in this scope
+[4.145s]   143 |               y_move_l = wsin(m_Time, [01;31m[Km_Y_Move_PeriodTime[m[K, m_Y_Move_Phase_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);
+[4.145s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.150s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:143:60:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.150s]   143 |               y_move_l = wsin(m_Time, m_Y_Move_PeriodTime, [01;31m[Km_Y_Move_Phase_Shift[m[K + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);
+[4.150s]       |                                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.155s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:143:134:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Amplitude[m[K’ was not declared in this scope
+[4.155s]   143 | e_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_Y_Move_Amplitude[m[K, m_Y_Move_Amplitude_Shift);
+[4.155s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.155s] 
+[4.161s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:143:154:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.161s]   143 | _Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, [01;31m[Km_Y_Move_Amplitude_Shift[m[K);
+[4.161s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.161s] 
+[4.165s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:144:39:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_PeriodTime[m[K’ was not declared in this scope
+[4.166s]   144 |               z_move_l = wsin(m_Time, [01;31m[Km_Z_Move_PeriodTime[m[K, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);
+[4.166s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.171s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:144:60:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.171s]   144 |               z_move_l = wsin(m_Time, m_Z_Move_PeriodTime, [01;31m[Km_Z_Move_Phase_Shift[m[K + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);
+[4.171s]       |                                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.175s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:144:134:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Amplitude[m[K’ was not declared in this scope
+[4.175s]   144 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_Z_Move_Amplitude[m[K, m_Z_Move_Amplitude_Shift);
+[4.175s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.175s] 
+[4.181s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:144:154:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.181s]   144 | _Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, [01;31m[Km_Z_Move_Amplitude_Shift[m[K);
+[4.181s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.181s] 
+[4.185s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:145:39:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_PeriodTime[m[K’ was not declared in this scope
+[4.186s]   145 |               c_move_l = wsin(m_Time, [01;31m[Km_A_Move_PeriodTime[m[K, m_A_Move_Phase_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);
+[4.186s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.191s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:145:60:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.191s]   145 |               c_move_l = wsin(m_Time, m_A_Move_PeriodTime, [01;31m[Km_A_Move_Phase_Shift[m[K + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);
+[4.191s]       |                                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.195s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:145:134:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Amplitude[m[K’ was not declared in this scope
+[4.195s]   145 | e_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_A_Move_Amplitude[m[K, m_A_Move_Amplitude_Shift);
+[4.195s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.195s] 
+[4.201s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:145:154:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.201s]   145 | _A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, [01;31m[Km_A_Move_Amplitude_Shift[m[K);
+[4.201s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.201s] 
+[4.205s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:148:31:[m[K [01;31m[Kerror: [m[K‘[01m[Km_SSP_Time_Start_R[m[K’ was not declared in this scope
+[4.205s]   148 |               z_move_r = wsin([01;31m[Km_SSP_Time_Start_R[m[K, m_Z_Move_PeriodTime, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_R, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);
+[4.205s]       |                               [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.208s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:150:141:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Pelvis_Swing[m[K’ was not declared in this scope
+[4.208s]   150 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_Pelvis_Swing[m[K / 2, m_Pelvis_Swing / 2);
+[4.209s]       |                                                              [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.209s] 
+[4.212s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:151:142:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Pelvis_Offset[m[K’ was not declared in this scope
+[4.212s]   151 | _Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, -[01;31m[Km_Pelvis_Offset[m[K / 2, -m_Pelvis_Offset / 2);
+[4.212s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.212s] 
+[4.216s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:153:29:[m[K [01;31m[Kerror: [m[K‘[01m[Km_SSP_Time_Start_R[m[K’ was not declared in this scope
+[4.216s]   153 |           else if(m_Time <= [01;31m[Km_SSP_Time_Start_R[m[K)
+[4.216s]       |                             [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.221s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:155:49:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_PeriodTime[m[K’ was not declared in this scope
+[4.221s]   155 |               x_move_l = wsin(m_SSP_Time_End_L, [01;31m[Km_X_Move_PeriodTime[m[K, m_X_Move_Phase_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.221s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.226s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:155:70:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.226s]   155 |       x_move_l = wsin(m_SSP_Time_End_L, m_X_Move_PeriodTime, [01;31m[Km_X_Move_Phase_Shift[m[K + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.226s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.226s] 
+[4.227s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:155:97:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+[4.227s]   155 | _Time_End_L, m_X_Move_PeriodTime, m_X_Move_Phase_Shift + 2 * [01;31m[KPI[m[K / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.227s]       |                                                              [01;31m[K^~[m[K
+[4.227s] 
+[4.231s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:155:144:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Amplitude[m[K’ was not declared in this scope
+[4.231s]   155 | e_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_X_Move_Amplitude[m[K, m_X_Move_Amplitude_Shift);
+[4.231s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.232s] 
+[4.237s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:155:164:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.237s]   155 | _X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, [01;31m[Km_X_Move_Amplitude_Shift[m[K);
+[4.237s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.237s] 
+[4.242s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:156:49:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_PeriodTime[m[K’ was not declared in this scope
+[4.242s]   156 |               y_move_l = wsin(m_SSP_Time_End_L, [01;31m[Km_Y_Move_PeriodTime[m[K, m_Y_Move_Phase_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);
+[4.242s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.247s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:156:70:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.248s]   156 |       y_move_l = wsin(m_SSP_Time_End_L, m_Y_Move_PeriodTime, [01;31m[Km_Y_Move_Phase_Shift[m[K + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);
+[4.248s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.248s] 
+[4.252s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:156:144:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Amplitude[m[K’ was not declared in this scope
+[4.252s]   156 | e_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_Y_Move_Amplitude[m[K, m_Y_Move_Amplitude_Shift);
+[4.252s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.252s] 
+[4.258s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:156:164:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.258s]   156 | _Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, [01;31m[Km_Y_Move_Amplitude_Shift[m[K);
+[4.258s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.259s] 
+[4.263s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:157:49:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_PeriodTime[m[K’ was not declared in this scope
+[4.263s]   157 |               z_move_l = wsin(m_SSP_Time_End_L, [01;31m[Km_Z_Move_PeriodTime[m[K, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);
+[4.263s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.268s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:157:70:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.268s]   157 |       z_move_l = wsin(m_SSP_Time_End_L, m_Z_Move_PeriodTime, [01;31m[Km_Z_Move_Phase_Shift[m[K + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);
+[4.269s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.269s] 
+[4.273s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:157:144:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Amplitude[m[K’ was not declared in this scope
+[4.273s]   157 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_Z_Move_Amplitude[m[K, m_Z_Move_Amplitude_Shift);
+[4.273s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.273s] 
+[4.279s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:157:164:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.279s]   157 | _Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, [01;31m[Km_Z_Move_Amplitude_Shift[m[K);
+[4.279s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.279s] 
+[4.284s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:158:49:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_PeriodTime[m[K’ was not declared in this scope
+[4.284s]   158 |               c_move_l = wsin(m_SSP_Time_End_L, [01;31m[Km_A_Move_PeriodTime[m[K, m_A_Move_Phase_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);
+[4.284s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.289s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:158:70:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.289s]   158 |       c_move_l = wsin(m_SSP_Time_End_L, m_A_Move_PeriodTime, [01;31m[Km_A_Move_Phase_Shift[m[K + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);
+[4.290s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.290s] 
+[4.294s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:158:144:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Amplitude[m[K’ was not declared in this scope
+[4.294s]   158 | e_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_A_Move_Amplitude[m[K, m_A_Move_Amplitude_Shift);
+[4.294s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.294s] 
+[4.300s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:158:164:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.300s]   158 | _A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, [01;31m[Km_A_Move_Amplitude_Shift[m[K);
+[4.300s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.300s] 
+[4.304s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:166:29:[m[K [01;31m[Kerror: [m[K‘[01m[Km_SSP_Time_End_R[m[K’ was not declared in this scope
+[4.304s]   166 |           else if(m_Time <= [01;31m[Km_SSP_Time_End_R[m[K)
+[4.304s]       |                             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[4.309s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:168:39:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_PeriodTime[m[K’ was not declared in this scope
+[4.309s]   168 |               x_move_l = wsin(m_Time, [01;31m[Km_X_Move_PeriodTime[m[K, m_X_Move_Phase_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.309s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.314s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:168:60:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.314s]   168 |               x_move_l = wsin(m_Time, m_X_Move_PeriodTime, [01;31m[Km_X_Move_Phase_Shift[m[K + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.314s]       |                                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.315s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:168:87:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+[4.315s]   168 | wsin(m_Time, m_X_Move_PeriodTime, m_X_Move_Phase_Shift + 2 * [01;31m[KPI[m[K / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.315s]       |                                                              [01;31m[K^~[m[K
+[4.315s] 
+[4.319s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:168:139:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Amplitude[m[K’ was not declared in this scope
+[4.320s]   168 | ft + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, [01;31m[Km_X_Move_Amplitude[m[K, m_X_Move_Amplitude_Shift);
+[4.320s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.320s] 
+[4.325s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:168:159:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.326s]   168 | ve_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, [01;31m[Km_X_Move_Amplitude_Shift[m[K);
+[4.326s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.326s] 
+[4.330s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:169:39:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_PeriodTime[m[K’ was not declared in this scope
+[4.330s]   169 |               y_move_l = wsin(m_Time, [01;31m[Km_Y_Move_PeriodTime[m[K, m_Y_Move_Phase_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);
+[4.330s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.335s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:169:60:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.335s]   169 |               y_move_l = wsin(m_Time, m_Y_Move_PeriodTime, [01;31m[Km_Y_Move_Phase_Shift[m[K + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);
+[4.336s]       |                                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.339s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:169:139:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Amplitude[m[K’ was not declared in this scope
+[4.340s]   169 | ft + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_R + PI, [01;31m[Km_Y_Move_Amplitude[m[K, m_Y_Move_Amplitude_Shift);
+[4.340s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.340s] 
+[4.346s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:169:159:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.346s]   169 | ve_PeriodTime * m_SSP_Time_Start_R + PI, m_Y_Move_Amplitude, [01;31m[Km_Y_Move_Amplitude_Shift[m[K);
+[4.346s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.346s] 
+[4.350s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:170:49:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_PeriodTime[m[K’ was not declared in this scope
+[4.351s]   170 |               z_move_l = wsin(m_SSP_Time_End_L, [01;31m[Km_Z_Move_PeriodTime[m[K, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);
+[4.351s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.356s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:170:70:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.356s]   170 |       z_move_l = wsin(m_SSP_Time_End_L, m_Z_Move_PeriodTime, [01;31m[Km_Z_Move_Phase_Shift[m[K + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);
+[4.356s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.356s] 
+[4.360s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:170:144:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Amplitude[m[K’ was not declared in this scope
+[4.360s]   170 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_Z_Move_Amplitude[m[K, m_Z_Move_Amplitude_Shift);
+[4.360s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.360s] 
+[4.366s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:170:164:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.366s]   170 | _Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, [01;31m[Km_Z_Move_Amplitude_Shift[m[K);
+[4.366s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.367s] 
+[4.371s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:171:39:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_PeriodTime[m[K’ was not declared in this scope
+[4.371s]   171 |               c_move_l = wsin(m_Time, [01;31m[Km_A_Move_PeriodTime[m[K, m_A_Move_Phase_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);
+[4.371s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.376s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:171:60:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.376s]   171 |               c_move_l = wsin(m_Time, m_A_Move_PeriodTime, [01;31m[Km_A_Move_Phase_Shift[m[K + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);
+[4.376s]       |                                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.380s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:171:139:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Amplitude[m[K’ was not declared in this scope
+[4.380s]   171 | ft + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_R + PI, [01;31m[Km_A_Move_Amplitude[m[K, m_A_Move_Amplitude_Shift);
+[4.381s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.381s] 
+[4.386s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:171:159:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.386s]   171 | ve_PeriodTime * m_SSP_Time_Start_R + PI, m_A_Move_Amplitude, [01;31m[Km_A_Move_Amplitude_Shift[m[K);
+[4.387s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.387s] 
+[4.390s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:176:141:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Pelvis_Offset[m[K’ was not declared in this scope
+[4.390s]   176 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_R, [01;31m[Km_Pelvis_Offset[m[K / 2, m_Pelvis_Offset / 2);
+[4.390s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[4.390s] 
+[4.393s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:177:142:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Pelvis_Swing[m[K’ was not declared in this scope
+[4.393s]   177 | _Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_R, -[01;31m[Km_Pelvis_Swing[m[K / 2, -m_Pelvis_Swing / 2);
+[4.393s]       |                                                              [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.393s] 
+[4.398s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:181:49:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_PeriodTime[m[K’ was not declared in this scope
+[4.398s]   181 |               x_move_l = wsin(m_SSP_Time_End_R, [01;31m[Km_X_Move_PeriodTime[m[K, m_X_Move_Phase_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.398s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.403s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:181:70:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.403s]   181 |       x_move_l = wsin(m_SSP_Time_End_R, m_X_Move_PeriodTime, [01;31m[Km_X_Move_Phase_Shift[m[K + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.403s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.403s] 
+[4.404s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:181:97:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+[4.404s]   181 | _Time_End_R, m_X_Move_PeriodTime, m_X_Move_Phase_Shift + 2 * [01;31m[KPI[m[K / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);
+[4.404s]       |                                                              [01;31m[K^~[m[K
+[4.404s] 
+[4.408s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:181:149:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Amplitude[m[K’ was not declared in this scope
+[4.408s]   181 | ft + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, [01;31m[Km_X_Move_Amplitude[m[K, m_X_Move_Amplitude_Shift);
+[4.409s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.409s] 
+[4.414s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:181:169:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.414s]   181 | ve_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, [01;31m[Km_X_Move_Amplitude_Shift[m[K);
+[4.415s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.415s] 
+[4.419s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:182:49:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_PeriodTime[m[K’ was not declared in this scope
+[4.419s]   182 |               y_move_l = wsin(m_SSP_Time_End_R, [01;31m[Km_Y_Move_PeriodTime[m[K, m_Y_Move_Phase_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);
+[4.419s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.424s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:182:70:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.424s]   182 |       y_move_l = wsin(m_SSP_Time_End_R, m_Y_Move_PeriodTime, [01;31m[Km_Y_Move_Phase_Shift[m[K + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);
+[4.424s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.424s] 
+[4.428s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:182:149:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Amplitude[m[K’ was not declared in this scope
+[4.428s]   182 | ft + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_R + PI, [01;31m[Km_Y_Move_Amplitude[m[K, m_Y_Move_Amplitude_Shift);
+[4.429s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.429s] 
+[4.434s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:182:169:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.435s]   182 | ve_PeriodTime * m_SSP_Time_Start_R + PI, m_Y_Move_Amplitude, [01;31m[Km_Y_Move_Amplitude_Shift[m[K);
+[4.435s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.435s] 
+[4.439s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:183:49:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_PeriodTime[m[K’ was not declared in this scope
+[4.439s]   183 |               z_move_l = wsin(m_SSP_Time_End_L, [01;31m[Km_Z_Move_PeriodTime[m[K, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);
+[4.439s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.444s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:183:70:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.444s]   183 |       z_move_l = wsin(m_SSP_Time_End_L, m_Z_Move_PeriodTime, [01;31m[Km_Z_Move_Phase_Shift[m[K + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);
+[4.444s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.445s] 
+[4.449s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:183:144:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Amplitude[m[K’ was not declared in this scope
+[4.449s]   183 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, [01;31m[Km_Z_Move_Amplitude[m[K, m_Z_Move_Amplitude_Shift);
+[4.449s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.449s] 
+[4.455s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:183:164:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.455s]   183 | _Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, [01;31m[Km_Z_Move_Amplitude_Shift[m[K);
+[4.455s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.455s] 
+[4.460s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:184:49:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_PeriodTime[m[K’ was not declared in this scope
+[4.460s]   184 |               c_move_l = wsin(m_SSP_Time_End_R, [01;31m[Km_A_Move_PeriodTime[m[K, m_A_Move_Phase_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);
+[4.460s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.465s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:184:70:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Phase_Shift[m[K’ was not declared in this scope
+[4.465s]   184 |       c_move_l = wsin(m_SSP_Time_End_R, m_A_Move_PeriodTime, [01;31m[Km_A_Move_Phase_Shift[m[K + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);
+[4.465s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[4.465s] 
+[4.469s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:184:149:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Amplitude[m[K’ was not declared in this scope
+[4.469s]   184 | ft + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_R + PI, [01;31m[Km_A_Move_Amplitude[m[K, m_A_Move_Amplitude_Shift);
+[4.469s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.470s] 
+[4.475s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:184:169:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Move_Amplitude_Shift[m[K’ was not declared in this scope
+[4.475s]   184 | ve_PeriodTime * m_SSP_Time_Start_R + PI, m_A_Move_Amplitude, [01;31m[Km_A_Move_Amplitude_Shift[m[K);
+[4.476s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.476s] 
+[4.478s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:198:39:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Offset[m[K’ was not declared in this scope
+[4.478s]   198 |           ep[0] = x_swap + x_move_r + [01;31m[Km_X_Offset[m[K;
+[4.478s]       |                                       [01;31m[K^~~~~~~~~~[m[K
+[4.481s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:199:39:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Y_Offset[m[K’ was not declared in this scope
+[4.481s]   199 |           ep[1] = y_swap + y_move_r - [01;31m[Km_Y_Offset[m[K / 2;
+[4.481s]       |                                       [01;31m[K^~~~~~~~~~[m[K
+[4.483s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:200:39:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Z_Offset[m[K’ was not declared in this scope
+[4.484s]   200 |           ep[2] = z_swap + z_move_r + [01;31m[Km_Z_Offset[m[K;
+[4.484s]       |                                       [01;31m[K^~~~~~~~~~[m[K
+[4.486s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:201:39:[m[K [01;31m[Kerror: [m[K‘[01m[Km_R_Offset[m[K’ was not declared in this scope
+[4.486s]   201 |           ep[3] = a_swap + a_move_r - [01;31m[Km_R_Offset[m[K / 2;
+[4.486s]       |                                       [01;31m[K^~~~~~~~~~[m[K
+[4.489s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:202:39:[m[K [01;31m[Kerror: [m[K‘[01m[Km_P_Offset[m[K’ was not declared in this scope
+[4.489s]   202 |           ep[4] = b_swap + b_move_r + [01;31m[Km_P_Offset[m[K;
+[4.489s]       |                                       [01;31m[K^~~~~~~~~~[m[K
+[4.491s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:203:39:[m[K [01;31m[Kerror: [m[K‘[01m[Km_A_Offset[m[K’ was not declared in this scope
+[4.491s]   203 |           ep[5] = c_swap + c_move_r - [01;31m[Km_A_Offset[m[K / 2;
+[4.491s]       |                                       [01;31m[K^~~~~~~~~~[m[K
+[4.495s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:211:12:[m[K [01;31m[Kerror: [m[K‘[01m[KBALANCE_ENABLE[m[K’ was not declared in this scope
+[4.495s]   211 |         if([01;31m[KBALANCE_ENABLE[m[K)
+[4.495s]       |            [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.499s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:213:13:[m[K [01;31m[Kerror: [m[K‘[01m[Km_balance_fb_angle[m[K’ was not declared in this scope
+[4.499s]   213 |             [01;31m[Km_balance_fb_angle[m[K = (1.0-BALANCE_ANGLE_SMOOTH_GAIN) * m_balance_fb_angle + BALANCE_ANGLE_SMOOTH_GAIN * MotionStatus::ANGLE_PITCH;
+[4.499s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.505s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:213:39:[m[K [01;31m[Kerror: [m[K‘[01m[KBALANCE_ANGLE_SMOOTH_GAIN[m[K’ was not declared in this scope
+[4.506s]   213 |             m_balance_fb_angle = (1.0-[01;31m[KBALANCE_ANGLE_SMOOTH_GAIN[m[K) * m_balance_fb_angle + BALANCE_ANGLE_SMOOTH_GAIN * MotionStatus::ANGLE_PITCH;
+[4.506s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.506s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:213:117:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionStatus[m[K’ has not been declared
+[4.506s]   213 | OTH_GAIN) * m_balance_fb_angle + BALANCE_ANGLE_SMOOTH_GAIN * [01;31m[KMotionStatus[m[K::ANGLE_PITCH;
+[4.506s]       |                                                              [01;31m[K^~~~~~~~~~~~[m[K
+[4.506s] 
+[4.506s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:215:67:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionStatus[m[K’ has not been declared
+[4.506s]   215 |        double angleVel = -(250.0 / 512.0) * (M_PI / 180.0) * [01;31m[KMotionStatus[m[K::FB_GYRO;
+[4.506s]       |                                                              [01;31m[K^~~~~~~~~~~~[m[K
+[4.506s] 
+[4.506s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:216:49:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionStatus[m[K’ has not been declared
+[4.507s]   216 |             double splineOffset = splineBalance([01;31m[KMotionStatus[m[K::ANGLE_PITCH, angleVel, BALANCE_ANGLE_GAIN);
+[4.507s]       |                                                 [01;31m[K^~~~~~~~~~~~[m[K
+[4.510s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:216:86:[m[K [01;31m[Kerror: [m[K‘[01m[KBALANCE_ANGLE_GAIN[m[K’ was not declared in this scope
+[4.510s]   216 | eOffset = splineBalance(MotionStatus::ANGLE_PITCH, angleVel, [01;31m[KBALANCE_ANGLE_GAIN[m[K);
+[4.510s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.510s] 
+[4.513s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:216:35:[m[K [01;31m[Kerror: [m[K‘[01m[KsplineBalance[m[K’ was not declared in this scope
+[4.513s]   216 |             double splineOffset = [01;31m[KsplineBalance[m[K(MotionStatus::ANGLE_PITCH, angleVel, BALANCE_ANGLE_GAIN);
+[4.513s]       |                                   [01;31m[K^~~~~~~~~~~~~[m[K
+[4.515s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:220:22:[m[K [01;31m[Kerror: [m[K‘[01m[KspeedAdj[m[K’ was not declared in this scope
+[4.516s]   220 |             ep[0] -= [01;31m[KspeedAdj[m[K;
+[4.516s]       |                      [01;31m[K^~~~~~~~[m[K
+[4.520s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:225:24:[m[K [01;31m[Kerror: [m[K‘[01m[Km_SSP_Time_End_L[m[K’ was not declared in this scope
+[4.520s]   225 |           if(m_Time <= [01;31m[Km_SSP_Time_End_L[m[K)
+[4.520s]       |                        [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[4.523s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:227:15:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Body_Swing_Y[m[K’ was not declared in this scope
+[4.523s]   227 |               [01;31m[Km_Body_Swing_Y[m[K = -ep[7];
+[4.523s]       |               [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.526s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:228:15:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Body_Swing_Z[m[K’ was not declared in this scope
+[4.527s]   228 |               [01;31m[Km_Body_Swing_Z[m[K = ep[8];
+[4.527s]       |               [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.530s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:232:15:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Body_Swing_Y[m[K’ was not declared in this scope
+[4.530s]   232 |               [01;31m[Km_Body_Swing_Y[m[K = -ep[1];
+[4.530s]       |               [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.534s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:233:15:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Body_Swing_Z[m[K’ was not declared in this scope
+[4.534s]   233 |               [01;31m[Km_Body_Swing_Z[m[K = ep[2];
+[4.534s]       |               [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.537s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:235:9:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Body_Swing_Z[m[K’ was not declared in this scope
+[4.537s]   235 |         [01;31m[Km_Body_Swing_Z[m[K -= Kinematics::LEG_LENGTH;
+[4.537s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.537s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:235:27:[m[K [01;31m[Kerror: [m[K‘[01m[KKinematics[m[K’ has not been declared
+[4.537s]   235 |         m_Body_Swing_Z -= [01;31m[KKinematics[m[K::LEG_LENGTH;
+[4.538s]       |                           [01;31m[K^~~~~~~~~~[m[K
+[4.541s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:238:14:[m[K [01;31m[Kerror: [m[K‘[01m[Km_X_Move_Amplitude[m[K’ was not declared in this scope
+[4.541s]   238 |           if([01;31m[Km_X_Move_Amplitude[m[K == 0)
+[4.542s]       |              [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[4.545s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:245:40:[m[K [01;31m[Kerror: [m[K‘[01m[Km_PeriodTime[m[K’ was not declared in this scope
+[4.545s]   245 |               angle[12] = wsin(m_Time, [01;31m[Km_PeriodTime[m[K, PI * 1.5, -m_X_Move_Amplitude * m_Arm_Swing_Gain, 0);
+[4.545s]       |                                        [01;31m[K^~~~~~~~~~~~[m[K
+[4.546s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:245:54:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+[4.546s]   245 |               angle[12] = wsin(m_Time, m_PeriodTime, [01;31m[KPI[m[K * 1.5, -m_X_Move_Amplitude * m_Arm_Swing_Gain, 0);
+[4.546s]       |                                                      [01;31m[K^~[m[K
+[4.550s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:245:86:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Arm_Swing_Gain[m[K’ was not declared in this scope
+[4.550s]   245 | = wsin(m_Time, m_PeriodTime, PI * 1.5, -m_X_Move_Amplitude * [01;31m[Km_Arm_Swing_Gain[m[K, 0);
+[4.550s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[4.550s] 
+[4.553s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:249:14:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Real_Running[m[K’ was not declared in this scope
+[4.554s]   249 |           if([01;31m[Km_Real_Running[m[K == true)
+[4.554s]       |              [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.556s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:252:28:[m[K [01;31m[Kerror: [m[K‘[01m[Km_PeriodTime[m[K’ was not declared in this scope
+[4.557s]   252 |               if(m_Time >= [01;31m[Km_PeriodTime[m[K)
+[4.557s]       |                            [01;31m[K^~~~~~~~~~~~[m[K
+[4.559s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:257:15:[m[K [01;31m[Kerror: [m[K‘[01m[KcomputeIK[m[K’ was not declared in this scope
+[4.559s]   257 |           if(([01;31m[KcomputeIK[m[K(&angle[0], ep[0], ep[1], ep[2], ep[3], ep[4], ep[5]) == 1)
+[4.559s]       |               [01;31m[K^~~~~~~~~[m[K
+[4.560s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:261:39:[m[K [01;31m[Kerror: [m[K‘[01m[KPI[m[K’ was not declared in this scope
+[4.560s]   261 |                   angle[i] *= 180.0 / [01;31m[KPI[m[K;
+[4.561s]       |                                       [01;31m[K^~[m[K
+[4.561s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:271:54:[m[K [01;31m[Kerror: [m[K‘[01m[KRATIO_ANGLE2VALUE[m[K’ is not a member of ‘[01m[KRobot::MX28[m[K’
+[4.561s]   271 |           offset = (double)dir[i] * angle[i] * MX28::[01;31m[KRATIO_ANGLE2VALUE[m[K;
+[4.561s]       |                                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[4.565s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:277:46:[m[K [01;31m[Kerror: [m[K‘[01m[KHIP_PITCH_OFFSET[m[K’ was not declared in this scope
+[4.565s]   277 |                   offset -= (double)dir[i] * [01;31m[KHIP_PITCH_OFFSET[m[K * MX28::RATIO_ANGLE2VALUE;
+[4.565s]       |                                              [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[4.565s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:277:71:[m[K [01;31m[Kerror: [m[K‘[01m[KRATIO_ANGLE2VALUE[m[K’ is not a member of ‘[01m[KRobot::MX28[m[K’
+[4.565s]   277 |          offset -= (double)dir[i] * HIP_PITCH_OFFSET * MX28::[01;31m[KRATIO_ANGLE2VALUE[m[K;
+[4.565s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[4.565s] 
+[4.568s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:283:14:[m[K [01;31m[Kerror: [m[K‘[01m[KBALANCE_ENABLE[m[K’ was not declared in this scope
+[4.568s]   283 |           if([01;31m[KBALANCE_ENABLE[m[K == true)
+[4.569s]       |              [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.569s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:285:30:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionStatus[m[K’ has not been declared
+[4.569s]   285 |           double rlGyroErr = [01;31m[KMotionStatus[m[K::RL_GYRO;
+[4.569s]       |                              [01;31m[K^~~~~~~~~~~~[m[K
+[4.569s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:286:30:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionStatus[m[K’ has not been declared
+[4.569s]   286 |           double fbGyroErr = [01;31m[KMotionStatus[m[K::FB_GYRO;
+[4.569s]       |                              [01;31m[K^~~~~~~~~~~~[m[K
+[4.574s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:288:51:[m[K [01;31m[Kerror: [m[K‘[01m[KBALANCE_HIP_ROLL_GAIN[m[K’ was not declared in this scope
+[4.574s]   288 |               outValue[1] += dir[1] * rlGyroErr * [01;31m[KBALANCE_HIP_ROLL_GAIN[m[K; // R_HIP_ROLL
+[4.574s]       |                                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[4.578s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:291:51:[m[K [01;31m[Kerror: [m[K‘[01m[KBALANCE_KNEE_GAIN[m[K’ was not declared in this scope
+[4.578s]   291 |               outValue[3] -= dir[3] * fbGyroErr * [01;31m[KBALANCE_KNEE_GAIN[m[K; // R_KNEE
+[4.578s]       |                                                   [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[4.584s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:294:51:[m[K [01;31m[Kerror: [m[K‘[01m[KBALANCE_ANKLE_PITCH_GAIN[m[K’ was not declared in this scope
+[4.584s]   294 |               outValue[4] -= dir[4] * fbGyroErr * [01;31m[KBALANCE_ANKLE_PITCH_GAIN[m[K; // R_ANKLE_PITCH
+[4.584s]       |                                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.590s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:297:51:[m[K [01;31m[Kerror: [m[K‘[01m[KBALANCE_ANKLE_ROLL_GAIN[m[K’ was not declared in this scope
+[4.590s]   297 |               outValue[5] -= dir[5] * rlGyroErr * [01;31m[KBALANCE_ANKLE_ROLL_GAIN[m[K; // R_ANKLE_ROLL
+[4.590s]       |                                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.592s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:314:9:[m[K [01;31m[Kerror: [m[K‘[01m[Km_Joint[m[K’ was not declared in this scope; did you mean ‘[01m[Ku_int[m[K’?
+[4.592s]   314 |         [01;31m[Km_Joint[m[K.SetValue(JointData::ID_R_HIP_YAW,           outValue[0]);
+[4.592s]       |         [01;31m[K^~~~~~~[m[K
+[4.592s]       |         [32m[Ku_int[m[K
+[4.596s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:328:50:[m[K [01;31m[Kerror: [m[K‘[01m[KA_MOVE_AMPLITUDE[m[K’ was not declared in this scope
+[4.596s]   328 |         m_Joint.SetAngle(JointData::ID_HEAD_PAN, [01;31m[KA_MOVE_AMPLITUDE[m[K);
+[4.596s]       |                                                  [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[4.598s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:332:34:[m[K [01;31m[Kerror: [m[K‘[01m[KP_GAIN[m[K’ was not declared in this scope; did you mean ‘[01m[KEAGAIN[m[K’?
+[4.598s]   332 |             m_Joint.SetPGain(id, [01;31m[KP_GAIN[m[K);
+[4.598s]       |                                  [01;31m[K^~~~~~[m[K
+[4.598s]       |                                  [32m[KEAGAIN[m[K
+[4.599s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:333:36:[m[K [01;31m[Kerror: [m[K‘[01m[KI_GAIN[m[K’ was not declared in this scope; did you mean ‘[01m[KEAGAIN[m[K’?
+[4.600s]   333 |               m_Joint.SetIGain(id, [01;31m[KI_GAIN[m[K);
+[4.600s]       |                                    [01;31m[K^~~~~~[m[K
+[4.600s]       |                                    [32m[KEAGAIN[m[K
+[4.601s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:334:36:[m[K [01;31m[Kerror: [m[K‘[01m[KD_GAIN[m[K’ was not declared in this scope; did you mean ‘[01m[KEAGAIN[m[K’?
+[4.601s]   334 |               m_Joint.SetDGain(id, [01;31m[KD_GAIN[m[K);
+[4.601s]       |                                    [01;31m[K^~~~~~[m[K
+[4.601s]       |                                    [32m[KEAGAIN[m[K
+[6.379s] make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1
+[6.379s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/control.dir/all] Error 2
+[6.380s] make: *** [Makefile:141: all] Error 2
+[6.382s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4

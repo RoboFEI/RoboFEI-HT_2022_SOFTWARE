@@ -8,9 +8,9 @@ module dynamixel_sdk_custom_interfaces {
     @verbatim (language="comment", text=
       " Messages")
     struct SetPosition {
-      uint8 id;
+      sequence<uint8> id;
 
-      int32 position;
+      sequence<int32> position;
     };
   };
 };

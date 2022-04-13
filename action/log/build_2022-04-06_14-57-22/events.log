@@ -1,0 +1,907 @@
+[0.000000] (-) TimerEvent: {}
+[0.000678] (dynamixel_sdk_custom_interfaces) JobQueued: {'identifier': 'dynamixel_sdk_custom_interfaces', 'dependencies': OrderedDict()}
+[0.000991] (control) JobQueued: {'identifier': 'control', 'dependencies': OrderedDict([('dynamixel_sdk_custom_interfaces', '/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces')])}
+[0.005750] (dynamixel_sdk_custom_interfaces) JobStarted: {'identifier': 'dynamixel_sdk_custom_interfaces'}
+[0.098820] (-) TimerEvent: {}
+[0.167891] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'cmake'}
+[0.190996] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'build'}
+[0.193332] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1876'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1669'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=23fe9be0f05189125804fbef624dcddc'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:47794'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1916,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1916'), ('INVOCATION_ID', '506b5bb70d8844a38391e39616003c64'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b57a841a_67c8_4b54_ac0e_3d92c7791133'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.185'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=23fe9be0f05189125804fbef624dcddc'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.215466] (-) TimerEvent: {}
+[0.317351] (-) TimerEvent: {}
+[0.418329] (-) TimerEvent: {}
+[0.519676] (-) TimerEvent: {}
+[0.620552] (-) TimerEvent: {}
+[0.721638] (-) TimerEvent: {}
+[0.822210] (-) TimerEvent: {}
+[0.923068] (-) TimerEvent: {}
+[1.024221] (-) TimerEvent: {}
+[1.125200] (-) TimerEvent: {}
+[1.225995] (-) TimerEvent: {}
+[1.294325] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[  2%] Built target dynamixel_sdk_custom_interfaces__cpp\n'}
+[1.326306] (-) TimerEvent: {}
+[1.427250] (-) TimerEvent: {}
+[1.453484] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 12%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c\n'}
+[1.527462] (-) TimerEvent: {}
+[1.628419] (-) TimerEvent: {}
+[1.635294] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 23%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp\n'}
+[1.684276] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 33%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[1.728573] (-) TimerEvent: {}
+[1.738615] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 43%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[1.757280] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 53%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[1.828777] (-) TimerEvent: {}
+[1.851305] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 64%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c\n'}
+[1.928928] (-) TimerEvent: {}
+[1.929837] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 74%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[2.023679] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 74%] Built target dynamixel_sdk_custom_interfaces\n'}
+[2.029051] (-) TimerEvent: {}
+[2.129551] (-) TimerEvent: {}
+[2.134234] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 76%] Built target dynamixel_sdk_custom_interfaces__py\n'}
+[2.229665] (-) TimerEvent: {}
+[2.330070] (-) TimerEvent: {}
+[2.335867] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 84%] Built target dynamixel_sdk_custom_interfaces__python\n'}
+[2.430162] (-) TimerEvent: {}
+[2.460783] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 89%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.461177] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 94%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext\n'}
+[2.463484] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[2.477315] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[2.530261] (-) TimerEvent: {}
+[2.540771] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'install'}
+[2.551907] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces'], 'cwd': '/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1876'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1669'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=23fe9be0f05189125804fbef624dcddc'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:47794'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1916,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1916'), ('INVOCATION_ID', '506b5bb70d8844a38391e39616003c64'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b57a841a_67c8_4b54_ac0e_3d92c7791133'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.185'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=23fe9be0f05189125804fbef624dcddc'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[2.609894] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.614971] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[2.630857] (-) TimerEvent: {}
+[2.651365] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[2.703788] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/decision.h\n'}
+[2.705604] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__functions.h\n'}
+[2.707274] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__struct.h\n'}
+[2.708933] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__type_support.h\n'}
+[2.710489] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.h\n'}
+[2.711979] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.h\n'}
+[2.713511] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.h\n'}
+[2.714995] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__functions.h\n'}
+[2.716451] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__struct.h\n'}
+[2.717951] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__type_support.h\n'}
+[2.719420] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__functions.h\n'}
+[2.720910] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__struct.h\n'}
+[2.722425] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__type_support.h\n'}
+[2.723809] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.725300] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.h\n'}
+[2.726704] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position_original.h\n'}
+[2.728161] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position_sync.h\n'}
+[2.729800] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.h\n'}
+[2.730878] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.h\n'}
+[2.731216] (-) TimerEvent: {}
+[2.731757] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.h\n'}
+[2.732786] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.h\n'}
+[2.734296] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.sh\n'}
+[2.735490] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.dsv\n'}
+[2.763923] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__rosidl_typesupport_fastrtps_c.h\n'}
+[2.764541] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_c.h\n'}
+[2.765185] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__rosidl_typesupport_fastrtps_c.h\n'}
+[2.765933] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__rosidl_typesupport_fastrtps_c.h\n'}
+[2.766674] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.767363] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_c.h\n'}
+[2.780599] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[2.800148] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.802123] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.804054] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.805991] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.807885] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.809862] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.813616] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.819238] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__rosidl_typesupport_introspection_c.h\n'}
+[2.821223] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h\n'}
+[2.823086] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__rosidl_typesupport_introspection_c.h\n'}
+[2.825045] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__rosidl_typesupport_introspection_c.h\n'}
+[2.826268] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.827338] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h\n'}
+[2.831338] (-) TimerEvent: {}
+[2.832057] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/decision.hpp\n'}
+[2.832872] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__builder.hpp\n'}
+[2.833622] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__struct.hpp\n'}
+[2.834386] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__traits.hpp\n'}
+[2.835138] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp\n'}
+[2.835800] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp\n'}
+[2.836403] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp\n'}
+[2.837012] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__builder.hpp\n'}
+[2.837613] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__struct.hpp\n'}
+[2.838218] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__traits.hpp\n'}
+[2.838828] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__builder.hpp\n'}
+[2.839411] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__struct.hpp\n'}
+[2.840021] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__traits.hpp\n'}
+[2.840558] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp\n'}
+[2.841052] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp\n'}
+[2.841547] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position_sync.hpp\n'}
+[2.842037] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp\n'}
+[2.842486] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp\n'}
+[2.842933] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp\n'}
+[2.843325] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.hpp\n'}
+[2.844862] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.845353] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.845730] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.846091] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.846460] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.846996] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.sh\n'}
+[2.847457] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.dsv\n'}
+[2.847996] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/__init__.py\n'}
+[2.848975] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/__init__.py\n'}
+[2.849338] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_decision.py\n'}
+[2.849729] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position.py\n'}
+[2.850090] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position_original.py\n'}
+[2.850495] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position_sync.py\n'}
+[2.851268] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[2.851964] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[2.852651] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[2.853371] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__python.so\n'}
+[2.853961] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl\n'}
+[2.854412] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/Decision.idl\n'}
+[2.854876] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg\n'}
+[2.855276] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/Decision.msg\n'}
+[2.855854] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_custom_interfaces\n'}
+[2.856515] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_custom_interfaces\n'}
+[2.856993] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.sh\n'}
+[2.857480] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.dsv\n'}
+[2.858045] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.sh\n'}
+[2.865641] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.dsv\n'}
+[2.866266] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.bash\n'}
+[2.866901] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.sh\n'}
+[2.867411] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.zsh\n'}
+[2.867906] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.dsv\n'}
+[2.868279] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv\n'}
+[2.914473] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/packages/dynamixel_sdk_custom_interfaces\n'}
+[2.915437] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[2.916137] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.916775] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.922617] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.923335] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.924029] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[2.924691] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.925477] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig.cmake\n'}
+[2.925957] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig-version.cmake\n'}
+[2.926623] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.xml\n'}
+[2.931591] (-) TimerEvent: {}
+[2.933791] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so\n'}
+[2.937339] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[2.940719] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so\n'}
+[2.944611] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[2.948183] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so\n'}
+[3.030490] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport.cmake\n'}
+[3.031835] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.032625] (-) TimerEvent: {}
+[3.033777] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.034863] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.036923] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[3.038055] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.040067] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cppExport.cmake\n'}
+[3.042598] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.043775] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.045945] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[3.046890] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.059499] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[3.133092] (-) TimerEvent: {}
+[3.234896] (-) TimerEvent: {}
+[3.336858] (-) TimerEvent: {}
+[3.440149] (-) TimerEvent: {}
+[3.541498] (-) TimerEvent: {}
+[3.548560] (dynamixel_sdk_custom_interfaces) JobEnded: {'identifier': 'dynamixel_sdk_custom_interfaces', 'rc': 0}
+[3.549989] (control) JobStarted: {'identifier': 'control'}
+[3.613094] (control) JobProgress: {'identifier': 'control', 'progress': 'cmake'}
+[3.641827] (-) TimerEvent: {}
+[3.648740] (control) JobProgress: {'identifier': 'control', 'progress': 'build'}
+[3.658103] (control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robofei/ROS2/action/build/control', '--', '-j4', '-l4'], 'cwd': '/home/robofei/ROS2/action/build/control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1876'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1669'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=23fe9be0f05189125804fbef624dcddc'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:47794'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1916,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1916'), ('INVOCATION_ID', '506b5bb70d8844a38391e39616003c64'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b57a841a_67c8_4b54_ac0e_3d92c7791133'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.185'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/ROS2/action/build/control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=23fe9be0f05189125804fbef624dcddc'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy')]), 'shell': False}
+[3.741956] (-) TimerEvent: {}
+[3.842889] (-) TimerEvent: {}
+[3.944231] (-) TimerEvent: {}
+[4.044635] (-) TimerEvent: {}
+[4.145928] (-) TimerEvent: {}
+[4.202773] (control) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target control\x1b[0m\n'}
+[4.246233] (-) TimerEvent: {}
+[4.347039] (-) TimerEvent: {}
+[4.367186] (control) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o\x1b[0m\n'}
+[4.447814] (-) TimerEvent: {}
+[4.549248] (-) TimerEvent: {}
+[4.650174] (-) TimerEvent: {}
+[4.751450] (-) TimerEvent: {}
+[4.851959] (-) TimerEvent: {}
+[4.952759] (-) TimerEvent: {}
+[5.053311] (-) TimerEvent: {}
+[5.154321] (-) TimerEvent: {}
+[5.255249] (-) TimerEvent: {}
+[5.356187] (-) TimerEvent: {}
+[5.457104] (-) TimerEvent: {}
+[5.558035] (-) TimerEvent: {}
+[5.658916] (-) TimerEvent: {}
+[5.759373] (-) TimerEvent: {}
+[5.860275] (-) TimerEvent: {}
+[5.961191] (-) TimerEvent: {}
+[6.062126] (-) TimerEvent: {}
+[6.163435] (-) TimerEvent: {}
+[6.263800] (-) TimerEvent: {}
+[6.364149] (-) TimerEvent: {}
+[6.464484] (-) TimerEvent: {}
+[6.564876] (-) TimerEvent: {}
+[6.665202] (-) TimerEvent: {}
+[6.765546] (-) TimerEvent: {}
+[6.865871] (-) TimerEvent: {}
+[6.966205] (-) TimerEvent: {}
+[7.066596] (-) TimerEvent: {}
+[7.166899] (-) TimerEvent: {}
+[7.267216] (-) TimerEvent: {}
+[7.367529] (-) TimerEvent: {}
+[7.399617] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Control::topic_callback(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> > >) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.399808] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:70:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kmktime\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.399890] (control) StderrLine: {'line': b'   70 |           if(\x1b[01;31m\x1b[Km_Time\x1b[m\x1b[K == 0)\n'}
+[7.399958] (control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[7.400023] (control) StderrLine: {'line': b'      |              \x1b[32m\x1b[Kmktime\x1b[m\x1b[K\n'}
+[7.403957] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:72:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kupdate_param_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.404121] (control) StderrLine: {'line': b'   72 |               \x1b[01;31m\x1b[Kupdate_param_time\x1b[m\x1b[K();\n'}
+[7.404200] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.406076] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:73:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Phase\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.406222] (control) StderrLine: {'line': b'   73 |               \x1b[01;31m\x1b[Km_Phase\x1b[m\x1b[K = PHASE0;\n'}
+[7.406302] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.407841] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:73:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPHASE0\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.407987] (control) StderrLine: {'line': b'   73 |               m_Phase = \x1b[01;31m\x1b[KPHASE0\x1b[m\x1b[K;\n'}
+[7.408065] (control) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[7.411311] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:74:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Ctrl_Running\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.411471] (control) StderrLine: {'line': b'   74 |               if(\x1b[01;31m\x1b[Km_Ctrl_Running\x1b[m\x1b[K == false)\n'}
+[7.411546] (control) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.415657] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:76:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.415805] (control) StderrLine: {'line': b'   76 |                   if(\x1b[01;31m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K == 0 && m_Y_Move_Amplitude == 0 && m_A_Move_Amplitude == 0)\n'}
+[7.415884] (control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.419884] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:76:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.420026] (control) StderrLine: {'line': b'   76 |                   if(m_X_Move_Amplitude == 0 && \x1b[01;31m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K == 0 && m_A_Move_Amplitude == 0)\n'}
+[7.420103] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.424056] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:76:76:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.424195] (control) StderrLine: {'line': b'   76 |     if(m_X_Move_Amplitude == 0 && m_Y_Move_Amplitude == 0 && \x1b[01;31m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K == 0)\n'}
+[7.424273] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.424340] (control) StderrLine: {'line': b'\n'}
+[7.427295] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:78:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Real_Running\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.427434] (control) StderrLine: {'line': b'   78 |                       \x1b[01;31m\x1b[Km_Real_Running\x1b[m\x1b[K = false;\n'}
+[7.427513] (control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.431277] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:82:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KX_MOVE_AMPLITUDE\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.431417] (control) StderrLine: {'line': b'   82 |                       \x1b[01;31m\x1b[KX_MOVE_AMPLITUDE\x1b[m\x1b[K = 0;\n'}
+[7.431492] (control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.435206] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:83:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KY_MOVE_AMPLITUDE\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.435343] (control) StderrLine: {'line': b'   83 |                       \x1b[01;31m\x1b[KY_MOVE_AMPLITUDE\x1b[m\x1b[K = 0;\n'}
+[7.435431] (control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.439172] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:84:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KA_MOVE_AMPLITUDE\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.439310] (control) StderrLine: {'line': b'   84 |                       \x1b[01;31m\x1b[KA_MOVE_AMPLITUDE\x1b[m\x1b[K = 0;\n'}
+[7.439387] (control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.442400] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:88:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Phase_Time1\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.442554] (control) StderrLine: {'line': b'   88 |           else if(m_Time >= (\x1b[01;31m\x1b[Km_Phase_Time1\x1b[m\x1b[K - TIME_UNIT/2) && m_Time < (m_Phase_Time1 + TIME_UNIT/2))\n'}
+[7.442633] (control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.446500] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:90:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kupdate_param_move\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.446638] (control) StderrLine: {'line': b'   90 |               \x1b[01;31m\x1b[Kupdate_param_move\x1b[m\x1b[K();\n'}
+[7.446716] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.448468] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:91:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Phase\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.448600] (control) StderrLine: {'line': b'   91 |               \x1b[01;31m\x1b[Km_Phase\x1b[m\x1b[K = PHASE1;\n'}
+[7.448677] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.450224] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:91:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPHASE1\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.450357] (control) StderrLine: {'line': b'   91 |               m_Phase = \x1b[01;31m\x1b[KPHASE1\x1b[m\x1b[K;\n'}
+[7.450431] (control) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[7.453399] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:93:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Phase_Time2\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.453538] (control) StderrLine: {'line': b'   93 |           else if(m_Time >= (\x1b[01;31m\x1b[Km_Phase_Time2\x1b[m\x1b[K - TIME_UNIT/2) && m_Time < (m_Phase_Time2 + TIME_UNIT/2))\n'}
+[7.453617] (control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.457453] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:95:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kupdate_param_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.457592] (control) StderrLine: {'line': b'   95 |               \x1b[01;31m\x1b[Kupdate_param_time\x1b[m\x1b[K();\n'}
+[7.457677] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.459408] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:97:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Phase\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.459555] (control) StderrLine: {'line': b'   97 |               \x1b[01;31m\x1b[Km_Phase\x1b[m\x1b[K = PHASE2;\n'}
+[7.459632] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.461286] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:97:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPHASE2\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.461424] (control) StderrLine: {'line': b'   97 |               m_Phase = \x1b[01;31m\x1b[KPHASE2\x1b[m\x1b[K;\n'}
+[7.461502] (control) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[7.464696] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:98:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Ctrl_Running\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.464846] (control) StderrLine: {'line': b'   98 |               if(\x1b[01;31m\x1b[Km_Ctrl_Running\x1b[m\x1b[K == false)\n'}
+[7.464925] (control) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.467648] (-) TimerEvent: {}
+[7.468901] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:100:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.469036] (control) StderrLine: {'line': b'  100 |                   if(\x1b[01;31m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K == 0 && m_Y_Move_Amplitude == 0 && m_A_Move_Amplitude == 0)\n'}
+[7.469127] (control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.473085] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:100:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.473224] (control) StderrLine: {'line': b'  100 |                   if(m_X_Move_Amplitude == 0 && \x1b[01;31m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K == 0 && m_A_Move_Amplitude == 0)\n'}
+[7.473302] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.477203] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:100:76:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.477343] (control) StderrLine: {'line': b'  100 |     if(m_X_Move_Amplitude == 0 && m_Y_Move_Amplitude == 0 && \x1b[01;31m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K == 0)\n'}
+[7.477424] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.477493] (control) StderrLine: {'line': b'\n'}
+[7.480469] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:102:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Real_Running\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.480609] (control) StderrLine: {'line': b'  102 |                       \x1b[01;31m\x1b[Km_Real_Running\x1b[m\x1b[K = false;\n'}
+[7.480687] (control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.484398] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:106:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KX_MOVE_AMPLITUDE\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.484546] (control) StderrLine: {'line': b'  106 |                       \x1b[01;31m\x1b[KX_MOVE_AMPLITUDE\x1b[m\x1b[K = 0;\n'}
+[7.484630] (control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.488311] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:107:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KY_MOVE_AMPLITUDE\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.488448] (control) StderrLine: {'line': b'  107 |                       \x1b[01;31m\x1b[KY_MOVE_AMPLITUDE\x1b[m\x1b[K = 0;\n'}
+[7.488526] (control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.492223] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:108:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KA_MOVE_AMPLITUDE\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.492358] (control) StderrLine: {'line': b'  108 |                       \x1b[01;31m\x1b[KA_MOVE_AMPLITUDE\x1b[m\x1b[K = 0;\n'}
+[7.492436] (control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.495607] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:112:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Phase_Time3\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.495772] (control) StderrLine: {'line': b'  112 |           else if(m_Time >= (\x1b[01;31m\x1b[Km_Phase_Time3\x1b[m\x1b[K - TIME_UNIT/2) && m_Time < (m_Phase_Time3 + TIME_UNIT/2))\n'}
+[7.495849] (control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.499748] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:114:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kupdate_param_move\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.499889] (control) StderrLine: {'line': b'  114 |               \x1b[01;31m\x1b[Kupdate_param_move\x1b[m\x1b[K();\n'}
+[7.499969] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.501879] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:115:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Phase\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.502043] (control) StderrLine: {'line': b'  115 |               \x1b[01;31m\x1b[Km_Phase\x1b[m\x1b[K = PHASE3;\n'}
+[7.502123] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.504148] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:115:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPHASE3\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.504312] (control) StderrLine: {'line': b'  115 |               m_Phase = \x1b[01;31m\x1b[KPHASE3\x1b[m\x1b[K;\n'}
+[7.504393] (control) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[7.509424] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:117:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kupdate_param_balance\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.509571] (control) StderrLine: {'line': b'  117 |           \x1b[01;31m\x1b[Kupdate_param_balance\x1b[m\x1b[K();\n'}
+[7.509649] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.511029] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:120:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kmktime\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.511180] (control) StderrLine: {'line': b'  120 |           x_swap = wsin(\x1b[01;31m\x1b[Km_Time\x1b[m\x1b[K, m_X_Swap_PeriodTime, m_X_Swap_Phase_Shift, m_X_Swap_Amplitude, m_X_Swap_Amplitude_Shift);\n'}
+[7.511267] (control) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[7.511336] (control) StderrLine: {'line': b'      |                         \x1b[32m\x1b[Kmktime\x1b[m\x1b[K\n'}
+[7.515827] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:120:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Swap_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.515980] (control) StderrLine: {'line': b'  120 |           x_swap = wsin(m_Time, \x1b[01;31m\x1b[Km_X_Swap_PeriodTime\x1b[m\x1b[K, m_X_Swap_Phase_Shift, m_X_Swap_Amplitude, m_X_Swap_Amplitude_Shift);\n'}
+[7.516055] (control) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.520928] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:120:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Swap_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.521079] (control) StderrLine: {'line': b'  120 |           x_swap = wsin(m_Time, m_X_Swap_PeriodTime, \x1b[01;31m\x1b[Km_X_Swap_Phase_Shift\x1b[m\x1b[K, m_X_Swap_Amplitude, m_X_Swap_Amplitude_Shift);\n'}
+[7.521158] (control) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.525290] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:120:76:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Swap_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.525446] (control) StderrLine: {'line': b'  120 | ap = wsin(m_Time, m_X_Swap_PeriodTime, m_X_Swap_Phase_Shift, \x1b[01;31m\x1b[Km_X_Swap_Amplitude\x1b[m\x1b[K, m_X_Swap_Amplitude_Shift);\n'}
+[7.525541] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.525609] (control) StderrLine: {'line': b'\n'}
+[7.531367] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:120:96:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Swap_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.531525] (control) StderrLine: {'line': b'  120 | X_Swap_PeriodTime, m_X_Swap_Phase_Shift, m_X_Swap_Amplitude, \x1b[01;31m\x1b[Km_X_Swap_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.531604] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.531672] (control) StderrLine: {'line': b'\n'}
+[7.532635] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:120:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwsin\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksin\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.532770] (control) StderrLine: {'line': b'  120 |           x_swap = \x1b[01;31m\x1b[Kwsin\x1b[m\x1b[K(m_Time, m_X_Swap_PeriodTime, m_X_Swap_Phase_Shift, m_X_Swap_Amplitude, m_X_Swap_Amplitude_Shift);\n'}
+[7.532875] (control) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[7.532947] (control) StderrLine: {'line': b'      |                    \x1b[32m\x1b[Ksin\x1b[m\x1b[K\n'}
+[7.537382] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:121:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Swap_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.537522] (control) StderrLine: {'line': b'  121 |           y_swap = wsin(m_Time, \x1b[01;31m\x1b[Km_Y_Swap_PeriodTime\x1b[m\x1b[K, m_Y_Swap_Phase_Shift, m_Y_Swap_Amplitude, m_Y_Swap_Amplitude_Shift);\n'}
+[7.537613] (control) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.542445] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:121:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Swap_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.544810] (control) StderrLine: {'line': b'  121 |           y_swap = wsin(m_Time, m_Y_Swap_PeriodTime, \x1b[01;31m\x1b[Km_Y_Swap_Phase_Shift\x1b[m\x1b[K, m_Y_Swap_Amplitude, m_Y_Swap_Amplitude_Shift);\n'}
+[7.544898] (control) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.546963] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:121:76:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Swap_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.547096] (control) StderrLine: {'line': b'  121 | ap = wsin(m_Time, m_Y_Swap_PeriodTime, m_Y_Swap_Phase_Shift, \x1b[01;31m\x1b[Km_Y_Swap_Amplitude\x1b[m\x1b[K, m_Y_Swap_Amplitude_Shift);\n'}
+[7.547174] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.547243] (control) StderrLine: {'line': b'\n'}
+[7.553057] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:121:96:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Swap_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.553198] (control) StderrLine: {'line': b'  121 | Y_Swap_PeriodTime, m_Y_Swap_Phase_Shift, m_Y_Swap_Amplitude, \x1b[01;31m\x1b[Km_Y_Swap_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.553289] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.553358] (control) StderrLine: {'line': b'\n'}
+[7.557748] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Swap_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.557902] (control) StderrLine: {'line': b'  122 |           z_swap = wsin(m_Time, \x1b[01;31m\x1b[Km_Z_Swap_PeriodTime\x1b[m\x1b[K, m_Z_Swap_Phase_Shift, m_Z_Swap_Amplitude, m_Z_Swap_Amplitude_Shift);\n'}
+[7.557979] (control) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.562841] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Swap_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.562987] (control) StderrLine: {'line': b'  122 |           z_swap = wsin(m_Time, m_Z_Swap_PeriodTime, \x1b[01;31m\x1b[Km_Z_Swap_Phase_Shift\x1b[m\x1b[K, m_Z_Swap_Amplitude, m_Z_Swap_Amplitude_Shift);\n'}
+[7.563066] (control) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.567119] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:76:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Swap_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.567277] (control) StderrLine: {'line': b'  122 | ap = wsin(m_Time, m_Z_Swap_PeriodTime, m_Z_Swap_Phase_Shift, \x1b[01;31m\x1b[Km_Z_Swap_Amplitude\x1b[m\x1b[K, m_Z_Swap_Amplitude_Shift);\n'}
+[7.567354] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.567436] (control) StderrLine: {'line': b'\n'}
+[7.567746] (-) TimerEvent: {}
+[7.573119] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:96:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Swap_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.573264] (control) StderrLine: {'line': b'  122 | Z_Swap_PeriodTime, m_Z_Swap_Phase_Shift, m_Z_Swap_Amplitude, \x1b[01;31m\x1b[Km_Z_Swap_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.573342] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.573411] (control) StderrLine: {'line': b'\n'}
+[7.577428] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:127:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_SSP_Time_Start_L\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.577583] (control) StderrLine: {'line': b'  127 |           if(m_Time <= \x1b[01;31m\x1b[Km_SSP_Time_Start_L\x1b[m\x1b[K)\n'}
+[7.577665] (control) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.582117] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:129:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.582257] (control) StderrLine: {'line': b'  129 |               x_move_l = wsin(m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_X_Move_PeriodTime\x1b[m\x1b[K, m_X_Move_Phase_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.582335] (control) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.587151] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:129:72:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.587289] (control) StderrLine: {'line': b'  129 |     x_move_l = wsin(m_SSP_Time_Start_L, m_X_Move_PeriodTime, \x1b[01;31m\x1b[Km_X_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.587369] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.587437] (control) StderrLine: {'line': b'\n'}
+[7.588292] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:129:99:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPI\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.588424] (control) StderrLine: {'line': b'  129 | ime_Start_L, m_X_Move_PeriodTime, m_X_Move_Phase_Shift + 2 * \x1b[01;31m\x1b[KPI\x1b[m\x1b[K / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.588504] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[7.588572] (control) StderrLine: {'line': b'\n'}
+[7.592553] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:129:146:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.592691] (control) StderrLine: {'line': b'  129 | e_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K, m_X_Move_Amplitude_Shift);\n'}
+[7.592771] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.592873] (control) StderrLine: {'line': b'\n'}
+[7.598838] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:129:166:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.599001] (control) StderrLine: {'line': b'  129 | _X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, \x1b[01;31m\x1b[Km_X_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.599077] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.599146] (control) StderrLine: {'line': b'\n'}
+[7.604344] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:130:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.604508] (control) StderrLine: {'line': b'  130 |               y_move_l = wsin(m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_Y_Move_PeriodTime\x1b[m\x1b[K, m_Y_Move_Phase_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);\n'}
+[7.604587] (control) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.609665] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:130:72:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.609791] (control) StderrLine: {'line': b'  130 |     y_move_l = wsin(m_SSP_Time_Start_L, m_Y_Move_PeriodTime, \x1b[01;31m\x1b[Km_Y_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);\n'}
+[7.609864] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.609931] (control) StderrLine: {'line': b'\n'}
+[7.613896] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:130:146:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.614034] (control) StderrLine: {'line': b'  130 | e_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K, m_Y_Move_Amplitude_Shift);\n'}
+[7.614113] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.614183] (control) StderrLine: {'line': b'\n'}
+[7.620054] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:130:166:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.620204] (control) StderrLine: {'line': b'  130 | _Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, \x1b[01;31m\x1b[Km_Y_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.620293] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.620371] (control) StderrLine: {'line': b'\n'}
+[7.624806] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:131:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.624949] (control) StderrLine: {'line': b'  131 |               z_move_l = wsin(m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_Z_Move_PeriodTime\x1b[m\x1b[K, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);\n'}
+[7.625038] (control) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.629822] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:131:72:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.629958] (control) StderrLine: {'line': b'  131 |     z_move_l = wsin(m_SSP_Time_Start_L, m_Z_Move_PeriodTime, \x1b[01;31m\x1b[Km_Z_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);\n'}
+[7.630038] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.630112] (control) StderrLine: {'line': b'\n'}
+[7.634048] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:131:146:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.634185] (control) StderrLine: {'line': b'  131 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_Z_Move_Amplitude\x1b[m\x1b[K, m_Z_Move_Amplitude_Shift);\n'}
+[7.634264] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.634332] (control) StderrLine: {'line': b'\n'}
+[7.639996] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:131:166:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.640148] (control) StderrLine: {'line': b'  131 | _Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, \x1b[01;31m\x1b[Km_Z_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.640227] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.640295] (control) StderrLine: {'line': b'\n'}
+[7.644683] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:132:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.644833] (control) StderrLine: {'line': b'  132 |               c_move_l = wsin(m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_A_Move_PeriodTime\x1b[m\x1b[K, m_A_Move_Phase_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);\n'}
+[7.644919] (control) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.649681] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:132:72:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.649821] (control) StderrLine: {'line': b'  132 |     c_move_l = wsin(m_SSP_Time_Start_L, m_A_Move_PeriodTime, \x1b[01;31m\x1b[Km_A_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);\n'}
+[7.649901] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.649969] (control) StderrLine: {'line': b'\n'}
+[7.653828] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:132:146:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.653964] (control) StderrLine: {'line': b'  132 | e_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K, m_A_Move_Amplitude_Shift);\n'}
+[7.654053] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.654120] (control) StderrLine: {'line': b'\n'}
+[7.659745] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:132:166:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.659878] (control) StderrLine: {'line': b'  132 | _A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, \x1b[01;31m\x1b[Km_A_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.659955] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.660023] (control) StderrLine: {'line': b'\n'}
+[7.664028] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:135:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_SSP_Time_Start_R\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.664165] (control) StderrLine: {'line': b'  135 |               z_move_r = wsin(\x1b[01;31m\x1b[Km_SSP_Time_Start_R\x1b[m\x1b[K, m_Z_Move_PeriodTime, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_R, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);\n'}
+[7.664255] (control) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.667877] (-) TimerEvent: {}
+[7.668342] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:140:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_SSP_Time_End_L\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.668544] (control) StderrLine: {'line': b'  140 |           else if(m_Time <= \x1b[01;31m\x1b[Km_SSP_Time_End_L\x1b[m\x1b[K)\n'}
+[7.668655] (control) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.673153] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:142:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.673336] (control) StderrLine: {'line': b'  142 |               x_move_l = wsin(m_Time, \x1b[01;31m\x1b[Km_X_Move_PeriodTime\x1b[m\x1b[K, m_X_Move_Phase_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.673444] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.678357] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:142:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.678506] (control) StderrLine: {'line': b'  142 |               x_move_l = wsin(m_Time, m_X_Move_PeriodTime, \x1b[01;31m\x1b[Km_X_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.678585] (control) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.679609] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:142:87:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPI\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.679754] (control) StderrLine: {'line': b'  142 | wsin(m_Time, m_X_Move_PeriodTime, m_X_Move_Phase_Shift + 2 * \x1b[01;31m\x1b[KPI\x1b[m\x1b[K / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.679839] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[7.679908] (control) StderrLine: {'line': b'\n'}
+[7.683816] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:142:134:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.683953] (control) StderrLine: {'line': b'  142 | e_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K, m_X_Move_Amplitude_Shift);\n'}
+[7.684031] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.684099] (control) StderrLine: {'line': b'\n'}
+[7.689796] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:142:154:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.689935] (control) StderrLine: {'line': b'  142 | _X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, \x1b[01;31m\x1b[Km_X_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.690013] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.690082] (control) StderrLine: {'line': b'\n'}
+[7.694706] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:143:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.694866] (control) StderrLine: {'line': b'  143 |               y_move_l = wsin(m_Time, \x1b[01;31m\x1b[Km_Y_Move_PeriodTime\x1b[m\x1b[K, m_Y_Move_Phase_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);\n'}
+[7.694945] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.699830] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:143:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.699974] (control) StderrLine: {'line': b'  143 |               y_move_l = wsin(m_Time, m_Y_Move_PeriodTime, \x1b[01;31m\x1b[Km_Y_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);\n'}
+[7.700052] (control) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.704622] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:143:134:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.704785] (control) StderrLine: {'line': b'  143 | e_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K, m_Y_Move_Amplitude_Shift);\n'}
+[7.704880] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.704949] (control) StderrLine: {'line': b'\n'}
+[7.710655] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:143:154:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.710797] (control) StderrLine: {'line': b'  143 | _Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, \x1b[01;31m\x1b[Km_Y_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.710893] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.710966] (control) StderrLine: {'line': b'\n'}
+[7.715349] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:144:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.715530] (control) StderrLine: {'line': b'  144 |               z_move_l = wsin(m_Time, \x1b[01;31m\x1b[Km_Z_Move_PeriodTime\x1b[m\x1b[K, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);\n'}
+[7.715609] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.720510] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:144:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.720666] (control) StderrLine: {'line': b'  144 |               z_move_l = wsin(m_Time, m_Z_Move_PeriodTime, \x1b[01;31m\x1b[Km_Z_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);\n'}
+[7.720744] (control) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.724738] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:144:134:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.724895] (control) StderrLine: {'line': b'  144 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_Z_Move_Amplitude\x1b[m\x1b[K, m_Z_Move_Amplitude_Shift);\n'}
+[7.724974] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.725042] (control) StderrLine: {'line': b'\n'}
+[7.730715] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:144:154:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.730850] (control) StderrLine: {'line': b'  144 | _Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, \x1b[01;31m\x1b[Km_Z_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.730928] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.730996] (control) StderrLine: {'line': b'\n'}
+[7.735374] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:145:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.735513] (control) StderrLine: {'line': b'  145 |               c_move_l = wsin(m_Time, \x1b[01;31m\x1b[Km_A_Move_PeriodTime\x1b[m\x1b[K, m_A_Move_Phase_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);\n'}
+[7.735592] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.740421] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:145:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.740559] (control) StderrLine: {'line': b'  145 |               c_move_l = wsin(m_Time, m_A_Move_PeriodTime, \x1b[01;31m\x1b[Km_A_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);\n'}
+[7.740670] (control) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.744590] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:145:134:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.744727] (control) StderrLine: {'line': b'  145 | e_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K, m_A_Move_Amplitude_Shift);\n'}
+[7.744815] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.744888] (control) StderrLine: {'line': b'\n'}
+[7.750530] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:145:154:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.750663] (control) StderrLine: {'line': b'  145 | _A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, \x1b[01;31m\x1b[Km_A_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.750739] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.750806] (control) StderrLine: {'line': b'\n'}
+[7.754805] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:148:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_SSP_Time_Start_R\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.754940] (control) StderrLine: {'line': b'  148 |               z_move_r = wsin(\x1b[01;31m\x1b[Km_SSP_Time_Start_R\x1b[m\x1b[K, m_Z_Move_PeriodTime, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_R, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);\n'}
+[7.755031] (control) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.758261] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:150:141:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Pelvis_Swing\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.758411] (control) StderrLine: {'line': b'  150 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_Pelvis_Swing\x1b[m\x1b[K / 2, m_Pelvis_Swing / 2);\n'}
+[7.758489] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.758556] (control) StderrLine: {'line': b'\n'}
+[7.761439] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:151:142:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Pelvis_Offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.761574] (control) StderrLine: {'line': b'  151 | _Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, -\x1b[01;31m\x1b[Km_Pelvis_Offset\x1b[m\x1b[K / 2, -m_Pelvis_Offset / 2);\n'}
+[7.761652] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.761732] (control) StderrLine: {'line': b'\n'}
+[7.765713] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:153:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_SSP_Time_Start_R\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.765850] (control) StderrLine: {'line': b'  153 |           else if(m_Time <= \x1b[01;31m\x1b[Km_SSP_Time_Start_R\x1b[m\x1b[K)\n'}
+[7.765929] (control) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.768058] (-) TimerEvent: {}
+[7.770640] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:155:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.770781] (control) StderrLine: {'line': b'  155 |               x_move_l = wsin(m_SSP_Time_End_L, \x1b[01;31m\x1b[Km_X_Move_PeriodTime\x1b[m\x1b[K, m_X_Move_Phase_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.770860] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.775732] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:155:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.775869] (control) StderrLine: {'line': b'  155 |       x_move_l = wsin(m_SSP_Time_End_L, m_X_Move_PeriodTime, \x1b[01;31m\x1b[Km_X_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.775947] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.776015] (control) StderrLine: {'line': b'\n'}
+[7.776931] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:155:97:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPI\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.777065] (control) StderrLine: {'line': b'  155 | _Time_End_L, m_X_Move_PeriodTime, m_X_Move_Phase_Shift + 2 * \x1b[01;31m\x1b[KPI\x1b[m\x1b[K / m_X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.777143] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[7.777212] (control) StderrLine: {'line': b'\n'}
+[7.781224] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:155:144:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.781364] (control) StderrLine: {'line': b'  155 | e_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K, m_X_Move_Amplitude_Shift);\n'}
+[7.781441] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.781509] (control) StderrLine: {'line': b'\n'}
+[7.787167] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:155:164:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.787304] (control) StderrLine: {'line': b'  155 | _X_Move_PeriodTime * m_SSP_Time_Start_L, m_X_Move_Amplitude, \x1b[01;31m\x1b[Km_X_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.787381] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.787448] (control) StderrLine: {'line': b'\n'}
+[7.791989] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:156:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.792136] (control) StderrLine: {'line': b'  156 |               y_move_l = wsin(m_SSP_Time_End_L, \x1b[01;31m\x1b[Km_Y_Move_PeriodTime\x1b[m\x1b[K, m_Y_Move_Phase_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);\n'}
+[7.792228] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.797364] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:156:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.797525] (control) StderrLine: {'line': b'  156 |       y_move_l = wsin(m_SSP_Time_End_L, m_Y_Move_PeriodTime, \x1b[01;31m\x1b[Km_Y_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);\n'}
+[7.797622] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.797691] (control) StderrLine: {'line': b'\n'}
+[7.801787] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:156:144:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.802033] (control) StderrLine: {'line': b'  156 | e_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K, m_Y_Move_Amplitude_Shift);\n'}
+[7.802179] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.802299] (control) StderrLine: {'line': b'\n'}
+[7.808071] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:156:164:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.808251] (control) StderrLine: {'line': b'  156 | _Y_Move_PeriodTime * m_SSP_Time_Start_L, m_Y_Move_Amplitude, \x1b[01;31m\x1b[Km_Y_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.808354] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.808450] (control) StderrLine: {'line': b'\n'}
+[7.812989] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:157:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.813166] (control) StderrLine: {'line': b'  157 |               z_move_l = wsin(m_SSP_Time_End_L, \x1b[01;31m\x1b[Km_Z_Move_PeriodTime\x1b[m\x1b[K, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);\n'}
+[7.813273] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.818155] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:157:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.818347] (control) StderrLine: {'line': b'  157 |       z_move_l = wsin(m_SSP_Time_End_L, m_Z_Move_PeriodTime, \x1b[01;31m\x1b[Km_Z_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);\n'}
+[7.818455] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.818554] (control) StderrLine: {'line': b'\n'}
+[7.822440] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:157:144:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.822619] (control) StderrLine: {'line': b'  157 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_Z_Move_Amplitude\x1b[m\x1b[K, m_Z_Move_Amplitude_Shift);\n'}
+[7.822742] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.822841] (control) StderrLine: {'line': b'\n'}
+[7.828750] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:157:164:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.828993] (control) StderrLine: {'line': b'  157 | _Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, \x1b[01;31m\x1b[Km_Z_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.829099] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.829197] (control) StderrLine: {'line': b'\n'}
+[7.833668] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:158:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.833848] (control) StderrLine: {'line': b'  158 |               c_move_l = wsin(m_SSP_Time_End_L, \x1b[01;31m\x1b[Km_A_Move_PeriodTime\x1b[m\x1b[K, m_A_Move_Phase_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);\n'}
+[7.833953] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.839090] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:158:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.839295] (control) StderrLine: {'line': b'  158 |       c_move_l = wsin(m_SSP_Time_End_L, m_A_Move_PeriodTime, \x1b[01;31m\x1b[Km_A_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);\n'}
+[7.839438] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.839549] (control) StderrLine: {'line': b'\n'}
+[7.843472] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:158:144:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.843654] (control) StderrLine: {'line': b'  158 | e_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K, m_A_Move_Amplitude_Shift);\n'}
+[7.843775] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.843880] (control) StderrLine: {'line': b'\n'}
+[7.849611] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:158:164:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.849812] (control) StderrLine: {'line': b'  158 | _A_Move_PeriodTime * m_SSP_Time_Start_L, m_A_Move_Amplitude, \x1b[01;31m\x1b[Km_A_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.849921] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.850019] (control) StderrLine: {'line': b'\n'}
+[7.853768] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:166:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_SSP_Time_End_R\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.853981] (control) StderrLine: {'line': b'  166 |           else if(m_Time <= \x1b[01;31m\x1b[Km_SSP_Time_End_R\x1b[m\x1b[K)\n'}
+[7.854122] (control) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.858534] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:168:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.858708] (control) StderrLine: {'line': b'  168 |               x_move_l = wsin(m_Time, \x1b[01;31m\x1b[Km_X_Move_PeriodTime\x1b[m\x1b[K, m_X_Move_Phase_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.858813] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.863675] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:168:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.863850] (control) StderrLine: {'line': b'  168 |               x_move_l = wsin(m_Time, m_X_Move_PeriodTime, \x1b[01;31m\x1b[Km_X_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.863969] (control) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.864881] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:168:87:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPI\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.865050] (control) StderrLine: {'line': b'  168 | wsin(m_Time, m_X_Move_PeriodTime, m_X_Move_Phase_Shift + 2 * \x1b[01;31m\x1b[KPI\x1b[m\x1b[K / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.865154] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[7.865251] (control) StderrLine: {'line': b'\n'}
+[7.868096] (-) TimerEvent: {}
+[7.869210] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:168:139:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.869429] (control) StderrLine: {'line': b'  168 | ft + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, \x1b[01;31m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K, m_X_Move_Amplitude_Shift);\n'}
+[7.869547] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.869641] (control) StderrLine: {'line': b'\n'}
+[7.875308] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:168:159:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.875479] (control) StderrLine: {'line': b'  168 | ve_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, \x1b[01;31m\x1b[Km_X_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.875584] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.875682] (control) StderrLine: {'line': b'\n'}
+[7.880099] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:169:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.880283] (control) StderrLine: {'line': b'  169 |               y_move_l = wsin(m_Time, \x1b[01;31m\x1b[Km_Y_Move_PeriodTime\x1b[m\x1b[K, m_Y_Move_Phase_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);\n'}
+[7.880405] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.885195] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:169:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.885371] (control) StderrLine: {'line': b'  169 |               y_move_l = wsin(m_Time, m_Y_Move_PeriodTime, \x1b[01;31m\x1b[Km_Y_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);\n'}
+[7.885478] (control) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.889347] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:169:139:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.889535] (control) StderrLine: {'line': b'  169 | ft + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_R + PI, \x1b[01;31m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K, m_Y_Move_Amplitude_Shift);\n'}
+[7.889650] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.889748] (control) StderrLine: {'line': b'\n'}
+[7.895472] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:169:159:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.895676] (control) StderrLine: {'line': b'  169 | ve_PeriodTime * m_SSP_Time_Start_R + PI, m_Y_Move_Amplitude, \x1b[01;31m\x1b[Km_Y_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.895781] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.895875] (control) StderrLine: {'line': b'\n'}
+[7.900278] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:170:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.900451] (control) StderrLine: {'line': b'  170 |               z_move_l = wsin(m_SSP_Time_End_L, \x1b[01;31m\x1b[Km_Z_Move_PeriodTime\x1b[m\x1b[K, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);\n'}
+[7.900558] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.905721] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:170:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.905923] (control) StderrLine: {'line': b'  170 |       z_move_l = wsin(m_SSP_Time_End_L, m_Z_Move_PeriodTime, \x1b[01;31m\x1b[Km_Z_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);\n'}
+[7.906030] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.906128] (control) StderrLine: {'line': b'\n'}
+[7.910010] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:170:144:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.910204] (control) StderrLine: {'line': b'  170 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_Z_Move_Amplitude\x1b[m\x1b[K, m_Z_Move_Amplitude_Shift);\n'}
+[7.910308] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.910405] (control) StderrLine: {'line': b'\n'}
+[7.916118] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:170:164:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.916307] (control) StderrLine: {'line': b'  170 | _Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, \x1b[01;31m\x1b[Km_Z_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.916414] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.916510] (control) StderrLine: {'line': b'\n'}
+[7.920971] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:171:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.921145] (control) StderrLine: {'line': b'  171 |               c_move_l = wsin(m_Time, \x1b[01;31m\x1b[Km_A_Move_PeriodTime\x1b[m\x1b[K, m_A_Move_Phase_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);\n'}
+[7.921251] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.926005] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:171:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.926180] (control) StderrLine: {'line': b'  171 |               c_move_l = wsin(m_Time, m_A_Move_PeriodTime, \x1b[01;31m\x1b[Km_A_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);\n'}
+[7.926284] (control) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.930217] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:171:139:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.930391] (control) StderrLine: {'line': b'  171 | ft + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_R + PI, \x1b[01;31m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K, m_A_Move_Amplitude_Shift);\n'}
+[7.930502] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.930611] (control) StderrLine: {'line': b'\n'}
+[7.936238] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:171:159:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.936411] (control) StderrLine: {'line': b'  171 | ve_PeriodTime * m_SSP_Time_Start_R + PI, m_A_Move_Amplitude, \x1b[01;31m\x1b[Km_A_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.936530] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.936633] (control) StderrLine: {'line': b'\n'}
+[7.939512] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:176:141:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Pelvis_Offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.939697] (control) StderrLine: {'line': b'  176 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_R, \x1b[01;31m\x1b[Km_Pelvis_Offset\x1b[m\x1b[K / 2, m_Pelvis_Offset / 2);\n'}
+[7.939804] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.939900] (control) StderrLine: {'line': b'\n'}
+[7.943002] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:177:142:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Pelvis_Swing\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.943173] (control) StderrLine: {'line': b'  177 | _Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_R, -\x1b[01;31m\x1b[Km_Pelvis_Swing\x1b[m\x1b[K / 2, -m_Pelvis_Swing / 2);\n'}
+[7.943279] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.943377] (control) StderrLine: {'line': b'\n'}
+[7.947689] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:181:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.947862] (control) StderrLine: {'line': b'  181 |               x_move_l = wsin(m_SSP_Time_End_R, \x1b[01;31m\x1b[Km_X_Move_PeriodTime\x1b[m\x1b[K, m_X_Move_Phase_Shift + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.947967] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.952723] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:181:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.952932] (control) StderrLine: {'line': b'  181 |       x_move_l = wsin(m_SSP_Time_End_R, m_X_Move_PeriodTime, \x1b[01;31m\x1b[Km_X_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.953039] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.953140] (control) StderrLine: {'line': b'\n'}
+[7.953962] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:181:97:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPI\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.954135] (control) StderrLine: {'line': b'  181 | _Time_End_R, m_X_Move_PeriodTime, m_X_Move_Phase_Shift + 2 * \x1b[01;31m\x1b[KPI\x1b[m\x1b[K / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, m_X_Move_Amplitude_Shift);\n'}
+[7.954237] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[7.954332] (control) StderrLine: {'line': b'\n'}
+[7.958202] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:181:149:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.958372] (control) StderrLine: {'line': b'  181 | ft + 2 * PI / m_X_Move_PeriodTime * m_SSP_Time_Start_R + PI, \x1b[01;31m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K, m_X_Move_Amplitude_Shift);\n'}
+[7.958475] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.958571] (control) StderrLine: {'line': b'\n'}
+[7.964154] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:181:169:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.964337] (control) StderrLine: {'line': b'  181 | ve_PeriodTime * m_SSP_Time_Start_R + PI, m_X_Move_Amplitude, \x1b[01;31m\x1b[Km_X_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.964443] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.964539] (control) StderrLine: {'line': b'\n'}
+[7.968176] (-) TimerEvent: {}
+[7.968915] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:182:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.969077] (control) StderrLine: {'line': b'  182 |               y_move_l = wsin(m_SSP_Time_End_R, \x1b[01;31m\x1b[Km_Y_Move_PeriodTime\x1b[m\x1b[K, m_Y_Move_Phase_Shift + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);\n'}
+[7.969192] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.974049] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:182:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.974227] (control) StderrLine: {'line': b'  182 |       y_move_l = wsin(m_SSP_Time_End_R, m_Y_Move_PeriodTime, \x1b[01;31m\x1b[Km_Y_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_Y_Move_Amplitude, m_Y_Move_Amplitude_Shift);\n'}
+[7.974333] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.974439] (control) StderrLine: {'line': b'\n'}
+[7.978234] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:182:149:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.978417] (control) StderrLine: {'line': b'  182 | ft + 2 * PI / m_Y_Move_PeriodTime * m_SSP_Time_Start_R + PI, \x1b[01;31m\x1b[Km_Y_Move_Amplitude\x1b[m\x1b[K, m_Y_Move_Amplitude_Shift);\n'}
+[7.978552] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.978654] (control) StderrLine: {'line': b'\n'}
+[7.984301] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:182:169:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.984471] (control) StderrLine: {'line': b'  182 | ve_PeriodTime * m_SSP_Time_Start_R + PI, m_Y_Move_Amplitude, \x1b[01;31m\x1b[Km_Y_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[7.984578] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.984675] (control) StderrLine: {'line': b'\n'}
+[7.989010] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:183:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.989177] (control) StderrLine: {'line': b'  183 |               z_move_l = wsin(m_SSP_Time_End_L, \x1b[01;31m\x1b[Km_Z_Move_PeriodTime\x1b[m\x1b[K, m_Z_Move_Phase_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);\n'}
+[7.989281] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.994083] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:183:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.994290] (control) StderrLine: {'line': b'  183 |       z_move_l = wsin(m_SSP_Time_End_L, m_Z_Move_PeriodTime, \x1b[01;31m\x1b[Km_Z_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, m_Z_Move_Amplitude_Shift);\n'}
+[7.994415] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.994510] (control) StderrLine: {'line': b'\n'}
+[7.998514] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:183:144:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.998697] (control) StderrLine: {'line': b'  183 | e_Shift + 2 * PI / m_Z_Move_PeriodTime * m_SSP_Time_Start_L, \x1b[01;31m\x1b[Km_Z_Move_Amplitude\x1b[m\x1b[K, m_Z_Move_Amplitude_Shift);\n'}
+[7.998798] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.998895] (control) StderrLine: {'line': b'\n'}
+[8.004895] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:183:164:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.005086] (control) StderrLine: {'line': b'  183 | _Z_Move_PeriodTime * m_SSP_Time_Start_L, m_Z_Move_Amplitude, \x1b[01;31m\x1b[Km_Z_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[8.005194] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.005287] (control) StderrLine: {'line': b'\n'}
+[8.009681] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:184:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.009863] (control) StderrLine: {'line': b'  184 |               c_move_l = wsin(m_SSP_Time_End_R, \x1b[01;31m\x1b[Km_A_Move_PeriodTime\x1b[m\x1b[K, m_A_Move_Phase_Shift + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);\n'}
+[8.009967] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.014720] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:184:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Phase_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.014903] (control) StderrLine: {'line': b'  184 |       c_move_l = wsin(m_SSP_Time_End_R, m_A_Move_PeriodTime, \x1b[01;31m\x1b[Km_A_Move_Phase_Shift\x1b[m\x1b[K + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_R + PI, m_A_Move_Amplitude, m_A_Move_Amplitude_Shift);\n'}
+[8.015011] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.015109] (control) StderrLine: {'line': b'\n'}
+[8.019076] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:184:149:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.019279] (control) StderrLine: {'line': b'  184 | ft + 2 * PI / m_A_Move_PeriodTime * m_SSP_Time_Start_R + PI, \x1b[01;31m\x1b[Km_A_Move_Amplitude\x1b[m\x1b[K, m_A_Move_Amplitude_Shift);\n'}
+[8.019382] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.019492] (control) StderrLine: {'line': b'\n'}
+[8.025229] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:184:169:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Move_Amplitude_Shift\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.025418] (control) StderrLine: {'line': b'  184 | ve_PeriodTime * m_SSP_Time_Start_R + PI, m_A_Move_Amplitude, \x1b[01;31m\x1b[Km_A_Move_Amplitude_Shift\x1b[m\x1b[K);\n'}
+[8.025532] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.025626] (control) StderrLine: {'line': b'\n'}
+[8.028010] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:198:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.028200] (control) StderrLine: {'line': b'  198 |           ep[0] = x_swap + x_move_r + \x1b[01;31m\x1b[Km_X_Offset\x1b[m\x1b[K;\n'}
+[8.028301] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.030667] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:199:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Y_Offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.030842] (control) StderrLine: {'line': b'  199 |           ep[1] = y_swap + y_move_r - \x1b[01;31m\x1b[Km_Y_Offset\x1b[m\x1b[K / 2;\n'}
+[8.030947] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.033267] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:200:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Z_Offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.033438] (control) StderrLine: {'line': b'  200 |           ep[2] = z_swap + z_move_r + \x1b[01;31m\x1b[Km_Z_Offset\x1b[m\x1b[K;\n'}
+[8.033540] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.035839] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:201:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_R_Offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.036004] (control) StderrLine: {'line': b'  201 |           ep[3] = a_swap + a_move_r - \x1b[01;31m\x1b[Km_R_Offset\x1b[m\x1b[K / 2;\n'}
+[8.036109] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.038472] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:202:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_P_Offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.038662] (control) StderrLine: {'line': b'  202 |           ep[4] = b_swap + b_move_r + \x1b[01;31m\x1b[Km_P_Offset\x1b[m\x1b[K;\n'}
+[8.038764] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.041106] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:203:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_A_Offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.041276] (control) StderrLine: {'line': b'  203 |           ep[5] = c_swap + c_move_r - \x1b[01;31m\x1b[Km_A_Offset\x1b[m\x1b[K / 2;\n'}
+[8.041377] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.044542] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:211:12:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KBALANCE_ENABLE\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.044724] (control) StderrLine: {'line': b'  211 |         if(\x1b[01;31m\x1b[KBALANCE_ENABLE\x1b[m\x1b[K)\n'}
+[8.044870] (control) StderrLine: {'line': b'      |            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.048901] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:213:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_balance_fb_angle\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.049075] (control) StderrLine: {'line': b'  213 |             \x1b[01;31m\x1b[Km_balance_fb_angle\x1b[m\x1b[K = (1.0-BALANCE_ANGLE_SMOOTH_GAIN) * m_balance_fb_angle + BALANCE_ANGLE_SMOOTH_GAIN * MotionStatus::ANGLE_PITCH;\n'}
+[8.049180] (control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.055197] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:213:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KBALANCE_ANGLE_SMOOTH_GAIN\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.055456] (control) StderrLine: {'line': b'  213 |             m_balance_fb_angle = (1.0-\x1b[01;31m\x1b[KBALANCE_ANGLE_SMOOTH_GAIN\x1b[m\x1b[K) * m_balance_fb_angle + BALANCE_ANGLE_SMOOTH_GAIN * MotionStatus::ANGLE_PITCH;\n'}
+[8.055579] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.055673] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:213:117:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionStatus\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[8.055769] (control) StderrLine: {'line': b'  213 | OTH_GAIN) * m_balance_fb_angle + BALANCE_ANGLE_SMOOTH_GAIN * \x1b[01;31m\x1b[KMotionStatus\x1b[m\x1b[K::ANGLE_PITCH;\n'}
+[8.055859] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.055951] (control) StderrLine: {'line': b'\n'}
+[8.056042] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:215:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionStatus\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[8.056132] (control) StderrLine: {'line': b'  215 |        double angleVel = -(250.0 / 512.0) * (M_PI / 180.0) * \x1b[01;31m\x1b[KMotionStatus\x1b[m\x1b[K::FB_GYRO;\n'}
+[8.056219] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.056306] (control) StderrLine: {'line': b'\n'}
+[8.056391] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:216:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionStatus\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[8.056485] (control) StderrLine: {'line': b'  216 |             double splineOffset = splineBalance(\x1b[01;31m\x1b[KMotionStatus\x1b[m\x1b[K::ANGLE_PITCH, angleVel, BALANCE_ANGLE_GAIN);\n'}
+[8.056576] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.060007] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:216:86:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KBALANCE_ANGLE_GAIN\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.060193] (control) StderrLine: {'line': b'  216 | eOffset = splineBalance(MotionStatus::ANGLE_PITCH, angleVel, \x1b[01;31m\x1b[KBALANCE_ANGLE_GAIN\x1b[m\x1b[K);\n'}
+[8.060299] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.060405] (control) StderrLine: {'line': b'\n'}
+[8.063122] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:216:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KsplineBalance\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.063297] (control) StderrLine: {'line': b'  216 |             double splineOffset = \x1b[01;31m\x1b[KsplineBalance\x1b[m\x1b[K(MotionStatus::ANGLE_PITCH, angleVel, BALANCE_ANGLE_GAIN);\n'}
+[8.063403] (control) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.065349] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:220:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KspeedAdj\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.065526] (control) StderrLine: {'line': b'  220 |             ep[0] -= \x1b[01;31m\x1b[KspeedAdj\x1b[m\x1b[K;\n'}
+[8.065627] (control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[8.068250] (-) TimerEvent: {}
+[8.069416] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:225:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_SSP_Time_End_L\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.069585] (control) StderrLine: {'line': b'  225 |           if(m_Time <= \x1b[01;31m\x1b[Km_SSP_Time_End_L\x1b[m\x1b[K)\n'}
+[8.069688] (control) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.072771] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:227:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Body_Swing_Y\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.072967] (control) StderrLine: {'line': b'  227 |               \x1b[01;31m\x1b[Km_Body_Swing_Y\x1b[m\x1b[K = -ep[7];\n'}
+[8.073070] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.076233] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:228:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Body_Swing_Z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.076439] (control) StderrLine: {'line': b'  228 |               \x1b[01;31m\x1b[Km_Body_Swing_Z\x1b[m\x1b[K = ep[8];\n'}
+[8.076545] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.079945] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:232:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Body_Swing_Y\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.080133] (control) StderrLine: {'line': b'  232 |               \x1b[01;31m\x1b[Km_Body_Swing_Y\x1b[m\x1b[K = -ep[1];\n'}
+[8.080253] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.083401] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:233:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Body_Swing_Z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.083585] (control) StderrLine: {'line': b'  233 |               \x1b[01;31m\x1b[Km_Body_Swing_Z\x1b[m\x1b[K = ep[2];\n'}
+[8.083691] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.086881] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:235:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Body_Swing_Z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.087056] (control) StderrLine: {'line': b'  235 |         \x1b[01;31m\x1b[Km_Body_Swing_Z\x1b[m\x1b[K -= Kinematics::LEG_LENGTH;\n'}
+[8.087176] (control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.087271] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:235:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KKinematics\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[8.087364] (control) StderrLine: {'line': b'  235 |         m_Body_Swing_Z -= \x1b[01;31m\x1b[KKinematics\x1b[m\x1b[K::LEG_LENGTH;\n'}
+[8.087455] (control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.091256] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:238:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.091437] (control) StderrLine: {'line': b'  238 |           if(\x1b[01;31m\x1b[Km_X_Move_Amplitude\x1b[m\x1b[K == 0)\n'}
+[8.091537] (control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.094413] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:245:40:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.094585] (control) StderrLine: {'line': b'  245 |               angle[12] = wsin(m_Time, \x1b[01;31m\x1b[Km_PeriodTime\x1b[m\x1b[K, PI * 1.5, -m_X_Move_Amplitude * m_Arm_Swing_Gain, 0);\n'}
+[8.094664] (control) StderrLine: {'line': b'      |                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.095678] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:245:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPI\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.095827] (control) StderrLine: {'line': b'  245 |               angle[12] = wsin(m_Time, m_PeriodTime, \x1b[01;31m\x1b[KPI\x1b[m\x1b[K * 1.5, -m_X_Move_Amplitude * m_Arm_Swing_Gain, 0);\n'}
+[8.095909] (control) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[8.099678] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:245:86:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Arm_Swing_Gain\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.099819] (control) StderrLine: {'line': b'  245 | = wsin(m_Time, m_PeriodTime, PI * 1.5, -m_X_Move_Amplitude * \x1b[01;31m\x1b[Km_Arm_Swing_Gain\x1b[m\x1b[K, 0);\n'}
+[8.099896] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.099964] (control) StderrLine: {'line': b'\n'}
+[8.103327] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:249:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Real_Running\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.103494] (control) StderrLine: {'line': b'  249 |           if(\x1b[01;31m\x1b[Km_Real_Running\x1b[m\x1b[K == true)\n'}
+[8.103569] (control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.106318] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:252:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_PeriodTime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.106460] (control) StderrLine: {'line': b'  252 |               if(m_Time >= \x1b[01;31m\x1b[Km_PeriodTime\x1b[m\x1b[K)\n'}
+[8.106536] (control) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.108739] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:257:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KcomputeIK\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.108933] (control) StderrLine: {'line': b'  257 |           if((\x1b[01;31m\x1b[KcomputeIK\x1b[m\x1b[K(&angle[0], ep[0], ep[1], ep[2], ep[3], ep[4], ep[5]) == 1)\n'}
+[8.109029] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[8.110145] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:261:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPI\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.110434] (control) StderrLine: {'line': b'  261 |                   angle[i] *= 180.0 / \x1b[01;31m\x1b[KPI\x1b[m\x1b[K;\n'}
+[8.110514] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[8.110581] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:271:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KRATIO_ANGLE2VALUE\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[KRobot::MX28\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.110648] (control) StderrLine: {'line': b'  271 |           offset = (double)dir[i] * angle[i] * MX28::\x1b[01;31m\x1b[KRATIO_ANGLE2VALUE\x1b[m\x1b[K;\n'}
+[8.110711] (control) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.114514] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:277:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KHIP_PITCH_OFFSET\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.114659] (control) StderrLine: {'line': b'  277 |                   offset -= (double)dir[i] * \x1b[01;31m\x1b[KHIP_PITCH_OFFSET\x1b[m\x1b[K * MX28::RATIO_ANGLE2VALUE;\n'}
+[8.114736] (control) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.114804] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:277:71:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KRATIO_ANGLE2VALUE\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[KRobot::MX28\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.114869] (control) StderrLine: {'line': b'  277 |          offset -= (double)dir[i] * HIP_PITCH_OFFSET * MX28::\x1b[01;31m\x1b[KRATIO_ANGLE2VALUE\x1b[m\x1b[K;\n'}
+[8.114933] (control) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.114995] (control) StderrLine: {'line': b'\n'}
+[8.118118] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:283:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KBALANCE_ENABLE\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.118394] (control) StderrLine: {'line': b'  283 |           if(\x1b[01;31m\x1b[KBALANCE_ENABLE\x1b[m\x1b[K == true)\n'}
+[8.118473] (control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.118541] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:285:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionStatus\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[8.118608] (control) StderrLine: {'line': b'  285 |           double rlGyroErr = \x1b[01;31m\x1b[KMotionStatus\x1b[m\x1b[K::RL_GYRO;\n'}
+[8.118673] (control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.118737] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:286:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionStatus\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[8.118815] (control) StderrLine: {'line': b'  286 |           double fbGyroErr = \x1b[01;31m\x1b[KMotionStatus\x1b[m\x1b[K::FB_GYRO;\n'}
+[8.118877] (control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.123537] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:288:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KBALANCE_HIP_ROLL_GAIN\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.123678] (control) StderrLine: {'line': b'  288 |               outValue[1] += dir[1] * rlGyroErr * \x1b[01;31m\x1b[KBALANCE_HIP_ROLL_GAIN\x1b[m\x1b[K; // R_HIP_ROLL\n'}
+[8.123766] (control) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.127613] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:291:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KBALANCE_KNEE_GAIN\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.127757] (control) StderrLine: {'line': b'  291 |               outValue[3] -= dir[3] * fbGyroErr * \x1b[01;31m\x1b[KBALANCE_KNEE_GAIN\x1b[m\x1b[K; // R_KNEE\n'}
+[8.127833] (control) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.133700] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:294:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KBALANCE_ANKLE_PITCH_GAIN\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.133855] (control) StderrLine: {'line': b'  294 |               outValue[4] -= dir[4] * fbGyroErr * \x1b[01;31m\x1b[KBALANCE_ANKLE_PITCH_GAIN\x1b[m\x1b[K; // R_ANKLE_PITCH\n'}
+[8.133931] (control) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.139523] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:297:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KBALANCE_ANKLE_ROLL_GAIN\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.139679] (control) StderrLine: {'line': b'  297 |               outValue[5] -= dir[5] * rlGyroErr * \x1b[01;31m\x1b[KBALANCE_ANKLE_ROLL_GAIN\x1b[m\x1b[K; // R_ANKLE_ROLL\n'}
+[8.139754] (control) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.141543] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:314:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Km_Joint\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku_int\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.141680] (control) StderrLine: {'line': b'  314 |         \x1b[01;31m\x1b[Km_Joint\x1b[m\x1b[K.SetValue(JointData::ID_R_HIP_YAW,           outValue[0]);\n'}
+[8.141760] (control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[8.141828] (control) StderrLine: {'line': b'      |         \x1b[32m\x1b[Ku_int\x1b[m\x1b[K\n'}
+[8.145742] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:328:50:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KA_MOVE_AMPLITUDE\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.145905] (control) StderrLine: {'line': b'  328 |         m_Joint.SetAngle(JointData::ID_HEAD_PAN, \x1b[01;31m\x1b[KA_MOVE_AMPLITUDE\x1b[m\x1b[K);\n'}
+[8.145993] (control) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.147541] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:332:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KP_GAIN\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KEAGAIN\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.147691] (control) StderrLine: {'line': b'  332 |             m_Joint.SetPGain(id, \x1b[01;31m\x1b[KP_GAIN\x1b[m\x1b[K);\n'}
+[8.147769] (control) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[8.147837] (control) StderrLine: {'line': b'      |                                  \x1b[32m\x1b[KEAGAIN\x1b[m\x1b[K\n'}
+[8.149308] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:333:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KI_GAIN\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KEAGAIN\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.149459] (control) StderrLine: {'line': b'  333 |               m_Joint.SetIGain(id, \x1b[01;31m\x1b[KI_GAIN\x1b[m\x1b[K);\n'}
+[8.149535] (control) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[8.149601] (control) StderrLine: {'line': b'      |                                    \x1b[32m\x1b[KEAGAIN\x1b[m\x1b[K\n'}
+[8.151053] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robofei/ROS2/action/src/control/src/control.cpp:334:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KD_GAIN\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KEAGAIN\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.151184] (control) StderrLine: {'line': b'  334 |               m_Joint.SetDGain(id, \x1b[01;31m\x1b[KD_GAIN\x1b[m\x1b[K);\n'}
+[8.151260] (control) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[8.151328] (control) StderrLine: {'line': b'      |                                    \x1b[32m\x1b[KEAGAIN\x1b[m\x1b[K\n'}
+[8.168403] (-) TimerEvent: {}
+[8.268725] (-) TimerEvent: {}
+[8.369051] (-) TimerEvent: {}
+[8.469372] (-) TimerEvent: {}
+[8.569684] (-) TimerEvent: {}
+[8.669987] (-) TimerEvent: {}
+[8.770448] (-) TimerEvent: {}
+[8.870769] (-) TimerEvent: {}
+[8.971079] (-) TimerEvent: {}
+[9.071397] (-) TimerEvent: {}
+[9.171710] (-) TimerEvent: {}
+[9.272015] (-) TimerEvent: {}
+[9.372315] (-) TimerEvent: {}
+[9.472638] (-) TimerEvent: {}
+[9.572955] (-) TimerEvent: {}
+[9.673512] (-) TimerEvent: {}
+[9.773881] (-) TimerEvent: {}
+[9.874400] (-) TimerEvent: {}
+[9.929114] (control) StderrLine: {'line': b'make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1\n'}
+[9.929340] (control) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/control.dir/all] Error 2\n'}
+[9.929567] (control) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[9.931589] (control) CommandEnded: {'returncode': 2}
+[9.974784] (-) TimerEvent: {}
+[10.063742] (control) JobEnded: {'identifier': 'control', 'rc': 2}
+[10.076383] (-) TimerEvent: {}
+[10.076529] (-) EventReactorShutdown: {}

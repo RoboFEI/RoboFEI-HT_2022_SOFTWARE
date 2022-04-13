@@ -1,0 +1,70 @@
+[0.011s] Invoking command in '/home/robofei/ROS2/action/build/control': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.056s] [35m[1mScanning dependencies of target control[0m
+[0.059s] make[2]: *** No rule to make target '/home/robofei/ROS2/action/src/control/src/MotionManager.cpp', needed by 'CMakeFiles/motion.dir/src/MotionManager.cpp.o'.  Stop.
+[0.059s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/motion.dir/all] Error 2
+[0.059s] make[1]: *** Waiting for unfinished jobs....
+[0.087s] [ 25%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[1.373s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:34:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ does not name a type
+[1.373s]    34 |     void topic_callback(const [01;31m[Kstd_msgs[m[K::msg::String::SharedPtr msg) const
+[1.373s]       |                               [01;31m[K^~~~~~~~[m[K
+[1.373s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:34:44:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+[1.374s]    34 |     void topic_callback(const std_msgs::msg[01;31m[K::[m[KString::SharedPtr msg) const
+[1.374s]       |                                            [01;31m[K^~[m[K
+[1.374s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:34:44:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+[1.374s]    34 |     void topic_callback[34m[K([m[Kconst std_msgs::msg[01;31m[K:[m[K[32m[K:[m[KString::SharedPtr msg) const
+[1.374s]       |                        [34m[K~[m[K                   [01;31m[K^[m[K[32m[K~[m[K
+[1.374s]       |                                            [32m[K)[m[K
+[1.374s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:34:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.374s]    34 |     void topic_callback(const std_msgs::[01;31m[Kmsg[m[K::String::SharedPtr msg) const
+[1.375s]       |                                         [01;31m[K^~~[m[K
+[1.375s]       |                                            [32m[K;[m[K
+[1.375s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:34:46:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ in namespace ‘[01m[K::[m[K’ does not name a type
+[1.375s]    34 |     void topic_callback(const std_msgs::msg::[01;31m[KString[m[K::SharedPtr msg) const
+[1.375s]       |                                              [01;31m[K^~~~~~[m[K
+[1.389s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In constructor ‘[01m[KControl::Control()[m[K’:
+[1.389s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:25:22:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KControl[m[K’ does not have any field named ‘[01m[Kcount_[m[K’
+[1.389s]    25 |   : Node("control"), [01;31m[Kcount_[m[K(0)
+[1.389s]       |                      [01;31m[K^~~~~~[m[K
+[1.391s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:28:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kini[m[K’ was not declared in this scope; did you mean ‘[01m[Kint[m[K’?
+[1.391s]    28 |     GaitMove gaitMove([01;31m[Kini[m[K);
+[1.391s]       |                       [01;31m[K^~~[m[K
+[1.392s]       |                       [32m[Kint[m[K
+[1.399s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:32[m[K,
+[1.399s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[1.399s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.399s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.399s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.399s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.400s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.400s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.400s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.400s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.400s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:8[m[K:
+[1.400s] /opt/ros/foxy/include/rclcpp/function_traits.hpp: In instantiation of ‘[01m[Kstruct rclcpp::function_traits::function_traits<std::_Bind<void (Control::*(Control*, std::_Placeholder<1>))(...)> >[m[K’:
+[1.400s] [01m[K/opt/ros/foxy/include/rclcpp/subscription_traits.hpp:97:8:[m[K   required from ‘[01m[Kstruct rclcpp::subscription_traits::has_message_type<std::_Bind<void (Control::*(Control*, std::_Placeholder<1>))(...)>, std::allocator<void>, void, void, void, void>[m[K’
+[1.400s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:204:5:[m[K   required by substitution of ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class CallbackMessageT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<SubscriptionT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr) [with MessageT = custom_interfaces::msg::Decision_<std::allocator<void> >; CallbackT = std::_Bind<void (Control::*(Control*, std::_Placeholder<1>))(...)>; AllocatorT = std::allocator<void>; CallbackMessageT = <missing>; SubscriptionT = <missing>; MessageMemoryStrategyT = <missing>][m[K’
+[1.400s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:30:69:[m[K   required from here
+[1.400s] [01m[K/opt/ros/foxy/include/rclcpp/function_traits.hpp:51:9:[m[K [01;31m[Kerror: [m[Kdecltype cannot resolve address of overloaded function
+[1.400s]    51 |   using [01;31m[Karguments[m[K = typename tuple_tail<
+[1.400s]       |         [01;31m[K^~~~~~~~~[m[K
+[1.400s] [01m[K/opt/ros/foxy/include/rclcpp/function_traits.hpp:57:9:[m[K [01;31m[Kerror: [m[Kdecltype cannot resolve address of overloaded function
+[1.400s]    57 |   using [01;31m[Kargument_type[m[K = typename std::tuple_element<N, arguments>::type;
+[1.400s]       |         [01;31m[K^~~~~~~~~~~~~[m[K
+[1.401s] [01m[K/opt/ros/foxy/include/rclcpp/function_traits.hpp:59:9:[m[K [01;31m[Kerror: [m[Kdecltype cannot resolve address of overloaded function
+[1.401s]    59 |   using [01;31m[Kreturn_type[m[K = typename function_traits<decltype( &FunctionT::operator())>::return_type;
+[1.401s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[1.401s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:30:69:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KControl::create_subscription<custom_interfaces::msg::Decision>(const char [10], int, std::_Bind_helper<false, void (Control::*)(...), Control*, const std::_Placeholder<1>&>::type)[m[K’
+[1.401s]    30 |       "/decision", 10, std::bind(&Control::topic_callback, this, _1)[01;31m[K)[m[K;
+[1.401s]       |                                                                     [01;31m[K^[m[K
+[1.401s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.401s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[1.401s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.401s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:8[m[K:
+[1.401s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:213:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class CallbackMessageT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<SubscriptionT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+[1.401s]   213 |   [01;36m[Kcreate_subscription[m[K(
+[1.401s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.401s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:213:3:[m[K [01;36m[Knote: [m[K  substitution of deduced template arguments resulted in errors seen above
+[1.788s] make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1
+[1.788s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/control.dir/all] Error 2
+[1.788s] make: *** [Makefile:141: all] Error 2
+[1.792s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4

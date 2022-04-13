@@ -168,19 +168,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named motion
-
-# Build rule for target.
-motion: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 motion
-.PHONY : motion
-
-# fast build rule for target.
-motion/fast:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/build
-.PHONY : motion/fast
-
-#=============================================================================
 # Target rules for targets named control
 
 # Build rule for target.
@@ -219,33 +206,6 @@ uninstall/fast:
 	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
 
-src/MotionManager.o: src/MotionManager.cpp.o
-
-.PHONY : src/MotionManager.o
-
-# target to build an object file
-src/MotionManager.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/MotionManager.cpp.o
-.PHONY : src/MotionManager.cpp.o
-
-src/MotionManager.i: src/MotionManager.cpp.i
-
-.PHONY : src/MotionManager.i
-
-# target to preprocess a source file
-src/MotionManager.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/MotionManager.cpp.i
-.PHONY : src/MotionManager.cpp.i
-
-src/MotionManager.s: src/MotionManager.cpp.s
-
-.PHONY : src/MotionManager.s
-
-# target to generate assembly for a file
-src/MotionManager.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/MotionManager.cpp.s
-.PHONY : src/MotionManager.cpp.s
-
 src/control.o: src/control.cpp.o
 
 .PHONY : src/control.o
@@ -283,16 +243,12 @@ help:
 	@echo "... install/local"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... motion"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... control"
 	@echo "... control_uninstall"
 	@echo "... uninstall"
-	@echo "... src/MotionManager.o"
-	@echo "... src/MotionManager.i"
-	@echo "... src/MotionManager.s"
 	@echo "... src/control.o"
 	@echo "... src/control.i"
 	@echo "... src/control.s"

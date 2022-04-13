@@ -1,0 +1,33 @@
+[0.013s] Invoking command in '/home/robofei/ROS2/action/build/control': CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/home/robofei/ROS2/action/install/control:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.061s] [35m[1mScanning dependencies of target control[0m
+[0.062s] make[2]: *** No rule to make target '/home/robofei/ROS2/action/src/control/src/MotionManager.cpp', needed by 'CMakeFiles/motion.dir/src/MotionManager.cpp.o'.  Stop.
+[0.062s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/motion.dir/all] Error 2
+[0.062s] make[1]: *** Waiting for unfinished jobs....
+[0.093s] [ 25%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[1.389s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:40:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ was not declared in this scope
+[1.389s]    40 |     rclcpp::Subscription<[01;31m[Kstd_msgs[m[K::msg::String>::SharedPtr subscription_;
+[1.389s]       |                          [01;31m[K^~~~~~~~[m[K
+[1.389s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:40:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.389s]    40 |     rclcpp::Subscription<std_msgs::msg::String[01;31m[K>[m[K::SharedPtr subscription_;
+[1.389s]       |                                               [01;31m[K^[m[K
+[1.389s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:40:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[1.390s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:40:50:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.390s]    40 |     rclcpp::Subscription<std_msgs::msg::String>::[01;31m[KSharedPtr[m[K subscription_;
+[1.390s]       |                                                  [01;31m[K^~~~~~~~~[m[K
+[1.390s]       |                                                           [32m[K;[m[K
+[1.391s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:40:60:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ does not name a type; did you mean ‘[01m[Krcl_subscription_t[m[K’?
+[1.392s]    40 |     rclcpp::Subscription<std_msgs::msg::String>::SharedPtr [01;31m[Ksubscription_[m[K;
+[1.392s]       |                                                            [01;31m[K^~~~~~~~~~~~~[m[K
+[1.392s]       |                                                            [32m[Krcl_subscription_t[m[K
+[1.392s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In constructor ‘[01m[KControl::Control()[m[K’:
+[1.392s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:25:22:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KControl[m[K’ does not have any field named ‘[01m[Kcount_[m[K’
+[1.392s]    25 |   : Node("control"), [01;31m[Kcount_[m[K(0)
+[1.392s]       |                      [01;31m[K^~~~~~[m[K
+[1.396s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:28:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_subscription_t[m[K’?
+[1.396s]    28 |     [01;31m[Ksubscription_[m[K = this->create_subscription<custom_interfaces::msg::Decision>(
+[1.396s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[1.396s]       |     [32m[Krcl_subscription_t[m[K
+[2.785s] make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1
+[2.785s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/control.dir/all] Error 2
+[2.785s] make: *** [Makefile:141: all] Error 2
+[2.787s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/home/robofei/ROS2/action/install/control:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4

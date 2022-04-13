@@ -1,0 +1,37 @@
+[0.013s] Invoking command in '/home/robofei/ROS2/action/build/control': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/action/install/control:/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.041s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.065s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.256s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.264s] -- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[0.287s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.291s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.423s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.470s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.622s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.636s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.086s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.169s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.176s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.176s] -- Configured cppcheck include dirs: /home/robofei/ROS2/action/src/control/include;/home/robofei/ROS2/action/src/control/Framework;/home/robofei/ROS2/action/src/control/Linux
+[1.176s] -- Configured cppcheck exclude dirs and/or files: 
+[1.182s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.182s] -- Configured cpplint exclude dirs and/or files: 
+[1.183s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.185s] -- Added test 'lint_cmake' to check CMake code style
+[1.186s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[1.193s] -- Added test 'uncrustify' to check C / C++ code style
+[1.193s] -- Configured uncrustify additional arguments: 
+[1.194s] -- Added test 'xmllint' to check XML markup files
+[1.198s] -- Configuring done
+[1.207s] -- Generating done
+[1.209s] -- Build files have been written to: /home/robofei/ROS2/action/build/control
+[1.236s] [35m[1mScanning dependencies of target control[0m
+[1.265s] [ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[1.382s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:9:10:[m[K [01;31m[Kfatal error: [m[Kcustom_interfaces/msg/set_position.hpp: No such file or directory
+[1.383s]     9 | #include [01;31m[K"custom_interfaces/msg/set_position.hpp"[m[K
+[1.383s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.383s] compilation terminated.
+[1.385s] make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1
+[1.385s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/control.dir/all] Error 2
+[1.385s] make: *** [Makefile:141: all] Error 2
+[1.388s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/action/install/control:/home/robofei/ROS2/action/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4

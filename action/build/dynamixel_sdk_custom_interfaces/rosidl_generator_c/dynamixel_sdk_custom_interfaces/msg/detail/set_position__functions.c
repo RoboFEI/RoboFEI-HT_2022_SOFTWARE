@@ -9,6 +9,11 @@
 #include <string.h>
 
 
+// Include directives for member types
+// Member `id`
+// Member `position`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 bool
 dynamixel_sdk_custom_interfaces__msg__SetPosition__init(dynamixel_sdk_custom_interfaces__msg__SetPosition * msg)
 {
@@ -16,7 +21,15 @@ dynamixel_sdk_custom_interfaces__msg__SetPosition__init(dynamixel_sdk_custom_int
     return false;
   }
   // id
+  if (!rosidl_runtime_c__uint8__Sequence__init(&msg->id, 0)) {
+    dynamixel_sdk_custom_interfaces__msg__SetPosition__fini(msg);
+    return false;
+  }
   // position
+  if (!rosidl_runtime_c__int32__Sequence__init(&msg->position, 0)) {
+    dynamixel_sdk_custom_interfaces__msg__SetPosition__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -27,7 +40,9 @@ dynamixel_sdk_custom_interfaces__msg__SetPosition__fini(dynamixel_sdk_custom_int
     return;
   }
   // id
+  rosidl_runtime_c__uint8__Sequence__fini(&msg->id);
   // position
+  rosidl_runtime_c__int32__Sequence__fini(&msg->position);
 }
 
 dynamixel_sdk_custom_interfaces__msg__SetPosition *

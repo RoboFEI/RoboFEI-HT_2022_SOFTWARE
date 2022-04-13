@@ -27,11 +27,11 @@ inline const char * name<dynamixel_sdk_custom_interfaces::msg::SetPosition>()
 
 template<>
 struct has_fixed_size<dynamixel_sdk_custom_interfaces::msg::SetPosition>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<dynamixel_sdk_custom_interfaces::msg::SetPosition>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<dynamixel_sdk_custom_interfaces::msg::SetPosition>

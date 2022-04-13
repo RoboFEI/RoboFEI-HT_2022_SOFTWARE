@@ -1,0 +1,25 @@
+[0.014s] Invoking command in '/home/robofei/ROS2/action/build/control': CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/home/robofei/ROS2/action/install/control:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4
+[0.061s] [35m[1mScanning dependencies of target control[0m
+[0.091s] [ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[1.377s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In constructor ‘[01m[KControl::Control()[m[K’:
+[1.377s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:28:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_subscription_t[m[K’?
+[1.377s]    28 |     [01;31m[Ksubscription_[m[K = this->create_subscription<custom_interfaces::msg::Decision>(
+[1.377s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[1.377s]       |     [32m[Krcl_subscription_t[m[K
+[1.397s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:30:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[1.397s]    30 |     [01;31m[Kpublisher_[m[K = this->create_publisher<custom_interfaces::msg::SetPosition>("set_position", 10);
+[1.397s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.397s]       |     [32m[Krcl_publisher_t[m[K
+[1.402s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:34:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[1.402s]    34 |       [01;31m[Ktimer_[m[K = this->create_wall_timer(
+[1.402s]       |       [01;31m[K^~~~~~[m[K
+[1.402s]       |       [32m[Ktimer_t[m[K
+[1.427s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In member function ‘[01m[Kvoid Control::timer_callback_goodbye()[m[K’:
+[1.427s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:58:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[1.427s]    58 |     [01;31m[Kpublisher_[m[K->publish(message);
+[1.428s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.428s]       |     [32m[Krcl_publisher_t[m[K
+[2.909s] make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1
+[2.910s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/control.dir/all] Error 2
+[2.910s] make: *** [Makefile:141: all] Error 2
+[2.912s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/custom_interfaces:/home/robofei/ROS2/action/install/control:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j4 -l4

@@ -1,17 +1,13 @@
 file(REMOVE_RECURSE
   "CMakeFiles/dynamixel_sdk_custom_interfaces__cpp"
+  "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/decision.hpp"
+  "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/detail/decision__builder.hpp"
+  "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/detail/decision__struct.hpp"
+  "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/detail/decision__traits.hpp"
   "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp"
   "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp"
   "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp"
-  "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__builder.hpp"
-  "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__struct.hpp"
-  "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/detail/set_position_sync__traits.hpp"
   "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
-  "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/set_position_sync.hpp"
-  "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp"
-  "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp"
-  "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp"
-  "rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

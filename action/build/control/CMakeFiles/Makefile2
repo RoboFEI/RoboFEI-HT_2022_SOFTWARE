@@ -53,7 +53,6 @@ CMAKE_BINARY_DIR = /home/robofei/ROS2/action/build/control
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/motion.dir/all
 all: CMakeFiles/control.dir/all
 
 .PHONY : all
@@ -64,39 +63,11 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/motion.dir/clean
 clean: CMakeFiles/control.dir/clean
 clean: CMakeFiles/control_uninstall.dir/clean
 clean: CMakeFiles/uninstall.dir/clean
 
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/motion.dir
-
-# All Build rule for target.
-CMakeFiles/motion.dir/all:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/depend
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robofei/ROS2/action/build/control/CMakeFiles --progress-num=3,4 "Built target motion"
-.PHONY : CMakeFiles/motion.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/motion.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/ROS2/action/build/control/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/motion.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/ROS2/action/build/control/CMakeFiles 0
-.PHONY : CMakeFiles/motion.dir/rule
-
-# Convenience name for target.
-motion: CMakeFiles/motion.dir/rule
-
-.PHONY : motion
-
-# clean rule for target.
-CMakeFiles/motion.dir/clean:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/clean
-.PHONY : CMakeFiles/motion.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/control.dir
