@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named decision
+
+# Build rule for target.
+decision: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 decision
+.PHONY : decision
+
+# fast build rule for target.
+decision/fast:
+	$(MAKE) -f CMakeFiles/decision.dir/build.make CMakeFiles/decision.dir/build
+.PHONY : decision/fast
+
+#=============================================================================
 # Target rules for targets named control
 
 # Build rule for target.
@@ -233,6 +246,33 @@ src/control.cpp.s:
 	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/control.cpp.s
 .PHONY : src/control.cpp.s
 
+src/dec.o: src/dec.cpp.o
+
+.PHONY : src/dec.o
+
+# target to build an object file
+src/dec.cpp.o:
+	$(MAKE) -f CMakeFiles/decision.dir/build.make CMakeFiles/decision.dir/src/dec.cpp.o
+.PHONY : src/dec.cpp.o
+
+src/dec.i: src/dec.cpp.i
+
+.PHONY : src/dec.i
+
+# target to preprocess a source file
+src/dec.cpp.i:
+	$(MAKE) -f CMakeFiles/decision.dir/build.make CMakeFiles/decision.dir/src/dec.cpp.i
+.PHONY : src/dec.cpp.i
+
+src/dec.s: src/dec.cpp.s
+
+.PHONY : src/dec.s
+
+# target to generate assembly for a file
+src/dec.cpp.s:
+	$(MAKE) -f CMakeFiles/decision.dir/build.make CMakeFiles/decision.dir/src/dec.cpp.s
+.PHONY : src/dec.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -243,6 +283,7 @@ help:
 	@echo "... install/local"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... decision"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
@@ -252,6 +293,9 @@ help:
 	@echo "... src/control.o"
 	@echo "... src/control.i"
 	@echo "... src/control.s"
+	@echo "... src/dec.o"
+	@echo "... src/dec.i"
+	@echo "... src/dec.s"
 .PHONY : help
 
 

@@ -1,5 +1,6 @@
 // Open terminal #2 
 // $ ros2 run control control
+// $ ros2 run um7 um7_node
 
 // ros2 topic pub -1 /decision dynamixel_sdk_custom_interfaces/Decision "{decision: 1}"
 
@@ -18,8 +19,10 @@
 using namespace std::chrono_literals;
 using std::placeholders::_1;
 int movement = 0;
+int contador = 0;
 bool stop_gait = true;
 bool fallen = false;
+bool fallenFront = false;
 
 class Control : public rclcpp::Node
 {
@@ -38,29 +41,27 @@ public:
   private:
     void topic_callback_imu(const std::shared_ptr<sensor_msgs::msg::Imu> imu_msg_) const
     {
-      float IMU_ACCEL_Z = imu_msg_->angular_velocity.z;
-      RCLCPP_INFO(this->get_logger(),"Listening IMU");
-      int contador = 0;
-      float med_accel_z = 0, ac_med_accel_z = 0;
-      while (1)
-      {
-        //--------- calcula a média do accel em Z-----------------------------
-        if(contador>=40)
-        {
-          med_accel_z = ac_med_accel_z/40; // calcula a média do accel em Z
-          contador = 0;
-          ac_med_accel_z = 0;
-        }
-        ac_med_accel_z = ac_med_accel_z + IMU_ACCEL_Z;
+      float IMU_ACCEL_Z = imu_msg_->linear_acceleration.z/10;
+      RCLCPP_INFO(this->get_logger(),"ACEL Z %f\n", IMU_ACCEL_Z);
+      if(IMU_ACCEL_Z > 0.7 || IMU_ACCEL_Z < -0.7)
         contador++;
-        //--------------------------------------------------------------------
-
-        if(med_accel_z>0.70) // Identifica se o robô esta caido ou em pé
-          fallen = true; // Robo caido
-        else
-          fallen = false;; // Robo em pé
-      }
+      else
+        contador = 0;
+      RCLCPP_INFO(this->get_logger(),"Contador %d \n", contador);
       
+      if(contador>=3)
+      {
+        RCLCPP_INFO(this->get_logger(),"Caido");
+        fallen = true; // Robo caido
+      }
+      if (fallen == true){ // Robô esta caido
+        if(IMU_ACCEL_Z > 0){  // Robô caido de frente
+          fallenFront = true;
+        }
+        else{  //Levanta se caido de costa
+          fallenFront = false;
+        }
+      }
     }
 
     void topic_callback(const std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Decision> msg) const
@@ -69,14 +70,34 @@ public:
       message_dec.decision = msg->decision;
       movement = (int)message_dec.decision;
       RCLCPP_INFO(this->get_logger(), "I heard %d", movement);
-      if(fallen==false){
+      if(fallen == true){ // Robô caido, tem que levantar antes de qualquer movimento
+        if (fallenFront == true){ // Caido de frente
+          RCLCPP_INFO(this->get_logger(), "Stand Up Front");
+          auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
+          message.id = {1, 2, 3};          
+          message.position = {1024, 1024, 2593};   
+          publisher_->publish(message);
+          std::this_thread::sleep_for(std::chrono::seconds(5));
+          fallen = false;
+        }
+        else{ // Robô caido de costas
+          RCLCPP_INFO(this->get_logger(), "Stand Up Back");
+          auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
+          message.id = {1, 2, 3};          
+          message.position = {1024, 1024, 2593};   
+          publisher_->publish(message);
+          std::this_thread::sleep_for(std::chrono::seconds(5));
+          fallen = false;
+        }
+      }
+      else{
         if(movement==1){
-        RCLCPP_INFO(this->get_logger(), "Goodbye");
-        auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
-        message.id = {1, 2, 3};          
-        message.position = {1024, 1024, 2593};   
-        publisher_->publish(message);
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+          RCLCPP_INFO(this->get_logger(), "Goodbye");
+          auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
+          message.id = {1, 2, 3};          
+          message.position = {1024, 1024, 2593};   
+          publisher_->publish(message);
+          std::this_thread::sleep_for(std::chrono::seconds(1));
         }
         else if(movement==2){
           RCLCPP_INFO(this->get_logger(), "Right kick");

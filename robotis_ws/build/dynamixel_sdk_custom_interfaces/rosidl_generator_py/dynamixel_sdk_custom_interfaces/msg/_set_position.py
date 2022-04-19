@@ -5,10 +5,6 @@
 
 # Import statements for member types
 
-# Member 'id'
-# Member 'position'
-import array  # noqa: E402, I100
-
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -62,21 +58,21 @@ class SetPosition(metaclass=Metaclass_SetPosition):
     ]
 
     _fields_and_field_types = {
-        'id': 'sequence<uint8>',
-        'position': 'sequence<int32>',
+        'id': 'uint8',
+        'position': 'int32',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('uint8')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('int32')),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.id = array.array('B', kwargs.get('id', []))
-        self.position = array.array('i', kwargs.get('position', []))
+        self.id = kwargs.get('id', int())
+        self.position = kwargs.get('position', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -125,26 +121,13 @@ class SetPosition(metaclass=Metaclass_SetPosition):
 
     @id.setter  # noqa: A003
     def id(self, value):  # noqa: A003
-        if isinstance(value, array.array):
-            assert value.typecode == 'B', \
-                "The 'id' array.array() must have the type code of 'B'"
-            self._id = value
-            return
         if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
             assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, int) for v in value) and
-                 all(val >= 0 and val < 256 for val in value)), \
-                "The 'id' field must be a set or sequence and each value of type 'int' and each unsigned integer in [0, 255]"
-        self._id = array.array('B', value)
+                isinstance(value, int), \
+                "The 'id' field must be of type 'int'"
+            assert value >= 0 and value < 256, \
+                "The 'id' field must be an unsigned integer in [0, 255]"
+        self._id = value
 
     @property
     def position(self):
@@ -153,23 +136,10 @@ class SetPosition(metaclass=Metaclass_SetPosition):
 
     @position.setter
     def position(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'i', \
-                "The 'position' array.array() must have the type code of 'i'"
-            self._position = value
-            return
         if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
             assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, int) for v in value) and
-                 all(val >= -2147483648 and val < 2147483648 for val in value)), \
-                "The 'position' field must be a set or sequence and each value of type 'int' and each integer in [-2147483648, 2147483647]"
-        self._position = array.array('i', value)
+                isinstance(value, int), \
+                "The 'position' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'position' field must be an integer in [-2147483648, 2147483647]"
+        self._position = value

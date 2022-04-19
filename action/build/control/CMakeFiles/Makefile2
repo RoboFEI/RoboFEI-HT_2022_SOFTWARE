@@ -53,6 +53,7 @@ CMAKE_BINARY_DIR = /home/robofei/ROS2/action/build/control
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/decision.dir/all
 all: CMakeFiles/control.dir/all
 
 .PHONY : all
@@ -63,11 +64,39 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/decision.dir/clean
 clean: CMakeFiles/control.dir/clean
 clean: CMakeFiles/control_uninstall.dir/clean
 clean: CMakeFiles/uninstall.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/decision.dir
+
+# All Build rule for target.
+CMakeFiles/decision.dir/all:
+	$(MAKE) -f CMakeFiles/decision.dir/build.make CMakeFiles/decision.dir/depend
+	$(MAKE) -f CMakeFiles/decision.dir/build.make CMakeFiles/decision.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/robofei/ROS2/action/build/control/CMakeFiles --progress-num=3,4 "Built target decision"
+.PHONY : CMakeFiles/decision.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/decision.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/ROS2/action/build/control/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/decision.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/ROS2/action/build/control/CMakeFiles 0
+.PHONY : CMakeFiles/decision.dir/rule
+
+# Convenience name for target.
+decision: CMakeFiles/decision.dir/rule
+
+.PHONY : decision
+
+# clean rule for target.
+CMakeFiles/decision.dir/clean:
+	$(MAKE) -f CMakeFiles/decision.dir/build.make CMakeFiles/decision.dir/clean
+.PHONY : CMakeFiles/decision.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/control.dir

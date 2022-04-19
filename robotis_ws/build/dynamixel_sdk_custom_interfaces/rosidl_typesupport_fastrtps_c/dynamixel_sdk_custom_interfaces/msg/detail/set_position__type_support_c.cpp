@@ -34,8 +34,6 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/primitives_sequence.h"  // id, position
-#include "rosidl_runtime_c/primitives_sequence_functions.h"  // id, position
 
 // forward declare type support functions
 
@@ -53,18 +51,12 @@ static bool _SetPosition__cdr_serialize(
   const _SetPosition__ros_msg_type * ros_message = static_cast<const _SetPosition__ros_msg_type *>(untyped_ros_message);
   // Field name: id
   {
-    size_t size = ros_message->id.size;
-    auto array_ptr = ros_message->id.data;
-    cdr << static_cast<uint32_t>(size);
-    cdr.serializeArray(array_ptr, size);
+    cdr << ros_message->id;
   }
 
   // Field name: position
   {
-    size_t size = ros_message->position.size;
-    auto array_ptr = ros_message->position.data;
-    cdr << static_cast<uint32_t>(size);
-    cdr.serializeArray(array_ptr, size);
+    cdr << ros_message->position;
   }
 
   return true;
@@ -81,32 +73,12 @@ static bool _SetPosition__cdr_deserialize(
   _SetPosition__ros_msg_type * ros_message = static_cast<_SetPosition__ros_msg_type *>(untyped_ros_message);
   // Field name: id
   {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->id.data) {
-      rosidl_runtime_c__uint8__Sequence__fini(&ros_message->id);
-    }
-    if (!rosidl_runtime_c__uint8__Sequence__init(&ros_message->id, size)) {
-      return "failed to create array for field 'id'";
-    }
-    auto array_ptr = ros_message->id.data;
-    cdr.deserializeArray(array_ptr, size);
+    cdr >> ros_message->id;
   }
 
   // Field name: position
   {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->position.data) {
-      rosidl_runtime_c__int32__Sequence__fini(&ros_message->position);
-    }
-    if (!rosidl_runtime_c__int32__Sequence__init(&ros_message->position, size)) {
-      return "failed to create array for field 'position'";
-    }
-    auto array_ptr = ros_message->position.data;
-    cdr.deserializeArray(array_ptr, size);
+    cdr >> ros_message->position;
   }
 
   return true;
@@ -128,24 +100,14 @@ size_t get_serialized_size_dynamixel_sdk_custom_interfaces__msg__SetPosition(
 
   // field.name id
   {
-    size_t array_size = ros_message->id.size;
-    auto array_ptr = ros_message->id.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message->id);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
   // field.name position
   {
-    size_t array_size = ros_message->position.size;
-    auto array_ptr = ros_message->position.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
+    size_t item_size = sizeof(ros_message->position);
+    current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -174,19 +136,13 @@ size_t max_serialized_size_dynamixel_sdk_custom_interfaces__msg__SetPosition(
 
   // member: id
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint8_t);
   }
   // member: position
   {
-    size_t array_size = 0;
-    full_bounded = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));

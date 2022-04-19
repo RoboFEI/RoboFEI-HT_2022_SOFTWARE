@@ -1,0 +1,48 @@
+[0.017s] Invoking command in '/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4
+[0.078s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.105s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.337s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.345s] -- Found dynamixel_sdk: 3.7.40 (/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)
+[0.347s] -- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[0.371s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.374s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.507s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.557s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.603s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.605s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.838s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.133s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.137s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.137s] -- Configured cppcheck include dirs: /home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/include
+[1.138s] -- Configured cppcheck exclude dirs and/or files: 
+[1.141s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.141s] -- Configured cpplint exclude dirs and/or files: 
+[1.142s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.143s] -- Added test 'lint_cmake' to check CMake code style
+[1.144s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[1.146s] -- Added test 'uncrustify' to check C / C++ code style
+[1.146s] -- Configured uncrustify additional arguments: 
+[1.146s] -- Added test 'xmllint' to check XML markup files
+[1.151s] -- Configuring done
+[1.243s] -- Generating done
+[1.245s] -- Build files have been written to: /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples
+[1.277s] [35m[1mScanning dependencies of target minimal_pub[0m
+[1.277s] [35m[1mScanning dependencies of target read_write_node[0m
+[1.313s] [ 25%] [32mBuilding CXX object CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o[0m
+[1.314s] [ 50%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[2.788s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/minimal_pub.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback()[m[K’:
+[2.788s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/minimal_pub.cpp:29:82:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_id_type[m[K’ {aka ‘[01m[Kunsigned char[m[K’} in assignment
+[2.788s]    29 | id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18[01;31m[K}[m[K;
+[2.788s]       |                                                                    [01;31m[K^[m[K
+[2.788s] 
+[2.789s] [01m[K/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/minimal_pub.cpp:30:133:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_position_type[m[K’ {aka ‘[01m[Kint[m[K’} in assignment
+[2.789s]    30 | 4, 2593, 1024, 1024, 2593, 1024, 1024, 2593, 1024, 1024, 2593[01;31m[K}[m[K;
+[2.789s]       |                                                              [01;31m[K^[m[K
+[2.789s] 
+[3.736s] make[2]: *** [CMakeFiles/minimal_pub.dir/build.make:63: CMakeFiles/minimal_pub.dir/src/minimal_pub.cpp.o] Error 1
+[3.736s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_pub.dir/all] Error 2
+[3.736s] make[1]: *** Waiting for unfinished jobs....
+[6.856s] [ 75%] [32m[1mLinking CXX executable read_write_node[0m
+[7.135s] [ 75%] Built target read_write_node
+[7.137s] make: *** [Makefile:141: all] Error 2
+[7.140s] Invoked command in '/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples' returned '2': CMAKE_PREFIX_PATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples:/opt/ros/foxy PYTHONPATH=/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/robotis_ws/install/dynamixel_sdk_examples/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples -- -j4 -l4

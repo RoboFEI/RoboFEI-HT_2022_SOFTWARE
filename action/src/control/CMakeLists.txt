@@ -36,6 +36,13 @@ ament_target_dependencies(control
 )
 
 # Build
+add_executable(decision src/dec.cpp)
+ament_target_dependencies(decision
+  dynamixel_sdk_custom_interfaces
+  rclcpp
+)
+
+# Build
 #add_executable(motion src/MotionManager.cpp)
 #ament_target_dependencies(motion
 #  dynamixel_sdk_custom_interfaces
@@ -45,7 +52,14 @@ ament_target_dependencies(control
 # Install
 install(TARGETS
   control
+  decision
   DESTINATION lib/${PROJECT_NAME}
+)
+
+# Install launch files.
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}/
 )
 
 if(BUILD_TESTING)

@@ -5,10 +5,16 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     ld = LaunchDescription()
-    minimal_publisher = Node(
+    control = Node(
         package="control",
-        executable="minimal_pub",
+        executable="control",
         output = 'screen'
     )
-    ld.add_action(minimal_publisher)
+    decision = Node(
+        package="control",
+        executable="decision",
+        output = 'screen'
+    )
+    ld.add_action(control)
+    ld.add_action(decision)
     return ld

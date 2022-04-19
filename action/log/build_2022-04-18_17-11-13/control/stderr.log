@@ -1,0 +1,309 @@
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:76:6:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+   76 |     }
+      |      [01;31m[K^[m[K
+      |      [32m[K;[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In constructor ‘[01m[KControl::Control()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:33:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_subscription_t[m[K’?
+   33 |     [01;31m[Ksubscription_[m[K = this->create_subscription<dynamixel_sdk_custom_interfaces::msg::Decision>(
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+      |     [32m[Krcl_subscription_t[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:34:44:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic_callback[m[K’ is not a member of ‘[01m[KControl[m[K’
+   34 |       "/decision", 10, std::bind(&Control::[01;31m[Ktopic_callback[m[K, this, _1));
+      |                                            [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:35:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_imu[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_subscription_fini[m[K’?
+   35 |     [01;31m[Ksubscription_imu[m[K = this->create_subscription<sensor_msgs::msg::Imu>(
+      |     [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |     [32m[Krcl_subscription_fini[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:37:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   37 |     [01;31m[Kpublisher_[m[K = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10);
+      |     [01;31m[K^~~~~~~~~~[m[K
+      |     [32m[Krcl_publisher_t[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In member function ‘[01m[Kvoid Control::topic_callback_imu(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:74:7:[m[K [01;31m[Kerror: [m[Kbreak statement not within loop or switch
+   74 |       [01;31m[Kbreak[m[K;
+      |       [01;31m[K^~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:47:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmed_accel_z[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   47 |       float [01;35m[Kmed_accel_z[m[K = 0, ac_med_accel_z = 0;
+      |             [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:47:30:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kac_med_accel_z[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   47 |       float med_accel_z = 0, [01;35m[Kac_med_accel_z[m[K = 0;
+      |                              [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K At global scope:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:78:100:[m[K [01;31m[Kerror: [m[Knon-member function ‘[01m[Kvoid topic_callback(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> > >)[m[K’ cannot have cv-qualifier
+   78 | red_ptr<dynamixel_sdk_custom_interfaces::msg::Decision> msg) [01;31m[Kconst[m[K
+      |                                                              [01;31m[K^~~~~[m[K
+
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:12[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In function ‘[01m[Kvoid topic_callback(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> > >)[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:83:19:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   83 |       RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "I heard %d", movement);
+      |                   [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:83:19:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:83:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   83 |       [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "I heard %d", movement);
+      |       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:83:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   83 |       [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "I heard %d", movement);
+      |       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:83:7:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   83 |       [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "I heard %d", movement);
+      |       [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:12[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:83:19:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   83 |       RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "I heard %d", movement);
+      |                   [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:83:19:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   83 |       RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "I heard %d", movement);
+      |                   [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:12[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:86:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   86 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Stand Up Front");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:86:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:86:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   86 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Stand Up Front");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:86:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   86 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Stand Up Front");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:86:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   86 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Stand Up Front");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:12[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:86:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   86 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Stand Up Front");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:86:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   86 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Stand Up Front");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:90:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   90 |           [01;31m[Kpublisher_[m[K->publish(message);
+      |           [01;31m[K^~~~~~~~~~[m[K
+      |           [32m[Krcl_publisher_t[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:12[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:95:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   95 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Stand Up Back");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:95:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:95:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   95 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Stand Up Back");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:95:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   95 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Stand Up Back");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:95:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   95 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Stand Up Back");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:12[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:95:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   95 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Stand Up Back");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:95:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   95 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Stand Up Back");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:99:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   99 |           [01;31m[Kpublisher_[m[K->publish(message);
+      |           [01;31m[K^~~~~~~~~~[m[K
+      |           [32m[Krcl_publisher_t[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:12[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:106:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  106 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Goodbye");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:106:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:106:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  106 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Goodbye");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:106:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  106 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Goodbye");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:106:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  106 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Goodbye");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:12[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:106:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  106 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Goodbye");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:106:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  106 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Goodbye");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:110:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+  110 |           [01;31m[Kpublisher_[m[K->publish(message);
+      |           [01;31m[K^~~~~~~~~~[m[K
+      |           [32m[Krcl_publisher_t[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:12[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:114:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  114 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Right kick");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:114:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:114:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  114 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Right kick");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:114:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  114 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Right kick");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:114:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  114 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Right kick");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:12[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:114:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  114 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Right kick");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:114:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  114 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Right kick");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:118:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+  118 |           [01;31m[Kpublisher_[m[K->publish(message);
+      |           [01;31m[K^~~~~~~~~~[m[K
+      |           [32m[Krcl_publisher_t[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:12[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  122 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Kicking");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  122 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Kicking");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  122 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Kicking");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:11:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  122 |           [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Kicking");
+      |           [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:12[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  122 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Kicking");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:122:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  122 |           RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Kicking");
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:126:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+  126 |           [01;31m[Kpublisher_[m[K->publish(message);
+      |           [01;31m[K^~~~~~~~~~[m[K
+      |           [32m[Krcl_publisher_t[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K At global scope:
+[01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:136:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  136 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/control.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -310,8 +310,11 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "control" "DESTINATION" "lib/control")
+# install("TARGETS" "control" "decision" "DESTINATION" "lib/control")
 include("/home/robofei/ROS2/action/build/control/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install(DIRECTORY "launch" "DESTINATION" "share/control/")
+ament_cmake_symlink_install_directory("/home/robofei/ROS2/action/src/control" DIRECTORY "launch" "DESTINATION" "share/control/")
 
 # install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
