@@ -1,0 +1,1 @@
+/home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces/rosidl_generator_c/dynamixel_sdk_custom_interfaces/msg/detail/decision__struct.h

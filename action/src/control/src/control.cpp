@@ -1,6 +1,8 @@
 // Open terminal #2 
 // $ ros2 run control control
 // $ ros2 run um7 um7_node
+// $ ros2 launch control action.launch.py
+
 
 // ros2 topic pub -1 /decision dynamixel_sdk_custom_interfaces/Decision "{decision: 1}"
 
@@ -52,13 +54,13 @@ public:
       if(contador>=3)
       {
         RCLCPP_INFO(this->get_logger(),"Caido");
-        fallen = true; // Robo caido
+        fallen = true; // Robô caido
       }
       if (fallen == true){ // Robô esta caido
         if(IMU_ACCEL_Z > 0){  // Robô caido de frente
           fallenFront = true;
         }
-        else{  //Levanta se caido de costa
+        else{  // Robô caido de costas
           fallenFront = false;
         }
       }
@@ -100,7 +102,7 @@ public:
           std::this_thread::sleep_for(std::chrono::seconds(1));
         }
         else if(movement==2){
-          RCLCPP_INFO(this->get_logger(), "Right kick");
+          RCLCPP_INFO(this->get_logger(), "Walking");
           auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
           message.id = {4, 5, 6};          
           message.position = {2024, 2048, 2093};   
@@ -108,7 +110,31 @@ public:
           std::this_thread::sleep_for(std::chrono::seconds(1));
         }
         else if(movement==3){
-          RCLCPP_INFO(this->get_logger(), "Kicking");
+          RCLCPP_INFO(this->get_logger(), "Right kick");
+          auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
+          message.id = {4, 5, 6};          
+          message.position = {2024, 2048, 2093};   
+          publisher_->publish(message);
+          std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+        else if(movement==4){
+          RCLCPP_INFO(this->get_logger(), "Left kick");
+          auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
+          message.id = {4, 5, 6};          
+          message.position = {2024, 2048, 2093};   
+          publisher_->publish(message);
+          std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+        else if(movement==5){
+          RCLCPP_INFO(this->get_logger(), "Turn Right");
+          auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
+          message.id = {4, 5, 6};          
+          message.position = {2024, 2048, 2093};   
+          publisher_->publish(message);
+          std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+        else if(movement==6){
+          RCLCPP_INFO(this->get_logger(), "Turn Left");
           auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
           message.id = {4, 5, 6};          
           message.position = {2024, 2048, 2093};   
