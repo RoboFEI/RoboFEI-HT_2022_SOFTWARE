@@ -94,7 +94,7 @@ public:
       }
       else{
         if(movement==1){
-          RCLCPP_INFO(this->get_logger(), "Goodbye");
+          RCLCPP_INFO(this->get_logger(), "Parado");
           auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
           message.id = {1, 2, 3};          
           message.position = {1024, 1024, 2593};   
@@ -135,6 +135,22 @@ public:
         }
         else if(movement==6){
           RCLCPP_INFO(this->get_logger(), "Turn Left");
+          auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
+          message.id = {4, 5, 6};          
+          message.position = {2024, 2048, 2093};   
+          publisher_->publish(message);
+          std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+        else if(movement==7){
+          RCLCPP_INFO(this->get_logger(), "Goodbye");
+          auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
+          message.id = {4, 5, 6};          
+          message.position = {2024, 2048, 2093};   
+          publisher_->publish(message);
+          std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+        else if(movement==8){
+          RCLCPP_INFO(this->get_logger(), "Moving head");
           auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
           message.id = {4, 5, 6};          
           message.position = {2024, 2048, 2093};   

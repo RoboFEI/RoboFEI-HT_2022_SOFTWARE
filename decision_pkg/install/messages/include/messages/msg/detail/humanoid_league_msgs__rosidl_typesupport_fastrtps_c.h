@@ -1,0 +1,1 @@
+/home/robofei/ROS2/decision_pkg/build/messages/rosidl_typesupport_fastrtps_c/messages/msg/detail/humanoid_league_msgs__rosidl_typesupport_fastrtps_c.h

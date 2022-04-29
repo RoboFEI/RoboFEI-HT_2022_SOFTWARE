@@ -1,8 +1,8 @@
-# Install script for directory: /home/robofei/Downloads/GC/build/messages/messages__py
+# Install script for directory: /home/robofei/ROS2/GC/build/messages/messages__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robofei/Downloads/GC/install/messages")
+  set(CMAKE_INSTALL_PREFIX "/home/robofei/ROS2/GC/install/messages")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
