@@ -1,0 +1,186 @@
+[0.000000] (-) TimerEvent: {}
+[0.005579] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.005788] (messages) JobQueued: {'identifier': 'messages', 'dependencies': OrderedDict()}
+[0.005922] (controller) JobStarted: {'identifier': 'controller'}
+[0.098066] (-) TimerEvent: {}
+[0.186131] (messages) JobStarted: {'identifier': 'messages'}
+[0.198675] (-) TimerEvent: {}
+[0.299738] (-) TimerEvent: {}
+[0.400365] (-) TimerEvent: {}
+[0.451786] (messages) JobProgress: {'identifier': 'messages', 'progress': 'cmake'}
+[0.491547] (messages) JobProgress: {'identifier': 'messages', 'progress': 'build'}
+[0.492792] (messages) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robofei/ROS2/GC/build/messages', '--', '-j4', '-l4'], 'cwd': '/home/robofei/ROS2/GC/build/messages', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1827'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robofei/ROS2/GC/install/messages/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1640'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=966dc6410e2aaf6624feb81b627025ba'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/robofei/ROS2/GC/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:48252'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1866,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1866'), ('INVOCATION_ID', '1b68c57c459d4856ad004f41e749aad1'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2de1e252_652f_43dc_920f_97651b11a98f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.77'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robofei/ROS2/GC/install/messages:/home/robofei/ROS2/GC/install/controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/ROS2/GC/build/messages'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=966dc6410e2aaf6624feb81b627025ba'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robofei/ROS2/GC/install/messages/lib/python3.8/site-packages:/home/robofei/ROS2/GC/build/controller:/home/robofei/ROS2/GC/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robofei/ROS2/GC/install/messages:/home/robofei/ROS2/GC/install/controller:/opt/ros/foxy')]), 'shell': False}
+[0.500938] (-) TimerEvent: {}
+[0.601513] (-) TimerEvent: {}
+[0.702179] (-) TimerEvent: {}
+[0.802480] (-) TimerEvent: {}
+[0.902955] (-) TimerEvent: {}
+[1.004463] (-) TimerEvent: {}
+[1.105365] (-) TimerEvent: {}
+[1.206239] (-) TimerEvent: {}
+[1.307236] (-) TimerEvent: {}
+[1.408533] (-) TimerEvent: {}
+[1.509549] (-) TimerEvent: {}
+[1.610845] (-) TimerEvent: {}
+[1.712077] (-) TimerEvent: {}
+[1.813110] (-) TimerEvent: {}
+[1.914251] (-) TimerEvent: {}
+[2.015695] (-) TimerEvent: {}
+[2.116673] (-) TimerEvent: {}
+[2.217855] (-) TimerEvent: {}
+[2.318954] (-) TimerEvent: {}
+[2.419966] (-) TimerEvent: {}
+[2.521858] (-) TimerEvent: {}
+[2.622783] (-) TimerEvent: {}
+[2.653800] (messages) StdoutLine: {'line': b'[  3%] Built target messages__cpp\n'}
+[2.722953] (-) TimerEvent: {}
+[2.823503] (-) TimerEvent: {}
+[2.924192] (-) TimerEvent: {}
+[3.025120] (-) TimerEvent: {}
+[3.126237] (-) TimerEvent: {}
+[3.201474] (messages) StdoutLine: {'line': b'[ 12%] Built target messages__rosidl_typesupport_cpp\n'}
+[3.202715] (messages) StdoutLine: {'line': b'[ 22%] Built target messages__rosidl_generator_c\n'}
+[3.205193] (messages) StdoutLine: {'line': b'[ 32%] Built target messages__rosidl_typesupport_introspection_cpp\n'}
+[3.223462] (messages) StdoutLine: {'line': b'[ 41%] Built target messages__rosidl_typesupport_fastrtps_cpp\n'}
+[3.226386] (-) TimerEvent: {}
+[3.326837] (-) TimerEvent: {}
+[3.428484] (-) TimerEvent: {}
+[3.448191] (messages) StdoutLine: {'line': b'[ 51%] Built target messages__rosidl_typesupport_c\n'}
+[3.464669] (messages) StdoutLine: {'line': b'[ 61%] Built target messages__rosidl_typesupport_introspection_c\n'}
+[3.466220] (messages) StdoutLine: {'line': b'[ 70%] Built target messages__rosidl_typesupport_fastrtps_c\n'}
+[3.528649] (-) TimerEvent: {}
+[3.586007] (messages) StdoutLine: {'line': b'[ 70%] Built target messages\n'}
+[3.628741] (-) TimerEvent: {}
+[3.729208] (-) TimerEvent: {}
+[3.747073] (messages) StdoutLine: {'line': b'[ 74%] Built target messages__py\n'}
+[3.829516] (-) TimerEvent: {}
+[3.930470] (-) TimerEvent: {}
+[4.031557] (-) TimerEvent: {}
+[4.066072] (messages) StdoutLine: {'line': b'[ 80%] Built target messages__python\n'}
+[4.132347] (-) TimerEvent: {}
+[4.233307] (-) TimerEvent: {}
+[4.334334] (-) TimerEvent: {}
+[4.344704] (messages) StdoutLine: {'line': b'[ 87%] Built target messages__rosidl_typesupport_fastrtps_c__pyext\n'}
+[4.347654] (messages) StdoutLine: {'line': b'[ 93%] Built target messages__rosidl_typesupport_introspection_c__pyext\n'}
+[4.355732] (messages) StdoutLine: {'line': b'[100%] Built target messages__rosidl_typesupport_c__pyext\n'}
+[4.370203] (messages) CommandEnded: {'returncode': 0}
+[4.424441] (messages) JobProgress: {'identifier': 'messages', 'progress': 'install'}
+[4.434448] (-) TimerEvent: {}
+[4.435871] (messages) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robofei/ROS2/GC/build/messages'], 'cwd': '/home/robofei/ROS2/GC/build/messages', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1827'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robofei/ROS2/GC/install/messages/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1640'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=966dc6410e2aaf6624feb81b627025ba'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/robofei/ROS2/GC/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:48252'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16'), ('SESSION_MANAGER', 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1866,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1866'), ('INVOCATION_ID', '1b68c57c459d4856ad004f41e749aad1'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2de1e252_652f_43dc_920f_97651b11a98f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.77'), ('GAME_CONTROLLER_HOME', '/home/robofei/GameController'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robofei/ROS2/GC/install/messages:/home/robofei/ROS2/GC/install/controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('WEBOTS_HOME', '/home/robofei/webots'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-11-openjdk-amd64'), ('PWD', '/home/robofei/ROS2/GC/build/messages'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=966dc6410e2aaf6624feb81b627025ba'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robofei/ROS2/GC/install/messages/lib/python3.8/site-packages:/home/robofei/ROS2/GC/build/controller:/home/robofei/ROS2/GC/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robofei/ROS2/GC/install/messages:/home/robofei/ROS2/GC/install/controller:/opt/ros/foxy')]), 'shell': False}
+[4.495743] (messages) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.533284] (messages) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[4.534584] (-) TimerEvent: {}
+[4.572257] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/ament_index/resource_index/rosidl_interfaces/messages\n'}
+[4.634913] (-) TimerEvent: {}
+[4.642601] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__functions.h\n'}
+[4.644267] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__struct.h\n'}
+[4.646248] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__type_support.h\n'}
+[4.675908] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/humanoid_league_msgs.h\n'}
+[4.677673] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.717282] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/environment/library_path.sh\n'}
+[4.719152] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/environment/library_path.dsv\n'}
+[4.723504] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__rosidl_typesupport_fastrtps_c.h\n'}
+[4.735230] (-) TimerEvent: {}
+[4.753912] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.791207] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/lib/libmessages__rosidl_typesupport_fastrtps_c.so\n'}
+[4.795782] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.831430] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.835554] (-) TimerEvent: {}
+[4.863059] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/lib/libmessages__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.867995] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__rosidl_typesupport_introspection_c.h\n'}
+[4.897476] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.901288] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__builder.hpp\n'}
+[4.902794] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__struct.hpp\n'}
+[4.904183] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__traits.hpp\n'}
+[4.935810] (-) TimerEvent: {}
+[4.941888] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/humanoid_league_msgs.hpp\n'}
+[4.945573] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/include/messages/msg/detail/humanoid_league_msgs__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.947964] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/environment/pythonpath.sh\n'}
+[4.950021] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/environment/pythonpath.dsv\n'}
+[4.951915] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/lib/python3.8/site-packages/messages/__init__.py\n'}
+[4.955096] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/lib/python3.8/site-packages/messages/msg/__init__.py\n'}
+[4.956411] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/lib/python3.8/site-packages/messages/msg/_humanoid_league_msgs.py\n'}
+[5.008617] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[5.012353] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[5.036046] (-) TimerEvent: {}
+[5.046995] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/lib/python3.8/site-packages/messages/messages_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[5.050204] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/lib/libmessages__python.so\n'}
+[5.075252] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/msg/HumanoidLeagueMsgs.idl\n'}
+[5.078039] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/msg/HumanoidLeagueMsgs.msg\n'}
+[5.080497] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/ament_index/resource_index/package_run_dependencies/messages\n'}
+[5.108587] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/ament_index/resource_index/parent_prefix_path/messages\n'}
+[5.136389] (-) TimerEvent: {}
+[5.142498] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/environment/ament_prefix_path.sh\n'}
+[5.144916] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/environment/ament_prefix_path.dsv\n'}
+[5.147524] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/environment/path.sh\n'}
+[5.149755] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/environment/path.dsv\n'}
+[5.175116] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/local_setup.bash\n'}
+[5.177991] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/local_setup.sh\n'}
+[5.180517] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/local_setup.zsh\n'}
+[5.182438] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/local_setup.dsv\n'}
+[5.183964] (messages) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/GC/install/messages/share/messages/package.dsv\n'}
+[5.236621] (-) TimerEvent: {}
+[5.286279] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/ament_index/resource_index/packages/messages\n'}
+[5.288602] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/rosidl_cmake-extras.cmake\n'}
+[5.290844] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.292923] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[5.319519] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[5.321990] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[5.324157] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[5.336860] (-) TimerEvent: {}
+[5.364437] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[5.366745] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/messagesConfig.cmake\n'}
+[5.368712] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/messagesConfig-version.cmake\n'}
+[5.370550] (messages) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robofei/ROS2/GC/install/messages/share/messages/package.xml\n'}
+[5.372417] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/lib/libmessages__rosidl_generator_c.so\n'}
+[5.403238] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/lib/libmessages__rosidl_typesupport_introspection_c.so\n'}
+[5.405958] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/lib/libmessages__rosidl_typesupport_c.so\n'}
+[5.437077] (-) TimerEvent: {}
+[5.473182] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/lib/libmessages__rosidl_typesupport_introspection_cpp.so\n'}
+[5.507756] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/lib/libmessages__rosidl_typesupport_cpp.so\n'}
+[5.537218] (-) TimerEvent: {}
+[5.637949] (-) TimerEvent: {}
+[5.644033] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/messages__rosidl_generator_cExport.cmake\n'}
+[5.644559] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/messages__rosidl_generator_cExport-noconfig.cmake\n'}
+[5.674105] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cExport.cmake\n'}
+[5.675458] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[5.738244] (-) TimerEvent: {}
+[5.755012] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cExport.cmake\n'}
+[5.756017] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[5.756850] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/messages__rosidl_generator_cppExport.cmake\n'}
+[5.833185] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[5.834154] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[5.838490] (-) TimerEvent: {}
+[5.869995] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cppExport.cmake\n'}
+[5.871194] (messages) StdoutLine: {'line': b'-- Up-to-date: /home/robofei/ROS2/GC/install/messages/share/messages/cmake/messages__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[5.913896] (messages) CommandEnded: {'returncode': 0}
+[5.939274] (-) TimerEvent: {}
+[6.040326] (-) TimerEvent: {}
+[6.141257] (-) TimerEvent: {}
+[6.241616] (-) TimerEvent: {}
+[6.282121] (controller) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--prefix', '/home/robofei/ROS2/GC/install/controller', '--editable', '--build-directory', '/home/robofei/ROS2/GC/build/controller/build', '--no-deps', 'install_data', '--install-dir', '/home/robofei/ROS2/GC/install/controller'], 'cwd': '/home/robofei/ROS2/GC/build/controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'robofei', 'LC_TIME': 'pt_BR.UTF-8', 'SSH_AGENT_PID': '1827', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/robofei/ROS2/GC/install/messages/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/robofei/RoboFEI-HT_2018/AI/build/lib', 'HOME': '/home/robofei', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'pt_BR.UTF-8', 'MANAGERPID': '1640', 'LC_CTYPE': 'pt_BR.UTF-8', 'DBUS_STARTER_BUS_TYPE': 'session', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=966dc6410e2aaf6624feb81b627025ba', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/robofei/ROS2/GC/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'robofei', 'JOURNAL_STREAM': '8:48252', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'robofei', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/robofei/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/robofei/tools/arduino-1.8.16', 'SESSION_MANAGER': 'local/robofei-Lenovo-ideapad-310-15ISK:@/tmp/.ICE-unix/1866,unix/robofei-Lenovo-ideapad-310-15ISK:/tmp/.ICE-unix/1866', 'INVOCATION_ID': '1b68c57c459d4856ad004f41e749aad1', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'pt_BR.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/2de1e252_652f_43dc_920f_97651b11a98f', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.77', 'GAME_CONTROLLER_HOME': '/home/robofei/GameController', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/robofei/ROS2/GC/install/messages:/home/robofei/ROS2/GC/install/controller:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'pt_BR.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'WEBOTS_HOME': '/home/robofei/webots', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'QT_IM_MODULE': 'ibus', 'JAVA_HOME': '/usr/lib/jvm/java-11-openjdk-amd64', 'PWD': '/home/robofei/ROS2/GC/build/controller', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=966dc6410e2aaf6624feb81b627025ba', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robofei/ROS2/GC/install/controller/lib/python3.8/site-packages:/home/robofei/ROS2/GC/install/messages/lib/python3.8/site-packages:/home/robofei/ROS2/GC/build/controller:/home/robofei/ROS2/GC/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'pt_BR.UTF-8', 'LC_PAPER': 'pt_BR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/robofei/ROS2/GC/install/messages'}, 'shell': False}
+[6.342629] (-) TimerEvent: {}
+[6.349362] (messages) JobEnded: {'identifier': 'messages', 'rc': 0}
+[6.442722] (-) TimerEvent: {}
+[6.543023] (-) TimerEvent: {}
+[6.545567] (controller) StdoutLine: {'line': b'running develop\n'}
+[6.643163] (-) TimerEvent: {}
+[6.715956] (controller) StdoutLine: {'line': b'running egg_info\n'}
+[6.716155] (controller) StdoutLine: {'line': b'writing controller.egg-info/PKG-INFO\n'}
+[6.716285] (controller) StdoutLine: {'line': b'writing dependency_links to controller.egg-info/dependency_links.txt\n'}
+[6.716470] (controller) StdoutLine: {'line': b'writing entry points to controller.egg-info/entry_points.txt\n'}
+[6.716629] (controller) StdoutLine: {'line': b'writing requirements to controller.egg-info/requires.txt\n'}
+[6.716761] (controller) StdoutLine: {'line': b'writing top-level names to controller.egg-info/top_level.txt\n'}
+[6.743254] (-) TimerEvent: {}
+[6.779131] (controller) StdoutLine: {'line': b"reading manifest file 'controller.egg-info/SOURCES.txt'\n"}
+[6.798359] (controller) StdoutLine: {'line': b"writing manifest file 'controller.egg-info/SOURCES.txt'\n"}
+[6.834135] (controller) StdoutLine: {'line': b'running build_ext\n'}
+[6.843361] (-) TimerEvent: {}
+[6.860391] (controller) StdoutLine: {'line': b'Creating /home/robofei/ROS2/GC/install/controller/lib/python3.8/site-packages/controller.egg-link (link to .)\n'}
+[6.861581] (controller) StdoutLine: {'line': b'Installing talker script to /home/robofei/ROS2/GC/install/controller/lib/controller\n'}
+[6.861864] (controller) StdoutLine: {'line': b'\n'}
+[6.861976] (controller) StdoutLine: {'line': b'Installed /home/robofei/ROS2/GC/build/controller\n'}
+[6.862056] (controller) StdoutLine: {'line': b'running install_data\n'}
+[6.890972] (controller) CommandEnded: {'returncode': 0}
+[6.900322] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[6.901050] (-) EventReactorShutdown: {}

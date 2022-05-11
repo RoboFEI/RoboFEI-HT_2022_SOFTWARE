@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
 
 import socket
 import time
@@ -17,7 +19,7 @@ class GameStateReceiver(Node):
 
     def __init__(self):
         super().__init__('game_controller')
-        self.declare_parameter('TEAM_ROBOFEI', 8)
+        self.declare_parameter('TEAM_ROBOFEI', 22)
         self.declare_parameter('ROBOT_NUMBER', 1)
         self.team = self.get_parameter('TEAM_ROBOFEI').get_parameter_value().integer_value
         self.player = self.get_parameter('ROBOT_NUMBER').get_parameter_value().integer_value

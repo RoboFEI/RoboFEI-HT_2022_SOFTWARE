@@ -157,6 +157,46 @@ public:
           publisher_->publish(message);
           std::this_thread::sleep_for(std::chrono::seconds(1));
         }
+        else if(movement==9){
+          RCLCPP_INFO(this->get_logger(), "Turn around ball clockwise");
+          auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
+          message.id = {4, 5, 6};          
+          message.position = {2024, 2048, 2093};   
+          publisher_->publish(message);
+          std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+        else if(movement==10){
+          RCLCPP_INFO(this->get_logger(), "Turn around ball anticlockwise");
+          auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
+          message.id = {4, 5, 6};          
+          message.position = {2024, 2048, 2093};   
+          publisher_->publish(message);
+          std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+        else if(movement==11){
+          RCLCPP_INFO(this->get_logger(), "Fall left");
+          auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
+          message.id = {4, 5, 6};          
+          message.position = {2024, 2048, 2093};   
+          publisher_->publish(message);
+          std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+        else if(movement==12){
+          RCLCPP_INFO(this->get_logger(), "Fall right");
+          auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
+          message.id = {4, 5, 6};          
+          message.position = {2024, 2048, 2093};   
+          publisher_->publish(message);
+          std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+        else if(movement==13){
+          RCLCPP_INFO(this->get_logger(), "Agachando");
+          auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
+          message.id = {4, 5, 6};          
+          message.position = {2024, 2048, 2093};   
+          publisher_->publish(message);
+          std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
       }
     } 
 
