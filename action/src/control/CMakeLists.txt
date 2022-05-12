@@ -24,11 +24,15 @@ find_package(sensor_msgs REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 include_directories(include)
-include_directories(Framework)
-include_directories(Linux)
+
+set(EXT_SOURCES
+  /home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp
+  /home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp
+)
+
 
 # Build
-add_executable(control src/control.cpp)
+add_executable(control src/control.cpp ${EXT_SOURCES})
 ament_target_dependencies(control
   dynamixel_sdk_custom_interfaces
   rclcpp
@@ -41,13 +45,6 @@ ament_target_dependencies(decision
   dynamixel_sdk_custom_interfaces
   rclcpp
 )
-
-# Build
-#add_executable(motion src/MotionManager.cpp)
-#ament_target_dependencies(motion
-#  dynamixel_sdk_custom_interfaces
-#  rclcpp
-#)
 
 # Install
 install(TARGETS

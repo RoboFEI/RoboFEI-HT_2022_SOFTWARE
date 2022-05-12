@@ -13,9 +13,11 @@
 #include <iostream>
 #include "MotionStatus.h"
 #include "MotionModule.h"
-#include "CM730.h"
 #include "minIni.h"
 #include "AngleEstimator.h"
+#include "sensor_msgs/msg/imu.hpp"
+#include "rclcpp/rclcpp.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
 
 #define OFFSET_SECTION "Offset"
 #define INVALID_VALUE   -1024.0
@@ -36,6 +38,10 @@ namespace Robot
 		bool m_IsRunning;
 		bool m_IsThreadRunning;
 		bool m_IsLogging;
+		float IMU_GYRO_X;
+		float IMU_GYRO_Y;
+		rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr subscription_imu;
+rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_;  
 
 		std::ofstream m_LogFileStream;
 
@@ -45,16 +51,20 @@ namespace Robot
 
 	FILE* m_voltageLog;
 
+	void GaitPublisher();
+	
+	void topic_callback(const std::shared_ptr<sensor_msgs::msg::Imu> imu_msg_) const;
+	
 	unsigned int m_torqueAdaptionCounter;
 	double m_voltageAdaptionFactor;
 
 	MotionManager();
 	
-	void adaptTorqueToVoltage();
+	//void adaptTorqueToVoltage();
 	
-	void logVoltage(int voltage);
+	//void logVoltage(int voltage);
 	
-	void logServo();
+	//void logServo();
 
 	protected:
 

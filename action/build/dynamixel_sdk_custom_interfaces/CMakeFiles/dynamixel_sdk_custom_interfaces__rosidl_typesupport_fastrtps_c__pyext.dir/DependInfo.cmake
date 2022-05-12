@@ -12,8 +12,8 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_C
   "FOONATHAN_MEMORY=1"
   "FOONATHAN_MEMORY_VERSION_MAJOR=0"
-  "FOONATHAN_MEMORY_VERSION_MINOR=6"
-  "FOONATHAN_MEMORY_VERSION_PATCH=2"
+  "FOONATHAN_MEMORY_VERSION_MINOR=7"
+  "FOONATHAN_MEMORY_VERSION_PATCH=1"
   "RCUTILS_ENABLE_FAULT_INJECTION"
   "ROS_PACKAGE_NAME=\"dynamixel_sdk_custom_interfaces\""
   "dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext_EXPORTS"
@@ -28,12 +28,11 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "rosidl_generator_cpp"
   "rosidl_typesupport_fastrtps_c"
   "rosidl_typesupport_fastrtps_cpp"
-  "/opt/ros/foxy/include/builtin_interfaces/msg/dds_fastrtps_c"
-  "/opt/ros/foxy/include/builtin_interfaces/srv/dds_fastrtps_c"
-  "/opt/ros/foxy/include/builtin_interfaces/action/dds_fastrtps_c"
-  "/opt/ros/foxy/include"
-  "/opt/ros/foxy/include/foonathan_memory/comp"
-  "/opt/ros/foxy/include/foonathan_memory"
+  "/opt/ros/galactic/include/builtin_interfaces/msg/dds_fastrtps_c"
+  "/opt/ros/galactic/include/builtin_interfaces/srv/dds_fastrtps_c"
+  "/opt/ros/galactic/include/builtin_interfaces/action/dds_fastrtps_c"
+  "/opt/ros/galactic/include"
+  "/opt/ros/galactic/include/foonathan_memory"
   )
 
 # Targets to which this target links.

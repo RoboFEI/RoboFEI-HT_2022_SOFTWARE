@@ -322,14 +322,14 @@ ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES 
 # install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/control" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/control" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
-# install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/control/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/control/environment")
+# install(FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/control/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/control/environment")
 
 # install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/control/environment")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/control/environment")
 
-# install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/control/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/control/environment")
+# install(FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/control/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/control/environment")
 
 # install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/control/environment")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/control/environment")

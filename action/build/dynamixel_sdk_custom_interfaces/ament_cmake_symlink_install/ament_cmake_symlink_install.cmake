@@ -316,8 +316,8 @@ ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_c
 # install(DIRECTORY "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_generator_c/dynamixel_sdk_custom_interfaces/" "DESTINATION" "include/dynamixel_sdk_custom_interfaces" "PATTERN" "*.h")
 ament_cmake_symlink_install_directory("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" DIRECTORY "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/rosidl_generator_c/dynamixel_sdk_custom_interfaces/" "DESTINATION" "include/dynamixel_sdk_custom_interfaces" "PATTERN" "*.h")
 
-# install(FILES "/opt/ros/foxy/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/opt/ros/foxy/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
+# install(FILES "/opt/ros/galactic/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/opt/ros/galactic/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
 
 # install(FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
@@ -385,14 +385,14 @@ ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_c
 # install(FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_custom_interfaces" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_custom_interfaces" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
-# install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
+# install(FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
 
 # install(FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
 
-# install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
+# install(FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/opt/ros/galactic/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
 
 # install(FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")
 ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces" FILES "/home/robofei/ROS2/action/build/dynamixel_sdk_custom_interfaces/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/environment")

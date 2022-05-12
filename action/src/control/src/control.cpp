@@ -10,7 +10,13 @@
 #include <memory>
 #include <thread>
 #include <functional>
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+#include <unistd.h>
 
+#include "MotionManager.h"
+#include "Walking.h"
 #include "rclcpp/rclcpp.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/decision.hpp"
@@ -25,6 +31,11 @@ int contador = 0;
 bool stop_gait = true;
 bool fallen = false;
 bool fallenFront = false;
+double X_amplitude = 4;
+double Y_amplitude = 4;
+double A_amplitude = 4;
+
+using namespace Robot;
 
 class Control : public rclcpp::Node
 {
@@ -68,6 +79,7 @@ public:
 
     void topic_callback(const std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Decision> msg) const
     {
+      
       auto message_dec = dynamixel_sdk_custom_interfaces::msg::Decision();
       message_dec.decision = msg->decision;
       movement = (int)message_dec.decision;
@@ -197,6 +209,19 @@ public:
           publisher_->publish(message);
           std::this_thread::sleep_for(std::chrono::seconds(1));
         }
+        else if(movement==14){
+          RCLCPP_INFO(this->get_logger(), "Agachando");
+          MotionManager::GetInstance()->SetEnable(true);
+          Robot::Walking::GetInstance()->m_Joint.SetEnableBody(true);
+          Walking::GetInstance()->X_MOVE_AMPLITUDE = X_amplitude;
+          Walking::GetInstance()->Y_MOVE_AMPLITUDE = Y_amplitude;
+          Walking::GetInstance()->A_MOVE_AMPLITUDE = A_amplitude;
+          Walking::GetInstance()->Start();
+          if(movement!=14){
+            Walking::GetInstance()->Stop();
+            Walking::GetInstance()->m_Joint.SetEnableBody(false);
+          }
+        }
       }
     } 
 
@@ -209,7 +234,16 @@ public:
 
 int main(int argc, char * argv[])
 {
+  //Configurando para prioridade maxima para executar este processo-------
+  char string1[50]; //String
+  sprintf(string1,"echo fei 123456| sudo -S renice -20 -p %d", getpid());
+  system(string1);//prioridade
   rclcpp::init(argc, argv);
+  if(MotionManager::GetInstance()->Initialize() == false)
+    {
+      printf("Fail to initialize Motion Manager!\n");
+      return 0;
+  }
   rclcpp::spin(std::make_shared<Control>());
   rclcpp::shutdown();
   return 0;

@@ -17,13 +17,21 @@ namespace Robot
 	public:
 		static const int MIN_VALUE = 0;
 #ifdef MX28_1024
+        static const int CENTER_VALUE = 512;
+        static const int MAX_VALUE = 1023;
+        static constexpr double MIN_ANGLE = -150.0; // degree
+        static constexpr double MAX_ANGLE = 150.0; // degree
+        static constexpr double RATIO_VALUE2ANGLE = 0.293; // 300 / 1024
+        static constexpr double RATIO_ANGLE2VALUE = 3.413; // 1024 / 300
 
+        static const int PARAM_BYTES = 5;
+#else
 		static const int CENTER_VALUE = 2048;
 		static const int MAX_VALUE = 4095;
-		//static const double MIN_ANGLE = -180.0; // degree
-		//static const double MAX_ANGLE = 180.0; // degree
-		//static const double RATIO_VALUE2ANGLE = 0.088; // 360 / 4096
-		//static const double RATIO_ANGLE2VALUE = 11.378; // 4096 / 360
+		static constexpr double MIN_ANGLE = -180.0; // degree
+		static constexpr double MAX_ANGLE = 180.0; // degree
+		static constexpr double RATIO_VALUE2ANGLE = 0.088; // 360 / 4096
+		static constexpr double RATIO_ANGLE2VALUE = 11.378; // 4096 / 360
 
 		static const int PARAM_BYTES = 7;
 #endif
@@ -31,8 +39,8 @@ namespace Robot
         static int GetMirrorValue(int value)		{ return MAX_VALUE + 1 - value; }
 		static double GetMirrorAngle(double angle)	{ return -angle; }
 
-		static int Angle2Value(double angle) { return (int)(angle*11.378)+CENTER_VALUE; }
-		static double Value2Angle(int value) { return (double)(value-CENTER_VALUE)*0.088; }
+		static int Angle2Value(double angle) { return (int)(angle*RATIO_ANGLE2VALUE)+CENTER_VALUE; }
+		static double Value2Angle(int value) { return (double)(value-CENTER_VALUE)*RATIO_VALUE2ANGLE; }
 
 		// Address
 #ifdef MX28_1024

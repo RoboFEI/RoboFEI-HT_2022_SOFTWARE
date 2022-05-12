@@ -70,79 +70,110 @@ CMakeFiles/control.dir/src/control.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/control.dir/src/control.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/action/src/control/src/control.cpp -o CMakeFiles/control.dir/src/control.cpp.s
 
+CMakeFiles/control.dir/src/motion/modules/Walking.cpp.o: CMakeFiles/control.dir/flags.make
+CMakeFiles/control.dir/src/motion/modules/Walking.cpp.o: /home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/action/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/control.dir/src/motion/modules/Walking.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/control.dir/src/motion/modules/Walking.cpp.o -c /home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp
+
+CMakeFiles/control.dir/src/motion/modules/Walking.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/control.dir/src/motion/modules/Walking.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp > CMakeFiles/control.dir/src/motion/modules/Walking.cpp.i
+
+CMakeFiles/control.dir/src/motion/modules/Walking.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/control.dir/src/motion/modules/Walking.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp -o CMakeFiles/control.dir/src/motion/modules/Walking.cpp.s
+
+CMakeFiles/control.dir/src/motion/MotionManager.cpp.o: CMakeFiles/control.dir/flags.make
+CMakeFiles/control.dir/src/motion/MotionManager.cpp.o: /home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/action/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/control.dir/src/motion/MotionManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/control.dir/src/motion/MotionManager.cpp.o -c /home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp
+
+CMakeFiles/control.dir/src/motion/MotionManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/control.dir/src/motion/MotionManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp > CMakeFiles/control.dir/src/motion/MotionManager.cpp.i
+
+CMakeFiles/control.dir/src/motion/MotionManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/control.dir/src/motion/MotionManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp -o CMakeFiles/control.dir/src/motion/MotionManager.cpp.s
+
 # Object files for target control
 control_OBJECTS = \
-"CMakeFiles/control.dir/src/control.cpp.o"
+"CMakeFiles/control.dir/src/control.cpp.o" \
+"CMakeFiles/control.dir/src/motion/modules/Walking.cpp.o" \
+"CMakeFiles/control.dir/src/motion/MotionManager.cpp.o"
 
 # External object files for target control
 control_EXTERNAL_OBJECTS =
 
 control: CMakeFiles/control.dir/src/control.cpp.o
+control: CMakeFiles/control.dir/src/motion/modules/Walking.cpp.o
+control: CMakeFiles/control.dir/src/motion/MotionManager.cpp.o
 control: CMakeFiles/control.dir/build.make
 control: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so
 control: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so
 control: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so
 control: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so
-control: /opt/ros/foxy/lib/librclcpp.so
-control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
-control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_c.so
-control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
-control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_cpp.so
+control: /opt/ros/galactic/lib/librclcpp.so
+control: /opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
+control: /opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_c.so
+control: /opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
+control: /opt/ros/galactic/lib/libsensor_msgs__rosidl_typesupport_cpp.so
 control: /home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so
-control: /opt/ros/foxy/lib/liblibstatistics_collector.so
-control: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_c.so
-control: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_generator_c.so
-control: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_c.so
-control: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_cpp.so
-control: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_cpp.so
-control: /opt/ros/foxy/lib/librcl.so
-control: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
-control: /opt/ros/foxy/lib/librcl_interfaces__rosidl_generator_c.so
-control: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_c.so
-control: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
-control: /opt/ros/foxy/lib/librcl_interfaces__rosidl_typesupport_cpp.so
-control: /opt/ros/foxy/lib/librmw_implementation.so
-control: /opt/ros/foxy/lib/librmw.so
-control: /opt/ros/foxy/lib/librcl_logging_spdlog.so
-control: /usr/lib/x86_64-linux-gnu/libspdlog.so.1.5.0
-control: /opt/ros/foxy/lib/librcl_yaml_param_parser.so
-control: /opt/ros/foxy/lib/libyaml.so
-control: /opt/ros/foxy/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so
-control: /opt/ros/foxy/lib/librosgraph_msgs__rosidl_generator_c.so
-control: /opt/ros/foxy/lib/librosgraph_msgs__rosidl_typesupport_c.so
-control: /opt/ros/foxy/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so
-control: /opt/ros/foxy/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
-control: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
-control: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_generator_c.so
-control: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_c.so
-control: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so
-control: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
-control: /opt/ros/foxy/lib/libtracetools.so
-control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_generator_c.so
-control: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
-control: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_generator_c.so
-control: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_c.so
-control: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
-control: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
-control: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
-control: /opt/ros/foxy/lib/libstd_msgs__rosidl_generator_c.so
-control: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_c.so
-control: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
-control: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_cpp.so
-control: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
-control: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_generator_c.so
-control: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
-control: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
-control: /opt/ros/foxy/lib/librosidl_typesupport_introspection_cpp.so
-control: /opt/ros/foxy/lib/librosidl_typesupport_introspection_c.so
-control: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
-control: /opt/ros/foxy/lib/librosidl_typesupport_cpp.so
-control: /opt/ros/foxy/lib/librosidl_typesupport_c.so
-control: /opt/ros/foxy/lib/librosidl_runtime_c.so
-control: /opt/ros/foxy/lib/librcpputils.so
-control: /opt/ros/foxy/lib/librcutils.so
+control: /opt/ros/galactic/lib/libament_index_cpp.so
+control: /opt/ros/galactic/lib/liblibstatistics_collector.so
+control: /opt/ros/galactic/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_c.so
+control: /opt/ros/galactic/lib/liblibstatistics_collector_test_msgs__rosidl_generator_c.so
+control: /opt/ros/galactic/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_c.so
+control: /opt/ros/galactic/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_cpp.so
+control: /opt/ros/galactic/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_cpp.so
+control: /opt/ros/galactic/lib/librcl.so
+control: /opt/ros/galactic/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
+control: /opt/ros/galactic/lib/librcl_interfaces__rosidl_generator_c.so
+control: /opt/ros/galactic/lib/librcl_interfaces__rosidl_typesupport_c.so
+control: /opt/ros/galactic/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
+control: /opt/ros/galactic/lib/librcl_interfaces__rosidl_typesupport_cpp.so
+control: /opt/ros/galactic/lib/librmw_implementation.so
+control: /opt/ros/galactic/lib/librcl_logging_spdlog.so
+control: /opt/ros/galactic/lib/librcl_logging_interface.so
+control: /opt/ros/galactic/lib/librcl_yaml_param_parser.so
+control: /opt/ros/galactic/lib/librmw.so
+control: /opt/ros/galactic/lib/libyaml.so
+control: /opt/ros/galactic/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so
+control: /opt/ros/galactic/lib/librosgraph_msgs__rosidl_generator_c.so
+control: /opt/ros/galactic/lib/librosgraph_msgs__rosidl_typesupport_c.so
+control: /opt/ros/galactic/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so
+control: /opt/ros/galactic/lib/librosgraph_msgs__rosidl_typesupport_cpp.so
+control: /opt/ros/galactic/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so
+control: /opt/ros/galactic/lib/libstatistics_msgs__rosidl_generator_c.so
+control: /opt/ros/galactic/lib/libstatistics_msgs__rosidl_typesupport_c.so
+control: /opt/ros/galactic/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so
+control: /opt/ros/galactic/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
+control: /opt/ros/galactic/lib/libtracetools.so
+control: /opt/ros/galactic/lib/libsensor_msgs__rosidl_generator_c.so
+control: /opt/ros/galactic/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
+control: /opt/ros/galactic/lib/libgeometry_msgs__rosidl_generator_c.so
+control: /opt/ros/galactic/lib/libgeometry_msgs__rosidl_typesupport_c.so
+control: /opt/ros/galactic/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
+control: /opt/ros/galactic/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
+control: /opt/ros/galactic/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
+control: /opt/ros/galactic/lib/libstd_msgs__rosidl_generator_c.so
+control: /opt/ros/galactic/lib/libstd_msgs__rosidl_typesupport_c.so
+control: /opt/ros/galactic/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
+control: /opt/ros/galactic/lib/libstd_msgs__rosidl_typesupport_cpp.so
+control: /opt/ros/galactic/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
+control: /opt/ros/galactic/lib/libbuiltin_interfaces__rosidl_generator_c.so
+control: /opt/ros/galactic/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
+control: /opt/ros/galactic/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
+control: /opt/ros/galactic/lib/librosidl_typesupport_introspection_cpp.so
+control: /opt/ros/galactic/lib/librosidl_typesupport_introspection_c.so
+control: /opt/ros/galactic/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
+control: /opt/ros/galactic/lib/librosidl_typesupport_cpp.so
+control: /opt/ros/galactic/lib/librosidl_typesupport_c.so
+control: /opt/ros/galactic/lib/librosidl_runtime_c.so
+control: /opt/ros/galactic/lib/librcpputils.so
+control: /opt/ros/galactic/lib/librcutils.so
 control: CMakeFiles/control.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robofei/ROS2/action/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robofei/ROS2/action/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable control"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/control.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

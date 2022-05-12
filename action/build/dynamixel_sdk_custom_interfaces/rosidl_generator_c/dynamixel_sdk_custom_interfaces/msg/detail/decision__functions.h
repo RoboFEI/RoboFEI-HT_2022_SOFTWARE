@@ -66,6 +66,32 @@ ROSIDL_GENERATOR_C_PUBLIC_dynamixel_sdk_custom_interfaces
 void
 dynamixel_sdk_custom_interfaces__msg__Decision__destroy(dynamixel_sdk_custom_interfaces__msg__Decision * msg);
 
+/// Check for msg/Decision message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_dynamixel_sdk_custom_interfaces
+bool
+dynamixel_sdk_custom_interfaces__msg__Decision__are_equal(const dynamixel_sdk_custom_interfaces__msg__Decision * lhs, const dynamixel_sdk_custom_interfaces__msg__Decision * rhs);
+
+/// Copy a msg/Decision message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_dynamixel_sdk_custom_interfaces
+bool
+dynamixel_sdk_custom_interfaces__msg__Decision__copy(
+  const dynamixel_sdk_custom_interfaces__msg__Decision * input,
+  dynamixel_sdk_custom_interfaces__msg__Decision * output);
 
 /// Initialize array of msg/Decision messages.
 /**
@@ -116,6 +142,33 @@ dynamixel_sdk_custom_interfaces__msg__Decision__Sequence__create(size_t size);
 ROSIDL_GENERATOR_C_PUBLIC_dynamixel_sdk_custom_interfaces
 void
 dynamixel_sdk_custom_interfaces__msg__Decision__Sequence__destroy(dynamixel_sdk_custom_interfaces__msg__Decision__Sequence * array);
+
+/// Check for msg/Decision message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_dynamixel_sdk_custom_interfaces
+bool
+dynamixel_sdk_custom_interfaces__msg__Decision__Sequence__are_equal(const dynamixel_sdk_custom_interfaces__msg__Decision__Sequence * lhs, const dynamixel_sdk_custom_interfaces__msg__Decision__Sequence * rhs);
+
+/// Copy an array of msg/Decision messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_dynamixel_sdk_custom_interfaces
+bool
+dynamixel_sdk_custom_interfaces__msg__Decision__Sequence__copy(
+  const dynamixel_sdk_custom_interfaces__msg__Decision__Sequence * input,
+  dynamixel_sdk_custom_interfaces__msg__Decision__Sequence * output);
 
 #ifdef __cplusplus
 }

@@ -1,0 +1,134 @@
+[35m[1mScanning dependencies of target control[0m
+[ 33%] Built target decision
+[ 50%] [32mBuilding CXX object CMakeFiles/control.dir/src/motion/MotionManager.cpp.o[0m
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::GaitPublisher()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:64:7:[m[K [01;31m[Kerror: [m[Konly constructors take member initializers
+   64 |     : [01;31m[KNode[m[K("gait_publisher")
+      |       [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:64:7:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KRobot::MotionManager[m[K’ does not have any field named ‘[01m[KNode[m[K’
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:66:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_imu[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_subscription_fini[m[K’?
+   66 |         [01;31m[Ksubscription_imu[m[K = this->create_subscription<sensor_msgs::msg::Imu>(
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |         [32m[Krcl_subscription_fini[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:66:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Robot::MotionManager[m[K’ has no member named ‘[01m[Kcreate_subscription[m[K’
+   66 |         subscription_imu = this->[01;31m[Kcreate_subscription[m[K<sensor_msgs::msg::Imu>(
+      |                                  [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:66:75:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   66 |         subscription_imu = this->create_subscription<sensor_msgs::msg::Imu[01;31m[K>[m[K(
+      |                                                                           [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:67:9:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   67 |         [01;35m[K"imu/data"[m[K, 10, std::bind(&MotionManager::topic_callback, this, _1));
+      |         [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:67:51:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic_callback[m[K’ is not a member of ‘[01m[KRobot::MotionManager[m[K’
+   67 |         "imu/data", 10, std::bind(&MotionManager::[01;31m[Ktopic_callback[m[K, this, _1));
+      |                                                   [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:67:73:[m[K [01;31m[Kerror: [m[K‘[01m[K_1[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::placeholders::_1[m[K’?
+   67 |         "imu/data", 10, std::bind(&MotionManager::topic_callback, this, [01;31m[K_1[m[K));
+      |                                                                         [01;31m[K^~[m[K
+      |                                                                         [32m[Kstd::placeholders::_1[m[K
+In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:26[m[K:
+[01m[K/usr/include/c++/9/functional:211:34:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::placeholders::_1[m[K’ declared here
+  211 |     extern const _Placeholder<1> [01;36m[K_1[m[K;
+      |                                  [01;36m[K^~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:68:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   68 |         [01;31m[Kpublisher_[m[K = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10);
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Krcl_publisher_t[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:68:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Robot::MotionManager[m[K’ has no member named ‘[01m[Kcreate_publisher[m[K’
+   68 |         publisher_ = this->[01;31m[Kcreate_publisher[m[K<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10);
+      |                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:68:94:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   68 |         publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition[01;31m[K>[m[K("set_position", 10);
+      |                                                                                              [01;31m[K^[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:68:96:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   68 |         publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>([01;35m[K"set_position"[m[K, 10);
+      |                                                                                                [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K At global scope:
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:74:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’
+   74 | void [01;31m[KMotionManager[m[K::topic_callback(const std::shared_ptr<sensor_msgs::msg::Imu> imu_msg_) const
+      |      [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:74:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’
+In file included from [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:19[m[K:
+[01m[K/home/robofei/ROS2/action/src/control/include/MotionManager.h:24:8:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Robot::MotionManager[m[K’ defined here
+   24 |  class [01;36m[KMotionManager[m[K
+      |        [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Initialize(bool)[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:82:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kargc[m[K’ was not declared in this scope
+   82 |  rclcpp::init([01;31m[Kargc[m[K, argv);
+      |               [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:82:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kargv[m[K’ was not declared in this scope
+   82 |  rclcpp::init(argc, [01;31m[Kargv[m[K);
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:83:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kspin_once[m[K’ is not a member of ‘[01m[Krclcpp[m[K’; did you mean ‘[01m[Kspin_some[m[K’?
+   83 |  rclcpp::[01;31m[Kspin_once[m[K(std::make_shared<GaitPublisher>());
+      |          [01;31m[K^~~~~~~~~[m[K
+      |          [32m[Kspin_some[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:83:52:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<((Robot::MotionManager*)this)->Robot::MotionManager::GaitPublisher>()[m[K’
+   83 |  rclcpp::spin_once(std::make_shared<GaitPublisher>([01;31m[K)[m[K);
+      |                                                    [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:154[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:26[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+  714 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:84:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   84 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:84:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   84 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Reinitialize()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:142:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  142 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:142:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  142 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::Process()[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:284:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kpos[m[K’ was not declared in this scope; did you mean ‘[01m[Kpow[m[K’?
+  284 |               [01;31m[Kpos[m[K[id] = MotionStatus::m_CurrentJoints.GetValue(id);
+      |               [01;31m[K^~~[m[K
+      |               [32m[Kpow[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:289:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage[m[K’ was not declared in this scope
+  289 |             [01;31m[Kmessage[m[K.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+      |             [01;31m[K^~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:290:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kpos[m[K’ was not declared in this scope; did you mean ‘[01m[Kpow[m[K’?
+  290 |             message.position = {[01;31m[Kpos[m[K[1], pos[2], pos[3], pos[4], pos[5], pos[6], pos[7], pos[8], pos[9], pos[10], pos[11], pos[12], pos[13], pos[14], pos[15], pos[16], pos[17], pos[18], 2048};
+      |                                 [01;31m[K^~~[m[K
+      |                                 [32m[Kpow[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:291:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+  291 |             [01;31m[Kpublisher_[m[K->publish(message);
+      |             [01;31m[K^~~~~~~~~~[m[K
+      |             [32m[Krcl_publisher_t[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:280:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kjoint_num[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  280 |  int [01;35m[Kjoint_num[m[K = 0;
+      |      [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:304:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kspin_once[m[K’ is not a member of ‘[01m[Krclcpp[m[K’; did you mean ‘[01m[Kspin_some[m[K’?
+  304 |  rclcpp::[01;31m[Kspin_once[m[K(std::make_shared<GaitPublisher>());
+      |          [01;31m[K^~~~~~~~~[m[K
+      |          [32m[Kspin_some[m[K
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:304:52:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<((Robot::MotionManager*)this)->Robot::MotionManager::GaitPublisher>()[m[K’
+  304 |  rclcpp::spin_once(std::make_shared<GaitPublisher>([01;31m[K)[m[K);
+      |                                                    [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:154[m[K,
+                 from [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:26[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+  714 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::SetEnable(bool)[m[K’:
+[01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:307:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kenable[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  307 | void MotionManager::SetEnable([01;35m[Kbool enable[m[K)
+      |                               [01;35m[K~~~~~^~~~~~[m[K
+make[2]: *** [CMakeFiles/control.dir/build.make:89: CMakeFiles/control.dir/src/motion/MotionManager.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/control.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

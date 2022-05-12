@@ -55,8 +55,8 @@ include CMakeFiles/dynamixel_sdk_custom_interfaces.dir/progress.make
 
 CMakeFiles/dynamixel_sdk_custom_interfaces: /home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg
 CMakeFiles/dynamixel_sdk_custom_interfaces: /home/robofei/ROS2/action/src/dynamixel_sdk_custom_interfaces/msg/Decision.msg
-CMakeFiles/dynamixel_sdk_custom_interfaces: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
-CMakeFiles/dynamixel_sdk_custom_interfaces: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
+CMakeFiles/dynamixel_sdk_custom_interfaces: /opt/ros/galactic/share/builtin_interfaces/msg/Duration.idl
+CMakeFiles/dynamixel_sdk_custom_interfaces: /opt/ros/galactic/share/builtin_interfaces/msg/Time.idl
 
 
 dynamixel_sdk_custom_interfaces: CMakeFiles/dynamixel_sdk_custom_interfaces

@@ -1,0 +1,255 @@
+[0.008s] Invoking command in '/home/robofei/ROS2/action/build/control': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/opt/ros/galactic LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} LESS= -R -X -F PYTHONPATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j12 -l12
+[0.028s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.044s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.085s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.090s] -- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[0.107s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.110s] -- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.201s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.235s] -- Found rclcpp: 9.2.1 (/opt/ros/galactic/share/rclcpp/cmake)
+[0.267s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[0.268s] -- Found rmw_cyclonedds_cpp: 0.22.5 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[0.283s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.391s] -- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[0.483s] -- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[0.531s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.535s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.536s] -- Configured cppcheck include dirs: /home/robofei/ROS2/action/src/control/include
+[0.536s] -- Configured cppcheck exclude dirs and/or files: 
+[0.540s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.540s] -- Configured cpplint exclude dirs and/or files: 
+[0.541s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.542s] -- Added test 'lint_cmake' to check CMake code style
+[0.543s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.547s] -- Added test 'uncrustify' to check C / C++ code style
+[0.547s] -- Configured uncrustify additional arguments: 
+[0.548s] -- Added test 'xmllint' to check XML markup files
+[0.550s] -- Configuring done
+[0.560s] -- Generating done
+[0.561s] -- Build files have been written to: /home/robofei/ROS2/action/build/control
+[0.579s] [35m[1mScanning dependencies of target control[0m
+[0.590s] [ 33%] Built target decision
+[0.614s] [ 83%] [32mBuilding CXX object CMakeFiles/control.dir/src/motion/MotionManager.cpp.o[0m
+[0.614s] [ 83%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[0.614s] [ 83%] [32mBuilding CXX object CMakeFiles/control.dir/src/motion/modules/Walking.cpp.o[0m
+[0.712s] In file included from [01m[K/home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp:11[m[K:
+[0.712s] [01m[K/home/robofei/ROS2/action/src/control/include/MX28.h:22:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::MX28::MIN_ANGLE[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.712s]    22 |         static const double [01;31m[KMIN_ANGLE[m[K = -150.0; // degree
+[0.712s]       |                             [01;31m[K^~~~~~~~~[m[K
+[0.712s] [01m[K/home/robofei/ROS2/action/src/control/include/MX28.h:23:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::MX28::MAX_ANGLE[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.712s]    23 |         static const double [01;31m[KMAX_ANGLE[m[K = 150.0; // degree
+[0.712s]       |                             [01;31m[K^~~~~~~~~[m[K
+[0.712s] [01m[K/home/robofei/ROS2/action/src/control/include/MX28.h:24:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::MX28::RATIO_VALUE2ANGLE[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.712s]    24 |         static const double [01;31m[KRATIO_VALUE2ANGLE[m[K = 0.293; // 300 / 1024
+[0.712s]       |                             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[0.713s] [01m[K/home/robofei/ROS2/action/src/control/include/MX28.h:25:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::MX28::RATIO_ANGLE2VALUE[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.713s]    25 |         static const double [01;31m[KRATIO_ANGLE2VALUE[m[K = 3.413; // 1024 / 300
+[0.713s]       |                             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[0.713s] In file included from [01m[K/home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp:13[m[K:
+[0.713s] [01m[K/home/robofei/ROS2/action/src/control/include/Kinematics.h:25:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::Kinematics::CAMERA_DISTANCE[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.713s]    25 |   static const double [01;31m[KCAMERA_DISTANCE[m[K = 33.2; //mm
+[0.713s]       |                       [01;31m[K^~~~~~~~~~~~~~~[m[K
+[0.713s] [01m[K/home/robofei/ROS2/action/src/control/include/Kinematics.h:26:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::Kinematics::EYE_TILT_OFFSET_ANGLE[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.713s]    26 |   static const double [01;31m[KEYE_TILT_OFFSET_ANGLE[m[K = 40.0; //degree
+[0.713s]       |                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[0.713s] [01m[K/home/robofei/ROS2/action/src/control/include/Kinematics.h:27:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::Kinematics::LEG_SIDE_OFFSET[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.713s]    27 |   static const double [01;31m[KLEG_SIDE_OFFSET[m[K = 37.0; //mm
+[0.713s]       |                       [01;31m[K^~~~~~~~~~~~~~~[m[K
+[0.713s] [01m[K/home/robofei/ROS2/action/src/control/include/Kinematics.h:28:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::Kinematics::THIGH_LENGTH[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.713s]    28 |   static const double [01;31m[KTHIGH_LENGTH[m[K = 93.0; //mm
+[0.713s]       |                       [01;31m[K^~~~~~~~~~~~[m[K
+[0.713s] [01m[K/home/robofei/ROS2/action/src/control/include/Kinematics.h:29:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::Kinematics::CALF_LENGTH[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.713s]    29 |   static const double [01;31m[KCALF_LENGTH[m[K = 93.0; //mm
+[0.714s]       |                       [01;31m[K^~~~~~~~~~~[m[K
+[0.714s] [01m[K/home/robofei/ROS2/action/src/control/include/Kinematics.h:30:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::Kinematics::ANKLE_LENGTH[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.714s]    30 |   static const double [01;31m[KANKLE_LENGTH[m[K = 33.5; //mm
+[0.714s]       |                       [01;31m[K^~~~~~~~~~~~[m[K
+[0.714s] [01m[K/home/robofei/ROS2/action/src/control/include/Kinematics.h:31:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::Kinematics::LEG_LENGTH[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.714s]    31 |   static const double [01;31m[KLEG_LENGTH[m[K = 219.5; //mm (THIGH_LENGTH + CALF_LENGTH + ANKLE_LENGTH)
+[0.714s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[0.775s] In file included from [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:18[m[K:
+[0.775s] [01m[K/home/robofei/ROS2/action/src/control/include/MX28.h:22:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::MX28::MIN_ANGLE[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.775s]    22 |         static const double [01;31m[KMIN_ANGLE[m[K = -150.0; // degree
+[0.775s]       |                             [01;31m[K^~~~~~~~~[m[K
+[0.775s] [01m[K/home/robofei/ROS2/action/src/control/include/MX28.h:23:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::MX28::MAX_ANGLE[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.775s]    23 |         static const double [01;31m[KMAX_ANGLE[m[K = 150.0; // degree
+[0.775s]       |                             [01;31m[K^~~~~~~~~[m[K
+[0.775s] [01m[K/home/robofei/ROS2/action/src/control/include/MX28.h:24:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::MX28::RATIO_VALUE2ANGLE[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.775s]    24 |         static const double [01;31m[KRATIO_VALUE2ANGLE[m[K = 0.293; // 300 / 1024
+[0.775s]       |                             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[0.775s] [01m[K/home/robofei/ROS2/action/src/control/include/MX28.h:25:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstexpr[m[K’ needed for in-class initialization of static data member ‘[01m[Kconst double Robot::MX28::RATIO_ANGLE2VALUE[m[K’ of non-integral type [[01;31m[K-fpermissive[m[K]
+[0.775s]    25 |         static const double [01;31m[KRATIO_ANGLE2VALUE[m[K = 3.413; // 1024 / 300
+[0.776s]       |                             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[0.844s] make[2]: *** [CMakeFiles/control.dir/build.make:76: CMakeFiles/control.dir/src/motion/modules/Walking.cpp.o] Error 1
+[0.844s] make[2]: *** Waiting for unfinished jobs....
+[1.894s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::GaitPublisher()[m[K’:
+[1.894s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:64:7:[m[K [01;31m[Kerror: [m[Konly constructors take member initializers
+[1.894s]    64 |     : [01;31m[KNode[m[K("gait_publisher")
+[1.894s]       |       [01;31m[K^~~~[m[K
+[1.894s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:64:7:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KRobot::MotionManager[m[K’ does not have any field named ‘[01m[KNode[m[K’
+[1.897s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:66:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_imu[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_subscription_fini[m[K’?
+[1.897s]    66 |         [01;31m[Ksubscription_imu[m[K = this->create_subscription<sensor_msgs::msg::Imu>(
+[1.897s]       |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[1.897s]       |         [32m[Krcl_subscription_fini[m[K
+[1.897s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:66:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Robot::MotionManager[m[K’ has no member named ‘[01m[Kcreate_subscription[m[K’
+[1.897s]    66 |         subscription_imu = this->[01;31m[Kcreate_subscription[m[K<sensor_msgs::msg::Imu>(
+[1.897s]       |                                  [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.897s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:66:75:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.897s]    66 |         subscription_imu = this->create_subscription<sensor_msgs::msg::Imu[01;31m[K>[m[K(
+[1.897s]       |                                                                           [01;31m[K^[m[K
+[1.897s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:67:9:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[1.897s]    67 |         [01;35m[K"imu/data"[m[K, 10, std::bind(&MotionManager::topic_callback, this, _1));
+[1.898s]       |         [01;35m[K^~~~~~~~~~[m[K
+[1.898s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:67:51:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic_callback[m[K’ is not a member of ‘[01m[KRobot::MotionManager[m[K’
+[1.898s]    67 |         "imu/data", 10, std::bind(&MotionManager::[01;31m[Ktopic_callback[m[K, this, _1));
+[1.898s]       |                                                   [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.898s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:67:73:[m[K [01;31m[Kerror: [m[K‘[01m[K_1[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::placeholders::_1[m[K’?
+[1.898s]    67 |         "imu/data", 10, std::bind(&MotionManager::topic_callback, this, [01;31m[K_1[m[K));
+[1.898s]       |                                                                         [01;31m[K^~[m[K
+[1.898s]       |                                                                         [32m[Kstd::placeholders::_1[m[K
+[1.898s] In file included from [01m[K/usr/include/c++/9/pstl/glue_algorithm_defs.h:13[m[K,
+[1.898s]                  from [01m[K/usr/include/c++/9/algorithm:71[m[K,
+[1.898s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executor.hpp:18[m[K,
+[1.898s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.898s]                  from [01m[K/opt/ros/galactic/include/rclcpp/executors.hpp:21[m[K,
+[1.898s]                  from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:156[m[K,
+[1.898s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:26[m[K:
+[1.898s] [01m[K/usr/include/c++/9/functional:211:34:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::placeholders::_1[m[K’ declared here
+[1.898s]   211 |     extern const _Placeholder<1> [01;36m[K_1[m[K;
+[1.898s]       |                                  [01;36m[K^~[m[K
+[1.899s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:68:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[1.899s]    68 |         [01;31m[Kpublisher_[m[K = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10);
+[1.899s]       |         [01;31m[K^~~~~~~~~~[m[K
+[1.899s]       |         [32m[Krcl_publisher_t[m[K
+[1.899s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:68:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Robot::MotionManager[m[K’ has no member named ‘[01m[Kcreate_publisher[m[K’
+[1.899s]    68 |         publisher_ = this->[01;31m[Kcreate_publisher[m[K<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10);
+[1.899s]       |                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[1.899s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:68:94:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.900s]    68 |         publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition[01;31m[K>[m[K("set_position", 10);
+[1.900s]       |                                                                                              [01;31m[K^[m[K
+[1.900s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:68:96:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[1.900s]    68 |         publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>([01;35m[K"set_position"[m[K, 10);
+[1.900s]       |                                                                                                [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.900s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K At global scope:
+[1.900s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:71:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’
+[1.900s]    71 | void [01;31m[KMotionManager[m[K::topic_callback(const std::shared_ptr<sensor_msgs::msg::Imu> imu_msg_) const
+[1.900s]       |      [01;31m[K^~~~~~~~~~~~~[m[K
+[1.900s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:71:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’
+[1.900s] In file included from [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:19[m[K:
+[1.900s] [01m[K/home/robofei/ROS2/action/src/control/include/MotionManager.h:24:8:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Robot::MotionManager[m[K’ defined here
+[1.900s]    24 |  class [01;36m[KMotionManager[m[K
+[1.900s]       |        [01;36m[K^~~~~~~~~~~~~[m[K
+[1.900s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Initialize(bool)[m[K’:
+[1.900s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:80:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kargc[m[K’ was not declared in this scope
+[1.900s]    80 |  rclcpp::init([01;31m[Kargc[m[K, argv);
+[1.900s]       |               [01;31m[K^~~~[m[K
+[1.901s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:80:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kargv[m[K’ was not declared in this scope
+[1.901s]    80 |  rclcpp::init(argc, [01;31m[Kargv[m[K);
+[1.901s]       |                     [01;31m[K^~~~[m[K
+[1.901s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:81:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kspin_once[m[K’ is not a member of ‘[01m[Krclcpp[m[K’; did you mean ‘[01m[Kspin_some[m[K’?
+[1.901s]    81 |  rclcpp::[01;31m[Kspin_once[m[K(std::make_shared<GaitPublisher>());
+[1.901s]       |          [01;31m[K^~~~~~~~~[m[K
+[1.901s]       |          [32m[Kspin_some[m[K
+[1.901s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:81:52:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<((Robot::MotionManager*)this)->Robot::MotionManager::GaitPublisher>()[m[K’
+[1.901s]    81 |  rclcpp::spin_once(std::make_shared<GaitPublisher>([01;31m[K)[m[K);
+[1.901s]       |                                                    [01;31m[K^[m[K
+[1.901s] In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+[1.902s]                  from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:154[m[K,
+[1.902s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:26[m[K:
+[1.902s] [01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+[1.902s]   714 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+[1.902s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[1.902s] [01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.902s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:82:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.902s]    82 |  int [01;35m[Kvalue[m[K, error;
+[1.902s]       |      [01;35m[K^~~~~[m[K
+[1.902s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:82:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.902s]    82 |  int value, [01;35m[Kerror[m[K;
+[1.902s]       |             [01;35m[K^~~~~[m[K
+[1.902s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Reinitialize()[m[K’:
+[1.902s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:140:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.902s]   140 |  int [01;35m[Kvalue[m[K, error;
+[1.902s]       |      [01;35m[K^~~~~[m[K
+[1.902s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:140:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.902s]   140 |  int value, [01;35m[Kerror[m[K;
+[1.902s]       |             [01;35m[K^~~~~[m[K
+[1.905s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::Process()[m[K’:
+[1.905s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:282:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kpos[m[K’ was not declared in this scope; did you mean ‘[01m[Kpow[m[K’?
+[1.905s]   282 |               [01;31m[Kpos[m[K[id] = MotionStatus::m_CurrentJoints.GetValue(id);
+[1.905s]       |               [01;31m[K^~~[m[K
+[1.905s]       |               [32m[Kpow[m[K
+[1.906s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:287:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage[m[K’ was not declared in this scope
+[1.906s]   287 |             [01;31m[Kmessage[m[K.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+[1.906s]       |             [01;31m[K^~~~~~~[m[K
+[1.907s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:288:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kpos[m[K’ was not declared in this scope; did you mean ‘[01m[Kpow[m[K’?
+[1.907s]   288 |             message.position = {[01;31m[Kpos[m[K[1], pos[2], pos[3], pos[4], pos[5], pos[6], pos[7], pos[8], pos[9], pos[10], pos[11], pos[12], pos[13], pos[14], pos[15], pos[16], pos[17], pos[18], 2048};
+[1.907s]       |                                 [01;31m[K^~~[m[K
+[1.907s]       |                                 [32m[Kpow[m[K
+[1.909s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:289:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[1.909s]   289 |             [01;31m[Kpublisher_[m[K->publish(message);
+[1.909s]       |             [01;31m[K^~~~~~~~~~[m[K
+[1.909s]       |             [32m[Krcl_publisher_t[m[K
+[1.909s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:278:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kjoint_num[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.909s]   278 |  int [01;35m[Kjoint_num[m[K = 0;
+[1.909s]       |      [01;35m[K^~~~~~~~~[m[K
+[1.909s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:302:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kspin_once[m[K’ is not a member of ‘[01m[Krclcpp[m[K’; did you mean ‘[01m[Kspin_some[m[K’?
+[1.909s]   302 |  rclcpp::[01;31m[Kspin_once[m[K(std::make_shared<GaitPublisher>());
+[1.909s]       |          [01;31m[K^~~~~~~~~[m[K
+[1.909s]       |          [32m[Kspin_some[m[K
+[1.909s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:302:52:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<((Robot::MotionManager*)this)->Robot::MotionManager::GaitPublisher>()[m[K’
+[1.910s]   302 |  rclcpp::spin_once(std::make_shared<GaitPublisher>([01;31m[K)[m[K);
+[1.910s]       |                                                    [01;31m[K^[m[K
+[1.910s] In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+[1.910s]                  from [01m[K/opt/ros/galactic/include/rclcpp/rclcpp.hpp:154[m[K,
+[1.910s]                  from [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:26[m[K:
+[1.910s] [01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+[1.910s]   714 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+[1.910s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[1.910s] [01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.910s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::SetEnable(bool)[m[K’:
+[1.910s] [01m[K/home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp:305:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kenable[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.910s]   305 | void MotionManager::SetEnable([01;35m[Kbool enable[m[K)
+[1.910s]       |                               [01;35m[K~~~~~^~~~~~[m[K
+[2.148s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In member function ‘[01m[Kvoid Control::topic_callback(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> > >) const[m[K’:
+[2.148s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:208:11:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionManager[m[K’ has not been declared
+[2.148s]   208 |           [01;31m[KMotionManager[m[K::GetInstance()->SetEnable(true);
+[2.148s]       |           [01;31m[K^~~~~~~~~~~~~[m[K
+[2.148s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:209:11:[m[K [01;31m[Kerror: [m[K‘[01m[KWalking[m[K’ has not been declared
+[2.148s]   209 |           [01;31m[KWalking[m[K::GetInstance()->m_Joint.SetEnableBody(true);
+[2.148s]       |           [01;31m[K^~~~~~~[m[K
+[2.148s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:210:11:[m[K [01;31m[Kerror: [m[K‘[01m[KWalking[m[K’ has not been declared
+[2.148s]   210 |           [01;31m[KWalking[m[K::GetInstance()->X_MOVE_AMPLITUDE = X_amplitude;
+[2.148s]       |           [01;31m[K^~~~~~~[m[K
+[2.150s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:210:54:[m[K [01;31m[Kerror: [m[K‘[01m[KX_amplitude[m[K’ was not declared in this scope
+[2.150s]   210 |           Walking::GetInstance()->X_MOVE_AMPLITUDE = [01;31m[KX_amplitude[m[K;
+[2.150s]       |                                                      [01;31m[K^~~~~~~~~~~[m[K
+[2.150s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:211:11:[m[K [01;31m[Kerror: [m[K‘[01m[KWalking[m[K’ has not been declared
+[2.150s]   211 |           [01;31m[KWalking[m[K::GetInstance()->Y_MOVE_AMPLITUDE = Y_amplitude;
+[2.150s]       |           [01;31m[K^~~~~~~[m[K
+[2.152s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:211:54:[m[K [01;31m[Kerror: [m[K‘[01m[KY_amplitude[m[K’ was not declared in this scope
+[2.152s]   211 |           Walking::GetInstance()->Y_MOVE_AMPLITUDE = [01;31m[KY_amplitude[m[K;
+[2.152s]       |                                                      [01;31m[K^~~~~~~~~~~[m[K
+[2.152s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:212:11:[m[K [01;31m[Kerror: [m[K‘[01m[KWalking[m[K’ has not been declared
+[2.152s]   212 |           [01;31m[KWalking[m[K::GetInstance()->A_MOVE_AMPLITUDE = A_amplitude;
+[2.152s]       |           [01;31m[K^~~~~~~[m[K
+[2.154s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:212:54:[m[K [01;31m[Kerror: [m[K‘[01m[KA_amplitude[m[K’ was not declared in this scope
+[2.154s]   212 |           Walking::GetInstance()->A_MOVE_AMPLITUDE = [01;31m[KA_amplitude[m[K;
+[2.154s]       |                                                      [01;31m[K^~~~~~~~~~~[m[K
+[2.154s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:213:11:[m[K [01;31m[Kerror: [m[K‘[01m[KWalking[m[K’ has not been declared
+[2.154s]   213 |           [01;31m[KWalking[m[K::GetInstance()->Start();
+[2.154s]       |           [01;31m[K^~~~~~~[m[K
+[2.154s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:215:13:[m[K [01;31m[Kerror: [m[K‘[01m[KWalking[m[K’ has not been declared
+[2.154s]   215 |             [01;31m[KWalking[m[K::GetInstance()->Stop();
+[2.154s]       |             [01;31m[K^~~~~~~[m[K
+[2.154s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:216:13:[m[K [01;31m[Kerror: [m[K‘[01m[KWalking[m[K’ has not been declared
+[2.154s]   216 |             [01;31m[KWalking[m[K::GetInstance()->m_Joint.SetEnableBody(false);
+[2.154s]       |             [01;31m[K^~~~~~~[m[K
+[2.155s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[2.155s] [01m[K/home/robofei/ROS2/action/src/control/src/control.cpp:236:6:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionManager[m[K’ has not been declared
+[2.155s]   236 |   if([01;31m[KMotionManager[m[K::GetInstance()->Initialize() == false)
+[2.155s]       |      [01;31m[K^~~~~~~~~~~~~[m[K
+[2.373s] make[2]: *** [CMakeFiles/control.dir/build.make:89: CMakeFiles/control.dir/src/motion/MotionManager.cpp.o] Error 1
+[4.293s] make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1
+[4.293s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/control.dir/all] Error 2
+[4.294s] make: *** [Makefile:141: all] Error 2
+[4.297s] Invoked command in '/home/robofei/ROS2/action/build/control' returned '2': AMENT_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces:/opt/ros/galactic LD_LIBRARY_PATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} LESS= -R -X -F PYTHONPATH=/home/robofei/ROS2/action/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robofei/ROS2/action/build/control -- -j12 -l12

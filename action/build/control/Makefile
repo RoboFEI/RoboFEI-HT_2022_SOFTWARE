@@ -273,6 +273,60 @@ src/dec.cpp.s:
 	$(MAKE) -f CMakeFiles/decision.dir/build.make CMakeFiles/decision.dir/src/dec.cpp.s
 .PHONY : src/dec.cpp.s
 
+src/motion/MotionManager.o: src/motion/MotionManager.cpp.o
+
+.PHONY : src/motion/MotionManager.o
+
+# target to build an object file
+src/motion/MotionManager.cpp.o:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/motion/MotionManager.cpp.o
+.PHONY : src/motion/MotionManager.cpp.o
+
+src/motion/MotionManager.i: src/motion/MotionManager.cpp.i
+
+.PHONY : src/motion/MotionManager.i
+
+# target to preprocess a source file
+src/motion/MotionManager.cpp.i:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/motion/MotionManager.cpp.i
+.PHONY : src/motion/MotionManager.cpp.i
+
+src/motion/MotionManager.s: src/motion/MotionManager.cpp.s
+
+.PHONY : src/motion/MotionManager.s
+
+# target to generate assembly for a file
+src/motion/MotionManager.cpp.s:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/motion/MotionManager.cpp.s
+.PHONY : src/motion/MotionManager.cpp.s
+
+src/motion/modules/Walking.o: src/motion/modules/Walking.cpp.o
+
+.PHONY : src/motion/modules/Walking.o
+
+# target to build an object file
+src/motion/modules/Walking.cpp.o:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/motion/modules/Walking.cpp.o
+.PHONY : src/motion/modules/Walking.cpp.o
+
+src/motion/modules/Walking.i: src/motion/modules/Walking.cpp.i
+
+.PHONY : src/motion/modules/Walking.i
+
+# target to preprocess a source file
+src/motion/modules/Walking.cpp.i:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/motion/modules/Walking.cpp.i
+.PHONY : src/motion/modules/Walking.cpp.i
+
+src/motion/modules/Walking.s: src/motion/modules/Walking.cpp.s
+
+.PHONY : src/motion/modules/Walking.s
+
+# target to generate assembly for a file
+src/motion/modules/Walking.cpp.s:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/motion/modules/Walking.cpp.s
+.PHONY : src/motion/modules/Walking.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -296,6 +350,12 @@ help:
 	@echo "... src/dec.o"
 	@echo "... src/dec.i"
 	@echo "... src/dec.s"
+	@echo "... src/motion/MotionManager.o"
+	@echo "... src/motion/MotionManager.i"
+	@echo "... src/motion/MotionManager.s"
+	@echo "... src/motion/modules/Walking.o"
+	@echo "... src/motion/modules/Walking.i"
+	@echo "... src/motion/modules/Walking.s"
 .PHONY : help
 
 
