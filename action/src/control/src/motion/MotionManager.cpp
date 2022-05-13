@@ -14,6 +14,10 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <chrono>
+#include <functional>
+#include <memory>
+#include <string>
 #include "FSR.h"
 #include "MX28.h"
 #include "MotionManager.h"
@@ -46,40 +50,31 @@ MotionManager::MotionManager() :
         m_IsLogging(false),
 				m_torqueAdaptionCounter(TORQUE_ADAPTION_CYCLES),
 				m_voltageAdaptionFactor(1.0),
-        DEBUG_PRINT(false)
+        DEBUG_PRINT(false),
+		Node("gait_publisher")
 {
-    for(int i = 0; i < JointData::NUMBER_OF_JOINTS; i++)
+	 subscription_imu = this->create_subscription<sensor_msgs::msg::Imu>(
+        "imu/data", 10, std::bind(&MotionManager::topic_callback, this, _1));
+	publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
+    //timer_ = this->create_wall_timer(8ms, std::bind(&MotionManager::Process, this));
+	for(int i = 0; i < JointData::NUMBER_OF_JOINTS; i++)
         m_Offset[i] = 0;
 
-#if LOG_VOLTAGES
-    assert((m_voltageLog = fopen("voltage.log", "w")));
-    fprintf(m_voltageLog, "Voltage   Torque\n");
-#endif
 }
 
 MotionManager::~MotionManager()
 {
 }
 
-void MotionManager::GaitPublisher()
-    : Node("gait_publisher")
-    {
-        subscription_imu = this->create_subscription<sensor_msgs::msg::Imu>(
-        "imu/data", 10, std::bind(&MotionManager::topic_callback, this, _1));
-        publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
-
-	}
-
 void MotionManager::topic_callback(const std::shared_ptr<sensor_msgs::msg::Imu> imu_msg_) const
     {
-        IMU_GYRO_X = -imu_msg_->angular_velocity.x/10;
-        IMU_GYRO_Y  = -imu_msg_->angular_velocity.y/10;
+        float IMU_GYRO_X = -imu_msg_->angular_velocity.x/10;
+        float IMU_GYRO_Y  = -imu_msg_->angular_velocity.y/10;
 	}
 
 bool MotionManager::Initialize(bool fadeIn)
 {
-	rclcpp::init(argc, argv); 
-	rclcpp::spin_some(std::make_shared<GaitPublisher>());
+	//rclcpp::spin_some(std::make_shared<GaitPublisher>());
 	int value, error;
 
 	usleep(10000);
@@ -279,6 +274,7 @@ void MotionManager::Process()
 	auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();  
 	int param[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];
 	int joint_num = 0;
+	int pos[18];
 	for(int id=JointData::ID_MIN; id<=JointData::ID_MAX-2; id++) // loop que vai de 1 até 18
             {
               param[id] = id;
@@ -295,14 +291,13 @@ void MotionManager::Process()
 		
 
     m_IsRunning = false;
-
     // if(m_torque_count != DEST_TORQUE && --m_torqueAdaptionCounter == 0)
     // {
     //     m_torqueAdaptionCounter = TORQUE_ADAPTION_CYCLES;
     //     adaptTorqueToVoltage();
     // }
 
-	rclcpp::spin_some(std::make_shared<GaitPublisher>());
+	//rclcpp::spin_some(std::make_shared<GaitPublisher>());
 }
 
 void MotionManager::SetEnable(bool enable)
@@ -333,6 +328,15 @@ void MotionManager::SetJointDisable(int index)
         for(std::list<MotionModule*>::iterator i = m_Modules.begin(); i != m_Modules.end(); i++)
             (*i)->m_Joint.SetEnable(index, false);
     }
+}
+
+int main(int argc, char * argv[])
+{
+  MotionManager::GetInstance()->Initialize();
+  rclcpp::init(argc, argv);
+  rclcpp::spin(std::make_shared<MotionManager>());
+  rclcpp::shutdown();
+  return 0;
 }
 
 // void MotionManager::adaptTorqueToVoltage()

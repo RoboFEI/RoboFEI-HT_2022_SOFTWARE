@@ -45,21 +45,21 @@ struct SetPosition_
 
   // field types and members
   using _id_type =
-    std::vector<uint8_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<uint8_t>>;
+    std::vector<uint8_t, typename ContainerAllocator::template rebind<uint8_t>::other>;
   _id_type id;
   using _position_type =
-    std::vector<int32_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<int32_t>>;
+    std::vector<int32_t, typename ContainerAllocator::template rebind<int32_t>::other>;
   _position_type position;
 
   // setters for named parameter idiom
   Type & set__id(
-    const std::vector<uint8_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<uint8_t>> & _arg)
+    const std::vector<uint8_t, typename ContainerAllocator::template rebind<uint8_t>::other> & _arg)
   {
     this->id = _arg;
     return *this;
   }
   Type & set__position(
-    const std::vector<int32_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<int32_t>> & _arg)
+    const std::vector<int32_t, typename ContainerAllocator::template rebind<int32_t>::other> & _arg)
   {
     this->position = _arg;
     return *this;

@@ -88,8 +88,7 @@ static bool _SetPosition__cdr_deserialize(
       rosidl_runtime_c__uint8__Sequence__fini(&ros_message->id);
     }
     if (!rosidl_runtime_c__uint8__Sequence__init(&ros_message->id, size)) {
-      fprintf(stderr, "failed to create array for field 'id'");
-      return false;
+      return "failed to create array for field 'id'";
     }
     auto array_ptr = ros_message->id.data;
     cdr.deserializeArray(array_ptr, size);
@@ -104,15 +103,14 @@ static bool _SetPosition__cdr_deserialize(
       rosidl_runtime_c__int32__Sequence__fini(&ros_message->position);
     }
     if (!rosidl_runtime_c__int32__Sequence__init(&ros_message->position, size)) {
-      fprintf(stderr, "failed to create array for field 'position'");
-      return false;
+      return "failed to create array for field 'position'";
     }
     auto array_ptr = ros_message->position.data;
     cdr.deserializeArray(array_ptr, size);
   }
 
   return true;
-}  // NOLINT(readability/fn_size)
+}
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_dynamixel_sdk_custom_interfaces
 size_t get_serialized_size_dynamixel_sdk_custom_interfaces__msg__SetPosition(

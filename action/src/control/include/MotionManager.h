@@ -24,7 +24,7 @@
 
 namespace Robot
 {
-	class MotionManager
+	class MotionManager : public rclcpp::Node
 	{
 	private:
 		static MotionManager* m_UniqueInstance;
@@ -42,7 +42,8 @@ namespace Robot
 		float IMU_GYRO_Y;
 		rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr subscription_imu;
 rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_;  
-
+		
+	rclcpp::TimerBase::SharedPtr timer_;
 		std::ofstream m_LogFileStream;
 
 	AngleEstimator m_angleEstimator;
@@ -51,14 +52,13 @@ rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr 
 
 	FILE* m_voltageLog;
 
-	void GaitPublisher();
 	
 	void topic_callback(const std::shared_ptr<sensor_msgs::msg::Imu> imu_msg_) const;
 	
 	unsigned int m_torqueAdaptionCounter;
 	double m_voltageAdaptionFactor;
 
-	MotionManager();
+	
 	
 	//void adaptTorqueToVoltage();
 	
@@ -74,6 +74,7 @@ rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr 
     	int *memBB;
 
 		~MotionManager();
+		MotionManager();
 
 		static MotionManager* GetInstance() { return m_UniqueInstance; }
 

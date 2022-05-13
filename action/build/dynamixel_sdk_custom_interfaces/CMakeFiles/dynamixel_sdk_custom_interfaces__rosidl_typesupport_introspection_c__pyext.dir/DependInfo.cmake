@@ -22,7 +22,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "/usr/include/python3.8"
   "rosidl_typesupport_c"
   "rosidl_typesupport_introspection_c"
-  "/opt/ros/galactic/include"
+  "/opt/ros/foxy/include"
   )
 
 # Targets to which this target links.

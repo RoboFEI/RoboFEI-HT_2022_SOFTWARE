@@ -210,17 +210,17 @@ public:
           std::this_thread::sleep_for(std::chrono::seconds(1));
         }
         else if(movement==14){
-          RCLCPP_INFO(this->get_logger(), "Agachando");
-          MotionManager::GetInstance()->SetEnable(true);
-          Robot::Walking::GetInstance()->m_Joint.SetEnableBody(true);
-          Walking::GetInstance()->X_MOVE_AMPLITUDE = X_amplitude;
-          Walking::GetInstance()->Y_MOVE_AMPLITUDE = Y_amplitude;
-          Walking::GetInstance()->A_MOVE_AMPLITUDE = A_amplitude;
-          Walking::GetInstance()->Start();
-          if(movement!=14){
-            Walking::GetInstance()->Stop();
-            Walking::GetInstance()->m_Joint.SetEnableBody(false);
-          }
+          // RCLCPP_INFO(this->get_logger(), "Agachando");
+          // MotionManager::GetInstance()->SetEnable(true);
+          // Walking::GetInstance()->m_Joint.SetEnableBody(true);
+          // Walking::GetInstance()->X_MOVE_AMPLITUDE = X_amplitude;
+          // Walking::GetInstance()->Y_MOVE_AMPLITUDE = Y_amplitude;
+          // Walking::GetInstance()->A_MOVE_AMPLITUDE = A_amplitude;
+          // Walking::GetInstance()->Start();
+          // if(movement!=14){
+          //   Walking::GetInstance()->Stop();
+          //   Walking::GetInstance()->m_Joint.SetEnableBody(false);
+          // }
         }
       }
     } 
@@ -239,11 +239,11 @@ int main(int argc, char * argv[])
   sprintf(string1,"echo fei 123456| sudo -S renice -20 -p %d", getpid());
   system(string1);//prioridade
   rclcpp::init(argc, argv);
-  if(MotionManager::GetInstance()->Initialize() == false)
-    {
-      printf("Fail to initialize Motion Manager!\n");
-      return 0;
-  }
+  // if(MotionManager::GetInstance()->Initialize() == false)
+  //   {
+  //     printf("Fail to initialize Motion Manager!\n");
+  //     return 0;
+  // }
   rclcpp::spin(std::make_shared<Control>());
   rclcpp::shutdown();
   return 0;

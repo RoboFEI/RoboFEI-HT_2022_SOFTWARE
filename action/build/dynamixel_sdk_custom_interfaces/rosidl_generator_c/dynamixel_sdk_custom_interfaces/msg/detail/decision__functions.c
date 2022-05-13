@@ -28,32 +28,6 @@ dynamixel_sdk_custom_interfaces__msg__Decision__fini(dynamixel_sdk_custom_interf
   // decision
 }
 
-bool
-dynamixel_sdk_custom_interfaces__msg__Decision__are_equal(const dynamixel_sdk_custom_interfaces__msg__Decision * lhs, const dynamixel_sdk_custom_interfaces__msg__Decision * rhs)
-{
-  if (!lhs || !rhs) {
-    return false;
-  }
-  // decision
-  if (lhs->decision != rhs->decision) {
-    return false;
-  }
-  return true;
-}
-
-bool
-dynamixel_sdk_custom_interfaces__msg__Decision__copy(
-  const dynamixel_sdk_custom_interfaces__msg__Decision * input,
-  dynamixel_sdk_custom_interfaces__msg__Decision * output)
-{
-  if (!input || !output) {
-    return false;
-  }
-  // decision
-  output->decision = input->decision;
-  return true;
-}
-
 dynamixel_sdk_custom_interfaces__msg__Decision *
 dynamixel_sdk_custom_interfaces__msg__Decision__create()
 {
@@ -161,61 +135,4 @@ dynamixel_sdk_custom_interfaces__msg__Decision__Sequence__destroy(dynamixel_sdk_
     dynamixel_sdk_custom_interfaces__msg__Decision__Sequence__fini(array);
   }
   free(array);
-}
-
-bool
-dynamixel_sdk_custom_interfaces__msg__Decision__Sequence__are_equal(const dynamixel_sdk_custom_interfaces__msg__Decision__Sequence * lhs, const dynamixel_sdk_custom_interfaces__msg__Decision__Sequence * rhs)
-{
-  if (!lhs || !rhs) {
-    return false;
-  }
-  if (lhs->size != rhs->size) {
-    return false;
-  }
-  for (size_t i = 0; i < lhs->size; ++i) {
-    if (!dynamixel_sdk_custom_interfaces__msg__Decision__are_equal(&(lhs->data[i]), &(rhs->data[i]))) {
-      return false;
-    }
-  }
-  return true;
-}
-
-bool
-dynamixel_sdk_custom_interfaces__msg__Decision__Sequence__copy(
-  const dynamixel_sdk_custom_interfaces__msg__Decision__Sequence * input,
-  dynamixel_sdk_custom_interfaces__msg__Decision__Sequence * output)
-{
-  if (!input || !output) {
-    return false;
-  }
-  if (output->capacity < input->size) {
-    const size_t allocation_size =
-      input->size * sizeof(dynamixel_sdk_custom_interfaces__msg__Decision);
-    dynamixel_sdk_custom_interfaces__msg__Decision * data =
-      (dynamixel_sdk_custom_interfaces__msg__Decision *)realloc(output->data, allocation_size);
-    if (!data) {
-      return false;
-    }
-    for (size_t i = output->capacity; i < input->size; ++i) {
-      if (!dynamixel_sdk_custom_interfaces__msg__Decision__init(&data[i])) {
-        /* free currently allocated and return false */
-        for (; i-- > output->capacity; ) {
-          dynamixel_sdk_custom_interfaces__msg__Decision__fini(&data[i]);
-        }
-        free(data);
-        return false;
-      }
-    }
-    output->data = data;
-    output->capacity = input->size;
-  }
-  output->size = input->size;
-  for (size_t i = 0; i < input->size; ++i) {
-    if (!dynamixel_sdk_custom_interfaces__msg__Decision__copy(
-        &(input->data[i]), &(output->data[i])))
-    {
-      return false;
-    }
-  }
-  return true;
 }

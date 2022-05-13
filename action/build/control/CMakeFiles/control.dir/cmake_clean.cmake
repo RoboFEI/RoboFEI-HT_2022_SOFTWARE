@@ -1,7 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/control.dir/src/control.cpp.o"
-  "CMakeFiles/control.dir/src/motion/MotionManager.cpp.o"
-  "CMakeFiles/control.dir/src/motion/modules/Walking.cpp.o"
   "control"
   "control.pdb"
 )

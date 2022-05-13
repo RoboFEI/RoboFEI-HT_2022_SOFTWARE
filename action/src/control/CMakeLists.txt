@@ -24,16 +24,38 @@ find_package(sensor_msgs REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 include_directories(include)
+include_directories(src/minIni)
 
 set(EXT_SOURCES
   /home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp
-  /home/robofei/ROS2/action/src/control/src/motion/MotionManager.cpp
+  /home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp
+  /home/robofei/ROS2/action/src/control/src/math/Matrix.cpp
+  /home/robofei/ROS2/action/src/control/src/math/Plane.cpp
+  /home/robofei/ROS2/action/src/control/src/math/Point.cpp
+  /home/robofei/ROS2/action/src/control/src/math/Vector.cpp
+  /home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.cpp
+  /home/robofei/ROS2/action/src/control/src/math/MotionState.cpp
+  /home/robofei/ROS2/action/src/control/src/motion/JointData.cpp
+  /home/robofei/ROS2/action/src/control/src/motion/Kinematics.cpp
+  /home/robofei/ROS2/action/src/control/src/motion/MotionStatus.cpp
+  /home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp
+  /home/robofei/ROS2/action/src/control/src/motion/modules/Action.cpp
+  /home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp
+  /home/robofei/ROS2/action/src/control/src/minIni/minIni.cpp
 )
 
 
 # Build
-add_executable(control src/control.cpp ${EXT_SOURCES})
+add_executable(control src/control.cpp)
 ament_target_dependencies(control
+  dynamixel_sdk_custom_interfaces
+  rclcpp
+  sensor_msgs
+)
+
+# Build
+add_executable(motion src/motion/MotionManager.cpp ${EXT_SOURCES})
+ament_target_dependencies(motion
   dynamixel_sdk_custom_interfaces
   rclcpp
   sensor_msgs
@@ -50,6 +72,7 @@ ament_target_dependencies(decision
 install(TARGETS
   control
   decision
+  motion
   DESTINATION lib/${PROJECT_NAME}
 )
 

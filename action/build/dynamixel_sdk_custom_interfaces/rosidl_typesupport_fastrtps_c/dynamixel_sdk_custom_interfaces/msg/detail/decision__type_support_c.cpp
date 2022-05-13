@@ -72,7 +72,7 @@ static bool _Decision__cdr_deserialize(
   }
 
   return true;
-}  // NOLINT(readability/fn_size)
+}
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_dynamixel_sdk_custom_interfaces
 size_t get_serialized_size_dynamixel_sdk_custom_interfaces__msg__Decision(

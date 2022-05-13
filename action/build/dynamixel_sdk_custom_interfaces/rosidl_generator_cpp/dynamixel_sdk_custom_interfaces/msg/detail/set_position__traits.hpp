@@ -6,66 +6,12 @@
 #define DYNAMIXEL_SDK_CUSTOM_INTERFACES__MSG__DETAIL__SET_POSITION__TRAITS_HPP_
 
 #include "dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp"
-#include <stdint.h>
 #include <rosidl_runtime_cpp/traits.hpp>
-#include <sstream>
-#include <string>
+#include <stdint.h>
 #include <type_traits>
 
 namespace rosidl_generator_traits
 {
-
-inline void to_yaml(
-  const dynamixel_sdk_custom_interfaces::msg::SetPosition & msg,
-  std::ostream & out, size_t indentation = 0)
-{
-  // member: id
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.id.size() == 0) {
-      out << "id: []\n";
-    } else {
-      out << "id:\n";
-      for (auto item : msg.id) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "- ";
-        value_to_yaml(item, out);
-        out << "\n";
-      }
-    }
-  }
-
-  // member: position
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.position.size() == 0) {
-      out << "position: []\n";
-    } else {
-      out << "position:\n";
-      for (auto item : msg.position) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "- ";
-        value_to_yaml(item, out);
-        out << "\n";
-      }
-    }
-  }
-}  // NOLINT(readability/fn_size)
-
-inline std::string to_yaml(const dynamixel_sdk_custom_interfaces::msg::SetPosition & msg)
-{
-  std::ostringstream out;
-  to_yaml(msg, out);
-  return out.str();
-}
 
 template<>
 inline const char * data_type<dynamixel_sdk_custom_interfaces::msg::SetPosition>()

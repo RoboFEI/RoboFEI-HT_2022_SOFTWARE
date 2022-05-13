@@ -45,50 +45,6 @@ dynamixel_sdk_custom_interfaces__msg__SetPosition__fini(dynamixel_sdk_custom_int
   rosidl_runtime_c__int32__Sequence__fini(&msg->position);
 }
 
-bool
-dynamixel_sdk_custom_interfaces__msg__SetPosition__are_equal(const dynamixel_sdk_custom_interfaces__msg__SetPosition * lhs, const dynamixel_sdk_custom_interfaces__msg__SetPosition * rhs)
-{
-  if (!lhs || !rhs) {
-    return false;
-  }
-  // id
-  if (!rosidl_runtime_c__uint8__Sequence__are_equal(
-      &(lhs->id), &(rhs->id)))
-  {
-    return false;
-  }
-  // position
-  if (!rosidl_runtime_c__int32__Sequence__are_equal(
-      &(lhs->position), &(rhs->position)))
-  {
-    return false;
-  }
-  return true;
-}
-
-bool
-dynamixel_sdk_custom_interfaces__msg__SetPosition__copy(
-  const dynamixel_sdk_custom_interfaces__msg__SetPosition * input,
-  dynamixel_sdk_custom_interfaces__msg__SetPosition * output)
-{
-  if (!input || !output) {
-    return false;
-  }
-  // id
-  if (!rosidl_runtime_c__uint8__Sequence__copy(
-      &(input->id), &(output->id)))
-  {
-    return false;
-  }
-  // position
-  if (!rosidl_runtime_c__int32__Sequence__copy(
-      &(input->position), &(output->position)))
-  {
-    return false;
-  }
-  return true;
-}
-
 dynamixel_sdk_custom_interfaces__msg__SetPosition *
 dynamixel_sdk_custom_interfaces__msg__SetPosition__create()
 {
@@ -196,61 +152,4 @@ dynamixel_sdk_custom_interfaces__msg__SetPosition__Sequence__destroy(dynamixel_s
     dynamixel_sdk_custom_interfaces__msg__SetPosition__Sequence__fini(array);
   }
   free(array);
-}
-
-bool
-dynamixel_sdk_custom_interfaces__msg__SetPosition__Sequence__are_equal(const dynamixel_sdk_custom_interfaces__msg__SetPosition__Sequence * lhs, const dynamixel_sdk_custom_interfaces__msg__SetPosition__Sequence * rhs)
-{
-  if (!lhs || !rhs) {
-    return false;
-  }
-  if (lhs->size != rhs->size) {
-    return false;
-  }
-  for (size_t i = 0; i < lhs->size; ++i) {
-    if (!dynamixel_sdk_custom_interfaces__msg__SetPosition__are_equal(&(lhs->data[i]), &(rhs->data[i]))) {
-      return false;
-    }
-  }
-  return true;
-}
-
-bool
-dynamixel_sdk_custom_interfaces__msg__SetPosition__Sequence__copy(
-  const dynamixel_sdk_custom_interfaces__msg__SetPosition__Sequence * input,
-  dynamixel_sdk_custom_interfaces__msg__SetPosition__Sequence * output)
-{
-  if (!input || !output) {
-    return false;
-  }
-  if (output->capacity < input->size) {
-    const size_t allocation_size =
-      input->size * sizeof(dynamixel_sdk_custom_interfaces__msg__SetPosition);
-    dynamixel_sdk_custom_interfaces__msg__SetPosition * data =
-      (dynamixel_sdk_custom_interfaces__msg__SetPosition *)realloc(output->data, allocation_size);
-    if (!data) {
-      return false;
-    }
-    for (size_t i = output->capacity; i < input->size; ++i) {
-      if (!dynamixel_sdk_custom_interfaces__msg__SetPosition__init(&data[i])) {
-        /* free currently allocated and return false */
-        for (; i-- > output->capacity; ) {
-          dynamixel_sdk_custom_interfaces__msg__SetPosition__fini(&data[i]);
-        }
-        free(data);
-        return false;
-      }
-    }
-    output->data = data;
-    output->capacity = input->size;
-  }
-  output->size = input->size;
-  for (size_t i = 0; i < input->size; ++i) {
-    if (!dynamixel_sdk_custom_interfaces__msg__SetPosition__copy(
-        &(input->data[i]), &(output->data[i])))
-    {
-      return false;
-    }
-  }
-  return true;
 }
