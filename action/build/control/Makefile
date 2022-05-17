@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robofei/ROS2/action/src/control
+CMAKE_SOURCE_DIR = /home/robo/ROS2/action/src/control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robofei/ROS2/action/build/control
+CMAKE_BINARY_DIR = /home/robo/ROS2/action/build/control
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/ROS2/action/build/control/CMakeFiles /home/robofei/ROS2/action/build/control/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ROS2/action/build/control/CMakeFiles /home/robo/ROS2/action/build/control/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/ROS2/action/build/control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ROS2/action/build/control/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -232,6 +232,357 @@ uninstall/fast:
 	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
 
+home/robofei/ROS2/action/src/control/src/math/Matrix.o: home/robofei/ROS2/action/src/control/src/math/Matrix.cpp.o
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Matrix.o
+
+# target to build an object file
+home/robofei/ROS2/action/src/control/src/math/Matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/Matrix.cpp.o
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Matrix.cpp.o
+
+home/robofei/ROS2/action/src/control/src/math/Matrix.i: home/robofei/ROS2/action/src/control/src/math/Matrix.cpp.i
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Matrix.i
+
+# target to preprocess a source file
+home/robofei/ROS2/action/src/control/src/math/Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/Matrix.cpp.i
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Matrix.cpp.i
+
+home/robofei/ROS2/action/src/control/src/math/Matrix.s: home/robofei/ROS2/action/src/control/src/math/Matrix.cpp.s
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Matrix.s
+
+# target to generate assembly for a file
+home/robofei/ROS2/action/src/control/src/math/Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/Matrix.cpp.s
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Matrix.cpp.s
+
+home/robofei/ROS2/action/src/control/src/math/MotionState.o: home/robofei/ROS2/action/src/control/src/math/MotionState.cpp.o
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/MotionState.o
+
+# target to build an object file
+home/robofei/ROS2/action/src/control/src/math/MotionState.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/MotionState.cpp.o
+.PHONY : home/robofei/ROS2/action/src/control/src/math/MotionState.cpp.o
+
+home/robofei/ROS2/action/src/control/src/math/MotionState.i: home/robofei/ROS2/action/src/control/src/math/MotionState.cpp.i
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/MotionState.i
+
+# target to preprocess a source file
+home/robofei/ROS2/action/src/control/src/math/MotionState.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/MotionState.cpp.i
+.PHONY : home/robofei/ROS2/action/src/control/src/math/MotionState.cpp.i
+
+home/robofei/ROS2/action/src/control/src/math/MotionState.s: home/robofei/ROS2/action/src/control/src/math/MotionState.cpp.s
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/MotionState.s
+
+# target to generate assembly for a file
+home/robofei/ROS2/action/src/control/src/math/MotionState.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/MotionState.cpp.s
+.PHONY : home/robofei/ROS2/action/src/control/src/math/MotionState.cpp.s
+
+home/robofei/ROS2/action/src/control/src/math/Plane.o: home/robofei/ROS2/action/src/control/src/math/Plane.cpp.o
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Plane.o
+
+# target to build an object file
+home/robofei/ROS2/action/src/control/src/math/Plane.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/Plane.cpp.o
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Plane.cpp.o
+
+home/robofei/ROS2/action/src/control/src/math/Plane.i: home/robofei/ROS2/action/src/control/src/math/Plane.cpp.i
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Plane.i
+
+# target to preprocess a source file
+home/robofei/ROS2/action/src/control/src/math/Plane.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/Plane.cpp.i
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Plane.cpp.i
+
+home/robofei/ROS2/action/src/control/src/math/Plane.s: home/robofei/ROS2/action/src/control/src/math/Plane.cpp.s
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Plane.s
+
+# target to generate assembly for a file
+home/robofei/ROS2/action/src/control/src/math/Plane.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/Plane.cpp.s
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Plane.cpp.s
+
+home/robofei/ROS2/action/src/control/src/math/Point.o: home/robofei/ROS2/action/src/control/src/math/Point.cpp.o
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Point.o
+
+# target to build an object file
+home/robofei/ROS2/action/src/control/src/math/Point.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/Point.cpp.o
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Point.cpp.o
+
+home/robofei/ROS2/action/src/control/src/math/Point.i: home/robofei/ROS2/action/src/control/src/math/Point.cpp.i
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Point.i
+
+# target to preprocess a source file
+home/robofei/ROS2/action/src/control/src/math/Point.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/Point.cpp.i
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Point.cpp.i
+
+home/robofei/ROS2/action/src/control/src/math/Point.s: home/robofei/ROS2/action/src/control/src/math/Point.cpp.s
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Point.s
+
+# target to generate assembly for a file
+home/robofei/ROS2/action/src/control/src/math/Point.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/Point.cpp.s
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Point.cpp.s
+
+home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.o: home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.cpp.o
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.o
+
+# target to build an object file
+home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.cpp.o
+.PHONY : home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.cpp.o
+
+home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.i: home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.cpp.i
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.i
+
+# target to preprocess a source file
+home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.cpp.i
+.PHONY : home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.cpp.i
+
+home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.s: home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.cpp.s
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.s
+
+# target to generate assembly for a file
+home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.cpp.s
+.PHONY : home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.cpp.s
+
+home/robofei/ROS2/action/src/control/src/math/Vector.o: home/robofei/ROS2/action/src/control/src/math/Vector.cpp.o
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Vector.o
+
+# target to build an object file
+home/robofei/ROS2/action/src/control/src/math/Vector.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/Vector.cpp.o
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Vector.cpp.o
+
+home/robofei/ROS2/action/src/control/src/math/Vector.i: home/robofei/ROS2/action/src/control/src/math/Vector.cpp.i
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Vector.i
+
+# target to preprocess a source file
+home/robofei/ROS2/action/src/control/src/math/Vector.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/Vector.cpp.i
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Vector.cpp.i
+
+home/robofei/ROS2/action/src/control/src/math/Vector.s: home/robofei/ROS2/action/src/control/src/math/Vector.cpp.s
+
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Vector.s
+
+# target to generate assembly for a file
+home/robofei/ROS2/action/src/control/src/math/Vector.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/math/Vector.cpp.s
+.PHONY : home/robofei/ROS2/action/src/control/src/math/Vector.cpp.s
+
+home/robofei/ROS2/action/src/control/src/minIni/minIni.o: home/robofei/ROS2/action/src/control/src/minIni/minIni.cpp.o
+
+.PHONY : home/robofei/ROS2/action/src/control/src/minIni/minIni.o
+
+# target to build an object file
+home/robofei/ROS2/action/src/control/src/minIni/minIni.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/minIni/minIni.cpp.o
+.PHONY : home/robofei/ROS2/action/src/control/src/minIni/minIni.cpp.o
+
+home/robofei/ROS2/action/src/control/src/minIni/minIni.i: home/robofei/ROS2/action/src/control/src/minIni/minIni.cpp.i
+
+.PHONY : home/robofei/ROS2/action/src/control/src/minIni/minIni.i
+
+# target to preprocess a source file
+home/robofei/ROS2/action/src/control/src/minIni/minIni.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/minIni/minIni.cpp.i
+.PHONY : home/robofei/ROS2/action/src/control/src/minIni/minIni.cpp.i
+
+home/robofei/ROS2/action/src/control/src/minIni/minIni.s: home/robofei/ROS2/action/src/control/src/minIni/minIni.cpp.s
+
+.PHONY : home/robofei/ROS2/action/src/control/src/minIni/minIni.s
+
+# target to generate assembly for a file
+home/robofei/ROS2/action/src/control/src/minIni/minIni.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/minIni/minIni.cpp.s
+.PHONY : home/robofei/ROS2/action/src/control/src/minIni/minIni.cpp.s
+
+home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.o: home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp.o
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.o
+
+# target to build an object file
+home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp.o
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp.o
+
+home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.i: home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp.i
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.i
+
+# target to preprocess a source file
+home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp.i
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp.i
+
+home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.s: home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp.s
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.s
+
+# target to generate assembly for a file
+home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp.s
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.cpp.s
+
+home/robofei/ROS2/action/src/control/src/motion/JointData.o: home/robofei/ROS2/action/src/control/src/motion/JointData.cpp.o
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/JointData.o
+
+# target to build an object file
+home/robofei/ROS2/action/src/control/src/motion/JointData.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/JointData.cpp.o
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/JointData.cpp.o
+
+home/robofei/ROS2/action/src/control/src/motion/JointData.i: home/robofei/ROS2/action/src/control/src/motion/JointData.cpp.i
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/JointData.i
+
+# target to preprocess a source file
+home/robofei/ROS2/action/src/control/src/motion/JointData.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/JointData.cpp.i
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/JointData.cpp.i
+
+home/robofei/ROS2/action/src/control/src/motion/JointData.s: home/robofei/ROS2/action/src/control/src/motion/JointData.cpp.s
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/JointData.s
+
+# target to generate assembly for a file
+home/robofei/ROS2/action/src/control/src/motion/JointData.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/JointData.cpp.s
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/JointData.cpp.s
+
+home/robofei/ROS2/action/src/control/src/motion/Kinematics.o: home/robofei/ROS2/action/src/control/src/motion/Kinematics.cpp.o
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/Kinematics.o
+
+# target to build an object file
+home/robofei/ROS2/action/src/control/src/motion/Kinematics.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/Kinematics.cpp.o
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/Kinematics.cpp.o
+
+home/robofei/ROS2/action/src/control/src/motion/Kinematics.i: home/robofei/ROS2/action/src/control/src/motion/Kinematics.cpp.i
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/Kinematics.i
+
+# target to preprocess a source file
+home/robofei/ROS2/action/src/control/src/motion/Kinematics.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/Kinematics.cpp.i
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/Kinematics.cpp.i
+
+home/robofei/ROS2/action/src/control/src/motion/Kinematics.s: home/robofei/ROS2/action/src/control/src/motion/Kinematics.cpp.s
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/Kinematics.s
+
+# target to generate assembly for a file
+home/robofei/ROS2/action/src/control/src/motion/Kinematics.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/Kinematics.cpp.s
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/Kinematics.cpp.s
+
+home/robofei/ROS2/action/src/control/src/motion/MotionStatus.o: home/robofei/ROS2/action/src/control/src/motion/MotionStatus.cpp.o
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/MotionStatus.o
+
+# target to build an object file
+home/robofei/ROS2/action/src/control/src/motion/MotionStatus.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/MotionStatus.cpp.o
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/MotionStatus.cpp.o
+
+home/robofei/ROS2/action/src/control/src/motion/MotionStatus.i: home/robofei/ROS2/action/src/control/src/motion/MotionStatus.cpp.i
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/MotionStatus.i
+
+# target to preprocess a source file
+home/robofei/ROS2/action/src/control/src/motion/MotionStatus.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/MotionStatus.cpp.i
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/MotionStatus.cpp.i
+
+home/robofei/ROS2/action/src/control/src/motion/MotionStatus.s: home/robofei/ROS2/action/src/control/src/motion/MotionStatus.cpp.s
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/MotionStatus.s
+
+# target to generate assembly for a file
+home/robofei/ROS2/action/src/control/src/motion/MotionStatus.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/MotionStatus.cpp.s
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/MotionStatus.cpp.s
+
+home/robofei/ROS2/action/src/control/src/motion/modules/Action.o: home/robofei/ROS2/action/src/control/src/motion/modules/Action.cpp.o
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/modules/Action.o
+
+# target to build an object file
+home/robofei/ROS2/action/src/control/src/motion/modules/Action.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/modules/Action.cpp.o
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/modules/Action.cpp.o
+
+home/robofei/ROS2/action/src/control/src/motion/modules/Action.i: home/robofei/ROS2/action/src/control/src/motion/modules/Action.cpp.i
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/modules/Action.i
+
+# target to preprocess a source file
+home/robofei/ROS2/action/src/control/src/motion/modules/Action.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/modules/Action.cpp.i
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/modules/Action.cpp.i
+
+home/robofei/ROS2/action/src/control/src/motion/modules/Action.s: home/robofei/ROS2/action/src/control/src/motion/modules/Action.cpp.s
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/modules/Action.s
+
+# target to generate assembly for a file
+home/robofei/ROS2/action/src/control/src/motion/modules/Action.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/modules/Action.cpp.s
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/modules/Action.cpp.s
+
+home/robofei/ROS2/action/src/control/src/motion/modules/Walking.o: home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp.o
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/modules/Walking.o
+
+# target to build an object file
+home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp.o
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp.o
+
+home/robofei/ROS2/action/src/control/src/motion/modules/Walking.i: home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp.i
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/modules/Walking.i
+
+# target to preprocess a source file
+home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp.i
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp.i
+
+home/robofei/ROS2/action/src/control/src/motion/modules/Walking.s: home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp.s
+
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/modules/Walking.s
+
+# target to generate assembly for a file
+home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp.s
+.PHONY : home/robofei/ROS2/action/src/control/src/motion/modules/Walking.cpp.s
+
 src/control.o: src/control.cpp.o
 
 .PHONY : src/control.o
@@ -286,276 +637,6 @@ src/dec.cpp.s:
 	$(MAKE) -f CMakeFiles/decision.dir/build.make CMakeFiles/decision.dir/src/dec.cpp.s
 .PHONY : src/dec.cpp.s
 
-src/math/Matrix.o: src/math/Matrix.cpp.o
-
-.PHONY : src/math/Matrix.o
-
-# target to build an object file
-src/math/Matrix.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/Matrix.cpp.o
-.PHONY : src/math/Matrix.cpp.o
-
-src/math/Matrix.i: src/math/Matrix.cpp.i
-
-.PHONY : src/math/Matrix.i
-
-# target to preprocess a source file
-src/math/Matrix.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/Matrix.cpp.i
-.PHONY : src/math/Matrix.cpp.i
-
-src/math/Matrix.s: src/math/Matrix.cpp.s
-
-.PHONY : src/math/Matrix.s
-
-# target to generate assembly for a file
-src/math/Matrix.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/Matrix.cpp.s
-.PHONY : src/math/Matrix.cpp.s
-
-src/math/MotionState.o: src/math/MotionState.cpp.o
-
-.PHONY : src/math/MotionState.o
-
-# target to build an object file
-src/math/MotionState.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/MotionState.cpp.o
-.PHONY : src/math/MotionState.cpp.o
-
-src/math/MotionState.i: src/math/MotionState.cpp.i
-
-.PHONY : src/math/MotionState.i
-
-# target to preprocess a source file
-src/math/MotionState.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/MotionState.cpp.i
-.PHONY : src/math/MotionState.cpp.i
-
-src/math/MotionState.s: src/math/MotionState.cpp.s
-
-.PHONY : src/math/MotionState.s
-
-# target to generate assembly for a file
-src/math/MotionState.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/MotionState.cpp.s
-.PHONY : src/math/MotionState.cpp.s
-
-src/math/Plane.o: src/math/Plane.cpp.o
-
-.PHONY : src/math/Plane.o
-
-# target to build an object file
-src/math/Plane.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/Plane.cpp.o
-.PHONY : src/math/Plane.cpp.o
-
-src/math/Plane.i: src/math/Plane.cpp.i
-
-.PHONY : src/math/Plane.i
-
-# target to preprocess a source file
-src/math/Plane.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/Plane.cpp.i
-.PHONY : src/math/Plane.cpp.i
-
-src/math/Plane.s: src/math/Plane.cpp.s
-
-.PHONY : src/math/Plane.s
-
-# target to generate assembly for a file
-src/math/Plane.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/Plane.cpp.s
-.PHONY : src/math/Plane.cpp.s
-
-src/math/Point.o: src/math/Point.cpp.o
-
-.PHONY : src/math/Point.o
-
-# target to build an object file
-src/math/Point.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/Point.cpp.o
-.PHONY : src/math/Point.cpp.o
-
-src/math/Point.i: src/math/Point.cpp.i
-
-.PHONY : src/math/Point.i
-
-# target to preprocess a source file
-src/math/Point.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/Point.cpp.i
-.PHONY : src/math/Point.cpp.i
-
-src/math/Point.s: src/math/Point.cpp.s
-
-.PHONY : src/math/Point.s
-
-# target to generate assembly for a file
-src/math/Point.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/Point.cpp.s
-.PHONY : src/math/Point.cpp.s
-
-src/math/QuadraticStateTransform.o: src/math/QuadraticStateTransform.cpp.o
-
-.PHONY : src/math/QuadraticStateTransform.o
-
-# target to build an object file
-src/math/QuadraticStateTransform.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/QuadraticStateTransform.cpp.o
-.PHONY : src/math/QuadraticStateTransform.cpp.o
-
-src/math/QuadraticStateTransform.i: src/math/QuadraticStateTransform.cpp.i
-
-.PHONY : src/math/QuadraticStateTransform.i
-
-# target to preprocess a source file
-src/math/QuadraticStateTransform.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/QuadraticStateTransform.cpp.i
-.PHONY : src/math/QuadraticStateTransform.cpp.i
-
-src/math/QuadraticStateTransform.s: src/math/QuadraticStateTransform.cpp.s
-
-.PHONY : src/math/QuadraticStateTransform.s
-
-# target to generate assembly for a file
-src/math/QuadraticStateTransform.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/QuadraticStateTransform.cpp.s
-.PHONY : src/math/QuadraticStateTransform.cpp.s
-
-src/math/Vector.o: src/math/Vector.cpp.o
-
-.PHONY : src/math/Vector.o
-
-# target to build an object file
-src/math/Vector.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/Vector.cpp.o
-.PHONY : src/math/Vector.cpp.o
-
-src/math/Vector.i: src/math/Vector.cpp.i
-
-.PHONY : src/math/Vector.i
-
-# target to preprocess a source file
-src/math/Vector.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/Vector.cpp.i
-.PHONY : src/math/Vector.cpp.i
-
-src/math/Vector.s: src/math/Vector.cpp.s
-
-.PHONY : src/math/Vector.s
-
-# target to generate assembly for a file
-src/math/Vector.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/math/Vector.cpp.s
-.PHONY : src/math/Vector.cpp.s
-
-src/minIni/minIni.o: src/minIni/minIni.cpp.o
-
-.PHONY : src/minIni/minIni.o
-
-# target to build an object file
-src/minIni/minIni.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/minIni/minIni.cpp.o
-.PHONY : src/minIni/minIni.cpp.o
-
-src/minIni/minIni.i: src/minIni/minIni.cpp.i
-
-.PHONY : src/minIni/minIni.i
-
-# target to preprocess a source file
-src/minIni/minIni.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/minIni/minIni.cpp.i
-.PHONY : src/minIni/minIni.cpp.i
-
-src/minIni/minIni.s: src/minIni/minIni.cpp.s
-
-.PHONY : src/minIni/minIni.s
-
-# target to generate assembly for a file
-src/minIni/minIni.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/minIni/minIni.cpp.s
-.PHONY : src/minIni/minIni.cpp.s
-
-src/motion/AngleEstimator.o: src/motion/AngleEstimator.cpp.o
-
-.PHONY : src/motion/AngleEstimator.o
-
-# target to build an object file
-src/motion/AngleEstimator.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/AngleEstimator.cpp.o
-.PHONY : src/motion/AngleEstimator.cpp.o
-
-src/motion/AngleEstimator.i: src/motion/AngleEstimator.cpp.i
-
-.PHONY : src/motion/AngleEstimator.i
-
-# target to preprocess a source file
-src/motion/AngleEstimator.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/AngleEstimator.cpp.i
-.PHONY : src/motion/AngleEstimator.cpp.i
-
-src/motion/AngleEstimator.s: src/motion/AngleEstimator.cpp.s
-
-.PHONY : src/motion/AngleEstimator.s
-
-# target to generate assembly for a file
-src/motion/AngleEstimator.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/AngleEstimator.cpp.s
-.PHONY : src/motion/AngleEstimator.cpp.s
-
-src/motion/JointData.o: src/motion/JointData.cpp.o
-
-.PHONY : src/motion/JointData.o
-
-# target to build an object file
-src/motion/JointData.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/JointData.cpp.o
-.PHONY : src/motion/JointData.cpp.o
-
-src/motion/JointData.i: src/motion/JointData.cpp.i
-
-.PHONY : src/motion/JointData.i
-
-# target to preprocess a source file
-src/motion/JointData.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/JointData.cpp.i
-.PHONY : src/motion/JointData.cpp.i
-
-src/motion/JointData.s: src/motion/JointData.cpp.s
-
-.PHONY : src/motion/JointData.s
-
-# target to generate assembly for a file
-src/motion/JointData.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/JointData.cpp.s
-.PHONY : src/motion/JointData.cpp.s
-
-src/motion/Kinematics.o: src/motion/Kinematics.cpp.o
-
-.PHONY : src/motion/Kinematics.o
-
-# target to build an object file
-src/motion/Kinematics.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/Kinematics.cpp.o
-.PHONY : src/motion/Kinematics.cpp.o
-
-src/motion/Kinematics.i: src/motion/Kinematics.cpp.i
-
-.PHONY : src/motion/Kinematics.i
-
-# target to preprocess a source file
-src/motion/Kinematics.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/Kinematics.cpp.i
-.PHONY : src/motion/Kinematics.cpp.i
-
-src/motion/Kinematics.s: src/motion/Kinematics.cpp.s
-
-.PHONY : src/motion/Kinematics.s
-
-# target to generate assembly for a file
-src/motion/Kinematics.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/Kinematics.cpp.s
-.PHONY : src/motion/Kinematics.cpp.s
-
 src/motion/MotionManager.o: src/motion/MotionManager.cpp.o
 
 .PHONY : src/motion/MotionManager.o
@@ -583,87 +664,6 @@ src/motion/MotionManager.cpp.s:
 	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/MotionManager.cpp.s
 .PHONY : src/motion/MotionManager.cpp.s
 
-src/motion/MotionStatus.o: src/motion/MotionStatus.cpp.o
-
-.PHONY : src/motion/MotionStatus.o
-
-# target to build an object file
-src/motion/MotionStatus.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/MotionStatus.cpp.o
-.PHONY : src/motion/MotionStatus.cpp.o
-
-src/motion/MotionStatus.i: src/motion/MotionStatus.cpp.i
-
-.PHONY : src/motion/MotionStatus.i
-
-# target to preprocess a source file
-src/motion/MotionStatus.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/MotionStatus.cpp.i
-.PHONY : src/motion/MotionStatus.cpp.i
-
-src/motion/MotionStatus.s: src/motion/MotionStatus.cpp.s
-
-.PHONY : src/motion/MotionStatus.s
-
-# target to generate assembly for a file
-src/motion/MotionStatus.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/MotionStatus.cpp.s
-.PHONY : src/motion/MotionStatus.cpp.s
-
-src/motion/modules/Action.o: src/motion/modules/Action.cpp.o
-
-.PHONY : src/motion/modules/Action.o
-
-# target to build an object file
-src/motion/modules/Action.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/modules/Action.cpp.o
-.PHONY : src/motion/modules/Action.cpp.o
-
-src/motion/modules/Action.i: src/motion/modules/Action.cpp.i
-
-.PHONY : src/motion/modules/Action.i
-
-# target to preprocess a source file
-src/motion/modules/Action.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/modules/Action.cpp.i
-.PHONY : src/motion/modules/Action.cpp.i
-
-src/motion/modules/Action.s: src/motion/modules/Action.cpp.s
-
-.PHONY : src/motion/modules/Action.s
-
-# target to generate assembly for a file
-src/motion/modules/Action.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/modules/Action.cpp.s
-.PHONY : src/motion/modules/Action.cpp.s
-
-src/motion/modules/Walking.o: src/motion/modules/Walking.cpp.o
-
-.PHONY : src/motion/modules/Walking.o
-
-# target to build an object file
-src/motion/modules/Walking.cpp.o:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/modules/Walking.cpp.o
-.PHONY : src/motion/modules/Walking.cpp.o
-
-src/motion/modules/Walking.i: src/motion/modules/Walking.cpp.i
-
-.PHONY : src/motion/modules/Walking.i
-
-# target to preprocess a source file
-src/motion/modules/Walking.cpp.i:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/modules/Walking.cpp.i
-.PHONY : src/motion/modules/Walking.cpp.i
-
-src/motion/modules/Walking.s: src/motion/modules/Walking.cpp.s
-
-.PHONY : src/motion/modules/Walking.s
-
-# target to generate assembly for a file
-src/motion/modules/Walking.cpp.s:
-	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/motion/modules/Walking.cpp.s
-.PHONY : src/motion/modules/Walking.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -682,54 +682,54 @@ help:
 	@echo "... control"
 	@echo "... control_uninstall"
 	@echo "... uninstall"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/Matrix.o"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/Matrix.i"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/Matrix.s"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/MotionState.o"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/MotionState.i"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/MotionState.s"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/Plane.o"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/Plane.i"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/Plane.s"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/Point.o"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/Point.i"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/Point.s"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.o"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.i"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/QuadraticStateTransform.s"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/Vector.o"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/Vector.i"
+	@echo "... home/robofei/ROS2/action/src/control/src/math/Vector.s"
+	@echo "... home/robofei/ROS2/action/src/control/src/minIni/minIni.o"
+	@echo "... home/robofei/ROS2/action/src/control/src/minIni/minIni.i"
+	@echo "... home/robofei/ROS2/action/src/control/src/minIni/minIni.s"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.o"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.i"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/AngleEstimator.s"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/JointData.o"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/JointData.i"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/JointData.s"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/Kinematics.o"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/Kinematics.i"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/Kinematics.s"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/MotionStatus.o"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/MotionStatus.i"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/MotionStatus.s"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/modules/Action.o"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/modules/Action.i"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/modules/Action.s"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/modules/Walking.o"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/modules/Walking.i"
+	@echo "... home/robofei/ROS2/action/src/control/src/motion/modules/Walking.s"
 	@echo "... src/control.o"
 	@echo "... src/control.i"
 	@echo "... src/control.s"
 	@echo "... src/dec.o"
 	@echo "... src/dec.i"
 	@echo "... src/dec.s"
-	@echo "... src/math/Matrix.o"
-	@echo "... src/math/Matrix.i"
-	@echo "... src/math/Matrix.s"
-	@echo "... src/math/MotionState.o"
-	@echo "... src/math/MotionState.i"
-	@echo "... src/math/MotionState.s"
-	@echo "... src/math/Plane.o"
-	@echo "... src/math/Plane.i"
-	@echo "... src/math/Plane.s"
-	@echo "... src/math/Point.o"
-	@echo "... src/math/Point.i"
-	@echo "... src/math/Point.s"
-	@echo "... src/math/QuadraticStateTransform.o"
-	@echo "... src/math/QuadraticStateTransform.i"
-	@echo "... src/math/QuadraticStateTransform.s"
-	@echo "... src/math/Vector.o"
-	@echo "... src/math/Vector.i"
-	@echo "... src/math/Vector.s"
-	@echo "... src/minIni/minIni.o"
-	@echo "... src/minIni/minIni.i"
-	@echo "... src/minIni/minIni.s"
-	@echo "... src/motion/AngleEstimator.o"
-	@echo "... src/motion/AngleEstimator.i"
-	@echo "... src/motion/AngleEstimator.s"
-	@echo "... src/motion/JointData.o"
-	@echo "... src/motion/JointData.i"
-	@echo "... src/motion/JointData.s"
-	@echo "... src/motion/Kinematics.o"
-	@echo "... src/motion/Kinematics.i"
-	@echo "... src/motion/Kinematics.s"
 	@echo "... src/motion/MotionManager.o"
 	@echo "... src/motion/MotionManager.i"
 	@echo "... src/motion/MotionManager.s"
-	@echo "... src/motion/MotionStatus.o"
-	@echo "... src/motion/MotionStatus.i"
-	@echo "... src/motion/MotionStatus.s"
-	@echo "... src/motion/modules/Action.o"
-	@echo "... src/motion/modules/Action.i"
-	@echo "... src/motion/modules/Action.s"
-	@echo "... src/motion/modules/Walking.o"
-	@echo "... src/motion/modules/Walking.i"
-	@echo "... src/motion/modules/Walking.s"
 .PHONY : help
 
 

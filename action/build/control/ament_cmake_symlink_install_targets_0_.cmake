@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/robofei/ROS2/action/build/control/control" "/home/robofei/ROS2/action/build/control/decision" "/home/robofei/ROS2/action/build/control/motion" "TARGETS" "control" "decision" "motion" "DESTINATION" "lib/control")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/robo/ROS2/action/build/control/control" "/home/robo/ROS2/action/build/control/decision" "/home/robo/ROS2/action/build/control/motion" "TARGETS" "control" "decision" "motion" "DESTINATION" "lib/control")

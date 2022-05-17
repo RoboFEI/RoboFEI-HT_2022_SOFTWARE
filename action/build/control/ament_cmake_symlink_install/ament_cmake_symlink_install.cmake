@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/robofei/ROS2/action/install/control/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/robo/ROS2/action/install/control/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/robofei/ROS2/action/install/control/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/robo/ROS2/action/install/control/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/robofei/ROS2/action/install/control/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/robo/ROS2/action/install/control/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/robofei/ROS2/action/install/control/${destination}")
+      set(destination "/home/robo/ROS2/action/install/control/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,49 +311,49 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install("TARGETS" "control" "decision" "motion" "DESTINATION" "lib/control")
-include("/home/robofei/ROS2/action/build/control/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/robo/ROS2/action/build/control/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "DESTINATION" "share/control/")
-ament_cmake_symlink_install_directory("/home/robofei/ROS2/action/src/control" DIRECTORY "launch" "DESTINATION" "share/control/")
+ament_cmake_symlink_install_directory("/home/robo/ROS2/action/src/control" DIRECTORY "launch" "DESTINATION" "share/control/")
 
-# install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/robo/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/home/robo/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/control" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/control" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/robo/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/control" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/home/robo/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/control" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/control/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/control/environment")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/control/environment")
 
-# install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/control/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/control/environment")
+# install(FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/control/environment")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/control/environment")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/control/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/control/environment")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/control/environment")
 
-# install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/control/environment")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/control/environment")
+# install(FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/control/environment")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/control/environment")
 
-# install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/control")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/control")
+# install(FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/control")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/control")
 
-# install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/control")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/control")
+# install(FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/control")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/control")
 
-# install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/control")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/control")
+# install(FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/control")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/control")
 
-# install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/control")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/control")
+# install(FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/control")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/control")
 
-# install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/control")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/control")
+# install(FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/control")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/home/robo/ROS2/action/build/control/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/control")
 
-# install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/packages/control" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/packages/control" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/robo/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/packages/control" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/home/robo/ROS2/action/build/control/ament_cmake_index/share/ament_index/resource_index/packages/control" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/robofei/ROS2/action/build/control/ament_cmake_core/controlConfig.cmake" "/home/robofei/ROS2/action/build/control/ament_cmake_core/controlConfig-version.cmake" "DESTINATION" "share/control/cmake")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/build/control/ament_cmake_core/controlConfig.cmake" "/home/robofei/ROS2/action/build/control/ament_cmake_core/controlConfig-version.cmake" "DESTINATION" "share/control/cmake")
+# install(FILES "/home/robo/ROS2/action/build/control/ament_cmake_core/controlConfig.cmake" "/home/robo/ROS2/action/build/control/ament_cmake_core/controlConfig-version.cmake" "DESTINATION" "share/control/cmake")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/home/robo/ROS2/action/build/control/ament_cmake_core/controlConfig.cmake" "/home/robo/ROS2/action/build/control/ament_cmake_core/controlConfig-version.cmake" "DESTINATION" "share/control/cmake")
 
-# install(FILES "/home/robofei/ROS2/action/src/control/package.xml" "DESTINATION" "share/control")
-ament_cmake_symlink_install_files("/home/robofei/ROS2/action/src/control" FILES "/home/robofei/ROS2/action/src/control/package.xml" "DESTINATION" "share/control")
+# install(FILES "/home/robo/ROS2/action/src/control/package.xml" "DESTINATION" "share/control")
+ament_cmake_symlink_install_files("/home/robo/ROS2/action/src/control" FILES "/home/robo/ROS2/action/src/control/package.xml" "DESTINATION" "share/control")
