@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/dynamixel_sdk_custom_interfaces/_dynamixel_sdk_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c"
   "../rosidl_generator_py/dynamixel_sdk_custom_interfaces/msg/__init__.py"
   "../rosidl_generator_py/dynamixel_sdk_custom_interfaces/msg/_set_position.py"
+  "../rosidl_generator_py/dynamixel_sdk_custom_interfaces/msg/_set_position_original.py"
+  "../rosidl_generator_py/dynamixel_sdk_custom_interfaces/msg/_set_position_original_s.c"
   "../rosidl_generator_py/dynamixel_sdk_custom_interfaces/msg/_set_position_s.c"
   "../rosidl_generator_py/dynamixel_sdk_custom_interfaces/srv/__init__.py"
   "../rosidl_generator_py/dynamixel_sdk_custom_interfaces/srv/_get_position.py"

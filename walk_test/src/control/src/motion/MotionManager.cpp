@@ -322,7 +322,7 @@ void MotionManager::Process()
 void MotionManager::SetEnable(bool enable)
 {
 	printf("Set enable \n");
-	// m_Enabled = enable;
+	m_Enabled = enable;
 	// if(m_Enabled == true)
 	// 	m_CM730->WriteWord(CM730::ID_BROADCAST, MX28::P_MOVING_SPEED_L, 200, 0);
 	// 	//m_CM730->WriteWord(1, 30, 900, 0);

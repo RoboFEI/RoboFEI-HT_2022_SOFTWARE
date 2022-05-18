@@ -32,17 +32,17 @@
 #include <string>
 
 #include "dynamixel_sdk/dynamixel_sdk.h"
-#include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp"
 #include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rcutils/cmdline_parser.h"
 
-#include "read_write_node.hpp"
+#include "read_write_node_original.hpp"
 
 // Control table address for X series (except XL-320)
 #define ADDR_OPERATING_MODE 11
 #define ADDR_TORQUE_ENABLE 64
-#define ADDR_GOAL_POSITION 116
+//#define ADDR_GOAL_POSITION 116
 #define ADDR_PRESENT_POSITION 132
 
 // Protocol version
@@ -60,9 +60,9 @@ uint32_t goal_position = 0;
 int dxl_comm_result = COMM_TX_FAIL;
 
 ReadWriteNode::ReadWriteNode()
-: Node("read_write_node")
+: Node("only_one_motor")
 {
-  RCLCPP_INFO(this->get_logger(), "Run read write node");
+  RCLCPP_INFO(this->get_logger(), "Run read write node only one motor");
 
   this->declare_parameter("qos_depth", 10);
   int8_t qos_depth = 0;
@@ -72,16 +72,17 @@ ReadWriteNode::ReadWriteNode()
     rclcpp::QoS(rclcpp::KeepLast(qos_depth)).reliable().durability_volatile();
 
   set_position_subscriber_ =
-    this->create_subscription<SetPosition>(
-    "set_position",
+    this->create_subscription<SetPositionOriginal>(
+    "set_position_single",
     QOS_RKL10V,
-    [this](const SetPosition::SharedPtr msg) -> void
+    [this](const SetPositionOriginal::SharedPtr msg) -> void
     {
       uint8_t dxl_error = 0;
 
       // Position Value of X series is 4 byte data.
       // For AX & MX(1.0) use 2 byte data(uint16_t) for the Position Value.
       uint32_t goal_position = (unsigned int)msg->position;  // Convert int32 -> uint32
+      int32_t ADDR_GOAL_POSITION = msg->address;
 
       // Write Goal Position (length : 4 bytes)
       // When writing 2 byte data to AX / MX(1.0), use write2ByteTxRx() instead.
@@ -99,7 +100,7 @@ ReadWriteNode::ReadWriteNode()
       } else if (dxl_error != 0) {
         RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getRxPacketError(dxl_error));
       } else {
-        RCLCPP_INFO(this->get_logger(), "Set [ID: %d] [Goal Position: %d]", msg->id, msg->position);
+        RCLCPP_INFO(this->get_logger(), "Set [ID: %d] [Goal Position: %d] [Address: %d]", msg->id, msg->position, msg->address);
       }
     }
     );

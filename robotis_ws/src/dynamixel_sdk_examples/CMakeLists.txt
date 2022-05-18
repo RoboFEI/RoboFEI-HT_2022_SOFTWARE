@@ -31,10 +31,24 @@ ament_target_dependencies(read_write_node
   rclcpp
 )
 
+add_executable(only_one_motor src/read_write_node_original.cpp)
+ament_target_dependencies(only_one_motor
+  dynamixel_sdk_custom_interfaces
+  dynamixel_sdk
+  rclcpp
+)
+
 add_executable(minimal_pub src/minimal_pub.cpp)
 ament_target_dependencies(minimal_pub
   dynamixel_sdk_custom_interfaces
   rclcpp
+)
+
+# Install
+install(TARGETS
+  read_write_node
+  only_one_motor
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 # Install launch files.

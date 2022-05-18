@@ -1,1 +1,1 @@
-/home/robofei/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.zsh
+/home/robo/ROS2/robotis_ws/build/dynamixel_sdk/ament_cmake_environment_hooks/local_setup.zsh

@@ -1,1 +1,0 @@
-/home/robofei/robotis_ws/src/DynamixelSDK/dynamixel_sdk_examples/src/publisher.py

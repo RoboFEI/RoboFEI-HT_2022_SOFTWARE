@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_examples
+CMAKE_SOURCE_DIR = /home/robo/ROS2/robotis_ws/src/dynamixel_sdk_examples
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples
+CMAKE_BINARY_DIR = /home/robo/ROS2/robotis_ws/build/dynamixel_sdk_examples
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples/CMakeFiles /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ROS2/robotis_ws/build/dynamixel_sdk_examples/CMakeFiles /home/robo/ROS2/robotis_ws/build/dynamixel_sdk_examples/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/ROS2/robotis_ws/build/dynamixel_sdk_examples/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ROS2/robotis_ws/build/dynamixel_sdk_examples/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -179,6 +179,19 @@ minimal_pub: cmake_check_build_system
 minimal_pub/fast:
 	$(MAKE) -f CMakeFiles/minimal_pub.dir/build.make CMakeFiles/minimal_pub.dir/build
 .PHONY : minimal_pub/fast
+
+#=============================================================================
+# Target rules for targets named only_one_motor
+
+# Build rule for target.
+only_one_motor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 only_one_motor
+.PHONY : only_one_motor
+
+# fast build rule for target.
+only_one_motor/fast:
+	$(MAKE) -f CMakeFiles/only_one_motor.dir/build.make CMakeFiles/only_one_motor.dir/build
+.PHONY : only_one_motor/fast
 
 #=============================================================================
 # Target rules for targets named read_write_node
@@ -273,6 +286,33 @@ src/read_write_node.cpp.s:
 	$(MAKE) -f CMakeFiles/read_write_node.dir/build.make CMakeFiles/read_write_node.dir/src/read_write_node.cpp.s
 .PHONY : src/read_write_node.cpp.s
 
+src/read_write_node_original.o: src/read_write_node_original.cpp.o
+
+.PHONY : src/read_write_node_original.o
+
+# target to build an object file
+src/read_write_node_original.cpp.o:
+	$(MAKE) -f CMakeFiles/only_one_motor.dir/build.make CMakeFiles/only_one_motor.dir/src/read_write_node_original.cpp.o
+.PHONY : src/read_write_node_original.cpp.o
+
+src/read_write_node_original.i: src/read_write_node_original.cpp.i
+
+.PHONY : src/read_write_node_original.i
+
+# target to preprocess a source file
+src/read_write_node_original.cpp.i:
+	$(MAKE) -f CMakeFiles/only_one_motor.dir/build.make CMakeFiles/only_one_motor.dir/src/read_write_node_original.cpp.i
+.PHONY : src/read_write_node_original.cpp.i
+
+src/read_write_node_original.s: src/read_write_node_original.cpp.s
+
+.PHONY : src/read_write_node_original.s
+
+# target to generate assembly for a file
+src/read_write_node_original.cpp.s:
+	$(MAKE) -f CMakeFiles/only_one_motor.dir/build.make CMakeFiles/only_one_motor.dir/src/read_write_node_original.cpp.s
+.PHONY : src/read_write_node_original.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -285,6 +325,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... minimal_pub"
+	@echo "... only_one_motor"
 	@echo "... read_write_node"
 	@echo "... edit_cache"
 	@echo "... test"
@@ -296,6 +337,9 @@ help:
 	@echo "... src/read_write_node.o"
 	@echo "... src/read_write_node.i"
 	@echo "... src/read_write_node.s"
+	@echo "... src/read_write_node_original.o"
+	@echo "... src/read_write_node_original.i"
+	@echo "... src/read_write_node_original.s"
 .PHONY : help
 
 

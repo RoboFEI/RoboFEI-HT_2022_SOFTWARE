@@ -34,42 +34,32 @@ struct SetPosition_
 
   explicit SetPosition_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->id = 0;
-      this->position = 0l;
-    }
+    (void)_init;
   }
 
   explicit SetPosition_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
+    (void)_init;
     (void)_alloc;
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->id = 0;
-      this->position = 0l;
-    }
   }
 
   // field types and members
   using _id_type =
-    uint8_t;
+    std::vector<uint8_t, typename ContainerAllocator::template rebind<uint8_t>::other>;
   _id_type id;
   using _position_type =
-    int32_t;
+    std::vector<int32_t, typename ContainerAllocator::template rebind<int32_t>::other>;
   _position_type position;
 
   // setters for named parameter idiom
   Type & set__id(
-    const uint8_t & _arg)
+    const std::vector<uint8_t, typename ContainerAllocator::template rebind<uint8_t>::other> & _arg)
   {
     this->id = _arg;
     return *this;
   }
   Type & set__position(
-    const int32_t & _arg)
+    const std::vector<int32_t, typename ContainerAllocator::template rebind<int32_t>::other> & _arg)
   {
     this->position = _arg;
     return *this;
