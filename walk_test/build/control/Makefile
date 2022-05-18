@@ -181,6 +181,19 @@ decision/fast:
 .PHONY : decision/fast
 
 #=============================================================================
+# Target rules for targets named control
+
+# Build rule for target.
+control: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control
+.PHONY : control
+
+# fast build rule for target.
+control/fast:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/build
+.PHONY : control/fast
+
+#=============================================================================
 # Target rules for targets named gait_publisher
 
 # Build rule for target.
@@ -258,6 +271,33 @@ rclcpp_components/node_main_gait_publisher.s: rclcpp_components/node_main_gait_p
 rclcpp_components/node_main_gait_publisher.cpp.s:
 	$(MAKE) -f CMakeFiles/gait_publisher.dir/build.make CMakeFiles/gait_publisher.dir/rclcpp_components/node_main_gait_publisher.cpp.s
 .PHONY : rclcpp_components/node_main_gait_publisher.cpp.s
+
+src/control.o: src/control.cpp.o
+
+.PHONY : src/control.o
+
+# target to build an object file
+src/control.cpp.o:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/control.cpp.o
+.PHONY : src/control.cpp.o
+
+src/control.i: src/control.cpp.i
+
+.PHONY : src/control.i
+
+# target to preprocess a source file
+src/control.cpp.i:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/control.cpp.i
+.PHONY : src/control.cpp.i
+
+src/control.s: src/control.cpp.s
+
+.PHONY : src/control.s
+
+# target to generate assembly for a file
+src/control.cpp.s:
+	$(MAKE) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/control.cpp.s
+.PHONY : src/control.cpp.s
 
 src/dec.o: src/dec.cpp.o
 
@@ -672,10 +712,11 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... decision"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... decision"
+	@echo "... control"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... gait_publisher"
@@ -685,6 +726,9 @@ help:
 	@echo "... rclcpp_components/node_main_gait_publisher.o"
 	@echo "... rclcpp_components/node_main_gait_publisher.i"
 	@echo "... rclcpp_components/node_main_gait_publisher.s"
+	@echo "... src/control.o"
+	@echo "... src/control.i"
+	@echo "... src/control.s"
 	@echo "... src/dec.o"
 	@echo "... src/dec.i"
 	@echo "... src/dec.s"

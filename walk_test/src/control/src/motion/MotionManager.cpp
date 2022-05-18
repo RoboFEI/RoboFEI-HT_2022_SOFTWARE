@@ -11,6 +11,8 @@
 ****************************************************************************
 **************************************************************************** 
 ---------------------------------------------------------------------------*/
+// ros2 run control gait_publisher
+
 
 #include <stdio.h>
 #include <math.h>
@@ -39,8 +41,9 @@ const int TORQUE_ADAPTION_CYCLES = 1000 / MotionModule::TIME_UNIT;
 const int DEST_TORQUE = 1023;
 
 //#define LOG_VOLTAGES 1
+rclcpp::NodeOptions options;
 
-MotionManager* MotionManager::m_UniqueInstance = new MotionManager();
+MotionManager* MotionManager::m_UniqueInstance = new MotionManager(options);
 
 MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
         m_ProcessEnable(false),
@@ -56,7 +59,7 @@ MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
 	 subscription_imu = this->create_subscription<sensor_msgs::msg::Imu>(
         "imu/data", 10, std::bind(&MotionManager::topic_callback, this, _1));
 	publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
-    //timer_ = this->create_wall_timer(8ms, std::bind(&MotionManager::Process, this));
+    //timer_ = this->create_wall_timer(500ms, std::bind(&MotionManager::Process, this));
 	for(int i = 0; i < JointData::NUMBER_OF_JOINTS; i++)
         m_Offset[i] = 0;
 	update_thread_ = std::thread(std::bind(&MotionManager::update_loop, this));
@@ -68,8 +71,8 @@ void MotionManager::update_loop(void)
  
   while (rclcpp::ok())
   {
-    
    RCLCPP_INFO(this->get_logger(), "Running motion manager");
+   this->Process();
   }  
 }
 
@@ -245,7 +248,11 @@ void MotionManager::Process()
     //     m_CM730->WriteWord(CM730::ID_BROADCAST, MX28::P_TORQUE_LIMIT_L, m_torque_count, 0);
     //     m_torque_count += 2;
     // }
+	// auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();  
 
+    // message.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};          
+	// message.position = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};   
+	// publisher_->publish(message);
     if(m_ProcessEnable == false || m_IsRunning == true)
         return;
 		
@@ -254,6 +261,7 @@ void MotionManager::Process()
 
 
         m_CalibrationStatus = 1;
+		// m_Enabled == true;
 
 
     if(m_CalibrationStatus == 1 && m_Enabled == true)

@@ -1,0 +1,55 @@
+[0.009s] Invoking command in '/home/robo/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[0.040s] [35m[1mScanning dependencies of target motion[0m
+[0.053s] [ 21%] Built target gait_publisher
+[0.053s] [ 21%] Built target decision
+[0.063s] [ 26%] [32mBuilding CXX object CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o[0m
+[0.990s] In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:23[m[K:
+[0.990s] [01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:[m[K In constructor ‘[01m[KRobot::MotionManager::MotionManager(const rclcpp::NodeOptions&)[m[K’:
+[0.990s] [01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:75:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KRobot::MotionManager::DEBUG_PRINT[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+[0.990s]    75 |   bool [01;35m[KDEBUG_PRINT[m[K;
+[0.990s]       |        [01;35m[K^~~~~~~~~~~[m[K
+[0.990s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:55:41:[m[K [01;35m[Kwarning: [m[K  base ‘[01m[Krclcpp::Node[m[K’ [[01;35m[K-Wreorder[m[K]
+[0.990s]    55 |   rclcpp::Node("gait_publisher", options[01;35m[K)[m[K
+[0.990s]       |                                         [01;35m[K^[m[K
+[0.990s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:46:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+[0.990s]    46 | [01;35m[KMotionManager[m[K::MotionManager(const rclcpp::NodeOptions & options) :
+[0.990s]       | [01;35m[K^~~~~~~~~~~~~[m[K
+[1.005s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[1.005s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:83:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_X[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.005s]    83 |         float [01;35m[KIMU_GYRO_X[m[K = -imu_msg_->angular_velocity.x/10;
+[1.006s]       |               [01;35m[K^~~~~~~~~~[m[K
+[1.006s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:84:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_Y[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.006s]    84 |         float [01;35m[KIMU_GYRO_Y[m[K  = -imu_msg_->angular_velocity.y/10;
+[1.006s]       |               [01;35m[K^~~~~~~~~~[m[K
+[1.006s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Initialize(bool)[m[K’:
+[1.006s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:90:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.006s]    90 |  int [01;35m[Kvalue[m[K, error;
+[1.006s]       |      [01;35m[K^~~~~[m[K
+[1.006s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:90:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.006s]    90 |  int value, [01;35m[Kerror[m[K;
+[1.006s]       |             [01;35m[K^~~~~[m[K
+[1.006s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Reinitialize()[m[K’:
+[1.006s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:149:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.006s]   149 |  int [01;35m[Kvalue[m[K, error;
+[1.006s]       |      [01;35m[K^~~~~[m[K
+[1.006s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:149:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.006s]   149 |  int value, [01;35m[Kerror[m[K;
+[1.007s]       |             [01;35m[K^~~~~[m[K
+[1.009s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::Process()[m[K’:
+[1.009s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:250:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage[m[K’ was not declared in this scope
+[1.009s]   250 |     [01;31m[Kmessage[m[K.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+[1.009s]       |     [01;31m[K^~~~~~~[m[K
+[1.010s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:261:13:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+[1.010s]   261 |   [01;35m[Km_Enabled == true[m[K;
+[1.010s]       |   [01;35m[K~~~~~~~~~~^~~~~~~[m[K
+[1.015s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:292:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kjoint_num[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.015s]   292 |  int [01;35m[Kjoint_num[m[K = 0;
+[1.015s]       |      [01;35m[K^~~~~~~~~[m[K
+[1.015s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::SetEnable(bool)[m[K’:
+[1.015s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:319:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kenable[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.015s]   319 | void MotionManager::SetEnable([01;35m[Kbool enable[m[K)
+[1.015s]       |                               [01;35m[K~~~~~^~~~~~[m[K
+[2.181s] make[2]: *** [CMakeFiles/motion.dir/build.make:63: CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o] Error 1
+[2.181s] make[1]: *** [CMakeFiles/Makefile2:136: CMakeFiles/motion.dir/all] Error 2
+[2.181s] make: *** [Makefile:141: all] Error 2
+[2.183s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '2': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12

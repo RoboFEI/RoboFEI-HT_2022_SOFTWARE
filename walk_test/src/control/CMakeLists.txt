@@ -61,12 +61,12 @@ rclcpp_components_register_node(motion
 )
 
 # Build
-#add_executable(control src/control.cpp)
-#ament_target_dependencies(control
-#  dynamixel_sdk_custom_interfaces
-#  rclcpp
-#  sensor_msgs
-#)
+add_executable(control src/control.cpp)
+ament_target_dependencies(control
+  dynamixel_sdk_custom_interfaces
+  rclcpp
+  sensor_msgs
+)
 
 # Build
 add_executable(decision src/dec.cpp)
@@ -77,6 +77,7 @@ ament_target_dependencies(decision
 
 # Install
 install(TARGETS
+  control
   decision
   DESTINATION lib/${PROJECT_NAME}
 )
