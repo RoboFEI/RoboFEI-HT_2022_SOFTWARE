@@ -1,0 +1,73 @@
+[35m[1mScanning dependencies of target control[0m
+[35m[1mScanning dependencies of target motion[0m
+[ 10%] Built target decision
+[ 15%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o[0m
+In file included from [01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:23[m[K:
+[01m[K/home/robo/ROS2/action/src/control/include/MotionManager.h:[m[K In constructor ‘[01m[KRobot::MotionManager::MotionManager()[m[K’:
+[01m[K/home/robo/ROS2/action/src/control/include/MotionManager.h:72:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KRobot::MotionManager::DEBUG_PRINT[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+   72 |   bool [01;35m[KDEBUG_PRINT[m[K;
+      |        [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:54:24:[m[K [01;35m[Kwarning: [m[K  base ‘[01m[Krclcpp::Node[m[K’ [[01;35m[K-Wreorder[m[K]
+   54 |   Node("gait_publisher"[01;35m[K)[m[K
+      |                        [01;35m[K^[m[K
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:45:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   45 | [01;35m[KMotionManager[m[K::MotionManager() :
+      | [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:71:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_X[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   71 |         float [01;35m[KIMU_GYRO_X[m[K = -imu_msg_->angular_velocity.x/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:72:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_Y[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   72 |         float [01;35m[KIMU_GYRO_Y[m[K  = -imu_msg_->angular_velocity.y/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Initialize(bool)[m[K’:
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:78:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   78 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:78:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   78 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Reinitialize()[m[K’:
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:137:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  137 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:137:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  137 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::Process()[m[K’:
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:275:6:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kparam[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+  275 |  int [01;35m[Kparam[m[K[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:276:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kjoint_num[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  276 |  int [01;35m[Kjoint_num[m[K = 0;
+      |      [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::SetEnable(bool)[m[K’:
+[01m[K/home/robo/ROS2/action/src/control/src/motion/MotionManager.cpp:303:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kenable[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  303 | void MotionManager::SetEnable([01;35m[Kbool enable[m[K)
+      |                               [01;35m[K~~~~~^~~~~~[m[K
+[ 26%] [32m[1mLinking CXX executable motion[0m
+[ 94%] Built target motion
+[100%] [32m[1mLinking CXX executable control[0m
+[100%] Built target control
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/lib/control/control
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/lib/control/decision
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/lib/control/motion
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/control//launch/action.launch.py
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/ament_index/resource_index/package_run_dependencies/control
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/ament_index/resource_index/parent_prefix_path/control
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/control/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/control/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/control/environment/path.sh
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/control/environment/path.dsv
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/control/local_setup.bash
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/control/local_setup.sh
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/control/local_setup.zsh
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/control/local_setup.dsv
+-- Symlinking: /home/robo/ROS2/action/install/control/share/control/package.dsv
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/ament_index/resource_index/packages/control
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/control/cmake/controlConfig.cmake
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/control/cmake/controlConfig-version.cmake
+-- Up-to-date symlink: /home/robo/ROS2/action/install/control/share/control/package.xml
