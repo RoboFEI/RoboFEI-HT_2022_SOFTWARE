@@ -22,7 +22,7 @@
 // ros2 topic pub -1 decision custom_interfaces/Decision "{decision: 1}"
 //
 // Open terminal #2 (run one of below commands at a time)
-// $ ros2 topic pub -1 /set_position dynamixel_sdk_custom_interfaces/SetPosition "{id: {6, 2}, position: {300, 500}}"
+// $ ros2 topic pub -1 /set_position_single dynamixel_sdk_custom_interfaces/SetPositionOriginal "{id: 30, address: 116, position: 1000}"
 // $ ros2 topic pub -1 /set_position dynamixel_sdk_custom_interfaces/SetPosition "{id: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}, position: {300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300}}"
 // $ ros2 topic pub -1 /set_position dynamixel_sdk_custom_interfaces/SetPosition "{id: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, position: {2500, 1900, 2100, 2048, 2047, 2046, 2049, 2050, 2051, 2052, 2045, 2044}}"
 // $ ros2 topic pub -1 /set_position dynamixel_sdk_custom_interfaces/SetPosition "{id: {1, 2, 5, 6}, position: {2500, 1900, 2048, 2048}}"
@@ -36,6 +36,7 @@
 
 #include "dynamixel_sdk/dynamixel_sdk.h"
 #include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rcutils/cmdline_parser.h"
 
@@ -147,6 +148,64 @@ ReadWriteNode::ReadWriteNode()
     }
     );
 
+
+    set_position_subscriber_single =
+    this->create_subscription<SetPositionOriginal>(
+    "set_position_single",
+    QOS_RKL10V,
+    [this](const SetPositionOriginal::SharedPtr msg) -> void
+    {
+      uint8_t dxl_error = 0;
+
+      // Position Value of X series is 4 byte data.
+      // For AX & MX(1.0) use 2 byte data(uint16_t) for the Position Value.
+      uint32_t goal_position = (unsigned int)msg->position;  // Convert int32 -> uint32
+      uint32_t ADDR_GOAL = (unsigned int)msg->address;
+
+      if(ADDR_GOAL == 102){
+        // Write Goal Position (length : 4 bytes)
+        // When writing 2 byte data to AX / MX(1.0), use write2ByteTxRx() instead.
+        dxl_comm_result =
+        packetHandler->write2ByteTxRx(
+          portHandler,
+          (uint8_t) msg->id,
+          ADDR_GOAL,
+          goal_position,
+          &dxl_error
+        );
+
+        if (dxl_comm_result != COMM_SUCCESS) {
+          RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getTxRxResult(dxl_comm_result));
+        } else if (dxl_error != 0) {
+          RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getRxPacketError(dxl_error));
+        } else {
+          RCLCPP_INFO(this->get_logger(), "Set [ID: %d] [Goal Position: %d] [Address: %d]", msg->id, msg->position, msg->address);
+        }
+      }
+
+      else{
+        // Write Goal Position (length : 4 bytes)
+        // When writing 2 byte data to AX / MX(1.0), use write2ByteTxRx() instead.
+        dxl_comm_result =
+        packetHandler->write4ByteTxRx(
+          portHandler,
+          (uint8_t) msg->id,
+          ADDR_GOAL,
+          goal_position,
+          &dxl_error
+        );
+
+        if (dxl_comm_result != COMM_SUCCESS) {
+          RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getTxRxResult(dxl_comm_result));
+        } else if (dxl_error != 0) {
+          RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getRxPacketError(dxl_error));
+        } else {
+          RCLCPP_INFO(this->get_logger(), "Set [ID: %d] [Goal Position: %d] [Address: %d]", msg->id, msg->position, msg->address);
+        }
+      }
+    }
+    );
+
 }
 
 // RCLCPP_INFO(this->get_logger(), "Set [ID: {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}] [Goal Position: {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}]", 
@@ -190,6 +249,24 @@ void setupDynamixel(uint8_t dxl_id)
     RCLCPP_ERROR(rclcpp::get_logger("read_write_node"), "Failed to enable torque.");
   } else {
     RCLCPP_INFO(rclcpp::get_logger("read_write_node"), "Succeeded to enable torque.");
+  }
+
+  //Declarando o valor limite da velocidade usado pelo P_PROFILE_VELOCITY.
+  dxl_comm_result = packetHandler->write4ByteTxRx(portHandler, BROADCAST_ID, 44, 1023, &dxl_error);
+
+  if (dxl_comm_result != COMM_SUCCESS) {
+    RCLCPP_ERROR(rclcpp::get_logger("read_write_node"), "Failed to define limit velocity.");
+  } else {
+    RCLCPP_INFO(rclcpp::get_logger("read_write_node"), "Succeeded to define limit velocity.");
+  }
+
+  //Declarando o valor limite da aceleração usado pelo P_PROFILE_ACCELERATION.
+  dxl_comm_result = packetHandler->write4ByteTxRx(portHandler, BROADCAST_ID, 40, 32767, &dxl_error);
+
+  if (dxl_comm_result != COMM_SUCCESS) {
+    RCLCPP_ERROR(rclcpp::get_logger("read_write_node"), "Failed to define limit acceleration.");
+  } else {
+    RCLCPP_INFO(rclcpp::get_logger("read_write_node"), "Succeeded to define limit acceleration.");
   }
 }
 

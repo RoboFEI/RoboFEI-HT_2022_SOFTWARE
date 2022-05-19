@@ -11,7 +11,11 @@ CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robo/ROS2/roboti
 CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robo/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp
 CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robo/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp
 CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robo/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp
+CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robo/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__builder.hpp
+CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robo/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__struct.hpp
+CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robo/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__traits.hpp
 CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robo/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp
+CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robo/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp
 CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robo/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp
 CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robo/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp
 CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o: /home/robo/ROS2/robotis_ws/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp

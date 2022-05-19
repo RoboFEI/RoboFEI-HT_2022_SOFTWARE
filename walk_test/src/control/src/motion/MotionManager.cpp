@@ -32,6 +32,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/imu.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp"
 
 using namespace Robot;
 using std::placeholders::_1;
@@ -39,6 +40,8 @@ using std::placeholders::_1;
 // Torque adaption every second
 const int TORQUE_ADAPTION_CYCLES = 1000 / MotionModule::TIME_UNIT;
 const int DEST_TORQUE = 1023;
+
+#define BROADCAST_ID        0xFE    // 254
 
 //#define LOG_VOLTAGES 1
 rclcpp::NodeOptions options;
@@ -59,6 +62,7 @@ MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
 	 subscription_imu = this->create_subscription<sensor_msgs::msg::Imu>(
         "imu/data", 10, std::bind(&MotionManager::topic_callback, this, _1));
 	publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
+	publisher_single = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>("set_position_single", 10); 
     //timer_ = this->create_wall_timer(500ms, std::bind(&MotionManager::Process, this));
 	for(int i = 0; i < JointData::NUMBER_OF_JOINTS; i++)
         m_Offset[i] = 0;
@@ -243,6 +247,46 @@ void MotionManager::SaveINISettings(minIni* ini, const std::string &section)
 #define MARGIN_OF_SD        2.0
 void MotionManager::Process()
 {
+
+	if(m_fadeIn && m_torque_count < DEST_TORQUE) {
+      //printf("entrou\n");
+        if(m_torque_count < 100)
+            m_torque_count += 3;
+        else
+            m_torque_count = 2047 ;
+
+        //m_CM730->WriteWord(CM730::ID_BROADCAST, MX28::P_TORQUE_LIMIT_L, m_torque_count, 0);
+		auto message_single = dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal(); 
+		message_single.id = BROADCAST_ID;
+		message_single.address = MX28::P_GOAL_CURRENT;
+		message_single.position = m_torque_count;
+		publisher_single->publish(message_single);
+        // m_CM730->write2ByteTxRx(portHandler, BROADCAST_ID, MX28::P_GOAL_CURRENT, m_torque_count, &dxl_error);
+
+        if(m_torque_count == 2047)
+        {
+			message_single.id = 3;
+			message_single.address = MX28::P_GOAL_CURRENT;
+			message_single.position = 1941;
+			publisher_single->publish(message_single);
+            //m_CM730->write2ByteTxRx(portHandler, 3, MX28::P_GOAL_CURRENT, 1941, &dxl_error);
+			message_single.id = 4;
+			message_single.address = MX28::P_GOAL_CURRENT;
+			message_single.position = 1941;
+			publisher_single->publish(message_single);
+            //m_CM730->write2ByteTxRx(portHandler, 4, MX28::P_GOAL_CURRENT, 1941, &dxl_error);
+			message_single.id = 5;
+			message_single.address = MX28::P_GOAL_CURRENT;
+			message_single.position = 1941;
+			publisher_single->publish(message_single);
+            //m_CM730->write2ByteTxRx(portHandler, 5, MX28::P_GOAL_CURRENT, 1941, &dxl_error);
+			message_single.id = 6;
+			message_single.address = MX28::P_GOAL_CURRENT;
+			message_single.position = 1941;
+			publisher_single->publish(message_single);
+            //m_CM730->write2ByteTxRx(portHandler, 6, MX28::P_GOAL_CURRENT, 1941, &dxl_error);
+        }
+	}
 	//printf("entrou\n");
     // if(m_fadeIn && m_torque_count < DEST_TORQUE) {
     //     m_CM730->WriteWord(CM730::ID_BROADCAST, MX28::P_TORQUE_LIMIT_L, m_torque_count, 0);
@@ -323,6 +367,13 @@ void MotionManager::SetEnable(bool enable)
 {
 	printf("Set enable \n");
 	m_Enabled = enable;
+	uint32_t valor = 1020; //declarado "0" -= velocidade infinita.
+	auto message_single = dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal(); 
+	message_single.id = BROADCAST_ID;
+	message_single.address = MX28::P_PROFILE_VELOCITY;
+	message_single.position = valor;
+	publisher_single->publish(message_single);
+	// m_CM730->write4ByteTxRx(portHandler, BROADCAST_ID, MX28::P_PROFILE_VELOCITY, valor, &dxl_error);
 	// if(m_Enabled == true)
 	// 	m_CM730->WriteWord(CM730::ID_BROADCAST, MX28::P_MOVING_SPEED_L, 200, 0);
 	// 	//m_CM730->WriteWord(1, 30, 900, 0);

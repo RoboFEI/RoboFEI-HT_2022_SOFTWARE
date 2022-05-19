@@ -1,0 +1,14 @@
+[35m[1mScanning dependencies of target read_write_node[0m
+[ 66%] Built target minimal_pub
+[ 66%] Built target only_one_motor
+[ 83%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[01m[K/home/robo/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:[m[K In function ‘[01m[Kvoid setupDynamixel(uint8_t)[m[K’:
+[01m[K/home/robo/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:232:78:[m[K [01;31m[Kerror: [m[K‘[01m[KMX28[m[K’ has not been declared
+  232 |   dxl_comm_result = packetHandler->write4ByteTxRx(portHandler, BROADCAST_ID, [01;31m[KMX28[m[K::P_VELOCITY_LIMIT, 1023, &dxl_error);
+      |                                                                              [01;31m[K^~~~[m[K
+[01m[K/home/robo/ROS2/robotis_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp:241:78:[m[K [01;31m[Kerror: [m[K‘[01m[KMX28[m[K’ has not been declared
+  241 |   dxl_comm_result = packetHandler->write4ByteTxRx(portHandler, BROADCAST_ID, [01;31m[KMX28[m[K::P_ACCELERATION_LIMIT, 32767, &dxl_error);
+      |                                                                              [01;31m[K^~~~[m[K
+make[2]: *** [CMakeFiles/read_write_node.dir/build.make:63: CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:136: CMakeFiles/read_write_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

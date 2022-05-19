@@ -30,6 +30,7 @@ class ReadWriteNode : public rclcpp::Node
 {
 public:
   using SetPosition = dynamixel_sdk_custom_interfaces::msg::SetPosition;
+  using SetPositionOriginal = dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal;
   using GetPosition = dynamixel_sdk_custom_interfaces::srv::GetPosition;
 
   ReadWriteNode();
@@ -37,6 +38,7 @@ public:
 
 private:
   rclcpp::Subscription<SetPosition>::SharedPtr set_position_subscriber_;
+  rclcpp::Subscription<SetPositionOriginal>::SharedPtr set_position_subscriber_single;
   rclcpp::Service<GetPosition>::SharedPtr get_position_server_;
 
   int present_position;

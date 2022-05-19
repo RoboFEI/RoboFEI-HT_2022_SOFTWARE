@@ -21,7 +21,8 @@
 // $ ros2 run dynamixel_sdk_examples read_write_node
 //
 // Open terminal #2 (run one of below commands at a time)
-// $ ros2 topic pub -1 /set_position_single dynamixel_sdk_custom_interfaces/SetPositionOriginal "{id: 1, address: 116, position: 1000}"
+// $ ros2 topic pub -1 /set_position_single dynamixel_sdk_custom_interfaces/SetPositionOriginal "{id: 30, address: 116, position: 1000}"
+// $ ros2 topic pub -1 /set_position_single dynamixel_sdk_custom_interfaces/SetPositionOriginal "{id: 30, address: 64, position: 0}"
 // $ ros2 service call /get_position dynamixel_sdk_custom_interfaces/srv/GetPosition "id: 1"
 //
 // Author: Will Son
@@ -41,7 +42,7 @@
 
 // Control table address for X series (except XL-320)
 #define ADDR_OPERATING_MODE 11
-#define ADDR_TORQUE_ENABLE 64
+#define ADDR_TORQUE_ENABLE 64 // habilita e desabilita torque
 //#define ADDR_GOAL_POSITION 116
 #define ADDR_PRESENT_POSITION 132
 

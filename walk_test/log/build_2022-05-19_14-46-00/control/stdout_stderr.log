@@ -1,0 +1,58 @@
+[35m[1mScanning dependencies of target motion[0m
+[  4%] [32m[1mLinking CXX executable decision[0m
+[ 14%] Built target gait_publisher
+[ 19%] [32m[1mLinking CXX executable control[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o[0m
+/usr/bin/ld: CMakeFiles/decision.dir/src/dec.cpp.o: in function `rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> >, std::allocator<void> >::Publisher(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&, rclcpp::PublisherOptionsWithAllocator<std::allocator<void> > const&)':
+dec.cpp:(.text._ZN6rclcpp9PublisherIN31dynamixel_sdk_custom_interfaces3msg9Decision_ISaIvEEES4_EC2EPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSERKNS_29PublisherOptionsWithAllocatorIS4_EE[_ZN6rclcpp9PublisherIN31dynamixel_sdk_custom_interfaces3msg9Decision_ISaIvEEES4_EC5EPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSERKNS_29PublisherOptionsWithAllocatorIS4_EE]+0x6e): undefined reference to `rosidl_message_type_support_t const* rosidl_typesupport_cpp::get_message_type_support_handle<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> > >()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/decision.dir/build.make:136: decision] Error 1
+make[1]: *** [CMakeFiles/Makefile2:84: CMakeFiles/decision.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/usr/bin/ld: CMakeFiles/control.dir/src/control.cpp.o: in function `rclcpp::create_subscription_factory<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> >, std::_Bind<void (Control::*(Control*, std::_Placeholder<1>))(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> > >) const>, std::allocator<void>, dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> >, rclcpp::Subscription<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> >, std::allocator<void>, rclcpp::message_memory_strategy::MessageMemoryStrategy<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> >, std::allocator<void> > >, rclcpp::message_memory_strategy::MessageMemoryStrategy<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> >, std::allocator<void> > >(std::_Bind<void (Control::*(Control*, std::_Placeholder<1>))(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> > >) const>&&, rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> > const&, rclcpp::message_memory_strategy::MessageMemoryStrategy<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> >, std::allocator<void> >::SharedPtr, std::shared_ptr<rclcpp::topic_statistics::SubscriptionTopicStatistics<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> > > >)::{lambda(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&)#1}::operator()(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&) const':
+control.cpp:(.text._ZZN6rclcpp27create_subscription_factoryIN31dynamixel_sdk_custom_interfaces3msg9Decision_ISaIvEEESt5_BindIFM7ControlKFvSt10shared_ptrIS5_EEPS7_St12_PlaceholderILi1EEEES4_S5_NS_12SubscriptionIS5_S4_NS_23message_memory_strategy21MessageMemoryStrategyIS5_S4_EEEESK_EENS_19SubscriptionFactoryEOT0_RKNS_32SubscriptionOptionsWithAllocatorIT1_EENT4_9SharedPtrES8_INS_16topic_statistics27SubscriptionTopicStatisticsIT2_EEEENKUlPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSEE_clES13_S1B_S1E_[_ZZN6rclcpp27create_subscription_factoryIN31dynamixel_sdk_custom_interfaces3msg9Decision_ISaIvEEESt5_BindIFM7ControlKFvSt10shared_ptrIS5_EEPS7_St12_PlaceholderILi1EEEES4_S5_NS_12SubscriptionIS5_S4_NS_23message_memory_strategy21MessageMemoryStrategyIS5_S4_EEEESK_EENS_19SubscriptionFactoryEOT0_RKNS_32SubscriptionOptionsWithAllocatorIT1_EENT4_9SharedPtrES8_INS_16topic_statistics27SubscriptionTopicStatisticsIT2_EEEENKUlPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSEE_clES13_S1B_S1E_]+0x5c): undefined reference to `rosidl_message_type_support_t const* rosidl_typesupport_cpp::get_message_type_support_handle<dynamixel_sdk_custom_interfaces::msg::Decision_<std::allocator<void> > >()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/control.dir/build.make:146: control] Error 1
+make[1]: *** [CMakeFiles/Makefile2:111: CMakeFiles/control.dir/all] Error 2
+In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25[m[K:
+[01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:[m[K In constructor ‘[01m[KRobot::MotionManager::MotionManager(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:77:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KRobot::MotionManager::DEBUG_PRINT[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+   77 |   bool [01;35m[KDEBUG_PRINT[m[K;
+      |        [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:60:41:[m[K [01;35m[Kwarning: [m[K  base ‘[01m[Krclcpp::Node[m[K’ [[01;35m[K-Wreorder[m[K]
+   60 |   rclcpp::Node("gait_publisher", options[01;35m[K)[m[K
+      |                                         [01;35m[K^[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:51:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   51 | [01;35m[KMotionManager[m[K::MotionManager(const rclcpp::NodeOptions & options) :
+      | [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:89:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_X[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   89 |         float [01;35m[KIMU_GYRO_X[m[K = -imu_msg_->angular_velocity.x/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:90:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_Y[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   90 |         float [01;35m[KIMU_GYRO_Y[m[K  = -imu_msg_->angular_velocity.y/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Initialize(bool)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:96:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   96 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:96:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   96 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Reinitialize()[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:155:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  155 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:155:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  155 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::Process()[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:298:6:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kparam[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+  298 |  int [01;35m[Kparam[m[K[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:299:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kjoint_num[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  299 |  int [01;35m[Kjoint_num[m[K = 0;
+      |      [01;35m[K^~~~~~~~~[m[K
+[ 28%] [32m[1mLinking CXX shared library libmotion.so[0m
+[ 90%] Built target motion
+make: *** [Makefile:141: all] Error 2

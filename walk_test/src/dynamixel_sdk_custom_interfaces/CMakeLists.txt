@@ -22,11 +22,17 @@ find_package(rosidl_default_generators REQUIRED)
 
 set(msg_files
   "msg/SetPosition.msg"
+  "msg/SetPositionOriginal.msg"
   "msg/Decision.msg"
+)
+
+set(srv_files
+  "srv/GetPosition.srv"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
+  ${srv_files}
   DEPENDENCIES builtin_interfaces
 )
 

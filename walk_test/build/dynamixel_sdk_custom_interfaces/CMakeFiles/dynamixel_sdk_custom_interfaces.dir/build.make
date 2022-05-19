@@ -54,7 +54,11 @@ CMAKE_BINARY_DIR = /home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfac
 include CMakeFiles/dynamixel_sdk_custom_interfaces.dir/progress.make
 
 CMakeFiles/dynamixel_sdk_custom_interfaces: /home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg
+CMakeFiles/dynamixel_sdk_custom_interfaces: /home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/SetPositionOriginal.msg
 CMakeFiles/dynamixel_sdk_custom_interfaces: /home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/Decision.msg
+CMakeFiles/dynamixel_sdk_custom_interfaces: /home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv
+CMakeFiles/dynamixel_sdk_custom_interfaces: rosidl_cmake/srv/GetPosition_Request.msg
+CMakeFiles/dynamixel_sdk_custom_interfaces: rosidl_cmake/srv/GetPosition_Response.msg
 CMakeFiles/dynamixel_sdk_custom_interfaces: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 CMakeFiles/dynamixel_sdk_custom_interfaces: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
 
