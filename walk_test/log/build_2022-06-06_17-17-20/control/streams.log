@@ -1,0 +1,74 @@
+[0.009s] Invoking command in '/home/robo/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[0.044s] [35m[1mScanning dependencies of target motion[0m
+[0.055s] [ 19%] Built target gait_publisher
+[0.055s] [ 19%] Built target decision
+[0.057s] [ 28%] Built target control
+[0.070s] [ 33%] [32mBuilding CXX object CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o[0m
+[1.068s] In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25[m[K:
+[1.068s] [01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:[m[K In constructor ‘[01m[KRobot::MotionManager::MotionManager(const rclcpp::NodeOptions&)[m[K’:
+[1.068s] [01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:80:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KRobot::MotionManager::DEBUG_PRINT[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+[1.068s]    80 |   bool [01;35m[KDEBUG_PRINT[m[K;
+[1.068s]       |        [01;35m[K^~~~~~~~~~~[m[K
+[1.068s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:63:41:[m[K [01;35m[Kwarning: [m[K  base ‘[01m[Krclcpp::Node[m[K’ [[01;35m[K-Wreorder[m[K]
+[1.068s]    63 |   rclcpp::Node("gait_publisher", options[01;35m[K)[m[K
+[1.068s]       |                                         [01;35m[K^[m[K
+[1.068s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:54:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+[1.068s]    54 | [01;35m[KMotionManager[m[K::MotionManager(const rclcpp::NodeOptions & options) :
+[1.068s]       | [01;35m[K^~~~~~~~~~~~~[m[K
+[1.087s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[1.087s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:92:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_X[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.087s]    92 |         float [01;35m[KIMU_GYRO_X[m[K = -imu_msg_->angular_velocity.x/10;
+[1.087s]       |               [01;35m[K^~~~~~~~~~[m[K
+[1.087s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:93:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_Y[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.087s]    93 |         float [01;35m[KIMU_GYRO_Y[m[K  = -imu_msg_->angular_velocity.y/10;
+[1.087s]       |               [01;35m[K^~~~~~~~~~[m[K
+[1.093s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Initialize(bool)[m[K’:
+[1.093s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:99:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.093s]    99 |  int [01;35m[Kvalue[m[K, error;
+[1.093s]       |      [01;35m[K^~~~~[m[K
+[1.093s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:99:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.093s]    99 |  int value, [01;35m[Kerror[m[K;
+[1.093s]       |             [01;35m[K^~~~~[m[K
+[1.094s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Reinitialize()[m[K’:
+[1.094s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:182:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.094s]   182 |  int [01;35m[Kvalue[m[K, error;
+[1.094s]       |      [01;35m[K^~~~~[m[K
+[1.094s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:182:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.094s]   182 |  int value, [01;35m[Kerror[m[K;
+[1.094s]       |             [01;35m[K^~~~~[m[K
+[1.109s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::Process()[m[K’:
+[1.109s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:374:6:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kparam[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+[1.109s]   374 |  int [01;35m[Kparam[m[K[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];
+[1.109s]       |      [01;35m[K^~~~~[m[K
+[1.109s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:375:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kjoint_num[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.109s]   375 |  int [01;35m[Kjoint_num[m[K = 0;
+[1.109s]       |      [01;35m[K^~~~~~~~~[m[K
+[5.112s] [ 38%] [32m[1mLinking CXX shared library libmotion.so[0m
+[5.364s] [100%] Built target motion
+[5.372s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '0': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[5.411s] Invoking command in '/home/robo/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --install /home/robo/ROS2/walk_test/build/control
+[5.417s] -- Install configuration: ""
+[5.417s] -- Execute custom install script
+[5.418s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/lib/control/gait_publisher
+[5.418s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/lib/control/control
+[5.418s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/lib/control/decision
+[5.418s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/lib/libmotion.so
+[5.419s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/control//launch/action.launch.py
+[5.419s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/ament_index/resource_index/package_run_dependencies/control
+[5.419s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/ament_index/resource_index/parent_prefix_path/control
+[5.420s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/control/environment/ament_prefix_path.sh
+[5.420s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/control/environment/ament_prefix_path.dsv
+[5.420s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/control/environment/path.sh
+[5.420s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/control/environment/path.dsv
+[5.420s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/control/local_setup.bash
+[5.420s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/control/local_setup.sh
+[5.421s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/control/local_setup.zsh
+[5.421s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/control/local_setup.dsv
+[5.421s] -- Symlinking: /home/robo/ROS2/walk_test/install/control/share/control/package.dsv
+[5.428s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/ament_index/resource_index/packages/control
+[5.428s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/ament_index/resource_index/rclcpp_components/control
+[5.428s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/control/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.429s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/control/cmake/controlConfig.cmake
+[5.429s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/control/cmake/controlConfig-version.cmake
+[5.429s] -- Up-to-date symlink: /home/robo/ROS2/walk_test/install/control/share/control/package.xml
+[5.430s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '0': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --install /home/robo/ROS2/walk_test/build/control

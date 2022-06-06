@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robofei/ROS2/um7
+CMAKE_SOURCE_DIR = /home/robo/ROS2/um7
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robofei/ROS2/um7/build/um7
+CMAKE_BINARY_DIR = /home/robo/ROS2/um7/build/um7
 
 # Utility rule file for um7_uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/robofei/ROS2/um7/build/um7
 include CMakeFiles/um7_uninstall.dir/progress.make
 
 CMakeFiles/um7_uninstall:
-	/usr/bin/cmake -P /home/robofei/ROS2/um7/build/um7/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/robo/ROS2/um7/build/um7/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 um7_uninstall: CMakeFiles/um7_uninstall
 um7_uninstall: CMakeFiles/um7_uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/um7_uninstall.dir/clean:
 .PHONY : CMakeFiles/um7_uninstall.dir/clean
 
 CMakeFiles/um7_uninstall.dir/depend:
-	cd /home/robofei/ROS2/um7/build/um7 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robofei/ROS2/um7 /home/robofei/ROS2/um7 /home/robofei/ROS2/um7/build/um7 /home/robofei/ROS2/um7/build/um7 /home/robofei/ROS2/um7/build/um7/CMakeFiles/um7_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robo/ROS2/um7/build/um7 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/ROS2/um7 /home/robo/ROS2/um7 /home/robo/ROS2/um7/build/um7 /home/robo/ROS2/um7/build/um7 /home/robo/ROS2/um7/build/um7/CMakeFiles/um7_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/um7_uninstall.dir/depend
 

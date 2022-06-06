@@ -6,5 +6,5 @@ C_FLAGS = -fPIC   -Wall -std=gnu11
 
 C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"um7\" -Dum7__rosidl_typesupport_introspection_c_EXPORTS
 
-C_INCLUDES = -I/home/robofei/ROS2/um7/build/um7/rosidl_generator_c -I/home/robofei/ROS2/um7/build/um7/rosidl_typesupport_introspection_c -I/home/robofei/ROS2/um7/include -isystem /opt/ros/foxy/include 
+C_INCLUDES = -I/home/robo/ROS2/um7/build/um7/rosidl_generator_c -I/home/robo/ROS2/um7/build/um7/rosidl_typesupport_introspection_c -I/home/robo/ROS2/um7/include -isystem /opt/ros/foxy/include 
 

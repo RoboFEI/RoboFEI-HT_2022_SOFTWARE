@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/opt/ros/foxy/src/gtest_vendor/src/gtest-all.cc" "/home/robofei/ROS2/um7/build/um7/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+  "/opt/ros/foxy/src/gtest_vendor/src/gtest-all.cc" "/home/robo/ROS2/um7/build/um7/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,7 +16,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/foxy/src/gtest_vendor/include"
-  "/home/robofei/ROS2/um7/include"
+  "/home/robo/ROS2/um7/include"
   "/opt/ros/foxy/src/gtest_vendor/."
   )
 

@@ -28,13 +28,16 @@
 #include <stdlib.h>
 #include <fstream>
 #include <time.h>
+#include <cstdlib>
 
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/imu.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp"
+#include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
 
 using namespace Robot;
+using namespace std::chrono_literals;
 using std::placeholders::_1;
 
 // Torque adaption every second
@@ -50,7 +53,7 @@ MotionManager* MotionManager::m_UniqueInstance = new MotionManager(options);
 
 MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
         m_ProcessEnable(false),
-        m_Enabled(false),
+        m_Enabled(true),
         m_IsRunning(false),
         m_IsThreadRunning(false),
         m_IsLogging(false),
@@ -59,14 +62,14 @@ MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
         DEBUG_PRINT(false),
 		rclcpp::Node("gait_publisher", options)
 {
-	 subscription_imu = this->create_subscription<sensor_msgs::msg::Imu>(
-        "imu/data", 10, std::bind(&MotionManager::topic_callback, this, _1));
+	subscription_imu = this->create_subscription<sensor_msgs::msg::Imu>("imu/data", 10, std::bind(&MotionManager::topic_callback, this, _1));
 	publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
 	publisher_single = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>("set_position_single", 10); 
-    //timer_ = this->create_wall_timer(500ms, std::bind(&MotionManager::Process, this));
+	client = this->create_client<dynamixel_sdk_custom_interfaces::srv::GetPosition>("get_position");
+    timer_ = this->create_wall_timer(8ms, std::bind(&MotionManager::Process, this));
 	for(int i = 0; i < JointData::NUMBER_OF_JOINTS; i++)
         m_Offset[i] = 0;
-	update_thread_ = std::thread(std::bind(&MotionManager::update_loop, this));
+	// update_thread_ = std::thread(std::bind(&MotionManager::update_loop, this));
 
 }
 
@@ -106,12 +109,38 @@ bool MotionManager::Initialize(bool fadeIn)
 	// 		fprintf(stderr, "Fail to connect CM-730\n");
 	// 	return false;
 	// }
+	auto request = std::make_shared<dynamixel_sdk_custom_interfaces::srv::GetPosition::Request>();
+	//dynamixel_sdk_custom_interfaces::srv::GetPosition();
+	
 
 	for(int id=JointData::ID_MIN; id<=JointData::ID_MAX-2; id++) //diminui tirando a cabeça
 	{
 		if(DEBUG_PRINT == true)
 			fprintf(stderr, "ID:%d initializing...", id);
-		
+
+		request->id = id;
+		while (!client->wait_for_service(1s)) {
+			if (!rclcpp::ok()) {
+			RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Interrupted while waiting for the service. Exiting.");
+			return 0;
+			}
+			RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "service not available, waiting again...");
+		}
+
+		auto result = client->async_send_request(request);
+		// Wait for the result.
+		if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), result) ==
+			rclcpp::FutureReturnCode::SUCCESS)
+		{
+			RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Position: %ld", result.get()->position);
+		} 
+		else {
+			RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to call service get_position");
+		}
+
+		MotionStatus::m_CurrentJoints.SetValue(id, result.get()->position);
+		MotionStatus::m_CurrentJoints.SetEnable(id, true);
+
 		// if(m_CM730->ReadWord(id, MX28::P_PRESENT_POSITION_L, &value, &error) == CM730::SUCCESS)
 		// {
 		// 	MotionStatus::m_CurrentJoints.SetValue(id, value);
@@ -120,13 +149,13 @@ bool MotionManager::Initialize(bool fadeIn)
 		// 	if(DEBUG_PRINT == true)
 		// 		fprintf(stderr, "[%d] Success\n", value);
 		// }
-		else
-		{
-			MotionStatus::m_CurrentJoints.SetEnable(id, false);
+		// else
+		// {
+		// 	MotionStatus::m_CurrentJoints.SetEnable(id, false);
 
-			if(DEBUG_PRINT == true)
-				fprintf(stderr, " Fail\n");
-		}
+		// 	if(DEBUG_PRINT == true)
+		// 		fprintf(stderr, " Fail\n");
+		// }
 		
 	}
 
@@ -247,8 +276,15 @@ void MotionManager::SaveINISettings(minIni* ini, const std::string &section)
 #define MARGIN_OF_SD        2.0
 void MotionManager::Process()
 {
+	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "dentro do process");
 
+	// auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();  
+
+    // message.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};          
+	// message.position = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};   
+	// publisher_->publish(message);
 	if(m_fadeIn && m_torque_count < DEST_TORQUE) {
+		RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "dentro do primeiro if");
       //printf("entrou\n");
         if(m_torque_count < 100)
             m_torque_count += 3;
@@ -256,15 +292,17 @@ void MotionManager::Process()
             m_torque_count = 2047 ;
 
         //m_CM730->WriteWord(CM730::ID_BROADCAST, MX28::P_TORQUE_LIMIT_L, m_torque_count, 0);
+
 		auto message_single = dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal(); 
 		message_single.id = BROADCAST_ID;
 		message_single.address = MX28::P_GOAL_CURRENT;
 		message_single.position = m_torque_count;
 		publisher_single->publish(message_single);
         // m_CM730->write2ByteTxRx(portHandler, BROADCAST_ID, MX28::P_GOAL_CURRENT, m_torque_count, &dxl_error);
-
+		
         if(m_torque_count == 2047)
         {
+			RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "torque 2047");
 			message_single.id = 3;
 			message_single.address = MX28::P_GOAL_CURRENT;
 			message_single.position = 1941;
@@ -287,6 +325,7 @@ void MotionManager::Process()
             //m_CM730->write2ByteTxRx(portHandler, 6, MX28::P_GOAL_CURRENT, 1941, &dxl_error);
         }
 	}
+	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "passou primeiro if");
 	//printf("entrou\n");
     // if(m_fadeIn && m_torque_count < DEST_TORQUE) {
     //     m_CM730->WriteWord(CM730::ID_BROADCAST, MX28::P_TORQUE_LIMIT_L, m_torque_count, 0);
@@ -297,61 +336,66 @@ void MotionManager::Process()
     // message.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};          
 	// message.position = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};   
 	// publisher_->publish(message);
-    if(m_ProcessEnable == false || m_IsRunning == true)
-        return;
+	m_ProcessEnable == true; // TIRAR DEPOIS
+	m_IsRunning == false; // TIRAR DEPOIS
+    // if(m_ProcessEnable == false || m_IsRunning == true)
+    //     return;
 		
-		m_IsRunning = true;
+	m_IsRunning = true;
 
 
 
-        m_CalibrationStatus = 1;
-		// m_Enabled == true;
+	m_CalibrationStatus = 1;
+	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "antes do segundo if");
 
-
+	// if(m_CalibrationStatus == 1 && m_Enabled == true)
     if(m_CalibrationStatus == 1 && m_Enabled == true)
     {
+		RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "pegando coisa da imu");
 
-          const double GYRO_ALPHA = 0.1;
-          int gyroValFB = (int) (IMU_GYRO_Y*16);
-          int gyroValRL = (int) (IMU_GYRO_X*16);
+		const double GYRO_ALPHA = 0.1;
+		int gyroValFB = (int) (IMU_GYRO_Y*16);
+		int gyroValRL = (int) (IMU_GYRO_X*16);
 
 
-          MotionStatus::FB_GYRO = (1.0 - GYRO_ALPHA) * MotionStatus::FB_GYRO + GYRO_ALPHA * gyroValFB;
-          MotionStatus::RL_GYRO = (1.0 - GYRO_ALPHA) * MotionStatus::RL_GYRO + GYRO_ALPHA * gyroValRL;
+		MotionStatus::FB_GYRO = (1.0 - GYRO_ALPHA) * MotionStatus::FB_GYRO + GYRO_ALPHA * gyroValFB;
+		MotionStatus::RL_GYRO = (1.0 - GYRO_ALPHA) * MotionStatus::RL_GYRO + GYRO_ALPHA * gyroValRL;
 
- 	if(m_Modules.size() != 0)
-	{
-		for(std::list<MotionModule*>::iterator i = m_Modules.begin(); i != m_Modules.end(); i++)
+		if(m_Modules.size() != 0)
 		{
-			(*i)->Process();
-			for(int id=JointData::ID_MIN; id<=JointData::ID_MAX-2; id++)
+			for(std::list<MotionModule*>::iterator i = m_Modules.begin(); i != m_Modules.end(); i++)
 			{
-				if((*i)->m_Joint.GetEnable(id) == true)
+				(*i)->Process();
+				for(int id=JointData::ID_MIN; id<=JointData::ID_MAX-2; id++)
 				{
-				MotionStatus::m_CurrentJoints.SetSlope(id, (*i)->m_Joint.GetCWSlope(id), (*i)->m_Joint.GetCCWSlope(id));
-				MotionStatus::m_CurrentJoints.SetValue(id, (*i)->m_Joint.GetValue(id));
+					if((*i)->m_Joint.GetEnable(id) == true)
+					{
+					MotionStatus::m_CurrentJoints.SetSlope(id, (*i)->m_Joint.GetCWSlope(id), (*i)->m_Joint.GetCCWSlope(id));
+					MotionStatus::m_CurrentJoints.SetValue(id, (*i)->m_Joint.GetValue(id));
+					}
 				}
 			}
 		}
-	}
-	auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();  
-	int param[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];
-	int joint_num = 0;
-	int pos[18];
-	for(int id=JointData::ID_MIN; id<=JointData::ID_MAX-2; id++) // loop que vai de 1 até 18
-            {
-              param[id] = id;
-              pos[id] = MotionStatus::m_CurrentJoints.GetValue(id);
-              
-              if(DEBUG_PRINT == true)
-              fprintf(stderr, "ID[%d] : %d \n", id, MotionStatus::m_CurrentJoints.GetValue(id));
-            }
-            message.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};          
-            message.position = {pos[1], pos[2], pos[3], pos[4], pos[5], pos[6], pos[7], pos[8], pos[9], pos[10], pos[11], pos[12], pos[13], pos[14], pos[15], pos[16], pos[17], pos[18], 2048};   
-            publisher_->publish(message);
+		auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();  
+		int param[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];
+		int joint_num = 0;
+		int pos[18];
+		RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "antes de pub as posicoes");
+		for(int id=JointData::ID_MIN; id<=JointData::ID_MAX-2; id++) // loop que vai de 1 até 18
+				{
+				param[id] = id;
+				pos[id] = MotionStatus::m_CurrentJoints.GetValue(id);
+				
+				if(DEBUG_PRINT == true)
+				fprintf(stderr, "ID[%d] : %d \n", id, MotionStatus::m_CurrentJoints.GetValue(id));
+				}
+		message.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};          
+		message.position = {pos[1], pos[2], pos[3], pos[4], pos[5], pos[6], pos[7], pos[8], pos[9], pos[10], pos[11], pos[12], pos[13], pos[14], pos[15], pos[16], pos[17], pos[18], 2048};   
+		publisher_->publish(message);
 
 	}
-		
+	else
+		RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "nao entrou no segundo if");
 
     m_IsRunning = false;
     // if(m_torque_count != DEST_TORQUE && --m_torqueAdaptionCounter == 0)

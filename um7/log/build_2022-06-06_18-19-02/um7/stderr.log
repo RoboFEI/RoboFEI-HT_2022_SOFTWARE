@@ -1,0 +1,26 @@
+/usr/bin/ld: CMakeFiles/um7_test_comms.dir/test/test_comms.cpp.o: in function `FakeSerial::SetUp()':
+test_comms.cpp:(.text._ZN10FakeSerial5SetUpEv[_ZN10FakeSerial5SetUpEv]+0x3ee): undefined reference to `serial::Serial::setPort(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/usr/bin/ld: test_comms.cpp:(.text._ZN10FakeSerial5SetUpEv[_ZN10FakeSerial5SetUpEv]+0x416): undefined reference to `serial::Serial::open()'
+/usr/bin/ld: test_comms.cpp:(.text._ZN10FakeSerial5SetUpEv[_ZN10FakeSerial5SetUpEv]+0x426): undefined reference to `serial::Serial::isOpen() const'
+/usr/bin/ld: CMakeFiles/um7_test_comms.dir/test/test_comms.cpp.o: in function `FakeSerial::TearDown()':
+test_comms.cpp:(.text._ZN10FakeSerial8TearDownEv[_ZN10FakeSerial8TearDownEv]+0x1c): undefined reference to `serial::Serial::close()'
+/usr/bin/ld: CMakeFiles/um7_test_comms.dir/test/test_comms.cpp.o: in function `FakeSerial::FakeSerial()':
+test_comms.cpp:(.text._ZN10FakeSerialC2Ev[_ZN10FakeSerialC5Ev]+0xc8): undefined reference to `serial::Serial::Serial(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, serial::Timeout, serial::bytesize_t, serial::parity_t, serial::stopbits_t, serial::flowcontrol_t)'
+/usr/bin/ld: CMakeFiles/um7_test_comms.dir/test/test_comms.cpp.o: in function `FakeSerial::~FakeSerial()':
+test_comms.cpp:(.text._ZN10FakeSerialD2Ev[_ZN10FakeSerialD5Ev]+0x2a): undefined reference to `serial::Serial::~Serial()'
+/usr/bin/ld: CMakeFiles/um7_test_comms.dir/src/comms.cpp.o: in function `um7::Comms::receive(um7::Registers*)':
+comms.cpp:(.text+0x3e): undefined reference to `serial::Serial::available()'
+/usr/bin/ld: comms.cpp:(.text+0x65): undefined reference to `serial::Serial::flushInput()'
+/usr/bin/ld: comms.cpp:(.text+0x84): undefined reference to `serial::Serial::read(unsigned char*, unsigned long)'
+/usr/bin/ld: comms.cpp:(.text+0x114): undefined reference to `serial::Serial::readline(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+/usr/bin/ld: comms.cpp:(.text+0x1ad): undefined reference to `serial::Serial::read(unsigned char*, unsigned long)'
+/usr/bin/ld: comms.cpp:(.text+0x20c): undefined reference to `serial::Serial::read(unsigned char*, unsigned long)'
+/usr/bin/ld: comms.cpp:(.text+0x2f0): undefined reference to `serial::Serial::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned long)'
+/usr/bin/ld: comms.cpp:(.text+0x4cb): undefined reference to `serial::Serial::read(unsigned char*, unsigned long)'
+/usr/bin/ld: CMakeFiles/um7_test_comms.dir/src/comms.cpp.o: in function `um7::Comms::send(um7::Accessor_ const&) const':
+comms.cpp:(.text+0xc24): undefined reference to `serial::Serial::write(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/um7_test_comms.dir/build.make:182: um7_test_comms] Error 1
+make[1]: *** [CMakeFiles/Makefile2:152: CMakeFiles/um7_test_comms.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:141: all] Error 2

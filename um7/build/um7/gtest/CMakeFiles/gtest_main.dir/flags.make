@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++14
 
 CXX_DEFINES = -DROS_PACKAGE_NAME=\"um7\"
 
-CXX_INCLUDES = -I/opt/ros/foxy/src/gtest_vendor/include -I/home/robofei/ROS2/um7/include -I/opt/ros/foxy/src/gtest_vendor/. 
+CXX_INCLUDES = -I/opt/ros/foxy/src/gtest_vendor/include -I/home/robo/ROS2/um7/include -I/opt/ros/foxy/src/gtest_vendor/. 
 

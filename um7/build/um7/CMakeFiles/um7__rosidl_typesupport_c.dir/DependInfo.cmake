@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/robofei/ROS2/um7/build/um7/rosidl_typesupport_c/um7/srv/reset__type_support.cpp" "/home/robofei/ROS2/um7/build/um7/CMakeFiles/um7__rosidl_typesupport_c.dir/rosidl_typesupport_c/um7/srv/reset__type_support.cpp.o"
+  "/home/robo/ROS2/um7/build/um7/rosidl_typesupport_c/um7/srv/reset__type_support.cpp" "/home/robo/ROS2/um7/build/um7/CMakeFiles/um7__rosidl_typesupport_c.dir/rosidl_typesupport_c/um7/srv/reset__type_support.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robofei/ROS2/um7
+CMAKE_SOURCE_DIR = /home/robo/ROS2/um7
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robofei/ROS2/um7/build/um7
+CMAKE_BINARY_DIR = /home/robo/ROS2/um7/build/um7
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/ROS2/um7/build/um7/CMakeFiles /home/robofei/ROS2/um7/build/um7/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ROS2/um7/build/um7/CMakeFiles /home/robo/ROS2/um7/build/um7/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/ROS2/um7/build/um7/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ROS2/um7/build/um7/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
