@@ -26,9 +26,12 @@ private:
   void timer_callback()
   {
     auto message = dynamixel_sdk_custom_interfaces::msg::Decision();   
-      message.decision = 2;          
+      message.decision = 14;          
       publisher_->publish(message);
-      std::this_thread::sleep_for(std::chrono::seconds(1));
+      std::this_thread::sleep_for(std::chrono::seconds(1));   
+      // message.decision = 13;          
+      // publisher_->publish(message);
+      // std::this_thread::sleep_for(std::chrono::seconds(1));
   }
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::Decision>::SharedPtr publisher_;     

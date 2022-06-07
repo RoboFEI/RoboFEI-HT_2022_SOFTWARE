@@ -1,0 +1,61 @@
+In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25[m[K:
+[01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:[m[K In constructor ‘[01m[KRobot::MotionManager::MotionManager(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:83:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KRobot::MotionManager::DEBUG_PRINT[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+   83 |   bool [01;35m[KDEBUG_PRINT[m[K;
+      |        [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:64:41:[m[K [01;35m[Kwarning: [m[K  base ‘[01m[Krclcpp::Node[m[K’ [[01;35m[K-Wreorder[m[K]
+   64 |   rclcpp::Node("gait_publisher", options[01;35m[K)[m[K
+      |                                         [01;35m[K^[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:55:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   55 | [01;35m[KMotionManager[m[K::MotionManager(const rclcpp::NodeOptions & options) :
+      | [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:94:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_X[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   94 |         float [01;35m[KIMU_GYRO_X[m[K = -imu_msg_->angular_velocity.x/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:95:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_Y[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   95 |         float [01;35m[KIMU_GYRO_Y[m[K  = -imu_msg_->angular_velocity.y/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback_walk(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Walk_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:102:33:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst Robot::MotionManager[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  102 |    MotionManager::SetEnable(true[01;31m[K)[m[K;
+      |                                 [01;31m[K^[m[K
+In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25[m[K:
+[01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:96:8:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid Robot::MotionManager::SetEnable(bool)[m[K’
+   96 |   void [01;36m[KSetEnable[m[K(bool enable);
+      |        [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:105:34:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst Robot::MotionManager[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K-fpermissive[m[K]
+  105 |    MotionManager::SetEnable(false[01;31m[K)[m[K;
+      |                                  [01;31m[K^[m[K
+In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25[m[K:
+[01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:96:8:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid Robot::MotionManager::SetEnable(bool)[m[K’
+   96 |   void [01;36m[KSetEnable[m[K(bool enable);
+      |        [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Initialize(bool)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:112:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  112 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:112:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  112 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Reinitialize()[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:197:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  197 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:197:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  197 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::Process()[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:352:18:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+  352 |  [01;35m[Km_ProcessEnable == true[m[K; // TIRAR DEPOIS
+      |  [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:353:14:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+  353 |  [01;35m[Km_IsRunning == false[m[K; // TIRAR DEPOIS
+      |  [01;35m[K~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:394:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kjoint_num[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  394 |   int [01;35m[Kjoint_num[m[K = 0;
+      |       [01;35m[K^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/motion.dir/build.make:63: CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/motion.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:141: all] Error 2

@@ -20,6 +20,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/decision.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/walk.hpp"
 #include "sensor_msgs/msg/imu.hpp"
 
 #define INI_FILE_PATH       "../../Action/src/control_framework/config.ini"
@@ -34,6 +35,7 @@ bool fallenFront = false;
 double X_amplitude = 4;
 double Y_amplitude = 4;
 double A_amplitude = 4;
+bool same_moviment = false;
 
 using namespace Robot;
 
@@ -49,6 +51,7 @@ public:
     subscription_imu = this->create_subscription<sensor_msgs::msg::Imu>(
     "imu/data", 10, std::bind(&Control::topic_callback_imu, this, _1));
     publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
+    publisher_walk = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::Walk>("walking", 10); 
   }
 
   private:
@@ -105,6 +108,11 @@ public:
         }
       }
       else{
+        if(movement!=14){
+          auto message_walk = dynamixel_sdk_custom_interfaces::msg::Walk();                              
+          message_walk.walk = 0; 
+          publisher_walk->publish(message_walk);
+        }
         if(movement==1){
           RCLCPP_INFO(this->get_logger(), "Parado");
           auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();                              
@@ -210,7 +218,10 @@ public:
           std::this_thread::sleep_for(std::chrono::seconds(1));
         }
         else if(movement==14){
-          // RCLCPP_INFO(this->get_logger(), "Andando");
+          RCLCPP_INFO(this->get_logger(), "Andando");
+          auto message_walk = dynamixel_sdk_custom_interfaces::msg::Walk();                              
+          message_walk.walk = 1; 
+          publisher_walk->publish(message_walk);
           // MotionManager::GetInstance()->SetEnable(true);
           // Walking::GetInstance()->m_Joint.SetEnableBody(true);
           // Walking::GetInstance()->X_MOVE_AMPLITUDE = X_amplitude;
@@ -227,7 +238,8 @@ public:
 
     rclcpp::Subscription<dynamixel_sdk_custom_interfaces::msg::Decision>::SharedPtr subscription_;
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr subscription_imu;
-    rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_;  
+    rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_; 
+    rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::Walk>::SharedPtr publisher_walk;   
     rclcpp::TimerBase::SharedPtr timer_;
 };
 

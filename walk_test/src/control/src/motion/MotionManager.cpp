@@ -35,6 +35,7 @@
 #include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp"
 #include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/walk.hpp"
 
 using namespace Robot;
 using namespace std::chrono_literals;
@@ -43,6 +44,7 @@ using std::placeholders::_1;
 // Torque adaption every second
 const int TORQUE_ADAPTION_CYCLES = 1000 / MotionModule::TIME_UNIT;
 const int DEST_TORQUE = 1023;
+bool keep_walking = false;
 
 #define BROADCAST_ID        0xFE    // 254
 
@@ -53,7 +55,7 @@ MotionManager* MotionManager::m_UniqueInstance = new MotionManager(options);
 
 MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
         m_ProcessEnable(false),
-        m_Enabled(true),
+        m_Enabled(false),
         m_IsRunning(false),
         m_IsThreadRunning(false),
         m_IsLogging(false),
@@ -63,6 +65,7 @@ MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
 		rclcpp::Node("gait_publisher", options)
 {
 	subscription_imu = this->create_subscription<sensor_msgs::msg::Imu>("imu/data", 10, std::bind(&MotionManager::topic_callback, this, _1));
+	subscription_walk = this->create_subscription<dynamixel_sdk_custom_interfaces::msg::Walk>("walking", 10, std::bind(&MotionManager::topic_callback_walk, this, _1));
 	publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
 	publisher_single = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>("set_position_single", 10); 
 	client = this->create_client<dynamixel_sdk_custom_interfaces::srv::GetPosition>("get_position");
@@ -75,7 +78,6 @@ MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
 
 void MotionManager::update_loop(void)
 {
- 
   while (rclcpp::ok())
   {
    RCLCPP_INFO(this->get_logger(), "Running motion manager");
@@ -91,6 +93,25 @@ void MotionManager::topic_callback(const std::shared_ptr<sensor_msgs::msg::Imu> 
     {
         float IMU_GYRO_X = -imu_msg_->angular_velocity.x/10;
         float IMU_GYRO_Y  = -imu_msg_->angular_velocity.y/10;
+	}
+
+void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Walk> walk_msg_) const
+    {
+        int walk = (int)walk_msg_->walk;
+		
+		if (keep_walking==false){
+			if (walk == 1){
+				MotionManager::GetInstance()->SetEnable(true);
+				keep_walking==true;
+			}
+		}
+		
+		else{
+			if (walk != 1){
+				MotionManager::GetInstance()->SetEnable(false);
+				keep_walking==false;
+			}
+		}
 	}
 
 bool MotionManager::Initialize(bool fadeIn)
@@ -347,6 +368,7 @@ void MotionManager::Process()
 
 	m_CalibrationStatus = 1;
 	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "antes do segundo if");
+	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "%d", m_Enabled);
 
 	// if(m_CalibrationStatus == 1 && m_Enabled == true)
     if(m_CalibrationStatus == 1 && m_Enabled == true)
