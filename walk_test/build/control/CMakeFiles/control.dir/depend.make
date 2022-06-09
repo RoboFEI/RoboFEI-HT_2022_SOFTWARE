@@ -23,10 +23,12 @@ CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dyna
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.hpp
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/src/control/include/Action.h
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/src/control/include/AngleEstimator.h
+CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/src/control/include/GaitMove.hpp
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/src/control/include/JointData.h
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/src/control/include/MotionManager.h
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/src/control/include/MotionModule.h
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/src/control/include/MotionStatus.h
+CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/src/control/include/ReadConfig.hpp
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/src/control/include/Walking.h
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/src/control/include/minIni.h
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/src/control/src/control.cpp

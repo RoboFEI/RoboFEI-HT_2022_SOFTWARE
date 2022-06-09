@@ -29,6 +29,7 @@
 #include <fstream>
 #include <time.h>
 #include <cstdlib>
+#include "minIni.h"
 
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/imu.hpp"
@@ -36,6 +37,8 @@
 #include "dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp"
 #include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/walk.hpp"
+
+#define INI_FILE_PATH       "../../Control/Data/config.ini"
 
 using namespace Robot;
 using namespace std::chrono_literals;
@@ -45,6 +48,7 @@ using std::placeholders::_1;
 const int TORQUE_ADAPTION_CYCLES = 1000 / MotionModule::TIME_UNIT;
 const int DEST_TORQUE = 1023;
 bool keep_walking;
+int position;
 
 #define BROADCAST_ID        0xFE    // 254
 
@@ -73,7 +77,7 @@ MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
 	for(int i = 0; i < JointData::NUMBER_OF_JOINTS; i++)
         m_Offset[i] = 0;
 	// update_thread_ = std::thread(std::bind(&MotionManager::update_loop, this));
-
+	ini = new minIni((char *)INI_FILE_PATH);
 }
 
 void MotionManager::update_loop(void)
@@ -99,6 +103,8 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_cust
     {
         int walk = (int)walk_msg_->walk;
 		
+	MotionManager::GetInstance()->LoadINISettings(ini);
+    MotionManager::GetInstance()->AddModule((MotionModule*)Walking::GetInstance());
 		if (keep_walking==false){
 			if (walk == 1){
 				printf("CALLBACK WALK\n");
@@ -156,18 +162,18 @@ bool MotionManager::Initialize(bool fadeIn)
 			RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "service not available, waiting again...");
 		}
 
-		auto result = client->async_send_request(request);
-		// Wait for the result.
-		if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), result) ==
-			rclcpp::FutureReturnCode::SUCCESS)
-		{
-			RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Position: %ld", result.get()->position);
-		} 
-		else {
-			RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to call service get_position");
-		}
+		 using ServiceResponseFuture = rclcpp::Client<dynamixel_sdk_custom_interfaces::srv::GetPosition>::SharedFuture;
+    auto response_received_callback = [this](ServiceResponseFuture future) {
+        auto result = future.get();
+		position = result->position;
 
-		MotionStatus::m_CurrentJoints.SetValue(id, result.get()->position);
+        RCLCPP_INFO(this->get_logger(), "Position: %ld", result->position);
+		};
+
+		auto future_result = client->async_send_request(request, response_received_callback);
+    
+
+		MotionStatus::m_CurrentJoints.SetValue(id, position);
 		MotionStatus::m_CurrentJoints.SetEnable(id, true);
 
 		// if(m_CM730->ReadWord(id, MX28::P_PRESENT_POSITION_L, &value, &error) == CM730::SUCCESS)

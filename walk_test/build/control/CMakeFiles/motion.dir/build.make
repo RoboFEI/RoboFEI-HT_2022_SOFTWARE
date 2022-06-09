@@ -239,6 +239,32 @@ CMakeFiles/motion.dir/src/minIni/minIni.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/motion.dir/src/minIni/minIni.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ROS2/walk_test/src/control/src/minIni/minIni.cpp -o CMakeFiles/motion.dir/src/minIni/minIni.cpp.s
 
+CMakeFiles/motion.dir/src/GaitMove.cpp.o: CMakeFiles/motion.dir/flags.make
+CMakeFiles/motion.dir/src/GaitMove.cpp.o: /home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo/ROS2/walk_test/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/motion.dir/src/GaitMove.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/motion.dir/src/GaitMove.cpp.o -c /home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp
+
+CMakeFiles/motion.dir/src/GaitMove.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/motion.dir/src/GaitMove.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp > CMakeFiles/motion.dir/src/GaitMove.cpp.i
+
+CMakeFiles/motion.dir/src/GaitMove.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/motion.dir/src/GaitMove.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp -o CMakeFiles/motion.dir/src/GaitMove.cpp.s
+
+CMakeFiles/motion.dir/src/ReadConfig.cpp.o: CMakeFiles/motion.dir/flags.make
+CMakeFiles/motion.dir/src/ReadConfig.cpp.o: /home/robo/ROS2/walk_test/src/control/src/ReadConfig.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo/ROS2/walk_test/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/motion.dir/src/ReadConfig.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/motion.dir/src/ReadConfig.cpp.o -c /home/robo/ROS2/walk_test/src/control/src/ReadConfig.cpp
+
+CMakeFiles/motion.dir/src/ReadConfig.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/motion.dir/src/ReadConfig.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ROS2/walk_test/src/control/src/ReadConfig.cpp > CMakeFiles/motion.dir/src/ReadConfig.cpp.i
+
+CMakeFiles/motion.dir/src/ReadConfig.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/motion.dir/src/ReadConfig.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ROS2/walk_test/src/control/src/ReadConfig.cpp -o CMakeFiles/motion.dir/src/ReadConfig.cpp.s
+
 # Object files for target motion
 motion_OBJECTS = \
 "CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o" \
@@ -254,7 +280,9 @@ motion_OBJECTS = \
 "CMakeFiles/motion.dir/src/motion/Kinematics.cpp.o" \
 "CMakeFiles/motion.dir/src/motion/MotionStatus.cpp.o" \
 "CMakeFiles/motion.dir/src/motion/modules/Action.cpp.o" \
-"CMakeFiles/motion.dir/src/minIni/minIni.cpp.o"
+"CMakeFiles/motion.dir/src/minIni/minIni.cpp.o" \
+"CMakeFiles/motion.dir/src/GaitMove.cpp.o" \
+"CMakeFiles/motion.dir/src/ReadConfig.cpp.o"
 
 # External object files for target motion
 motion_EXTERNAL_OBJECTS =
@@ -273,6 +301,8 @@ libmotion.so: CMakeFiles/motion.dir/src/motion/Kinematics.cpp.o
 libmotion.so: CMakeFiles/motion.dir/src/motion/MotionStatus.cpp.o
 libmotion.so: CMakeFiles/motion.dir/src/motion/modules/Action.cpp.o
 libmotion.so: CMakeFiles/motion.dir/src/minIni/minIni.cpp.o
+libmotion.so: CMakeFiles/motion.dir/src/GaitMove.cpp.o
+libmotion.so: CMakeFiles/motion.dir/src/ReadConfig.cpp.o
 libmotion.so: CMakeFiles/motion.dir/build.make
 libmotion.so: /opt/ros/foxy/lib/libcomponent_manager.so
 libmotion.so: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so
@@ -346,7 +376,7 @@ libmotion.so: /opt/ros/foxy/lib/librcpputils.so
 libmotion.so: /opt/ros/foxy/lib/librosidl_runtime_c.so
 libmotion.so: /opt/ros/foxy/lib/librcutils.so
 libmotion.so: CMakeFiles/motion.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robo/ROS2/walk_test/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX shared library libmotion.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robo/ROS2/walk_test/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX shared library libmotion.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/motion.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

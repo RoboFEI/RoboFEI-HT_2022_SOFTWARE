@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <unistd.h>
+#include <libgen.h> //dirname
 
 #include "MotionManager.h"
 #include "Walking.h"
@@ -22,8 +23,10 @@
 #include "dynamixel_sdk_custom_interfaces/msg/decision.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/walk.hpp"
 #include "sensor_msgs/msg/imu.hpp"
+#include "GaitMove.hpp"
 
-#define INI_FILE_PATH       "../../Action/src/control_framework/config.ini"
+// #define INI_FILE_PATH       "../../Action/src/control_framework/config.ini"
+#define INI_FILE_PATH       "../../Control/Data/config.ini"
 
 using namespace std::chrono_literals;
 using std::placeholders::_1;
@@ -243,13 +246,24 @@ public:
     rclcpp::TimerBase::SharedPtr timer_;
 };
 
+void change_current_dir()
+{
+    char exepath[1024] = {0};
+    if(readlink("/proc/self/exe", exepath, sizeof(exepath)) != -1)
+        chdir(dirname(exepath));
+}
 
 int main(int argc, char * argv[])
 {
+  change_current_dir();
+
+  minIni* ini;
+  ini = new minIni((char *)INI_FILE_PATH);
   //Configurando para prioridade maxima para executar este processo-------
   char string1[50]; //String
   sprintf(string1,"echo fei 123456| sudo -S renice -20 -p %d", getpid());
   system(string1);//prioridade
+  //GaitMove gaitMove(ini);
   rclcpp::init(argc, argv);
   // if(MotionManager::GetInstance()->Initialize() == false)
   //   {

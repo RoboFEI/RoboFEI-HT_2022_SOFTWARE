@@ -45,6 +45,9 @@ add_library(motion SHARED
   /home/robo/ROS2/walk_test/src/control/src/motion/modules/Action.cpp
   /home/robo/ROS2/walk_test/src/control/src/motion/modules/Walking.cpp
   /home/robo/ROS2/walk_test/src/control/src/minIni/minIni.cpp
+  /home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp
+  /home/robo/ROS2/walk_test/src/control/src/ReadConfig.cpp
+  
 )
 ament_target_dependencies(motion
   rclcpp

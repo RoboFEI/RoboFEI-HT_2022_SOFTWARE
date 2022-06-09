@@ -272,6 +272,60 @@ rclcpp_components/node_main_gait_publisher.cpp.s:
 	$(MAKE) -f CMakeFiles/gait_publisher.dir/build.make CMakeFiles/gait_publisher.dir/rclcpp_components/node_main_gait_publisher.cpp.s
 .PHONY : rclcpp_components/node_main_gait_publisher.cpp.s
 
+src/GaitMove.o: src/GaitMove.cpp.o
+
+.PHONY : src/GaitMove.o
+
+# target to build an object file
+src/GaitMove.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/GaitMove.cpp.o
+.PHONY : src/GaitMove.cpp.o
+
+src/GaitMove.i: src/GaitMove.cpp.i
+
+.PHONY : src/GaitMove.i
+
+# target to preprocess a source file
+src/GaitMove.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/GaitMove.cpp.i
+.PHONY : src/GaitMove.cpp.i
+
+src/GaitMove.s: src/GaitMove.cpp.s
+
+.PHONY : src/GaitMove.s
+
+# target to generate assembly for a file
+src/GaitMove.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/GaitMove.cpp.s
+.PHONY : src/GaitMove.cpp.s
+
+src/ReadConfig.o: src/ReadConfig.cpp.o
+
+.PHONY : src/ReadConfig.o
+
+# target to build an object file
+src/ReadConfig.cpp.o:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/ReadConfig.cpp.o
+.PHONY : src/ReadConfig.cpp.o
+
+src/ReadConfig.i: src/ReadConfig.cpp.i
+
+.PHONY : src/ReadConfig.i
+
+# target to preprocess a source file
+src/ReadConfig.cpp.i:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/ReadConfig.cpp.i
+.PHONY : src/ReadConfig.cpp.i
+
+src/ReadConfig.s: src/ReadConfig.cpp.s
+
+.PHONY : src/ReadConfig.s
+
+# target to generate assembly for a file
+src/ReadConfig.cpp.s:
+	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/ReadConfig.cpp.s
+.PHONY : src/ReadConfig.cpp.s
+
 src/control.o: src/control.cpp.o
 
 .PHONY : src/control.o
@@ -726,6 +780,12 @@ help:
 	@echo "... rclcpp_components/node_main_gait_publisher.o"
 	@echo "... rclcpp_components/node_main_gait_publisher.i"
 	@echo "... rclcpp_components/node_main_gait_publisher.s"
+	@echo "... src/GaitMove.o"
+	@echo "... src/GaitMove.i"
+	@echo "... src/GaitMove.s"
+	@echo "... src/ReadConfig.o"
+	@echo "... src/ReadConfig.i"
+	@echo "... src/ReadConfig.s"
 	@echo "... src/control.o"
 	@echo "... src/control.i"
 	@echo "... src/control.s"

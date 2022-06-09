@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp" "/home/robo/ROS2/walk_test/build/control/CMakeFiles/motion.dir/src/GaitMove.cpp.o"
+  "/home/robo/ROS2/walk_test/src/control/src/ReadConfig.cpp" "/home/robo/ROS2/walk_test/build/control/CMakeFiles/motion.dir/src/ReadConfig.cpp.o"
   "/home/robo/ROS2/walk_test/src/control/src/math/Matrix.cpp" "/home/robo/ROS2/walk_test/build/control/CMakeFiles/motion.dir/src/math/Matrix.cpp.o"
   "/home/robo/ROS2/walk_test/src/control/src/math/MotionState.cpp" "/home/robo/ROS2/walk_test/build/control/CMakeFiles/motion.dir/src/math/MotionState.cpp.o"
   "/home/robo/ROS2/walk_test/src/control/src/math/Plane.cpp" "/home/robo/ROS2/walk_test/build/control/CMakeFiles/motion.dir/src/math/Plane.cpp.o"

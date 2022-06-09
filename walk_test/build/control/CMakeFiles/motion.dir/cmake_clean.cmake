@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/motion.dir/src/GaitMove.cpp.o"
+  "CMakeFiles/motion.dir/src/ReadConfig.cpp.o"
   "CMakeFiles/motion.dir/src/math/Matrix.cpp.o"
   "CMakeFiles/motion.dir/src/math/MotionState.cpp.o"
   "CMakeFiles/motion.dir/src/math/Plane.cpp.o"

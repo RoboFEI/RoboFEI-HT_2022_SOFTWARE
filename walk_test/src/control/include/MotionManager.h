@@ -87,6 +87,8 @@ rclcpp::Client<dynamixel_sdk_custom_interfaces::srv::GetPosition>::SharedPtr cli
     	int m_Offset[JointData::NUMBER_OF_JOINTS];
     	int *memBB;
 
+	minIni* ini;
+
 		~MotionManager();
 		MotionManager(const rclcpp::NodeOptions & options);
 
