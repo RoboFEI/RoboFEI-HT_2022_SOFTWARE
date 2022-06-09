@@ -18,6 +18,8 @@
 #include "AngleEstimator.h"
 #include "sensor_msgs/msg/imu.hpp"
 #include "rclcpp/rclcpp.hpp"
+#include "Action.h"
+#include "Walking.h"
 #include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp"
 #include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
@@ -33,6 +35,7 @@ namespace Robot
 	private:
 		static MotionManager* m_UniqueInstance;
 		std::list<MotionModule*> m_Modules;
+		static bool start;
 		bool m_ProcessEnable;
 		bool m_Enabled;
 		int m_FBGyroCenter;

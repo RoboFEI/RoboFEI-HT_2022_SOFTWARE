@@ -44,7 +44,7 @@ using std::placeholders::_1;
 // Torque adaption every second
 const int TORQUE_ADAPTION_CYCLES = 1000 / MotionModule::TIME_UNIT;
 const int DEST_TORQUE = 1023;
-bool keep_walking = false;
+bool keep_walking;
 
 #define BROADCAST_ID        0xFE    // 254
 
@@ -55,7 +55,6 @@ MotionManager* MotionManager::m_UniqueInstance = new MotionManager(options);
 
 MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
         m_ProcessEnable(false),
-        m_Enabled(false),
         m_IsRunning(false),
         m_IsThreadRunning(false),
         m_IsLogging(false),
@@ -64,6 +63,7 @@ MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
         DEBUG_PRINT(false),
 		rclcpp::Node("gait_publisher", options)
 {
+	
 	subscription_imu = this->create_subscription<sensor_msgs::msg::Imu>("imu/data", 10, std::bind(&MotionManager::topic_callback, this, _1));
 	subscription_walk = this->create_subscription<dynamixel_sdk_custom_interfaces::msg::Walk>("walking", 10, std::bind(&MotionManager::topic_callback_walk, this, _1));
 	publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
@@ -101,13 +101,20 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_cust
 		
 		if (keep_walking==false){
 			if (walk == 1){
+				printf("CALLBACK WALK\n");
+				MotionManager::GetInstance()->Initialize();
+				Walking::GetInstance()->m_Joint.SetEnableBody(false);
+            	Action::GetInstance()->m_Joint.SetEnableBody(true);
 				MotionManager::GetInstance()->SetEnable(true);
+				printf("%d\n", MotionManager::GetInstance()->GetEnable());
+				Walking::GetInstance()->Start();
 				keep_walking==true;
 			}
 		}
 		
 		else{
 			if (walk != 1){
+				printf("CALLBACK NAO WALK\n");
 				MotionManager::GetInstance()->SetEnable(false);
 				keep_walking==false;
 			}
@@ -118,6 +125,7 @@ bool MotionManager::Initialize(bool fadeIn)
 {
 	//rclcpp::spin_some(std::make_shared<GaitPublisher>());
 	int value, error;
+	printf("INITIALIZE\n");
 
 	usleep(10000);
 	//m_CM730 = cm730;
@@ -131,7 +139,7 @@ bool MotionManager::Initialize(bool fadeIn)
 	// 	return false;
 	// }
 	auto request = std::make_shared<dynamixel_sdk_custom_interfaces::srv::GetPosition::Request>();
-	//dynamixel_sdk_custom_interfaces::srv::GetPosition();
+	dynamixel_sdk_custom_interfaces::srv::GetPosition();
 	
 
 	for(int id=JointData::ID_MIN; id<=JointData::ID_MAX-2; id++) //diminui tirando a cabeça
@@ -371,7 +379,7 @@ void MotionManager::Process()
 	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "%d", m_Enabled);
 
 	// if(m_CalibrationStatus == 1 && m_Enabled == true)
-    if(m_CalibrationStatus == 1 && m_Enabled == true)
+    if(m_CalibrationStatus == 1 && MotionManager::GetInstance()->GetEnable() == true)
     {
 		RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "pegando coisa da imu");
 
@@ -412,7 +420,7 @@ void MotionManager::Process()
 				fprintf(stderr, "ID[%d] : %d \n", id, MotionStatus::m_CurrentJoints.GetValue(id));
 				}
 		message.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};          
-		message.position = {pos[1], pos[2], pos[3], pos[4], pos[5], pos[6], pos[7], pos[8], pos[9], pos[10], pos[11], pos[12], pos[13], pos[14], pos[15], pos[16], pos[17], pos[18], 2048};   
+		message.position = {pos[1], pos[2], pos[3], pos[4], pos[5], pos[6], pos[7], pos[8], pos[9], pos[10], pos[11], pos[12], pos[13], pos[14], pos[15], pos[16], pos[17], pos[18], 1000};   
 		publisher_->publish(message);
 
 	}

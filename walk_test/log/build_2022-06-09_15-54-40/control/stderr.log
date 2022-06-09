@@ -1,0 +1,77 @@
+In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25[m[K:
+[01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:[m[K In constructor ‘[01m[KRobot::MotionManager::MotionManager(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:83:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KRobot::MotionManager::DEBUG_PRINT[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+   83 |   bool [01;35m[KDEBUG_PRINT[m[K;
+      |        [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:64:41:[m[K [01;35m[Kwarning: [m[K  base ‘[01m[Krclcpp::Node[m[K’ [[01;35m[K-Wreorder[m[K]
+   64 |   rclcpp::Node("gait_publisher", options[01;35m[K)[m[K
+      |                                         [01;35m[K^[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:56:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   56 | [01;35m[KMotionManager[m[K::MotionManager(const rclcpp::NodeOptions & options) :
+      | [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:95:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_X[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   95 |         float [01;35m[KIMU_GYRO_X[m[K = -imu_msg_->angular_velocity.x/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:96:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_Y[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   96 |         float [01;35m[KIMU_GYRO_Y[m[K  = -imu_msg_->angular_velocity.y/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback_walk(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Walk_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:107:17:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+  107 |     [01;35m[Kkeep_walking==true[m[K;
+      |     [01;35m[K~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:114:17:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+  114 |     [01;35m[Kkeep_walking==false[m[K;
+      |     [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Initialize(bool)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:122:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  122 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:122:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  122 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Reinitialize()[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:207:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  207 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:207:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  207 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::Process()[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:362:18:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+  362 |  [01;35m[Km_ProcessEnable == true[m[K; // TIRAR DEPOIS
+      |  [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:363:14:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K-Wunused-value[m[K]
+  363 |  [01;35m[Km_IsRunning == false[m[K; // TIRAR DEPOIS
+      |  [01;35m[K~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:404:7:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kparam[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+  404 |   int [01;35m[Kparam[m[K[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];
+      |       [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:405:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kjoint_num[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  405 |   int [01;35m[Kjoint_num[m[K = 0;
+      |       [01;35m[K^~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/class_loader/class_loader.hpp:56[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp_components/register_node_macro.hpp:18[m[K,
+                 from [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:471[m[K:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K At global scope:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:472:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kupdate_loop[m[K’ is not a member of ‘[01m[KRobot[m[K’
+  472 | RCLCPP_COMPONENTS_REGISTER_NODE(Robot::[01;31m[Kupdate_loop[m[K)
+      |                                        [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:472:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kupdate_loop[m[K’ is not a member of ‘[01m[KRobot[m[K’
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:472:1:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  472 | [01;31m[KRCLCPP_COMPONENTS_REGISTER_NODE[m[K(Robot::update_loop)
+      | [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/class_loader/class_loader_core.hpp:57[m[K,
+                 from [01m[K/opt/ros/foxy/include/class_loader/class_loader.hpp:55[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp_components/register_node_macro.hpp:18[m[K,
+                 from [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:471[m[K:
+/opt/ros/foxy/include/class_loader/meta_object.hpp: In instantiation of ‘[01m[KB* class_loader::impl::MetaObject<C, B>::create() const [with C = int; B = rclcpp_components::NodeFactory][m[K’:
+[01m[K/opt/ros/foxy/include/class_loader/meta_object.hpp:216:7:[m[K   required from here
+[01m[K/opt/ros/foxy/include/class_loader/meta_object.hpp:218:12:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kint*[m[K’ to ‘[01m[Krclcpp_components::NodeFactory*[m[K’ in return
+  218 |     return [01;31m[Knew C[m[K;
+      |            [01;31m[K^~~~~[m[K
+      |            [01;31m[K|[m[K
+      |            [01;31m[Kint*[m[K
+make[2]: *** [CMakeFiles/motion.dir/build.make:63: CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/motion.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
