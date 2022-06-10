@@ -1,0 +1,69 @@
+[0.014s] Invoking command in '/home/robofei/Desktop/ROS2/walk_test/build/control': AMENT_PREFIX_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/robofei/Desktop/ROS2/walk_test/src/control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robofei/Desktop/ROS2/walk_test/install/control
+[0.093s] -- The C compiler identification is GNU 9.4.0
+[0.161s] -- The CXX compiler identification is GNU 9.4.0
+[0.166s] -- Check for working C compiler: /usr/bin/cc
+[0.256s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.257s] -- Detecting C compiler ABI info
+[0.343s] -- Detecting C compiler ABI info - done
+[0.358s] -- Detecting C compile features
+[0.359s] -- Detecting C compile features - done
+[0.362s] -- Check for working CXX compiler: /usr/bin/c++
+[0.457s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.458s] -- Detecting CXX compiler ABI info
+[0.559s] -- Detecting CXX compiler ABI info - done
+[0.579s] -- Detecting CXX compile features
+[0.579s] -- Detecting CXX compile features - done
+[0.582s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.613s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.613s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.828s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.851s] -- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[0.885s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.892s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.993s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.027s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.115s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.171s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.222s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.223s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.224s] -- Looking for pthread.h
+[1.318s] -- Looking for pthread.h - found
+[1.319s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.414s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.414s] -- Looking for pthread_create in pthreads
+[1.490s] -- Looking for pthread_create in pthreads - not found
+[1.491s] -- Looking for pthread_create in pthread
+[1.581s] -- Looking for pthread_create in pthread - found
+[1.583s] -- Found Threads: TRUE  
+[1.774s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.921s] -- Found rclcpp_components: 2.4.1 (/opt/ros/foxy/share/rclcpp_components/cmake)
+[2.007s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[2.030s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.130s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.137s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.138s] -- Configured cppcheck include dirs: /home/robofei/Desktop/ROS2/walk_test/src/control/include;/home/robofei/Desktop/ROS2/walk_test/src/control/src/minIni
+[2.138s] -- Configured cppcheck exclude dirs and/or files: 
+[2.148s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.148s] -- Configured cpplint exclude dirs and/or files: 
+[2.150s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.152s] -- Added test 'lint_cmake' to check CMake code style
+[2.153s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[2.160s] -- Added test 'uncrustify' to check C / C++ code style
+[2.161s] -- Configured uncrustify additional arguments: 
+[2.162s] -- Added test 'xmllint' to check XML markup files
+[2.167s] -- Configuring done
+[2.170s] CMake Error at CMakeLists.txt:31 (add_library):
+[2.170s]   Cannot find source file:
+[2.170s] 
+[2.170s]     /home/robo/ROS2/walk_test/src/control/src/motion/modules/Walking.cpp
+[2.170s] 
+[2.170s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+[2.171s]   .hpp .hxx .in .txx
+[2.171s] 
+[2.171s] 
+[2.171s] CMake Error at CMakeLists.txt:31 (add_library):
+[2.171s]   No SOURCES given to target: motion
+[2.171s] 
+[2.171s] 
+[2.171s] CMake Generate step failed.  Build files cannot be regenerated correctly.
+[2.180s] Invoked command in '/home/robofei/Desktop/ROS2/walk_test/build/control' returned '1': AMENT_PREFIX_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/robofei/Desktop/ROS2/walk_test/src/control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robofei/Desktop/ROS2/walk_test/install/control

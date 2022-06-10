@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/robo/ROS2/walk_test/src/control/src/dec.cpp" "/home/robo/ROS2/walk_test/build/control/CMakeFiles/decision.dir/src/dec.cpp.o"
+  "/home/robofei/Desktop/ROS2/walk_test/src/control/src/dec.cpp" "/home/robofei/Desktop/ROS2/walk_test/build/control/CMakeFiles/decision.dir/src/dec.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,9 +17,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/robo/ROS2/walk_test/src/control/include"
-  "/home/robo/ROS2/walk_test/src/control/src/minIni"
-  "/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include"
+  "/home/robofei/Desktop/ROS2/walk_test/src/control/include"
+  "/home/robofei/Desktop/ROS2/walk_test/src/control/src/minIni"
+  "/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include"
   "/opt/ros/foxy/include"
   )
 

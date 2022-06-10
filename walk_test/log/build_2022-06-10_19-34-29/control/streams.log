@@ -1,0 +1,80 @@
+[0.015s] Invoking command in '/home/robofei/Desktop/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robofei/Desktop/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/Desktop/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robofei/Desktop/ROS2/walk_test/build/control -- -j4 -l4
+[0.090s] [35m[1mScanning dependencies of target motion[0m
+[0.116s] [  8%] Built target decision
+[0.117s] [ 17%] Built target control
+[0.128s] [ 26%] Built target gait_publisher
+[0.150s] [ 30%] [32mBuilding CXX object CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o[0m
+[1.744s] In file included from [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25[m[K:
+[1.744s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/include/MotionManager.h:[m[K In constructor ‘[01m[KRobot::MotionManager::MotionManager(const rclcpp::NodeOptions&)[m[K’:
+[1.744s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/include/MotionManager.h:86:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KRobot::MotionManager::DEBUG_PRINT[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+[1.745s]    86 |   bool [01;35m[KDEBUG_PRINT[m[K;
+[1.745s]       |        [01;35m[K^~~~~~~~~~~[m[K
+[1.745s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:67:41:[m[K [01;35m[Kwarning: [m[K  base ‘[01m[Krclcpp::Node[m[K’ [[01;35m[K-Wreorder[m[K]
+[1.745s]    67 |   rclcpp::Node("gait_publisher", options[01;35m[K)[m[K
+[1.745s]       |                                         [01;35m[K^[m[K
+[1.745s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:59:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+[1.745s]    59 | [01;35m[KMotionManager[m[K::MotionManager(const rclcpp::NodeOptions & options) :
+[1.745s]       | [01;35m[K^~~~~~~~~~~~~[m[K
+[1.781s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[1.782s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:99:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_X[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.782s]    99 |         float [01;35m[KIMU_GYRO_X[m[K = -imu_msg_->angular_velocity.x/10;
+[1.782s]       |               [01;35m[K^~~~~~~~~~[m[K
+[1.782s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:100:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_Y[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.782s]   100 |         float [01;35m[KIMU_GYRO_Y[m[K  = -imu_msg_->angular_velocity.y/10;
+[1.782s]       |               [01;35m[K^~~~~~~~~~[m[K
+[1.785s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Initialize(bool)[m[K’:
+[1.785s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:145:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.785s]   145 |  int [01;35m[Kvalue[m[K, error;
+[1.786s]       |      [01;35m[K^~~~~[m[K
+[1.786s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:145:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.786s]   145 |  int value, [01;35m[Kerror[m[K;
+[1.786s]       |             [01;35m[K^~~~~[m[K
+[1.786s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Reinitialize()[m[K’:
+[1.786s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:231:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.786s]   231 |  int [01;35m[Kvalue[m[K, error;
+[1.787s]       |      [01;35m[K^~~~~[m[K
+[1.787s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:231:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.787s]   231 |  int value, [01;35m[Kerror[m[K;
+[1.787s]       |             [01;35m[K^~~~~[m[K
+[1.806s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::Process()[m[K’:
+[1.806s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:390:5:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+[1.806s]   390 |     [01;35m[Kif[m[K(MotionManager::GetInstance()->m_ProcessEnable == false || MotionManager::GetInstance()->m_IsRunning == true)
+[1.806s]       |     [01;35m[K^~[m[K
+[1.806s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:393:2:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+[1.806s]   393 |  [01;36m[KMotionManager[m[K::GetInstance()->m_IsRunning = true;
+[1.807s]       |  [01;36m[K^~~~~~~~~~~~~[m[K
+[1.816s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:440:7:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kparam[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+[1.817s]   440 |   int [01;35m[Kparam[m[K[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];
+[1.817s]       |       [01;35m[K^~~~~[m[K
+[1.817s] [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:441:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kjoint_num[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.817s]   441 |   int [01;35m[Kjoint_num[m[K = 0;
+[1.817s]       |       [01;35m[K^~~~~~~~~[m[K
+[9.364s] [ 34%] [32m[1mLinking CXX shared library libmotion.so[0m
+[9.947s] [100%] Built target motion
+[9.964s] Invoked command in '/home/robofei/Desktop/ROS2/walk_test/build/control' returned '0': CMAKE_PREFIX_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robofei/Desktop/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/Desktop/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robofei/Desktop/ROS2/walk_test/build/control -- -j4 -l4
+[10.049s] Invoking command in '/home/robofei/Desktop/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robofei/Desktop/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/Desktop/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --install /home/robofei/Desktop/ROS2/walk_test/build/control
+[10.060s] -- Install configuration: ""
+[10.061s] -- Execute custom install script
+[10.061s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/lib/control/gait_publisher
+[10.062s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/lib/control/control
+[10.062s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/lib/control/decision
+[10.063s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/lib/libmotion.so
+[10.063s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control//launch/action.launch.py
+[10.064s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/ament_index/resource_index/package_run_dependencies/control
+[10.064s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/ament_index/resource_index/parent_prefix_path/control
+[10.065s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control/environment/ament_prefix_path.sh
+[10.065s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control/environment/ament_prefix_path.dsv
+[10.066s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control/environment/path.sh
+[10.066s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control/environment/path.dsv
+[10.067s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control/local_setup.bash
+[10.067s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control/local_setup.sh
+[10.067s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control/local_setup.zsh
+[10.068s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control/local_setup.dsv
+[10.068s] -- Symlinking: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control/package.dsv
+[10.082s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/ament_index/resource_index/packages/control
+[10.083s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/ament_index/resource_index/rclcpp_components/control
+[10.083s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control/cmake/ament_cmake_export_dependencies-extras.cmake
+[10.084s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control/cmake/controlConfig.cmake
+[10.084s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control/cmake/controlConfig-version.cmake
+[10.084s] -- Up-to-date symlink: /home/robofei/Desktop/ROS2/walk_test/install/control/share/control/package.xml
+[10.089s] Invoked command in '/home/robofei/Desktop/ROS2/walk_test/build/control' returned '0': CMAKE_PREFIX_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robofei/Desktop/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/Desktop/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --install /home/robofei/Desktop/ROS2/walk_test/build/control

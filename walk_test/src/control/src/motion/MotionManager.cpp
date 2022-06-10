@@ -38,7 +38,7 @@
 #include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/walk.hpp"
 
-#define INI_FILE_PATH       "/home/robo/ROS2/walk_test/src/control/Data/config.ini"
+#define INI_FILE_PATH       "/home/robofei/Desktop/ROS2/walk_test/src/control/Data/config.ini"
 
 using namespace Robot;
 using namespace std::chrono_literals;
@@ -105,14 +105,18 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_cust
         int walk = (int)walk_msg_->walk;
 		//printf("KEEP WALKING ANTES %d\n", MotionManager::GetInstance()->keep_walking);
 		
-		MotionManager::GetInstance()->LoadINISettings(ini);
-		MotionManager::GetInstance()->AddModule((MotionModule*)Walking::GetInstance());
+		
 		if (MotionManager::GetInstance()->keep_walking==false){
 			if (walk == 1){
 				printf("CALLBACK WALK\n");
+				MotionManager::GetInstance()->LoadINISettings(ini);
+				Walking::GetInstance()->LoadINISettings(ini);
+				Action::GetInstance()->Stop();
+				MotionManager::GetInstance()->AddModule((MotionModule*)Walking::GetInstance());
 				MotionManager::GetInstance()->Initialize();
-				Walking::GetInstance()->m_Joint.SetEnableBody(false);
-            	Action::GetInstance()->m_Joint.SetEnableBody(true);
+				Walking::GetInstance()->m_Joint.SetEnableBody(true);
+            	Action::GetInstance()->m_Joint.SetEnableBody(false);
+				MotionStatus::m_CurrentJoints.SetEnableBodyWithoutHead(true);
 				MotionManager::GetInstance()->SetEnable(true);
 				printf("%d\n", MotionManager::GetInstance()->GetEnable());
 				Walking::GetInstance()->X_MOVE_AMPLITUDE = -2;
@@ -124,10 +128,26 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_cust
 				MotionManager::GetInstance()->keep_walking=true;
 				//printf("KEEP WALKING DEPOIS %d\n", MotionManager::GetInstance()->keep_walking);
 			}
+			if(walk == 2){
+				MotionManager::GetInstance()->LoadINISettings(ini);
+				Walking::GetInstance()->LoadINISettings(ini);
+				Action::GetInstance()->Stop();
+				MotionManager::GetInstance()->AddModule((MotionModule*)Walking::GetInstance());
+				MotionManager::GetInstance()->Initialize();
+				Walking::GetInstance()->m_Joint.SetEnableBody(false);
+            	Action::GetInstance()->m_Joint.SetEnableBody(false);
+				MotionStatus::m_CurrentJoints.SetEnableBodyWithoutHead(true);
+				MotionManager::GetInstance()->SetEnable(true);
+				printf("%d\n", MotionManager::GetInstance()->GetEnable());
+				Walking::GetInstance()->Stop();
+				printf("WALKING %d\n", Walking::GetInstance()->IsRunning());
+				printf("ACTION %d\n", Action::GetInstance()->IsRunning());
+				MotionManager::GetInstance()->keep_walking=true;
+			}
 		}
 		
 		else{
-			if (walk != 1){
+			if (walk != 1 ){
 				printf("CALLBACK NAO WALK\n");
 				MotionManager::GetInstance()->SetEnable(false);
 				//keep_walking==false;
@@ -152,8 +172,8 @@ bool MotionManager::Initialize(bool fadeIn)
 	// 		fprintf(stderr, "Fail to connect CM-730\n");
 	// 	return false;
 	// }
-	auto request = std::make_shared<dynamixel_sdk_custom_interfaces::srv::GetPosition::Request>();
-	dynamixel_sdk_custom_interfaces::srv::GetPosition();
+	// auto request = std::make_shared<dynamixel_sdk_custom_interfaces::srv::GetPosition::Request>();
+	// dynamixel_sdk_custom_interfaces::srv::GetPosition();
 	
 
 	for(int id=JointData::ID_MIN; id<=JointData::ID_MAX-2; id++) //diminui tirando a cabeça
@@ -161,28 +181,28 @@ bool MotionManager::Initialize(bool fadeIn)
 		if(DEBUG_PRINT == true)
 			fprintf(stderr, "ID:%d initializing...", id);
 
-		request->id = id;
-		while (!client->wait_for_service(1s)) {
-			if (!rclcpp::ok()) {
-			RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Interrupted while waiting for the service. Exiting.");
-			return 0;
-			}
-			RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "service not available, waiting again...");
-		}
+	// 	request->id = id;
+	// 	while (!client->wait_for_service(1s)) {
+	// 		if (!rclcpp::ok()) {
+	// 		RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Interrupted while waiting for the service. Exiting.");
+	// 		return 0;
+	// 		}
+	// 		RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "service not available, waiting again...");
+	// 	}
 
-		 using ServiceResponseFuture = rclcpp::Client<dynamixel_sdk_custom_interfaces::srv::GetPosition>::SharedFuture;
-    auto response_received_callback = [this](ServiceResponseFuture future) {
-        auto result = future.get();
-		position = result->position;
+	// 	 using ServiceResponseFuture = rclcpp::Client<dynamixel_sdk_custom_interfaces::srv::GetPosition>::SharedFuture;
+    // auto response_received_callback = [this](ServiceResponseFuture future) {
+    //     auto result = future.get();
+	// 	position = result->position;
 
-        RCLCPP_INFO(this->get_logger(), "Position: %ld", result->position);
-		};
+    //     RCLCPP_INFO(this->get_logger(), "Position: %ld", result->position);
+	// 	};
 
-		auto future_result = client->async_send_request(request, response_received_callback);
+	// 	auto future_result = client->async_send_request(request, response_received_callback);
     
 
-		MotionStatus::m_CurrentJoints.SetValue(id, position);
-		MotionStatus::m_CurrentJoints.SetEnable(id, true);
+	// 	MotionStatus::m_CurrentJoints.SetValue(id, position);
+	// 	MotionStatus::m_CurrentJoints.SetEnable(id, true);
 
 		// if(m_CM730->ReadWord(id, MX28::P_PRESENT_POSITION_L, &value, &error) == CM730::SUCCESS)
 		// {
@@ -321,6 +341,7 @@ void MotionManager::SaveINISettings(minIni* ini, const std::string &section)
 void MotionManager::Process()
 {
 	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "dentro do process");
+	Walking::GetInstance()->Process();
 
 	// auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();  
 
@@ -399,32 +420,38 @@ void MotionManager::Process()
 		RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "pegando coisa da imu");
 
 		const double GYRO_ALPHA = 0.1;
-		int gyroValFB = (int) (IMU_GYRO_Y*16);
-		int gyroValRL = (int) (IMU_GYRO_X*16);
+		// int gyroValFB = (int) (IMU_GYRO_Y*16);
+		// int gyroValRL = (int) (IMU_GYRO_X*16);
+		int gyroValFB = 1;
+		int gyroValRL = 1;
 
 
 		MotionStatus::FB_GYRO = (1.0 - GYRO_ALPHA) * MotionStatus::FB_GYRO + GYRO_ALPHA * gyroValFB;
 		MotionStatus::RL_GYRO = (1.0 - GYRO_ALPHA) * MotionStatus::RL_GYRO + GYRO_ALPHA * gyroValRL;
-
-		if(m_Modules.size() != 0)
-		{
-			for(std::list<MotionModule*>::iterator i = m_Modules.begin(); i != m_Modules.end(); i++)
-			{
-				(*i)->Process();
+		// printf("IMU 2 %f\n", MotionStatus::FB_GYRO);
+		// printf("IMU %f\n", MotionStatus::RL_GYRO);
+		printf("MODULE SIZE %ld\n", m_Modules.size());
+		// if(m_Modules.size() != 0)
+		// {
+		// 	for(std::list<MotionModule*>::iterator i = m_Modules.begin(); i != m_Modules.end(); i++)
+		// 	{
+		// 		(*i)->Process();
 				for(int id=JointData::ID_MIN; id<=JointData::ID_MAX-2; id++)
 				{
-					if((*i)->m_Joint.GetEnable(id) == true)
+					//printf("TRUE? %d\n", (*i)->m_Joint.GetEnable(id));
+					if((Walking::GetInstance())->m_Joint.GetEnable(id) == true)
 					{
-						MotionStatus::m_CurrentJoints.SetValue(id, (*i)->m_Joint.GetValue(id));
-						MotionStatus::m_CurrentJoints.SetPGain(id, (*i)->m_Joint.GetPGain(id));
-						MotionStatus::m_CurrentJoints.SetIGain(id, (*i)->m_Joint.GetIGain(id));
-						MotionStatus::m_CurrentJoints.SetDGain(id, (*i)->m_Joint.GetDGain(id));
+						MotionStatus::m_CurrentJoints.SetValue(id, (Walking::GetInstance())->m_Joint.GetValue(id));
+						//printf("MOTION %d: %d", id, (*i)->m_Joint.GetValue(id));
+						MotionStatus::m_CurrentJoints.SetPGain(id, (Walking::GetInstance())->m_Joint.GetPGain(id));
+						MotionStatus::m_CurrentJoints.SetIGain(id, (Walking::GetInstance())->m_Joint.GetIGain(id));
+						MotionStatus::m_CurrentJoints.SetDGain(id, (Walking::GetInstance())->m_Joint.GetDGain(id));
 					// MotionStatus::m_CurrentJoints.SetSlope(id, (*i)->m_Joint.GetCWSlope(id), (*i)->m_Joint.GetCCWSlope(id));
 					// MotionStatus::m_CurrentJoints.SetValue(id, (*i)->m_Joint.GetValue(id));
 					}
 				}
-			}
-		}
+		// 	}
+		// }
 		auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();  
 		int param[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];
 		int joint_num = 0;
@@ -474,6 +501,7 @@ void MotionManager::SetEnable(bool enable)
 
 void MotionManager::AddModule(MotionModule *module)
 {
+	printf("ADD MODULE \n");
 	module->Initialize();
 	m_Modules.push_back(module);
 

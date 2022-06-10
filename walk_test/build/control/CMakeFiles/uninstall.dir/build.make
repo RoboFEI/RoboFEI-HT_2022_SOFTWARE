@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robo/ROS2/walk_test/src/control
+CMAKE_SOURCE_DIR = /home/robofei/Desktop/ROS2/walk_test/src/control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robo/ROS2/walk_test/build/control
+CMAKE_BINARY_DIR = /home/robofei/Desktop/ROS2/walk_test/build/control
 
 # Utility rule file for uninstall.
 
@@ -67,6 +67,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/robo/ROS2/walk_test/build/control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/ROS2/walk_test/src/control /home/robo/ROS2/walk_test/src/control /home/robo/ROS2/walk_test/build/control /home/robo/ROS2/walk_test/build/control /home/robo/ROS2/walk_test/build/control/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robofei/Desktop/ROS2/walk_test/build/control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robofei/Desktop/ROS2/walk_test/src/control /home/robofei/Desktop/ROS2/walk_test/src/control /home/robofei/Desktop/ROS2/walk_test/build/control /home/robofei/Desktop/ROS2/walk_test/build/control /home/robofei/Desktop/ROS2/walk_test/build/control/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

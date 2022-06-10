@@ -30,23 +30,23 @@ include_directories(src/minIni)
 
 add_library(motion SHARED
   src/motion/MotionManager.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/modules/Walking.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp
-  /home/robo/ROS2/walk_test/src/control/src/math/Matrix.cpp
-  /home/robo/ROS2/walk_test/src/control/src/math/Plane.cpp
-  /home/robo/ROS2/walk_test/src/control/src/math/Point.cpp
-  /home/robo/ROS2/walk_test/src/control/src/math/Vector.cpp
-  /home/robo/ROS2/walk_test/src/control/src/math/QuadraticStateTransform.cpp
-  /home/robo/ROS2/walk_test/src/control/src/math/MotionState.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/JointData.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/Kinematics.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/MotionStatus.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/modules/Action.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/modules/Walking.cpp
-  /home/robo/ROS2/walk_test/src/control/src/minIni/minIni.cpp
-  /home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp
-  /home/robo/ROS2/walk_test/src/control/src/ReadConfig.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/modules/Walking.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/math/Matrix.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/math/Plane.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/math/Point.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/math/Vector.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/math/QuadraticStateTransform.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/math/MotionState.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/JointData.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/Kinematics.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionStatus.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/modules/Action.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/modules/Walking.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/minIni/minIni.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/GaitMove.cpp
+  /home/robofei/Desktop/ROS2/walk_test/src/control/src/ReadConfig.cpp
   
 )
 ament_target_dependencies(motion

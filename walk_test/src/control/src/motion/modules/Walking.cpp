@@ -32,7 +32,7 @@ Walking::Walking()
 	P_OFFSET = 0;
     A_OFFSET = 0;
     HIP_PITCH_OFFSET = 13.0;
-	PERIOD_TIME = 600;
+	PERIOD_TIME = 800;
 	DSP_RATIO = 0.1;
 	STEP_FB_RATIO = 0.28;
 	Z_MOVE_AMPLITUDE = 40;
@@ -49,7 +49,7 @@ Walking::Walking()
     I_GAIN = JointData::I_GAIN_DEFAULT;
     D_GAIN = JointData::D_GAIN_DEFAULT;
 
-	X_MOVE_AMPLITUDE = 0;
+	X_MOVE_AMPLITUDE = -2;
 	Y_MOVE_AMPLITUDE = 0;
 	A_MOVE_AMPLITUDE = 0;	
 	A_MOVE_AIM_ON = false;
@@ -101,6 +101,7 @@ void Walking::LoadINISettings(minIni* ini)
 void Walking::LoadINISettings(minIni* ini, const std::string &section)
 {
     double value = INVALID_VALUE;
+    printf("LOAD \n");
 
     if((value = ini->getd(section, "x_offset", INVALID_VALUE)) != INVALID_VALUE)                X_OFFSET_START = X_OFFSET = value;
     if((value = ini->getd(section, "y_offset", INVALID_VALUE)) != INVALID_VALUE)                Y_OFFSET = value;
@@ -128,6 +129,7 @@ void Walking::LoadINISettings(minIni* ini, const std::string &section)
     if((value = ini->getd(section, "lean_turn_gain", INVALID_VALUE)) != INVALID_VALUE) LEAN_TURN = value;
     if((value = ini->getd(section, "start_step_factor", INVALID_VALUE)) != INVALID_VALUE) START_STEP_FACTOR = value;
 
+    //printf("PERIOD TIME %f", PERIOD_TIME);
     int ivalue = INVALID_VALUE;
 
     if((ivalue = ini->geti(section, "p_gain", INVALID_VALUE)) != INVALID_VALUE)                 P_GAIN = ivalue;
@@ -366,6 +368,8 @@ void Walking::Start()
 {
 	m_Ctrl_Running = true;
     m_Real_Running = true;
+    printf("WALKING START \n");
+    printf("WALKING START SET VALUE %f\n", X_MOVE_AMPLITUDE);
 }
 
 void Walking::Stop()
@@ -380,6 +384,10 @@ bool Walking::IsRunning()
 
 void Walking::Process()
 {
+    // X_MOVE_AMPLITUDE = -2;
+    // printf("WALKING process comeco %f\n", X_MOVE_AMPLITUDE);
+    // printf("PERIOD TIME PROCESS %f\n", PERIOD_TIME);
+
 	double x_swap, y_swap, z_swap, a_swap, b_swap, c_swap;
     double x_move_r, y_move_r, z_move_r, a_move_r, b_move_r, c_move_r;
     double x_move_l, y_move_l, z_move_l, a_move_l, b_move_l, c_move_l;
@@ -406,6 +414,7 @@ void Walking::Process()
             }
             else
             {
+                printf("ZEROU");
                 X_MOVE_AMPLITUDE = 0;
                 Y_MOVE_AMPLITUDE = 0;
                 A_MOVE_AMPLITUDE = 0;
@@ -430,6 +439,7 @@ void Walking::Process()
             }
             else
             {
+                printf("ZEROU 2");
                 X_MOVE_AMPLITUDE = 0;
                 Y_MOVE_AMPLITUDE = 0;
                 A_MOVE_AMPLITUDE = 0;
@@ -564,6 +574,7 @@ void Walking::Process()
     // Compute arm swing
     if(m_X_Move_Amplitude == 0)
     {
+        printf("ANGLE 12, 13\n");
         angle[12] = 0; // Right
         angle[13] = 0; // Left
     }
@@ -571,6 +582,7 @@ void Walking::Process()
     {
         angle[12] = wsin(m_Time, m_PeriodTime, PI * 1.5, -m_X_Move_Amplitude * m_Arm_Swing_Gain, 0);
         angle[13] = wsin(m_Time, m_PeriodTime, PI * 1.5, m_X_Move_Amplitude * m_Arm_Swing_Gain, 0);
+        printf("ANGLE 12 %f\n", angle[12]);
     }
 
     if(m_Real_Running == true)
@@ -604,13 +616,17 @@ void Walking::Process()
             offset -= (double)dir[i] * HIP_PITCH_OFFSET * MX28::RATIO_ANGLE2VALUE;
 
         outValue[i] = MX28::Angle2Value(initAngle[i]) + (int)offset;
+        //printf("OUTVALUE %d: %d\n", i, outValue[i]);
     }
 
     // adjust balance offset
     if(BALANCE_ENABLE == true)
     {
+
 		double rlGyroErr = MotionStatus::RL_GYRO;
 		double fbGyroErr = MotionStatus::FB_GYRO;
+        //printf("IMU %f\n", fbGyroErr);
+        //printf("IMU 2 %f\n", rlGyroErr);
 #ifdef MX28_1024
         outValue[1] += dir[1] * rlGyroErr * BALANCE_HIP_ROLL_GAIN; // R_HIP_ROLL
         outValue[7] += dir[7] * rlGyroErr * BALANCE_HIP_ROLL_GAIN; // L_HIP_ROLL
@@ -638,7 +654,13 @@ void Walking::Process()
 #endif
     }
 
+// for(int i=0; i<14; i++)
+//     {
+// printf("OUTVALUE DEPOIS %d: %d\n", i, outValue[i]);
+//     }
+
 	m_Joint.SetValue(JointData::ID_R_HIP_YAW,           outValue[0]);
+    //printf("SET VALUE 0 %d\n", outValue[0]);
 	m_Joint.SetValue(JointData::ID_R_HIP_ROLL,          outValue[1]);
 	m_Joint.SetValue(JointData::ID_R_HIP_PITCH,         outValue[2]);
 	m_Joint.SetValue(JointData::ID_R_KNEE,              outValue[3]);
@@ -653,6 +675,8 @@ void Walking::Process()
 	m_Joint.SetValue(JointData::ID_R_SHOULDER_PITCH,    outValue[12]);
 	m_Joint.SetValue(JointData::ID_L_SHOULDER_PITCH,    outValue[13]);
 	m_Joint.SetAngle(JointData::ID_HEAD_PAN, A_MOVE_AMPLITUDE);
+    //printf("WALKING PROCESS SET VALUE %f\n", X_MOVE_AMPLITUDE);
+    //printf("BALANCE %f\n", BALANCE_HIP_ROLL_GAIN);
 
 	for(int id = JointData::ID_R_HIP_YAW; id <= JointData::ID_L_ANKLE_ROLL; id++)
 	{

@@ -6,5 +6,5 @@ C_FLAGS = -fPIC   -Wall -std=gnu11
 
 C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"dynamixel_sdk_custom_interfaces\" -Ddynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c_EXPORTS
 
-C_INCLUDES = -I/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_generator_c -I/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_typesupport_introspection_c -isystem /opt/ros/foxy/include 
+C_INCLUDES = -I/home/robofei/Desktop/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_generator_c -I/home/robofei/Desktop/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_typesupport_introspection_c -isystem /opt/ros/foxy/include 
 
