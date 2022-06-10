@@ -257,8 +257,7 @@ int main(int argc, char * argv[])
 {
   change_current_dir();
 
-  minIni* ini;
-  ini = new minIni((char *)INI_FILE_PATH);
+  
   //Configurando para prioridade maxima para executar este processo-------
   char string1[50]; //String
   sprintf(string1,"echo fei 123456| sudo -S renice -20 -p %d", getpid());

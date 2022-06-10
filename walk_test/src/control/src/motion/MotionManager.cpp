@@ -38,7 +38,7 @@
 #include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/walk.hpp"
 
-#define INI_FILE_PATH       "../../Control/Data/config.ini"
+#define INI_FILE_PATH       "/home/robo/ROS2/walk_test/src/control/Data/config.ini"
 
 using namespace Robot;
 using namespace std::chrono_literals;
@@ -47,7 +47,6 @@ using std::placeholders::_1;
 // Torque adaption every second
 const int TORQUE_ADAPTION_CYCLES = 1000 / MotionModule::TIME_UNIT;
 const int DEST_TORQUE = 1023;
-bool keep_walking;
 int position;
 
 #define BROADCAST_ID        0xFE    // 254
@@ -74,9 +73,11 @@ MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
 	publisher_single = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>("set_position_single", 10); 
 	client = this->create_client<dynamixel_sdk_custom_interfaces::srv::GetPosition>("get_position");
     timer_ = this->create_wall_timer(8ms, std::bind(&MotionManager::Process, this));
+	keep_walking = false;
 	for(int i = 0; i < JointData::NUMBER_OF_JOINTS; i++)
         m_Offset[i] = 0;
 	// update_thread_ = std::thread(std::bind(&MotionManager::update_loop, this));
+	printf("CONSTRUTOR\n");
 	ini = new minIni((char *)INI_FILE_PATH);
 }
 
@@ -102,10 +103,11 @@ void MotionManager::topic_callback(const std::shared_ptr<sensor_msgs::msg::Imu> 
 void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Walk> walk_msg_) const
     {
         int walk = (int)walk_msg_->walk;
+		//printf("KEEP WALKING ANTES %d\n", MotionManager::GetInstance()->keep_walking);
 		
-	MotionManager::GetInstance()->LoadINISettings(ini);
-    MotionManager::GetInstance()->AddModule((MotionModule*)Walking::GetInstance());
-		if (keep_walking==false){
+		MotionManager::GetInstance()->LoadINISettings(ini);
+		MotionManager::GetInstance()->AddModule((MotionModule*)Walking::GetInstance());
+		if (MotionManager::GetInstance()->keep_walking==false){
 			if (walk == 1){
 				printf("CALLBACK WALK\n");
 				MotionManager::GetInstance()->Initialize();
@@ -113,8 +115,14 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_cust
             	Action::GetInstance()->m_Joint.SetEnableBody(true);
 				MotionManager::GetInstance()->SetEnable(true);
 				printf("%d\n", MotionManager::GetInstance()->GetEnable());
+				Walking::GetInstance()->X_MOVE_AMPLITUDE = -2;
+				Walking::GetInstance()->Y_MOVE_AMPLITUDE = 0;
+				Walking::GetInstance()->A_MOVE_AMPLITUDE = 0.1;
 				Walking::GetInstance()->Start();
-				keep_walking==true;
+				printf("WALKING %d\n", Walking::GetInstance()->IsRunning());
+				printf("ACTION %d\n", Action::GetInstance()->IsRunning());
+				MotionManager::GetInstance()->keep_walking=true;
+				//printf("KEEP WALKING DEPOIS %d\n", MotionManager::GetInstance()->keep_walking);
 			}
 		}
 		
@@ -122,7 +130,7 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_cust
 			if (walk != 1){
 				printf("CALLBACK NAO WALK\n");
 				MotionManager::GetInstance()->SetEnable(false);
-				keep_walking==false;
+				//keep_walking==false;
 			}
 		}
 	}
@@ -287,7 +295,8 @@ void MotionManager::LoadINISettings(minIni* ini, const std::string &section)
     {
         char key[10];
         sprintf(key, "ID_%.2d", i);
-        if((ivalue = ini->geti(section, key, INVALID_VALUE)) != INVALID_VALUE)  m_Offset[i] = ivalue;
+        if((ivalue = ini->geti(section, key, INVALID_VALUE)) != INVALID_VALUE)  MotionManager::GetInstance()->m_Offset[i] = ivalue;
+		printf("OFFSET %d\n", MotionManager::GetInstance()->m_Offset[i]);
     }
 		m_angleEstimator.LoadINISettings(ini, section + "_angle");
 }
@@ -371,21 +380,21 @@ void MotionManager::Process()
     // message.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};          
 	// message.position = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};   
 	// publisher_->publish(message);
-	m_ProcessEnable == true; // TIRAR DEPOIS
-	m_IsRunning == false; // TIRAR DEPOIS
-    // if(m_ProcessEnable == false || m_IsRunning == true)
-    //     return;
+	// m_ProcessEnable == true; // TIRAR DEPOIS
+	// m_IsRunning == false; // TIRAR DEPOIS
+    if(MotionManager::GetInstance()->m_ProcessEnable == false || MotionManager::GetInstance()->m_IsRunning == true)
+        return;
 		
-	m_IsRunning = true;
+	MotionManager::GetInstance()->m_IsRunning = true;
 
 
 
-	m_CalibrationStatus = 1;
+	MotionManager::GetInstance()->m_CalibrationStatus = 1;
 	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "antes do segundo if");
-	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "%d", m_Enabled);
+	// RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "%d", m_Enabled);
 
 	// if(m_CalibrationStatus == 1 && m_Enabled == true)
-    if(m_CalibrationStatus == 1 && MotionManager::GetInstance()->GetEnable() == true)
+    if(MotionManager::GetInstance()->m_CalibrationStatus == 1 && MotionManager::GetInstance()->GetEnable() == true)
     {
 		RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "pegando coisa da imu");
 
@@ -406,8 +415,12 @@ void MotionManager::Process()
 				{
 					if((*i)->m_Joint.GetEnable(id) == true)
 					{
-					MotionStatus::m_CurrentJoints.SetSlope(id, (*i)->m_Joint.GetCWSlope(id), (*i)->m_Joint.GetCCWSlope(id));
-					MotionStatus::m_CurrentJoints.SetValue(id, (*i)->m_Joint.GetValue(id));
+						MotionStatus::m_CurrentJoints.SetValue(id, (*i)->m_Joint.GetValue(id));
+						MotionStatus::m_CurrentJoints.SetPGain(id, (*i)->m_Joint.GetPGain(id));
+						MotionStatus::m_CurrentJoints.SetIGain(id, (*i)->m_Joint.GetIGain(id));
+						MotionStatus::m_CurrentJoints.SetDGain(id, (*i)->m_Joint.GetDGain(id));
+					// MotionStatus::m_CurrentJoints.SetSlope(id, (*i)->m_Joint.GetCWSlope(id), (*i)->m_Joint.GetCCWSlope(id));
+					// MotionStatus::m_CurrentJoints.SetValue(id, (*i)->m_Joint.GetValue(id));
 					}
 				}
 			}
@@ -420,7 +433,7 @@ void MotionManager::Process()
 		for(int id=JointData::ID_MIN; id<=JointData::ID_MAX-2; id++) // loop que vai de 1 até 18
 				{
 				param[id] = id;
-				pos[id] = MotionStatus::m_CurrentJoints.GetValue(id);
+				pos[id] = MotionStatus::m_CurrentJoints.GetValue(id)+ MotionManager::GetInstance()->m_Offset[id];
 				
 				if(DEBUG_PRINT == true)
 				fprintf(stderr, "ID[%d] : %d \n", id, MotionStatus::m_CurrentJoints.GetValue(id));
@@ -433,7 +446,7 @@ void MotionManager::Process()
 	else
 		RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "nao entrou no segundo if");
 
-    m_IsRunning = false;
+    MotionManager::GetInstance()->m_IsRunning = false;
     // if(m_torque_count != DEST_TORQUE && --m_torqueAdaptionCounter == 0)
     // {
     //     m_torqueAdaptionCounter = TORQUE_ADAPTION_CYCLES;

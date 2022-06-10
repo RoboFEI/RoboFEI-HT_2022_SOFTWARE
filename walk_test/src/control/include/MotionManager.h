@@ -88,6 +88,7 @@ rclcpp::Client<dynamixel_sdk_custom_interfaces::srv::GetPosition>::SharedPtr cli
     	int *memBB;
 
 	minIni* ini;
+	 bool keep_walking;
 
 		~MotionManager();
 		MotionManager(const rclcpp::NodeOptions & options);
