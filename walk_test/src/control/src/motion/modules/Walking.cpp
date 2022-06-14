@@ -452,6 +452,7 @@ void Walking::Process()
         m_Phase = PHASE3;
     }
     update_param_balance();
+    // printf("AMPLITUDE X: %f\n", m_X_Move_Amplitude);
 
     // Compute endpoints
     x_swap = wsin(m_Time, m_X_Swap_PeriodTime, m_X_Swap_Phase_Shift, m_X_Swap_Amplitude, m_X_Swap_Amplitude_Shift);

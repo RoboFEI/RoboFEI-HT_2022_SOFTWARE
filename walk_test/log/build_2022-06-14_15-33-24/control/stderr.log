@@ -1,0 +1,83 @@
+In file included from [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25[m[K:
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/include/MotionManager.h:[m[K In constructor ‘[01m[KRobot::MotionManager::MotionManager(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/include/MotionManager.h:86:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KRobot::MotionManager::DEBUG_PRINT[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+   86 |   bool [01;35m[KDEBUG_PRINT[m[K;
+      |        [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:67:41:[m[K [01;35m[Kwarning: [m[K  base ‘[01m[Krclcpp::Node[m[K’ [[01;35m[K-Wreorder[m[K]
+   67 |   rclcpp::Node("gait_publisher", options[01;35m[K)[m[K
+      |                                         [01;35m[K^[m[K
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:59:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   59 | [01;35m[KMotionManager[m[K::MotionManager(const rclcpp::NodeOptions & options) :
+      | [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:99:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_X[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   99 |         float [01;35m[KIMU_GYRO_X[m[K = -imu_msg_->angular_velocity.x/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:100:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_Y[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  100 |         float [01;35m[KIMU_GYRO_Y[m[K  = -imu_msg_->angular_velocity.y/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Initialize(bool)[m[K’:
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:161:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  161 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:161:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  161 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Reinitialize()[m[K’:
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:247:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  247 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:247:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  247 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::Process()[m[K’:
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:406:5:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  406 |     [01;35m[Kif[m[K(MotionManager::GetInstance()->m_ProcessEnable == false || MotionManager::GetInstance()->m_IsRunning == true)
+      |     [01;35m[K^~[m[K
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:409:2:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  409 |  [01;36m[KMotionManager[m[K::GetInstance()->m_IsRunning = true;
+      |  [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:469:161:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+  469 | , pos[10], pos[11], pos[12], pos[13], pos[14], pos[15], 2048, 2048, [01;31m[K,[m[K 1000};
+      |                                                                     [01;31m[K^[m[K
+
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:469:167:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kdynamixel_sdk_custom_interfaces::msg::SetPosition_<std::allocator<void> >::_position_type[m[K’ {aka ‘[01m[Kstd::vector<int>[m[K’} and ‘[01m[K<brace-enclosed initializer list>[m[K’)
+  469 | s[11], pos[12], pos[13], pos[14], pos[15], 2048, 2048, , 1000[01;31m[K}[m[K;
+      |                                                              [01;31m[K^[m[K
+
+In file included from [01m[K/usr/include/c++/9/vector:72[m[K,
+                 from [01m[K/opt/ros/foxy/include/rosidl_runtime_cpp/bounded_vector.hpp:22[m[K,
+                 from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:8[m[K,
+                 from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/include/MotionManager.h:19[m[K,
+                 from [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25[m[K:
+[01m[K/usr/include/c++/9/bits/vector.tcc:198:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = int; _Alloc = std::allocator<int>][m[K’
+  198 |     [01;36m[Kvector<_Tp, _Alloc>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/vector.tcc:199:42:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst std::vector<int>&[m[K’
+  199 |     operator=([01;36m[Kconst vector<_Tp, _Alloc>& __x[m[K)
+      |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/opt/ros/foxy/include/rosidl_runtime_cpp/bounded_vector.hpp:22[m[K,
+                 from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:8[m[K,
+                 from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+                 from [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/include/MotionManager.h:19[m[K,
+                 from [01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:706:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::vector<_Tp, _Alloc>&&) [with _Tp = int; _Alloc = std::allocator<int>][m[K’
+  706 |       [01;36m[Koperator[m[K=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:706:26:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::vector<int>&&[m[K’
+  706 |       operator=([01;36m[Kvector&& __x[m[K) noexcept(_Alloc_traits::_S_nothrow_move())
+      |                 [01;36m[K~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:727:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = int; _Alloc = std::allocator<int>][m[K’
+  727 |       [01;36m[Koperator[m[K=(initializer_list<value_type> __l)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:727:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::initializer_list<int>[m[K’
+  727 |       operator=([01;36m[Kinitializer_list<value_type> __l[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:457:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kjoint_num[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  457 |   int [01;35m[Kjoint_num[m[K = 0;
+      |       [01;35m[K^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/motion.dir/build.make:63: CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/motion.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

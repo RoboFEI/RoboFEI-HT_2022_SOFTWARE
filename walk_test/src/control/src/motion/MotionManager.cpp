@@ -119,9 +119,9 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_cust
 				MotionStatus::m_CurrentJoints.SetEnableBodyWithoutHead(true);
 				MotionManager::GetInstance()->SetEnable(true);
 				printf("%d\n", MotionManager::GetInstance()->GetEnable());
-				Walking::GetInstance()->X_MOVE_AMPLITUDE = -2;
-				Walking::GetInstance()->Y_MOVE_AMPLITUDE = 0;
-				Walking::GetInstance()->A_MOVE_AMPLITUDE = 0.1;
+				Walking::GetInstance()->X_MOVE_AMPLITUDE = 20; //20
+				Walking::GetInstance()->Y_MOVE_AMPLITUDE = 0; //0
+				Walking::GetInstance()->A_MOVE_AMPLITUDE = 2.5; //2.5
 				Walking::GetInstance()->Start();
 				printf("WALKING %d\n", Walking::GetInstance()->IsRunning());
 				printf("ACTION %d\n", Action::GetInstance()->IsRunning());
