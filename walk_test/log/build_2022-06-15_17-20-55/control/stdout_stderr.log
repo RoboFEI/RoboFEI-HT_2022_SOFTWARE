@@ -1,0 +1,22 @@
+[35m[1mScanning dependencies of target action[0m
+[  8%] Built target decision
+[ 16%] Built target gait_publisher
+[ 24%] Built target control
+[ 92%] Built target motion
+[ 96%] [32mBuilding CXX object CMakeFiles/action.dir/src/action_editor/main.cpp.o[0m
+[01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:329:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ was not declared in this scope
+  329 |     rclcpp::Publisher<[01;31m[Kstd_msgs[m[K::msg::String>::SharedPtr publisher_;
+      |                       [01;31m[K^~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:329:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  329 |     rclcpp::Publisher<std_msgs::msg::String[01;31m[K>[m[K::SharedPtr publisher_;
+      |                                            [01;31m[K^[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:329:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  329 |     rclcpp::Publisher<std_msgs::msg::String>::[01;31m[KSharedPtr[m[K publisher_;
+      |                                               [01;31m[K^~~~~~~~~[m[K
+      |                                                        [32m[K;[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:329:57:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ does not name a type
+  329 |     rclcpp::Publisher<std_msgs::msg::String>::SharedPtr [01;31m[Kpublisher_[m[K;
+      |                                                         [01;31m[K^~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/action.dir/build.make:63: CMakeFiles/action.dir/src/action_editor/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:248: CMakeFiles/action.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

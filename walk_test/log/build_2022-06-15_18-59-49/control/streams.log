@@ -1,0 +1,24 @@
+[0.008s] Invoking command in '/home/robo/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[0.042s] [35m[1mScanning dependencies of target action[0m
+[0.055s] [  8%] Built target gait_publisher
+[0.056s] [ 16%] Built target control
+[0.056s] [ 24%] Built target decision
+[0.060s] [ 92%] Built target motion
+[0.070s] [ 96%] [32mBuilding CXX object CMakeFiles/action.dir/src/action_editor/main.cpp.o[0m
+[1.046s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In function ‘[01m[Kvoid sighandler(int)[m[K’:
+[1.046s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:317:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.046s]   317 | void sighandler([01;35m[Kint sig[m[K)
+[1.046s]       |                 [01;35m[K~~~~^~~[m[K
+[1.048s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.048s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:382:13:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kini[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+[1.049s]   382 |     minIni* [01;35m[Kini[m[K;
+[1.049s]       |             [01;35m[K^~~[m[K
+[1.514s] [100%] [32m[1mLinking CXX executable action[0m
+[1.595s] /usr/bin/ld: CMakeFiles/action.dir/src/action_editor/main.cpp.o: in function `main':
+[1.595s] main.cpp:(.text+0x415): undefined reference to `DrawIntro()'
+[1.595s] /usr/bin/ld: main.cpp:(.text+0x46f): undefined reference to `DrawEnding()'
+[1.595s] collect2: error: ld returned 1 exit status
+[1.596s] make[2]: *** [CMakeFiles/action.dir/build.make:136: action] Error 1
+[1.596s] make[1]: *** [CMakeFiles/Makefile2:248: CMakeFiles/action.dir/all] Error 2
+[1.596s] make: *** [Makefile:141: all] Error 2
+[1.597s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '2': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12

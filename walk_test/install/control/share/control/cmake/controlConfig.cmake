@@ -1,1 +1,1 @@
-/home/robofei/Desktop/ROS2/walk_test/build/control/ament_cmake_core/controlConfig.cmake
+/home/robo/ROS2/walk_test/build/control/ament_cmake_core/controlConfig.cmake

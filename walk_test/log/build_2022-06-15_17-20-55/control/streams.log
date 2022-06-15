@@ -1,0 +1,24 @@
+[0.008s] Invoking command in '/home/robo/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[0.041s] [35m[1mScanning dependencies of target action[0m
+[0.054s] [  8%] Built target decision
+[0.054s] [ 16%] Built target gait_publisher
+[0.055s] [ 24%] Built target control
+[0.059s] [ 92%] Built target motion
+[0.060s] [ 96%] [32mBuilding CXX object CMakeFiles/action.dir/src/action_editor/main.cpp.o[0m
+[0.965s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:329:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ was not declared in this scope
+[0.965s]   329 |     rclcpp::Publisher<[01;31m[Kstd_msgs[m[K::msg::String>::SharedPtr publisher_;
+[0.965s]       |                       [01;31m[K^~~~~~~~[m[K
+[0.965s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:329:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[0.965s]   329 |     rclcpp::Publisher<std_msgs::msg::String[01;31m[K>[m[K::SharedPtr publisher_;
+[0.966s]       |                                            [01;31m[K^[m[K
+[0.966s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:329:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[0.966s]   329 |     rclcpp::Publisher<std_msgs::msg::String>::[01;31m[KSharedPtr[m[K publisher_;
+[0.966s]       |                                               [01;31m[K^~~~~~~~~[m[K
+[0.966s]       |                                                        [32m[K;[m[K
+[0.966s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:329:57:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ does not name a type
+[0.966s]   329 |     rclcpp::Publisher<std_msgs::msg::String>::SharedPtr [01;31m[Kpublisher_[m[K;
+[0.966s]       |                                                         [01;31m[K^~~~~~~~~~[m[K
+[1.288s] make[2]: *** [CMakeFiles/action.dir/build.make:63: CMakeFiles/action.dir/src/action_editor/main.cpp.o] Error 1
+[1.288s] make[1]: *** [CMakeFiles/Makefile2:248: CMakeFiles/action.dir/all] Error 2
+[1.288s] make: *** [Makefile:141: all] Error 2
+[1.291s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '2': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12

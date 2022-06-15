@@ -1,0 +1,46 @@
+[0.008s] Invoking command in '/home/robo/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[0.040s] [35m[1mScanning dependencies of target action[0m
+[0.054s] [ 16%] Built target decision
+[0.054s] [ 16%] Built target gait_publisher
+[0.055s] [ 24%] Built target control
+[0.058s] [ 92%] Built target motion
+[0.059s] [ 96%] [32mBuilding CXX object CMakeFiles/action.dir/src/action_editor/main.cpp.o[0m
+[0.980s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In member function ‘[01m[Kint MinimalPublisher::process()[m[K’:
+[0.980s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:71:5:[m[K [01;31m[Kerror: [m[K‘[01m[KminIni[m[K’ was not declared in this scope
+[0.980s]    71 |     [01;31m[KminIni[m[K* ini;
+[0.980s]       |     [01;31m[K^~~~~~[m[K
+[0.981s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:71:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kini[m[K’ was not declared in this scope; did you mean ‘[01m[Kint[m[K’?
+[0.981s]    71 |     minIni* [01;31m[Kini[m[K;
+[0.981s]       |             [01;31m[K^~~[m[K
+[0.981s]       |             [32m[Kint[m[K
+[0.981s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:72:15:[m[K [01;31m[Kerror: [m[Kexpected type-specifier before ‘[01m[KminIni[m[K’
+[0.981s]    72 |     ini = new [01;31m[KminIni[m[K((char *)INI_FILE_PATH);
+[0.981s]       |               [01;31m[K^~~~~~[m[K
+[0.981s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:77:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kargc[m[K’ was not declared in this scope
+[0.982s]    77 |     if([01;31m[Kargc[m[K < 2)
+[0.982s]       |        [01;31m[K^~~~[m[K
+[0.982s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:80:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kargv[m[K’ was not declared in this scope
+[0.983s]    80 |         strcpy(filename, [01;31m[Kargv[m[K[1]);
+[0.983s]       |                          [01;31m[K^~~~[m[K
+[0.983s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:87:8:[m[K [01;31m[Kerror: [m[K‘[01m[KAction[m[K’ has not been declared
+[0.983s]    87 |     if([01;31m[KAction[m[K::GetInstance()->LoadFile(filename) == false)
+[0.983s]       |        [01;31m[K^~~~~~[m[K
+[0.983s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:89:16:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[0.983s]    89 |         printf([01;35m[K"Can not open \e[0;31m%s\e[0m\n"[m[K, filename);
+[0.983s]       |                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.983s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:89:16:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[0.983s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:98:12:[m[K [01;31m[Kerror: [m[K‘[01m[KAction[m[K’ has not been declared
+[0.983s]    98 |         if([01;31m[KAction[m[K::GetInstance()->CreateFile(filename) == false)
+[0.983s]       |            [01;31m[K^~~~~~[m[K
+[0.983s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:100:20:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[0.983s]   100 |             printf([01;35m[K"\e[1;31mFail to create %s\e[0m\n"[m[K, filename);
+[0.984s]       |                    [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.984s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:100:20:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[0.984s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In function ‘[01m[Kvoid sighandler(int)[m[K’:
+[0.984s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:339:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[0.984s]   339 | void sighandler([01;35m[Kint sig[m[K)
+[0.984s]       |                 [01;35m[K~~~~^~~[m[K
+[1.281s] make[2]: *** [CMakeFiles/action.dir/build.make:63: CMakeFiles/action.dir/src/action_editor/main.cpp.o] Error 1
+[1.281s] make[1]: *** [CMakeFiles/Makefile2:248: CMakeFiles/action.dir/all] Error 2
+[1.282s] make: *** [Makefile:141: all] Error 2
+[1.283s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '2': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12

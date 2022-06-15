@@ -1,1 +1,1 @@
-/home/robofei/Desktop/ROS2/walk_test/build/control/ament_cmake_environment_hooks/local_setup.zsh
+/home/robo/ROS2/walk_test/build/control/ament_cmake_environment_hooks/local_setup.zsh

@@ -260,7 +260,7 @@ int main(int argc, char * argv[])
   
   //Configurando para prioridade maxima para executar este processo-------
   char string1[50]; //String
-  sprintf(string1,"echo fei 123456| sudo -S renice -20 -p %d", getpid());
+  sprintf(string1,"echo robo 123456| sudo -S renice -20 -p %d", getpid());
   system(string1);//prioridade
   //GaitMove gaitMove(ini);
   rclcpp::init(argc, argv);

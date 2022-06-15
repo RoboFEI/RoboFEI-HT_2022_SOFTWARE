@@ -1,0 +1,33 @@
+[35m[1mScanning dependencies of target action[0m
+[ 16%] Built target gait_publisher
+[ 16%] Built target decision
+[ 24%] Built target control
+[ 92%] Built target motion
+[ 96%] [32mBuilding CXX object CMakeFiles/action.dir/src/action_editor/main.cpp.o[0m
+[01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In member function ‘[01m[Kint MinimalPublisher::process()[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:91:16:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+   91 |         printf([01;35m[K"Can not open \e[0;31m%s\e[0m\n"[m[K, filename);
+      |                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:91:16:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:102:20:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+  102 |             printf([01;35m[K"\e[1;31mFail to create %s\e[0m\n"[m[K, filename);
+      |                    [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:102:20:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:73:13:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kini[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   73 |     minIni* [01;35m[Kini[m[K;
+      |             [01;35m[K^~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In function ‘[01m[Kvoid sighandler(int)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:341:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  341 | void sighandler([01;35m[Kint sig[m[K)
+      |                 [01;35m[K~~~~^~~[m[K
+[100%] [32m[1mLinking CXX executable action[0m
+/usr/bin/ld: CMakeFiles/action.dir/src/action_editor/main.cpp.o: in function `Robot::Action::GetInstance()':
+main.cpp:(.text._ZN5Robot6Action11GetInstanceEv[_ZN5Robot6Action11GetInstanceEv]+0xb): undefined reference to `Robot::Action::m_UniqueInstance'
+/usr/bin/ld: CMakeFiles/action.dir/src/action_editor/main.cpp.o: in function `MinimalPublisher::process()':
+main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x1a6): undefined reference to `Robot::Action::LoadFile(char*)'
+/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x1e7): undefined reference to `_getch()'
+/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x221): undefined reference to `Robot::Action::CreateFile(char*)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/action.dir/build.make:136: action] Error 1
+make[1]: *** [CMakeFiles/Makefile2:248: CMakeFiles/action.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

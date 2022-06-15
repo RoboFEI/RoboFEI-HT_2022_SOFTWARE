@@ -1,0 +1,66 @@
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+-- Found rclcpp_components: 2.4.1 (/opt/ros/foxy/share/rclcpp_components/cmake)
+-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/robo/ROS2/walk_test/src/control/include;/home/robo/ROS2/walk_test/src/control/src/minIni
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/robo/ROS2/walk_test/build/control
+[35m[1mScanning dependencies of target action[0m
+[  7%] Built target decision
+[ 15%] Built target gait_publisher
+[ 23%] Built target control
+[ 26%] [32m[1mLinking CXX executable action[0m
+[ 92%] Built target motion
+/usr/bin/ld: CMakeFiles/action.dir/src/action_editor/main.cpp.o: in function `MinimalPublisher::process()':
+main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x1e7): undefined reference to `_getch()'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Process()':
+Action.cpp:(.text+0xace): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0xae8): undefined reference to `Robot::MotionStatus::m_CurrentJoints'
+/usr/bin/ld: Action.cpp:(.text+0xaed): undefined reference to `Robot::JointData::GetValue(int)'
+/usr/bin/ld: Action.cpp:(.text+0xbb4): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0xbdb): undefined reference to `Robot::JointData::GetValue(int)'
+/usr/bin/ld: Action.cpp:(.text+0xc36): undefined reference to `Robot::JointData::SetValue(int, int)'
+/usr/bin/ld: Action.cpp:(.text+0xda0): undefined reference to `Robot::JointData::SetValue(int, int)'
+/usr/bin/ld: Action.cpp:(.text+0xe1c): undefined reference to `Robot::JointData::SetValue(int, int)'
+/usr/bin/ld: Action.cpp:(.text+0xe95): undefined reference to `Robot::JointData::SetValue(int, int)'
+/usr/bin/ld: Action.cpp:(.text+0xfbe): undefined reference to `Robot::JointData::SetValue(int, int)'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o:Action.cpp:(.text+0x102b): more undefined references to `Robot::JointData::SetValue(int, int)' follow
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Process()':
+Action.cpp:(.text+0x10af): undefined reference to `Robot::JointData::SetSlope(int, int, int)'
+/usr/bin/ld: Action.cpp:(.text+0x113f): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0x1162): undefined reference to `Robot::JointData::GetValue(int)'
+/usr/bin/ld: Action.cpp:(.text+0x1207): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0x13df): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0x14c2): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0x182e): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0x1beb): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::MotionModule::MotionModule()':
+Action.cpp:(.text._ZN5Robot12MotionModuleC2Ev[_ZN5Robot12MotionModuleC5Ev]+0x2a): undefined reference to `Robot::JointData::JointData()'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::MotionModule::~MotionModule()':
+Action.cpp:(.text._ZN5Robot12MotionModuleD2Ev[_ZN5Robot12MotionModuleD5Ev]+0x2a): undefined reference to `Robot::JointData::~JointData()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/action.dir/build.make:151: action] Error 1
+make[1]: *** [CMakeFiles/Makefile2:248: CMakeFiles/action.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robofei/Desktop/ROS2/walk_test/src/control
+CMAKE_SOURCE_DIR = /home/robo/ROS2/walk_test/src/control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robofei/Desktop/ROS2/walk_test/build/control
+CMAKE_BINARY_DIR = /home/robo/ROS2/walk_test/build/control
 
 # Include any dependencies generated for this target.
 include CMakeFiles/control.dir/depend.make
@@ -58,17 +58,17 @@ include CMakeFiles/control.dir/progress.make
 include CMakeFiles/control.dir/flags.make
 
 CMakeFiles/control.dir/src/control.cpp.o: CMakeFiles/control.dir/flags.make
-CMakeFiles/control.dir/src/control.cpp.o: /home/robofei/Desktop/ROS2/walk_test/src/control/src/control.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/Desktop/ROS2/walk_test/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/control.dir/src/control.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/control.dir/src/control.cpp.o -c /home/robofei/Desktop/ROS2/walk_test/src/control/src/control.cpp
+CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/src/control/src/control.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo/ROS2/walk_test/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/control.dir/src/control.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/control.dir/src/control.cpp.o -c /home/robo/ROS2/walk_test/src/control/src/control.cpp
 
 CMakeFiles/control.dir/src/control.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/control.dir/src/control.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/Desktop/ROS2/walk_test/src/control/src/control.cpp > CMakeFiles/control.dir/src/control.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ROS2/walk_test/src/control/src/control.cpp > CMakeFiles/control.dir/src/control.cpp.i
 
 CMakeFiles/control.dir/src/control.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/control.dir/src/control.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/Desktop/ROS2/walk_test/src/control/src/control.cpp -o CMakeFiles/control.dir/src/control.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ROS2/walk_test/src/control/src/control.cpp -o CMakeFiles/control.dir/src/control.cpp.s
 
 # Object files for target control
 control_OBJECTS = \
@@ -79,16 +79,16 @@ control_EXTERNAL_OBJECTS =
 
 control: CMakeFiles/control.dir/src/control.cpp.o
 control: CMakeFiles/control.dir/build.make
-control: /home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so
-control: /home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so
-control: /home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so
-control: /home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so
+control: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so
+control: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so
+control: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so
+control: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so
 control: /opt/ros/foxy/lib/librclcpp.so
 control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_c.so
 control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 control: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_cpp.so
-control: /home/robofei/Desktop/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so
+control: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so
 control: /opt/ros/foxy/lib/liblibstatistics_collector.so
 control: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_c.so
 control: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_generator_c.so
@@ -142,7 +142,7 @@ control: /opt/ros/foxy/lib/librosidl_runtime_c.so
 control: /opt/ros/foxy/lib/librcpputils.so
 control: /opt/ros/foxy/lib/librcutils.so
 control: CMakeFiles/control.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robofei/Desktop/ROS2/walk_test/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robo/ROS2/walk_test/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable control"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/control.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -155,6 +155,6 @@ CMakeFiles/control.dir/clean:
 .PHONY : CMakeFiles/control.dir/clean
 
 CMakeFiles/control.dir/depend:
-	cd /home/robofei/Desktop/ROS2/walk_test/build/control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robofei/Desktop/ROS2/walk_test/src/control /home/robofei/Desktop/ROS2/walk_test/src/control /home/robofei/Desktop/ROS2/walk_test/build/control /home/robofei/Desktop/ROS2/walk_test/build/control /home/robofei/Desktop/ROS2/walk_test/build/control/CMakeFiles/control.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robo/ROS2/walk_test/build/control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/ROS2/walk_test/src/control /home/robo/ROS2/walk_test/src/control /home/robo/ROS2/walk_test/build/control /home/robo/ROS2/walk_test/build/control /home/robo/ROS2/walk_test/build/control/CMakeFiles/control.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/control.dir/depend
 

@@ -1,0 +1,455 @@
+[0.000000] (-) TimerEvent: {}
+[0.000083] (dynamixel_sdk_custom_interfaces) JobQueued: {'identifier': 'dynamixel_sdk_custom_interfaces', 'dependencies': OrderedDict()}
+[0.000283] (control) JobQueued: {'identifier': 'control', 'dependencies': OrderedDict([('dynamixel_sdk_custom_interfaces', '/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces')])}
+[0.000350] (dynamixel_sdk_custom_interfaces) JobStarted: {'identifier': 'dynamixel_sdk_custom_interfaces'}
+[0.008409] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'cmake'}
+[0.009022] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'build'}
+[0.009823] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces', '--', '-j12', '-l12'], 'cwd': '/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'robo'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '2023'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robo/ROS2/walk_test/install/control/lib:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/robo'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1845'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=2a68500678089a91cfcd54ee62a9fc0d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/robo/ROS2/walk_test/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robo'), ('JOURNAL_STREAM', '8:53091'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/robofeipc:@/tmp/.ICE-unix/2061,unix/robofeipc:/tmp/.ICE-unix/2061'), ('INVOCATION_ID', '4963211e62514505b948a831b02f3e1a'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/85ab140b_4fb9_4a36_96a8_439c74bce5d0'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robo/ROS2/walk_test/install/control:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=2a68500678089a91cfcd54ee62a9fc0d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robo/ROS2/walk_test/install/control:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy')]), 'shell': False}
+[0.053878] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[  4%] Built target dynamixel_sdk_custom_interfaces__cpp\n'}
+[0.054079] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 12%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c\n'}
+[0.070953] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 57%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.071102] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 57%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp\n'}
+[0.071162] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 57%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.071216] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 57%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c\n'}
+[0.074162] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 68%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.094483] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 79%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.099743] (-) TimerEvent: {}
+[0.108928] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 79%] Built target dynamixel_sdk_custom_interfaces\n'}
+[0.124403] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 80%] Built target dynamixel_sdk_custom_interfaces__py\n'}
+[0.146263] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 90%] Built target dynamixel_sdk_custom_interfaces__python\n'}
+[0.166049] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.166191] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.166250] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.174301] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[0.199877] (-) TimerEvent: {}
+[0.249043] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'install'}
+[0.258155] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces'], 'cwd': '/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'robo'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '2023'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robo/ROS2/walk_test/install/control/lib:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/robo'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1845'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=2a68500678089a91cfcd54ee62a9fc0d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/robo/ROS2/walk_test/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robo'), ('JOURNAL_STREAM', '8:53091'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/robofeipc:@/tmp/.ICE-unix/2061,unix/robofeipc:/tmp/.ICE-unix/2061'), ('INVOCATION_ID', '4963211e62514505b948a831b02f3e1a'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/85ab140b_4fb9_4a36_96a8_439c74bce5d0'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robo/ROS2/walk_test/install/control:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=2a68500678089a91cfcd54ee62a9fc0d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robo/ROS2/walk_test/install/control:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy')]), 'shell': False}
+[0.264618] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.265133] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.265416] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[0.266022] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/decision.h\n'}
+[0.266166] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__functions.h\n'}
+[0.266332] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__struct.h\n'}
+[0.266483] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__type_support.h\n'}
+[0.266628] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.h\n'}
+[0.266766] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.h\n'}
+[0.266936] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.h\n'}
+[0.267031] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__functions.h\n'}
+[0.267154] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__struct.h\n'}
+[0.267331] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__type_support.h\n'}
+[0.267469] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__functions.h\n'}
+[0.267660] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__struct.h\n'}
+[0.267847] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__type_support.h\n'}
+[0.267956] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.268066] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.h\n'}
+[0.268224] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position_original.h\n'}
+[0.268452] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/walk.h\n'}
+[0.268590] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.h\n'}
+[0.268747] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.h\n'}
+[0.268876] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.h\n'}
+[0.268990] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.h\n'}
+[0.269224] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.sh\n'}
+[0.269494] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.dsv\n'}
+[0.270136] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__rosidl_typesupport_fastrtps_c.h\n'}
+[0.270321] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_c.h\n'}
+[0.270477] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__rosidl_typesupport_fastrtps_c.h\n'}
+[0.270623] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__rosidl_typesupport_fastrtps_c.h\n'}
+[0.270765] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.270883] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_c.h\n'}
+[0.271274] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[0.271986] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.272099] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.272250] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.272484] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.272628] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.272769] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.273111] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.273607] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__rosidl_typesupport_introspection_c.h\n'}
+[0.273778] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h\n'}
+[0.273934] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__rosidl_typesupport_introspection_c.h\n'}
+[0.274079] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__rosidl_typesupport_introspection_c.h\n'}
+[0.274166] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.274333] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h\n'}
+[0.274920] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/decision.hpp\n'}
+[0.275075] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__builder.hpp\n'}
+[0.275244] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__struct.hpp\n'}
+[0.275401] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__traits.hpp\n'}
+[0.275548] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp\n'}
+[0.275701] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp\n'}
+[0.275853] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp\n'}
+[0.275998] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__builder.hpp\n'}
+[0.276120] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__struct.hpp\n'}
+[0.276330] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__traits.hpp\n'}
+[0.276484] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__builder.hpp\n'}
+[0.276626] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__struct.hpp\n'}
+[0.276782] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__traits.hpp\n'}
+[0.276915] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp\n'}
+[0.277052] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp\n'}
+[0.277169] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/walk.hpp\n'}
+[0.277333] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp\n'}
+[0.277476] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp\n'}
+[0.277623] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp\n'}
+[0.277814] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.hpp\n'}
+[0.278295] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.278444] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.278590] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.278733] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.278884] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.279114] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.sh\n'}
+[0.279366] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.dsv\n'}
+[0.279625] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/__init__.py\n'}
+[0.280037] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/__init__.py\n'}
+[0.280154] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_decision.py\n'}
+[0.280393] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position.py\n'}
+[0.280521] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position_original.py\n'}
+[0.280657] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_walk.py\n'}
+[0.281043] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv/__init__.py\n'}
+[0.281210] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv/_get_position.py\n'}
+[0.281583] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.281944] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.282319] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.282611] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__python.so\n'}
+[0.282898] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl\n'}
+[0.283120] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPositionOriginal.idl\n'}
+[0.283371] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/Decision.idl\n'}
+[0.283634] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/Walk.idl\n'}
+[0.283883] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl\n'}
+[0.284068] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg\n'}
+[0.284475] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPositionOriginal.msg\n'}
+[0.284681] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/Decision.msg\n'}
+[0.284934] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/Walk.msg\n'}
+[0.285157] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv\n'}
+[0.285389] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Request.msg\n'}
+[0.285616] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Response.msg\n'}
+[0.285846] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_custom_interfaces\n'}
+[0.286068] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_custom_interfaces\n'}
+[0.286341] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.sh\n'}
+[0.286555] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.dsv\n'}
+[0.286769] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.sh\n'}
+[0.286994] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.dsv\n'}
+[0.287206] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.bash\n'}
+[0.287457] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.sh\n'}
+[0.287717] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.zsh\n'}
+[0.287934] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.dsv\n'}
+[0.288094] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv\n'}
+[0.295152] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/packages/dynamixel_sdk_custom_interfaces\n'}
+[0.295364] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[0.295549] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.295791] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.295993] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.296146] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.296410] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.296581] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.296823] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig.cmake\n'}
+[0.296997] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig-version.cmake\n'}
+[0.297185] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.xml\n'}
+[0.297424] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so\n'}
+[0.297766] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[0.298096] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so\n'}
+[0.298427] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[0.298764] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so\n'}
+[0.299916] (-) TimerEvent: {}
+[0.324082] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport.cmake\n'}
+[0.324187] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.324329] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.324410] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.324537] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[0.324616] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.324751] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cppExport.cmake\n'}
+[0.324925] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.325005] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.325140] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[0.325219] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.327648] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[0.400060] (-) TimerEvent: {}
+[0.418343] (dynamixel_sdk_custom_interfaces) JobEnded: {'identifier': 'dynamixel_sdk_custom_interfaces', 'rc': 0}
+[0.419128] (control) JobStarted: {'identifier': 'control'}
+[0.425842] (control) JobProgress: {'identifier': 'control', 'progress': 'cmake'}
+[0.426104] (control) JobProgress: {'identifier': 'control', 'progress': 'build'}
+[0.426306] (control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robo/ROS2/walk_test/build/control', '--', '-j12', '-l12'], 'cwd': '/home/robo/ROS2/walk_test/build/control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'robo'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '2023'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/robo'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1845'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=2a68500678089a91cfcd54ee62a9fc0d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/robo/ROS2/walk_test/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robo'), ('JOURNAL_STREAM', '8:53091'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/robofeipc:@/tmp/.ICE-unix/2061,unix/robofeipc:/tmp/.ICE-unix/2061'), ('INVOCATION_ID', '4963211e62514505b948a831b02f3e1a'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/85ab140b_4fb9_4a36_96a8_439c74bce5d0'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robo/ROS2/walk_test/install/control:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robo/ROS2/walk_test/build/control'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=2a68500678089a91cfcd54ee62a9fc0d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy')]), 'shell': False}
+[0.450959] (control) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.467197] (control) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.500137] (-) TimerEvent: {}
+[0.599545] (control) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.600232] (-) TimerEvent: {}
+[0.605270] (control) StdoutLine: {'line': b'-- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)\n'}
+[0.621528] (control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.624112] (control) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.700344] (-) TimerEvent: {}
+[0.714368] (control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.747961] (control) StdoutLine: {'line': b'-- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.775753] (control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.776879] (control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.800434] (-) TimerEvent: {}
+[0.890530] (control) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[0.900524] (-) TimerEvent: {}
+[0.980412] (control) StdoutLine: {'line': b'-- Found rclcpp_components: 2.4.1 (/opt/ros/foxy/share/rclcpp_components/cmake)\n'}
+[1.000618] (-) TimerEvent: {}
+[1.023252] (control) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[1.035898] (control) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[1.084861] (control) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.089541] (control) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.090038] (control) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/robo/ROS2/walk_test/src/control/include;/home/robo/ROS2/walk_test/src/control/src/minIni\n'}
+[1.090113] (control) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.094525] (control) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.094602] (control) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.095306] (control) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.096605] (control) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.097352] (control) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[1.100712] (-) TimerEvent: {}
+[1.101789] (control) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.101865] (control) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.102558] (control) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.105335] (control) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.124689] (control) StdoutLine: {'line': b'-- Generating done\n'}
+[1.126157] (control) StdoutLine: {'line': b'-- Build files have been written to: /home/robo/ROS2/walk_test/build/control\n'}
+[1.147214] (control) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target gait_publisher\x1b[0m\n'}
+[1.147346] (control) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target decision\x1b[0m\n'}
+[1.147404] (control) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target control\x1b[0m\n'}
+[1.148692] (control) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motion\x1b[0m\n'}
+[1.148915] (control) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target action\x1b[0m\n'}
+[1.158979] (control) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding CXX object CMakeFiles/decision.dir/src/dec.cpp.o\x1b[0m\n'}
+[1.161127] (control) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/gait_publisher.dir/rclcpp_components/node_main_gait_publisher.cpp.o\x1b[0m\n'}
+[1.161507] (control) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/action.dir/src/action_editor/main.cpp.o\x1b[0m\n'}
+[1.161684] (control) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o\x1b[0m\n'}
+[1.170469] (control) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o\x1b[0m\n'}
+[1.170719] (control) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/motion/AngleEstimator.cpp.o\x1b[0m\n'}
+[1.170897] (control) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/math/Matrix.cpp.o\x1b[0m\n'}
+[1.170992] (control) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/math/Plane.cpp.o\x1b[0m\n'}
+[1.171093] (control) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/motion/modules/Walking.cpp.o\x1b[0m\n'}
+[1.171216] (control) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/math/Point.cpp.o\x1b[0m\n'}
+[1.171302] (control) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/math/Vector.cpp.o\x1b[0m\n'}
+[1.172308] (control) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/math/QuadraticStateTransform.cpp.o\x1b[0m\n'}
+[1.200008] (control) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/math/MotionState.cpp.o\x1b[0m\n'}
+[1.200783] (-) TimerEvent: {}
+[1.230124] (control) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/motion/JointData.cpp.o\x1b[0m\n'}
+[1.268767] (control) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/motion/Kinematics.cpp.o\x1b[0m\n'}
+[1.272801] (control) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/motion/MotionStatus.cpp.o\x1b[0m\n'}
+[1.272996] (control) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/motion/modules/Action.cpp.o\x1b[0m\n'}
+[1.296480] (control) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/minIni/minIni.cpp.o\x1b[0m\n'}
+[1.297374] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/modules/Action.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool Robot::Action::SavePage(int, Robot::Action::PAGE*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.297531] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/modules/Action.cpp:261:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kthis \xe2\x80\x98\x1b[01m\x1b[Kif\x1b[m\x1b[K\xe2\x80\x99 clause does not guard... [\x1b[01;35m\x1b[K-Wmisleading-indentation\x1b[m\x1b[K]\n'}
+[1.297626] (control) StderrLine: {'line': b'  261 |     \x1b[01;35m\x1b[Kif\x1b[m\x1b[K( fwrite( pPage, 1, sizeof(PAGE), m_ActionFile ) != sizeof(PAGE) )\n'}
+[1.297710] (control) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[1.297793] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/modules/Action.cpp:264:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K...this statement, but the latter is misleadingly indented as if it were guarded by the \xe2\x80\x98\x1b[01m\x1b[Kif\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.297878] (control) StderrLine: {'line': b'  264 |  \x1b[01;36m\x1b[Kreturn\x1b[m\x1b[K true;\n'}
+[1.297964] (control) StderrLine: {'line': b'      |  \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.300880] (-) TimerEvent: {}
+[1.306755] (control) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/GaitMove.cpp.o\x1b[0m\n'}
+[1.360517] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid AngleEstimator::predict(double, double, double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.360710] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp:19:76:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kgyro_dyaw\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.360818] (control) StderrLine: {'line': b'   19 | void AngleEstimator::predict(double gyro_dpitch, double gyro_droll, \x1b[01;35m\x1b[Kdouble gyro_dyaw\x1b[m\x1b[K)\n'}
+[1.360913] (control) StderrLine: {'line': b'      |                                                                     \x1b[01;35m\x1b[K~~~~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.370374] (control) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/ReadConfig.cpp.o\x1b[0m\n'}
+[1.400982] (-) TimerEvent: {}
+[1.501277] (-) TimerEvent: {}
+[1.601565] (-) TimerEvent: {}
+[1.701850] (-) TimerEvent: {}
+[1.802146] (-) TimerEvent: {}
+[1.902432] (-) TimerEvent: {}
+[2.002723] (-) TimerEvent: {}
+[2.103001] (-) TimerEvent: {}
+[2.203285] (-) TimerEvent: {}
+[2.290831] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid sighandler(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.291033] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:317:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Ksig\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.291145] (control) StderrLine: {'line': b'  317 | void sighandler(\x1b[01;35m\x1b[Kint sig\x1b[m\x1b[K)\n'}
+[2.291240] (control) StderrLine: {'line': b'      |                 \x1b[01;35m\x1b[K~~~~^~~\x1b[m\x1b[K\n'}
+[2.294419] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.294596] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:382:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Kini\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K-Wunused-but-set-variable\x1b[m\x1b[K]\n'}
+[2.294695] (control) StderrLine: {'line': b'  382 |     minIni* \x1b[01;35m\x1b[Kini\x1b[m\x1b[K;\n'}
+[2.294789] (control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.303385] (-) TimerEvent: {}
+[2.403670] (-) TimerEvent: {}
+[2.438177] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid GaitMove::walk_foward_slow(bool&, bool, bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.438374] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:101:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmax_speed\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.438484] (control) StderrLine: {'line': b'  101 | void GaitMove::walk_foward_slow(bool &stop_gait, \x1b[01;35m\x1b[Kbool max_speed\x1b[m\x1b[K, bool same_moviment)\n'}
+[2.438582] (control) StderrLine: {'line': b'      |                                                  \x1b[01;35m\x1b[K~~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.439610] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid GaitMove::turn_right(bool&, bool, bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.439748] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:157:49:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmax_angle\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.439852] (control) StderrLine: {'line': b'  157 | void GaitMove::turn_right(bool &stop_gait, \x1b[01;35m\x1b[Kbool max_angle\x1b[m\x1b[K, bool same_moviment)\n'}
+[2.440007] (control) StderrLine: {'line': b'      |                                            \x1b[01;35m\x1b[K~~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.440107] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid GaitMove::turn_left(bool&, bool, bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.440206] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:169:48:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmax_angle\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.440317] (control) StderrLine: {'line': b'  169 | void GaitMove::turn_left(bool &stop_gait, \x1b[01;35m\x1b[Kbool max_angle\x1b[m\x1b[K, bool same_moviment)\n'}
+[2.440413] (control) StderrLine: {'line': b'      |                                           \x1b[01;35m\x1b[K~~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.441767] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid GaitMove::walk_backward_slow(bool&, bool, bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.441902] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:225:57:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmax_speed\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.442020] (control) StderrLine: {'line': b'  225 | void GaitMove::walk_backward_slow(bool &stop_gait, \x1b[01;35m\x1b[Kbool max_speed\x1b[m\x1b[K, bool same_moviment)\n'}
+[2.442124] (control) StderrLine: {'line': b'      |                                                    \x1b[01;35m\x1b[K~~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.503767] (-) TimerEvent: {}
+[2.524590] (control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25\x1b[m\x1b[K:\n'}
+[2.524830] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KRobot::MotionManager::MotionManager(const rclcpp::NodeOptions&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.524941] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:86:8:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KRobot::MotionManager::DEBUG_PRINT\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K-Wreorder\x1b[m\x1b[K]\n'}
+[2.525043] (control) StderrLine: {'line': b'   86 |   bool \x1b[01;35m\x1b[KDEBUG_PRINT\x1b[m\x1b[K;\n'}
+[2.525140] (control) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.525235] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:68:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  base \xe2\x80\x98\x1b[01m\x1b[Krclcpp::Node\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wreorder\x1b[m\x1b[K]\n'}
+[2.525333] (control) StderrLine: {'line': b'   68 |   rclcpp::Node("gait_publisher", options\x1b[01;35m\x1b[K)\x1b[m\x1b[K\n'}
+[2.525427] (control) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[2.525519] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:60:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K-Wreorder\x1b[m\x1b[K]\n'}
+[2.525614] (control) StderrLine: {'line': b'   60 | \x1b[01;35m\x1b[KMotionManager\x1b[m\x1b[K::MotionManager(const rclcpp::NodeOptions & options) :\n'}
+[2.525707] (control) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.548875] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.549072] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:100:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KIMU_GYRO_X\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.549181] (control) StderrLine: {'line': b'  100 |         float \x1b[01;35m\x1b[KIMU_GYRO_X\x1b[m\x1b[K = -imu_msg_->angular_velocity.x/10;\n'}
+[2.549280] (control) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.549375] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:101:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KIMU_GYRO_Y\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.549472] (control) StderrLine: {'line': b'  101 |         float \x1b[01;35m\x1b[KIMU_GYRO_Y\x1b[m\x1b[K  = -imu_msg_->angular_velocity.y/10;\n'}
+[2.549568] (control) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.551068] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Robot::MotionManager::topic_callback_walk(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Walk_<std::allocator<void> > >) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.551229] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:42:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ forbids converting a string constant to \xe2\x80\x98\x1b[01m\x1b[Kchar*\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wwrite-strings\x1b[m\x1b[K]\n'}
+[2.551334] (control) StderrLine: {'line': b'   42 | #define MOTION_FILE_PATH    \x1b[01;35m\x1b[K"/home/robo/ROS2/walk_test/src/control/Data/motion_4096.bin"\x1b[m\x1b[K\n'}
+[2.551432] (control) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.551615] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:42:29:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KMOTION_FILE_PATH\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.551785] (control) StderrLine: {'line': b'   42 | #define MOTION_FILE_PATH    \x1b[01;36m\x1b[K"/home/robo/ROS2/walk_test/src/control/Data/motion_4096.bin"\x1b[m\x1b[K\n'}
+[2.551887] (control) StderrLine: {'line': b'      |                             \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.551982] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool Robot::MotionManager::Initialize(bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.552076] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:178:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.552173] (control) StderrLine: {'line': b'  178 |  int \x1b[01;35m\x1b[Kvalue\x1b[m\x1b[K, error;\n'}
+[2.552278] (control) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.552373] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:178:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kerror\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.552479] (control) StderrLine: {'line': b'  178 |  int value, \x1b[01;35m\x1b[Kerror\x1b[m\x1b[K;\n'}
+[2.552575] (control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.552667] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool Robot::MotionManager::Reinitialize()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.552756] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:264:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.552847] (control) StderrLine: {'line': b'  264 |  int \x1b[01;35m\x1b[Kvalue\x1b[m\x1b[K, error;\n'}
+[2.552940] (control) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.553032] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:264:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kerror\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.553129] (control) StderrLine: {'line': b'  264 |  int value, \x1b[01;35m\x1b[Kerror\x1b[m\x1b[K;\n'}
+[2.553221] (control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.562277] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Robot::MotionManager::Process()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.562481] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:430:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kthis \xe2\x80\x98\x1b[01m\x1b[Kif\x1b[m\x1b[K\xe2\x80\x99 clause does not guard... [\x1b[01;35m\x1b[K-Wmisleading-indentation\x1b[m\x1b[K]\n'}
+[2.562590] (control) StderrLine: {'line': b'  430 |     \x1b[01;35m\x1b[Kif\x1b[m\x1b[K(MotionManager::GetInstance()->m_ProcessEnable == false || MotionManager::GetInstance()->m_IsRunning == true)\n'}
+[2.562685] (control) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.562780] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:433:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K...this statement, but the latter is misleadingly indented as if it were guarded by the \xe2\x80\x98\x1b[01m\x1b[Kif\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.562877] (control) StderrLine: {'line': b'  433 |  \x1b[01;36m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_IsRunning = true;\n'}
+[2.562969] (control) StderrLine: {'line': b'      |  \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.569137] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:490:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K-Wunused-but-set-variable\x1b[m\x1b[K]\n'}
+[2.569371] (control) StderrLine: {'line': b'  490 |   int \x1b[01;35m\x1b[Kparam\x1b[m\x1b[K[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];\n'}
+[2.569475] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.569569] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:491:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kjoint_num\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.569671] (control) StderrLine: {'line': b'  491 |   int \x1b[01;35m\x1b[Kjoint_num\x1b[m\x1b[K = 0;\n'}
+[2.569767] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.603865] (-) TimerEvent: {}
+[2.704137] (-) TimerEvent: {}
+[2.801379] (control) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking CXX executable action\x1b[0m\n'}
+[2.804264] (-) TimerEvent: {}
+[2.897224] (control) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/action.dir/src/action_editor/main.cpp.o: in function `main':\n"}
+[2.897581] (control) StderrLine: {'line': b"main.cpp:(.text+0x415): undefined reference to `DrawIntro()'\n"}
+[2.897774] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text+0x46f): undefined reference to `DrawEnding()'\n"}
+[2.897979] (control) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/action.dir/src/action_editor/main.cpp.o: in function `MinimalPublisher::process()':\n"}
+[2.898160] (control) StderrLine: {'line': b"main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x33): undefined reference to `_getch()'\n"}
+[2.898490] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x49): undefined reference to `_getch()'\n"}
+[2.898752] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x63): undefined reference to `_getch()'\n"}
+[2.898978] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x79): undefined reference to `MoveUpCursor()'\n"}
+[2.899097] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x8e): undefined reference to `MoveDownCursor()'\n"}
+[2.899160] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0xa3): undefined reference to `MoveLeftCursor()'\n"}
+[2.899220] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0xbc): undefined reference to `MoveRightCursor()'\n"}
+[2.899299] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0xd6): undefined reference to `UpDownValue(int)'\n"}
+[2.899375] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0xf0): undefined reference to `UpDownValue(int)'\n"}
+[2.899428] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x10a): undefined reference to `UpDownValue(int)'\n"}
+[2.899485] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x124): undefined reference to `UpDownValue(int)'\n"}
+[2.899533] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x139): undefined reference to `ToggleTorque()'\n"}
+[2.899580] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x1f7): undefined reference to `BeginCommandMode()'\n"}
+[2.899627] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x229): undefined reference to `_getch()'\n"}
+[2.899673] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x443): undefined reference to `AskSave()'\n"}
+[2.899719] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x4fd): undefined reference to `DrawPage()'\n"}
+[2.899767] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x521): undefined reference to `HelpCmd()'\n"}
+[2.899815] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x545): undefined reference to `NextCmd()'\n"}
+[2.899863] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x569): undefined reference to `PrevCmd()'\n"}
+[2.899910] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x58d): undefined reference to `TimeCmd()'\n"}
+[2.899958] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x5b1): undefined reference to `SpeedCmd()'\n"}
+[2.900006] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x5e6): undefined reference to `PageCmd(int)'\n"}
+[2.900053] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x5f7): undefined reference to `PrintCmd(char const*)'\n"}
+[2.900099] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x61b): undefined reference to `PlayCmd()'\n"}
+[2.900150] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x653): undefined reference to `SetValue(unsigned int)'\n"}
+[2.900215] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x664): undefined reference to `PrintCmd(char const*)'\n"}
+[2.900278] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x688): undefined reference to `ListCmd()'\n"}
+[2.900327] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x6c0): undefined reference to `OnOffCmd(bool, int, int*)'\n"}
+[2.900378] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x6f8): undefined reference to `OnOffCmd(bool, int, int*)'\n"}
+[2.900452] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x72d): undefined reference to `WriteStepCmd(int)'\n"}
+[2.900514] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x73e): undefined reference to `PrintCmd(char const*)'\n"}
+[2.900586] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x773): undefined reference to `DeleteStepCmd(int)'\n"}
+[2.900634] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x784): undefined reference to `PrintCmd(char const*)'\n"}
+[2.900681] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x7b6): undefined reference to `InsertStepCmd(int)'\n"}
+[2.900728] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x7c8): undefined reference to `InsertStepCmd(int)'\n"}
+[2.900775] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x805): undefined reference to `MoveStepCmd(int, int)'\n"}
+[2.900822] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x816): undefined reference to `PrintCmd(char const*)'\n"}
+[2.900871] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x84b): undefined reference to `CopyCmd(int)'\n"}
+[2.900923] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x85c): undefined reference to `PrintCmd(char const*)'\n"}
+[2.900974] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x880): undefined reference to `NewCmd()'\n"}
+[2.901021] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x8b5): undefined reference to `GoCmd(int)'\n"}
+[2.901067] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x8c6): undefined reference to `PrintCmd(char const*)'\n"}
+[2.901114] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x8ea): undefined reference to `SaveCmd()'\n"}
+[2.901162] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x90b): undefined reference to `NameCmd()'\n"}
+[2.901209] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x92c): undefined reference to `goInitPage()'\n"}
+[2.901257] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x931): undefined reference to `PlayCmd()'\n"}
+[2.901305] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x936): undefined reference to `backToPage()'\n"}
+[2.901352] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x957): undefined reference to `readServo()'\n"}
+[2.901400] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x965): undefined reference to `PrintCmd(char const*)'\n"}
+[2.901450] (control) StderrLine: {'line': b"/usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x96a): undefined reference to `EndCommandMode()'\n"}
+[2.901498] (control) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[2.901545] (control) StderrLine: {'line': b'make[2]: *** [CMakeFiles/action.dir/build.make:136: action] Error 1\n'}
+[2.901595] (control) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:248: CMakeFiles/action.dir/all] Error 2\n'}
+[2.901642] (control) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[2.904332] (-) TimerEvent: {}
+[3.004541] (-) TimerEvent: {}
+[3.104836] (-) TimerEvent: {}
+[3.205092] (-) TimerEvent: {}
+[3.305361] (-) TimerEvent: {}
+[3.405605] (-) TimerEvent: {}
+[3.453736] (control) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking CXX executable gait_publisher\x1b[0m\n'}
+[3.505731] (-) TimerEvent: {}
+[3.556955] (control) StdoutLine: {'line': b'[ 88%] Built target gait_publisher\n'}
+[3.605851] (-) TimerEvent: {}
+[3.677448] (control) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable decision\x1b[0m\n'}
+[3.705951] (-) TimerEvent: {}
+[3.802615] (control) StdoutLine: {'line': b'[ 92%] Built target decision\n'}
+[3.806047] (-) TimerEvent: {}
+[3.906277] (-) TimerEvent: {}
+[4.006529] (-) TimerEvent: {}
+[4.106798] (-) TimerEvent: {}
+[4.207064] (-) TimerEvent: {}
+[4.307292] (-) TimerEvent: {}
+[4.407550] (-) TimerEvent: {}
+[4.507822] (-) TimerEvent: {}
+[4.608087] (-) TimerEvent: {}
+[4.708358] (-) TimerEvent: {}
+[4.808621] (-) TimerEvent: {}
+[4.908882] (-) TimerEvent: {}
+[5.009136] (-) TimerEvent: {}
+[5.109393] (-) TimerEvent: {}
+[5.209654] (-) TimerEvent: {}
+[5.309897] (-) TimerEvent: {}
+[5.410141] (-) TimerEvent: {}
+[5.510398] (-) TimerEvent: {}
+[5.610652] (-) TimerEvent: {}
+[5.710898] (-) TimerEvent: {}
+[5.811153] (-) TimerEvent: {}
+[5.911401] (-) TimerEvent: {}
+[6.011656] (-) TimerEvent: {}
+[6.111899] (-) TimerEvent: {}
+[6.212157] (-) TimerEvent: {}
+[6.312409] (-) TimerEvent: {}
+[6.412677] (-) TimerEvent: {}
+[6.512918] (-) TimerEvent: {}
+[6.613157] (-) TimerEvent: {}
+[6.713400] (-) TimerEvent: {}
+[6.813642] (-) TimerEvent: {}
+[6.868029] (control) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking CXX executable control\x1b[0m\n'}
+[6.913761] (-) TimerEvent: {}
+[7.014014] (-) TimerEvent: {}
+[7.114258] (-) TimerEvent: {}
+[7.130433] (control) StdoutLine: {'line': b'[ 96%] Built target control\n'}
+[7.214381] (-) TimerEvent: {}
+[7.314631] (-) TimerEvent: {}
+[7.414876] (-) TimerEvent: {}
+[7.508990] (control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libmotion.so\x1b[0m\n'}
+[7.514968] (-) TimerEvent: {}
+[7.615174] (-) TimerEvent: {}
+[7.715396] (-) TimerEvent: {}
+[7.792557] (control) StdoutLine: {'line': b'[100%] Built target motion\n'}
+[7.793199] (control) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[7.794682] (control) CommandEnded: {'returncode': 2}
+[7.815493] (-) TimerEvent: {}
+[7.845892] (control) JobEnded: {'identifier': 'control', 'rc': 2}
+[7.856320] (-) EventReactorShutdown: {}

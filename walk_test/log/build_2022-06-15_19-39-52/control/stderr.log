@@ -1,0 +1,16 @@
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/JointData.cpp.o: in function `Robot::JointData::SetEnable(int, bool, bool)':
+JointData.cpp:(.text+0x160): undefined reference to `Robot::MotionManager::SetJointDisable(int)'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/JointData.cpp.o: in function `Robot::MotionManager::GetInstance()':
+JointData.cpp:(.text._ZN5Robot13MotionManager11GetInstanceEv[_ZN5Robot13MotionManager11GetInstanceEv]+0xb): undefined reference to `Robot::MotionManager::m_UniqueInstance'
+/usr/bin/ld: CMakeFiles/action.dir/src/GaitMove.cpp.o: in function `GaitMove::GaitMove(minIni*)':
+GaitMove.cpp:(.text+0x49b): undefined reference to `Robot::MotionManager::LoadINISettings(minIni*)'
+/usr/bin/ld: GaitMove.cpp:(.text+0x4b3): undefined reference to `Robot::MotionManager::AddModule(Robot::MotionModule*)'
+/usr/bin/ld: CMakeFiles/action.dir/src/GaitMove.cpp.o: in function `GaitMove::move_gait(float, float, float, bool&, ReadConfig*)':
+GaitMove.cpp:(.text+0x902): undefined reference to `Robot::MotionManager::SetEnable(bool)'
+/usr/bin/ld: GaitMove.cpp:(.text+0xa5c): undefined reference to `Robot::MotionManager::SetEnable(bool)'
+/usr/bin/ld: CMakeFiles/action.dir/src/GaitMove.cpp.o: in function `GaitMove::robot_stop(bool&)':
+GaitMove.cpp:(.text+0xd52): undefined reference to `Robot::MotionManager::SetEnable(bool)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/action.dir/build.make:376: action] Error 1
+make[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/action.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

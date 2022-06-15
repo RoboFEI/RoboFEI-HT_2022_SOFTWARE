@@ -1,8 +1,8 @@
-# Install script for directory: /home/robofei/Desktop/ROS2/walk_test/src/control
+# Install script for directory: /home/robo/ROS2/walk_test/src/control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robofei/Desktop/ROS2/walk_test/install/control")
+  set(CMAKE_INSTALL_PREFIX "/home/robo/ROS2/walk_test/install/control")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/robofei/Desktop/ROS2/walk_test/build/control/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/robo/ROS2/walk_test/build/control/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -49,5 +49,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/robofei/Desktop/ROS2/walk_test/build/control/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/robo/ROS2/walk_test/build/control/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

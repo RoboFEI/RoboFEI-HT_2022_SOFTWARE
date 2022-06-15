@@ -1,0 +1,1042 @@
+[0.000000] (-) TimerEvent: {}
+[0.000081] (dynamixel_sdk_custom_interfaces) JobQueued: {'identifier': 'dynamixel_sdk_custom_interfaces', 'dependencies': OrderedDict()}
+[0.000149] (control) JobQueued: {'identifier': 'control', 'dependencies': OrderedDict([('dynamixel_sdk_custom_interfaces', '/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces')])}
+[0.000199] (dynamixel_sdk_custom_interfaces) JobStarted: {'identifier': 'dynamixel_sdk_custom_interfaces'}
+[0.007881] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'cmake'}
+[0.008938] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'build'}
+[0.009153] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces', '--', '-j12', '-l12'], 'cwd': '/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'robo'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '2023'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robo/ROS2/walk_test/install/control/lib:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/robo'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1845'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=2a68500678089a91cfcd54ee62a9fc0d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/robo/ROS2/walk_test/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robo'), ('JOURNAL_STREAM', '8:53091'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/robofeipc:@/tmp/.ICE-unix/2061,unix/robofeipc:/tmp/.ICE-unix/2061'), ('INVOCATION_ID', '4963211e62514505b948a831b02f3e1a'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/85ab140b_4fb9_4a36_96a8_439c74bce5d0'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robo/ROS2/walk_test/install/control:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=2a68500678089a91cfcd54ee62a9fc0d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robo/ROS2/walk_test/install/control:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy')]), 'shell': False}
+[0.051967] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[  1%] Built target dynamixel_sdk_custom_interfaces__cpp\n'}
+[0.052906] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 12%] Built target dynamixel_sdk_custom_interfaces__rosidl_generator_c\n'}
+[0.069518] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 46%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp\n'}
+[0.069723] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 46%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.069785] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 46%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c\n'}
+[0.069841] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 57%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.072449] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 68%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.092955] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 79%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.099411] (-) TimerEvent: {}
+[0.107706] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 79%] Built target dynamixel_sdk_custom_interfaces\n'}
+[0.124051] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 80%] Built target dynamixel_sdk_custom_interfaces__py\n'}
+[0.145903] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[ 90%] Built target dynamixel_sdk_custom_interfaces__python\n'}
+[0.165683] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.165860] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.165951] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'[100%] Built target dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.174445] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[0.199517] (-) TimerEvent: {}
+[0.248495] (dynamixel_sdk_custom_interfaces) JobProgress: {'identifier': 'dynamixel_sdk_custom_interfaces', 'progress': 'install'}
+[0.257344] (dynamixel_sdk_custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces'], 'cwd': '/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'robo'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '2023'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robo/ROS2/walk_test/install/control/lib:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/robo'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1845'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=2a68500678089a91cfcd54ee62a9fc0d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/robo/ROS2/walk_test/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robo'), ('JOURNAL_STREAM', '8:53091'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/robofeipc:@/tmp/.ICE-unix/2061,unix/robofeipc:/tmp/.ICE-unix/2061'), ('INVOCATION_ID', '4963211e62514505b948a831b02f3e1a'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/85ab140b_4fb9_4a36_96a8_439c74bce5d0'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robo/ROS2/walk_test/install/control:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=2a68500678089a91cfcd54ee62a9fc0d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robo/ROS2/walk_test/install/control:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy')]), 'shell': False}
+[0.263965] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.264478] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.264741] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/dynamixel_sdk_custom_interfaces\n'}
+[0.265333] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/decision.h\n'}
+[0.265494] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__functions.h\n'}
+[0.265637] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__struct.h\n'}
+[0.265751] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__type_support.h\n'}
+[0.265888] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__functions.h\n'}
+[0.266075] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.h\n'}
+[0.266211] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__type_support.h\n'}
+[0.266328] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__functions.h\n'}
+[0.266475] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__struct.h\n'}
+[0.266688] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__type_support.h\n'}
+[0.266835] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__functions.h\n'}
+[0.267006] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__struct.h\n'}
+[0.267120] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__type_support.h\n'}
+[0.267288] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.267446] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.h\n'}
+[0.267571] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position_original.h\n'}
+[0.267683] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/walk.h\n'}
+[0.267849] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__functions.h\n'}
+[0.267998] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.h\n'}
+[0.268169] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__type_support.h\n'}
+[0.268304] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.h\n'}
+[0.268532] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.sh\n'}
+[0.268753] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/library_path.dsv\n'}
+[0.269419] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__rosidl_typesupport_fastrtps_c.h\n'}
+[0.269596] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_c.h\n'}
+[0.269739] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__rosidl_typesupport_fastrtps_c.h\n'}
+[0.269869] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__rosidl_typesupport_fastrtps_c.h\n'}
+[0.270080] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.270209] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_c.h\n'}
+[0.270559] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[0.271248] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.271441] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.271574] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.271711] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.271855] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.272032] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.272368] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.272892] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__rosidl_typesupport_introspection_c.h\n'}
+[0.273050] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h\n'}
+[0.273165] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__rosidl_typesupport_introspection_c.h\n'}
+[0.273337] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__rosidl_typesupport_introspection_c.h\n'}
+[0.273511] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.273658] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h\n'}
+[0.274273] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/decision.hpp\n'}
+[0.274444] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__builder.hpp\n'}
+[0.274562] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__struct.hpp\n'}
+[0.274709] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__traits.hpp\n'}
+[0.274877] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp\n'}
+[0.275021] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp\n'}
+[0.275167] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp\n'}
+[0.275355] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__builder.hpp\n'}
+[0.275478] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__struct.hpp\n'}
+[0.275596] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__traits.hpp\n'}
+[0.275796] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__builder.hpp\n'}
+[0.275937] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__struct.hpp\n'}
+[0.276056] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__traits.hpp\n'}
+[0.276195] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp\n'}
+[0.276360] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp\n'}
+[0.276500] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/walk.hpp\n'}
+[0.276643] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__builder.hpp\n'}
+[0.276808] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__struct.hpp\n'}
+[0.276958] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__traits.hpp\n'}
+[0.277096] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/get_position.hpp\n'}
+[0.277597] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.277744] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.277892] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position_original__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.278119] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.278243] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.278520] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.sh\n'}
+[0.278693] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/pythonpath.dsv\n'}
+[0.278942] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/__init__.py\n'}
+[0.279382] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/__init__.py\n'}
+[0.279581] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_decision.py\n'}
+[0.279670] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position.py\n'}
+[0.279836] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_set_position_original.py\n'}
+[0.279982] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/msg/_walk.py\n'}
+[0.280365] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv/__init__.py\n'}
+[0.280541] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/srv/_get_position.py\n'}
+[0.280890] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.281256] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.281676] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages/dynamixel_sdk_custom_interfaces/dynamixel_sdk_custom_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.282049] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__python.so\n'}
+[0.282298] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.idl\n'}
+[0.282552] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPositionOriginal.idl\n'}
+[0.282770] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/Decision.idl\n'}
+[0.283019] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/Walk.idl\n'}
+[0.283235] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl\n'}
+[0.283430] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPosition.msg\n'}
+[0.283650] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/SetPositionOriginal.msg\n'}
+[0.283893] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/Decision.msg\n'}
+[0.284113] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/msg/Walk.msg\n'}
+[0.284409] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv\n'}
+[0.284578] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Request.msg\n'}
+[0.284821] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/srv/GetPosition_Response.msg\n'}
+[0.285030] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_custom_interfaces\n'}
+[0.285361] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_custom_interfaces\n'}
+[0.285592] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.sh\n'}
+[0.285805] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/ament_prefix_path.dsv\n'}
+[0.286027] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.sh\n'}
+[0.286298] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/environment/path.dsv\n'}
+[0.286520] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.bash\n'}
+[0.286737] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.sh\n'}
+[0.286975] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.zsh\n'}
+[0.287199] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/local_setup.dsv\n'}
+[0.287353] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv\n'}
+[0.294465] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/ament_index/resource_index/packages/dynamixel_sdk_custom_interfaces\n'}
+[0.294649] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[0.294924] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.295143] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.295381] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.295599] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.295835] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.296016] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.296299] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig.cmake\n'}
+[0.296421] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfacesConfig-version.cmake\n'}
+[0.296612] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.xml\n'}
+[0.296872] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so\n'}
+[0.297238] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[0.297599] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so\n'}
+[0.297956] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[0.298356] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so\n'}
+[0.299557] (-) TimerEvent: {}
+[0.322642] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport.cmake\n'}
+[0.322802] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.322956] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.323034] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.323168] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[0.323246] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.323366] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_generator_cppExport.cmake\n'}
+[0.323515] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.323668] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.323759] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[0.323812] (dynamixel_sdk_custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake/dynamixel_sdk_custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.325268] (dynamixel_sdk_custom_interfaces) CommandEnded: {'returncode': 0}
+[0.399684] (-) TimerEvent: {}
+[0.433705] (dynamixel_sdk_custom_interfaces) JobEnded: {'identifier': 'dynamixel_sdk_custom_interfaces', 'rc': 0}
+[0.434156] (control) JobStarted: {'identifier': 'control'}
+[0.443107] (control) JobProgress: {'identifier': 'control', 'progress': 'cmake'}
+[0.445013] (control) JobProgress: {'identifier': 'control', 'progress': 'build'}
+[0.445159] (control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robo/ROS2/walk_test/build/control', '--', '-j12', '-l12'], 'cwd': '/home/robo/ROS2/walk_test/build/control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'robo'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '2023'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/robo'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1845'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=2a68500678089a91cfcd54ee62a9fc0d'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/robo/ROS2/walk_test/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robo'), ('JOURNAL_STREAM', '8:53091'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/robofeipc:@/tmp/.ICE-unix/2061,unix/robofeipc:/tmp/.ICE-unix/2061'), ('INVOCATION_ID', '4963211e62514505b948a831b02f3e1a'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/85ab140b_4fb9_4a36_96a8_439c74bce5d0'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robo/ROS2/walk_test/install/control:/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robo/ROS2/walk_test/build/control'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=2a68500678089a91cfcd54ee62a9fc0d'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy')]), 'shell': False}
+[0.468616] (control) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.487398] (control) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.499768] (-) TimerEvent: {}
+[0.600017] (-) TimerEvent: {}
+[0.621123] (control) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.626837] (control) StdoutLine: {'line': b'-- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)\n'}
+[0.643288] (control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.645891] (control) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.700125] (-) TimerEvent: {}
+[0.736580] (control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.770142] (control) StdoutLine: {'line': b'-- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.797996] (control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.799083] (control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.800217] (-) TimerEvent: {}
+[0.900395] (-) TimerEvent: {}
+[0.911220] (control) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[1.000494] (-) TimerEvent: {}
+[1.001213] (control) StdoutLine: {'line': b'-- Found rclcpp_components: 2.4.1 (/opt/ros/foxy/share/rclcpp_components/cmake)\n'}
+[1.044146] (control) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[1.057099] (control) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[1.100576] (-) TimerEvent: {}
+[1.105181] (control) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.109912] (control) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.110465] (control) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/robo/ROS2/walk_test/src/control/include;/home/robo/ROS2/walk_test/src/control/src/minIni\n'}
+[1.110544] (control) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.114984] (control) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.115064] (control) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.115769] (control) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.117059] (control) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.117832] (control) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[1.122327] (control) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.122406] (control) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.123111] (control) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.125841] (control) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.145630] (control) StdoutLine: {'line': b'-- Generating done\n'}
+[1.147291] (control) StdoutLine: {'line': b'-- Build files have been written to: /home/robo/ROS2/walk_test/build/control\n'}
+[1.167579] (control) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target action\x1b[0m\n'}
+[1.168062] (control) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target control\x1b[0m\n'}
+[1.169622] (control) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target motion\x1b[0m\n'}
+[1.181445] (control) StdoutLine: {'line': b'[ 14%] Built target decision\n'}
+[1.181585] (control) StdoutLine: {'line': b'[ 14%] Built target gait_publisher\n'}
+[1.191315] (control) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o\x1b[0m\n'}
+[1.192690] (control) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/action.dir/src/action_editor/main.cpp.o\x1b[0m\n'}
+[1.192808] (control) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/action.dir/src/minIni/minIni.cpp.o\x1b[0m\n'}
+[1.194608] (control) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o\x1b[0m\n'}
+[1.200680] (-) TimerEvent: {}
+[1.202712] (control) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/motion/AngleEstimator.cpp.o\x1b[0m\n'}
+[1.202911] (control) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o\x1b[0m\n'}
+[1.203057] (control) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/motion/modules/Walking.cpp.o\x1b[0m\n'}
+[1.203179] (control) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/motion/JointData.cpp.o\x1b[0m\n'}
+[1.203277] (control) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/minIni/minIni.cpp.o\x1b[0m\n'}
+[1.203764] (control) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/ReadConfig.cpp.o\x1b[0m\n'}
+[1.203932] (control) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/motion.dir/src/GaitMove.cpp.o\x1b[0m\n'}
+[1.300781] (-) TimerEvent: {}
+[1.393646] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid AngleEstimator::predict(double, double, double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.393884] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp:19:76:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kgyro_dyaw\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[1.394031] (control) StderrLine: {'line': b'   19 | void AngleEstimator::predict(double gyro_dpitch, double gyro_droll, \x1b[01;35m\x1b[Kdouble gyro_dyaw\x1b[m\x1b[K)\n'}
+[1.394135] (control) StderrLine: {'line': b'      |                                                                     \x1b[01;35m\x1b[K~~~~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[1.400881] (-) TimerEvent: {}
+[1.501269] (-) TimerEvent: {}
+[1.601526] (-) TimerEvent: {}
+[1.701807] (-) TimerEvent: {}
+[1.754582] (control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:5\x1b[m\x1b[K:\n'}
+[1.754945] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/char_array.h:41:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.755076] (control) StderrLine: {'line': b'   41 |   size_t \x1b[01;31m\x1b[Kbuffer_capacity\x1b[m\x1b[K;\n'}
+[1.755165] (control) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.755487] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/char_array.h:41:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.755592] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/char_array.h:74:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.755684] (control) StderrLine: {'line': b'   74 |   size_t \x1b[01;31m\x1b[Kbuffer_capacity\x1b[m\x1b[K,\n'}
+[1.755772] (control) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.755860] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/char_array.h:74:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.755949] (control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types.h:24\x1b[m\x1b[K,\n'}
+[1.756036] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/time.h:26\x1b[m\x1b[K,\n'}
+[1.756123] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/logging.h:25\x1b[m\x1b[K,\n'}
+[1.756210] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rmw/types.h:28\x1b[m\x1b[K,\n'}
+[1.756299] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rcl/types.h:18\x1b[m\x1b[K,\n'}
+[1.756388] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rcl/arguments.h:20\x1b[m\x1b[K,\n'}
+[1.756476] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rcl/context.h:26\x1b[m\x1b[K,\n'}
+[1.756565] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rcl/guard_condition.h:24\x1b[m\x1b[K,\n'}
+[1.756654] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:29\x1b[m\x1b[K,\n'}
+[1.756743] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.756832] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.756922] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.757009] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/include/cmd_process.h:5\x1b[m\x1b[K,\n'}
+[1.757107] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:8\x1b[m\x1b[K:\n'}
+[1.757197] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/char_array.h:72:24:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.757288] (control) StderrLine: {'line': b'   72 | rcutils_char_array_init\x1b[01;36m\x1b[K(\x1b[m\x1b[K\n'}
+[1.757378] (control) StderrLine: {'line': b'      |                        \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.757465] (control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:5\x1b[m\x1b[K:\n'}
+[1.757554] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/char_array.h:74:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinitializer provided for function\n'}
+[1.757642] (control) StderrLine: {'line': b'   74 |   size_t \x1b[01;31m\x1b[Kbuffer_capacity\x1b[m\x1b[K,\n'}
+[1.757733] (control) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.757821] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/char_array.h:74:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K,\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.757916] (control) StderrLine: {'line': b'   74 |   size_t \x1b[01;31m\x1b[Kbuffer_capacity\x1b[m\x1b[K,\n'}
+[1.758017] (control) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.758110] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:33:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.758209] (control) StderrLine: {'line': b'   33 |   size_t \x1b[01;31m\x1b[Kbuffer_capacity\x1b[m\x1b[K;\n'}
+[1.758295] (control) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.758379] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:33:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K*\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.758468] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:65:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.758564] (control) StderrLine: {'line': b'   65 |   size_t \x1b[01;31m\x1b[Kbuffer_capacity\x1b[m\x1b[K,\n'}
+[1.758652] (control) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.758738] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:65:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.758825] (control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types.h:29\x1b[m\x1b[K,\n'}
+[1.758912] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/time.h:26\x1b[m\x1b[K,\n'}
+[1.758999] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/logging.h:25\x1b[m\x1b[K,\n'}
+[1.759084] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rmw/types.h:28\x1b[m\x1b[K,\n'}
+[1.759168] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rcl/types.h:18\x1b[m\x1b[K,\n'}
+[1.759260] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rcl/arguments.h:20\x1b[m\x1b[K,\n'}
+[1.759354] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rcl/context.h:26\x1b[m\x1b[K,\n'}
+[1.759441] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rcl/guard_condition.h:24\x1b[m\x1b[K,\n'}
+[1.759529] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:29\x1b[m\x1b[K,\n'}
+[1.759616] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.759702] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.759788] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.759877] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/include/cmd_process.h:5\x1b[m\x1b[K,\n'}
+[1.759967] (control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:8\x1b[m\x1b[K:\n'}
+[1.760056] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:63:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.760145] (control) StderrLine: {'line': b'   63 | rcutils_uint8_array_init\x1b[01;36m\x1b[K(\x1b[m\x1b[K\n'}
+[1.760233] (control) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[1.760321] (control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:5\x1b[m\x1b[K:\n'}
+[1.760410] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:65:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinitializer provided for function\n'}
+[1.760499] (control) StderrLine: {'line': b'   65 |   size_t \x1b[01;31m\x1b[Kbuffer_capacity\x1b[m\x1b[K,\n'}
+[1.760587] (control) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.760675] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcutils/types/uint8_array.h:65:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K,\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.760765] (control) StderrLine: {'line': b'   65 |   size_t \x1b[01;31m\x1b[Kbuffer_capacity\x1b[m\x1b[K,\n'}
+[1.760851] (control) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.801910] (-) TimerEvent: {}
+[1.902207] (-) TimerEvent: {}
+[2.002485] (-) TimerEvent: {}
+[2.102768] (-) TimerEvent: {}
+[2.203046] (-) TimerEvent: {}
+[2.303320] (-) TimerEvent: {}
+[2.311350] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid sighandler(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.311548] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:318:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Ksig\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.311656] (control) StderrLine: {'line': b'  318 | void sighandler(\x1b[01;35m\x1b[Kint sig\x1b[m\x1b[K)\n'}
+[2.311751] (control) StderrLine: {'line': b'      |                 \x1b[01;35m\x1b[K~~~~^~~\x1b[m\x1b[K\n'}
+[2.314727] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.314930] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:383:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Kini\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K-Wunused-but-set-variable\x1b[m\x1b[K]\n'}
+[2.315039] (control) StderrLine: {'line': b'  383 |     minIni* \x1b[01;35m\x1b[Kini\x1b[m\x1b[K;\n'}
+[2.315131] (control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.334516] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid GaitMove::walk_foward_slow(bool&, bool, bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.334717] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:101:55:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmax_speed\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.334825] (control) StderrLine: {'line': b'  101 | void GaitMove::walk_foward_slow(bool &stop_gait, \x1b[01;35m\x1b[Kbool max_speed\x1b[m\x1b[K, bool same_moviment)\n'}
+[2.334919] (control) StderrLine: {'line': b'      |                                                  \x1b[01;35m\x1b[K~~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.335623] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid GaitMove::turn_right(bool&, bool, bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.335741] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:157:49:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmax_angle\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.335850] (control) StderrLine: {'line': b'  157 | void GaitMove::turn_right(bool &stop_gait, \x1b[01;35m\x1b[Kbool max_angle\x1b[m\x1b[K, bool same_moviment)\n'}
+[2.336004] (control) StderrLine: {'line': b'      |                                            \x1b[01;35m\x1b[K~~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.336101] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid GaitMove::turn_left(bool&, bool, bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.336196] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:169:48:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmax_angle\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.336292] (control) StderrLine: {'line': b'  169 | void GaitMove::turn_left(bool &stop_gait, \x1b[01;35m\x1b[Kbool max_angle\x1b[m\x1b[K, bool same_moviment)\n'}
+[2.336385] (control) StderrLine: {'line': b'      |                                           \x1b[01;35m\x1b[K~~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.337393] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid GaitMove::walk_backward_slow(bool&, bool, bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.337512] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:225:57:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmax_speed\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.337598] (control) StderrLine: {'line': b'  225 | void GaitMove::walk_backward_slow(bool &stop_gait, \x1b[01;35m\x1b[Kbool max_speed\x1b[m\x1b[K, bool same_moviment)\n'}
+[2.337684] (control) StderrLine: {'line': b'      |                                                    \x1b[01;35m\x1b[K~~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.403417] (-) TimerEvent: {}
+[2.406930] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:24:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.407337] (control) StderrLine: {'line': b'   24 | const std::string azul = \x1b[01;35m\x1b[K"\\e[0;36m"\x1b[m\x1b[K;\n'}
+[2.407503] (control) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.407603] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:25:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.407700] (control) StderrLine: {'line': b'   25 | const std::string azulE = \x1b[01;35m\x1b[K"\\e[0;34m"\x1b[m\x1b[K;\n'}
+[2.407793] (control) StderrLine: {'line': b'      |                           \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.407882] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:26:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.407973] (control) StderrLine: {'line': b'   26 | const std::string amare = \x1b[01;35m\x1b[K"\\e[0;33m"\x1b[m\x1b[K;\n'}
+[2.408062] (control) StderrLine: {'line': b'      |                           \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.408154] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:27:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.408242] (control) StderrLine: {'line': b'   27 | const std::string verde = \x1b[01;35m\x1b[K"\\e[0;32m"\x1b[m\x1b[K;\n'}
+[2.408328] (control) StderrLine: {'line': b'      |                           \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.408418] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:28:25:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.408557] (control) StderrLine: {'line': b'   28 | const std::string red = \x1b[01;35m\x1b[K"\\e[0;31m"\x1b[m\x1b[K;\n'}
+[2.408648] (control) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.408739] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:29:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.408827] (control) StderrLine: {'line': b'   29 | const std::string gray = \x1b[01;35m\x1b[K"\\e[0;37m"\x1b[m\x1b[K;\n'}
+[2.408916] (control) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.409017] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:30:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.409107] (control) StderrLine: {'line': b'   30 | const std::string nulo = \x1b[01;35m\x1b[K"\\e[0m"\x1b[m\x1b[K;\n'}
+[2.409194] (control) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[2.409280] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:32:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.409370] (control) StderrLine: {'line': b'   32 | const std::string Lazul = \x1b[01;35m\x1b[K"\\e[96m"\x1b[m\x1b[K;\n'}
+[2.409646] (control) StderrLine: {'line': b'      |                           \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.409749] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:33:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.409846] (control) StderrLine: {'line': b'   33 | const std::string LazulE = \x1b[01;35m\x1b[K"\\e[94m"\x1b[m\x1b[K;\n'}
+[2.409945] (control) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.410124] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:34:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.410219] (control) StderrLine: {'line': b'   34 | const std::string Lamare = \x1b[01;35m\x1b[K"\\e[93m"\x1b[m\x1b[K;\n'}
+[2.410308] (control) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.410404] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:35:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.410495] (control) StderrLine: {'line': b'   35 | const std::string Lverde = \x1b[01;35m\x1b[K"\\e[92m"\x1b[m\x1b[K;\n'}
+[2.410587] (control) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.410677] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:36:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.410764] (control) StderrLine: {'line': b'   36 | const std::string Lred = \x1b[01;35m\x1b[K"\\e[91m"\x1b[m\x1b[K;\n'}
+[2.410856] (control) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.410946] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:37:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.411037] (control) StderrLine: {'line': b'   37 | const std::string Lgray = \x1b[01;35m\x1b[K"\\e[97m"\x1b[m\x1b[K;\n'}
+[2.411125] (control) StderrLine: {'line': b'      |                           \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.411213] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:47:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[2.411305] (control) StderrLine: {'line': b'   47 | \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::PAGE Page;\n'}
+[2.411462] (control) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.411552] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:48:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[2.411643] (control) StderrLine: {'line': b'   48 | \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::STEP Step;\n'}
+[2.411730] (control) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.411817] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid cmd_process()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.411905] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:57:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of \xe2\x80\x98\x1b[01m\x1b[Kthis\x1b[m\x1b[K\xe2\x80\x99 in non-member function\n'}
+[2.411994] (control) StderrLine: {'line': b'   57 |  publisher_ = \x1b[01;31m\x1b[Kthis\x1b[m\x1b[K->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10);\n'}
+[2.412081] (control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.412166] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:57:87:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[2.412259] (control) StderrLine: {'line': b'   57 |  publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition\x1b[01;31m\x1b[K>\x1b[m\x1b[K("set_position", 10);\n'}
+[2.412348] (control) StderrLine: {'line': b'      |                                                                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.412434] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:57:89:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.412524] (control) StderrLine: {'line': b'   57 |  publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>(\x1b[01;35m\x1b[K"set_position"\x1b[m\x1b[K, 10);\n'}
+[2.412613] (control) StderrLine: {'line': b'      |                                                                                         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.412767] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:58:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of \xe2\x80\x98\x1b[01m\x1b[Kthis\x1b[m\x1b[K\xe2\x80\x99 in non-member function\n'}
+[2.412863] (control) StderrLine: {'line': b'   58 |     publisher_single = \x1b[01;31m\x1b[Kthis\x1b[m\x1b[K->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>("set_position_single", 10);\n'}
+[2.412954] (control) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.413043] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:58:104:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[2.413135] (control) StderrLine: {'line': b'   58 |     publisher_single = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal\x1b[01;31m\x1b[K>\x1b[m\x1b[K("set_position_single", 10);\n'}
+[2.413224] (control) StderrLine: {'line': b'      |                                                                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.413315] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:58:106:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[2.413405] (control) StderrLine: {'line': b'   58 |     publisher_single = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>(\x1b[01;35m\x1b[K"set_position_single"\x1b[m\x1b[K, 10);\n'}
+[2.413493] (control) StderrLine: {'line': b'      |                                                                                                          \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.413582] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid ReadStep()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.413678] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:121:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kvalue8\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.413835] (control) StderrLine: {'line': b'  121 |  uint8_t \x1b[01;35m\x1b[Kvalue8\x1b[m\x1b[K;\n'}
+[2.413925] (control) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.414028] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:122:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kvalue32\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.414124] (control) StderrLine: {'line': b'  122 |  uint32_t \x1b[01;35m\x1b[Kvalue32\x1b[m\x1b[K;\n'}
+[2.414212] (control) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[2.414300] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid DrawIntro()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.414393] (control) StderrLine: {'line': b"\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:325:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knon-ISO-standard escape sequence, '\\e'\n"}
+[2.414484] (control) StderrLine: {'line': b'  325 |  system(\x1b[01;35m\x1b[K"printf \'\\e[8;27;80t\'"\x1b[m\x1b[K);\n'}
+[2.414573] (control) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.414660] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:327:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.414750] (control) StderrLine: {'line': b'  327 |  \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::GetInstance()->LoadPage(indexPage, &Page);\n'}
+[2.414836] (control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.414922] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:327:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.415014] (control) StderrLine: {'line': b'  327 |  Action::GetInstance()->LoadPage(indexPage, &\x1b[01;31m\x1b[KPage\x1b[m\x1b[K);\n'}
+[2.415100] (control) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.415356] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:330:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.415491] (control) StderrLine: {'line': b'  330 |  \x1b[01;31m\x1b[KStep\x1b[m\x1b[K.pause = 0;\n'}
+[2.415584] (control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.415675] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid DrawPage()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.415767] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:375:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.415858] (control) StderrLine: {'line': b'  375 |  if( \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.schedule == Action::SPEED_BASE_SCHEDULE )\n'}
+[2.415958] (control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.416048] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:375:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.416140] (control) StderrLine: {'line': b'  375 |  if( Page.header.schedule == \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::SPEED_BASE_SCHEDULE )\n'}
+[2.416229] (control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.416319] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:377:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.416407] (control) StderrLine: {'line': b'  377 |  else if( Page.header.schedule == \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::TIME_BASE_SCHEDULE )\n'}
+[2.416562] (control) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.416656] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:383:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.416747] (control) StderrLine: {'line': b'  383 |  for(int i=0; i<=\x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_STEP; i++ )\n'}
+[2.416835] (control) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.416921] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:387:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.417014] (control) StderrLine: {'line': b'  387 |  for( int id=\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::ID_R_SHOULDER_PITCH; id<JointData::NUMBER_OF_JOINTS; id++ )\n'}
+[2.417103] (control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.417193] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:387:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.417283] (control) StderrLine: {'line': b'  387 |  for( int id=JointData::ID_R_SHOULDER_PITCH; id<\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::NUMBER_OF_JOINTS; id++ )\n'}
+[2.417373] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.417463] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:390:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.417612] (control) StderrLine: {'line': b'  390 |   printf( "%.1d%.1d", \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.slope[id]>>4, Page.header.slope[id]&0x0f );\n'}
+[2.417707] (control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.417797] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:395:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.417936] (control) StderrLine: {'line': b'  395 |  printf( "%.3d", \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.repeat );\n'}
+[2.418083] (control) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.418177] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:421:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.418268] (control) StderrLine: {'line': b'  421 |  printf( "0x%.5X", (int)(indexPage*sizeof(\x1b[01;31m\x1b[KAction\x1b[m\x1b[K::PAGE)) );\n'}
+[2.418361] (control) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.418457] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid DrawStep(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.418549] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:432:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.418640] (control) StderrLine: {'line': b'  432 |  \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::STEP *step;\n'}
+[2.418730] (control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.419092] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:432:16:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.419200] (control) StderrLine: {'line': b'  432 |  Action::STEP *\x1b[01;31m\x1b[Kstep\x1b[m\x1b[K;\n'}
+[2.419291] (control) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.420170] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:439:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.420300] (control) StderrLine: {'line': b'  439 |   step = &\x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[0];\n'}
+[2.420401] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.421154] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:474:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.421407] (control) StderrLine: {'line': b'  474 |   step = &\x1b[01;31m\x1b[KStep\x1b[m\x1b[K;\n'}
+[2.421507] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.421611] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:481:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.421708] (control) StderrLine: {'line': b'  481 |  for( int id=\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::ID_R_SHOULDER_PITCH; id<JointData::NUMBER_OF_JOINTS; id++ )\n'}
+[2.421800] (control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.421891] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:481:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.421996] (control) StderrLine: {'line': b'  481 |  for( int id=JointData::ID_R_SHOULDER_PITCH; id<\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::NUMBER_OF_JOINTS; id++ )\n'}
+[2.422090] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.422182] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:484:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.422274] (control) StderrLine: {'line': b'  484 |   if((step->position[id] + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[id]) & Action::INVALID_BIT_MASK)\n'}
+[2.422367] (control) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.422568] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:484:74:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.422665] (control) StderrLine: {'line': b'  484 |   if((step->position[id] + MotionManager::GetInstance()->m_Offset[id]) & \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::INVALID_BIT_MASK)\n'}
+[2.422756] (control) StderrLine: {'line': b'      |                                                                          \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.422849] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:486:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.422994] (control) StderrLine: {'line': b'  486 |   else if((step->position[id] + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[id]) & Action::TORQUE_OFF_BIT_MASK)\n'}
+[2.423098] (control) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.423187] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:486:79:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.423281] (control) StderrLine: {'line': b'  486 |   else if((step->position[id] + MotionManager::GetInstance()->m_Offset[id]) & \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::TORQUE_OFF_BIT_MASK)\n'}
+[2.423378] (control) StderrLine: {'line': b'      |                                                                               \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.423468] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid DrawStepLine(bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.423554] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:509:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.423642] (control) StderrLine: {'line': b'  509 |  switch(\x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.stepnum)\n'}
+[2.423730] (control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.423819] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:548:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.423909] (control) StderrLine: {'line': b'  548 |  for( int id=\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::ID_R_SHOULDER_PITCH; id<(JointData::NUMBER_OF_JOINTS + 2); id++ )\n'}
+[2.424006] (control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.424155] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:548:50:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.424248] (control) StderrLine: {'line': b'  548 |  for( int id=JointData::ID_R_SHOULDER_PITCH; id<(\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::NUMBER_OF_JOINTS + 2); id++ )\n'}
+[2.424338] (control) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.424428] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid DrawName()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.424518] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:569:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.424606] (control) StderrLine: {'line': b'  569 |  for(int i=0; i<\x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_NAME; i++)\n'}
+[2.424694] (control) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.424783] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:570:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.424881] (control) StderrLine: {'line': b'  570 |   printf("%c", (char)\x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.name[i]);\n'}
+[2.424971] (control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.425373] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint GetValue()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.425492] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:617:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.425590] (control) StderrLine: {'line': b'  617 |    return \x1b[01;31m\x1b[KStep\x1b[m\x1b[K.pause;\n'}
+[2.425679] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.426322] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:619:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.426448] (control) StderrLine: {'line': b'  619 |    return \x1b[01;31m\x1b[KStep\x1b[m\x1b[K.time;\n'}
+[2.426550] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.427188] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:621:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.427308] (control) StderrLine: {'line': b'  621 |    return \x1b[01;31m\x1b[KStep\x1b[m\x1b[K.position[row + 1];\n'}
+[2.427404] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.428170] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:658:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.428299] (control) StderrLine: {'line': b'  658 |    return \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[i].pause;\n'}
+[2.428401] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.429115] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:660:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.429244] (control) StderrLine: {'line': b'  660 |    return \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[i].time;\n'}
+[2.429347] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.430125] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:662:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.430269] (control) StderrLine: {'line': b'  662 |    return \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[i].position[row + 1];\n'}
+[2.430369] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.431167] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:665:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.431298] (control) StderrLine: {'line': b'  665 |   return (\x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.slope[row + 1] >> 4);\n'}
+[2.431399] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.432218] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:667:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.432357] (control) StderrLine: {'line': b'  667 |   return (\x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.slope[row + 1] & 0x0f);\n'}
+[2.432458] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.433256] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:671:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.433380] (control) StderrLine: {'line': b'  671 |    return \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.repeat;\n'}
+[2.433476] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.434189] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:673:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.434313] (control) StderrLine: {'line': b'  673 |    return \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.stepnum;\n'}
+[2.434411] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.435103] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:675:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.435231] (control) StderrLine: {'line': b'  675 |    return \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.speed;\n'}
+[2.435330] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.437783] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:677:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.437978] (control) StderrLine: {'line': b'  677 |    return \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.accel;\n'}
+[2.438090] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.438792] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:679:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.438923] (control) StderrLine: {'line': b'  679 |    return \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.next;\n'}
+[2.439022] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.439720] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:681:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.439836] (control) StderrLine: {'line': b'  681 |    return \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.exit;\n'}
+[2.439984] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.440078] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid SetValue(uint32_t)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.440171] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:710:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of unsigned expression >= 0 is always true [\x1b[01;35m\x1b[K-Wtype-limits\x1b[m\x1b[K]\n'}
+[2.440263] (control) StderrLine: {'line': b'  710 |    if(\x1b[01;35m\x1b[Kvalue >= 0\x1b[m\x1b[K && value <= 255)\n'}
+[2.440353] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~^~~~\x1b[m\x1b[K\n'}
+[2.440842] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:712:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.440989] (control) StderrLine: {'line': b'  712 |     \x1b[01;31m\x1b[KStep\x1b[m\x1b[K.pause = value;\n'}
+[2.441095] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.441188] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:719:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of unsigned expression >= 0 is always true [\x1b[01;35m\x1b[K-Wtype-limits\x1b[m\x1b[K]\n'}
+[2.441281] (control) StderrLine: {'line': b'  719 |    if(\x1b[01;35m\x1b[Kvalue >= 0\x1b[m\x1b[K && value <= 255)\n'}
+[2.441374] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~^~~~\x1b[m\x1b[K\n'}
+[2.441824] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:721:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.442027] (control) StderrLine: {'line': b'  721 |     \x1b[01;31m\x1b[KStep\x1b[m\x1b[K.time = value;\n'}
+[2.442123] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.442211] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:728:16:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.442301] (control) StderrLine: {'line': b'  728 |    if(value  + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[row + 1] >= 0 && value  + MotionManager::GetInstance()->m_Offset[row + 1] <= MX28::MAX_VALUE)\n'}
+[2.442390] (control) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.442477] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:728:81:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.442565] (control) StderrLine: {'line': b'  728 |    if(value  + MotionManager::GetInstance()->m_Offset[row + 1] >= 0 && value  + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[row + 1] <= MX28::MAX_VALUE)\n'}
+[2.442652] (control) StderrLine: {'line': b'      |                                                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.442738] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:728:132:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMX28\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.442964] (control) StderrLine: {'line': b'  728 |    if(value  + MotionManager::GetInstance()->m_Offset[row + 1] >= 0 && value  + MotionManager::GetInstance()->m_Offset[row + 1] <= \x1b[01;31m\x1b[KMX28\x1b[m\x1b[K::MAX_VALUE)\n'}
+[2.443148] (control) StderrLine: {'line': b'      |                                                                                                                                    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.443243] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:730:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.443338] (control) StderrLine: {'line': b'  730 |     if(!((\x1b[01;31m\x1b[KStep\x1b[m\x1b[K.position[row + 1] + MotionManager::GetInstance()->m_Offset[row + 1]) & Action::INVALID_BIT_MASK) && !((Step.position[row + 1] + MotionManager::GetInstance()->m_Offset[row + 1])  & Action::TORQUE_OFF_BIT_MASK))\n'}
+[2.443430] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.443521] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:730:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.443620] (control) StderrLine: {'line': b'  730 |     if(!((Step.position[row + 1] + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[row + 1]) & Action::INVALID_BIT_MASK) && !((Step.position[row + 1] + MotionManager::GetInstance()->m_Offset[row + 1])  & Action::TORQUE_OFF_BIT_MASK))\n'}
+[2.443721] (control) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.443813] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:730:87:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.443903] (control) StderrLine: {'line': b'  730 |     if(!((Step.position[row + 1] + MotionManager::GetInstance()->m_Offset[row + 1]) & \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::INVALID_BIT_MASK) && !((Step.position[row + 1] + MotionManager::GetInstance()->m_Offset[row + 1])  & Action::TORQUE_OFF_BIT_MASK))\n'}
+[2.443998] (control) StderrLine: {'line': b'      |                                                                                       \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.444088] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:730:144:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.444180] (control) StderrLine: {'line': b'  730 |     if(!((Step.position[row + 1] + MotionManager::GetInstance()->m_Offset[row + 1]) & Action::INVALID_BIT_MASK) && !((Step.position[row + 1] + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[row + 1])  & Action::TORQUE_OFF_BIT_MASK))\n'}
+[2.444273] (control) StderrLine: {'line': b'      |                                                                                                                                                \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.444363] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:730:196:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.444453] (control) StderrLine: {'line': b'  730 |     if(!((Step.position[row + 1] + MotionManager::GetInstance()->m_Offset[row + 1]) & Action::INVALID_BIT_MASK) && !((Step.position[row + 1] + MotionManager::GetInstance()->m_Offset[row + 1])  & \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::TORQUE_OFF_BIT_MASK))\n'}
+[2.444545] (control) StderrLine: {'line': b'      |                                                                                                                                                                                                    \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.444637] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:736:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMX28\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.444728] (control) StderrLine: {'line': b'  736 |                     message_single.address = \x1b[01;31m\x1b[KMX28\x1b[m\x1b[K::P_GOAL_POSITION;\n'}
+[2.444818] (control) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.444900] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:737:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.444987] (control) StderrLine: {'line': b'  737 |                     message_single.position = value  + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[row + 1];\n'}
+[2.445075] (control) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.448216] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:732:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kerror\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.448431] (control) StderrLine: {'line': b'  732 |      int \x1b[01;35m\x1b[Kerror\x1b[m\x1b[K;\n'}
+[2.448536] (control) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.448628] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:796:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of unsigned expression >= 0 is always true [\x1b[01;35m\x1b[K-Wtype-limits\x1b[m\x1b[K]\n'}
+[2.448728] (control) StderrLine: {'line': b'  796 |    if(\x1b[01;35m\x1b[Kvalue >= 0\x1b[m\x1b[K && value <= 255)\n'}
+[2.448820] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~^~~~\x1b[m\x1b[K\n'}
+[2.449609] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:798:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.449758] (control) StderrLine: {'line': b'  798 |     \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[i].pause = value;\n'}
+[2.449855] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.449947] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:805:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of unsigned expression >= 0 is always true [\x1b[01;35m\x1b[K-Wtype-limits\x1b[m\x1b[K]\n'}
+[2.450058] (control) StderrLine: {'line': b'  805 |    if(\x1b[01;35m\x1b[Kvalue >= 0\x1b[m\x1b[K && value <= 255)\n'}
+[2.450162] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~^~~~\x1b[m\x1b[K\n'}
+[2.450754] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:807:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.450956] (control) StderrLine: {'line': b'  807 |     \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[i].time = value;\n'}
+[2.451053] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.451144] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:814:16:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.451237] (control) StderrLine: {'line': b'  814 |    if(value  + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[row + 1] >= 0 && value  + MotionManager::GetInstance()->m_Offset[row + 1] <= MX28::MAX_VALUE) //Aumentando o valor da entrada\n'}
+[2.451398] (control) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.451491] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:814:81:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.451584] (control) StderrLine: {'line': b'  814 |    if(value  + MotionManager::GetInstance()->m_Offset[row + 1] >= 0 && value  + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[row + 1] <= MX28::MAX_VALUE) //Aumentando o valor da entrada\n'}
+[2.451677] (control) StderrLine: {'line': b'      |                                                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.451767] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:814:132:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMX28\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.451867] (control) StderrLine: {'line': b'  814 |    if(value  + MotionManager::GetInstance()->m_Offset[row + 1] >= 0 && value  + MotionManager::GetInstance()->m_Offset[row + 1] <= \x1b[01;31m\x1b[KMX28\x1b[m\x1b[K::MAX_VALUE) //Aumentando o valor da entrada\n'}
+[2.452046] (control) StderrLine: {'line': b'      |                                                                                                                                    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.452141] (control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25\x1b[m\x1b[K:\n'}
+[2.452234] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KRobot::MotionManager::MotionManager(const rclcpp::NodeOptions&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.452326] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:86:8:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KRobot::MotionManager::DEBUG_PRINT\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K-Wreorder\x1b[m\x1b[K]\n'}
+[2.452418] (control) StderrLine: {'line': b'   86 |   bool \x1b[01;35m\x1b[KDEBUG_PRINT\x1b[m\x1b[K;\n'}
+[2.452501] (control) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.452584] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:68:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  base \xe2\x80\x98\x1b[01m\x1b[Krclcpp::Node\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wreorder\x1b[m\x1b[K]\n'}
+[2.452674] (control) StderrLine: {'line': b'   68 |   rclcpp::Node("gait_publisher", options\x1b[01;35m\x1b[K)\x1b[m\x1b[K\n'}
+[2.452763] (control) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[2.452849] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:60:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K-Wreorder\x1b[m\x1b[K]\n'}
+[2.452939] (control) StderrLine: {'line': b'   60 | \x1b[01;35m\x1b[KMotionManager\x1b[m\x1b[K::MotionManager(const rclcpp::NodeOptions & options) :\n'}
+[2.453025] (control) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.453111] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:816:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.453245] (control) StderrLine: {'line': b'  816 |     if(!((\x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[i].position[row + 1] + MotionManager::GetInstance()->m_Offset[row + 1]) & Action::INVALID_BIT_MASK))\n'}
+[2.453343] (control) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.453429] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:816:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.453517] (control) StderrLine: {'line': b'  816 |     if(!((Page.step[i].position[row + 1] + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[row + 1]) & Action::INVALID_BIT_MASK))\n'}
+[2.453605] (control) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.453692] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:816:95:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.453784] (control) StderrLine: {'line': b'  816 |     if(!((Page.step[i].position[row + 1] + MotionManager::GetInstance()->m_Offset[row + 1]) & \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::INVALID_BIT_MASK))\n'}
+[2.453878] (control) StderrLine: {'line': b'      |                                                                                               \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.453982] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:832:4:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.454077] (control) StderrLine: {'line': b'  832 |    \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.slope[row + 1] = (value << 4) + (Page.header.slope[row + 1] & 0x0f);\n'}
+[2.454166] (control) StderrLine: {'line': b'      |    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.454333] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:841:4:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.454425] (control) StderrLine: {'line': b'  841 |    \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.slope[row + 1] = (Page.header.slope[row + 1] & 0xf0) + (value & 0x0f);\n'}
+[2.454515] (control) StderrLine: {'line': b'      |    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.454601] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:850:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of unsigned expression >= 0 is always true [\x1b[01;35m\x1b[K-Wtype-limits\x1b[m\x1b[K]\n'}
+[2.454692] (control) StderrLine: {'line': b'  850 |    if(\x1b[01;35m\x1b[Kvalue >= 0\x1b[m\x1b[K && value <= 255)\n'}
+[2.454781] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~^~~~\x1b[m\x1b[K\n'}
+[2.455324] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:852:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.455498] (control) StderrLine: {'line': b'  852 |     \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.repeat = value;\n'}
+[2.455595] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.455687] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:859:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of unsigned expression >= 0 is always true [\x1b[01;35m\x1b[K-Wtype-limits\x1b[m\x1b[K]\n'}
+[2.455777] (control) StderrLine: {'line': b'  859 |    if(\x1b[01;35m\x1b[Kvalue >= 0\x1b[m\x1b[K && value <= Action::MAXNUM_STEP)\n'}
+[2.455866] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~^~~~\x1b[m\x1b[K\n'}
+[2.455955] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:859:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.456042] (control) StderrLine: {'line': b'  859 |    if(value >= 0 && value <= \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_STEP)\n'}
+[2.456129] (control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.456536] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:862:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.456679] (control) StderrLine: {'line': b'  862 |     if(\x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.stepnum != value)\n'}
+[2.456774] (control) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.456865] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:875:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of unsigned expression >= 0 is always true [\x1b[01;35m\x1b[K-Wtype-limits\x1b[m\x1b[K]\n'}
+[2.456967] (control) StderrLine: {'line': b'  875 |    if(\x1b[01;35m\x1b[Kvalue >= 0\x1b[m\x1b[K && value <= 255)\n'}
+[2.457051] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~^~~~\x1b[m\x1b[K\n'}
+[2.457650] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:877:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.457796] (control) StderrLine: {'line': b'  877 |     \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.speed = value;\n'}
+[2.457892] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.457995] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:884:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of unsigned expression >= 0 is always true [\x1b[01;35m\x1b[K-Wtype-limits\x1b[m\x1b[K]\n'}
+[2.458092] (control) StderrLine: {'line': b'  884 |    if(\x1b[01;35m\x1b[Kvalue >= 0\x1b[m\x1b[K && value <= 255)\n'}
+[2.458184] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~^~~~\x1b[m\x1b[K\n'}
+[2.458712] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:886:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.458867] (control) StderrLine: {'line': b'  886 |     \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.accel = value;\n'}
+[2.458976] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.459069] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:893:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of unsigned expression >= 0 is always true [\x1b[01;35m\x1b[K-Wtype-limits\x1b[m\x1b[K]\n'}
+[2.459167] (control) StderrLine: {'line': b'  893 |    if(\x1b[01;35m\x1b[Kvalue >= 0\x1b[m\x1b[K && value <= 255)\n'}
+[2.459259] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~^~~~\x1b[m\x1b[K\n'}
+[2.459747] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:895:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.459896] (control) StderrLine: {'line': b'  895 |     \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.next = value;\n'}
+[2.459992] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.460084] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:902:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of unsigned expression >= 0 is always true [\x1b[01;35m\x1b[K-Wtype-limits\x1b[m\x1b[K]\n'}
+[2.460185] (control) StderrLine: {'line': b'  902 |    if(\x1b[01;35m\x1b[Kvalue >= 0\x1b[m\x1b[K && value <= 255)\n'}
+[2.460276] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~^~~~\x1b[m\x1b[K\n'}
+[2.460809] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:904:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.460924] (control) StderrLine: {'line': b'  904 |     \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.exit = value;\n'}
+[2.461020] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.462088] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid ToggleTorque()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.462292] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:921:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.462407] (control) StderrLine: {'line': b'  921 |  if((\x1b[01;31m\x1b[KStep\x1b[m\x1b[K.position[id] + MotionManager::GetInstance()->m_Offset[id]) & Action::TORQUE_OFF_BIT_MASK)\n'}
+[2.462503] (control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.462596] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:921:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.462749] (control) StderrLine: {'line': b'  921 |  if((Step.position[id] + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[id]) & Action::TORQUE_OFF_BIT_MASK)\n'}
+[2.462844] (control) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.462937] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:921:72:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.463029] (control) StderrLine: {'line': b'  921 |  if((Step.position[id] + MotionManager::GetInstance()->m_Offset[id]) & \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::TORQUE_OFF_BIT_MASK)\n'}
+[2.463116] (control) StderrLine: {'line': b'      |                                                                        \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.463202] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:941:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.463292] (control) StderrLine: {'line': b'  941 |   Step.position[id] = \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::TORQUE_OFF_BIT_MASK;\n'}
+[2.463380] (control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.463466] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid PageCmd(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.463550] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1020:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.463642] (control) StderrLine: {'line': b' 1020 |  if(index > 0 && index < \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_PAGE)\n'}
+[2.463731] (control) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.463822] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1023:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.463959] (control) StderrLine: {'line': b' 1023 |   \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::GetInstance()->LoadPage(indexPage, &Page);\n'}
+[2.464052] (control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.464141] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1023:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.464231] (control) StderrLine: {'line': b' 1023 |   Action::GetInstance()->LoadPage(indexPage, &\x1b[01;31m\x1b[KPage\x1b[m\x1b[K);\n'}
+[2.464317] (control) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.465028] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid TimeCmd()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.465176] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1037:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.465279] (control) StderrLine: {'line': b' 1037 |  \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.schedule = Action::TIME_BASE_SCHEDULE;\n'}
+[2.465374] (control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.465463] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1037:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.465554] (control) StderrLine: {'line': b' 1037 |  Page.header.schedule = \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::TIME_BASE_SCHEDULE;\n'}
+[2.465643] (control) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.466119] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid SpeedCmd()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.466233] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1044:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.466395] (control) StderrLine: {'line': b' 1044 |  \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.schedule = Action::SPEED_BASE_SCHEDULE;\n'}
+[2.466491] (control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.466587] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1044:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.466678] (control) StderrLine: {'line': b' 1044 |  Page.header.schedule = \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::SPEED_BASE_SCHEDULE;\n'}
+[2.466770] (control) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.466860] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid ListCmd()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.466945] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1126:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.467037] (control) StderrLine: {'line': b' 1126 |     \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::PAGE page;\n'}
+[2.467125] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.467212] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1127:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.467376] (control) StderrLine: {'line': b' 1127 |     if(\x1b[01;31m\x1b[KAction\x1b[m\x1b[K::GetInstance()->LoadPage(k, &page) == true)\n'}
+[2.467470] (control) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.467560] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1127:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.467779] (control) StderrLine: {'line': b' 1127 |     if(Action::GetInstance()->LoadPage(k, &\x1b[01;31m\x1b[Kpage\x1b[m\x1b[K) == true)\n'}
+[2.467873] (control) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.467972] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1130:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.468061] (control) StderrLine: {'line': b' 1130 |      for(int n=0; n<\x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_NAME; n++)\n'}
+[2.468150] (control) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.468237] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid OnOffCmd(bool, int, int*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.468326] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1177:20:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kon\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.468415] (control) StderrLine: {'line': b' 1177 | void OnOffCmd(\x1b[01;35m\x1b[Kbool on\x1b[m\x1b[K, int num_param, int *list)\n'}
+[2.468502] (control) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K~~~~~^~\x1b[m\x1b[K\n'}
+[2.468592] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1177:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Knum_param\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.468788] (control) StderrLine: {'line': b' 1177 | void OnOffCmd(bool on, \x1b[01;35m\x1b[Kint num_param\x1b[m\x1b[K, int *list)\n'}
+[2.468885] (control) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.468972] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1177:44:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Klist\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[2.469062] (control) StderrLine: {'line': b' 1177 | void OnOffCmd(bool on, int num_param, \x1b[01;35m\x1b[Kint *list\x1b[m\x1b[K)\n'}
+[2.469149] (control) StderrLine: {'line': b'      |                                       \x1b[01;35m\x1b[K~~~~~^~~~\x1b[m\x1b[K\n'}
+[2.469236] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid WriteStepCmd(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.469332] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1201:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.469419] (control) StderrLine: {'line': b' 1201 |  for(int id=\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::ID_R_SHOULDER_PITCH; id<JointData::NUMBER_OF_JOINTS; id++)\n'}
+[2.469508] (control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.469593] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1201:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.469725] (control) StderrLine: {'line': b' 1201 |  for(int id=JointData::ID_R_SHOULDER_PITCH; id<\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::NUMBER_OF_JOINTS; id++)\n'}
+[2.469819] (control) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.469910] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1203:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.470023] (control) StderrLine: {'line': b' 1203 |   if((\x1b[01;31m\x1b[KStep\x1b[m\x1b[K.position[id] + MotionManager::GetInstance()->m_Offset[id]) & Action::TORQUE_OFF_BIT_MASK)\n'}
+[2.470114] (control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.470199] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1203:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.470300] (control) StderrLine: {'line': b' 1203 |   if((Step.position[id] + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[id]) & Action::TORQUE_OFF_BIT_MASK)\n'}
+[2.470388] (control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.470477] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1203:73:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.470612] (control) StderrLine: {'line': b' 1203 |   if((Step.position[id] + MotionManager::GetInstance()->m_Offset[id]) & \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::TORQUE_OFF_BIT_MASK)\n'}
+[2.470828] (control) StderrLine: {'line': b'      |                                                                         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.470922] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1207:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.471016] (control) StderrLine: {'line': b' 1207 |  if(index >= 0 && index < \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_STEP)\n'}
+[2.471105] (control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.471193] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1209:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.471280] (control) StderrLine: {'line': b' 1209 |   \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[index] = Step;\n'}
+[2.471367] (control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.471454] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1209:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.471541] (control) StderrLine: {'line': b' 1209 |   Page.step[index] = \x1b[01;31m\x1b[KStep\x1b[m\x1b[K;\n'}
+[2.471625] (control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.471768] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid DeleteStepCmd(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.471856] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1219:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.471935] (control) StderrLine: {'line': b' 1219 |  if(index >= 0 && index < \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_STEP)\n'}
+[2.472020] (control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.472105] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1221:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.472202] (control) StderrLine: {'line': b' 1221 |   for(int i=index; i<\x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_STEP; i++)\n'}
+[2.472291] (control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.472376] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1223:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.472463] (control) StderrLine: {'line': b' 1223 |    if(i == (\x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_STEP - 1))\n'}
+[2.472550] (control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.472674] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1225:16:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.472769] (control) StderrLine: {'line': b' 1225 |     for(int id=\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::ID_R_SHOULDER_PITCH; id<JointData::NUMBER_OF_JOINTS; id++)\n'}
+[2.472858] (control) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.472944] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1225:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.473035] (control) StderrLine: {'line': b' 1225 |     for(int id=JointData::ID_R_SHOULDER_PITCH; id<\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::NUMBER_OF_JOINTS; id++)\n'}
+[2.473126] (control) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.473214] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1226:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.473310] (control) StderrLine: {'line': b' 1226 |      \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[i].position[id] = Action::INVALID_BIT_MASK;\n'}
+[2.473397] (control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.473522] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1226:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.473610] (control) StderrLine: {'line': b' 1226 |      Page.step[i].position[id] = \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::INVALID_BIT_MASK;\n'}
+[2.473698] (control) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.473785] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1228:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.473871] (control) StderrLine: {'line': b' 1228 |     \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[i].pause = 0;\n'}
+[2.473957] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.474059] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1232:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.474157] (control) StderrLine: {'line': b' 1232 |     \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[i] = Page.step[i + 1];\n'}
+[2.474249] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.474375] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1237:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.474537] (control) StderrLine: {'line': b' 1237 |   if(index < \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.stepnum)\n'}
+[2.474631] (control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.474722] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid InsertStepCmd(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.474864] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1258:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.474957] (control) StderrLine: {'line': b' 1258 |  for(int id=\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::ID_R_SHOULDER_PITCH; id<JointData::NUMBER_OF_JOINTS; id++)\n'}
+[2.475048] (control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.475137] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1258:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.475228] (control) StderrLine: {'line': b' 1258 |  for(int id=JointData::ID_R_SHOULDER_PITCH; id<\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::NUMBER_OF_JOINTS; id++)\n'}
+[2.475318] (control) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.475402] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.475616] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:100:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KIMU_GYRO_X\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.475708] (control) StderrLine: {'line': b'  100 |         float \x1b[01;35m\x1b[KIMU_GYRO_X\x1b[m\x1b[K = -imu_msg_->angular_velocity.x/10;\n'}
+[2.475798] (control) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.475885] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:101:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KIMU_GYRO_Y\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.475973] (control) StderrLine: {'line': b'  101 |         float \x1b[01;35m\x1b[KIMU_GYRO_Y\x1b[m\x1b[K  = -imu_msg_->angular_velocity.y/10;\n'}
+[2.476060] (control) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.476144] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1260:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.476242] (control) StderrLine: {'line': b' 1260 |   if((\x1b[01;31m\x1b[KStep\x1b[m\x1b[K.position[id] + MotionManager::GetInstance()->m_Offset[id]) & Action::TORQUE_OFF_BIT_MASK)\n'}
+[2.476331] (control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.476420] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1260:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.476509] (control) StderrLine: {'line': b' 1260 |   if((Step.position[id] + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[id]) & Action::TORQUE_OFF_BIT_MASK)\n'}
+[2.476637] (control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.476726] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1260:73:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.476815] (control) StderrLine: {'line': b' 1260 |   if((Step.position[id] + MotionManager::GetInstance()->m_Offset[id]) & \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::TORQUE_OFF_BIT_MASK)\n'}
+[2.476904] (control) StderrLine: {'line': b'      |                                                                         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.476992] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1267:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.477137] (control) StderrLine: {'line': b' 1267 |  if(index >= 0 && index < \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_STEP)\n'}
+[2.477230] (control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.477316] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1269:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.477405] (control) StderrLine: {'line': b' 1269 |   for(int i=\x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_STEP-1; i>index; i-- )\n'}
+[2.477572] (control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.477664] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1271:4:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.477805] (control) StderrLine: {'line': b' 1271 |    \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[i] = Page.step[i-1];\n'}
+[2.477902] (control) StderrLine: {'line': b'      |    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.478001] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Robot::MotionManager::topic_callback_walk(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Walk_<std::allocator<void> > >) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.478094] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:42:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KISO C++ forbids converting a string constant to \xe2\x80\x98\x1b[01m\x1b[Kchar*\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wwrite-strings\x1b[m\x1b[K]\n'}
+[2.478184] (control) StderrLine: {'line': b'   42 | #define MOTION_FILE_PATH    \x1b[01;35m\x1b[K"/home/robo/ROS2/walk_test/src/control/Data/motion_4096.bin"\x1b[m\x1b[K\n'}
+[2.478276] (control) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.478368] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:42:29:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KMOTION_FILE_PATH\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.478469] (control) StderrLine: {'line': b'   42 | #define MOTION_FILE_PATH    \x1b[01;36m\x1b[K"/home/robo/ROS2/walk_test/src/control/Data/motion_4096.bin"\x1b[m\x1b[K\n'}
+[2.478701] (control) StderrLine: {'line': b'      |                             \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.478797] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1275:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.478896] (control) StderrLine: {'line': b' 1275 |   \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[index] = Step;\n'}
+[2.478981] (control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.479070] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool Robot::MotionManager::Initialize(bool)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.479160] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:178:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.479249] (control) StderrLine: {'line': b'  178 |  int \x1b[01;35m\x1b[Kvalue\x1b[m\x1b[K, error;\n'}
+[2.479338] (control) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.479427] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:178:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kerror\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.479524] (control) StderrLine: {'line': b'  178 |  int value, \x1b[01;35m\x1b[Kerror\x1b[m\x1b[K;\n'}
+[2.479665] (control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.479758] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool Robot::MotionManager::Reinitialize()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.479845] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:264:6:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.479937] (control) StderrLine: {'line': b'  264 |  int \x1b[01;35m\x1b[Kvalue\x1b[m\x1b[K, error;\n'}
+[2.480026] (control) StderrLine: {'line': b'      |      \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.480109] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:264:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kerror\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.480199] (control) StderrLine: {'line': b'  264 |  int value, \x1b[01;35m\x1b[Kerror\x1b[m\x1b[K;\n'}
+[2.480289] (control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.480376] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1275:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.480462] (control) StderrLine: {'line': b' 1275 |   Page.step[index] = \x1b[01;31m\x1b[KStep\x1b[m\x1b[K;\n'}
+[2.480544] (control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.480631] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1280:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.480780] (control) StderrLine: {'line': b' 1280 |    if(Page.header.stepnum != \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_STEP)\n'}
+[2.480875] (control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.480961] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid MoveStepCmd(int, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.481057] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1299:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.481147] (control) StderrLine: {'line': b' 1299 |  if(src < 0 || src >= \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_STEP)\n'}
+[2.481234] (control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.481320] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1305:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.481407] (control) StderrLine: {'line': b' 1305 |  if(dst < 0 || dst >= \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_STEP)\n'}
+[2.481502] (control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.481588] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1314:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.481676] (control) StderrLine: {'line': b' 1314 |  \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::STEP step = Page.step[src];\n'}
+[2.481825] (control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.481918] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1319:4:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.482022] (control) StderrLine: {'line': b' 1319 |    \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[i] = Page.step[i + 1];\n'}
+[2.482112] (control) StderrLine: {'line': b'      |    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.482198] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1327:4:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.482286] (control) StderrLine: {'line': b' 1327 |    \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[i] = Page.step[i - 1];\n'}
+[2.482371] (control) StderrLine: {'line': b'      |    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.482455] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1332:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.482542] (control) StderrLine: {'line': b' 1332 |  \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[dst] = step;\n'}
+[2.482628] (control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.482810] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1332:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.482902] (control) StderrLine: {'line': b' 1332 |  Page.step[dst] = \x1b[01;31m\x1b[Kstep\x1b[m\x1b[K;\n'}
+[2.482992] (control) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.483082] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid CopyCmd(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.483172] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1342:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.483272] (control) StderrLine: {'line': b' 1342 |  if(\x1b[01;31m\x1b[KAction\x1b[m\x1b[K::GetInstance()->LoadPage(index, &Page) == true)\n'}
+[2.483366] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.483673] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1342:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.483815] (control) StderrLine: {'line': b' 1342 |  if(Action::GetInstance()->LoadPage(index, &\x1b[01;31m\x1b[KPage\x1b[m\x1b[K) == true)\n'}
+[2.483910] (control) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.484000] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid NewCmd()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.484093] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1353:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.484182] (control) StderrLine: {'line': b' 1353 |  \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::GetInstance()->ResetPage(&Page);\n'}
+[2.484269] (control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.484642] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1353:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.484785] (control) StderrLine: {'line': b' 1353 |  Action::GetInstance()->ResetPage(&\x1b[01;31m\x1b[KPage\x1b[m\x1b[K);\n'}
+[2.484879] (control) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.484968] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid GoCmd(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.485059] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1360:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.485151] (control) StderrLine: {'line': b' 1360 |  if(index < 0 || index >= \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_STEP)\n'}
+[2.485241] (control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.485593] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1366:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.485799] (control) StderrLine: {'line': b' 1366 |  if(index > \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.stepnum)\n'}
+[2.485896] (control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.485999] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1378:16:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.486098] (control) StderrLine: {'line': b' 1378 |  uint8_t param[\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::NUMBER_OF_JOINTS * (1 + MX28::PARAM_BYTES)];\n'}
+[2.486190] (control) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.486280] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1378:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMX28\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.486372] (control) StderrLine: {'line': b' 1378 |  uint8_t param[JointData::NUMBER_OF_JOINTS * (1 + \x1b[01;31m\x1b[KMX28\x1b[m\x1b[K::PARAM_BYTES)];\n'}
+[2.486477] (control) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.486567] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1381:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.486777] (control) StderrLine: {'line': b' 1381 |  for(id=\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::ID_R_SHOULDER_PITCH; id<JointData::NUMBER_OF_JOINTS-1; id++)\n'}
+[2.486875] (control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.486966] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1381:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointData\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.487056] (control) StderrLine: {'line': b' 1381 |  for(id=JointData::ID_R_SHOULDER_PITCH; id<\x1b[01;31m\x1b[KJointData\x1b[m\x1b[K::NUMBER_OF_JOINTS-1; id++)\n'}
+[2.487145] (control) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.487233] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1386:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.487324] (control) StderrLine: {'line': b' 1386 |   if((\x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[index].position[id] + MotionManager::GetInstance()->m_Offset[id]) & Action::INVALID_BIT_MASK)\n'}
+[2.487414] (control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.487502] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1386:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.487600] (control) StderrLine: {'line': b' 1386 |   if((Page.step[index].position[id] + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[id]) & Action::INVALID_BIT_MASK)\n'}
+[2.487765] (control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.487860] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1386:85:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.487952] (control) StderrLine: {'line': b' 1386 |   if((Page.step[index].position[id] + MotionManager::GetInstance()->m_Offset[id]) & \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::INVALID_BIT_MASK)\n'}
+[2.488043] (control) StderrLine: {'line': b'      |                                                                                     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.488131] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1388:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.488297] (control) StderrLine: {'line': b' 1388 |    printf("conta id %d =%d", id, (Page.step[index].position[id] + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[id]));\n'}
+[2.488388] (control) StderrLine: {'line': b'      |                                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.488477] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1404:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.488574] (control) StderrLine: {'line': b' 1404 |   wGoalPosition = (\x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[index].position[id] + MotionManager::GetInstance()->m_Offset[id]);\n'}
+[2.488706] (control) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.488799] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1404:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMotionManager\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.488890] (control) StderrLine: {'line': b' 1404 |   wGoalPosition = (Page.step[index].position[id] + \x1b[01;31m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_Offset[id]);\n'}
+[2.488980] (control) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.489068] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Robot::MotionManager::Process()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.489159] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:430:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kthis \xe2\x80\x98\x1b[01m\x1b[Kif\x1b[m\x1b[K\xe2\x80\x99 clause does not guard... [\x1b[01;35m\x1b[K-Wmisleading-indentation\x1b[m\x1b[K]\n'}
+[2.489256] (control) StderrLine: {'line': b'  430 |     \x1b[01;35m\x1b[Kif\x1b[m\x1b[K(MotionManager::GetInstance()->m_ProcessEnable == false || MotionManager::GetInstance()->m_IsRunning == true)\n'}
+[2.489347] (control) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[2.489432] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:433:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K...this statement, but the latter is misleadingly indented as if it were guarded by the \xe2\x80\x98\x1b[01m\x1b[Kif\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.489521] (control) StderrLine: {'line': b'  433 |  \x1b[01;36m\x1b[KMotionManager\x1b[m\x1b[K::GetInstance()->m_IsRunning = true;\n'}
+[2.489609] (control) StderrLine: {'line': b'      |  \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.489696] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1418:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.489790] (control) StderrLine: {'line': b' 1418 |   \x1b[01;31m\x1b[Kparam\x1b[m\x1b[K[n++] = id;\n'}
+[2.489877] (control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.490092] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1430:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmessage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.490196] (control) StderrLine: {'line': b' 1430 |     \x1b[01;31m\x1b[Kmessage\x1b[m\x1b[K.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};\n'}
+[2.490286] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[2.490998] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1431:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpos\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpow\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.491118] (control) StderrLine: {'line': b' 1431 |     message.position = {\x1b[01;31m\x1b[Kpos\x1b[m\x1b[K[1], pos[2], pos[3], pos[4], pos[5], pos[6], pos[7], pos[8], pos[9], pos[10], pos[11], pos[12], pos[13], pos[14], pos[15], pos[16], pos[17], pos[18], pos[19]};\n'}
+[2.491217] (control) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.491307] (control) StderrLine: {'line': b'      |                         \x1b[32m\x1b[Kpow\x1b[m\x1b[K\n'}
+[2.491907] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1436:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KStep\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.492024] (control) StderrLine: {'line': b' 1436 |  \x1b[01;31m\x1b[KStep\x1b[m\x1b[K = Page.step[index];\n'}
+[2.492118] (control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.492775] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1436:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.492933] (control) StderrLine: {'line': b' 1436 |  Step = \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.step[index];\n'}
+[2.493032] (control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.493126] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid goInitPage()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.493219] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1443:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.493310] (control) StderrLine: {'line': b' 1443 |  \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::GetInstance()->LoadPage(1, &Page);\n'}
+[2.493400] (control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.493761] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1443:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.493909] (control) StderrLine: {'line': b' 1443 |  Action::GetInstance()->LoadPage(1, &\x1b[01;31m\x1b[KPage\x1b[m\x1b[K);\n'}
+[2.494023] (control) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.494114] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid backToPage()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.494205] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1448:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.494296] (control) StderrLine: {'line': b' 1448 |  \x1b[01;31m\x1b[KAction\x1b[m\x1b[K::GetInstance()->LoadPage(indexPageBuffer, &Page);\n'}
+[2.494386] (control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.494678] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1448:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.494827] (control) StderrLine: {'line': b' 1448 |  Action::GetInstance()->LoadPage(indexPageBuffer, &\x1b[01;31m\x1b[KPage\x1b[m\x1b[K);\n'}
+[2.494922] (control) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.495014] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid SaveCmd()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.495175] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1457:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.495281] (control) StderrLine: {'line': b' 1457 |  if(\x1b[01;31m\x1b[KAction\x1b[m\x1b[K::GetInstance()->SavePage(indexPage, &Page) == true)\n'}
+[2.495382] (control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.495472] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:490:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K-Wunused-but-set-variable\x1b[m\x1b[K]\n'}
+[2.495566] (control) StderrLine: {'line': b'  490 |   int \x1b[01;35m\x1b[Kparam\x1b[m\x1b[K[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];\n'}
+[2.495736] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.495831] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:491:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kjoint_num\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.495923] (control) StderrLine: {'line': b'  491 |   int \x1b[01;35m\x1b[Kjoint_num\x1b[m\x1b[K = 0;\n'}
+[2.496011] (control) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.496100] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1457:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.496196] (control) StderrLine: {'line': b' 1457 |  if(Action::GetInstance()->SavePage(indexPage, &\x1b[01;31m\x1b[KPage\x1b[m\x1b[K) == true)\n'}
+[2.496285] (control) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.496372] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid readServo()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.496461] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1463:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kvalue\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.496637] (control) StderrLine: {'line': b' 1463 |  uint32_t \x1b[01;35m\x1b[Kvalue\x1b[m\x1b[K;\n'}
+[2.496738] (control) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.496826] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid NameCmd()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.496915] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1479:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgets\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kfgets\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.497006] (control) StderrLine: {'line': b' 1479 |  \x1b[01;31m\x1b[Kgets\x1b[m\x1b[K(name);\n'}
+[2.497095] (control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.497182] (control) StderrLine: {'line': b'      |  \x1b[32m\x1b[Kfgets\x1b[m\x1b[K\n'}
+[2.497270] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1481:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAction\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.497399] (control) StderrLine: {'line': b' 1481 |  for(int i=0; i<=\x1b[01;31m\x1b[KAction\x1b[m\x1b[K::MAXNUM_NAME; i++)\n'}
+[2.497491] (control) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.497579] (control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1482:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPage\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.497676] (control) StderrLine: {'line': b' 1482 |   \x1b[01;31m\x1b[KPage\x1b[m\x1b[K.header.name[i] = name[i];\n'}
+[2.497764] (control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.503512] (-) TimerEvent: {}
+[2.603782] (-) TimerEvent: {}
+[2.704074] (-) TimerEvent: {}
+[2.804323] (-) TimerEvent: {}
+[2.850143] (control) StderrLine: {'line': b'make[2]: *** [CMakeFiles/action.dir/build.make:89: CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o] Error 1\n'}
+[2.850400] (control) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/action.dir/all] Error 2\n'}
+[2.850482] (control) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[2.904444] (-) TimerEvent: {}
+[3.004697] (-) TimerEvent: {}
+[3.104988] (-) TimerEvent: {}
+[3.205255] (-) TimerEvent: {}
+[3.305506] (-) TimerEvent: {}
+[3.405775] (-) TimerEvent: {}
+[3.506047] (-) TimerEvent: {}
+[3.606292] (-) TimerEvent: {}
+[3.706571] (-) TimerEvent: {}
+[3.806824] (-) TimerEvent: {}
+[3.907068] (-) TimerEvent: {}
+[4.007344] (-) TimerEvent: {}
+[4.107614] (-) TimerEvent: {}
+[4.207926] (-) TimerEvent: {}
+[4.308221] (-) TimerEvent: {}
+[4.408475] (-) TimerEvent: {}
+[4.508737] (-) TimerEvent: {}
+[4.608984] (-) TimerEvent: {}
+[4.709234] (-) TimerEvent: {}
+[4.809498] (-) TimerEvent: {}
+[4.909743] (-) TimerEvent: {}
+[5.010003] (-) TimerEvent: {}
+[5.110257] (-) TimerEvent: {}
+[5.210512] (-) TimerEvent: {}
+[5.310763] (-) TimerEvent: {}
+[5.410974] (-) TimerEvent: {}
+[5.511226] (-) TimerEvent: {}
+[5.611476] (-) TimerEvent: {}
+[5.711719] (-) TimerEvent: {}
+[5.811975] (-) TimerEvent: {}
+[5.912218] (-) TimerEvent: {}
+[6.012475] (-) TimerEvent: {}
+[6.112719] (-) TimerEvent: {}
+[6.213006] (-) TimerEvent: {}
+[6.313261] (-) TimerEvent: {}
+[6.413502] (-) TimerEvent: {}
+[6.513752] (-) TimerEvent: {}
+[6.613995] (-) TimerEvent: {}
+[6.714271] (-) TimerEvent: {}
+[6.814567] (-) TimerEvent: {}
+[6.878882] (control) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX executable control\x1b[0m\n'}
+[6.914687] (-) TimerEvent: {}
+[7.014931] (-) TimerEvent: {}
+[7.115177] (-) TimerEvent: {}
+[7.129072] (control) StdoutLine: {'line': b'[ 59%] Built target control\n'}
+[7.215292] (-) TimerEvent: {}
+[7.315539] (-) TimerEvent: {}
+[7.398901] (control) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX shared library libmotion.so\x1b[0m\n'}
+[7.415639] (-) TimerEvent: {}
+[7.515873] (-) TimerEvent: {}
+[7.616128] (-) TimerEvent: {}
+[7.678318] (control) StdoutLine: {'line': b'[ 96%] Built target motion\n'}
+[7.678993] (control) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[7.680365] (control) CommandEnded: {'returncode': 2}
+[7.716258] (-) TimerEvent: {}
+[7.728954] (control) JobEnded: {'identifier': 'control', 'rc': 2}
+[7.739415] (-) EventReactorShutdown: {}

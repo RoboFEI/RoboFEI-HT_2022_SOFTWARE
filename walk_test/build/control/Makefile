@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robofei/Desktop/ROS2/walk_test/src/control
+CMAKE_SOURCE_DIR = /home/robo/ROS2/walk_test/src/control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robofei/Desktop/ROS2/walk_test/build/control
+CMAKE_BINARY_DIR = /home/robo/ROS2/walk_test/build/control
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,17 +68,48 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -92,54 +123,23 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/Desktop/ROS2/walk_test/build/control/CMakeFiles /home/robofei/Desktop/ROS2/walk_test/build/control/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ROS2/walk_test/build/control/CMakeFiles /home/robo/ROS2/walk_test/build/control/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/Desktop/ROS2/walk_test/build/control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ROS2/walk_test/build/control/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -168,17 +168,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named decision
+# Target rules for targets named control_uninstall
 
 # Build rule for target.
-decision: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 decision
-.PHONY : decision
+control_uninstall: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 control_uninstall
+.PHONY : control_uninstall
 
 # fast build rule for target.
-decision/fast:
-	$(MAKE) -f CMakeFiles/decision.dir/build.make CMakeFiles/decision.dir/build
-.PHONY : decision/fast
+control_uninstall/fast:
+	$(MAKE) -f CMakeFiles/control_uninstall.dir/build.make CMakeFiles/control_uninstall.dir/build
+.PHONY : control_uninstall/fast
+
+#=============================================================================
+# Target rules for targets named uninstall
+
+# Build rule for target.
+uninstall: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
+
+# fast build rule for target.
+uninstall/fast:
+	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
 
 #=============================================================================
 # Target rules for targets named control
@@ -220,30 +233,30 @@ motion/fast:
 .PHONY : motion/fast
 
 #=============================================================================
-# Target rules for targets named control_uninstall
+# Target rules for targets named action
 
 # Build rule for target.
-control_uninstall: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 control_uninstall
-.PHONY : control_uninstall
+action: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 action
+.PHONY : action
 
 # fast build rule for target.
-control_uninstall/fast:
-	$(MAKE) -f CMakeFiles/control_uninstall.dir/build.make CMakeFiles/control_uninstall.dir/build
-.PHONY : control_uninstall/fast
+action/fast:
+	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/build
+.PHONY : action/fast
 
 #=============================================================================
-# Target rules for targets named uninstall
+# Target rules for targets named decision
 
 # Build rule for target.
-uninstall: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 uninstall
-.PHONY : uninstall
+decision: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 decision
+.PHONY : decision
 
 # fast build rule for target.
-uninstall/fast:
-	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
-.PHONY : uninstall/fast
+decision/fast:
+	$(MAKE) -f CMakeFiles/decision.dir/build.make CMakeFiles/decision.dir/build
+.PHONY : decision/fast
 
 rclcpp_components/node_main_gait_publisher.o: rclcpp_components/node_main_gait_publisher.cpp.o
 
@@ -325,6 +338,60 @@ src/ReadConfig.s: src/ReadConfig.cpp.s
 src/ReadConfig.cpp.s:
 	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/ReadConfig.cpp.s
 .PHONY : src/ReadConfig.cpp.s
+
+src/action_editor/cmd_process.o: src/action_editor/cmd_process.cpp.o
+
+.PHONY : src/action_editor/cmd_process.o
+
+# target to build an object file
+src/action_editor/cmd_process.cpp.o:
+	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o
+.PHONY : src/action_editor/cmd_process.cpp.o
+
+src/action_editor/cmd_process.i: src/action_editor/cmd_process.cpp.i
+
+.PHONY : src/action_editor/cmd_process.i
+
+# target to preprocess a source file
+src/action_editor/cmd_process.cpp.i:
+	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.i
+.PHONY : src/action_editor/cmd_process.cpp.i
+
+src/action_editor/cmd_process.s: src/action_editor/cmd_process.cpp.s
+
+.PHONY : src/action_editor/cmd_process.s
+
+# target to generate assembly for a file
+src/action_editor/cmd_process.cpp.s:
+	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.s
+.PHONY : src/action_editor/cmd_process.cpp.s
+
+src/action_editor/main.o: src/action_editor/main.cpp.o
+
+.PHONY : src/action_editor/main.o
+
+# target to build an object file
+src/action_editor/main.cpp.o:
+	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/src/action_editor/main.cpp.o
+.PHONY : src/action_editor/main.cpp.o
+
+src/action_editor/main.i: src/action_editor/main.cpp.i
+
+.PHONY : src/action_editor/main.i
+
+# target to preprocess a source file
+src/action_editor/main.cpp.i:
+	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/src/action_editor/main.cpp.i
+.PHONY : src/action_editor/main.cpp.i
+
+src/action_editor/main.s: src/action_editor/main.cpp.s
+
+.PHONY : src/action_editor/main.s
+
+# target to generate assembly for a file
+src/action_editor/main.cpp.s:
+	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/src/action_editor/main.cpp.s
+.PHONY : src/action_editor/main.cpp.s
 
 src/control.o: src/control.cpp.o
 
@@ -549,6 +616,7 @@ src/minIni/minIni.o: src/minIni/minIni.cpp.o
 # target to build an object file
 src/minIni/minIni.cpp.o:
 	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/minIni/minIni.cpp.o
+	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/src/minIni/minIni.cpp.o
 .PHONY : src/minIni/minIni.cpp.o
 
 src/minIni/minIni.i: src/minIni/minIni.cpp.i
@@ -558,6 +626,7 @@ src/minIni/minIni.i: src/minIni/minIni.cpp.i
 # target to preprocess a source file
 src/minIni/minIni.cpp.i:
 	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/minIni/minIni.cpp.i
+	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/src/minIni/minIni.cpp.i
 .PHONY : src/minIni/minIni.cpp.i
 
 src/minIni/minIni.s: src/minIni/minIni.cpp.s
@@ -567,6 +636,7 @@ src/minIni/minIni.s: src/minIni/minIni.cpp.s
 # target to generate assembly for a file
 src/minIni/minIni.cpp.s:
 	$(MAKE) -f CMakeFiles/motion.dir/build.make CMakeFiles/motion.dir/src/minIni/minIni.cpp.s
+	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/src/minIni/minIni.cpp.s
 .PHONY : src/minIni/minIni.cpp.s
 
 src/motion/AngleEstimator.o: src/motion/AngleEstimator.cpp.o
@@ -765,18 +835,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... decision"
-	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... control"
-	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... gait_publisher"
-	@echo "... motion"
 	@echo "... control_uninstall"
 	@echo "... uninstall"
+	@echo "... test"
+	@echo "... control"
+	@echo "... gait_publisher"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... motion"
+	@echo "... install"
+	@echo "... action"
+	@echo "... decision"
+	@echo "... install/local"
 	@echo "... rclcpp_components/node_main_gait_publisher.o"
 	@echo "... rclcpp_components/node_main_gait_publisher.i"
 	@echo "... rclcpp_components/node_main_gait_publisher.s"
@@ -786,6 +857,12 @@ help:
 	@echo "... src/ReadConfig.o"
 	@echo "... src/ReadConfig.i"
 	@echo "... src/ReadConfig.s"
+	@echo "... src/action_editor/cmd_process.o"
+	@echo "... src/action_editor/cmd_process.i"
+	@echo "... src/action_editor/cmd_process.s"
+	@echo "... src/action_editor/main.o"
+	@echo "... src/action_editor/main.i"
+	@echo "... src/action_editor/main.s"
 	@echo "... src/control.o"
 	@echo "... src/control.i"
 	@echo "... src/control.s"

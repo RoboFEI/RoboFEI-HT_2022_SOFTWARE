@@ -38,7 +38,8 @@
 #include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/walk.hpp"
 
-#define INI_FILE_PATH       "/home/robofei/Desktop/ROS2/walk_test/src/control/Data/config.ini"
+#define INI_FILE_PATH       "/home/robo/ROS2/walk_test/src/control/Data/config.ini"
+#define MOTION_FILE_PATH    "/home/robo/ROS2/walk_test/src/control/Data/motion_4096.bin"
 
 using namespace Robot;
 using namespace std::chrono_literals;
@@ -112,7 +113,7 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_cust
 				MotionManager::GetInstance()->LoadINISettings(ini);
 				Walking::GetInstance()->LoadINISettings(ini);
 				Action::GetInstance()->Stop();
-				MotionManager::GetInstance()->AddModule((MotionModule*)Walking::GetInstance());
+				//MotionManager::GetInstance()->AddModule((MotionModule*)Walking::GetInstance());
 				MotionManager::GetInstance()->Initialize();
 				Walking::GetInstance()->m_Joint.SetEnableBody(true);
             	Action::GetInstance()->m_Joint.SetEnableBody(false);
@@ -144,10 +145,26 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_cust
 				printf("ACTION %d\n", Action::GetInstance()->IsRunning());
 				MotionManager::GetInstance()->keep_walking=true;
 			}
+			if(walk == 3){
+				MotionManager::GetInstance()->LoadINISettings(ini);
+				Walking::GetInstance()->LoadINISettings(ini);
+				Action::GetInstance()->LoadFile(MOTION_FILE_PATH);
+				MotionManager::GetInstance()->Initialize();
+				Action::GetInstance()->Initialize();
+				Walking::GetInstance()->Stop();
+				Walking::GetInstance()->m_Joint.SetEnableBody(false);
+				Action::GetInstance()->m_Joint.SetEnableBody(true);
+				MotionStatus::m_CurrentJoints.SetEnableBodyWithoutHead(true);
+				MotionManager::GetInstance()->SetEnable(true);
+				Action::GetInstance()->Start(24); 
+				printf("WALKING %d\n", Walking::GetInstance()->IsRunning());
+				printf("ACTION %d\n", Action::GetInstance()->IsRunning());
+				MotionManager::GetInstance()->keep_walking=true;
+			}
 		}
 		
 		else{
-			if (walk != 1 ){
+			if (walk != 1 && walk != 2 && walk != 3){
 				printf("CALLBACK NAO WALK\n");
 				MotionManager::GetInstance()->SetEnable(false);
 				//keep_walking==false;
@@ -341,7 +358,14 @@ void MotionManager::SaveINISettings(minIni* ini, const std::string &section)
 void MotionManager::Process()
 {
 	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "dentro do process");
-	Walking::GetInstance()->Process();
+	if((Walking::GetInstance())->m_Joint.GetEnable(5) == true)
+	{
+		Walking::GetInstance()->Process();
+	}
+	else if((Action::GetInstance())->m_Joint.GetEnable(5) == true)
+	{
+		Action::GetInstance()->Process();
+	}
 
 	// auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();  
 
@@ -442,10 +466,20 @@ void MotionManager::Process()
 					if((Walking::GetInstance())->m_Joint.GetEnable(id) == true)
 					{
 						MotionStatus::m_CurrentJoints.SetValue(id, (Walking::GetInstance())->m_Joint.GetValue(id));
-						//printf("MOTION %d: %d", id, (*i)->m_Joint.GetValue(id));
+						//printf("ACTION  %d: %d", id, (*i)->m_Joint.GetValue(id));
 						MotionStatus::m_CurrentJoints.SetPGain(id, (Walking::GetInstance())->m_Joint.GetPGain(id));
 						MotionStatus::m_CurrentJoints.SetIGain(id, (Walking::GetInstance())->m_Joint.GetIGain(id));
 						MotionStatus::m_CurrentJoints.SetDGain(id, (Walking::GetInstance())->m_Joint.GetDGain(id));
+					// MotionStatus::m_CurrentJoints.SetSlope(id, (*i)->m_Joint.GetCWSlope(id), (*i)->m_Joint.GetCCWSlope(id));
+					// MotionStatus::m_CurrentJoints.SetValue(id, (*i)->m_Joint.GetValue(id));
+					}
+					else if((Action::GetInstance())->m_Joint.GetEnable(id) == true)
+					{
+						MotionStatus::m_CurrentJoints.SetValue(id, (Action::GetInstance())->m_Joint.GetValue(id));
+						//printf("ACTION  %d: %d", id, (*i)->m_Joint.GetValue(id));
+						MotionStatus::m_CurrentJoints.SetPGain(id, (Action::GetInstance())->m_Joint.GetPGain(id));
+						MotionStatus::m_CurrentJoints.SetIGain(id, (Action::GetInstance())->m_Joint.GetIGain(id));
+						MotionStatus::m_CurrentJoints.SetDGain(id, (Action::GetInstance())->m_Joint.GetDGain(id));
 					// MotionStatus::m_CurrentJoints.SetSlope(id, (*i)->m_Joint.GetCWSlope(id), (*i)->m_Joint.GetCCWSlope(id));
 					// MotionStatus::m_CurrentJoints.SetValue(id, (*i)->m_Joint.GetValue(id));
 					}

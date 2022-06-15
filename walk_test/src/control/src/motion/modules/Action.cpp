@@ -266,7 +266,8 @@ bool Action::SavePage(int index, PAGE *pPage)
 
 void Action::Process()
 {
-	//////////////////// Áö¿ª º¯¼ö
+    printf("ACTION PROCESS\n");
+	//////////////////// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     unsigned char bID;
     unsigned long ulTotalTime256T;
     unsigned long ulPreSectionTime256T;
@@ -282,16 +283,16 @@ void Action::Process()
     short int wNextTargetAngle; // Next target position
     unsigned char bDirectionChanged;
 
-    ///////////////// Static º¯¼ö
-	static short int wpStartAngle1024[JointData::NUMBER_OF_JOINTS]; // º¸°£ÇÒ ½ÃÀÛ ÁöÁ¡
-    static short int wpTargetAngle1024[JointData::NUMBER_OF_JOINTS]; // º¸°£ÇÒ µµÂø ÁöÁ¡
-    static short int ipMovingAngle1024[JointData::NUMBER_OF_JOINTS]; // ÃÑ °¡¾ßÇÒ °Å¸®
-    static short int ipMainAngle1024[JointData::NUMBER_OF_JOINTS]; // µî¼Ó ±¸°£¿¡¼­ °¡¾ßÇÒ °Å¸®
-    static short int ipAccelAngle1024[JointData::NUMBER_OF_JOINTS]; // °¡¼Ó ±¸°£¿¡¼­ °¡¾ßÇÒ °Å¸®
-    static short int ipMainSpeed1024[JointData::NUMBER_OF_JOINTS]; // ¸ñÇ¥ µî¼Óµµ
-    static short int ipLastOutSpeed1024[JointData::NUMBER_OF_JOINTS]; // ÀÌ Àü »óÅÂÀÇ ¼Óµµ(°ü¼º)
-    static short int ipGoalSpeed1024[JointData::NUMBER_OF_JOINTS]; // ¸ðÅÍ°¡ ³»¾ß ÇÒ ¸ñÇ¥¼Óµµ
-    static unsigned char bpFinishType[JointData::NUMBER_OF_JOINTS]; // µµÂø ÁöÁ¡¿¡ µµ´ÞÇÒ »óÅÂ
+    ///////////////// Static ï¿½ï¿½ï¿½ï¿½
+	static short int wpStartAngle1024[JointData::NUMBER_OF_JOINTS]; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    static short int wpTargetAngle1024[JointData::NUMBER_OF_JOINTS]; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    static short int ipMovingAngle1024[JointData::NUMBER_OF_JOINTS]; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½
+    static short int ipMainAngle1024[JointData::NUMBER_OF_JOINTS]; // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½
+    static short int ipAccelAngle1024[JointData::NUMBER_OF_JOINTS]; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½
+    static short int ipMainSpeed1024[JointData::NUMBER_OF_JOINTS]; // ï¿½ï¿½Ç¥ ï¿½ï¿½Óµï¿½
+    static short int ipLastOutSpeed1024[JointData::NUMBER_OF_JOINTS]; // ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½(ï¿½ï¿½ï¿½ï¿½)
+    static short int ipGoalSpeed1024[JointData::NUMBER_OF_JOINTS]; // ï¿½ï¿½ï¿½Í°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ç¥ï¿½Óµï¿½
+    static unsigned char bpFinishType[JointData::NUMBER_OF_JOINTS]; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     short int iSpeedN;
     static unsigned short wUnitTimeCount;
     static unsigned short wUnitTimeNum;
@@ -302,7 +303,7 @@ void Action::Process()
     static unsigned char bPlayRepeatCount;
     static unsigned short wNextPlayPage;
 
-    /////////////// Enum º¯¼ö
+    /////////////// Enum ï¿½ï¿½ï¿½ï¿½
 
     /**************************************
     * Section             /----\
@@ -318,7 +319,7 @@ void Action::Process()
     if( m_Playing == false )
         return;
 
-    if( m_FirstDrivingStart == true ) // Ã³À½ ½ÃÀÛÇÒ¶§
+    if( m_FirstDrivingStart == true ) // Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½
     {
         m_FirstDrivingStart = false; //First Process end
         m_PlayingFinished = false;
@@ -343,7 +344,7 @@ void Action::Process()
         }
     }
 
-    if( wUnitTimeCount < wUnitTimeNum ) // ÇöÀç ÁøÇàÁßÀÌ¶ó¸é
+    if( wUnitTimeCount < wUnitTimeNum ) // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½
     {
         wUnitTimeCount++;
 				if( bSection == PAUSE_SECTION )
@@ -353,9 +354,10 @@ void Action::Process()
         {
             for( bID=JointData::ID_MIN; bID<=JointData::ID_MAX; bID++ )
             {
-                // ÇöÀç »ç¿ëÇÏ´Â °üÀý¸¸ °è»ê
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
               if(m_Joint.GetEnable(bID) == true)
                 {
+                    printf("ACTION SET VALUE %d\n", m_Joint.GetValue(bID));
 						if( ipMovingAngle1024[bID] == 0 )
 						m_Joint.SetValue(bID, wpStartAngle1024[bID]);
 					else
@@ -377,7 +379,7 @@ void Action::Process()
 						{
 							if( wUnitTimeCount == (wUnitTimeNum-1) )
 							{
-								// ½ºÅÜ ¸¶Áö¸· ¿ÀÂ÷¸¦ ÁÙÀÌ±âÀ§ÇØ ±×³É ¸ñÇ¥ À§Ä¡ °ªÀ» »ç¿ë
+								// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×³ï¿½ ï¿½ï¿½Ç¥ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 								m_Joint.SetValue(bID, wpTargetAngle1024[bID]);
 							}
 							else
@@ -390,8 +392,8 @@ void Action::Process()
 								}
 								else // NONE_ZERO_FINISH
 								{
-									// MAIN Section°ú µ¿ÀÏÇÏ°Ô ÀÛµ¿-µ¿ÀÏ
-									// step¿¡¼­ ¾î¶²¼­º¸´Â °¡°í ¾î¶² ¼­º¸´Â ¼­¾ßÇÏ´Â »óÈ²ÀÌ ¹ß»ýÇÒ ¼ö ÀÖÀ¸¹Ç·Î ÀÌ·¸°Ô ÇÒ ¼ö¹Û¿¡ ¾øÀ½
+									// MAIN Sectionï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ûµï¿½-ï¿½ï¿½ï¿½ï¿½
+									// stepï¿½ï¿½ï¿½ï¿½ ï¿½î¶²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½î¶² ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½È²ï¿½ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Û¿ï¿½ ï¿½ï¿½ï¿½ï¿½
 									m_Joint.SetValue(bID, wpStartAngle1024[bID] + (short int)(((long)(ipMainAngle1024[bID]) * wUnitTimeCount) / wUnitTimeNum));
 									ipGoalSpeed1024[bID] = ipMainSpeed1024[bID];
 								}
@@ -405,7 +407,7 @@ void Action::Process()
             }
         }
     }
-    else if( wUnitTimeCount >= wUnitTimeNum ) // ÇöÀç SectionÀÌ ¿Ï·áµÇ¾ú´Ù¸é
+    else if( wUnitTimeCount >= wUnitTimeNum ) // ï¿½ï¿½ï¿½ï¿½ Sectionï¿½ï¿½ ï¿½Ï·ï¿½Ç¾ï¿½ï¿½Ù¸ï¿½
     {
         wUnitTimeCount = 0;
 							
@@ -418,10 +420,10 @@ void Action::Process()
 			}
         }
 
-        // Section ¾÷µ¥ÀÌÆ® ( PRE -> MAIN -> POST -> (PAUSE or PRE) ... )
+        // Section ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ( PRE -> MAIN -> POST -> (PAUSE or PRE) ... )
         if( bSection == PRE_SECTION )
         {
-            // MAIN Section ÁØºñ
+            // MAIN Section ï¿½Øºï¿½
             bSection = MAIN_SECTION;
             wUnitTimeNum =  wUnitTimeTotalNum - (wAccelStep << 1);
 
@@ -431,7 +433,7 @@ void Action::Process()
 				{
 					if( bpFinishType[bID] == NONE_ZERO_FINISH )
 					{
-						if( (wUnitTimeTotalNum - wAccelStep) == 0 ) // µî¼Ó ±¸°£ÀÌ ÀüÇô ¾ø´Ù¸é
+						if( (wUnitTimeTotalNum - wAccelStep) == 0 ) // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù¸ï¿½
 							ipMainAngle1024[bID] = 0;
 						else
 							ipMainAngle1024[bID] = (short)((((long)(ipMovingAngle1024[bID] - ipAccelAngle1024[bID])) * wUnitTimeNum) / (wUnitTimeTotalNum - wAccelStep));
@@ -443,7 +445,7 @@ void Action::Process()
         }
         else if( bSection == MAIN_SECTION )
         {
-            // POST Section ÁØºñ
+            // POST Section ï¿½Øºï¿½
             bSection = POST_SECTION;
             wUnitTimeNum = wAccelStep;
 
@@ -455,7 +457,7 @@ void Action::Process()
         }
         else if( bSection == POST_SECTION )
         {
-            // Pause time À¯¹«¿¡µû¶ó ´Þ¶óÁü
+            // Pause time ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¶ï¿½ï¿½ï¿½
             if( wPauseTime )
             {
                 bSection = PAUSE_SECTION;
@@ -468,7 +470,7 @@ void Action::Process()
         }
         else if( bSection == PAUSE_SECTION )
         {
-            // PRE Section ÁØºñ
+            // PRE Section ï¿½Øºï¿½
             bSection = PRE_SECTION;
 
             for( bID=JointData::ID_MIN; bID<=JointData::ID_MAX; bID++ )
@@ -478,10 +480,10 @@ void Action::Process()
 			}
         }
 
-        // PRE Section½Ã¿¡ ¸ðµç ÁØºñ¸¦ ÇÑ´Ù.
+        // PRE Sectionï¿½Ã¿ï¿½ ï¿½ï¿½ï¿½ ï¿½Øºï¿½ ï¿½Ñ´ï¿½.
         if( bSection == PRE_SECTION )
         {
-            if( m_PlayingFinished == true ) // ¸ð¼ÇÀÌ ³¡³µ´Ù¸é
+            if( m_PlayingFinished == true ) // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½
             {
                 m_Playing = false;
                 return;
@@ -489,9 +491,9 @@ void Action::Process()
 
             m_PageStepCount++;
 
-            if( m_PageStepCount > m_PlayPage.header.stepnum ) // ÇöÀç ÆäÀÌÁö Àç»ýÀÌ ³¡³µ´Ù¸é
+            if( m_PageStepCount > m_PlayPage.header.stepnum ) // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½
             {
-                // ´ÙÀ½ ÆäÀÌÁö º¹»ç
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 m_PlayPage = m_NextPlayPage;
                 if( m_IndexPlayingPage != wNextPlayPage )
                     bPlayRepeatCount = m_PlayPage.header.repeat;
@@ -499,23 +501,23 @@ void Action::Process()
                 m_IndexPlayingPage = wNextPlayPage;
             }
 
-            if( m_PageStepCount == m_PlayPage.header.stepnum ) // ¸¶Áö¸· ½ºÅÜÀÌ¶ó¸é
+            if( m_PageStepCount == m_PlayPage.header.stepnum ) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½
             {
-                // ´ÙÀ½ ÆäÀÌÁö ·Îµù
-                if( m_StopPlaying == true ) // ¸ð¼Ç Á¤Áö ¸í·ÉÀÌ ÀÖ´Ù¸é
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½
+                if( m_StopPlaying == true ) // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ù¸ï¿½
                 {
-										wNextPlayPage = m_PlayPage.header.exit; // ´ÙÀ½ ÆäÀÌÁö´Â Exit ÆäÀÌÁö·Î
+										wNextPlayPage = m_PlayPage.header.exit; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Exit ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 }
                 else
                 {
                     bPlayRepeatCount--;
-                    if( bPlayRepeatCount > 0 ) // ¹Ýº¹ È½¼ö°¡ ³²¾Ò´Ù¸é
-                        wNextPlayPage = m_IndexPlayingPage; // ´ÙÀ½ ÆäÀÌÁö´Â ÇöÀç ÆäÀÌÁö·Î
-                    else // ¹Ýº¹À» ´ÙÇß´Ù¸é
-                        wNextPlayPage = m_PlayPage.header.next; // ´ÙÀ½ ÆäÀÌÁö´Â Next ÆäÀÌÁö·Î
+                    if( bPlayRepeatCount > 0 ) // ï¿½Ýºï¿½ È½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ò´Ù¸ï¿½
+                        wNextPlayPage = m_IndexPlayingPage; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                    else // ï¿½Ýºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß´Ù¸ï¿½
+                        wNextPlayPage = m_PlayPage.header.next; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Next ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 }
 
-                if( wNextPlayPage == 0 ) // Àç»ýÇÒ ´ÙÀ½ ÆäÀÌÁö°¡ ¾ø´Ù¸é ÇöÀç ½ºÅÜ±îÁöÇÏ°í Á¾·á
+                if( wNextPlayPage == 0 ) // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ü±ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½
                     {
 										if(m_SeqCount < m_StartingPageSeqCount && m_StopPlaying == false)
 											{
@@ -528,31 +530,31 @@ void Action::Process()
 										}
                 else
                 {
-                    // ´ÙÀ½ÆäÀÌÁö ·Îµù(°°À¸¸é ¸Þ¸ð¸® º¹»ç, ´Ù¸£¸é ÆÄÀÏ ÀÐ±â)
+                    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¸ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½Ù¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ð±ï¿½)
                     if( m_IndexPlayingPage != wNextPlayPage )
                         LoadPage( wNextPlayPage, &m_NextPlayPage );
                     else
                         m_NextPlayPage = m_PlayPage;
 
-                    // Àç»ýÇÒ Á¤º¸°¡ ¾ø´Ù¸é ÇöÀç ½ºÅÜ±îÁöÇÏ°í Á¾·á
+                    // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ü±ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½
                     if( m_NextPlayPage.header.repeat == 0 || m_NextPlayPage.header.stepnum == 0 )
                         m_PlayingFinished = true;
                 }
             }
 
-            //////// Step ÆÄ¶ó¹ÌÅÍ °è»ê
+            //////// Step ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
             wPauseTime = (((unsigned short)m_PlayPage.step[m_PageStepCount-1].pause) << 5) / m_PlayPage.header.speed;
             wMaxSpeed256 = ((unsigned short)m_PlayPage.step[m_PageStepCount-1].time * (unsigned short)m_PlayPage.header.speed) >> 5;
             if( wMaxSpeed256 == 0 )
                 wMaxSpeed256 = 1;
             wMaxAngle1024 = 0;
 
-            ////////// Jointº° ÆÄ¶ó¹ÌÅÍ °è»ê
+            ////////// Jointï¿½ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
             for( bID=JointData::ID_MIN; bID<=JointData::ID_MAX; bID++ )
 			{
 				if(m_Joint.GetEnable(bID) == true)
 				{
-					// ÀÌÀü, ÇöÀç, ¹Ì·¡¸¦ ¹ÙÅÁÀ¸·Î ±ËÀûÀ» °è»ê
+					// ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½, ï¿½Ì·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 					ipAccelAngle1024[bID] = 0;
 
 
@@ -572,9 +574,9 @@ void Action::Process()
 					ipMovingAngle1024[bID] = (int)(wpTargetAngle1024[bID] - wpStartAngle1024[bID]);
 
 					// Find Next target angle
-					if( m_PageStepCount == m_PlayPage.header.stepnum ) // ÇöÀç ½ºÅÜÀÌ ¸¶Áö¸·ÀÌ¶ó¸é
+					if( m_PageStepCount == m_PlayPage.header.stepnum ) // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½
 					{
-						if( m_PlayingFinished == true ) // ³¡³¯ ¿¹Á¤ÀÌ¶ó¸é
+						if( m_PlayingFinished == true ) // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½
 							wNextTargetAngle = wCurrentTargetAngle;
 						else
 						{
@@ -596,7 +598,7 @@ void Action::Process()
 					if( ((wPrevTargetAngle < wCurrentTargetAngle) && (wCurrentTargetAngle < wNextTargetAngle))
 						|| ((wPrevTargetAngle > wCurrentTargetAngle) && (wCurrentTargetAngle > wNextTargetAngle)) )
 					{
-						// °è¼Ó Áõ°¡ÇÏ°Å³ª °¨¼ÒÇÏ°í, È¤Àº °°´Ù¸é(Áï, ºÒ¿¬¼Ó Á¡ÀÌ ¾ø´Ù¸é)
+						// ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½, È¤ï¿½ï¿½ ï¿½ï¿½ï¿½Ù¸ï¿½(ï¿½ï¿½, ï¿½Ò¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù¸ï¿½)
 						bDirectionChanged = 0;
 					}
 					else
@@ -628,9 +630,9 @@ void Action::Process()
 				}
             }
 
-            //½Ã°£À» °è»êÇØ¼­ ´Ù½Ã 7.8msec·Î ³ª´©´Ù(<<7)-±×½Ã°£µ¿¾È¿¡ 7.8msec°¡ ¸î°³µé¾î°¡´ÂÁö °è»êÇÑ °Í
-            //´ÜÀ§ º¯È¯µÚ¿¡ °¢/¼Óµµ¸¦ ±¸ÇÏ°í(½Ã°£)±× ½Ã°£¿¡ ´Ù½Ã 7.8msec°¡ ¸î°³µé¾î°¡ÀÖ´ÂÁö °è»ê
-            //´ÜÀ§ º¯È¯ ---  °¢ :1024°è->300µµ°è,  ¼Óµµ: 256°è ->720°è
+            //ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½Ù½ï¿½ 7.8msecï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(<<7)-ï¿½×½Ã°ï¿½ï¿½ï¿½ï¿½È¿ï¿½ 7.8msecï¿½ï¿½ ï¿½î°³ï¿½ï¿½î°¡ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+            //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ú¿ï¿½ ï¿½ï¿½/ï¿½Óµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½(ï¿½Ã°ï¿½)ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ 7.8msecï¿½ï¿½ ï¿½î°³ï¿½ï¿½î°¡ï¿½Ö´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+            //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ ---  ï¿½ï¿½ :1024ï¿½ï¿½->300ï¿½ï¿½ï¿½ï¿½,  ï¿½Óµï¿½: 256ï¿½ï¿½ ->720ï¿½ï¿½
             //wUnitTimeNum = ((wMaxAngle1024*300/1024) /(wMaxSpeed256 * 720/256)) /7.8msec;
             //             = ((128*wMaxAngle1024*300/1024) /(wMaxSpeed256 * 720/256)) ;    (/7.8msec == *128)
             //             = (wMaxAngle1024*40) /(wMaxSpeed256 *3);
@@ -648,7 +650,7 @@ void Action::Process()
                 {
                     wAccelStep = (wUnitTimeTotalNum - 1) >> 1;
                     if( wAccelStep == 0 )
-                        wUnitTimeTotalNum = 0; //¿òÁ÷ÀÌ·Á¸é Àû¾îµµ °¡¼Ó,µî¼ÓÀÌ ÇÑ ½ºÅÜÀÌ»ó¾¿Àº Á¸ÀçÇØ¾ß
+                        wUnitTimeTotalNum = 0; //ï¿½ï¿½ï¿½ï¿½ï¿½Ì·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½îµµ ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½
                 }
             }
 

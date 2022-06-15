@@ -1,0 +1,160 @@
+[0.009s] Invoking command in '/home/robo/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[0.041s] [35m[1mScanning dependencies of target control[0m
+[0.041s] [35m[1mScanning dependencies of target action[0m
+[0.042s] [35m[1mScanning dependencies of target motion[0m
+[0.055s] [ 16%] Built target decision
+[0.055s] [ 16%] Built target gait_publisher
+[0.061s] [ 20%] [32mBuilding CXX object CMakeFiles/action.dir/src/action_editor/main.cpp.o[0m
+[0.063s] [ 24%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[0.071s] [ 32%] [32mBuilding CXX object CMakeFiles/motion.dir/src/motion/modules/Walking.cpp.o[0m
+[0.071s] [ 32%] [32mBuilding CXX object CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o[0m
+[0.073s] [ 36%] [32mBuilding CXX object CMakeFiles/motion.dir/src/motion/AngleEstimator.cpp.o[0m
+[0.074s] [ 40%] [32mBuilding CXX object CMakeFiles/motion.dir/src/ReadConfig.cpp.o[0m
+[0.074s] [ 44%] [32mBuilding CXX object CMakeFiles/motion.dir/src/motion/JointData.cpp.o[0m
+[0.074s] [ 48%] [32mBuilding CXX object CMakeFiles/motion.dir/src/minIni/minIni.cpp.o[0m
+[0.074s] [ 52%] [32mBuilding CXX object CMakeFiles/motion.dir/src/GaitMove.cpp.o[0m
+[0.270s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp:[m[K In member function ‘[01m[Kvoid AngleEstimator::predict(double, double, double)[m[K’:
+[0.270s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp:19:76:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgyro_dyaw[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[0.270s]    19 | void AngleEstimator::predict(double gyro_dpitch, double gyro_droll, [01;35m[Kdouble gyro_dyaw[m[K)
+[0.270s]       |                                                                     [01;35m[K~~~~~~~^~~~~~~~~[m[K
+[1.099s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In function ‘[01m[Kvoid sighandler(int)[m[K’:
+[1.100s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:317:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.100s]   317 | void sighandler([01;35m[Kint sig[m[K)
+[1.100s]       |                 [01;35m[K~~~~^~~[m[K
+[1.103s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.103s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:382:13:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kini[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+[1.103s]   382 |     minIni* [01;35m[Kini[m[K;
+[1.103s]       |             [01;35m[K^~~[m[K
+[1.132s] In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25[m[K:
+[1.132s] [01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:[m[K In constructor ‘[01m[KRobot::MotionManager::MotionManager(const rclcpp::NodeOptions&)[m[K’:
+[1.132s] [01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:86:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KRobot::MotionManager::DEBUG_PRINT[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+[1.132s]    86 |   bool [01;35m[KDEBUG_PRINT[m[K;
+[1.132s]       |        [01;35m[K^~~~~~~~~~~[m[K
+[1.132s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:68:41:[m[K [01;35m[Kwarning: [m[K  base ‘[01m[Krclcpp::Node[m[K’ [[01;35m[K-Wreorder[m[K]
+[1.132s]    68 |   rclcpp::Node("gait_publisher", options[01;35m[K)[m[K
+[1.132s]       |                                         [01;35m[K^[m[K
+[1.132s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:60:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+[1.132s]    60 | [01;35m[KMotionManager[m[K::MotionManager(const rclcpp::NodeOptions & options) :
+[1.132s]       | [01;35m[K^~~~~~~~~~~~~[m[K
+[1.155s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[1.155s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:100:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_X[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.155s]   100 |         float [01;35m[KIMU_GYRO_X[m[K = -imu_msg_->angular_velocity.x/10;
+[1.155s]       |               [01;35m[K^~~~~~~~~~[m[K
+[1.155s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:101:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_Y[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.155s]   101 |         float [01;35m[KIMU_GYRO_Y[m[K  = -imu_msg_->angular_velocity.y/10;
+[1.155s]       |               [01;35m[K^~~~~~~~~~[m[K
+[1.157s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback_walk(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Walk_<std::allocator<void> > >) const[m[K’:
+[1.157s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:42:29:[m[K [01;35m[Kwarning: [m[KISO C++ forbids converting a string constant to ‘[01m[Kchar*[m[K’ [[01;35m[K-Wwrite-strings[m[K]
+[1.157s]    42 | #define MOTION_FILE_PATH    [01;35m[K"/home/robo/ROS2/walk_test/src/control/Data/motion_4096.bin"[m[K
+[1.157s]       |                             [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.157s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:42:29:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KMOTION_FILE_PATH[m[K’
+[1.157s]    42 | #define MOTION_FILE_PATH    [01;36m[K"/home/robo/ROS2/walk_test/src/control/Data/motion_4096.bin"[m[K
+[1.157s]       |                             [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.157s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Initialize(bool)[m[K’:
+[1.157s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:178:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.157s]   178 |  int [01;35m[Kvalue[m[K, error;
+[1.157s]       |      [01;35m[K^~~~~[m[K
+[1.157s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:178:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.157s]   178 |  int value, [01;35m[Kerror[m[K;
+[1.157s]       |             [01;35m[K^~~~~[m[K
+[1.157s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Reinitialize()[m[K’:
+[1.158s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:264:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.158s]   264 |  int [01;35m[Kvalue[m[K, error;
+[1.158s]       |      [01;35m[K^~~~~[m[K
+[1.158s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:264:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.158s]   264 |  int value, [01;35m[Kerror[m[K;
+[1.158s]       |             [01;35m[K^~~~~[m[K
+[1.167s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::Process()[m[K’:
+[1.168s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:430:5:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+[1.168s]   430 |     [01;35m[Kif[m[K(MotionManager::GetInstance()->m_ProcessEnable == false || MotionManager::GetInstance()->m_IsRunning == true)
+[1.168s]       |     [01;35m[K^~[m[K
+[1.168s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:433:2:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+[1.168s]   433 |  [01;36m[KMotionManager[m[K::GetInstance()->m_IsRunning = true;
+[1.168s]       |  [01;36m[K^~~~~~~~~~~~~[m[K
+[1.174s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:490:7:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kparam[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+[1.174s]   490 |   int [01;35m[Kparam[m[K[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];
+[1.174s]       |       [01;35m[K^~~~~[m[K
+[1.174s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:491:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kjoint_num[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.174s]   491 |   int [01;35m[Kjoint_num[m[K = 0;
+[1.174s]       |       [01;35m[K^~~~~~~~~[m[K
+[1.244s] [01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:[m[K In member function ‘[01m[Kvoid GaitMove::walk_foward_slow(bool&, bool, bool)[m[K’:
+[1.244s] [01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:101:55:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_speed[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.244s]   101 | void GaitMove::walk_foward_slow(bool &stop_gait, [01;35m[Kbool max_speed[m[K, bool same_moviment)
+[1.244s]       |                                                  [01;35m[K~~~~~^~~~~~~~~[m[K
+[1.245s] [01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:[m[K In member function ‘[01m[Kvoid GaitMove::turn_right(bool&, bool, bool)[m[K’:
+[1.245s] [01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:157:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_angle[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.245s]   157 | void GaitMove::turn_right(bool &stop_gait, [01;35m[Kbool max_angle[m[K, bool same_moviment)
+[1.245s]       |                                            [01;35m[K~~~~~^~~~~~~~~[m[K
+[1.245s] [01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:[m[K In member function ‘[01m[Kvoid GaitMove::turn_left(bool&, bool, bool)[m[K’:
+[1.245s] [01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:169:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_angle[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.245s]   169 | void GaitMove::turn_left(bool &stop_gait, [01;35m[Kbool max_angle[m[K, bool same_moviment)
+[1.245s]       |                                           [01;35m[K~~~~~^~~~~~~~~[m[K
+[1.246s] [01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:[m[K In member function ‘[01m[Kvoid GaitMove::walk_backward_slow(bool&, bool, bool)[m[K’:
+[1.246s] [01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:225:57:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_speed[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.247s]   225 | void GaitMove::walk_backward_slow(bool &stop_gait, [01;35m[Kbool max_speed[m[K, bool same_moviment)
+[1.247s]       |                                                    [01;35m[K~~~~~^~~~~~~~~[m[K
+[1.584s] [ 56%] [32m[1mLinking CXX executable action[0m
+[1.674s] /usr/bin/ld: CMakeFiles/action.dir/src/action_editor/main.cpp.o: in function `main':
+[1.674s] main.cpp:(.text+0x415): undefined reference to `DrawIntro()'
+[1.674s] /usr/bin/ld: main.cpp:(.text+0x46f): undefined reference to `DrawEnding()'
+[1.674s] /usr/bin/ld: CMakeFiles/action.dir/src/action_editor/main.cpp.o: in function `MinimalPublisher::process()':
+[1.675s] main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x33): undefined reference to `_getch()'
+[1.675s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x49): undefined reference to `_getch()'
+[1.675s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x63): undefined reference to `_getch()'
+[1.675s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x79): undefined reference to `MoveUpCursor()'
+[1.675s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x8e): undefined reference to `MoveDownCursor()'
+[1.675s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0xa3): undefined reference to `MoveLeftCursor()'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0xbc): undefined reference to `MoveRightCursor()'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0xd6): undefined reference to `UpDownValue(int)'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0xf0): undefined reference to `UpDownValue(int)'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x10a): undefined reference to `UpDownValue(int)'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x124): undefined reference to `UpDownValue(int)'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x139): undefined reference to `ToggleTorque()'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x1f7): undefined reference to `BeginCommandMode()'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x229): undefined reference to `_getch()'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x443): undefined reference to `AskSave()'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x4fd): undefined reference to `DrawPage()'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x521): undefined reference to `HelpCmd()'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x545): undefined reference to `NextCmd()'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x569): undefined reference to `PrevCmd()'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x58d): undefined reference to `TimeCmd()'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x5b1): undefined reference to `SpeedCmd()'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x5e6): undefined reference to `PageCmd(int)'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x5f7): undefined reference to `PrintCmd(char const*)'
+[1.676s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x61b): undefined reference to `PlayCmd()'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x653): undefined reference to `SetValue(unsigned int)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x664): undefined reference to `PrintCmd(char const*)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x688): undefined reference to `ListCmd()'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x6c0): undefined reference to `OnOffCmd(bool, int, int*)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x6f8): undefined reference to `OnOffCmd(bool, int, int*)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x72d): undefined reference to `WriteStepCmd(int)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x73e): undefined reference to `PrintCmd(char const*)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x773): undefined reference to `DeleteStepCmd(int)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x784): undefined reference to `PrintCmd(char const*)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x7b6): undefined reference to `InsertStepCmd(int)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x7c8): undefined reference to `InsertStepCmd(int)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x805): undefined reference to `MoveStepCmd(int, int)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x816): undefined reference to `PrintCmd(char const*)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x84b): undefined reference to `CopyCmd(int)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x85c): undefined reference to `PrintCmd(char const*)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x880): undefined reference to `NewCmd()'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x8b5): undefined reference to `GoCmd(int)'
+[1.677s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x8c6): undefined reference to `PrintCmd(char const*)'
+[1.678s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x8ea): undefined reference to `SaveCmd()'
+[1.678s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x90b): undefined reference to `NameCmd()'
+[1.678s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x92c): undefined reference to `goInitPage()'
+[1.678s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x931): undefined reference to `PlayCmd()'
+[1.678s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x936): undefined reference to `backToPage()'
+[1.678s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x957): undefined reference to `readServo()'
+[1.678s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x965): undefined reference to `PrintCmd(char const*)'
+[1.678s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x96a): undefined reference to `EndCommandMode()'
+[1.678s] collect2: error: ld returned 1 exit status
+[1.678s] make[2]: *** [CMakeFiles/action.dir/build.make:136: action] Error 1
+[1.678s] make[1]: *** [CMakeFiles/Makefile2:248: CMakeFiles/action.dir/all] Error 2
+[1.678s] make[1]: *** Waiting for unfinished jobs....
+[5.724s] [ 60%] [32m[1mLinking CXX executable control[0m
+[5.979s] [ 60%] Built target control
+[6.034s] [ 64%] [32m[1mLinking CXX shared library libmotion.so[0m
+[6.314s] [100%] Built target motion
+[6.314s] make: *** [Makefile:141: all] Error 2
+[6.316s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '2': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12

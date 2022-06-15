@@ -23,32 +23,52 @@ find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(rclcpp_components REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(Curses REQUIRED)
+include_directories(${CURSES_INCLUDE_DIR})
+#find_package(rt REQUIRED)
 # find_package(<dependency> REQUIRED)
+find_library(LIBRT rt) 
 
 include_directories(include)
 include_directories(src/minIni)
 
 add_library(motion SHARED
   src/motion/MotionManager.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/modules/Walking.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/math/Matrix.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/math/Plane.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/math/Point.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/math/Vector.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/math/QuadraticStateTransform.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/math/MotionState.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/JointData.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/Kinematics.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/MotionStatus.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/modules/Action.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/motion/modules/Walking.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/minIni/minIni.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/GaitMove.cpp
-  /home/robofei/Desktop/ROS2/walk_test/src/control/src/ReadConfig.cpp
-  
+  /home/robo/ROS2/walk_test/src/control/src/motion/modules/Walking.cpp
+  /home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp
+  /home/robo/ROS2/walk_test/src/control/src/math/Matrix.cpp
+  /home/robo/ROS2/walk_test/src/control/src/math/Plane.cpp
+  /home/robo/ROS2/walk_test/src/control/src/math/Point.cpp
+  /home/robo/ROS2/walk_test/src/control/src/math/Vector.cpp
+  /home/robo/ROS2/walk_test/src/control/src/math/QuadraticStateTransform.cpp
+  /home/robo/ROS2/walk_test/src/control/src/math/MotionState.cpp
+  /home/robo/ROS2/walk_test/src/control/src/motion/JointData.cpp
+  /home/robo/ROS2/walk_test/src/control/src/motion/Kinematics.cpp
+  /home/robo/ROS2/walk_test/src/control/src/motion/MotionStatus.cpp
+  /home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp
+  /home/robo/ROS2/walk_test/src/control/src/motion/modules/Action.cpp
+  /home/robo/ROS2/walk_test/src/control/src/motion/modules/Walking.cpp
+  /home/robo/ROS2/walk_test/src/control/src/minIni/minIni.cpp
+  /home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp
+  /home/robo/ROS2/walk_test/src/control/src/ReadConfig.cpp
 )
+
+
+set(SOURCES
+/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp
+  /home/robo/ROS2/walk_test/src/control/src/minIni/minIni.cpp
+  /home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp
+  )
+
+add_executable(action ${SOURCES})
+ament_target_dependencies(action
+  rclcpp
+  dynamixel_sdk_custom_interfaces
+  Curses
+)
+target_link_libraries(action ${LIBRT})
+
+
 ament_target_dependencies(motion
   rclcpp
   rclcpp_components
@@ -82,6 +102,7 @@ ament_target_dependencies(decision
 install(TARGETS
   control
   decision
+  action
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -89,6 +110,12 @@ install(TARGETS motion
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
 )
+
+install(
+  DIRECTORY include/
+  DESTINATION include/
+)
+
 
 # Install launch files.
 install(DIRECTORY
