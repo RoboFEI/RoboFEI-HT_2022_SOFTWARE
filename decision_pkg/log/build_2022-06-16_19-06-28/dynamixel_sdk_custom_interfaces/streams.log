@@ -1,0 +1,31 @@
+[0.016s] Invoking command in '/home/robo/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robo/ROS2/decision_pkg/install/decision_pkg:/opt/ros/foxy /usr/bin/cmake --build /home/robo/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces -- -j12 -l12
+[0.024s] CMake Error: The current CMakeCache.txt directory /home/robo/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces/CMakeCache.txt is different than the directory /home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+[0.047s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.068s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.068s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.275s] Traceback (most recent call last):
+[0.275s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 112, in <module>
+[0.275s]     main()
+[0.275s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 55, in main
+[0.275s]     with open(args.outfile, 'w') as f:
+[0.275s] PermissionError: [Errno 13] Permission denied: '/home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces/ament_cmake_package_templates/templates.cmake'
+[0.294s] CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[0.294s]   execute_process(/usr/bin/python3
+[0.294s]   /opt/ros/foxy/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[0.294s]   /home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces/ament_cmake_package_templates/templates.cmake)
+[0.294s]   returned error code 1
+[0.294s] Call Stack (most recent call first):
+[0.294s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.294s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.294s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.294s]   CMakeLists.txt:19 (find_package)
+[0.294s] 
+[0.295s] 
+[0.295s] -- Configuring incomplete, errors occurred!
+[0.295s] See also "/home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces/CMakeFiles/CMakeOutput.log".
+[0.295s] CMake Error: Cannot open file for write: /home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces/CMakeCache.txt.tmp
+[0.295s] CMake Error: : System Error: Permission denied
+[0.295s] CMake Error: Unable to open cache file for save. /home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces/CMakeCache.txt
+[0.295s] CMake Error: : System Error: Permission denied
+[0.295s] make: *** [Makefile:988: cmake_check_build_system] Error 1
+[0.297s] Invoked command in '/home/robo/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robo/ROS2/decision_pkg/install/decision_pkg:/opt/ros/foxy /usr/bin/cmake --build /home/robo/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces -- -j12 -l12

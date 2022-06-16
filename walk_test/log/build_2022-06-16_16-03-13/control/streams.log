@@ -1,0 +1,30 @@
+[0.009s] Invoking command in '/home/robo/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[0.041s] [35m[1mScanning dependencies of target action[0m
+[0.054s] [ 14%] Built target gait_publisher
+[0.054s] [ 14%] Built target decision
+[0.055s] [ 22%] Built target control
+[0.058s] [ 85%] Built target motion
+[0.063s] [ 88%] [32mBuilding CXX object CMakeFiles/action.dir/src/action_editor/main.cpp.o[0m
+[0.971s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In member function ‘[01m[Kint MinimalPublisher::process()[m[K’:
+[0.972s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:77:16:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[0.972s]    77 |         printf([01;35m[K"Can not open \e[0;31m%s\e[0m\n"[m[K, filename);
+[0.972s]       |                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.972s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:77:16:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[0.972s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In function ‘[01m[Kvoid sighandler(int)[m[K’:
+[0.972s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:327:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[0.972s]   327 | void sighandler([01;35m[Kint sig[m[K)
+[0.972s]       |                 [01;35m[K~~~~^~~[m[K
+[0.975s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[0.975s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:392:13:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kini[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+[0.975s]   392 |     minIni* [01;35m[Kini[m[K;
+[0.975s]       |             [01;35m[K^~~[m[K
+[2.448s] [ 92%] [32m[1mLinking CXX executable action[0m
+[2.568s] /usr/bin/ld: CMakeFiles/action.dir/src/action_editor/main.cpp.o: in function `Robot::Action::GetInstance()':
+[2.569s] main.cpp:(.text._ZN5Robot6Action11GetInstanceEv[_ZN5Robot6Action11GetInstanceEv]+0xb): undefined reference to `Robot::Action::m_UniqueInstance'
+[2.569s] /usr/bin/ld: CMakeFiles/action.dir/src/action_editor/main.cpp.o: in function `MinimalPublisher::process()':
+[2.569s] main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0xad): undefined reference to `Robot::Action::LoadFile(char*)'
+[2.569s] collect2: error: ld returned 1 exit status
+[2.570s] make[2]: *** [CMakeFiles/action.dir/build.make:167: action] Error 1
+[2.570s] make[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/action.dir/all] Error 2
+[2.570s] make: *** [Makefile:141: all] Error 2
+[2.572s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '2': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12

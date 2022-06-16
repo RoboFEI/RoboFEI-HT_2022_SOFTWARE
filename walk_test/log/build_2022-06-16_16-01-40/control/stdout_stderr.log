@@ -1,0 +1,176 @@
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+-- Found rclcpp_components: 2.4.1 (/opt/ros/foxy/share/rclcpp_components/cmake)
+-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/robo/ROS2/walk_test/src/control/include;/home/robo/ROS2/walk_test/src/control/src/minIni
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/robo/ROS2/walk_test/build/control
+[35m[1mScanning dependencies of target action[0m
+[  9%] Built target decision
+[  9%] Built target gait_publisher
+[ 14%] Built target control
+[ 54%] Built target motion
+[ 64%] [32mBuilding CXX object CMakeFiles/action.dir/src/motion/MotionManager.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/action.dir/src/motion/modules/Walking.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/action.dir/src/math/Matrix.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/action.dir/src/math/Point.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/action.dir/src/math/Plane.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/action.dir/src/math/Vector.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/action.dir/src/motion/AngleEstimator.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/action.dir/src/math/QuadraticStateTransform.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/action.dir/src/math/MotionState.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/action.dir/src/motion/JointData.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/action.dir/src/motion/Kinematics.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/action.dir/src/motion/MotionStatus.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/action.dir/src/GaitMove.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/action.dir/src/ReadConfig.cpp.o[0m
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp:[m[K In member function ‘[01m[Kvoid AngleEstimator::predict(double, double, double)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp:19:76:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgyro_dyaw[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   19 | void AngleEstimator::predict(double gyro_dpitch, double gyro_droll, [01;35m[Kdouble gyro_dyaw[m[K)
+      |                                                                     [01;35m[K~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25[m[K:
+[01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:[m[K In constructor ‘[01m[KRobot::MotionManager::MotionManager(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:86:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KRobot::MotionManager::DEBUG_PRINT[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+   86 |   bool [01;35m[KDEBUG_PRINT[m[K;
+      |        [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:68:41:[m[K [01;35m[Kwarning: [m[K  base ‘[01m[Krclcpp::Node[m[K’ [[01;35m[K-Wreorder[m[K]
+   68 |   rclcpp::Node("gait_publisher", options[01;35m[K)[m[K
+      |                                         [01;35m[K^[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:60:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   60 | [01;35m[KMotionManager[m[K::MotionManager(const rclcpp::NodeOptions & options) :
+      | [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:[m[K In member function ‘[01m[Kvoid GaitMove::walk_foward_slow(bool&, bool, bool)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:101:55:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_speed[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  101 | void GaitMove::walk_foward_slow(bool &stop_gait, [01;35m[Kbool max_speed[m[K, bool same_moviment)
+      |                                                  [01;35m[K~~~~~^~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:[m[K In member function ‘[01m[Kvoid GaitMove::turn_right(bool&, bool, bool)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:157:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_angle[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  157 | void GaitMove::turn_right(bool &stop_gait, [01;35m[Kbool max_angle[m[K, bool same_moviment)
+      |                                            [01;35m[K~~~~~^~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:[m[K In member function ‘[01m[Kvoid GaitMove::turn_left(bool&, bool, bool)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:169:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_angle[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  169 | void GaitMove::turn_left(bool &stop_gait, [01;35m[Kbool max_angle[m[K, bool same_moviment)
+      |                                           [01;35m[K~~~~~^~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:[m[K In member function ‘[01m[Kvoid GaitMove::walk_backward_slow(bool&, bool, bool)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp:225:57:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_speed[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  225 | void GaitMove::walk_backward_slow(bool &stop_gait, [01;35m[Kbool max_speed[m[K, bool same_moviment)
+      |                                                    [01;35m[K~~~~~^~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:100:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_X[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  100 |         float [01;35m[KIMU_GYRO_X[m[K = -imu_msg_->angular_velocity.x/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:101:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_Y[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  101 |         float [01;35m[KIMU_GYRO_Y[m[K  = -imu_msg_->angular_velocity.y/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback_walk(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Walk_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:42:29:[m[K [01;35m[Kwarning: [m[KISO C++ forbids converting a string constant to ‘[01m[Kchar*[m[K’ [[01;35m[K-Wwrite-strings[m[K]
+   42 | #define MOTION_FILE_PATH    [01;35m[K"/home/robo/ROS2/walk_test/src/control/Data/motion_4096.bin"[m[K
+      |                             [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:42:29:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KMOTION_FILE_PATH[m[K’
+   42 | #define MOTION_FILE_PATH    [01;36m[K"/home/robo/ROS2/walk_test/src/control/Data/motion_4096.bin"[m[K
+      |                             [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Initialize(bool)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:178:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  178 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:178:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  178 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Reinitialize()[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:264:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  264 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:264:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  264 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::Process()[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:430:5:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  430 |     [01;35m[Kif[m[K(MotionManager::GetInstance()->m_ProcessEnable == false || MotionManager::GetInstance()->m_IsRunning == true)
+      |     [01;35m[K^~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:433:2:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  433 |  [01;36m[KMotionManager[m[K::GetInstance()->m_IsRunning = true;
+      |  [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:490:7:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kparam[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+  490 |   int [01;35m[Kparam[m[K[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];
+      |       [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:491:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kjoint_num[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  491 |   int [01;35m[Kjoint_num[m[K = 0;
+      |       [01;35m[K^~~~~~~~~[m[K
+[ 90%] [32m[1mLinking CXX executable action[0m
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/MotionManager.cpp.o: in function `(anonymous namespace)::ProxyExec0::ProxyExec0()':
+MotionManager.cpp:(.text+0x3f73): undefined reference to `console_bridge::log(char const*, int, console_bridge::LogLevel, char const*, ...)'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/MotionManager.cpp.o: in function `void class_loader::impl::registerPlugin<rclcpp_components::NodeFactoryTemplate<Robot::MotionManager>, rclcpp_components::NodeFactory>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0x2e): undefined reference to `class_loader::impl::getCurrentlyLoadingLibraryName[abi:cxx11]()'
+/usr/bin/ld: MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0x42): undefined reference to `class_loader::impl::getCurrentlyActiveClassLoader()'
+/usr/bin/ld: MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0x7e): undefined reference to `console_bridge::log(char const*, int, console_bridge::LogLevel, char const*, ...)'
+/usr/bin/ld: MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0x93): undefined reference to `class_loader::impl::getCurrentlyActiveClassLoader()'
+/usr/bin/ld: MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0xc6): undefined reference to `console_bridge::log(char const*, int, console_bridge::LogLevel, char const*, ...)'
+/usr/bin/ld: MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0xd0): undefined reference to `class_loader::impl::hasANonPurePluginLibraryBeenOpened(bool)'
+/usr/bin/ld: MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0xfd): undefined reference to `class_loader::impl::getCurrentlyActiveClassLoader()'
+/usr/bin/ld: MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0x108): undefined reference to `class_loader::impl::AbstractMetaObjectBase::addOwningClassLoader(class_loader::ClassLoader*)'
+/usr/bin/ld: MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0x118): undefined reference to `class_loader::impl::getCurrentlyLoadingLibraryName[abi:cxx11]()'
+/usr/bin/ld: MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0x127): undefined reference to `class_loader::impl::AbstractMetaObjectBase::setAssociatedLibraryPath(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/usr/bin/ld: MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0x138): undefined reference to `class_loader::impl::getPluginBaseToFactoryMapMapMutex()'
+/usr/bin/ld: MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0x1b8): undefined reference to `console_bridge::log(char const*, int, console_bridge::LogLevel, char const*, ...)'
+/usr/bin/ld: MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0x1d7): undefined reference to `class_loader::impl::getPluginBaseToFactoryMapMapMutex()'
+/usr/bin/ld: MotionManager.cpp:(.text._ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_[_ZN12class_loader4impl14registerPluginIN17rclcpp_components19NodeFactoryTemplateIN5Robot13MotionManagerEEENS2_11NodeFactoryEEEvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_]+0x217): undefined reference to `console_bridge::log(char const*, int, console_bridge::LogLevel, char const*, ...)'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/MotionManager.cpp.o: in function `std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, class_loader::impl::AbstractMetaObjectBase*, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, class_loader::impl::AbstractMetaObjectBase*> > >& class_loader::impl::getFactoryMapForBaseClass<rclcpp_components::NodeFactory>()':
+MotionManager.cpp:(.text._ZN12class_loader4impl25getFactoryMapForBaseClassIN17rclcpp_components11NodeFactoryEEERSt3mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPNS0_22AbstractMetaObjectBaseESt4lessISA_ESaISt4pairIKSA_SC_EEEv[_ZN12class_loader4impl25getFactoryMapForBaseClassIN17rclcpp_components11NodeFactoryEEERSt3mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPNS0_22AbstractMetaObjectBaseESt4lessISA_ESaISt4pairIKSA_SC_EEEv]+0x52): undefined reference to `class_loader::impl::getFactoryMapForBaseClass(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/MotionManager.cpp.o: in function `rclcpp::create_subscription_factory<sensor_msgs::msg::Imu_<std::allocator<void> >, std::_Bind<void (Robot::MotionManager::*(Robot::MotionManager*, std::_Placeholder<1>))(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const>, std::allocator<void>, sensor_msgs::msg::Imu_<std::allocator<void> >, rclcpp::Subscription<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void>, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void> > >, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void> > >(std::_Bind<void (Robot::MotionManager::*(Robot::MotionManager*, std::_Placeholder<1>))(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const>&&, rclcpp::SubscriptionOptionsWithAllocator<std::allocator<void> > const&, rclcpp::message_memory_strategy::MessageMemoryStrategy<sensor_msgs::msg::Imu_<std::allocator<void> >, std::allocator<void> >::SharedPtr, std::shared_ptr<rclcpp::topic_statistics::SubscriptionTopicStatistics<sensor_msgs::msg::Imu_<std::allocator<void> > > >)::{lambda(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&)#1}::operator()(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&) const':
+MotionManager.cpp:(.text._ZZN6rclcpp27create_subscription_factoryIN11sensor_msgs3msg4Imu_ISaIvEEESt5_BindIFMN5Robot13MotionManagerEKFvSt10shared_ptrIS5_EEPS8_St12_PlaceholderILi1EEEES4_S5_NS_12SubscriptionIS5_S4_NS_23message_memory_strategy21MessageMemoryStrategyIS5_S4_EEEESL_EENS_19SubscriptionFactoryEOT0_RKNS_32SubscriptionOptionsWithAllocatorIT1_EENT4_9SharedPtrES9_INS_16topic_statistics27SubscriptionTopicStatisticsIT2_EEEENKUlPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSEE_clES14_S1C_S1F_[_ZZN6rclcpp27create_subscription_factoryIN11sensor_msgs3msg4Imu_ISaIvEEESt5_BindIFMN5Robot13MotionManagerEKFvSt10shared_ptrIS5_EEPS8_St12_PlaceholderILi1EEEES4_S5_NS_12SubscriptionIS5_S4_NS_23message_memory_strategy21MessageMemoryStrategyIS5_S4_EEEESL_EENS_19SubscriptionFactoryEOT0_RKNS_32SubscriptionOptionsWithAllocatorIT1_EENT4_9SharedPtrES9_INS_16topic_statistics27SubscriptionTopicStatisticsIT2_EEEENKUlPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSEE_clES14_S1C_S1F_]+0x5c): undefined reference to `rosidl_message_type_support_t const* rosidl_typesupport_cpp::get_message_type_support_handle<sensor_msgs::msg::Imu_<std::allocator<void> > >()'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/MotionManager.cpp.o: in function `class_loader::impl::AbstractMetaObject<rclcpp_components::NodeFactory>::AbstractMetaObject(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+MotionManager.cpp:(.text._ZN12class_loader4impl18AbstractMetaObjectIN17rclcpp_components11NodeFactoryEEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_[_ZN12class_loader4impl18AbstractMetaObjectIN17rclcpp_components11NodeFactoryEEC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_]+0x6d): undefined reference to `class_loader::impl::AbstractMetaObjectBase::AbstractMetaObjectBase(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Action()':
+Action.cpp:(.text+0x2c): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: Action.cpp:(.text+0x34): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::~Action()':
+Action.cpp:(.text+0x6b): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x77): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::LoadFile(char*)':
+Action.cpp:(.text+0x29b): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: Action.cpp:(.text+0x303): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: Action.cpp:(.text+0x345): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x351): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x364): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::CreateFile(char*)':
+Action.cpp:(.text+0x3c6): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: Action.cpp:(.text+0x45a): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x466): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x47c): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Start(int)':
+Action.cpp:(.text+0x4df): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Start(int, Robot::Action::PAGE*)':
+Action.cpp:(.text+0x677): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: Action.cpp:(.text+0x6eb): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::LoadPage(int, Robot::Action::PAGE*)':
+Action.cpp:(.text+0x847): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x872): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::SavePage(int, Robot::Action::PAGE*)':
+Action.cpp:(.text+0x935): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x960): undefined reference to `Robot::Action::m_ActionFile'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/action.dir/build.make:392: action] Error 1
+make[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/action.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

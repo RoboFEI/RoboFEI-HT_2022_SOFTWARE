@@ -1,0 +1,102 @@
+[0.009s] Invoking command in '/home/robo/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[0.028s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.045s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.175s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.181s] -- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[0.197s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.199s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.288s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.321s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.349s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.350s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.461s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.550s] -- Found rclcpp_components: 2.4.1 (/opt/ros/foxy/share/rclcpp_components/cmake)
+[0.593s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.610s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.658s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.663s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.664s] -- Configured cppcheck include dirs: /home/robo/ROS2/walk_test/src/control/include;/home/robo/ROS2/walk_test/src/control/src/minIni
+[0.664s] -- Configured cppcheck exclude dirs and/or files: 
+[0.668s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.668s] -- Configured cpplint exclude dirs and/or files: 
+[0.669s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.670s] -- Added test 'lint_cmake' to check CMake code style
+[0.671s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.675s] -- Added test 'uncrustify' to check C / C++ code style
+[0.675s] -- Configured uncrustify additional arguments: 
+[0.676s] -- Added test 'xmllint' to check XML markup files
+[0.679s] -- Configuring done
+[0.698s] -- Generating done
+[0.700s] -- Build files have been written to: /home/robo/ROS2/walk_test/build/control
+[0.720s] [35m[1mScanning dependencies of target action[0m
+[0.734s] [ 14%] Built target decision
+[0.734s] [ 14%] Built target gait_publisher
+[0.735s] [ 21%] Built target control
+[0.735s] [ 25%] [32mBuilding CXX object CMakeFiles/action.dir/src/motion/modules/Action.cpp.o[0m
+[0.738s] [ 85%] Built target motion
+[0.750s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/modules/Action.cpp:[m[K In member function ‘[01m[Kbool Robot::Action::SavePage(int, Robot::Action::PAGE*)[m[K’:
+[0.750s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/modules/Action.cpp:261:5:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+[0.750s]   261 |     [01;35m[Kif[m[K( fwrite( pPage, 1, sizeof(PAGE), m_ActionFile ) != sizeof(PAGE) )
+[0.750s]       |     [01;35m[K^~[m[K
+[0.750s] [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/modules/Action.cpp:264:2:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+[0.750s]   264 |  [01;36m[Kreturn[m[K true;
+[0.750s]       |  [01;36m[K^~~~~~[m[K
+[0.788s] [ 89%] [32m[1mLinking CXX executable action[0m
+[0.913s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Action()':
+[0.913s] Action.cpp:(.text+0x2c): undefined reference to `Robot::Action::DEBUG_PRINT'
+[0.913s] /usr/bin/ld: Action.cpp:(.text+0x34): undefined reference to `Robot::Action::m_ActionFile'
+[0.913s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::~Action()':
+[0.914s] Action.cpp:(.text+0x6b): undefined reference to `Robot::Action::m_ActionFile'
+[0.914s] /usr/bin/ld: Action.cpp:(.text+0x77): undefined reference to `Robot::Action::m_ActionFile'
+[0.914s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::LoadFile(char*)':
+[0.914s] Action.cpp:(.text+0x29b): undefined reference to `Robot::Action::DEBUG_PRINT'
+[0.914s] /usr/bin/ld: Action.cpp:(.text+0x303): undefined reference to `Robot::Action::DEBUG_PRINT'
+[0.914s] /usr/bin/ld: Action.cpp:(.text+0x345): undefined reference to `Robot::Action::m_ActionFile'
+[0.914s] /usr/bin/ld: Action.cpp:(.text+0x351): undefined reference to `Robot::Action::m_ActionFile'
+[0.914s] /usr/bin/ld: Action.cpp:(.text+0x364): undefined reference to `Robot::Action::m_ActionFile'
+[0.915s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::CreateFile(char*)':
+[0.915s] Action.cpp:(.text+0x3c6): undefined reference to `Robot::Action::DEBUG_PRINT'
+[0.915s] /usr/bin/ld: Action.cpp:(.text+0x45a): undefined reference to `Robot::Action::m_ActionFile'
+[0.915s] /usr/bin/ld: Action.cpp:(.text+0x466): undefined reference to `Robot::Action::m_ActionFile'
+[0.915s] /usr/bin/ld: Action.cpp:(.text+0x47c): undefined reference to `Robot::Action::m_ActionFile'
+[0.915s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Start(int)':
+[0.915s] Action.cpp:(.text+0x4df): undefined reference to `Robot::Action::DEBUG_PRINT'
+[0.915s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Start(int, Robot::Action::PAGE*)':
+[0.915s] Action.cpp:(.text+0x677): undefined reference to `Robot::Action::DEBUG_PRINT'
+[0.915s] /usr/bin/ld: Action.cpp:(.text+0x6eb): undefined reference to `Robot::Action::DEBUG_PRINT'
+[0.915s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::LoadPage(int, Robot::Action::PAGE*)':
+[0.915s] Action.cpp:(.text+0x847): undefined reference to `Robot::Action::m_ActionFile'
+[0.915s] /usr/bin/ld: Action.cpp:(.text+0x872): undefined reference to `Robot::Action::m_ActionFile'
+[0.915s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::SavePage(int, Robot::Action::PAGE*)':
+[0.915s] Action.cpp:(.text+0x935): undefined reference to `Robot::Action::m_ActionFile'
+[0.915s] /usr/bin/ld: Action.cpp:(.text+0x960): undefined reference to `Robot::Action::m_ActionFile'
+[0.916s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Process()':
+[0.916s] Action.cpp:(.text+0xa6c): undefined reference to `Robot::JointData::GetEnable(int)'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0xa86): undefined reference to `Robot::MotionStatus::m_CurrentJoints'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0xa8b): undefined reference to `Robot::JointData::GetValue(int)'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0xb52): undefined reference to `Robot::JointData::GetEnable(int)'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0xb79): undefined reference to `Robot::JointData::GetValue(int)'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0xbd4): undefined reference to `Robot::JointData::SetValue(int, int)'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0xd3e): undefined reference to `Robot::JointData::SetValue(int, int)'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0xdba): undefined reference to `Robot::JointData::SetValue(int, int)'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0xe33): undefined reference to `Robot::JointData::SetValue(int, int)'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0xf5c): undefined reference to `Robot::JointData::SetValue(int, int)'
+[0.916s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o:Action.cpp:(.text+0xfc9): more undefined references to `Robot::JointData::SetValue(int, int)' follow
+[0.916s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Process()':
+[0.916s] Action.cpp:(.text+0x104d): undefined reference to `Robot::JointData::SetSlope(int, int, int)'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0x10dd): undefined reference to `Robot::JointData::GetEnable(int)'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0x1100): undefined reference to `Robot::JointData::GetValue(int)'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0x11a5): undefined reference to `Robot::JointData::GetEnable(int)'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0x137d): undefined reference to `Robot::JointData::GetEnable(int)'
+[0.916s] /usr/bin/ld: Action.cpp:(.text+0x1460): undefined reference to `Robot::JointData::GetEnable(int)'
+[0.917s] /usr/bin/ld: Action.cpp:(.text+0x17d0): undefined reference to `Robot::JointData::GetEnable(int)'
+[0.917s] /usr/bin/ld: Action.cpp:(.text+0x1b90): undefined reference to `Robot::JointData::GetEnable(int)'
+[0.917s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::MotionModule::MotionModule()':
+[0.917s] Action.cpp:(.text._ZN5Robot12MotionModuleC2Ev[_ZN5Robot12MotionModuleC5Ev]+0x2a): undefined reference to `Robot::JointData::JointData()'
+[0.917s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::MotionModule::~MotionModule()':
+[0.917s] Action.cpp:(.text._ZN5Robot12MotionModuleD2Ev[_ZN5Robot12MotionModuleD5Ev]+0x2a): undefined reference to `Robot::JointData::~JointData()'
+[0.917s] collect2: error: ld returned 1 exit status
+[0.917s] make[2]: *** [CMakeFiles/action.dir/build.make:182: action] Error 1
+[0.917s] make[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/action.dir/all] Error 2
+[0.917s] make: *** [Makefile:141: all] Error 2
+[0.918s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '2': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12

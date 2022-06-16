@@ -1,0 +1,15 @@
+[0.009s] Invoking command in '/home/robo/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[0.055s] [ 14%] Built target decision
+[0.055s] [ 14%] Built target gait_publisher
+[0.056s] [ 22%] Built target control
+[0.056s] [ 25%] [32m[1mLinking CXX executable action[0m
+[0.059s] [ 88%] Built target motion
+[0.180s] /usr/bin/ld: CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o:(.bss+0x0): multiple definition of `publisher_'; CMakeFiles/action.dir/src/action_editor/main.cpp.o:(.bss+0x0): first defined here
+[0.180s] /usr/bin/ld: CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o:(.bss+0x10): multiple definition of `publisher_single'; CMakeFiles/action.dir/src/action_editor/main.cpp.o:(.bss+0x10): first defined here
+[0.180s] /usr/bin/ld: CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o: in function `Robot::MotionManager::GetInstance()':
+[0.180s] cmd_process.cpp:(.text._ZN5Robot13MotionManager11GetInstanceEv[_ZN5Robot13MotionManager11GetInstanceEv]+0xb): undefined reference to `Robot::MotionManager::m_UniqueInstance'
+[0.180s] collect2: error: ld returned 1 exit status
+[0.181s] make[2]: *** [CMakeFiles/action.dir/build.make:167: action] Error 1
+[0.181s] make[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/action.dir/all] Error 2
+[0.181s] make: *** [Makefile:141: all] Error 2
+[0.183s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '2': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12

@@ -20,6 +20,7 @@ CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o: /home/robo/ROS2/walk_
 CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o: /home/robo/ROS2/walk_test/src/control/include/Action.h
 CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o: /home/robo/ROS2/walk_test/src/control/include/AngleEstimator.h
 CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o: /home/robo/ROS2/walk_test/src/control/include/JointData.h
+CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o: /home/robo/ROS2/walk_test/src/control/include/MX28.h
 CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o: /home/robo/ROS2/walk_test/src/control/include/MotionManager.h
 CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o: /home/robo/ROS2/walk_test/src/control/include/MotionModule.h
 CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o: /home/robo/ROS2/walk_test/src/control/include/MotionStatus.h

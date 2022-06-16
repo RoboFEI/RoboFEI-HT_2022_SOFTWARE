@@ -23,11 +23,13 @@ find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(rclcpp_components REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
-find_package(Curses REQUIRED)
 include_directories(${CURSES_INCLUDE_DIR})
 #find_package(rt REQUIRED)
 # find_package(<dependency> REQUIRED)
 find_library(LIBRT rt) 
+set(CURSES_NEED_NCURSES TRUE)
+find_package(Curses)
+
 
 include_directories(include)
 include_directories(src/minIni)
@@ -53,6 +55,7 @@ add_library(motion SHARED
   /home/robo/ROS2/walk_test/src/control/src/ReadConfig.cpp
 )
 
+set(CMAKE_C_FLAGS " -lncurses")
 
 set(SOURCES
 /home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp
@@ -66,7 +69,7 @@ ament_target_dependencies(action
   dynamixel_sdk_custom_interfaces
   Curses
 )
-target_link_libraries(action ${LIBRT})
+target_link_libraries(action ${CURSES_LIBRARY})
 
 
 ament_target_dependencies(motion

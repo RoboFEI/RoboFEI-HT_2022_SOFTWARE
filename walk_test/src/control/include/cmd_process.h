@@ -64,12 +64,15 @@
 #define NEXT_ROW		7
 #define EXIT_ROW		8
 
+// rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_;  
+// rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>::SharedPtr publisher_single;
+
 
 
 int _getch();
 bool AskSave();
 
-void teste();
+// void teste();
 
 // uint8_t dxl_error;
 // dynamixel::PortHandler *portHandler;

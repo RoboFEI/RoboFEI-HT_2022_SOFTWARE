@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robofei/ROS2/decision_pkg/src/dynamixel_sdk_custom_interfaces
+CMAKE_SOURCE_DIR = /home/robo/ROS2/decision_pkg/src/dynamixel_sdk_custom_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces
+CMAKE_BINARY_DIR = /home/robo/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces
 
 # Utility rule file for dynamixel_sdk_custom_interfaces__cpp.
 
@@ -82,8 +82,8 @@ rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/set_position.hpp: rosid
 rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/set_position.hpp: rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/Decision.idl
 rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/set_position.hpp: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/set_position.hpp: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robo/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/robo/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp: rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/set_position.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp
@@ -129,6 +129,6 @@ CMakeFiles/dynamixel_sdk_custom_interfaces__cpp.dir/clean:
 .PHONY : CMakeFiles/dynamixel_sdk_custom_interfaces__cpp.dir/clean
 
 CMakeFiles/dynamixel_sdk_custom_interfaces__cpp.dir/depend:
-	cd /home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robofei/ROS2/decision_pkg/src/dynamixel_sdk_custom_interfaces /home/robofei/ROS2/decision_pkg/src/dynamixel_sdk_custom_interfaces /home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces /home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces /home/robofei/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces/CMakeFiles/dynamixel_sdk_custom_interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robo/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/ROS2/decision_pkg/src/dynamixel_sdk_custom_interfaces /home/robo/ROS2/decision_pkg/src/dynamixel_sdk_custom_interfaces /home/robo/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces /home/robo/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces /home/robo/ROS2/decision_pkg/build/dynamixel_sdk_custom_interfaces/CMakeFiles/dynamixel_sdk_custom_interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/dynamixel_sdk_custom_interfaces__cpp.dir/depend
 

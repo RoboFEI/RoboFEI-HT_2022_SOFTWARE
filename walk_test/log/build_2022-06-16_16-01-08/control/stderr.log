@@ -1,0 +1,64 @@
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/modules/Action.cpp:[m[K In member function ‘[01m[Kbool Robot::Action::SavePage(int, Robot::Action::PAGE*)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/modules/Action.cpp:261:5:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  261 |     [01;35m[Kif[m[K( fwrite( pPage, 1, sizeof(PAGE), m_ActionFile ) != sizeof(PAGE) )
+      |     [01;35m[K^~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/modules/Action.cpp:264:2:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  264 |  [01;36m[Kreturn[m[K true;
+      |  [01;36m[K^~~~~~[m[K
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Action()':
+Action.cpp:(.text+0x2c): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: Action.cpp:(.text+0x34): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::~Action()':
+Action.cpp:(.text+0x6b): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x77): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::LoadFile(char*)':
+Action.cpp:(.text+0x29b): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: Action.cpp:(.text+0x303): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: Action.cpp:(.text+0x345): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x351): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x364): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::CreateFile(char*)':
+Action.cpp:(.text+0x3c6): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: Action.cpp:(.text+0x45a): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x466): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x47c): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Start(int)':
+Action.cpp:(.text+0x4df): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Start(int, Robot::Action::PAGE*)':
+Action.cpp:(.text+0x677): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: Action.cpp:(.text+0x6eb): undefined reference to `Robot::Action::DEBUG_PRINT'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::LoadPage(int, Robot::Action::PAGE*)':
+Action.cpp:(.text+0x847): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x872): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::SavePage(int, Robot::Action::PAGE*)':
+Action.cpp:(.text+0x935): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: Action.cpp:(.text+0x960): undefined reference to `Robot::Action::m_ActionFile'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Process()':
+Action.cpp:(.text+0xa6c): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0xa86): undefined reference to `Robot::MotionStatus::m_CurrentJoints'
+/usr/bin/ld: Action.cpp:(.text+0xa8b): undefined reference to `Robot::JointData::GetValue(int)'
+/usr/bin/ld: Action.cpp:(.text+0xb52): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0xb79): undefined reference to `Robot::JointData::GetValue(int)'
+/usr/bin/ld: Action.cpp:(.text+0xbd4): undefined reference to `Robot::JointData::SetValue(int, int)'
+/usr/bin/ld: Action.cpp:(.text+0xd3e): undefined reference to `Robot::JointData::SetValue(int, int)'
+/usr/bin/ld: Action.cpp:(.text+0xdba): undefined reference to `Robot::JointData::SetValue(int, int)'
+/usr/bin/ld: Action.cpp:(.text+0xe33): undefined reference to `Robot::JointData::SetValue(int, int)'
+/usr/bin/ld: Action.cpp:(.text+0xf5c): undefined reference to `Robot::JointData::SetValue(int, int)'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o:Action.cpp:(.text+0xfc9): more undefined references to `Robot::JointData::SetValue(int, int)' follow
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::Action::Process()':
+Action.cpp:(.text+0x104d): undefined reference to `Robot::JointData::SetSlope(int, int, int)'
+/usr/bin/ld: Action.cpp:(.text+0x10dd): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0x1100): undefined reference to `Robot::JointData::GetValue(int)'
+/usr/bin/ld: Action.cpp:(.text+0x11a5): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0x137d): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0x1460): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0x17d0): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: Action.cpp:(.text+0x1b90): undefined reference to `Robot::JointData::GetEnable(int)'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::MotionModule::MotionModule()':
+Action.cpp:(.text._ZN5Robot12MotionModuleC2Ev[_ZN5Robot12MotionModuleC5Ev]+0x2a): undefined reference to `Robot::JointData::JointData()'
+/usr/bin/ld: CMakeFiles/action.dir/src/motion/modules/Action.cpp.o: in function `Robot::MotionModule::~MotionModule()':
+Action.cpp:(.text._ZN5Robot12MotionModuleD2Ev[_ZN5Robot12MotionModuleD5Ev]+0x2a): undefined reference to `Robot::JointData::~JointData()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/action.dir/build.make:182: action] Error 1
+make[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/action.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

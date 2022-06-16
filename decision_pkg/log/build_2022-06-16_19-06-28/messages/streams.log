@@ -1,0 +1,31 @@
+[0.016s] Invoking command in '/home/robo/ROS2/decision_pkg/build/messages': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robo/ROS2/decision_pkg/install/decision_pkg:/opt/ros/foxy /usr/bin/cmake --build /home/robo/ROS2/decision_pkg/build/messages -- -j12 -l12
+[0.021s] CMake Error: The current CMakeCache.txt directory /home/robo/ROS2/decision_pkg/build/messages/CMakeCache.txt is different than the directory /home/robofei/ROS2/decision_pkg/build/messages where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+[0.044s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.064s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.064s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.272s] Traceback (most recent call last):
+[0.273s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 112, in <module>
+[0.273s]     main()
+[0.273s]   File "/opt/ros/foxy/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 55, in main
+[0.273s]     with open(args.outfile, 'w') as f:
+[0.273s] PermissionError: [Errno 13] Permission denied: '/home/robofei/ROS2/decision_pkg/build/messages/ament_cmake_package_templates/templates.cmake'
+[0.292s] -- Configuring incomplete, errors occurred!
+[0.293s] See also "/home/robofei/ROS2/decision_pkg/build/messages/CMakeFiles/CMakeOutput.log".
+[0.293s] CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[0.293s]   execute_process(/usr/bin/python3
+[0.293s]   /opt/ros/foxy/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[0.293s]   /home/robofei/ROS2/decision_pkg/build/messages/ament_cmake_package_templates/templates.cmake)
+[0.294s]   returned error code 1
+[0.294s] Call Stack (most recent call first):
+[0.295s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.295s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.295s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.295s]   CMakeLists.txt:19 (find_package)
+[0.295s] 
+[0.295s] 
+[0.296s] CMake Error: Cannot open file for write: /home/robofei/ROS2/decision_pkg/build/messages/CMakeCache.txt.tmp
+[0.296s] CMake Error: : System Error: Permission denied
+[0.296s] CMake Error: Unable to open cache file for save. /home/robofei/ROS2/decision_pkg/build/messages/CMakeCache.txt
+[0.296s] CMake Error: : System Error: Permission denied
+[0.296s] make: *** [Makefile:748: cmake_check_build_system] Error 1
+[0.296s] Invoked command in '/home/robo/ROS2/decision_pkg/build/messages' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robo/ROS2/decision_pkg/install/decision_pkg:/opt/ros/foxy /usr/bin/cmake --build /home/robo/ROS2/decision_pkg/build/messages -- -j12 -l12

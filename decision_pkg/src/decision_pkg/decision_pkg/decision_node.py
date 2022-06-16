@@ -88,7 +88,9 @@ class DecisionNode(Node):
                 self.get_logger().info('Go to start position')
                 if(BALL_DETECTED == False):
                     self.walking_tempo(message, 20) # Anda até chegar no meio de campo
-                self.search_ball(message) # Procura a bola
+                for x in range(0,3):
+                	if(BALL_DETECTED == False):
+                		self.search_ball(message) # Procura a bola, no primeiro vira a cabeça p esq, depois volta p meio e dps p dir
                 self.stand_still(message)
 
             elif(msg.game_state == 2): # Espera o jogo começar
