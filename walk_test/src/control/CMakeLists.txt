@@ -58,9 +58,9 @@ add_library(motion SHARED
 set(CMAKE_C_FLAGS " -lncurses")
 
 set(SOURCES
-/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp
   /home/robo/ROS2/walk_test/src/control/src/minIni/minIni.cpp
   /home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp
+  
   )
 
 add_executable(action ${SOURCES})

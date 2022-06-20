@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp" "/home/robo/ROS2/walk_test/build/control/CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o"
-  "/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp" "/home/robo/ROS2/walk_test/build/control/CMakeFiles/action.dir/src/action_editor/main.cpp.o"
   "/home/robo/ROS2/walk_test/src/control/src/minIni/minIni.cpp" "/home/robo/ROS2/walk_test/build/control/CMakeFiles/action.dir/src/minIni/minIni.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -49,20 +49,8 @@ void change_current_dir();
 
 int ch;
 
-class MinimalPublisher : public rclcpp::Node
-{
-  public:
-    MinimalPublisher()
-    : Node("action_editor")
-    {
-        publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
-        publisher_single = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>("set_position_single", 10); 
-      timer_ = this->create_wall_timer(
-      8ms, std::bind(&MinimalPublisher::process, this));
-    }
 
-  private:
-    int process()
+int process()
 {
     
     //printf("MAIN\n");
@@ -308,10 +296,6 @@ class MinimalPublisher : public rclcpp::Node
 
         return 0;
     }
-    rclcpp::TimerBase::SharedPtr timer_;
-    rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_; 
-    rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>::SharedPtr publisher_single;  
-};
 
 void change_current_dir()
 {
@@ -373,7 +357,6 @@ void sighandler(int sig)
 
 int main(int argc, char * argv[])
 {
-  rclcpp::init(argc, argv);
   
     char filename[128];
 	char string1[50]; //String
@@ -400,9 +383,7 @@ int main(int argc, char * argv[])
     sprintf(string1,"echo robo 123456| sudo -S renice -20 -p %d", getpid());
     system(string1);
   DrawIntro();
-  rclcpp::spin(std::make_shared<MinimalPublisher>());
   DrawEnding();
-  rclcpp::shutdown();
   return 0;
 }
 

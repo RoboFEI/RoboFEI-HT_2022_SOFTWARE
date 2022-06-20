@@ -1,0 +1,96 @@
+[0.008s] Invoking command in '/home/robo/ROS2/walk_test/build/control': AMENT_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[0.027s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.044s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.173s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.179s] -- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[0.195s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.198s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.288s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.321s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.349s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.351s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.462s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.553s] -- Found rclcpp_components: 2.4.1 (/opt/ros/foxy/share/rclcpp_components/cmake)
+[0.596s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.613s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.662s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.667s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.668s] -- Configured cppcheck include dirs: /home/robo/ROS2/walk_test/src/control/include;/home/robo/ROS2/walk_test/src/control/src/minIni
+[0.668s] -- Configured cppcheck exclude dirs and/or files: 
+[0.672s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.672s] -- Configured cpplint exclude dirs and/or files: 
+[0.673s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.674s] -- Added test 'lint_cmake' to check CMake code style
+[0.675s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.679s] -- Added test 'uncrustify' to check C / C++ code style
+[0.680s] -- Configured uncrustify additional arguments: 
+[0.680s] -- Added test 'xmllint' to check XML markup files
+[0.683s] -- Configuring done
+[0.705s] -- Generating done
+[0.706s] -- Build files have been written to: /home/robo/ROS2/walk_test/build/control
+[0.727s] [35m[1mScanning dependencies of target action[0m
+[0.740s] [ 14%] Built target gait_publisher
+[0.741s] [ 14%] Built target decision
+[0.741s] [ 21%] Built target cmd
+[0.741s] [ 28%] Built target control
+[0.742s] [ 32%] [32m[1mLinking CXX executable action[0m
+[0.746s] [ 92%] Built target motion
+[0.864s] /usr/bin/ld: CMakeFiles/action.dir/src/action_editor/main.cpp.o: in function `main':
+[0.864s] main.cpp:(.text+0x415): undefined reference to `DrawIntro()'
+[0.865s] /usr/bin/ld: main.cpp:(.text+0x46f): undefined reference to `DrawEnding()'
+[0.865s] /usr/bin/ld: CMakeFiles/action.dir/src/action_editor/main.cpp.o: in function `MinimalPublisher::process()':
+[0.865s] main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x27): undefined reference to `_getch()'
+[0.866s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x3d): undefined reference to `_getch()'
+[0.866s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x57): undefined reference to `_getch()'
+[0.866s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x6d): undefined reference to `MoveUpCursor()'
+[0.866s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x82): undefined reference to `MoveDownCursor()'
+[0.866s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x97): undefined reference to `MoveLeftCursor()'
+[0.866s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0xb0): undefined reference to `MoveRightCursor()'
+[0.866s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0xca): undefined reference to `UpDownValue(int)'
+[0.866s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0xe4): undefined reference to `UpDownValue(int)'
+[0.866s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0xfe): undefined reference to `UpDownValue(int)'
+[0.866s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x118): undefined reference to `UpDownValue(int)'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x12d): undefined reference to `ToggleTorque()'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x1eb): undefined reference to `BeginCommandMode()'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x21d): undefined reference to `_getch()'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x437): undefined reference to `AskSave()'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x4f1): undefined reference to `DrawPage()'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x515): undefined reference to `HelpCmd()'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x539): undefined reference to `NextCmd()'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x55d): undefined reference to `PrevCmd()'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x581): undefined reference to `TimeCmd()'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x5a5): undefined reference to `SpeedCmd()'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x5da): undefined reference to `PageCmd(int)'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x5eb): undefined reference to `PrintCmd(char const*)'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x60f): undefined reference to `PlayCmd()'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x647): undefined reference to `SetValue(unsigned int)'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x658): undefined reference to `PrintCmd(char const*)'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x67c): undefined reference to `ListCmd()'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x6b4): undefined reference to `OnOffCmd(bool, int, int*)'
+[0.867s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x6ec): undefined reference to `OnOffCmd(bool, int, int*)'
+[0.868s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x721): undefined reference to `WriteStepCmd(int)'
+[0.868s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x732): undefined reference to `PrintCmd(char const*)'
+[0.868s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x767): undefined reference to `DeleteStepCmd(int)'
+[0.868s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x778): undefined reference to `PrintCmd(char const*)'
+[0.868s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x7aa): undefined reference to `InsertStepCmd(int)'
+[0.868s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x7bc): undefined reference to `InsertStepCmd(int)'
+[0.868s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x7f9): undefined reference to `MoveStepCmd(int, int)'
+[0.868s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x80a): undefined reference to `PrintCmd(char const*)'
+[0.868s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x83f): undefined reference to `CopyCmd(int)'
+[0.868s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x850): undefined reference to `PrintCmd(char const*)'
+[0.868s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x874): undefined reference to `NewCmd()'
+[0.868s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x8a9): undefined reference to `GoCmd(int)'
+[0.868s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x8ba): undefined reference to `PrintCmd(char const*)'
+[0.869s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x8de): undefined reference to `SaveCmd()'
+[0.869s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x8ff): undefined reference to `NameCmd()'
+[0.869s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x920): undefined reference to `goInitPage()'
+[0.869s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x925): undefined reference to `PlayCmd()'
+[0.869s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x92a): undefined reference to `backToPage()'
+[0.869s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x94b): undefined reference to `readServo()'
+[0.870s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x959): undefined reference to `PrintCmd(char const*)'
+[0.870s] /usr/bin/ld: main.cpp:(.text._ZN16MinimalPublisher7processEv[_ZN16MinimalPublisher7processEv]+0x95e): undefined reference to `EndCommandMode()'
+[0.871s] collect2: error: ld returned 1 exit status
+[0.871s] make[2]: *** [CMakeFiles/action.dir/build.make:152: action] Error 1
+[0.871s] make[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/action.dir/all] Error 2
+[0.871s] make: *** [Makefile:141: all] Error 2
+[0.872s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '2': AMENT_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12

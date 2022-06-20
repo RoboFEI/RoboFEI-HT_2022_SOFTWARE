@@ -84,6 +84,7 @@ cmd: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdy
 cmd: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so
 cmd: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so
 cmd: /opt/ros/foxy/lib/librclcpp.so
+cmd: /usr/lib/x86_64-linux-gnu/libncurses.so
 cmd: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so
 cmd: /opt/ros/foxy/lib/liblibstatistics_collector.so
 cmd: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_c.so

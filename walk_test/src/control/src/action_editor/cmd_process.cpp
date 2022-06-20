@@ -4,6 +4,9 @@
 #include <fcntl.h>
 //#include <ncurses.h>
 #include <curses.h>
+#include <signal.h>
+#include <string.h>
+#include <libgen.h>
 #include "MotionManager.h"
 #include "minIni.h"
 #include <stdlib.h>     /* system, NULL, EXIT_FAILURE */
@@ -21,9 +24,13 @@
 #include "dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp"
 
 
+#define MOTION_FILE_PATH    "/home/robo/ROS2/walk_test/src/control/Data/motion_4096.bin"
+
 #define INI_FILE_PATH       "/home/robo/ROS2/walk_test/src/control/Data/config.ini"
 
+
 using namespace Robot;
+using namespace std::chrono_literals;
 
 const std::string azul = "\e[0;36m";
 const std::string azulE = "\e[0;34m";
@@ -50,6 +57,7 @@ int indexPage = 1;
 int indexPageBuffer = 1;
 Action::PAGE Page;
 Action::STEP Step;
+int ch;
 
 uint8_t dxl_error;
 
@@ -57,7 +65,215 @@ uint8_t dxl_error;
 // 	printf("FUNCAO TESTE\n");
 // }
 
-int _getch()
+MinimalPublisher::MinimalPublisher()
+    : Node("action_editor")
+    {
+        publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
+        publisher_single = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>("set_position_single", 10); 
+      timer_ = this->create_wall_timer(
+      8ms, std::bind(&MinimalPublisher::process, this));
+    }
+
+int MinimalPublisher::process()
+{
+        ch = _getch();
+
+        if(ch == 0x1b)
+        {
+            ch = _getch();
+            if(ch == 0x5b)
+            {
+                ch = _getch();
+                if(ch == 0x41)      // Up arrow key
+                    MoveUpCursor();
+                else if(ch == 0x42) // Down arrow key
+                    MoveDownCursor();
+                else if(ch == 0x44) // Left arrow key
+                    MoveLeftCursor();
+                else if(ch == 0x43) // Right arrow key
+                    MoveRightCursor();
+            }
+        }
+        else if( ch == '[' )
+            UpDownValue(-1);
+        else if( ch == ']' )
+            UpDownValue(1);
+        else if( ch == '{' )
+            UpDownValue(-10);
+        else if( ch == '}' )
+            UpDownValue(10);
+        else if( ch == ' ' )
+            ToggleTorque();
+        else if( ch >= 'A' && ch <= 'z' )
+        {
+            char input[128] = {0,};
+            char *token;
+            int input_len;
+            char cmd[80];
+            int num_param;
+            int iparam[30];
+
+            int idx = 0;
+
+            BeginCommandMode();
+
+            printf("%c", ch);
+            input[idx++] = (char)ch;
+
+            while(1)
+            {
+                ch = _getch();
+                if( ch == 0x0A )
+                    break;
+                else if( ch == 0x7F )
+                {
+                    if(idx > 0)
+                    {
+                        ch = 0x08;
+                        printf("%c", ch);
+                        ch = ' ';
+                        printf("%c", ch);
+                        ch = 0x08;
+                        printf("%c", ch);
+                        input[--idx] = 0;
+                    }
+                }
+                else if( ( ch >= 'A' && ch <= 'z' ) || ch == ' ' || ch == '-' || ( ch >= '0' && ch <= '9'))
+                {
+                    if(idx < 127)
+                    {
+                        printf("%c", ch);
+                        input[idx++] = (char)ch;
+                    }
+                }
+            }
+
+            fflush(stdin);
+            input_len = strlen(input);
+            if(input_len > 0)
+            {
+                token = strtok( input, " " );
+                if(token != 0)
+                {
+                    strcpy( cmd, token );
+                    token = strtok( 0, " " );
+                    num_param = 0;
+                    while(token != 0)
+                    {
+                        iparam[num_param++] = atoi(token);
+                        token = strtok( 0, " " );
+                    }
+
+                    if(strcmp(cmd, "exit") == 0)
+                    {
+                        if(AskSave() == false)
+                            rclcpp::shutdown();
+                    }
+                    else if(strcmp(cmd, "re") == 0)
+                        DrawPage();
+                    else if(strcmp(cmd, "help") == 0)
+
+                        HelpCmd();
+                    else if(strcmp(cmd, "n") == 0)
+                        NextCmd();
+                    else if(strcmp(cmd, "b") == 0)
+                        PrevCmd();						
+                    else if(strcmp(cmd, "time") == 0)
+                        TimeCmd();
+                    else if(strcmp(cmd, "speed") == 0)
+                        SpeedCmd();
+                    else if(strcmp(cmd, "page") == 0)
+                    {
+                        if(num_param > 0)
+                            PageCmd(iparam[0]);
+                        else
+                            PrintCmd("Need parameter");
+                    }
+                    else if(strcmp(cmd, "play") == 0)
+                    {
+                        PlayCmd();
+                    }
+                    else if(strcmp(cmd, "set") == 0)
+                    {
+                        if(num_param > -900)
+                            SetValue(iparam[0]);
+                        else
+                            PrintCmd("Need parameter");
+                    }
+                    else if(strcmp(cmd, "list") == 0)
+                        ListCmd();
+                    else if(strcmp(cmd, "on") == 0)
+                        OnOffCmd(true, num_param, iparam);
+                    else if(strcmp(cmd, "off") == 0)
+                        OnOffCmd(false, num_param, iparam);
+                    else if(strcmp(cmd, "w") == 0)
+                    {
+                        if(num_param > 0)
+                            WriteStepCmd(iparam[0]);
+                        else
+                            PrintCmd("Need parameter");
+                    }
+                    else if(strcmp(cmd, "d") == 0)
+                    {
+                        if(num_param > 0)
+                            DeleteStepCmd(iparam[0]);
+                        else
+                            PrintCmd("Need parameter");
+                    }
+                    else if(strcmp(cmd, "i") == 0)
+                    {
+                        if(num_param == 0)
+                            InsertStepCmd(0);
+                        else
+                            InsertStepCmd(iparam[0]);
+                    }
+                    else if(strcmp(cmd, "m") == 0)
+                    {
+                        if(num_param > 1)
+                            MoveStepCmd(iparam[0], iparam[1]);
+                        else
+                            PrintCmd("Need parameter");
+                    }
+                    else if(strcmp(cmd, "copy") == 0)
+                    {
+                        if(num_param > 0)
+                            CopyCmd(iparam[0]);
+                        else
+                            PrintCmd("Need parameter");
+                    }
+                    else if(strcmp(cmd, "new") == 0)
+                        NewCmd();
+                    else if(strcmp(cmd, "g") == 0)
+                    {
+                        if(num_param > 0)
+                            GoCmd(iparam[0]);
+                        else
+                            PrintCmd("Need parameter");
+                    }
+                    else if(strcmp(cmd, "save") == 0)
+                        SaveCmd();
+                    else if(strcmp(cmd, "name") == 0)
+                        NameCmd();
+                    else if(strcmp(cmd, "t") == 0)
+					{
+						goInitPage();
+						PlayCmd();
+						backToPage();
+					}
+                    else if(strcmp(cmd, "read") == 0)
+						readServo();
+					else
+                        PrintCmd("Bad command! please input 'help'");
+                }
+            }
+
+            EndCommandMode();
+        }
+
+        return 0;
+    }
+
+int MinimalPublisher::_getch()
 {
 	struct termios oldt, newt;
 	int ch;
@@ -70,7 +286,7 @@ int _getch()
 	return ch;
 }
 
-int kbhit(void)
+int MinimalPublisher::kbhit(void)
 {
   struct termios oldt, newt;
   int ch;
@@ -98,7 +314,7 @@ int kbhit(void)
 }
 
 struct termios oldterm, new_term;
-void set_stdin(void)
+void MinimalPublisher::set_stdin(void)
 {
 	tcgetattr(0,&oldterm);
 	new_term = oldterm;
@@ -108,13 +324,13 @@ void set_stdin(void)
 	tcsetattr(0, TCSANOW, &new_term);
 }
 
-void reset_stdin(void)
+void MinimalPublisher::reset_stdin(void)
 {
 	tcsetattr(0, TCSANOW, &oldterm);
 }
 
 // // void ReadStep(CM730 *cm730)
-void ReadStep()
+void MinimalPublisher::ReadStep()
 {
 	uint8_t value8;
 	uint32_t value32;
@@ -147,7 +363,7 @@ void ReadStep()
 }
 
 
-bool AskSave()
+bool MinimalPublisher::AskSave()
 {
 	if(bEdited == true)
 	{
@@ -163,7 +379,7 @@ bool AskSave()
 }
 
 
-void GoToCursor(int col, int row)
+void MinimalPublisher::GoToCursor(int col, int row)
 {
 	char *cursor;
 	char *esc_sequence;
@@ -175,7 +391,7 @@ void GoToCursor(int col, int row)
 	Row = row;
 }
 
-void MoveUpCursor()
+void MinimalPublisher::MoveUpCursor()
 {
 	if(Col >= STP7_COL && Col <= CCWSLOPE_COL)
 	{
@@ -189,7 +405,7 @@ void MoveUpCursor()
 	}
 }
 
-void MoveDownCursor()
+void MinimalPublisher::MoveDownCursor()
 {
 	if(Col >= STP7_COL && Col <= STP6_COL)
 	{
@@ -208,7 +424,7 @@ void MoveDownCursor()
 	}
 }
 
-void MoveLeftCursor()
+void MinimalPublisher::MoveLeftCursor()
 {
 	switch(Col)
 	{
@@ -254,7 +470,7 @@ void MoveLeftCursor()
 	}
 }
 
-void MoveRightCursor()
+void MinimalPublisher::MoveRightCursor()
 {
 	switch(Col)
 	{
@@ -302,7 +518,7 @@ void MoveRightCursor()
 }
 
 // // void DrawIntro(CM730 *cm730)
-void DrawIntro()
+void MinimalPublisher::DrawIntro()
 {
 	int nrows, ncolumns;
     setupterm(NULL, fileno(stdout), (int *)0);
@@ -331,7 +547,7 @@ void DrawIntro()
 	DrawPage();
 }
 
-void DrawEnding()
+void MinimalPublisher::DrawEnding()
 {
 	system("clear");
 	printf("\n");
@@ -339,7 +555,7 @@ void DrawEnding()
 	printf("\n");
 }
 
-void DrawPage()
+void MinimalPublisher::DrawPage()
 {
 	int old_col = Col;
 	int old_row = Row;
@@ -423,7 +639,7 @@ void DrawPage()
 	GoToCursor(old_col, old_row);
 }
 
-void DrawStep(int index)
+void MinimalPublisher::DrawStep(int index)
 {
 	int old_col = Col;
 	int old_row = Row;
@@ -498,7 +714,7 @@ void DrawStep(int index)
 	GoToCursor( old_col, old_row );
 }
 
-void DrawStepLine(bool erase)
+void MinimalPublisher::DrawStepLine(bool erase)
 {
 	int old_col = Col;
 	int old_row = Row;
@@ -555,7 +771,7 @@ void DrawStepLine(bool erase)
 	GoToCursor(old_col, old_row);
 }
 
-void DrawName()
+void MinimalPublisher::DrawName()
 {
 	int old_col = Col;
 	int old_row = Row;
@@ -570,31 +786,31 @@ void DrawName()
 	GoToCursor( old_col, old_row );
 }
 
-void ClearCmd()
+void MinimalPublisher::ClearCmd()
 {
 	PrintCmd("");
 }
 
-void PrintCmd(const char *message)
+void MinimalPublisher::PrintCmd(const char *message)
 {
 	int len = strlen(message);
-	GoToCursor(0, CMD_ROW);
+	MinimalPublisher::GoToCursor(0, CMD_ROW);
 
 	printf( "] %s", message);
 	for(int i=0; i<(SCREEN_COL - (len + 2)); i++)
 		printf(" ");
 
-	GoToCursor(len + 2, CMD_ROW);
+	MinimalPublisher::GoToCursor(len + 2, CMD_ROW);
 }
 
 // void UpDownValue(CM730 *cm730, int offset)
-void UpDownValue(int offset)
+void MinimalPublisher::UpDownValue(int offset)
 {
 	// SetValue(cm730, GetValue() + offset);
-	SetValue(GetValue() + offset);
+	MinimalPublisher::SetValue(GetValue() + offset);
 }
 
-int GetValue()
+int MinimalPublisher::GetValue()
 {
 	int col;
 	int row;
@@ -683,7 +899,7 @@ int GetValue()
 }
 
 // void SetValue(CM730 *cm730, int value)
-void SetValue(uint32_t value)
+void MinimalPublisher::SetValue(uint32_t value)
 {
 	int col;
 	int row;
@@ -702,8 +918,10 @@ void SetValue(uint32_t value)
 
 	if( col == STP7_COL )
 	{
+		//printf("Dentro do primeiro if\n");
 		if( row == PAUSE_ROW )
 		{
+			//printf("pause row\n");
 			if(value >= 0 && value <= 255)
 			{
 				Step.pause = value;
@@ -713,6 +931,7 @@ void SetValue(uint32_t value)
 		}
 		else if( row == SPEED_ROW )
 		{
+			//printf("speed row\n");
 			if(value >= 0 && value <= 255)
 			{
 				Step.time = value;
@@ -722,19 +941,18 @@ void SetValue(uint32_t value)
 		}
 		else
 		{
+			//printf("publisher\n");
 			// if(value  + MotionManager::GetInstance()->m_Offset[row + 1] >= 0 && value  + MotionManager::GetInstance()->m_Offset[row + 1] <= MX28::MAX_VALUE)
 			// {
 			// 	if(!((Step.position[row + 1] + MotionManager::GetInstance()->m_Offset[row + 1]) & Action::INVALID_BIT_MASK) && !((Step.position[row + 1] + MotionManager::GetInstance()->m_Offset[row + 1])  & Action::TORQUE_OFF_BIT_MASK))
 			// 	{
 			// 		int error;
-					// auto node = rclcpp::Node::make_shared("cmd_node");
-					// auto publisher_single = node->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
 
-                    // auto message_single = dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal(); 
-                    // message_single.id = row+1;
-                    // message_single.address = MX28::P_GOAL_POSITION;
-                    // message_single.position = value;
-                    // publisher_single->publish(message_single);
+                    auto message_single = dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal(); 
+                    message_single.id = row+1;
+                    message_single.address = MX28::P_GOAL_POSITION;
+                    message_single.position = value;
+                    publisher_single->publish(message_single);
 
                     
 					// if(cm730->WriteWord(row + 1, MX28::P_GOAL_POSITION_L, value  + MotionManager::GetInstance()->m_Offset[row + 1], &error) == CM730::SUCCESS)
@@ -910,7 +1128,7 @@ void SetValue(uint32_t value)
 	GoToCursor(col, row);
 }
 
-void ToggleTorque()
+void MinimalPublisher::ToggleTorque()
 {
 	if(Col != STP7_COL || Row > ID_20_ROW)
 		return;
@@ -943,7 +1161,7 @@ void ToggleTorque()
 	GoToCursor(Col, Row);
 }
 
-void BeginCommandMode()
+void MinimalPublisher::BeginCommandMode()
 {
 	Old_Col = Col;
 	Old_Row = Row;
@@ -952,13 +1170,13 @@ void BeginCommandMode()
 	bBeginCommandMode = true;
 }
 
-void EndCommandMode()
+void MinimalPublisher::EndCommandMode()
 {
 	GoToCursor(Old_Col, Old_Row);
 	bBeginCommandMode = false;
 }
 
-void HelpCmd()
+void MinimalPublisher::HelpCmd()
 {
 	system("clear");
 	printf(" exit               Exits the program.\n");
@@ -1000,25 +1218,26 @@ void HelpCmd()
 	DrawPage();
 }
 
-void NextCmd()
+void MinimalPublisher::NextCmd()
 {
 	PageCmd(indexPage + 1);
 }
 
-void PrevCmd()
+void MinimalPublisher::PrevCmd()
 {
 	PageCmd(indexPage - 1);
 }
 
-void PageCmd(int index)
+void MinimalPublisher::PageCmd(int index)
 {
+	Action* action;
 	if(AskSave() == true)
 		return;
 
 	if(index > 0 && index < Action::MAXNUM_PAGE)
 	{
 		indexPage = index;
-		//Action::GetInstance()->LoadPage(indexPage, &Page);
+		action->LoadPage(indexPage, &Page);
 
 		Col = STP7_COL;
 		Row = ID_1_ROW;
@@ -1030,21 +1249,21 @@ void PageCmd(int index)
 	bEdited = false;
 }
 
-void TimeCmd()
+void MinimalPublisher::TimeCmd()
 {
 	Page.header.schedule = Action::TIME_BASE_SCHEDULE;
 	bEdited = true;
 	DrawPage();
 }
 
-void SpeedCmd()
+void MinimalPublisher::SpeedCmd()
 {
 	Page.header.schedule = Action::SPEED_BASE_SCHEDULE;
 	bEdited = true;
 	DrawPage();
 }
 
-void PlayCmd()
+void MinimalPublisher::PlayCmd()
 {
 	int value;
 
@@ -1107,7 +1326,7 @@ void PlayCmd()
 	DrawStep(7);
 }
 
-void ListCmd()
+void MinimalPublisher::ListCmd()
 {
 	int old_col = Col;
 	int old_row = Row;
@@ -1172,7 +1391,7 @@ void ListCmd()
 }
 
 // void OnOffCmd(CM730 *cm730, bool on, int num_param, int *list)
-void OnOffCmd(bool on, int num_param, int *list)
+void MinimalPublisher::OnOffCmd(bool on, int num_param, int *list)
 {
 	// if(num_param == 0)
 	// {
@@ -1194,7 +1413,7 @@ void OnOffCmd(bool on, int num_param, int *list)
 	DrawStep(7);
 }
 
-void WriteStepCmd(int index)
+void MinimalPublisher::WriteStepCmd(int index)
 {
 	// for(int id=JointData::ID_R_SHOULDER_PITCH; id<JointData::NUMBER_OF_JOINTS; id++)
 	// {
@@ -1212,7 +1431,7 @@ void WriteStepCmd(int index)
 		PrintCmd("Invalid step index");
 }
 
-void DeleteStepCmd(int index)
+void MinimalPublisher::DeleteStepCmd(int index)
 {
 	if(index >= 0 && index < Action::MAXNUM_STEP)
 	{
@@ -1251,7 +1470,7 @@ void DeleteStepCmd(int index)
 		PrintCmd("Invalid step index");
 }
 
-void InsertStepCmd(int index)
+void MinimalPublisher::InsertStepCmd(int index)
 {
 // 	for(int id=JointData::ID_R_SHOULDER_PITCH; id<JointData::NUMBER_OF_JOINTS; id++)
 // 	{
@@ -1292,7 +1511,7 @@ void InsertStepCmd(int index)
 		PrintCmd("Invalid step index");
 }
 
-void MoveStepCmd(int src, int dst)
+void MinimalPublisher::MoveStepCmd(int src, int dst)
 {
 	if(src < 0 || src >= Action::MAXNUM_STEP)
 	{
@@ -1332,7 +1551,7 @@ void MoveStepCmd(int src, int dst)
 	bEdited = true;
 }
 
-void CopyCmd(int index)
+void MinimalPublisher::CopyCmd(int index)
 {
 	if(index == indexPage)
 		return;
@@ -1346,15 +1565,16 @@ void CopyCmd(int index)
 // 		PrintCmd("Invalid page index");
 }
 
-void NewCmd()
+void MinimalPublisher::NewCmd()
 {
 	//Action::GetInstance()->ResetPage(&Page);
 	DrawPage();
 	bEdited = true;
 }
 
-void GoCmd(int index)
+void MinimalPublisher::GoCmd(int index)
 {
+	//printf("%d INDEX\n", index);
 	if(index < 0 || index >= Action::MAXNUM_STEP)
 	{
 		PrintCmd("Invalid step index");
@@ -1363,7 +1583,11 @@ void GoCmd(int index)
 
 	if(index > Page.header.stepnum)
 	{
-		PrintCmd("Are you sure? (y/n)");
+		char frase[50];
+		sprintf(frase, "%d INDEX\n", index);
+		PrintCmd(frase);
+		sleep(5);
+		PrintCmd("Are you sure? (y/n) aaaaaaaaaa");
 		if(_getch() != 'y')
 		{
 			ClearCmd();
@@ -1375,6 +1599,8 @@ void GoCmd(int index)
 	int n = 0;
 	uint8_t param[JointData::NUMBER_OF_JOINTS * (1 + MX28::PARAM_BYTES)];
 	uint32_t wGoalPosition, wStartPosition, wDistance;
+	auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();  
+	int pos[18];
 
 	for(id=JointData::ID_R_SHOULDER_PITCH; id<JointData::NUMBER_OF_JOINTS-1; id++)
 	{
@@ -1399,7 +1625,7 @@ void GoCmd(int index)
 // 		// 	return;
 // 		// }
 
-// 		wGoalPosition = (Page.step[index].position[id] + MotionManager::GetInstance()->m_Offset[id]);
+ 		wGoalPosition = (Page.step[index].position[id]); //wGoalPosition = (Page.step[index].position[id] + MotionManager::GetInstance()->m_Offset[id]);
 // 		if( wStartPosition > wGoalPosition )
 // 			wDistance = wStartPosition - wGoalPosition;
 // 		else
@@ -1408,10 +1634,6 @@ void GoCmd(int index)
 // 		wDistance >>= 2;
 // 		if( wDistance < 8 )
 // 			wDistance = 8;
-
-//         auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();  
-//         int pos[18];
-
 
 // 		param[n++] = id;
 // 		// param[n++] = CM730::GetLowByte(wGoalPosition);
@@ -1422,12 +1644,12 @@ void GoCmd(int index)
 //     // param[n++] = (DXL_HIBYTE(DXL_LOWORD(wGoalPosition)));
 //     // param[n++] = (DXL_LOBYTE(DXL_HIWORD(wDistance)));
 //     // param[n++] = (DXL_HIBYTE(DXL_HIWORD(wDistance)));
-//         pos[id] = wGoalPosition;
+        pos[id] = wGoalPosition;
 	}
 
-//     message.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};          
-//     message.position = {pos[1], pos[2], pos[3], pos[4], pos[5], pos[6], pos[7], pos[8], pos[9], pos[10], pos[11], pos[12], pos[13], pos[14], pos[15], pos[16], pos[17], pos[18], pos[19]};   
-//     publisher_->publish(message);
+    message.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};          
+    message.position = {pos[1], pos[2], pos[3], pos[4], pos[5], pos[6], pos[7], pos[8], pos[9], pos[10], pos[11], pos[12], pos[13], pos[14], pos[15], pos[16], pos[17], pos[18], 2048};   
+    publisher_->publish(message);
 // 	// cm730->SyncWrite(MX28::P_GOAL_POSITION_L, 5, JointData::NUMBER_OF_JOINTS - 1, param);
 // 	// packetHandler->syncWriteTxOnly(portHandler, MX28::P_GOAL_POSITION, MX28::PARAM_BYTES, param, (JointData::NUMBER_OF_JOINTS * (1 + MX28::PARAM_BYTES)));
 
@@ -1435,19 +1657,19 @@ void GoCmd(int index)
 	DrawStep(7);
 }
 
-void goInitPage()
+void MinimalPublisher::goInitPage()
 {
 	indexPageBuffer = indexPage;
 	//Action::GetInstance()->LoadPage(1, &Page);
 }
 
-void backToPage()
+void MinimalPublisher::backToPage()
 {
 	// Action::GetInstance()->LoadPage(indexPageBuffer, &Page);
 	indexPage = indexPageBuffer;
 }
 
-void SaveCmd()
+void MinimalPublisher::SaveCmd()
 {
 	if(bEdited == false)
 		return;
@@ -1456,7 +1678,7 @@ void SaveCmd()
 		bEdited = false;
 }
 
-void readServo()
+void MinimalPublisher::readServo()
 {
 	uint32_t value;
 	// for(int id=JointData::ID_MIN; id<JointData::ID_MAX; id++)
@@ -1468,7 +1690,7 @@ void readServo()
 	DrawStep(7);
 }
 
-void NameCmd()
+void MinimalPublisher::NameCmd()
 {
 	ClearCmd();
 	GoToCursor(CMD_COL, CMD_ROW);
@@ -1482,3 +1704,54 @@ void NameCmd()
 	bEdited = true;
 }
 
+
+void MinimalPublisher::change_current_dir()
+{
+    char exepath[1024] = {0};
+    if(readlink("/proc/self/exe", exepath, sizeof(exepath)) != -1)
+        chdir(dirname(exepath));
+}
+
+void MinimalPublisher::sighandler(int sig)
+{
+    struct termios term;
+    tcgetattr( STDIN_FILENO, &term );
+    term.c_lflag |= ICANON | ECHO;
+    tcsetattr( STDIN_FILENO, TCSANOW, &term );
+
+    exit(0);
+}
+
+int main(int argc, char * argv[])
+{
+	 rclcpp::init(argc, argv);
+  char filename[128];
+	char string1[50]; //String
+
+    signal(SIGABRT, &MinimalPublisher::sighandler);
+    signal(SIGTERM, &MinimalPublisher::sighandler);
+    signal(SIGQUIT, &MinimalPublisher::sighandler);
+    signal(SIGINT, &MinimalPublisher::sighandler);
+
+    MinimalPublisher::change_current_dir();
+
+    minIni* ini;
+    ini = new minIni((char *)INI_FILE_PATH);
+
+   //Acopla ou cria a memoria compartilhada
+    // int *mem = using_shared_memory(ini->getd("Communication","no_player_robofei",-1024) * 100); //0 for real robot
+
+    // if(argc < 2)
+    strcpy(filename, MOTION_FILE_PATH); // Set default motion file path
+    // else
+    //     strcpy(filename, argv[1]);
+
+    //Configurando para prioridade maxima para executar este processo-------
+    sprintf(string1,"echo robo 123456| sudo -S renice -20 -p %d", getpid());
+    system(string1);
+  MinimalPublisher::DrawIntro();
+   rclcpp::spin(std::make_shared<MinimalPublisher>());
+  MinimalPublisher::DrawEnding();
+   rclcpp::shutdown();
+  return 0;
+}

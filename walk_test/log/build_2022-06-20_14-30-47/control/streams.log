@@ -1,0 +1,42 @@
+[0.008s] Invoking command in '/home/robo/ROS2/walk_test/build/control': AMENT_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[0.027s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.043s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.171s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.177s] -- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[0.193s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.195s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.285s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.318s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.345s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.346s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.456s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.545s] -- Found rclcpp_components: 2.4.1 (/opt/ros/foxy/share/rclcpp_components/cmake)
+[0.587s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.604s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.652s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.657s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.658s] -- Configured cppcheck include dirs: /home/robo/ROS2/walk_test/src/control/include;/home/robo/ROS2/walk_test/src/control/src/minIni
+[0.658s] -- Configured cppcheck exclude dirs and/or files: 
+[0.662s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.662s] -- Configured cpplint exclude dirs and/or files: 
+[0.663s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.664s] -- Added test 'lint_cmake' to check CMake code style
+[0.665s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.669s] -- Added test 'uncrustify' to check C / C++ code style
+[0.669s] -- Configured uncrustify additional arguments: 
+[0.670s] -- Added test 'xmllint' to check XML markup files
+[0.673s] -- Configuring done
+[0.692s] -- Generating done
+[0.694s] -- Build files have been written to: /home/robo/ROS2/walk_test/build/control
+[0.728s] [ 14%] Built target gait_publisher
+[0.728s] [ 14%] Built target decision
+[0.728s] [ 22%] Built target control
+[0.729s] [ 25%] [32m[1mLinking CXX executable action[0m
+[0.732s] [ 88%] Built target motion
+[0.853s] /usr/bin/ld: CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o: in function `main':
+[0.853s] cmd_process.cpp:(.text+0x0): multiple definition of `main'; CMakeFiles/action.dir/src/action_editor/main.cpp.o:main.cpp:(.text+0x219): first defined here
+[0.853s] collect2: error: ld returned 1 exit status
+[0.854s] make[2]: *** [CMakeFiles/action.dir/build.make:167: action] Error 1
+[0.854s] make[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/action.dir/all] Error 2
+[0.855s] make: *** [Makefile:141: all] Error 2
+[0.856s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '2': AMENT_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12

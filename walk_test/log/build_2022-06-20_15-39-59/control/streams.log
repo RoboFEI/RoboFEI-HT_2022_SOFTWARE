@@ -1,0 +1,670 @@
+[0.009s] Invoking command in '/home/robo/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[0.028s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.044s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.174s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.179s] -- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[0.195s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.198s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.287s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.320s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.348s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.349s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.458s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.547s] -- Found rclcpp_components: 2.4.1 (/opt/ros/foxy/share/rclcpp_components/cmake)
+[0.589s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.606s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.655s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.660s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.660s] -- Configured cppcheck include dirs: /home/robo/ROS2/walk_test/src/control/include;/home/robo/ROS2/walk_test/src/control/src/minIni
+[0.660s] -- Configured cppcheck exclude dirs and/or files: 
+[0.665s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.665s] -- Configured cpplint exclude dirs and/or files: 
+[0.665s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.667s] -- Added test 'lint_cmake' to check CMake code style
+[0.667s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.672s] -- Added test 'uncrustify' to check C / C++ code style
+[0.672s] -- Configured uncrustify additional arguments: 
+[0.673s] -- Added test 'xmllint' to check XML markup files
+[0.675s] -- Configuring done
+[0.697s] -- Generating done
+[0.699s] -- Build files have been written to: /home/robo/ROS2/walk_test/build/control
+[0.719s] [35m[1mScanning dependencies of target cmd[0m
+[0.720s] [35m[1mScanning dependencies of target action[0m
+[0.733s] [ 13%] Built target decision
+[0.733s] [ 13%] Built target gait_publisher
+[0.734s] [ 20%] Built target control
+[0.738s] [ 79%] Built target motion
+[0.745s] [ 82%] [32mBuilding CXX object CMakeFiles/action.dir/src/action_editor/main.cpp.o[0m
+[0.745s] [ 86%] [32mBuilding CXX object CMakeFiles/cmd.dir/src/action_editor/cmd_process.cpp.o[0m
+[0.746s] [ 89%] [32mBuilding CXX object CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o[0m
+[1.708s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In member function ‘[01m[Kint MinimalPublisher::process()[m[K’:
+[1.708s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:115:14:[m[K [01;31m[Kerror: [m[K‘[01m[K_getch[m[K’ was not declared in this scope; did you mean ‘[01m[Kwgetch[m[K’?
+[1.708s]   115 |         ch = [01;31m[K_getch[m[K();
+[1.708s]       |              [01;31m[K^~~~~~[m[K
+[1.708s]       |              [32m[Kwgetch[m[K
+[1.710s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:124:21:[m[K [01;31m[Kerror: [m[K‘[01m[KMoveUpCursor[m[K’ was not declared in this scope
+[1.710s]   124 |                     [01;31m[KMoveUpCursor[m[K();
+[1.710s]       |                     [01;31m[K^~~~~~~~~~~~[m[K
+[1.713s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:126:21:[m[K [01;31m[Kerror: [m[K‘[01m[KMoveDownCursor[m[K’ was not declared in this scope
+[1.713s]   126 |                     [01;31m[KMoveDownCursor[m[K();
+[1.713s]       |                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.716s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:128:21:[m[K [01;31m[Kerror: [m[K‘[01m[KMoveLeftCursor[m[K’ was not declared in this scope
+[1.716s]   128 |                     [01;31m[KMoveLeftCursor[m[K();
+[1.716s]       |                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.719s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:130:21:[m[K [01;31m[Kerror: [m[K‘[01m[KMoveRightCursor[m[K’ was not declared in this scope
+[1.719s]   130 |                     [01;31m[KMoveRightCursor[m[K();
+[1.719s]       |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.721s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:134:13:[m[K [01;31m[Kerror: [m[K‘[01m[KUpDownValue[m[K’ was not declared in this scope
+[1.721s]   134 |             [01;31m[KUpDownValue[m[K(-1);
+[1.721s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[1.724s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:136:13:[m[K [01;31m[Kerror: [m[K‘[01m[KUpDownValue[m[K’ was not declared in this scope
+[1.724s]   136 |             [01;31m[KUpDownValue[m[K(1);
+[1.724s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[1.726s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:138:13:[m[K [01;31m[Kerror: [m[K‘[01m[KUpDownValue[m[K’ was not declared in this scope
+[1.726s]   138 |             [01;31m[KUpDownValue[m[K(-10);
+[1.727s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[1.729s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:140:13:[m[K [01;31m[Kerror: [m[K‘[01m[KUpDownValue[m[K’ was not declared in this scope
+[1.729s]   140 |             [01;31m[KUpDownValue[m[K(10);
+[1.729s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[1.732s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:142:13:[m[K [01;31m[Kerror: [m[K‘[01m[KToggleTorque[m[K’ was not declared in this scope
+[1.732s]   142 |             [01;31m[KToggleTorque[m[K();
+[1.732s]       |             [01;31m[K^~~~~~~~~~~~[m[K
+[1.735s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:154:13:[m[K [01;31m[Kerror: [m[K‘[01m[KBeginCommandMode[m[K’ was not declared in this scope
+[1.735s]   154 |             [01;31m[KBeginCommandMode[m[K();
+[1.735s]       |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[1.737s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:205:28:[m[K [01;31m[Kerror: [m[K‘[01m[KAskSave[m[K’ was not declared in this scope
+[1.737s]   205 |                         if([01;31m[KAskSave[m[K() == false)
+[1.738s]       |                            [01;31m[K^~~~~~~[m[K
+[1.740s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:209:25:[m[K [01;31m[Kerror: [m[K‘[01m[KDrawPage[m[K’ was not declared in this scope
+[1.740s]   209 |                         [01;31m[KDrawPage[m[K();
+[1.740s]       |                         [01;31m[K^~~~~~~~[m[K
+[1.741s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:212:25:[m[K [01;31m[Kerror: [m[K‘[01m[KHelpCmd[m[K’ was not declared in this scope
+[1.741s]   212 |                         [01;31m[KHelpCmd[m[K();
+[1.741s]       |                         [01;31m[K^~~~~~~[m[K
+[1.743s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:214:25:[m[K [01;31m[Kerror: [m[K‘[01m[KNextCmd[m[K’ was not declared in this scope
+[1.743s]   214 |                         [01;31m[KNextCmd[m[K();
+[1.743s]       |                         [01;31m[K^~~~~~~[m[K
+[1.745s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:216:25:[m[K [01;31m[Kerror: [m[K‘[01m[KPrevCmd[m[K’ was not declared in this scope
+[1.745s]   216 |                         [01;31m[KPrevCmd[m[K();
+[1.745s]       |                         [01;31m[K^~~~~~~[m[K
+[1.746s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:218:25:[m[K [01;31m[Kerror: [m[K‘[01m[KTimeCmd[m[K’ was not declared in this scope
+[1.746s]   218 |                         [01;31m[KTimeCmd[m[K();
+[1.746s]       |                         [01;31m[K^~~~~~~[m[K
+[1.748s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:220:25:[m[K [01;31m[Kerror: [m[K‘[01m[KSpeedCmd[m[K’ was not declared in this scope
+[1.748s]   220 |                         [01;31m[KSpeedCmd[m[K();
+[1.748s]       |                         [01;31m[K^~~~~~~~[m[K
+[1.749s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:28:26:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.749s]    28 | const std::string azul = [01;35m[K"\e[0;36m"[m[K;
+[1.749s]       |                          [01;35m[K^~~~~~~~~~[m[K
+[1.749s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:29:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.749s]    29 | const std::string azulE = [01;35m[K"\e[0;34m"[m[K;
+[1.749s]       |                           [01;35m[K^~~~~~~~~~[m[K
+[1.749s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:30:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.749s]    30 | const std::string amare = [01;35m[K"\e[0;33m"[m[K;
+[1.749s]       |                           [01;35m[K^~~~~~~~~~[m[K
+[1.749s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:31:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.749s]    31 | const std::string verde = [01;35m[K"\e[0;32m"[m[K;
+[1.749s]       |                           [01;35m[K^~~~~~~~~~[m[K
+[1.749s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:32:25:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.749s]    32 | const std::string red = [01;35m[K"\e[0;31m"[m[K;
+[1.750s]       |                         [01;35m[K^~~~~~~~~~[m[K
+[1.750s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:33:26:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.750s]    33 | const std::string gray = [01;35m[K"\e[0;37m"[m[K;
+[1.750s]       |                          [01;35m[K^~~~~~~~~~[m[K
+[1.750s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:34:26:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.750s]    34 | const std::string nulo = [01;35m[K"\e[0m"[m[K;
+[1.750s]       |                          [01;35m[K^~~~~~~[m[K
+[1.750s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:36:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.750s]    36 | const std::string Lazul = [01;35m[K"\e[96m"[m[K;
+[1.750s]       |                           [01;35m[K^~~~~~~~[m[K
+[1.750s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:37:28:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.750s]    37 | const std::string LazulE = [01;35m[K"\e[94m"[m[K;
+[1.750s]       |                            [01;35m[K^~~~~~~~[m[K
+[1.750s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:38:28:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.750s]    38 | const std::string Lamare = [01;35m[K"\e[93m"[m[K;
+[1.750s]       |                            [01;35m[K^~~~~~~~[m[K
+[1.750s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:39:28:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.750s]    39 | const std::string Lverde = [01;35m[K"\e[92m"[m[K;
+[1.750s]       |                            [01;35m[K^~~~~~~~[m[K
+[1.750s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:40:26:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.750s]    40 | const std::string Lred = [01;35m[K"\e[91m"[m[K;
+[1.751s]       |                          [01;35m[K^~~~~~~~[m[K
+[1.751s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:41:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.751s]    41 | const std::string Lgray = [01;35m[K"\e[97m"[m[K;
+[1.751s]       |                           [01;35m[K^~~~~~~~[m[K
+[1.751s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:60:5:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint CmdPublisher::main(int, char**)[m[K’
+[1.751s]    60 | int [01;31m[KCmdPublisher[m[K::main(int argc, char * argv[])
+[1.751s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[1.751s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:60:5:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kint CmdPublisher::main(int, char**)[m[K’
+[1.751s] In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:15[m[K:
+[1.751s] [01m[K/home/robo/ROS2/walk_test/src/control/include/cmd_process.h:72:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CmdPublisher[m[K’ defined here
+[1.751s]    72 | class [01;36m[KCmdPublisher[m[K : public rclcpp::Node
+[1.751s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[1.751s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:80:5:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint CmdPublisher::kbhit()[m[K’
+[1.751s]    80 | int [01;31m[KCmdPublisher[m[K::kbhit(void)
+[1.751s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[1.751s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:80:5:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kint CmdPublisher::kbhit()[m[K’
+[1.751s] In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:15[m[K:
+[1.751s] [01m[K/home/robo/ROS2/walk_test/src/control/include/cmd_process.h:72:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CmdPublisher[m[K’ defined here
+[1.751s]    72 | class [01;36m[KCmdPublisher[m[K : public rclcpp::Node
+[1.751s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[1.751s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:108:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CmdPublisher::set_stdin()[m[K’
+[1.752s]   108 | void [01;31m[KCmdPublisher[m[K::set_stdin(void)
+[1.752s]       |      [01;31m[K^~~~~~~~~~~~[m[K
+[1.752s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:108:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CmdPublisher::set_stdin()[m[K’
+[1.752s] In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:15[m[K:
+[1.752s] [01m[K/home/robo/ROS2/walk_test/src/control/include/cmd_process.h:72:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CmdPublisher[m[K’ defined here
+[1.752s]    72 | class [01;36m[KCmdPublisher[m[K : public rclcpp::Node
+[1.752s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[1.752s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:118:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CmdPublisher::reset_stdin()[m[K’
+[1.752s]   118 | void [01;31m[KCmdPublisher[m[K::reset_stdin(void)
+[1.752s]       |      [01;31m[K^~~~~~~~~~~~[m[K
+[1.752s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:118:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CmdPublisher::reset_stdin()[m[K’
+[1.752s] In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:15[m[K:
+[1.752s] [01m[K/home/robo/ROS2/walk_test/src/control/include/cmd_process.h:72:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CmdPublisher[m[K’ defined here
+[1.752s]    72 | class [01;36m[KCmdPublisher[m[K : public rclcpp::Node
+[1.752s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[1.752s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:124:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CmdPublisher::ReadStep()[m[K’
+[1.752s]   124 | void [01;31m[KCmdPublisher[m[K::ReadStep()
+[1.752s]       |      [01;31m[K^~~~~~~~~~~~[m[K
+[1.752s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:124:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CmdPublisher::ReadStep()[m[K’
+[1.752s] In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:15[m[K:
+[1.753s] [01m[K/home/robo/ROS2/walk_test/src/control/include/cmd_process.h:72:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CmdPublisher[m[K’ defined here
+[1.753s]    72 | class [01;36m[KCmdPublisher[m[K : public rclcpp::Node
+[1.753s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[1.753s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:224:29:[m[K [01;31m[Kerror: [m[K‘[01m[KPageCmd[m[K’ was not declared in this scope
+[1.753s]   224 |                             [01;31m[KPageCmd[m[K(iparam[0]);
+[1.753s]       |                             [01;31m[K^~~~~~~[m[K
+[1.753s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kbool AskSave()[m[K’:
+[1.753s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:161:3:[m[K [01;31m[Kerror: [m[K‘[01m[KPrintCmd[m[K’ was not declared in this scope
+[1.753s]   161 |   [01;31m[KPrintCmd[m[K("Are you sure? (y/n)");
+[1.753s]       |   [01;31m[K^~~~~~~~[m[K
+[1.753s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:226:29:[m[K [01;31m[Kerror: [m[K‘[01m[KPrintCmd[m[K’ was not declared in this scope
+[1.753s]   226 |                             [01;31m[KPrintCmd[m[K("Need parameter");
+[1.753s]       |                             [01;31m[K^~~~~~~~[m[K
+[1.753s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:162:6:[m[K [01;31m[Kerror: [m[K‘[01m[K_getch[m[K’ was not declared in this scope; did you mean ‘[01m[Kwgetch[m[K’?
+[1.753s]   162 |   if([01;31m[K_getch[m[K() != 'y')
+[1.753s]       |      [01;31m[K^~~~~~[m[K
+[1.753s]       |      [32m[Kwgetch[m[K
+[1.753s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:164:4:[m[K [01;31m[Kerror: [m[K‘[01m[KClearCmd[m[K’ was not declared in this scope
+[1.754s]   164 |    [01;31m[KClearCmd[m[K();
+[1.754s]       |    [01;31m[K^~~~~~~~[m[K
+[1.754s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:230:25:[m[K [01;31m[Kerror: [m[K‘[01m[KPlayCmd[m[K’ was not declared in this scope
+[1.754s]   230 |                         [01;31m[KPlayCmd[m[K();
+[1.754s]       |                         [01;31m[K^~~~~~~[m[K
+[1.756s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:235:29:[m[K [01;31m[Kerror: [m[K‘[01m[KSetValue[m[K’ was not declared in this scope
+[1.756s]   235 |                             [01;31m[KSetValue[m[K(iparam[0]);
+[1.756s]       |                             [01;31m[K^~~~~~~~[m[K
+[1.756s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid DrawIntro()[m[K’:
+[1.756s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:328:2:[m[K [01;31m[Kerror: [m[K‘[01m[K_getch[m[K’ was not declared in this scope; did you mean ‘[01m[Kwgetch[m[K’?
+[1.756s]   328 |  [01;31m[K_getch[m[K();
+[1.756s]       |  [01;31m[K^~~~~~[m[K
+[1.756s]       |  [32m[Kwgetch[m[K
+[1.756s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:330:9:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.756s]   330 |  system([01;35m[K"printf '\e[8;27;80t'"[m[K);
+[1.756s]       |         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.758s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:334:2:[m[K [01;31m[Kerror: [m[K‘[01m[KReadStep[m[K’ was not declared in this scope
+[1.758s]   334 |  [01;31m[KReadStep[m[K();
+[1.758s]       |  [01;31m[K^~~~~~~~[m[K
+[1.758s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:237:29:[m[K [01;31m[Kerror: [m[K‘[01m[KPrintCmd[m[K’ was not declared in this scope
+[1.758s]   237 |                             [01;31m[KPrintCmd[m[K("Need parameter");
+[1.758s]       |                             [01;31m[K^~~~~~~~[m[K
+[1.759s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:338:2:[m[K [01;31m[Kerror: [m[K‘[01m[KDrawPage[m[K’ was not declared in this scope
+[1.759s]   338 |  [01;31m[KDrawPage[m[K();
+[1.759s]       |  [01;31m[K^~~~~~~~[m[K
+[1.760s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:240:25:[m[K [01;31m[Kerror: [m[K‘[01m[KListCmd[m[K’ was not declared in this scope
+[1.760s]   240 |                         [01;31m[KListCmd[m[K();
+[1.760s]       |                         [01;31m[K^~~~~~~[m[K
+[1.761s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid DrawPage()[m[K’:
+[1.761s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:389:3:[m[K [01;31m[Kerror: [m[K‘[01m[KDrawStep[m[K’ was not declared in this scope
+[1.761s]   389 |   [01;31m[KDrawStep[m[K(i);
+[1.761s]       |   [01;31m[K^~~~~~~~[m[K
+[1.762s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:28:26:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.762s]    28 | const std::string azul = [01;35m[K"\e[0;36m"[m[K;
+[1.762s]       |                          [01;35m[K^~~~~~~~~~[m[K
+[1.762s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:242:25:[m[K [01;31m[Kerror: [m[K‘[01m[KOnOffCmd[m[K’ was not declared in this scope
+[1.762s]   242 |                         [01;31m[KOnOffCmd[m[K(true, num_param, iparam);
+[1.762s]       |                         [01;31m[K^~~~~~~~[m[K
+[1.762s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:29:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.763s]    29 | const std::string azulE = [01;35m[K"\e[0;34m"[m[K;
+[1.763s]       |                           [01;35m[K^~~~~~~~~~[m[K
+[1.763s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:30:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.763s]    30 | const std::string amare = [01;35m[K"\e[0;33m"[m[K;
+[1.763s]       |                           [01;35m[K^~~~~~~~~~[m[K
+[1.763s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:31:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.763s]    31 | const std::string verde = [01;35m[K"\e[0;32m"[m[K;
+[1.763s]       |                           [01;35m[K^~~~~~~~~~[m[K
+[1.763s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:32:25:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.763s]    32 | const std::string red = [01;35m[K"\e[0;31m"[m[K;
+[1.763s]       |                         [01;35m[K^~~~~~~~~~[m[K
+[1.763s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:33:26:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.763s]    33 | const std::string gray = [01;35m[K"\e[0;37m"[m[K;
+[1.763s]       |                          [01;35m[K^~~~~~~~~~[m[K
+[1.763s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:34:26:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.763s]    34 | const std::string nulo = [01;35m[K"\e[0m"[m[K;
+[1.763s]       |                          [01;35m[K^~~~~~~[m[K
+[1.763s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:36:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.764s]    36 | const std::string Lazul = [01;35m[K"\e[96m"[m[K;
+[1.764s]       |                           [01;35m[K^~~~~~~~[m[K
+[1.764s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:37:28:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.764s]    37 | const std::string LazulE = [01;35m[K"\e[94m"[m[K;
+[1.764s]       |                            [01;35m[K^~~~~~~~[m[K
+[1.764s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:38:28:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.764s]    38 | const std::string Lamare = [01;35m[K"\e[93m"[m[K;
+[1.764s]       |                            [01;35m[K^~~~~~~~[m[K
+[1.764s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:39:28:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.764s]    39 | const std::string Lverde = [01;35m[K"\e[92m"[m[K;
+[1.764s]       |                            [01;35m[K^~~~~~~~[m[K
+[1.764s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:40:26:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.764s]    40 | const std::string Lred = [01;35m[K"\e[91m"[m[K;
+[1.764s]       |                          [01;35m[K^~~~~~~~[m[K
+[1.764s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:41:27:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.764s]    41 | const std::string Lgray = [01;35m[K"\e[97m"[m[K;
+[1.764s]       |                           [01;35m[K^~~~~~~~[m[K
+[1.764s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:60:5:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint CmdPublisher::main(int, char**)[m[K’
+[1.764s]    60 | int [01;31m[KCmdPublisher[m[K::main(int argc, char * argv[])
+[1.764s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[1.764s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:60:5:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kint CmdPublisher::main(int, char**)[m[K’
+[1.765s] In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:15[m[K:
+[1.765s] [01m[K/home/robo/ROS2/walk_test/src/control/include/cmd_process.h:72:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CmdPublisher[m[K’ defined here
+[1.765s]    72 | class [01;36m[KCmdPublisher[m[K : public rclcpp::Node
+[1.765s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[1.765s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:80:5:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint CmdPublisher::kbhit()[m[K’
+[1.765s]    80 | int [01;31m[KCmdPublisher[m[K::kbhit(void)
+[1.765s]       |     [01;31m[K^~~~~~~~~~~~[m[K
+[1.765s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:80:5:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kint CmdPublisher::kbhit()[m[K’
+[1.765s] In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:15[m[K:
+[1.765s] [01m[K/home/robo/ROS2/walk_test/src/control/include/cmd_process.h:72:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CmdPublisher[m[K’ defined here
+[1.765s]    72 | class [01;36m[KCmdPublisher[m[K : public rclcpp::Node
+[1.765s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[1.765s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:418:2:[m[K [01;31m[Kerror: [m[K‘[01m[KDrawName[m[K’ was not declared in this scope; did you mean ‘[01m[KDrawPage[m[K’?
+[1.765s]   418 |  [01;31m[KDrawName[m[K();
+[1.765s]       |  [01;31m[K^~~~~~~~[m[K
+[1.765s]       |  [32m[KDrawPage[m[K
+[1.765s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:108:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CmdPublisher::set_stdin()[m[K’
+[1.765s]   108 | void [01;31m[KCmdPublisher[m[K::set_stdin(void)
+[1.765s]       |      [01;31m[K^~~~~~~~~~~~[m[K
+[1.765s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:108:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CmdPublisher::set_stdin()[m[K’
+[1.766s] In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:15[m[K:
+[1.766s] [01m[K/home/robo/ROS2/walk_test/src/control/include/cmd_process.h:72:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CmdPublisher[m[K’ defined here
+[1.766s]    72 | class [01;36m[KCmdPublisher[m[K : public rclcpp::Node
+[1.766s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[1.766s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:118:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CmdPublisher::reset_stdin()[m[K’
+[1.766s]   118 | void [01;31m[KCmdPublisher[m[K::reset_stdin(void)
+[1.766s]       |      [01;31m[K^~~~~~~~~~~~[m[K
+[1.766s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:118:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CmdPublisher::reset_stdin()[m[K’
+[1.766s] In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:15[m[K:
+[1.766s] [01m[K/home/robo/ROS2/walk_test/src/control/include/cmd_process.h:72:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CmdPublisher[m[K’ defined here
+[1.766s]    72 | class [01;36m[KCmdPublisher[m[K : public rclcpp::Node
+[1.766s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[1.766s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:124:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CmdPublisher::ReadStep()[m[K’
+[1.766s]   124 | void [01;31m[KCmdPublisher[m[K::ReadStep()
+[1.766s]       |      [01;31m[K^~~~~~~~~~~~[m[K
+[1.766s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:124:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CmdPublisher::ReadStep()[m[K’
+[1.766s] In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:15[m[K:
+[1.766s] [01m[K/home/robo/ROS2/walk_test/src/control/include/cmd_process.h:72:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CmdPublisher[m[K’ defined here
+[1.766s]    72 | class [01;36m[KCmdPublisher[m[K : public rclcpp::Node
+[1.766s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[1.766s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:244:25:[m[K [01;31m[Kerror: [m[K‘[01m[KOnOffCmd[m[K’ was not declared in this scope
+[1.767s]   244 |                         [01;31m[KOnOffCmd[m[K(false, num_param, iparam);
+[1.767s]       |                         [01;31m[K^~~~~~~~[m[K
+[1.767s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kbool AskSave()[m[K’:
+[1.767s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:161:3:[m[K [01;31m[Kerror: [m[K‘[01m[KPrintCmd[m[K’ was not declared in this scope
+[1.767s]   161 |   [01;31m[KPrintCmd[m[K("Are you sure? (y/n)");
+[1.767s]       |   [01;31m[K^~~~~~~~[m[K
+[1.767s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:428:2:[m[K [01;31m[Kerror: [m[K‘[01m[KDrawStepLine[m[K’ was not declared in this scope
+[1.767s]   428 |  [01;31m[KDrawStepLine[m[K(false);
+[1.767s]       |  [01;31m[K^~~~~~~~~~~~[m[K
+[1.767s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:162:6:[m[K [01;31m[Kerror: [m[K‘[01m[K_getch[m[K’ was not declared in this scope; did you mean ‘[01m[Kwgetch[m[K’?
+[1.767s]   162 |   if([01;31m[K_getch[m[K() != 'y')
+[1.767s]       |      [01;31m[K^~~~~~[m[K
+[1.767s]       |      [32m[Kwgetch[m[K
+[1.767s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:248:29:[m[K [01;31m[Kerror: [m[K‘[01m[KWriteStepCmd[m[K’ was not declared in this scope
+[1.767s]   248 |                             [01;31m[KWriteStepCmd[m[K(iparam[0]);
+[1.767s]       |                             [01;31m[K^~~~~~~~~~~~[m[K
+[1.767s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:164:4:[m[K [01;31m[Kerror: [m[K‘[01m[KClearCmd[m[K’ was not declared in this scope
+[1.767s]   164 |    [01;31m[KClearCmd[m[K();
+[1.767s]       |    [01;31m[K^~~~~~~~[m[K
+[1.768s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid ClearCmd()[m[K’:
+[1.768s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:582:2:[m[K [01;31m[Kerror: [m[K‘[01m[KPrintCmd[m[K’ was not declared in this scope
+[1.768s]   582 |  [01;31m[KPrintCmd[m[K("");
+[1.768s]       |  [01;31m[K^~~~~~~~[m[K
+[1.769s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:250:29:[m[K [01;31m[Kerror: [m[K‘[01m[KPrintCmd[m[K’ was not declared in this scope
+[1.769s]   250 |                             [01;31m[KPrintCmd[m[K("Need parameter");
+[1.769s]       |                             [01;31m[K^~~~~~~~[m[K
+[1.770s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid UpDownValue(int)[m[K’:
+[1.770s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:601:11:[m[K [01;31m[Kerror: [m[K‘[01m[KGetValue[m[K’ was not declared in this scope
+[1.770s]   601 |  SetValue([01;31m[KGetValue[m[K() + offset);
+[1.770s]       |           [01;31m[K^~~~~~~~[m[K
+[1.770s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid DrawIntro()[m[K’:
+[1.770s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:328:2:[m[K [01;31m[Kerror: [m[K‘[01m[K_getch[m[K’ was not declared in this scope; did you mean ‘[01m[Kwgetch[m[K’?
+[1.770s]   328 |  [01;31m[K_getch[m[K();
+[1.770s]       |  [01;31m[K^~~~~~[m[K
+[1.770s]       |  [32m[Kwgetch[m[K
+[1.770s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:330:9:[m[K [01;35m[Kwarning: [m[Knon-ISO-standard escape sequence, '\e'
+[1.770s]   330 |  system([01;35m[K"printf '\e[8;27;80t'"[m[K);
+[1.770s]       |         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.771s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:601:2:[m[K [01;31m[Kerror: [m[K‘[01m[KSetValue[m[K’ was not declared in this scope
+[1.771s]   601 |  [01;31m[KSetValue[m[K(GetValue() + offset);
+[1.771s]       |  [01;31m[K^~~~~~~~[m[K
+[1.771s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:334:2:[m[K [01;31m[Kerror: [m[K‘[01m[KReadStep[m[K’ was not declared in this scope
+[1.771s]   334 |  [01;31m[KReadStep[m[K();
+[1.772s]       |  [01;31m[K^~~~~~~~[m[K
+[1.772s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid SetValue(uint32_t)[m[K’:
+[1.772s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:714:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.772s]   714 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.772s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.772s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:723:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.772s]   723 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.772s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.772s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:255:29:[m[K [01;31m[Kerror: [m[K‘[01m[KDeleteStepCmd[m[K’ was not declared in this scope
+[1.772s]   255 |                             [01;31m[KDeleteStepCmd[m[K(iparam[0]);
+[1.772s]       |                             [01;31m[K^~~~~~~~~~~~~[m[K
+[1.773s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:338:2:[m[K [01;31m[Kerror: [m[K‘[01m[KDrawPage[m[K’ was not declared in this scope
+[1.773s]   338 |  [01;31m[KDrawPage[m[K();
+[1.773s]       |  [01;31m[K^~~~~~~~[m[K
+[1.773s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:802:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.773s]   802 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.773s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.773s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:811:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.773s]   811 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.774s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.774s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:856:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.774s]   856 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.774s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.774s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:865:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.774s]   865 |    if([01;35m[Kvalue >= 0[m[K && value <= Action::MAXNUM_STEP)
+[1.774s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.774s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:881:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.774s]   881 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.774s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.774s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:890:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.774s]   890 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.774s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.774s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:899:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.774s]   899 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.774s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.774s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:908:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.774s]   908 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.774s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.775s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:257:29:[m[K [01;31m[Kerror: [m[K‘[01m[KPrintCmd[m[K’ was not declared in this scope
+[1.775s]   257 |                             [01;31m[KPrintCmd[m[K("Need parameter");
+[1.775s]       |                             [01;31m[K^~~~~~~~[m[K
+[1.775s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid DrawPage()[m[K’:
+[1.775s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:389:3:[m[K [01;31m[Kerror: [m[K‘[01m[KDrawStep[m[K’ was not declared in this scope
+[1.775s]   389 |   [01;31m[KDrawStep[m[K(i);
+[1.775s]       |   [01;31m[K^~~~~~~~[m[K
+[1.776s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid HelpCmd()[m[K’:
+[1.776s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1005:2:[m[K [01;31m[Kerror: [m[K‘[01m[K_getch[m[K’ was not declared in this scope; did you mean ‘[01m[Kwgetch[m[K’?
+[1.776s]  1005 |  [01;31m[K_getch[m[K();
+[1.776s]       |  [01;31m[K^~~~~~[m[K
+[1.776s]       |  [32m[Kwgetch[m[K
+[1.776s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:418:2:[m[K [01;31m[Kerror: [m[K‘[01m[KDrawName[m[K’ was not declared in this scope; did you mean ‘[01m[KDrawPage[m[K’?
+[1.776s]   418 |  [01;31m[KDrawName[m[K();
+[1.777s]       |  [01;31m[K^~~~~~~~[m[K
+[1.777s]       |  [32m[KDrawPage[m[K
+[1.777s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid NextCmd()[m[K’:
+[1.777s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1012:2:[m[K [01;31m[Kerror: [m[K‘[01m[KPageCmd[m[K’ was not declared in this scope; did you mean ‘[01m[KPage[m[K’?
+[1.777s]  1012 |  [01;31m[KPageCmd[m[K(indexPage + 1);
+[1.777s]       |  [01;31m[K^~~~~~~[m[K
+[1.777s]       |  [32m[KPage[m[K
+[1.777s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:262:29:[m[K [01;31m[Kerror: [m[K‘[01m[KInsertStepCmd[m[K’ was not declared in this scope
+[1.777s]   262 |                             [01;31m[KInsertStepCmd[m[K(0);
+[1.777s]       |                             [01;31m[K^~~~~~~~~~~~~[m[K
+[1.778s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid PrevCmd()[m[K’:
+[1.778s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1017:2:[m[K [01;31m[Kerror: [m[K‘[01m[KPageCmd[m[K’ was not declared in this scope
+[1.778s]  1017 |  [01;31m[KPageCmd[m[K(indexPage - 1);
+[1.778s]       |  [01;31m[K^~~~~~~[m[K
+[1.779s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:428:2:[m[K [01;31m[Kerror: [m[K‘[01m[KDrawStepLine[m[K’ was not declared in this scope
+[1.779s]   428 |  [01;31m[KDrawStepLine[m[K(false);
+[1.779s]       |  [01;31m[K^~~~~~~~~~~~[m[K
+[1.780s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid PlayCmd()[m[K’:
+[1.780s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1076:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kset_stdin[m[K’ was not declared in this scope
+[1.780s]  1076 |  [01;31m[Kset_stdin[m[K();
+[1.780s]       |  [01;31m[K^~~~~~~~~[m[K
+[1.780s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:264:29:[m[K [01;31m[Kerror: [m[K‘[01m[KInsertStepCmd[m[K’ was not declared in this scope
+[1.780s]   264 |                             [01;31m[KInsertStepCmd[m[K(iparam[0]);
+[1.780s]       |                             [01;31m[K^~~~~~~~~~~~~[m[K
+[1.781s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1082:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kkbhit[m[K’ was not declared in this scope
+[1.781s]  1082 |   if([01;31m[Kkbhit[m[K())
+[1.781s]       |      [01;31m[K^~~~~[m[K
+[1.782s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid ClearCmd()[m[K’:
+[1.782s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:582:2:[m[K [01;31m[Kerror: [m[K‘[01m[KPrintCmd[m[K’ was not declared in this scope
+[1.782s]   582 |  [01;31m[KPrintCmd[m[K("");
+[1.782s]       |  [01;31m[K^~~~~~~~[m[K
+[1.782s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1084:14:[m[K [01;31m[Kerror: [m[K‘[01m[K_getch[m[K’ was not declared in this scope; did you mean ‘[01m[Kwgetch[m[K’?
+[1.782s]  1084 |    int key = [01;31m[K_getch[m[K();
+[1.782s]       |              [01;31m[K^~~~~~[m[K
+[1.782s]       |              [32m[Kwgetch[m[K
+[1.783s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:269:29:[m[K [01;31m[Kerror: [m[K‘[01m[KMoveStepCmd[m[K’ was not declared in this scope
+[1.783s]   269 |                             [01;31m[KMoveStepCmd[m[K(iparam[0], iparam[1]);
+[1.783s]       |                             [01;31m[K^~~~~~~~~~~[m[K
+[1.783s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid UpDownValue(int)[m[K’:
+[1.783s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:601:11:[m[K [01;31m[Kerror: [m[K‘[01m[KGetValue[m[K’ was not declared in this scope
+[1.784s]   601 |  SetValue([01;31m[KGetValue[m[K() + offset);
+[1.784s]       |           [01;31m[K^~~~~~~~[m[K
+[1.784s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1102:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kreset_stdin[m[K’ was not declared in this scope; did you mean ‘[01m[Kreset_1string[m[K’?
+[1.784s]  1102 |  [01;31m[Kreset_stdin[m[K();
+[1.784s]       |  [01;31m[K^~~~~~~~~~~[m[K
+[1.784s]       |  [32m[Kreset_1string[m[K
+[1.785s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1113:2:[m[K [01;31m[Kerror: [m[K‘[01m[KReadStep[m[K’ was not declared in this scope
+[1.785s]  1113 |  [01;31m[KReadStep[m[K();
+[1.785s]       |  [01;31m[K^~~~~~~~[m[K
+[1.785s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1056:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.785s]  1056 |  int [01;35m[Kvalue[m[K;
+[1.785s]       |      [01;35m[K^~~~~[m[K
+[1.785s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:601:2:[m[K [01;31m[Kerror: [m[K‘[01m[KSetValue[m[K’ was not declared in this scope
+[1.785s]   601 |  [01;31m[KSetValue[m[K(GetValue() + offset);
+[1.786s]       |  [01;31m[K^~~~~~~~[m[K
+[1.786s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:271:29:[m[K [01;31m[Kerror: [m[K‘[01m[KPrintCmd[m[K’ was not declared in this scope
+[1.786s]   271 |                             [01;31m[KPrintCmd[m[K("Need parameter");
+[1.786s]       |                             [01;31m[K^~~~~~~~[m[K
+[1.786s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid SetValue(uint32_t)[m[K’:
+[1.786s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:714:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.786s]   714 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.786s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.786s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:723:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.786s]   723 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.786s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.786s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid ListCmd()[m[K’:
+[1.786s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1154:13:[m[K [01;31m[Kerror: [m[K‘[01m[K_getch[m[K’ was not declared in this scope; did you mean ‘[01m[Kwgetch[m[K’?
+[1.787s]  1154 |    int ch = [01;31m[K_getch[m[K();
+[1.787s]       |             [01;31m[K^~~~~~[m[K
+[1.787s]       |             [32m[Kwgetch[m[K
+[1.787s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:802:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.787s]   802 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.787s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.788s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:811:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.788s]   811 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.788s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.788s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:276:29:[m[K [01;31m[Kerror: [m[K‘[01m[KCopyCmd[m[K’ was not declared in this scope
+[1.788s]   276 |                             [01;31m[KCopyCmd[m[K(iparam[0]);
+[1.788s]       |                             [01;31m[K^~~~~~~[m[K
+[1.788s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:856:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.788s]   856 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.788s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.788s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:865:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.788s]   865 |    if([01;35m[Kvalue >= 0[m[K && value <= Action::MAXNUM_STEP)
+[1.788s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.788s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:881:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.788s]   881 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.788s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.788s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:890:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.788s]   890 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.788s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.788s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:899:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.788s]   899 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.789s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.789s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:908:13:[m[K [01;35m[Kwarning: [m[Kcomparison of unsigned expression >= 0 is always true [[01;35m[K-Wtype-limits[m[K]
+[1.789s]   908 |    if([01;35m[Kvalue >= 0[m[K && value <= 255)
+[1.789s]       |       [01;35m[K~~~~~~^~~~[m[K
+[1.789s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid OnOffCmd(bool, int, int*)[m[K’:
+[1.789s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1200:2:[m[K [01;31m[Kerror: [m[K‘[01m[KReadStep[m[K’ was not declared in this scope
+[1.789s]  1200 |  [01;31m[KReadStep[m[K();
+[1.789s]       |  [01;31m[K^~~~~~~~[m[K
+[1.789s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1182:20:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kon[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.789s]  1182 | void OnOffCmd([01;35m[Kbool on[m[K, int num_param, int *list)
+[1.789s]       |               [01;35m[K~~~~~^~[m[K
+[1.789s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1182:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knum_param[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.789s]  1182 | void OnOffCmd(bool on, [01;35m[Kint num_param[m[K, int *list)
+[1.789s]       |                        [01;35m[K~~~~^~~~~~~~~[m[K
+[1.789s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1182:44:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klist[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.789s]  1182 | void OnOffCmd(bool on, int num_param, [01;35m[Kint *list[m[K)
+[1.789s]       |                                       [01;35m[K~~~~~^~~~[m[K
+[1.789s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:278:29:[m[K [01;31m[Kerror: [m[K‘[01m[KPrintCmd[m[K’ was not declared in this scope
+[1.789s]   278 |                             [01;31m[KPrintCmd[m[K("Need parameter");
+[1.789s]       |                             [01;31m[K^~~~~~~~[m[K
+[1.790s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid HelpCmd()[m[K’:
+[1.790s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1005:2:[m[K [01;31m[Kerror: [m[K‘[01m[K_getch[m[K’ was not declared in this scope; did you mean ‘[01m[Kwgetch[m[K’?
+[1.790s]  1005 |  [01;31m[K_getch[m[K();
+[1.790s]       |  [01;31m[K^~~~~~[m[K
+[1.790s]       |  [32m[Kwgetch[m[K
+[1.790s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid GoCmd(int)[m[K’:
+[1.790s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1374:6:[m[K [01;31m[Kerror: [m[K‘[01m[K_getch[m[K’ was not declared in this scope; did you mean ‘[01m[Kwgetch[m[K’?
+[1.790s]  1374 |   if([01;31m[K_getch[m[K() != 'y')
+[1.790s]       |      [01;31m[K^~~~~~[m[K
+[1.790s]       |      [32m[Kwgetch[m[K
+[1.791s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1382:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kn[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.791s]  1382 |  int [01;35m[Kn[m[K = 0;
+[1.791s]       |      [01;35m[K^[m[K
+[1.791s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1383:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kparam[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.791s]  1383 |  uint8_t [01;35m[Kparam[m[K[JointData::NUMBER_OF_JOINTS * (1 + MX28::PARAM_BYTES)];
+[1.791s]       |          [01;35m[K^~~~~[m[K
+[1.791s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1384:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KwGoalPosition[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.791s]  1384 |  uint32_t [01;35m[KwGoalPosition[m[K, wStartPosition, wDistance;
+[1.791s]       |           [01;35m[K^~~~~~~~~~~~~[m[K
+[1.791s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1384:26:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KwStartPosition[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.791s]  1384 |  uint32_t wGoalPosition, [01;35m[KwStartPosition[m[K, wDistance;
+[1.791s]       |                          [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.791s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1384:42:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KwDistance[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.791s]  1384 |  uint32_t wGoalPosition, wStartPosition, [01;35m[KwDistance[m[K;
+[1.791s]       |                                          [01;35m[K^~~~~~~~~[m[K
+[1.791s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid readServo()[m[K’:
+[1.791s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1468:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.791s]  1468 |  uint32_t [01;35m[Kvalue[m[K;
+[1.792s]       |           [01;35m[K^~~~~[m[K
+[1.792s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:281:25:[m[K [01;31m[Kerror: [m[K‘[01m[KNewCmd[m[K’ was not declared in this scope
+[1.792s]   281 |                         [01;31m[KNewCmd[m[K();
+[1.792s]       |                         [01;31m[K^~~~~~[m[K
+[1.792s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid NextCmd()[m[K’:
+[1.792s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1012:2:[m[K [01;31m[Kerror: [m[K‘[01m[KPageCmd[m[K’ was not declared in this scope; did you mean ‘[01m[KPage[m[K’?
+[1.792s]  1012 |  [01;31m[KPageCmd[m[K(indexPage + 1);
+[1.792s]       |  [01;31m[K^~~~~~~[m[K
+[1.792s]       |  [32m[KPage[m[K
+[1.792s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:285:29:[m[K [01;31m[Kerror: [m[K‘[01m[KGoCmd[m[K’ was not declared in this scope
+[1.792s]   285 |                             [01;31m[KGoCmd[m[K(iparam[0]);
+[1.792s]       |                             [01;31m[K^~~~~[m[K
+[1.792s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid PrevCmd()[m[K’:
+[1.793s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1017:2:[m[K [01;31m[Kerror: [m[K‘[01m[KPageCmd[m[K’ was not declared in this scope
+[1.793s]  1017 |  [01;31m[KPageCmd[m[K(indexPage - 1);
+[1.793s]       |  [01;31m[K^~~~~~~[m[K
+[1.794s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:287:29:[m[K [01;31m[Kerror: [m[K‘[01m[KPrintCmd[m[K’ was not declared in this scope
+[1.794s]   287 |                             [01;31m[KPrintCmd[m[K("Need parameter");
+[1.794s]       |                             [01;31m[K^~~~~~~~[m[K
+[1.794s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid PlayCmd()[m[K’:
+[1.795s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1076:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kset_stdin[m[K’ was not declared in this scope
+[1.795s]  1076 |  [01;31m[Kset_stdin[m[K();
+[1.795s]       |  [01;31m[K^~~~~~~~~[m[K
+[1.795s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1082:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kkbhit[m[K’ was not declared in this scope
+[1.795s]  1082 |   if([01;31m[Kkbhit[m[K())
+[1.796s]       |      [01;31m[K^~~~~[m[K
+[1.796s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:290:25:[m[K [01;31m[Kerror: [m[K‘[01m[KSaveCmd[m[K’ was not declared in this scope
+[1.796s]   290 |                         [01;31m[KSaveCmd[m[K();
+[1.796s]       |                         [01;31m[K^~~~~~~[m[K
+[1.796s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1084:14:[m[K [01;31m[Kerror: [m[K‘[01m[K_getch[m[K’ was not declared in this scope; did you mean ‘[01m[Kwgetch[m[K’?
+[1.796s]  1084 |    int key = [01;31m[K_getch[m[K();
+[1.796s]       |              [01;31m[K^~~~~~[m[K
+[1.796s]       |              [32m[Kwgetch[m[K
+[1.798s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:292:25:[m[K [01;31m[Kerror: [m[K‘[01m[KNameCmd[m[K’ was not declared in this scope
+[1.798s]   292 |                         [01;31m[KNameCmd[m[K();
+[1.798s]       |                         [01;31m[K^~~~~~~[m[K
+[1.798s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1102:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kreset_stdin[m[K’ was not declared in this scope; did you mean ‘[01m[Kreset_1string[m[K’?
+[1.798s]  1102 |  [01;31m[Kreset_stdin[m[K();
+[1.798s]       |  [01;31m[K^~~~~~~~~~~[m[K
+[1.798s]       |  [32m[Kreset_1string[m[K
+[1.799s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1113:2:[m[K [01;31m[Kerror: [m[K‘[01m[KReadStep[m[K’ was not declared in this scope
+[1.799s]  1113 |  [01;31m[KReadStep[m[K();
+[1.800s]       |  [01;31m[K^~~~~~~~[m[K
+[1.800s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1056:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.800s]  1056 |  int [01;35m[Kvalue[m[K;
+[1.800s]       |      [01;35m[K^~~~~[m[K
+[1.800s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:295:7:[m[K [01;31m[Kerror: [m[K‘[01m[KgoInitPage[m[K’ was not declared in this scope
+[1.800s]   295 |       [01;31m[KgoInitPage[m[K();
+[1.800s]       |       [01;31m[K^~~~~~~~~~[m[K
+[1.801s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid ListCmd()[m[K’:
+[1.801s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1154:13:[m[K [01;31m[Kerror: [m[K‘[01m[K_getch[m[K’ was not declared in this scope; did you mean ‘[01m[Kwgetch[m[K’?
+[1.801s]  1154 |    int ch = [01;31m[K_getch[m[K();
+[1.801s]       |             [01;31m[K^~~~~~[m[K
+[1.801s]       |             [32m[Kwgetch[m[K
+[1.802s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid OnOffCmd(bool, int, int*)[m[K’:
+[1.802s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1200:2:[m[K [01;31m[Kerror: [m[K‘[01m[KReadStep[m[K’ was not declared in this scope
+[1.802s]  1200 |  [01;31m[KReadStep[m[K();
+[1.802s]       |  [01;31m[K^~~~~~~~[m[K
+[1.802s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1182:20:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kon[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.802s]  1182 | void OnOffCmd([01;35m[Kbool on[m[K, int num_param, int *list)
+[1.802s]       |               [01;35m[K~~~~~^~[m[K
+[1.802s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1182:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knum_param[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.803s]  1182 | void OnOffCmd(bool on, [01;35m[Kint num_param[m[K, int *list)
+[1.803s]       |                        [01;35m[K~~~~^~~~~~~~~[m[K
+[1.803s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1182:44:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klist[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.803s]  1182 | void OnOffCmd(bool on, int num_param, [01;35m[Kint *list[m[K)
+[1.803s]       |                                       [01;35m[K~~~~~^~~~[m[K
+[1.803s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:296:7:[m[K [01;31m[Kerror: [m[K‘[01m[KPlayCmd[m[K’ was not declared in this scope
+[1.803s]   296 |       [01;31m[KPlayCmd[m[K();
+[1.803s]       |       [01;31m[K^~~~~~~[m[K
+[1.804s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid GoCmd(int)[m[K’:
+[1.804s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1374:6:[m[K [01;31m[Kerror: [m[K‘[01m[K_getch[m[K’ was not declared in this scope; did you mean ‘[01m[Kwgetch[m[K’?
+[1.805s]  1374 |   if([01;31m[K_getch[m[K() != 'y')
+[1.805s]       |      [01;31m[K^~~~~~[m[K
+[1.805s]       |      [32m[Kwgetch[m[K
+[1.805s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1382:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kn[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.805s]  1382 |  int [01;35m[Kn[m[K = 0;
+[1.805s]       |      [01;35m[K^[m[K
+[1.805s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1383:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kparam[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.805s]  1383 |  uint8_t [01;35m[Kparam[m[K[JointData::NUMBER_OF_JOINTS * (1 + MX28::PARAM_BYTES)];
+[1.805s]       |          [01;35m[K^~~~~[m[K
+[1.805s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1384:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KwGoalPosition[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.805s]  1384 |  uint32_t [01;35m[KwGoalPosition[m[K, wStartPosition, wDistance;
+[1.805s]       |           [01;35m[K^~~~~~~~~~~~~[m[K
+[1.805s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1384:26:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KwStartPosition[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.805s]  1384 |  uint32_t wGoalPosition, [01;35m[KwStartPosition[m[K, wDistance;
+[1.805s]       |                          [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.805s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1384:42:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KwDistance[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.805s]  1384 |  uint32_t wGoalPosition, wStartPosition, [01;35m[KwDistance[m[K;
+[1.805s]       |                                          [01;35m[K^~~~~~~~~[m[K
+[1.805s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:[m[K In function ‘[01m[Kvoid readServo()[m[K’:
+[1.806s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp:1468:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.806s]  1468 |  uint32_t [01;35m[Kvalue[m[K;
+[1.806s]       |           [01;35m[K^~~~~[m[K
+[1.806s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:297:7:[m[K [01;31m[Kerror: [m[K‘[01m[KbackToPage[m[K’ was not declared in this scope
+[1.806s]   297 |       [01;31m[KbackToPage[m[K();
+[1.806s]       |       [01;31m[K^~~~~~~~~~[m[K
+[1.807s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:300:7:[m[K [01;31m[Kerror: [m[K‘[01m[KreadServo[m[K’ was not declared in this scope
+[1.807s]   300 |       [01;31m[KreadServo[m[K();
+[1.807s]       |       [01;31m[K^~~~~~~~~[m[K
+[1.809s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:302:25:[m[K [01;31m[Kerror: [m[K‘[01m[KPrintCmd[m[K’ was not declared in this scope
+[1.809s]   302 |                         [01;31m[KPrintCmd[m[K("Bad command! please input 'help'");
+[1.809s]       |                         [01;31m[K^~~~~~~~[m[K
+[1.812s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:306:13:[m[K [01;31m[Kerror: [m[K‘[01m[KEndCommandMode[m[K’ was not declared in this scope
+[1.812s]   306 |             [01;31m[KEndCommandMode[m[K();
+[1.812s]       |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[1.812s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In function ‘[01m[Kvoid sighandler(int)[m[K’:
+[1.812s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:323:21:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksig[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.812s]   323 | void sighandler([01;35m[Kint sig[m[K)
+[1.812s]       |                 [01;35m[K~~~~^~~[m[K
+[1.814s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.814s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:402:3:[m[K [01;31m[Kerror: [m[K‘[01m[KDrawIntro[m[K’ was not declared in this scope
+[1.814s]   402 |   [01;31m[KDrawIntro[m[K();
+[1.814s]       |   [01;31m[K^~~~~~~~~[m[K
+[1.819s] [01m[K/home/robo/ROS2/walk_test/src/control/src/action_editor/main.cpp:404:3:[m[K [01;31m[Kerror: [m[K‘[01m[KDrawEnding[m[K’ was not declared in this scope
+[1.819s]   404 |   [01;31m[KDrawEnding[m[K();
+[1.819s]       |   [01;31m[K^~~~~~~~~~[m[K
+[2.066s] make[2]: *** [CMakeFiles/action.dir/build.make:89: CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o] Error 1
+[2.066s] make[2]: *** Waiting for unfinished jobs....
+[2.083s] make[2]: *** [CMakeFiles/cmd.dir/build.make:63: CMakeFiles/cmd.dir/src/action_editor/cmd_process.cpp.o] Error 1
+[2.083s] make[1]: *** [CMakeFiles/Makefile2:142: CMakeFiles/cmd.dir/all] Error 2
+[2.083s] make[1]: *** Waiting for unfinished jobs....
+[2.534s] make[2]: *** [CMakeFiles/action.dir/build.make:63: CMakeFiles/action.dir/src/action_editor/main.cpp.o] Error 1
+[2.535s] make[1]: *** [CMakeFiles/Makefile2:250: CMakeFiles/action.dir/all] Error 2
+[2.535s] make: *** [Makefile:141: all] Error 2
+[2.536s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '2': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12

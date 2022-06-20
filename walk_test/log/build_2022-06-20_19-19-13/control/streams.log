@@ -1,0 +1,53 @@
+[0.008s] Invoking command in '/home/robo/ROS2/walk_test/build/control': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12
+[0.028s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.044s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.174s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.180s] -- Found dynamixel_sdk_custom_interfaces: 3.7.40 (/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/cmake)
+[0.196s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.199s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.289s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.322s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.350s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.351s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.461s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.549s] -- Found rclcpp_components: 2.4.1 (/opt/ros/foxy/share/rclcpp_components/cmake)
+[0.591s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.608s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.656s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.661s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.661s] -- Configured cppcheck include dirs: /home/robo/ROS2/walk_test/src/control/include;/home/robo/ROS2/walk_test/src/control/src/minIni
+[0.662s] -- Configured cppcheck exclude dirs and/or files: 
+[0.666s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.666s] -- Configured cpplint exclude dirs and/or files: 
+[0.667s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.668s] -- Added test 'lint_cmake' to check CMake code style
+[0.669s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.673s] -- Added test 'uncrustify' to check C / C++ code style
+[0.673s] -- Configured uncrustify additional arguments: 
+[0.674s] -- Added test 'xmllint' to check XML markup files
+[0.677s] -- Configuring done
+[0.697s] -- Generating done
+[0.699s] -- Build files have been written to: /home/robo/ROS2/walk_test/build/control
+[0.720s] [35m[1mScanning dependencies of target action[0m
+[0.734s] [ 10%] Built target gait_publisher
+[0.734s] [ 10%] Built target decision
+[0.734s] [ 15%] Built target control
+[0.738s] [ 57%] Built target motion
+[0.752s] [ 60%] [32m[1mLinking CXX executable action[0m
+[0.883s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/JointData.cpp.o: in function `Robot::JointData::SetEnable(int, bool, bool)':
+[0.883s] JointData.cpp:(.text+0x160): undefined reference to `Robot::MotionManager::SetJointDisable(int)'
+[0.883s] /usr/bin/ld: CMakeFiles/action.dir/src/motion/JointData.cpp.o: in function `Robot::MotionManager::GetInstance()':
+[0.883s] JointData.cpp:(.text._ZN5Robot13MotionManager11GetInstanceEv[_ZN5Robot13MotionManager11GetInstanceEv]+0xb): undefined reference to `Robot::MotionManager::m_UniqueInstance'
+[0.883s] /usr/bin/ld: CMakeFiles/action.dir/src/GaitMove.cpp.o: in function `GaitMove::GaitMove(minIni*)':
+[0.883s] GaitMove.cpp:(.text+0x49b): undefined reference to `Robot::MotionManager::LoadINISettings(minIni*)'
+[0.883s] /usr/bin/ld: GaitMove.cpp:(.text+0x4b3): undefined reference to `Robot::MotionManager::AddModule(Robot::MotionModule*)'
+[0.883s] /usr/bin/ld: CMakeFiles/action.dir/src/GaitMove.cpp.o: in function `GaitMove::move_gait(float, float, float, bool&, ReadConfig*)':
+[0.883s] GaitMove.cpp:(.text+0x902): undefined reference to `Robot::MotionManager::SetEnable(bool)'
+[0.883s] /usr/bin/ld: GaitMove.cpp:(.text+0xa5c): undefined reference to `Robot::MotionManager::SetEnable(bool)'
+[0.883s] /usr/bin/ld: CMakeFiles/action.dir/src/GaitMove.cpp.o: in function `GaitMove::robot_stop(bool&)':
+[0.883s] GaitMove.cpp:(.text+0xd52): undefined reference to `Robot::MotionManager::SetEnable(bool)'
+[0.884s] collect2: error: ld returned 1 exit status
+[0.884s] make[2]: *** [CMakeFiles/action.dir/build.make:362: action] Error 1
+[0.884s] make[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/action.dir/all] Error 2
+[0.884s] make: *** [Makefile:141: all] Error 2
+[0.887s] Invoked command in '/home/robo/ROS2/walk_test/build/control' returned '2': CMAKE_PREFIX_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces:/home/robo/ROS2/walk_test/install/control:/opt/ros/foxy LD_LIBRARY_PATH=/home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib:/home/robo/ROS2/walk_test/install/control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib /usr/bin/cmake --build /home/robo/ROS2/walk_test/build/control -- -j12 -l12

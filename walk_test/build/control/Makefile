@@ -366,33 +366,6 @@ src/action_editor/cmd_process.cpp.s:
 	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.s
 .PHONY : src/action_editor/cmd_process.cpp.s
 
-src/action_editor/main.o: src/action_editor/main.cpp.o
-
-.PHONY : src/action_editor/main.o
-
-# target to build an object file
-src/action_editor/main.cpp.o:
-	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/src/action_editor/main.cpp.o
-.PHONY : src/action_editor/main.cpp.o
-
-src/action_editor/main.i: src/action_editor/main.cpp.i
-
-.PHONY : src/action_editor/main.i
-
-# target to preprocess a source file
-src/action_editor/main.cpp.i:
-	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/src/action_editor/main.cpp.i
-.PHONY : src/action_editor/main.cpp.i
-
-src/action_editor/main.s: src/action_editor/main.cpp.s
-
-.PHONY : src/action_editor/main.s
-
-# target to generate assembly for a file
-src/action_editor/main.cpp.s:
-	$(MAKE) -f CMakeFiles/action.dir/build.make CMakeFiles/action.dir/src/action_editor/main.cpp.s
-.PHONY : src/action_editor/main.cpp.s
-
 src/control.o: src/control.cpp.o
 
 .PHONY : src/control.o
@@ -860,9 +833,6 @@ help:
 	@echo "... src/action_editor/cmd_process.o"
 	@echo "... src/action_editor/cmd_process.i"
 	@echo "... src/action_editor/cmd_process.s"
-	@echo "... src/action_editor/main.o"
-	@echo "... src/action_editor/main.i"
-	@echo "... src/action_editor/main.s"
 	@echo "... src/control.o"
 	@echo "... src/control.i"
 	@echo "... src/control.s"

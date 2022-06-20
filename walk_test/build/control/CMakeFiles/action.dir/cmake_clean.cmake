@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/action.dir/src/action_editor/cmd_process.cpp.o"
-  "CMakeFiles/action.dir/src/action_editor/main.cpp.o"
   "CMakeFiles/action.dir/src/minIni/minIni.cpp.o"
   "action"
   "action.pdb"

@@ -64,13 +64,22 @@
 #define NEXT_ROW		7
 #define EXIT_ROW		8
 
-// rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_;  
-// rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>::SharedPtr publisher_single;
+class MinimalPublisher: public rclcpp::Node{
+    public:
+        MinimalPublisher();
+        rclcpp::TimerBase::SharedPtr timer_;
+        rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_; 
+        rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>::SharedPtr publisher_single; 
+        int process();
+        void SetValue(uint32_t value);
 
 
-
-int _getch();
+int static _getch();
 bool AskSave();
+int kbhit(void);
+void set_stdin(void);
+void reset_stdin(void);
+void static ReadStep();
 
 // void teste();
 
@@ -80,7 +89,7 @@ bool AskSave();
 
 
 // Move cursor
-void GoToCursor(int col, int row);
+void static GoToCursor(int col, int row);
 void MoveUpCursor();
 void MoveDownCursor();
 void MoveLeftCursor();
@@ -88,20 +97,19 @@ void MoveRightCursor();
 
 // Disp & Drawing
 // void DrawIntro(Robot::CM730 *cm730);
-void DrawIntro();
-void DrawEnding();
-void DrawPage();
-void DrawStep(int index);
-void DrawName();
-void DrawStepLine(bool erase);
+void static DrawIntro();
+void static DrawEnding();
+void static DrawPage();
+void static DrawStep(int index);
+void static DrawName();
+void static DrawStepLine(bool erase);
 void ClearCmd();
-void PrintCmd(const char *message);
-
+void static PrintCmd(const char *message);
 // Edit value
 // void UpDownValue(Robot::CM730 *cm730, int offset);
 void UpDownValue(int offset);
 // void SetValue(Robot::CM730 *cm730, int value);
-void SetValue(uint32_t value);
+
 int GetValue();
 // void ToggleTorque(Robot::CM730 *cm730);
 void ToggleTorque();
@@ -134,6 +142,7 @@ void goInitPage(); //Criando novas funcoes
 void backToPage(); //Criando novas funcoes
 // void readServo(Robot::CM730 *cm730);
 void readServo();
-
-
+void static change_current_dir();
+void static sighandler(int sig);
+};
 #endif
