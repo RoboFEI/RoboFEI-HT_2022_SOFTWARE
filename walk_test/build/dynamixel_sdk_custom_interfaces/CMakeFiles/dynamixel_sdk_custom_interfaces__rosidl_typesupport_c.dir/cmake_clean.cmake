@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/decision__type_support.cpp.o"
+  "CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp.o"
   "CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp.o"
   "CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position_original__type_support.cpp.o"
   "CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/walk__type_support.cpp.o"
@@ -7,6 +8,7 @@ file(REMOVE_RECURSE
   "libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.pdb"
   "libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so"
   "rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/decision__type_support.cpp"
+  "rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp"
   "rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp"
   "rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position_original__type_support.cpp"
   "rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/walk__type_support.cpp"

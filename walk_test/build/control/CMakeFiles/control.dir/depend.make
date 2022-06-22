@@ -5,6 +5,9 @@ CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dyna
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__builder.hpp
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__struct.hpp
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/decision__traits.hpp
+CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/param_walk__builder.hpp
+CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/param_walk__struct.hpp
+CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/param_walk__traits.hpp
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__builder.hpp
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__struct.hpp
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/set_position__traits.hpp
@@ -14,6 +17,7 @@ CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dyna
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__builder.hpp
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__struct.hpp
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/detail/walk__traits.hpp
+CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/param_walk.hpp
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position.hpp
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp
 CMakeFiles/control.dir/src/control.cpp.o: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include/dynamixel_sdk_custom_interfaces/msg/walk.hpp

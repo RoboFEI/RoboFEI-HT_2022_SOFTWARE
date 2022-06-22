@@ -37,6 +37,7 @@
 #include "dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp"
 #include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/walk.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/param_walk.hpp"
 
 #define INI_FILE_PATH       "/home/robo/ROS2/walk_test/src/control/Data/config.ini"
 #define MOTION_FILE_PATH    "/home/robo/ROS2/walk_test/src/control/Data/motion_4096.bin"
@@ -55,6 +56,11 @@ int position;
 //#define LOG_VOLTAGES 1
 rclcpp::NodeOptions options;
 
+float X_AMPLITUDE = 0;
+float Y_AMPLITUDE = 0;
+float A_AMPLITUDE = 0;
+int last_movement = 0;
+
 MotionManager* MotionManager::m_UniqueInstance = new MotionManager(options);
 
 MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
@@ -70,6 +76,7 @@ MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
 	
 	subscription_imu = this->create_subscription<sensor_msgs::msg::Imu>("imu/data", 10, std::bind(&MotionManager::topic_callback, this, _1));
 	subscription_walk = this->create_subscription<dynamixel_sdk_custom_interfaces::msg::Walk>("walking", 10, std::bind(&MotionManager::topic_callback_walk, this, _1));
+	subscription_param = this->create_subscription<dynamixel_sdk_custom_interfaces::msg::ParamWalk>("param_walk", 10, std::bind(&MotionManager::topic_callback_param, this, _1));
 	publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
 	publisher_single = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>("set_position_single", 10); 
 	client = this->create_client<dynamixel_sdk_custom_interfaces::srv::GetPosition>("get_position");
@@ -80,6 +87,7 @@ MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
 	// update_thread_ = std::thread(std::bind(&MotionManager::update_loop, this));
 	printf("CONSTRUTOR\n");
 	ini = new minIni((char *)INI_FILE_PATH);
+	
 }
 
 void MotionManager::update_loop(void)
@@ -95,6 +103,13 @@ MotionManager::~MotionManager()
 {
 }
 
+void MotionManager::topic_callback_param(const std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::ParamWalk> param_msg_) const
+    {
+        X_AMPLITUDE = param_msg_->walk;
+        Y_AMPLITUDE = param_msg_->sidle;
+		A_AMPLITUDE = param_msg_->turn;
+	}
+
 void MotionManager::topic_callback(const std::shared_ptr<sensor_msgs::msg::Imu> imu_msg_) const
     {
         float IMU_GYRO_X = -imu_msg_->angular_velocity.x/10;
@@ -104,34 +119,129 @@ void MotionManager::topic_callback(const std::shared_ptr<sensor_msgs::msg::Imu> 
 void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Walk> walk_msg_) const
     {
         int walk = (int)walk_msg_->walk;
-		//printf("KEEP WALKING ANTES %d\n", MotionManager::GetInstance()->keep_walking);
-		
+		// printf("MOVEMENT %d\n", walk);
+		// printf("LAST MOVEMENT %d\n", last_movement);
+		// printf("KEEP WALKING %d\n", MotionManager::GetInstance()->keep_walking);
+
+		if (walk != last_movement && walk!=0){ // se a movimentacao mudar e walk for 0 => permite que entra nas movimentacoes. se isso tiver embaixo, da problema pois ele pula movimentacao
+			printf("CALLBACK NAO WALK\n");
+			//MotionManager::GetInstance()->SetEnable(false);
+			MotionManager::GetInstance()->keep_walking=false;
+			//keep_walking==false;
+		}
+		printf("KEEP WALKING DEPOIS DO IF %d\n", MotionManager::GetInstance()->keep_walking);
 		
 		if (MotionManager::GetInstance()->keep_walking==false){
-			if (walk == 1){
+			printf("MOVEMENT DENTRO DO IF %d\n", walk);
+			printf("LAST MOVEMENT DENTRO DO IF %d\n", last_movement);
+			if (walk == 1 && last_movement!=1){
 				printf("CALLBACK WALK\n");
+				last_movement = walk;
+				printf("FASE %d\n", Walking::GetInstance()->GetCurrentPhase());
+				printf("IS RUNNING %d\n", Walking::GetInstance()->IsRunning());
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				//printf("FEZ O WHILE\n");
+				Walking::GetInstance()->LoadINISettings(ini, "Walking Config");
+				// printf("CALLBACK WALK\n");
+			}
+			else if (walk == 2 && last_movement!=2){
+				printf("CALLBACK GAIT\n");
+				last_movement = walk;
+				printf("FASE %d\n", Walking::GetInstance()->GetCurrentPhase());
+				printf("IS RUNNING %d\n", Walking::GetInstance()->IsRunning());
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				Walking::GetInstance()->LoadINISettings(ini, "Gait");
+				//printf("CALLBACK GAIT\n");
+			}
+			else if (walk == 3 && last_movement!=3){
+				last_movement = walk;
+				printf("CALLBACK TURN\n");
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				Walking::GetInstance()->LoadINISettings(ini, "Turn Robot");
+				//printf("CALLBACK TURN\n");
+			}
+			else if (walk == 4 && last_movement!=4){
+				last_movement = walk;
+				printf("CALLBACK WALK SLOW\n");
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				Walking::GetInstance()->LoadINISettings(ini, "Walk Slow");
+			}
+			else if (walk == 5 && last_movement!=5){
+				last_movement = walk;
+				printf("CALLBACK TURN BALL RIGHT\n");
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				Walking::GetInstance()->LoadINISettings(ini, "Turn Ball Right");
+			}
+			else if (walk == 6 && last_movement!=6){
+				last_movement = walk;
+				printf("CALLBACK TURN BALL LEFT\n");
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				Walking::GetInstance()->LoadINISettings(ini, "Turn Ball Left");
+			}
+			else if (walk == 7 && last_movement!=7){
+				last_movement = walk;
+				printf("CALLBACK SIDLE RIGHT\n");
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				Walking::GetInstance()->LoadINISettings(ini, "Sidle Right");
+			}
+			else if (walk == 8 && last_movement!=8){
+				last_movement = walk;
+				printf("CALLBACK SIDLE LEFT\n");
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				Walking::GetInstance()->LoadINISettings(ini, "Sidle Left");
+			}
+			else if (walk == 9 && last_movement!=9){
+				last_movement = walk;
+				printf("CALLBACK WALK BACKWARD\n");
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				Walking::GetInstance()->LoadINISettings(ini, "Walking Backward");
+			}
+			else if (walk == 10 && last_movement!=10){
+				last_movement = walk;
+				printf("CALLBACK WALK BACKWARD SLOW\n");
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				Walking::GetInstance()->LoadINISettings(ini, "Walking Backward Slow");
+			}
+			else if (walk == 11 && last_movement!=11){
+				last_movement = walk;
+				printf("CALLBACK TURN ROBOT RIGHT\n");
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				Walking::GetInstance()->LoadINISettings(ini, "Turn Robot Right");
+			}
+			else if (walk == 12 && last_movement!=12){
+				last_movement = walk;
+				printf("CALLBACK TURN ROBOT LEFT\n");
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				Walking::GetInstance()->LoadINISettings(ini, "Turn Robot Left");
+			}
+
+
+			if(walk!=0){
+				printf("WALK FUNFANDO\n");
 				MotionManager::GetInstance()->LoadINISettings(ini);
-				Walking::GetInstance()->LoadINISettings(ini);
 				Action::GetInstance()->Stop();
 				//MotionManager::GetInstance()->AddModule((MotionModule*)Walking::GetInstance());
 				MotionManager::GetInstance()->Initialize();
 				Walking::GetInstance()->m_Joint.SetEnableBody(true);
-            	Action::GetInstance()->m_Joint.SetEnableBody(false);
+				Action::GetInstance()->m_Joint.SetEnableBody(false);
 				MotionStatus::m_CurrentJoints.SetEnableBodyWithoutHead(true);
 				MotionManager::GetInstance()->SetEnable(true);
 				printf("%d\n", MotionManager::GetInstance()->GetEnable());
-				Walking::GetInstance()->X_MOVE_AMPLITUDE = 20; //20
-				Walking::GetInstance()->Y_MOVE_AMPLITUDE = 0; //0
-				Walking::GetInstance()->A_MOVE_AMPLITUDE = 2.5; //2.5
+				Walking::GetInstance()->X_MOVE_AMPLITUDE = X_AMPLITUDE; 
+				Walking::GetInstance()->Y_MOVE_AMPLITUDE = Y_AMPLITUDE; 
+				Walking::GetInstance()->A_MOVE_AMPLITUDE = A_AMPLITUDE; 
 				Walking::GetInstance()->Start();
-				printf("WALKING %d\n", Walking::GetInstance()->IsRunning());
-				printf("ACTION %d\n", Action::GetInstance()->IsRunning());
+				// printf("WALKING %d\n", Walking::GetInstance()->IsRunning());
+				// printf("ACTION %d\n", Action::GetInstance()->IsRunning());
 				MotionManager::GetInstance()->keep_walking=true;
 				//printf("KEEP WALKING DEPOIS %d\n", MotionManager::GetInstance()->keep_walking);
 			}
-			if(walk == 2){
+			
+			else{ // parar o walking
+				printf("WALK NAOOOOOOOOOOO FUNFANDO :( \n");
 				MotionManager::GetInstance()->LoadINISettings(ini);
 				Walking::GetInstance()->LoadINISettings(ini);
+				while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
 				Action::GetInstance()->Stop();
 				MotionManager::GetInstance()->AddModule((MotionModule*)Walking::GetInstance());
 				MotionManager::GetInstance()->Initialize();
@@ -141,34 +251,32 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_cust
 				MotionManager::GetInstance()->SetEnable(true);
 				printf("%d\n", MotionManager::GetInstance()->GetEnable());
 				Walking::GetInstance()->Stop();
-				printf("WALKING %d\n", Walking::GetInstance()->IsRunning());
-				printf("ACTION %d\n", Action::GetInstance()->IsRunning());
+				// printf("WALKING %d\n", Walking::GetInstance()->IsRunning());
+				// printf("ACTION %d\n", Action::GetInstance()->IsRunning());
 				MotionManager::GetInstance()->keep_walking=true;
 			}
-			if(walk == 3){
-				MotionManager::GetInstance()->LoadINISettings(ini);
-				Walking::GetInstance()->LoadINISettings(ini);
-				Action::GetInstance()->LoadFile(MOTION_FILE_PATH);
-				MotionManager::GetInstance()->Initialize();
-				Action::GetInstance()->Initialize();
-				Walking::GetInstance()->Stop();
-				Walking::GetInstance()->m_Joint.SetEnableBody(false);
-				Action::GetInstance()->m_Joint.SetEnableBody(true);
-				MotionStatus::m_CurrentJoints.SetEnableBodyWithoutHead(true);
-				MotionManager::GetInstance()->SetEnable(true);
-				Action::GetInstance()->Start(24); 
-				printf("WALKING %d\n", Walking::GetInstance()->IsRunning());
-				printf("ACTION %d\n", Action::GetInstance()->IsRunning());
-				MotionManager::GetInstance()->keep_walking=true;
-			}
+
+			
+			// if(walk == 5){
+			// 	MotionManager::GetInstance()->LoadINISettings(ini);
+			// 	Walking::GetInstance()->LoadINISettings(ini);
+			// 	Action::GetInstance()->LoadFile(MOTION_FILE_PATH);
+			// 	MotionManager::GetInstance()->Initialize();
+			// 	Action::GetInstance()->Initialize();
+			// 	Walking::GetInstance()->Stop();
+			// 	Walking::GetInstance()->m_Joint.SetEnableBody(false);
+			// 	Action::GetInstance()->m_Joint.SetEnableBody(true);
+			// 	MotionStatus::m_CurrentJoints.SetEnableBodyWithoutHead(true);
+			// 	MotionManager::GetInstance()->SetEnable(true);
+			// 	Action::GetInstance()->Start(24); 
+			// 	printf("WALKING %d\n", Walking::GetInstance()->IsRunning());
+			// 	printf("ACTION %d\n", Action::GetInstance()->IsRunning());
+			// 	MotionManager::GetInstance()->keep_walking=true;
+			// }
 		}
 		
 		else{
-			if (walk != 1 && walk != 2 && walk != 3){
 				printf("CALLBACK NAO WALK\n");
-				MotionManager::GetInstance()->SetEnable(false);
-				//keep_walking==false;
-			}
 		}
 	}
 
@@ -357,7 +465,7 @@ void MotionManager::SaveINISettings(minIni* ini, const std::string &section)
 #define MARGIN_OF_SD        2.0
 void MotionManager::Process()
 {
-	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "dentro do process");
+	//RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "dentro do process");
 	if((Walking::GetInstance())->m_Joint.GetEnable(5) == true)
 	{
 		Walking::GetInstance()->Process();
@@ -373,7 +481,7 @@ void MotionManager::Process()
 	// message.position = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};   
 	// publisher_->publish(message);
 	if(m_fadeIn && m_torque_count < DEST_TORQUE) {
-		RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "dentro do primeiro if");
+		//RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "dentro do primeiro if");
       //printf("entrou\n");
         if(m_torque_count < 100)
             m_torque_count += 3;
@@ -414,7 +522,7 @@ void MotionManager::Process()
             //m_CM730->write2ByteTxRx(portHandler, 6, MX28::P_GOAL_CURRENT, 1941, &dxl_error);
         }
 	}
-	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "passou primeiro if");
+	//RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "passou primeiro if");
 	//printf("entrou\n");
     // if(m_fadeIn && m_torque_count < DEST_TORQUE) {
     //     m_CM730->WriteWord(CM730::ID_BROADCAST, MX28::P_TORQUE_LIMIT_L, m_torque_count, 0);
@@ -435,13 +543,13 @@ void MotionManager::Process()
 
 
 	MotionManager::GetInstance()->m_CalibrationStatus = 1;
-	RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "antes do segundo if");
+	//RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "antes do segundo if");
 	// RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "%d", m_Enabled);
 
 	// if(m_CalibrationStatus == 1 && m_Enabled == true)
     if(MotionManager::GetInstance()->m_CalibrationStatus == 1 && MotionManager::GetInstance()->GetEnable() == true)
     {
-		RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "pegando coisa da imu");
+		//RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "pegando coisa da imu");
 
 		const double GYRO_ALPHA = 0.1;
 		// int gyroValFB = (int) (IMU_GYRO_Y*16);
@@ -454,7 +562,7 @@ void MotionManager::Process()
 		MotionStatus::RL_GYRO = (1.0 - GYRO_ALPHA) * MotionStatus::RL_GYRO + GYRO_ALPHA * gyroValRL;
 		// printf("IMU 2 %f\n", MotionStatus::FB_GYRO);
 		// printf("IMU %f\n", MotionStatus::RL_GYRO);
-		printf("MODULE SIZE %ld\n", m_Modules.size());
+		//printf("MODULE SIZE %ld\n", m_Modules.size());
 		// if(m_Modules.size() != 0)
 		// {
 		// 	for(std::list<MotionModule*>::iterator i = m_Modules.begin(); i != m_Modules.end(); i++)
@@ -490,7 +598,7 @@ void MotionManager::Process()
 		int param[JointData::NUMBER_OF_JOINTS * MX28::PARAM_BYTES];
 		int joint_num = 0;
 		int pos[18];
-		RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "antes de pub as posicoes");
+		//RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "antes de pub as posicoes");
 		for(int id=JointData::ID_MIN; id<=JointData::ID_MAX-2; id++) // loop que vai de 1 até 18
 				{
 				param[id] = id;

@@ -67,6 +67,7 @@ rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_supp
 rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp: rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/SetPositionOriginal.idl
 rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp: rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/Decision.idl
 rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp: rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/Walk.idl
+rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp: rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/ParamWalk.idl
 rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp: rosidl_adapter/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl
 rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp: /opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl
 rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp: /opt/ros/foxy/share/builtin_interfaces/msg/Time.idl
@@ -81,6 +82,9 @@ rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/decision__type_support.
 
 rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/walk__type_support.cpp: rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/walk__type_support.cpp
+
+rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp: rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp
 
 rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp: rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp
@@ -137,9 +141,22 @@ CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_type
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/walk__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/walk__type_support.cpp -o CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/walk__type_support.cpp.s
 
+CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp.o: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp.o: rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp.o -c /home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp
+
+CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp > CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp.i
+
+CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp -o CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp.s
+
 CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o: rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o -c /home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp
 
 CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.i: cmake_force
@@ -156,6 +173,7 @@ dynamixel_sdk_custom_interfaces__rosidl_typesupport_c_OBJECTS = \
 "CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position_original__type_support.cpp.o" \
 "CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/decision__type_support.cpp.o" \
 "CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/walk__type_support.cpp.o" \
+"CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp.o" \
 "CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o"
 
 # External object files for target dynamixel_sdk_custom_interfaces__rosidl_typesupport_c
@@ -165,6 +183,7 @@ libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so: CMakeFiles/dynamixe
 libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position_original__type_support.cpp.o
 libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/decision__type_support.cpp.o
 libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/walk__type_support.cpp.o
+libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp.o
 libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp.o
 libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/build.make
 libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
@@ -180,7 +199,7 @@ libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so: /opt/ros/foxy/lib/l
 libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so: /opt/ros/foxy/lib/librcpputils.so
 libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so: /opt/ros/foxy/lib/librcutils.so
 libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so: CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -196,6 +215,7 @@ CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/depend: ros
 CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/set_position_original__type_support.cpp
 CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/decision__type_support.cpp
 CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/walk__type_support.cpp
+CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/msg/param_walk__type_support.cpp
 CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/dynamixel_sdk_custom_interfaces/srv/get_position__type_support.cpp
 	cd /home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces /home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces /home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces /home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces /home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/dynamixel_sdk_custom_interfaces__rosidl_typesupport_c.dir/depend

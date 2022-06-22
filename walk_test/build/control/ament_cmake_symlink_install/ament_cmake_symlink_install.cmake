@@ -313,7 +313,7 @@ message(STATUS "Execute custom install script")
 # install("TARGETS" "gait_publisher" "DESTINATION" "lib/control")
 include("/home/robo/ROS2/walk_test/build/control/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install("TARGETS" "control" "decision" "action" "DESTINATION" "lib/control")
+# install("TARGETS" "control" "decision" "DESTINATION" "lib/control")
 include("/home/robo/ROS2/walk_test/build/control/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install("TARGETS" "motion" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib")

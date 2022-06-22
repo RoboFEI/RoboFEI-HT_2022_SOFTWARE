@@ -57,19 +57,18 @@ add_library(motion SHARED
 
 set(CMAKE_C_FLAGS " -lncurses")
 
-set(SOURCES
-  /home/robo/ROS2/walk_test/src/control/src/minIni/minIni.cpp
-  /home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp
-  
-  )
+#set(SOURCES
+#  /home/robo/ROS2/walk_test/src/control/src/minIni/minIni.cpp
+#  /home/robo/ROS2/walk_test/src/control/src/action_editor/cmd_process.cpp
+#  )
 
-add_executable(action ${SOURCES})
-ament_target_dependencies(action
-  rclcpp
-  dynamixel_sdk_custom_interfaces
-  Curses
-)
-target_link_libraries(action ${CURSES_LIBRARY})
+#add_executable(action ${SOURCES})
+#ament_target_dependencies(action
+#  rclcpp
+#  dynamixel_sdk_custom_interfaces
+#  Curses
+#)
+#target_link_libraries(action ${CURSES_LIBRARY})
 
 
 ament_target_dependencies(motion
@@ -105,7 +104,6 @@ ament_target_dependencies(decision
 install(TARGETS
   control
   decision
-  action
   DESTINATION lib/${PROJECT_NAME}
 )
 

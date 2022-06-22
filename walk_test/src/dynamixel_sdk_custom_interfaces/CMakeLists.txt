@@ -25,6 +25,7 @@ set(msg_files
   "msg/SetPositionOriginal.msg"
   "msg/Decision.msg"
   "msg/Walk.msg"
+  "msg/ParamWalk.msg"
 )
 
 set(srv_files

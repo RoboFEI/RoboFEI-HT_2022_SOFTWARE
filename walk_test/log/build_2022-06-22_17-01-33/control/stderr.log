@@ -1,0 +1,52 @@
+In file included from [01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:25[m[K:
+[01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:[m[K In constructor ‘[01m[KRobot::MotionManager::MotionManager(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:89:8:[m[K [01;35m[Kwarning: [m[K‘[01m[KRobot::MotionManager::DEBUG_PRINT[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+   89 |   bool [01;35m[KDEBUG_PRINT[m[K;
+      |        [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:74:41:[m[K [01;35m[Kwarning: [m[K  base ‘[01m[Krclcpp::Node[m[K’ [[01;35m[K-Wreorder[m[K]
+   74 |   rclcpp::Node("gait_publisher", options[01;35m[K)[m[K
+      |                                         [01;35m[K^[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:66:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   66 | [01;35m[KMotionManager[m[K::MotionManager(const rclcpp::NodeOptions & options) :
+      | [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback(std::shared_ptr<sensor_msgs::msg::Imu_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:115:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_X[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  115 |         float [01;35m[KIMU_GYRO_X[m[K = -imu_msg_->angular_velocity.x/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:116:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIMU_GYRO_Y[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  116 |         float [01;35m[KIMU_GYRO_Y[m[K  = -imu_msg_->angular_velocity.y/10;
+      |               [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::topic_callback_walk(std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Walk_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:122:57:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Robot::MotionManager[m[K’ has no member named ‘[01m[Kwalk[m[K’
+  122 |   printf("MOVEMENT %d\n", MotionManager::GetInstance()->[01;31m[Kwalk[m[K);
+      |                                                         [01;31m[K^~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:123:62:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Robot::MotionManager[m[K’ has no member named ‘[01m[Kwalk[m[K’
+  123 |   printf("LAST MOVEMENT %d\n", MotionManager::GetInstance()->[01;31m[Kwalk[m[K);
+      |                                                              [01;31m[K^~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Initialize(bool)[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:214:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  214 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:214:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  214 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kbool Robot::MotionManager::Reinitialize()[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:300:6:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalue[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  300 |  int [01;35m[Kvalue[m[K, error;
+      |      [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:300:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  300 |  int value, [01;35m[Kerror[m[K;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:[m[K In member function ‘[01m[Kvoid Robot::MotionManager::Process()[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:466:5:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  466 |     [01;35m[Kif[m[K(MotionManager::GetInstance()->m_ProcessEnable == false || MotionManager::GetInstance()->m_IsRunning == true)
+      |     [01;35m[K^~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:469:2:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+  469 |  [01;36m[KMotionManager[m[K::GetInstance()->m_IsRunning = true;
+      |  [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/motion/MotionManager.cpp:527:7:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kjoint_num[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  527 |   int [01;35m[Kjoint_num[m[K = 0;
+      |       [01;35m[K^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/motion.dir/build.make:63: CMakeFiles/motion.dir/src/motion/MotionManager.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/motion.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

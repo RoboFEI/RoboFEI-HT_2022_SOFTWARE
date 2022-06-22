@@ -24,6 +24,7 @@
 #include "dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp"
 #include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/walk.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/param_walk.hpp"
 
 #define OFFSET_SECTION "Offset"
 #define INVALID_VALUE   -1024.0
@@ -49,6 +50,7 @@ namespace Robot
 		float IMU_GYRO_Y;
 		rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr subscription_imu;
 		rclcpp::Subscription<dynamixel_sdk_custom_interfaces::msg::Walk>::SharedPtr subscription_walk;
+		rclcpp::Subscription<dynamixel_sdk_custom_interfaces::msg::ParamWalk>::SharedPtr subscription_param;
 rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_;  
 rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>::SharedPtr publisher_single; 
 rclcpp::Client<dynamixel_sdk_custom_interfaces::srv::GetPosition>::SharedPtr client;
@@ -66,6 +68,7 @@ rclcpp::Client<dynamixel_sdk_custom_interfaces::srv::GetPosition>::SharedPtr cli
 	
 	void topic_callback(const std::shared_ptr<sensor_msgs::msg::Imu> imu_msg_) const;
 	void topic_callback_walk(const std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Walk> walk_msg_) const;
+	void topic_callback_param(const std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::ParamWalk> param_msg_) const;
 	
 	unsigned int m_torqueAdaptionCounter;
 	double m_voltageAdaptionFactor;

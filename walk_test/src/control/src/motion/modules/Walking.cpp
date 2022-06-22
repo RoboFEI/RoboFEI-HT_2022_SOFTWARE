@@ -129,7 +129,7 @@ void Walking::LoadINISettings(minIni* ini, const std::string &section)
     if((value = ini->getd(section, "lean_turn_gain", INVALID_VALUE)) != INVALID_VALUE) LEAN_TURN = value;
     if((value = ini->getd(section, "start_step_factor", INVALID_VALUE)) != INVALID_VALUE) START_STEP_FACTOR = value;
 
-    //printf("PERIOD TIME %f", PERIOD_TIME);
+    //printf("PERIOD TIME %f", X_OFFSET_START);
     int ivalue = INVALID_VALUE;
 
     if((ivalue = ini->geti(section, "p_gain", INVALID_VALUE)) != INVALID_VALUE)                 P_GAIN = ivalue;
@@ -575,7 +575,7 @@ void Walking::Process()
     // Compute arm swing
     if(m_X_Move_Amplitude == 0)
     {
-        printf("ANGLE 12, 13\n");
+        //printf("ANGLE 12, 13\n");
         angle[12] = 0; // Right
         angle[13] = 0; // Left
     }
@@ -583,7 +583,7 @@ void Walking::Process()
     {
         angle[12] = wsin(m_Time, m_PeriodTime, PI * 1.5, -m_X_Move_Amplitude * m_Arm_Swing_Gain, 0);
         angle[13] = wsin(m_Time, m_PeriodTime, PI * 1.5, m_X_Move_Amplitude * m_Arm_Swing_Gain, 0);
-        printf("ANGLE 12 %f\n", angle[12]);
+        //printf("ANGLE 12 %f\n", angle[12]);
     }
 
     if(m_Real_Running == true)

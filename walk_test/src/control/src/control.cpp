@@ -22,6 +22,7 @@
 #include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/decision.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/walk.hpp"
+#include "dynamixel_sdk_custom_interfaces/msg/param_walk.hpp"
 #include "sensor_msgs/msg/imu.hpp"
 #include "GaitMove.hpp"
 
@@ -55,6 +56,7 @@ public:
     "imu/data", 10, std::bind(&Control::topic_callback_imu, this, _1));
     publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
     publisher_walk = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::Walk>("walking", 10); 
+    publisher_param = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::ParamWalk>("param_walk", 10); 
   }
 
   private:
@@ -221,10 +223,24 @@ public:
           std::this_thread::sleep_for(std::chrono::seconds(1));
         }
         else if(movement==14){
-          RCLCPP_INFO(this->get_logger(), "Andando");
+          RCLCPP_INFO(this->get_logger(), "Walking");
           auto message_walk = dynamixel_sdk_custom_interfaces::msg::Walk();                              
           message_walk.walk = 1; 
           publisher_walk->publish(message_walk);
+          auto message_param = dynamixel_sdk_custom_interfaces::msg::ParamWalk();
+          message_param.walk = 20;   
+          message_param.sidle = 0;  
+          message_param.turn = 2.5;  
+          publisher_param->publish(message_param);
+                            
+          std::this_thread::sleep_for(std::chrono::seconds(3));
+          message_walk.walk = 2; 
+          publisher_walk->publish(message_walk);
+          message_param.walk = 10;   
+          message_param.sidle = 5;  
+          message_param.turn = 2;  
+          publisher_param->publish(message_param);
+          std::this_thread::sleep_for(std::chrono::seconds(3));
           // MotionManager::GetInstance()->SetEnable(true);
           // Walking::GetInstance()->m_Joint.SetEnableBody(true);
           // Walking::GetInstance()->X_MOVE_AMPLITUDE = X_amplitude;
@@ -243,6 +259,7 @@ public:
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr subscription_imu;
     rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_; 
     rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::Walk>::SharedPtr publisher_walk;   
+    rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::ParamWalk>::SharedPtr publisher_param;   
     rclcpp::TimerBase::SharedPtr timer_;
 };
 

@@ -382,6 +382,9 @@ ament_cmake_symlink_install_files("/home/robo/ROS2/walk_test/src/dynamixel_sdk_c
 # install(FILES "/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/Walk.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 ament_cmake_symlink_install_files("/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces" FILES "/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/Walk.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 
+# install(FILES "/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/ParamWalk.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces" FILES "/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/msg/ParamWalk.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
+
 # install(FILES "/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
 ament_cmake_symlink_install_files("/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces" FILES "/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_adapter/dynamixel_sdk_custom_interfaces/srv/GetPosition.idl" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
 
@@ -396,6 +399,9 @@ ament_cmake_symlink_install_files("/home/robo/ROS2/walk_test/src/dynamixel_sdk_c
 
 # install(FILES "/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/Walk.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 ament_cmake_symlink_install_files("/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces" FILES "/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/Walk.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
+
+# install(FILES "/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/ParamWalk.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces" FILES "/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/ParamWalk.msg" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/msg")
 
 # install(FILES "/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")
 ament_cmake_symlink_install_files("/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces" FILES "/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv" "DESTINATION" "share/dynamixel_sdk_custom_interfaces/srv")

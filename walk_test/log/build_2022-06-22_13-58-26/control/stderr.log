@@ -1,0 +1,42 @@
+[01m[K/home/robo/ROS2/walk_test/src/control/src/control.cpp:247:61:[m[K [01;31m[Kerror: [m[K‘[01m[KParamWalk[m[K’ is not a member of ‘[01m[Kdynamixel_sdk_custom_interfaces::msg[m[K’
+  247 |     rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::[01;31m[KParamWalk[m[K>::SharedPtr publisher_param;
+      |                                                             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/control.cpp:247:61:[m[K [01;31m[Kerror: [m[K‘[01m[KParamWalk[m[K’ is not a member of ‘[01m[Kdynamixel_sdk_custom_interfaces::msg[m[K’
+[01m[K/home/robo/ROS2/walk_test/src/control/src/control.cpp:247:70:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  247 |     rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::ParamWalk[01;31m[K>[m[K::SharedPtr publisher_param;
+      |                                                                      [01;31m[K^[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/control.cpp:247:73:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  247 |     rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::ParamWalk>::[01;31m[KSharedPtr[m[K publisher_param;
+      |                                                                         [01;31m[K^~~~~~~~~[m[K
+      |                                                                                  [32m[K;[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/control.cpp:247:83:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_param[m[K’ does not name a type
+  247 |     rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::ParamWalk>::SharedPtr [01;31m[Kpublisher_param[m[K;
+      |                                                                                   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/control.cpp:[m[K In constructor ‘[01m[KControl::Control()[m[K’:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/control.cpp:58:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_param[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublisher_walk[m[K’?
+   58 |     [01;31m[Kpublisher_param[m[K = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::ParamWalk>("param_walk", 10);
+      |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |     [32m[Kpublisher_walk[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/control.cpp:58:84:[m[K [01;31m[Kerror: [m[K‘[01m[KParamWalk[m[K’ is not a member of ‘[01m[Kdynamixel_sdk_custom_interfaces::msg[m[K’
+   58 |     publisher_param = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::[01;31m[KParamWalk[m[K>("param_walk", 10);
+      |                                                                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/robo/ROS2/walk_test/src/control/src/control.cpp:58:84:[m[K [01;31m[Kerror: [m[K‘[01m[KParamWalk[m[K’ is not a member of ‘[01m[Kdynamixel_sdk_custom_interfaces::msg[m[K’
+[01m[K/home/robo/ROS2/walk_test/src/control/src/control.cpp:58:111:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KControl::create_publisher<<expression error> >(const char [11], int)[m[K’
+   58 |     publisher_param = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::ParamWalk>("param_walk", 10[01;31m[K)[m[K;
+      |                                                                                                               [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:1224[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/robo/ROS2/walk_test/src/control/include/MotionManager.h:20[m[K,
+                 from [01m[K/home/robo/ROS2/walk_test/src/control/src/control.cpp:19[m[K:
+[01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+   71 | [01;36m[KNode[m[K::create_publisher(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/robo/ROS2/walk_test/src/control/src/control.cpp:58:111:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   58 |     publisher_param = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::ParamWalk>("param_walk", 10[01;31m[K)[m[K;
+      |                                                                                                               [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:111: CMakeFiles/control.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

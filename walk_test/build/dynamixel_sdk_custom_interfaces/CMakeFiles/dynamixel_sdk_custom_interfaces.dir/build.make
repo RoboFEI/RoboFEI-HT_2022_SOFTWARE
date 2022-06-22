@@ -57,6 +57,7 @@ CMakeFiles/dynamixel_sdk_custom_interfaces: /home/robo/ROS2/walk_test/src/dynami
 CMakeFiles/dynamixel_sdk_custom_interfaces: /home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/SetPositionOriginal.msg
 CMakeFiles/dynamixel_sdk_custom_interfaces: /home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/Decision.msg
 CMakeFiles/dynamixel_sdk_custom_interfaces: /home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/Walk.msg
+CMakeFiles/dynamixel_sdk_custom_interfaces: /home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/ParamWalk.msg
 CMakeFiles/dynamixel_sdk_custom_interfaces: /home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/srv/GetPosition.srv
 CMakeFiles/dynamixel_sdk_custom_interfaces: rosidl_cmake/srv/GetPosition_Request.msg
 CMakeFiles/dynamixel_sdk_custom_interfaces: rosidl_cmake/srv/GetPosition_Response.msg
