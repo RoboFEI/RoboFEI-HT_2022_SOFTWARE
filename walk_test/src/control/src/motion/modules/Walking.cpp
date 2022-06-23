@@ -388,6 +388,8 @@ void Walking::Process()
     // printf("WALKING process comeco %f\n", X_MOVE_AMPLITUDE);
     // printf("PERIOD TIME PROCESS %f\n", PERIOD_TIME);
 
+    // printf("FASE WALKING %d\n", Walking::GetInstance()->GetCurrentPhase());
+    // printf("IS RUNNING WALKING %d\n", Walking::GetInstance()->IsRunning());
 	double x_swap, y_swap, z_swap, a_swap, b_swap, c_swap;
     double x_move_r, y_move_r, z_move_r, a_move_r, b_move_r, c_move_r;
     double x_move_l, y_move_l, z_move_l, a_move_l, b_move_l, c_move_l;

@@ -57,6 +57,7 @@ public:
     publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
     publisher_walk = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::Walk>("walking", 10); 
     publisher_param = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::ParamWalk>("param_walk", 10); 
+    timer_ = this->create_wall_timer(4ms, std::bind(&Control::Process, this));
   }
 
   private:
@@ -85,13 +86,7 @@ public:
       }
     }
 
-    void topic_callback(const std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Decision> msg) const
-    {
-      
-      auto message_dec = dynamixel_sdk_custom_interfaces::msg::Decision();
-      message_dec.decision = msg->decision;
-      movement = (int)message_dec.decision;
-      RCLCPP_INFO(this->get_logger(), "I heard %d", movement);
+    void Process(){
       if(fallen == true){ // Robô caido, tem que levantar antes de qualquer movimento
         if (fallenFront == true){ // Caido de frente
           RCLCPP_INFO(this->get_logger(), "Stand Up Front");
@@ -232,27 +227,43 @@ public:
           message_param.sidle = 0;  
           message_param.turn = 2.5;  
           publisher_param->publish(message_param);
+          message_param.walk = 20;   
+          message_param.sidle = 0;  
+          message_param.turn = 2.5;  
+          publisher_param->publish(message_param);
+          message_param.walk = 20;   
+          message_param.sidle = 0;  
+          message_param.turn = 2.5;  
+          publisher_param->publish(message_param);
                             
-          std::this_thread::sleep_for(std::chrono::seconds(3));
+          //std::this_thread::sleep_for(std::chrono::seconds(3));
           message_walk.walk = 2; 
           publisher_walk->publish(message_walk);
           message_param.walk = 10;   
           message_param.sidle = 5;  
           message_param.turn = 2;  
           publisher_param->publish(message_param);
-          std::this_thread::sleep_for(std::chrono::seconds(3));
-          // MotionManager::GetInstance()->SetEnable(true);
-          // Walking::GetInstance()->m_Joint.SetEnableBody(true);
-          // Walking::GetInstance()->X_MOVE_AMPLITUDE = X_amplitude;
-          // Walking::GetInstance()->Y_MOVE_AMPLITUDE = Y_amplitude;
-          // Walking::GetInstance()->A_MOVE_AMPLITUDE = A_amplitude;
-          // Walking::GetInstance()->Start();
-          // if(movement!=14){
-          //   Walking::GetInstance()->Stop();
-          //   Walking::GetInstance()->m_Joint.SetEnableBody(false);
-          // }
+          message_param.walk = 10;   
+          message_param.sidle = 5;  
+          message_param.turn = 2;  
+          publisher_param->publish(message_param);
+          message_param.walk = 10;   
+          message_param.sidle = 5;  
+          message_param.turn = 2;  
+          publisher_param->publish(message_param);
+          //std::this_thread::sleep_for(std::chrono::seconds(3));
         }
       }
+    }
+
+    void topic_callback(const std::shared_ptr<dynamixel_sdk_custom_interfaces::msg::Decision> msg) const
+    {
+      
+      auto message_dec = dynamixel_sdk_custom_interfaces::msg::Decision();
+      message_dec.decision = msg->decision;
+      movement = (int)message_dec.decision;
+      RCLCPP_INFO(this->get_logger(), "I heard %d", movement);
+      
     } 
 
     rclcpp::Subscription<dynamixel_sdk_custom_interfaces::msg::Decision>::SharedPtr subscription_;

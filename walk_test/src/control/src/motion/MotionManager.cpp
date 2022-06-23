@@ -123,15 +123,16 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_cust
 		// printf("LAST MOVEMENT %d\n", last_movement);
 		// printf("KEEP WALKING %d\n", MotionManager::GetInstance()->keep_walking);
 
-		if (walk != last_movement && walk!=0){ // se a movimentacao mudar e walk for 0 => permite que entra nas movimentacoes. se isso tiver embaixo, da problema pois ele pula movimentacao
+		if (walk != last_movement && walk!=0){ 
 			printf("CALLBACK NAO WALK\n");
 			//MotionManager::GetInstance()->SetEnable(false);
 			MotionManager::GetInstance()->keep_walking=false;
 			//keep_walking==false;
 		}
 		printf("KEEP WALKING DEPOIS DO IF %d\n", MotionManager::GetInstance()->keep_walking);
+		printf("FASE DEPOIS DO IF %d\n", Walking::GetInstance()->GetCurrentPhase());
 		
-		if (MotionManager::GetInstance()->keep_walking==false){
+		if (MotionManager::GetInstance()->keep_walking==false && Walking::GetInstance()->GetCurrentPhase()==0){
 			printf("MOVEMENT DENTRO DO IF %d\n", walk);
 			printf("LAST MOVEMENT DENTRO DO IF %d\n", last_movement);
 			if (walk == 1 && last_movement!=1){
@@ -139,7 +140,7 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_cust
 				last_movement = walk;
 				printf("FASE %d\n", Walking::GetInstance()->GetCurrentPhase());
 				printf("IS RUNNING %d\n", Walking::GetInstance()->IsRunning());
-				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0)  usleep(8*1000);
 				//printf("FEZ O WHILE\n");
 				Walking::GetInstance()->LoadINISettings(ini, "Walking Config");
 				// printf("CALLBACK WALK\n");
@@ -149,7 +150,7 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<dynamixel_sdk_cust
 				last_movement = walk;
 				printf("FASE %d\n", Walking::GetInstance()->GetCurrentPhase());
 				printf("IS RUNNING %d\n", Walking::GetInstance()->IsRunning());
-				//while(Walking::GetInstance()->GetCurrentPhase()!=0 && Walking::GetInstance()->IsRunning()!=0)  usleep(8*1000);
+				//while(Walking::GetInstance()->GetCurrentPhase()!=0)  usleep(8*1000);
 				Walking::GetInstance()->LoadINISettings(ini, "Gait");
 				//printf("CALLBACK GAIT\n");
 			}
@@ -474,6 +475,8 @@ void MotionManager::Process()
 	{
 		Action::GetInstance()->Process();
 	}
+	// printf("FASE PROCESS %d\n", Walking::GetInstance()->GetCurrentPhase());
+	// printf("IS RUNNING PROCESS %d\n", Walking::GetInstance()->IsRunning());
 
 	// auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();  
 
