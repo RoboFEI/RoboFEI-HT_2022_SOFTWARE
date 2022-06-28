@@ -3,8 +3,9 @@ import rclpy
 from rclpy.node import Node
 
 from std_msgs.msg import String
-from dynamixel_sdk_custom_interfaces.msg import Decision 
-from messages.msg import HumanoidLeagueMsgs as GC
+from custom_interfaces.msg import Decision 
+from custom_interfaces.msg import Vision
+from custom_interfaces.msg import HumanoidLeagueMsgs as GC
 from std_msgs.msg import Bool
 from sensor_msgs.msg import Imu
 
@@ -43,31 +44,37 @@ class DecisionNode(Node):
             10)
         # Subscriber da visão
         self.subscription_vision = self.create_subscription(
-            Bool,  # Só um exemplo, vai ter a mensagem específica depois
+            Vision, 
             '/ball_position',
             self.listener_callback_vision,
             10)
         # Subscriber da IMU
         self.subscription_vision = self.create_subscription(
-            Imu,  # Só um exemplo, vai ter a mensagem específica depois
-            '/ball_position',
+            Imu, 
+            '/imu/data',
             self.listener_callback_imu,
             10)
         self.subscription  
         self.subscription_vision
 
     def listener_callback_vision(self, msg):
-        if(msg.data == True):
-            self.get_logger().info('I see the ball "%s"' % msg.data)
-            self.get_logger().info('TO VENDO A BOLA"%s"' % msg.data)
-            self.get_logger().info('A BOLA "%s"' % msg.data)
-            self.get_logger().info('BOLAAAAAAAAAAAAA "%s"' % msg.data)
-            self.get_logger().info('BOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA "%s"' % msg.data)
-            sleep(10)
-            BALL_DETECTED = True
-        else:
-            self.get_logger().info('I cant see the ball "%s"' % msg.data)
-            BALL_DETECTED = False
+        BALL_DETECTED = msg.ball_detected
+        self.get_logger().info('I see the ball "%s"' % BALL_DETECTED)
+        BALL_LEFT = msg.ball_left
+        self.get_logger().info('Ball left "%s"' % BALL_LEFT)
+        BALL_CENTER_LEFT = msg.ball_center_left
+        self.get_logger().info('Ball center left "%s"' % BALL_CENTER_LEFT)
+        BALL_RIGHT = msg.ball_right
+        self.get_logger().info('Ball right "%s"' % BALL_RIGHT)
+        BALL_CENTER_RIGHT = msg.ball_center_right
+        self.get_logger().info('Ball center right "%s"' % BALL_CENTER_RIGHT)
+        BALL_FAR = msg.ball_far
+        self.get_logger().info('Ball far "%s"' % BALL_FAR)
+        BALL_MED = msg.ball_med
+        self.get_logger().info('Ball med "%s"' % BALL_MED)
+        BALL_CLOSE = msg.ball_close
+        self.get_logger().info('Ball close "%s"' % BALL_CLOSE)
+           
 
 
     def listener_callback_imu(self, msg):

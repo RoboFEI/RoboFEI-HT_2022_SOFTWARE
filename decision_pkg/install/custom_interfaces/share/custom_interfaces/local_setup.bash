@@ -1,0 +1,1 @@
+/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.bash

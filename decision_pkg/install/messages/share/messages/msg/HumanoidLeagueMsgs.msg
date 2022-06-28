@@ -1,1 +1,0 @@
-/home/robo/ROS2/decision_pkg/src/messages/messages/msg/HumanoidLeagueMsgs.msg
