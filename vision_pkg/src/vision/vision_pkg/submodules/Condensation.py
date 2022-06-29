@@ -16,8 +16,8 @@ class Image:
 		# Inicia a Captura
         self.capture = cv2.VideoCapture(0)
 		# Seta o tamanho da captura
-        self.capture.set(3,640) #720 1280 1920
-        self.capture.set(4,480) #480 720 1080
+        self.capture.set(3,1920) #720 1280 1920
+        self.capture.set(4,1080) #480 720 1080
 		# Pega um frame da captura
         self.ret , self.image = self.capture.read()
 		#Pega as dimensões da imagem
