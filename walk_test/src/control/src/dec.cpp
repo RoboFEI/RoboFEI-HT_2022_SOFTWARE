@@ -29,9 +29,39 @@ private:
       message.decision = 14;          
       publisher_->publish(message);
       std::this_thread::sleep_for(std::chrono::seconds(1));   
-      // message.decision = 13;          
-      // publisher_->publish(message);
-      // std::this_thread::sleep_for(std::chrono::seconds(1));
+      message.decision = 14;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(1));   
+      message.decision = 14;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(1));   
+
+      message.decision = 14;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(1));   
+      message.decision = 14;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(1));   
+      message.decision = 14;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(1));   
+      message.decision = 14;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(1));   
+      message.decision = 14;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(1));   
+      message.decision = 14;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(1));   
+      message.decision = 14;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(1));   
+
+      message.decision = 15;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(1));
+
   }
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::Decision>::SharedPtr publisher_;     

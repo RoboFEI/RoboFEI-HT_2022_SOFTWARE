@@ -31,7 +31,7 @@ add_library(um7_driver SHARED
 ament_target_dependencies(um7_driver
   rclcpp
   rclcpp_components
-  include/serial
+  serial
   sensor_msgs
 )
 rosidl_target_interfaces(um7_driver ${PROJECT_NAME} "rosidl_typesupport_cpp")
@@ -60,7 +60,7 @@ if(BUILD_TESTING)
   ament_target_dependencies(${PROJECT_NAME}_test_registers
     rclcpp
     rclcpp_components
-    include/serial
+    serial
     sensor_msgs
   )
 
@@ -68,7 +68,7 @@ if(BUILD_TESTING)
   ament_target_dependencies(${PROJECT_NAME}_test_comms
     rclcpp
     rclcpp_components
-    include/serial
+    serial
     sensor_msgs
   )
   target_link_libraries(${PROJECT_NAME}_test_comms util)

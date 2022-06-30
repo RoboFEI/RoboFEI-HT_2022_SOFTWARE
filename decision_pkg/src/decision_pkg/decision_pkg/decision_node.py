@@ -99,6 +99,7 @@ class DecisionNode(Node):
                 	if(BALL_DETECTED == False):
                 		self.search_ball(message) # Procura a bola, no primeiro vira a cabeça p esq, depois volta p meio e dps p dir
                 self.stand_still(message)
+                
 
             elif(msg.game_state == 2): # Espera o jogo começar
                 self.get_logger().info('Keep ready')
@@ -133,6 +134,7 @@ class DecisionNode(Node):
                     self.stand_still(message)
 
                 elif(msg.secondary_state == 1 and msg.secondary_state_team == TEAM_ROBOFEI): # Penalti nosso
+                    self.search_ball(message) # Procura a bola
                     self.walking_tempo(message, 20)
                     self.kicking(message, 1)
 
@@ -140,6 +142,7 @@ class DecisionNode(Node):
                     self.stand_still(message)
 
                 elif(msg.secondary_state == 4 and msg.secondary_state_team == TEAM_ROBOFEI): # Direct freekick nosso
+                    self.search_ball(message) # Procura a bola
                     self.walking_tempo(message, 20)
                     self.kicking(message, 1)
 
@@ -147,6 +150,7 @@ class DecisionNode(Node):
                     self.stand_still(message)
 
                 elif(msg.secondary_state == 5 and msg.secondary_state_team == TEAM_ROBOFEI): # Indirect freekick nosso
+                    self.search_ball(message) # Procura a bola
                     self.walking_tempo(message, 20)
                     self.kicking(message, 1)
 
