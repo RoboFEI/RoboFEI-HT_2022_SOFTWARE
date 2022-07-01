@@ -1,1 +1,1 @@
-/home/robo/ROS2/decision_pkg/src/custom_interfaces/msg/HumanoidLeagueMsgs.msg
+/home/robofei/ROS2/decision_pkg/src/custom_interfaces/msg/HumanoidLeagueMsgs.msg

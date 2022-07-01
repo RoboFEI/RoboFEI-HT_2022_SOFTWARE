@@ -1,1 +1,1 @@
-/home/robofei/Desktop/ROS2/robotis_ws/src/dynamixel_sdk_custom_interfaces/msg/SetPositionOriginal.msg
+/home/robofei/ROS2/robotis_ws/src/dynamixel_sdk_custom_interfaces/msg/SetPositionOriginal.msg

@@ -1,1 +1,1 @@
-/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/SetPositionOriginal.msg
+/home/robofei/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/SetPositionOriginal.msg

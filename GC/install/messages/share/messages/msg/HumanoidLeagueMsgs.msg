@@ -1,1 +1,1 @@
-/home/robo/ROS2/GC/src/messages/messages/msg/HumanoidLeagueMsgs.msg
+/home/robofei/ROS2/GC/src/messages/messages/msg/HumanoidLeagueMsgs.msg

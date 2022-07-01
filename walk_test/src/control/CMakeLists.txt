@@ -36,23 +36,23 @@ include_directories(src/minIni)
 
 add_library(motion SHARED
   src/motion/MotionManager.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/modules/Walking.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp
-  /home/robo/ROS2/walk_test/src/control/src/math/Matrix.cpp
-  /home/robo/ROS2/walk_test/src/control/src/math/Plane.cpp
-  /home/robo/ROS2/walk_test/src/control/src/math/Point.cpp
-  /home/robo/ROS2/walk_test/src/control/src/math/Vector.cpp
-  /home/robo/ROS2/walk_test/src/control/src/math/QuadraticStateTransform.cpp
-  /home/robo/ROS2/walk_test/src/control/src/math/MotionState.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/JointData.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/Kinematics.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/MotionStatus.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/AngleEstimator.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/modules/Action.cpp
-  /home/robo/ROS2/walk_test/src/control/src/motion/modules/Walking.cpp
-  /home/robo/ROS2/walk_test/src/control/src/minIni/minIni.cpp
-  /home/robo/ROS2/walk_test/src/control/src/GaitMove.cpp
-  /home/robo/ROS2/walk_test/src/control/src/ReadConfig.cpp
+  src/motion/modules/Walking.cpp
+  src/motion/AngleEstimator.cpp
+  src/math/Matrix.cpp
+  src/math/Plane.cpp
+  src/math/Point.cpp
+  src/math/Vector.cpp
+  src/math/QuadraticStateTransform.cpp
+  src/math/MotionState.cpp
+  src/motion/JointData.cpp
+  src/motion/Kinematics.cpp
+  src/motion/MotionStatus.cpp
+  src/motion/AngleEstimator.cpp
+  src/motion/modules/Action.cpp
+  src/motion/modules/Walking.cpp
+  src/minIni/minIni.cpp
+  src/GaitMove.cpp
+  src/ReadConfig.cpp
 )
 
 set(CMAKE_C_FLAGS " -lncurses")

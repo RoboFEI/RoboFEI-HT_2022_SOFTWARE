@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robo/ROS2/walk_test/src/control
+CMAKE_SOURCE_DIR = /home/robofei/ROS2/walk_test/src/control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robo/ROS2/walk_test/build/control
+CMAKE_BINARY_DIR = /home/robofei/ROS2/walk_test/build/control
 
 # Include any dependencies generated for this target.
 include CMakeFiles/decision.dir/depend.make
@@ -58,17 +58,17 @@ include CMakeFiles/decision.dir/progress.make
 include CMakeFiles/decision.dir/flags.make
 
 CMakeFiles/decision.dir/src/dec.cpp.o: CMakeFiles/decision.dir/flags.make
-CMakeFiles/decision.dir/src/dec.cpp.o: /home/robo/ROS2/walk_test/src/control/src/dec.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robo/ROS2/walk_test/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/decision.dir/src/dec.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/decision.dir/src/dec.cpp.o -c /home/robo/ROS2/walk_test/src/control/src/dec.cpp
+CMakeFiles/decision.dir/src/dec.cpp.o: /home/robofei/ROS2/walk_test/src/control/src/dec.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robofei/ROS2/walk_test/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/decision.dir/src/dec.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/decision.dir/src/dec.cpp.o -c /home/robofei/ROS2/walk_test/src/control/src/dec.cpp
 
 CMakeFiles/decision.dir/src/dec.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/decision.dir/src/dec.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robo/ROS2/walk_test/src/control/src/dec.cpp > CMakeFiles/decision.dir/src/dec.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robofei/ROS2/walk_test/src/control/src/dec.cpp > CMakeFiles/decision.dir/src/dec.cpp.i
 
 CMakeFiles/decision.dir/src/dec.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/decision.dir/src/dec.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robo/ROS2/walk_test/src/control/src/dec.cpp -o CMakeFiles/decision.dir/src/dec.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robofei/ROS2/walk_test/src/control/src/dec.cpp -o CMakeFiles/decision.dir/src/dec.cpp.s
 
 # Object files for target decision
 decision_OBJECTS = \
@@ -79,12 +79,12 @@ decision_EXTERNAL_OBJECTS =
 
 decision: CMakeFiles/decision.dir/src/dec.cpp.o
 decision: CMakeFiles/decision.dir/build.make
-decision: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so
-decision: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so
-decision: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so
-decision: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so
+decision: /home/robofei/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_c.so
+decision: /home/robofei/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_c.so
+decision: /home/robofei/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_introspection_cpp.so
+decision: /home/robofei/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_typesupport_cpp.so
 decision: /opt/ros/foxy/lib/librclcpp.so
-decision: /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so
+decision: /home/robofei/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/lib/libdynamixel_sdk_custom_interfaces__rosidl_generator_c.so
 decision: /opt/ros/foxy/lib/liblibstatistics_collector.so
 decision: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_c.so
 decision: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_generator_c.so
@@ -132,7 +132,7 @@ decision: /opt/ros/foxy/lib/librcpputils.so
 decision: /opt/ros/foxy/lib/librcutils.so
 decision: /opt/ros/foxy/lib/libtracetools.so
 decision: CMakeFiles/decision.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robo/ROS2/walk_test/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable decision"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robofei/ROS2/walk_test/build/control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable decision"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/decision.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -145,6 +145,6 @@ CMakeFiles/decision.dir/clean:
 .PHONY : CMakeFiles/decision.dir/clean
 
 CMakeFiles/decision.dir/depend:
-	cd /home/robo/ROS2/walk_test/build/control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/ROS2/walk_test/src/control /home/robo/ROS2/walk_test/src/control /home/robo/ROS2/walk_test/build/control /home/robo/ROS2/walk_test/build/control /home/robo/ROS2/walk_test/build/control/CMakeFiles/decision.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robofei/ROS2/walk_test/build/control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robofei/ROS2/walk_test/src/control /home/robofei/ROS2/walk_test/src/control /home/robofei/ROS2/walk_test/build/control /home/robofei/ROS2/walk_test/build/control /home/robofei/ROS2/walk_test/build/control/CMakeFiles/decision.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/decision.dir/depend
 

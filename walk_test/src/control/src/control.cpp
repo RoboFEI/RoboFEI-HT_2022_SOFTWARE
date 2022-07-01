@@ -91,6 +91,7 @@ public:
     void Process(){
       auto message_walk = dynamixel_sdk_custom_interfaces::msg::Walk();  
       auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();  
+      auto message_param = dynamixel_sdk_custom_interfaces::msg::ParamWalk();  
       if(fallen == true){ // Robô caido, tem que levantar antes de qualquer movimento
         if (fallenFront == true){ // Caido de frente
           RCLCPP_INFO(this->get_logger(), "Stand Up Front");
@@ -344,152 +345,133 @@ public:
         }
       }
       else{
-        if(movement==1){                             
-          message_walk.walk = 0; 
-          publisher_walk->publish(message_walk);
-          RCLCPP_INFO(this->get_logger(), "Parado");                            
-          message.id = {1, 2, 3};          
-          message.position = {1024, 1024, 2593};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        else if(movement==2){                            
-          message_walk.walk = 0; 
-          publisher_walk->publish(message_walk);
-          RCLCPP_INFO(this->get_logger(), "Walking");                            
-          message.id = {4, 5, 6};          
-          message.position = {2024, 2048, 2093};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        else if(movement==3){                           
-          message_walk.walk = 0; 
-          publisher_walk->publish(message_walk);
-          RCLCPP_INFO(this->get_logger(), "Right kick");                            
-          message.id = {4, 5, 6};          
-          message.position = {2024, 2048, 2093};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        else if(movement==4){                          
-          message_walk.walk = 0; 
-          publisher_walk->publish(message_walk);
-          RCLCPP_INFO(this->get_logger(), "Left kick");                            
-          message.id = {4, 5, 6};          
-          message.position = {2024, 2048, 2093};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        else if(movement==5){
-          RCLCPP_INFO(this->get_logger(), "Turn Right");                           
-          message_walk.walk = 1; 
-          publisher_walk->publish(message_walk);                             
-          message.id = {4, 5, 6};          
-          message.position = {2024, 2048, 2093};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        else if(movement==6){
-          RCLCPP_INFO(this->get_logger(), "Turn Left");                            
-          message_walk.walk = 1; 
-          publisher_walk->publish(message_walk);                            
-          message.id = {4, 5, 6};          
-          message.position = {2024, 2048, 2093};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        else if(movement==7){
-          RCLCPP_INFO(this->get_logger(), "Goodbye");                            
-          message.id = {4, 5, 6};          
-          message.position = {2024, 2048, 2093};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        else if(movement==8){
-          RCLCPP_INFO(this->get_logger(), "Moving head");                            
-          message.id = {4, 5, 6};          
-          message.position = {2024, 2048, 2093};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        else if(movement==9){                           
-          message_walk.walk = 1; 
-          publisher_walk->publish(message_walk);
-          RCLCPP_INFO(this->get_logger(), "Turn around ball clockwise");                           
-          message.id = {4, 5, 6};          
-          message.position = {2024, 2048, 2093};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        else if(movement==10){                           
-          message_walk.walk = 1; 
-          publisher_walk->publish(message_walk);
-          RCLCPP_INFO(this->get_logger(), "Turn around ball anticlockwise");                            
-          message.id = {4, 5, 6};          
-          message.position = {2024, 2048, 2093};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        else if(movement==11){
-          message_walk.walk = 0; 
-          publisher_walk->publish(message_walk);
-          RCLCPP_INFO(this->get_logger(), "Fall left");                             
-          message.id = {4, 5, 6};          
-          message.position = {2024, 2048, 2093};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        else if(movement==12){
-          message_walk.walk = 0; 
-          publisher_walk->publish(message_walk);
-          RCLCPP_INFO(this->get_logger(), "Fall right");                            
-          message.id = {4, 5, 6};          
-          message.position = {2024, 2048, 2093};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        else if(movement==13){
-          message_walk.walk = 0; 
-          publisher_walk->publish(message_walk);
-          RCLCPP_INFO(this->get_logger(), "Agachando");                            
-          message.id = {4, 5, 6};          
-          message.position = {2024, 2048, 2093};   
-          publisher_->publish(message);
-          std::this_thread::sleep_for(std::chrono::seconds(1));
-        }
-        else if(movement==14){
-          RCLCPP_INFO(this->get_logger(), "Walking");                            
-          message_walk.walk = 1; 
-          publisher_walk->publish(message_walk);
-          message_param.walk = 20;   
-          message_param.sidle = 0;  
-          message_param.turn = 2.5;  
-          publisher_param->publish(message_param);
-          message_param.walk = 20;   
-          message_param.sidle = 0;  
-          message_param.turn = 2.5;  
-          publisher_param->publish(message_param);
-          message_param.walk = 20;   
-          message_param.sidle = 0;  
-          message_param.turn = 2.5;  
-          publisher_param->publish(message_param);
-                            
-          //std::this_thread::sleep_for(std::chrono::seconds(3));
-          message_walk.walk = 2; 
-          publisher_walk->publish(message_walk);
-          message_param.walk = 10;   
-          message_param.sidle = 5;  
-          message_param.turn = 2;  
-          publisher_param->publish(message_param);
-          message_param.walk = 10;   
-          message_param.sidle = 5;  
-          message_param.turn = 2;  
-          publisher_param->publish(message_param);
-          message_param.walk = 10;   
-          message_param.sidle = 5;  
-          message_param.turn = 2;  
-          publisher_param->publish(message_param);
-          //std::this_thread::sleep_for(std::chrono::seconds(3));
+        switch (movement){
+          case 1:
+            message_walk.walk = 0; 
+            publisher_walk->publish(message_walk);
+            RCLCPP_INFO(this->get_logger(), "Parado");                            
+            message.id = {1, 2, 3};          
+            message.position = {1024, 1024, 2593};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 2:
+            message_walk.walk = 0; 
+            publisher_walk->publish(message_walk);
+            RCLCPP_INFO(this->get_logger(), "Walking");                            
+            message.id = {4, 5, 6};          
+            message.position = {2024, 2048, 2093};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 3:
+            message_walk.walk = 0; 
+            publisher_walk->publish(message_walk);
+            RCLCPP_INFO(this->get_logger(), "Right kick");                            
+            message.id = {4, 5, 6};          
+            message.position = {2024, 2048, 2093};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 4:
+            message_walk.walk = 0; 
+            publisher_walk->publish(message_walk);
+            RCLCPP_INFO(this->get_logger(), "Left kick");                            
+            message.id = {4, 5, 6};          
+            message.position = {2024, 2048, 2093};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 5:
+            RCLCPP_INFO(this->get_logger(), "Turn Right");                           
+            message_walk.walk = 1; 
+            publisher_walk->publish(message_walk);                             
+            message.id = {4, 5, 6};          
+            message.position = {2024, 2048, 2093};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 6:
+            RCLCPP_INFO(this->get_logger(), "Turn Left");                            
+            message_walk.walk = 1; 
+            publisher_walk->publish(message_walk);                            
+            message.id = {4, 5, 6};          
+            message.position = {2024, 2048, 2093};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 7:
+            RCLCPP_INFO(this->get_logger(), "Goodbye"); 
+            message_walk.walk = 0; 
+            publisher_walk->publish(message_walk);                           
+            message.id = {4, 5, 6};          
+            message.position = {2024, 2048, 2093};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 8:
+            RCLCPP_INFO(this->get_logger(), "Moving head"); 
+            message_walk.walk = 0; 
+            publisher_walk->publish(message_walk);                            
+            message.id = {4, 5, 6};          
+            message.position = {2024, 2048, 2093};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 9:
+            message_walk.walk = 1; 
+            publisher_walk->publish(message_walk);
+            RCLCPP_INFO(this->get_logger(), "Turn around ball clockwise");                           
+            message.id = {4, 5, 6};          
+            message.position = {2024, 2048, 2093};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 10:
+            message_walk.walk = 1; 
+            publisher_walk->publish(message_walk);
+            RCLCPP_INFO(this->get_logger(), "Turn around ball anticlockwise");                            
+            message.id = {4, 5, 6};          
+            message.position = {2024, 2048, 2093};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 11:
+            message_walk.walk = 0; 
+            publisher_walk->publish(message_walk);
+            RCLCPP_INFO(this->get_logger(), "Fall left");                             
+            message.id = {4, 5, 6};          
+            message.position = {2024, 2048, 2093};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 12:
+            message_walk.walk = 0; 
+            publisher_walk->publish(message_walk);
+            RCLCPP_INFO(this->get_logger(), "Fall right");                            
+            message.id = {4, 5, 6};          
+            message.position = {2024, 2048, 2093};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 13:
+            message_walk.walk = 0; 
+            publisher_walk->publish(message_walk);
+            RCLCPP_INFO(this->get_logger(), "Agachando");                            
+            message.id = {4, 5, 6};          
+            message.position = {2024, 2048, 2093};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 14:
+            RCLCPP_INFO(this->get_logger(), "Walking"); 
+            message_param.walk = 20;   
+            message_param.sidle = 0;  
+            message_param.turn = 2.5;  
+            publisher_param->publish(message_param);
+            message_walk.walk = 1; 
+            publisher_walk->publish(message_walk);
+            break;
         }
       }
     }
@@ -527,7 +509,7 @@ int main(int argc, char * argv[])
   
   //Configurando para prioridade maxima para executar este processo-------
   char string1[50]; //String
-  sprintf(string1,"echo robo 123456| sudo -S renice -20 -p %d", getpid());
+  sprintf(string1,"echo robofei 123456| sudo -S renice -20 -p %d", getpid());
   system(string1);//prioridade
   //GaitMove gaitMove(ini);
   rclcpp::init(argc, argv);

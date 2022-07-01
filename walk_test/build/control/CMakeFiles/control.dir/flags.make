@@ -6,5 +6,5 @@ CXX_FLAGS =   -Wall -Wextra -Wpedantic -std=gnu++14
 
 CXX_DEFINES = -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DSPDLOG_COMPILED_LIB
 
-CXX_INCLUDES = -I/home/robo/ROS2/walk_test/src/control/include -I/home/robo/ROS2/walk_test/src/control/src/minIni -isystem /home/robo/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include -isystem /opt/ros/foxy/include 
+CXX_INCLUDES = -I/home/robofei/ROS2/walk_test/src/control/include -I/home/robofei/ROS2/walk_test/src/control/src/minIni -isystem /home/robofei/ROS2/walk_test/install/dynamixel_sdk_custom_interfaces/include -isystem /opt/ros/foxy/include 
 

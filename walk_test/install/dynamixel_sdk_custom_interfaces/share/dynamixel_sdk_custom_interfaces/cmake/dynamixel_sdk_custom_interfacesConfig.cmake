@@ -1,1 +1,1 @@
-/home/robo/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/ament_cmake_core/dynamixel_sdk_custom_interfacesConfig.cmake
+/home/robofei/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/ament_cmake_core/dynamixel_sdk_custom_interfacesConfig.cmake

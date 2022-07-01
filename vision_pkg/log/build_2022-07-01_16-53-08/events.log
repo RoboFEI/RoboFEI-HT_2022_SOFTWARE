@@ -1,0 +1,429 @@
+[0.000000] (-) TimerEvent: {}
+[0.000829] (custom_interfaces) JobQueued: {'identifier': 'custom_interfaces', 'dependencies': OrderedDict()}
+[0.000891] (vision_pkg) JobQueued: {'identifier': 'vision_pkg', 'dependencies': OrderedDict()}
+[0.000952] (custom_interfaces) JobStarted: {'identifier': 'custom_interfaces'}
+[0.020512] (vision_pkg) JobStarted: {'identifier': 'vision_pkg'}
+[0.045674] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'cmake'}
+[0.046103] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/robofei/ROS2/vision_pkg/src/custom_interfaces', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/robofei/ROS2/vision_pkg/install/custom_interfaces'], 'cwd': '/home/robofei/ROS2/vision_pkg/build/custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1421'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1246'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=e9b6a4ead35af6ee624c0d4662bf1850'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/robofei/ROS2/vision_pkg/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:38779'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/robofei-desktop:@/tmp/.ICE-unix/1459,unix/robofei-desktop:/tmp/.ICE-unix/1459'), ('INVOCATION_ID', '400a696e66a344f7b502236341845d5b'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/72d3acce_ea6d_44ec_b37c_681222c1e6d0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.114'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robofei/ROS2/vision_pkg/install/vision_pkg:/home/robofei/ROS2/vision_pkg/install/custom_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robofei/ROS2/vision_pkg/build/custom_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=e9b6a4ead35af6ee624c0d4662bf1850'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robofei/ROS2/vision_pkg/build/vision_pkg:/home/robofei/ROS2/vision_pkg/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research:'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robofei/ROS2/vision_pkg/install/custom_interfaces:/home/robofei/ROS2/vision_pkg/install/vision_pkg:/opt/ros/foxy')]), 'shell': False}
+[0.099127] (-) TimerEvent: {}
+[0.199742] (-) TimerEvent: {}
+[0.300076] (-) TimerEvent: {}
+[0.400418] (-) TimerEvent: {}
+[0.446938] (custom_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.456085] (custom_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.466123] (custom_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.500551] (-) TimerEvent: {}
+[0.565185] (custom_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.567299] (custom_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.600667] (-) TimerEvent: {}
+[0.660796] (custom_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.676694] (custom_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.677454] (custom_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.681648] (custom_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.700773] (-) TimerEvent: {}
+[0.788753] (custom_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.790289] (custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.800890] (-) TimerEvent: {}
+[0.901320] (-) TimerEvent: {}
+[0.914892] (custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.933779] (custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.934519] (custom_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.943344] (custom_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.987018] (custom_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.987402] (custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.001428] (-) TimerEvent: {}
+[1.101862] (-) TimerEvent: {}
+[1.202249] (-) TimerEvent: {}
+[1.234019] (vision_pkg) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--prefix', '/home/robofei/ROS2/vision_pkg/install/vision_pkg', '--editable', '--build-directory', '/home/robofei/ROS2/vision_pkg/build/vision_pkg/build', '--no-deps', 'install_data', '--install-dir', '/home/robofei/ROS2/vision_pkg/install/vision_pkg'], 'cwd': '/home/robofei/ROS2/vision_pkg/build/vision_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'robofei', 'LC_TIME': 'pt_BR.UTF-8', 'SSH_AGENT_PID': '1421', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/robofei', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'pt_BR.UTF-8', 'MANAGERPID': '1246', 'LC_CTYPE': 'pt_BR.UTF-8', 'DBUS_STARTER_BUS_TYPE': 'session', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=e9b6a4ead35af6ee624c0d4662bf1850', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/robofei/ROS2/vision_pkg/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'robofei', 'JOURNAL_STREAM': '8:38779', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'robofei', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/robofei-desktop:@/tmp/.ICE-unix/1459,unix/robofei-desktop:/tmp/.ICE-unix/1459', 'INVOCATION_ID': '400a696e66a344f7b502236341845d5b', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'pt_BR.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/72d3acce_ea6d_44ec_b37c_681222c1e6d0', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'pt_BR.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.114', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/robofei/ROS2/vision_pkg/install/vision_pkg:/home/robofei/ROS2/vision_pkg/install/custom_interfaces:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'pt_BR.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'pt_BR.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'pt_BR.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/robofei/ROS2/vision_pkg/build/vision_pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=e9b6a4ead35af6ee624c0d4662bf1850', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robofei/ROS2/vision_pkg/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/vision_pkg/build/vision_pkg:/home/robofei/ROS2/vision_pkg/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research:', 'LC_NUMERIC': 'pt_BR.UTF-8', 'LC_PAPER': 'pt_BR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/robofei/ROS2/vision_pkg/install/custom_interfaces'}, 'shell': False}
+[1.275931] (custom_interfaces) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.302370] (-) TimerEvent: {}
+[1.318409] (custom_interfaces) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)\n'}
+[1.368765] (custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.379386] (custom_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.402476] (-) TimerEvent: {}
+[1.502850] (-) TimerEvent: {}
+[1.513644] (custom_interfaces) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[1.576408] (custom_interfaces) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[1.602969] (-) TimerEvent: {}
+[1.631305] (vision_pkg) StdoutLine: {'line': b'running develop\n'}
+[1.702522] (custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.703051] (-) TimerEvent: {}
+[1.768496] (custom_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[1.799036] (custom_interfaces) StdoutLine: {'line': b'-- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)\n'}
+[1.803171] (-) TimerEvent: {}
+[1.884246] (custom_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[1.887833] (vision_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[1.888358] (vision_pkg) StdoutLine: {'line': b'creating vision_pkg.egg-info\n'}
+[1.888668] (vision_pkg) StdoutLine: {'line': b'writing vision_pkg.egg-info/PKG-INFO\n'}
+[1.889024] (vision_pkg) StdoutLine: {'line': b'writing dependency_links to vision_pkg.egg-info/dependency_links.txt\n'}
+[1.889378] (vision_pkg) StdoutLine: {'line': b'writing entry points to vision_pkg.egg-info/entry_points.txt\n'}
+[1.889572] (vision_pkg) StdoutLine: {'line': b'writing requirements to vision_pkg.egg-info/requires.txt\n'}
+[1.889752] (vision_pkg) StdoutLine: {'line': b'writing top-level names to vision_pkg.egg-info/top_level.txt\n'}
+[1.890988] (vision_pkg) StdoutLine: {'line': b"writing manifest file 'vision_pkg.egg-info/SOURCES.txt'\n"}
+[1.903290] (-) TimerEvent: {}
+[1.935665] (vision_pkg) StdoutLine: {'line': b"reading manifest file 'vision_pkg.egg-info/SOURCES.txt'\n"}
+[1.936575] (vision_pkg) StdoutLine: {'line': b"writing manifest file 'vision_pkg.egg-info/SOURCES.txt'\n"}
+[1.987428] (vision_pkg) StdoutLine: {'line': b'running build_ext\n'}
+[1.988074] (vision_pkg) StdoutLine: {'line': b'Creating /home/robofei/ROS2/vision_pkg/install/vision_pkg/lib/python3.8/site-packages/site.py\n'}
+[1.990928] (vision_pkg) StdoutLine: {'line': b'Creating /home/robofei/ROS2/vision_pkg/install/vision_pkg/lib/python3.8/site-packages/vision-pkg.egg-link (link to .)\n'}
+[1.992030] (vision_pkg) StdoutLine: {'line': b'Installing vision script to /home/robofei/ROS2/vision_pkg/install/vision_pkg/lib/vision_pkg\n'}
+[1.992493] (vision_pkg) StdoutLine: {'line': b'\n'}
+[1.993214] (vision_pkg) StdoutLine: {'line': b'Installed /home/robofei/ROS2/vision_pkg/build/vision_pkg\n'}
+[1.993569] (vision_pkg) StdoutLine: {'line': b'running install_data\n'}
+[1.993798] (vision_pkg) StdoutLine: {'line': b'creating /home/robofei/ROS2/vision_pkg/install/vision_pkg/share/ament_index\n'}
+[1.993998] (vision_pkg) StdoutLine: {'line': b'creating /home/robofei/ROS2/vision_pkg/install/vision_pkg/share/ament_index/resource_index\n'}
+[1.994189] (vision_pkg) StdoutLine: {'line': b'creating /home/robofei/ROS2/vision_pkg/install/vision_pkg/share/ament_index/resource_index/packages\n'}
+[1.994458] (vision_pkg) StdoutLine: {'line': b'copying resource/vision_pkg -> /home/robofei/ROS2/vision_pkg/install/vision_pkg/share/ament_index/resource_index/packages\n'}
+[1.994645] (vision_pkg) StdoutLine: {'line': b'copying package.xml -> /home/robofei/ROS2/vision_pkg/install/vision_pkg/share/vision_pkg\n'}
+[2.003441] (-) TimerEvent: {}
+[2.042657] (vision_pkg) CommandEnded: {'returncode': 0}
+[2.088620] (vision_pkg) JobEnded: {'identifier': 'vision_pkg', 'rc': 0}
+[2.103561] (-) TimerEvent: {}
+[2.190817] (custom_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[2.203698] (-) TimerEvent: {}
+[2.304084] (-) TimerEvent: {}
+[2.404422] (-) TimerEvent: {}
+[2.443110] (custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.504516] (-) TimerEvent: {}
+[2.532707] (custom_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.577032] (custom_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[2.579418] (custom_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[2.604679] (-) TimerEvent: {}
+[2.628028] (custom_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[2.628473] (custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.628728] (custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[2.628895] (custom_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[2.671074] (custom_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[2.704778] (-) TimerEvent: {}
+[2.796272] (custom_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.804891] (-) TimerEvent: {}
+[2.875309] (custom_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[2.879340] (custom_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/robofei/ROS2/vision_pkg/build/custom_interfaces\n'}
+[2.889673] (custom_interfaces) CommandEnded: {'returncode': 0}
+[2.890774] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'build'}
+[2.894043] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robofei/ROS2/vision_pkg/build/custom_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/robofei/ROS2/vision_pkg/build/custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1421'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1246'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=e9b6a4ead35af6ee624c0d4662bf1850'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/robofei/ROS2/vision_pkg/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:38779'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/robofei-desktop:@/tmp/.ICE-unix/1459,unix/robofei-desktop:/tmp/.ICE-unix/1459'), ('INVOCATION_ID', '400a696e66a344f7b502236341845d5b'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/72d3acce_ea6d_44ec_b37c_681222c1e6d0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.114'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robofei/ROS2/vision_pkg/install/vision_pkg:/home/robofei/ROS2/vision_pkg/install/custom_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robofei/ROS2/vision_pkg/build/custom_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=e9b6a4ead35af6ee624c0d4662bf1850'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robofei/ROS2/vision_pkg/build/vision_pkg:/home/robofei/ROS2/vision_pkg/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research:'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robofei/ROS2/vision_pkg/install/custom_interfaces:/home/robofei/ROS2/vision_pkg/install/vision_pkg:/opt/ros/foxy')]), 'shell': False}
+[2.905020] (-) TimerEvent: {}
+[2.962677] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces__cpp\x1b[0m\n'}
+[2.965506] (custom_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.984583] (custom_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[3.005133] (-) TimerEvent: {}
+[3.105465] (-) TimerEvent: {}
+[3.205808] (-) TimerEvent: {}
+[3.306153] (-) TimerEvent: {}
+[3.406519] (-) TimerEvent: {}
+[3.506860] (-) TimerEvent: {}
+[3.607212] (-) TimerEvent: {}
+[3.707569] (-) TimerEvent: {}
+[3.807965] (-) TimerEvent: {}
+[3.908391] (-) TimerEvent: {}
+[3.927990] (custom_interfaces) StdoutLine: {'line': b'[  3%] Built target custom_interfaces__cpp\n'}
+[3.948027] (custom_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.956179] (custom_interfaces) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[3.961185] (custom_interfaces) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.999723] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces__rosidl_generator_c\x1b[0m\n'}
+[4.008565] (-) TimerEvent: {}
+[4.037105] (custom_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/set_position__functions.c.o\x1b[0m\n'}
+[4.108688] (-) TimerEvent: {}
+[4.147340] (custom_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/decision__functions.c.o\x1b[0m\n'}
+[4.208797] (-) TimerEvent: {}
+[4.228095] (custom_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/vision__functions.c.o\x1b[0m\n'}
+[4.308900] (-) TimerEvent: {}
+[4.312365] (custom_interfaces) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/custom_interfaces/msg/detail/humanoid_league_msgs__functions.c.o\x1b[0m\n'}
+[4.399382] (custom_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[32m\x1b[1mLinking C shared library libcustom_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[4.409009] (-) TimerEvent: {}
+[4.480826] (custom_interfaces) StdoutLine: {'line': b'[ 18%] Built target custom_interfaces__rosidl_generator_c\n'}
+[4.503867] (custom_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.509178] (-) TimerEvent: {}
+[4.609568] (-) TimerEvent: {}
+[4.709955] (-) TimerEvent: {}
+[4.810324] (-) TimerEvent: {}
+[4.910670] (-) TimerEvent: {}
+[5.011044] (-) TimerEvent: {}
+[5.111401] (-) TimerEvent: {}
+[5.138413] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[5.173553] (custom_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/msg/set_position__type_support.cpp.o\x1b[0m\n'}
+[5.211533] (-) TimerEvent: {}
+[5.312002] (-) TimerEvent: {}
+[5.320715] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[5.351484] (custom_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/set_position__type_support.cpp.o\x1b[0m\n'}
+[5.358601] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[5.412131] (-) TimerEvent: {}
+[5.423844] (custom_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/set_position__type_support.cpp.o\x1b[0m\n'}
+[5.512247] (-) TimerEvent: {}
+[5.614710] (-) TimerEvent: {}
+[5.701200] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[5.714840] (-) TimerEvent: {}
+[5.728500] (custom_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/set_position__type_support.cpp.o\x1b[0m\n'}
+[5.794931] (custom_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/decision__type_support.cpp.o\x1b[0m\n'}
+[5.814972] (-) TimerEvent: {}
+[5.858399] (custom_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/vision__type_support.cpp.o\x1b[0m\n'}
+[5.870995] (custom_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/msg/decision__type_support.cpp.o\x1b[0m\n'}
+[5.915110] (-) TimerEvent: {}
+[5.924810] (custom_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_interfaces/msg/humanoid_league_msgs__type_support.cpp.o\x1b[0m\n'}
+[5.992461] (custom_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[6.015233] (-) TimerEvent: {}
+[6.088329] (custom_interfaces) StdoutLine: {'line': b'[ 36%] Built target custom_interfaces__rosidl_typesupport_c\n'}
+[6.109327] (custom_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/decision__type_support.cpp.o\x1b[0m\n'}
+[6.115373] (-) TimerEvent: {}
+[6.213661] (custom_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/decision__type_support.cpp.o\x1b[0m\n'}
+[6.215484] (-) TimerEvent: {}
+[6.315895] (-) TimerEvent: {}
+[6.416452] (-) TimerEvent: {}
+[6.517044] (-) TimerEvent: {}
+[6.527195] (custom_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/msg/vision__type_support.cpp.o\x1b[0m\n'}
+[6.617166] (-) TimerEvent: {}
+[6.621674] (custom_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/vision__type_support.cpp.o\x1b[0m\n'}
+[6.717286] (-) TimerEvent: {}
+[6.817720] (-) TimerEvent: {}
+[6.884375] (custom_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/vision__type_support.cpp.o\x1b[0m\n'}
+[6.917843] (-) TimerEvent: {}
+[7.018266] (-) TimerEvent: {}
+[7.118716] (-) TimerEvent: {}
+[7.128486] (custom_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_interfaces/msg/detail/dds_fastrtps/humanoid_league_msgs__type_support.cpp.o\x1b[0m\n'}
+[7.172651] (custom_interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_interfaces/msg/humanoid_league_msgs__type_support.cpp.o\x1b[0m\n'}
+[7.218836] (-) TimerEvent: {}
+[7.319402] (-) TimerEvent: {}
+[7.419887] (-) TimerEvent: {}
+[7.520379] (-) TimerEvent: {}
+[7.550174] (custom_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/humanoid_league_msgs__type_support.cpp.o\x1b[0m\n'}
+[7.620505] (-) TimerEvent: {}
+[7.639268] (custom_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[7.720640] (-) TimerEvent: {}
+[7.821091] (-) TimerEvent: {}
+[7.846530] (custom_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[7.921224] (-) TimerEvent: {}
+[7.940160] (custom_interfaces) StdoutLine: {'line': b'[ 54%] Built target custom_interfaces__rosidl_typesupport_cpp\n'}
+[8.021346] (-) TimerEvent: {}
+[8.102009] (custom_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[8.121463] (-) TimerEvent: {}
+[8.222076] (-) TimerEvent: {}
+[8.245021] (custom_interfaces) StdoutLine: {'line': b'[ 56%] Built target custom_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[8.266447] (custom_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[8.272566] (custom_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[8.322193] (-) TimerEvent: {}
+[8.388476] (custom_interfaces) StdoutLine: {'line': b'[ 60%] Built target custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[8.422313] (-) TimerEvent: {}
+[8.522695] (-) TimerEvent: {}
+[8.623011] (-) TimerEvent: {}
+[8.723313] (-) TimerEvent: {}
+[8.823682] (-) TimerEvent: {}
+[8.828907] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[8.854732] (custom_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/decision__type_support.c.o\x1b[0m\n'}
+[8.855668] (custom_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/set_position__type_support.c.o\x1b[0m\n'}
+[8.856045] (custom_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/vision__type_support.c.o\x1b[0m\n'}
+[8.918268] (custom_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_interfaces/msg/detail/humanoid_league_msgs__type_support.c.o\x1b[0m\n'}
+[8.923798] (-) TimerEvent: {}
+[8.965584] (custom_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking C shared library libcustom_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[9.008695] (custom_interfaces) StdoutLine: {'line': b'[ 69%] Built target custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[9.023976] (-) TimerEvent: {}
+[9.124672] (-) TimerEvent: {}
+[9.220508] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[9.224816] (-) TimerEvent: {}
+[9.252857] (custom_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/set_position__type_support_c.cpp.o\x1b[0m\n'}
+[9.253554] (custom_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/vision__type_support_c.cpp.o\x1b[0m\n'}
+[9.253925] (custom_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/decision__type_support_c.cpp.o\x1b[0m\n'}
+[9.266201] (custom_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_interfaces/msg/detail/humanoid_league_msgs__type_support_c.cpp.o\x1b[0m\n'}
+[9.324917] (-) TimerEvent: {}
+[9.425314] (-) TimerEvent: {}
+[9.525713] (-) TimerEvent: {}
+[9.626118] (-) TimerEvent: {}
+[9.726530] (-) TimerEvent: {}
+[9.826954] (-) TimerEvent: {}
+[9.927365] (-) TimerEvent: {}
+[10.027802] (-) TimerEvent: {}
+[10.089356] (custom_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[10.127925] (-) TimerEvent: {}
+[10.224660] (custom_interfaces) StdoutLine: {'line': b'[ 78%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[10.228025] (-) TimerEvent: {}
+[10.237694] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces\x1b[0m\n'}
+[10.251427] (custom_interfaces) StdoutLine: {'line': b'[ 78%] Built target custom_interfaces\n'}
+[10.265372] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces__py\x1b[0m\n'}
+[10.279445] (custom_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[10.328147] (-) TimerEvent: {}
+[10.428521] (-) TimerEvent: {}
+[10.528887] (-) TimerEvent: {}
+[10.629237] (-) TimerEvent: {}
+[10.729539] (-) TimerEvent: {}
+[10.829847] (-) TimerEvent: {}
+[10.930143] (-) TimerEvent: {}
+[11.030458] (-) TimerEvent: {}
+[11.130779] (-) TimerEvent: {}
+[11.231078] (-) TimerEvent: {}
+[11.331383] (-) TimerEvent: {}
+[11.431772] (-) TimerEvent: {}
+[11.532087] (-) TimerEvent: {}
+[11.632459] (-) TimerEvent: {}
+[11.732820] (-) TimerEvent: {}
+[11.833154] (-) TimerEvent: {}
+[11.880435] (custom_interfaces) StdoutLine: {'line': b'[ 80%] Built target custom_interfaces__py\n'}
+[11.893600] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces__python\x1b[0m\n'}
+[11.933262] (-) TimerEvent: {}
+[11.953109] (custom_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__python.dir/rosidl_generator_py/custom_interfaces/msg/_decision_s.c.o\x1b[0m\n'}
+[11.954353] (custom_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__python.dir/rosidl_generator_py/custom_interfaces/msg/_set_position_s.c.o\x1b[0m\n'}
+[11.954785] (custom_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__python.dir/rosidl_generator_py/custom_interfaces/msg/_vision_s.c.o\x1b[0m\n'}
+[11.967886] (custom_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__python.dir/rosidl_generator_py/custom_interfaces/msg/_humanoid_league_msgs_s.c.o\x1b[0m\n'}
+[12.033391] (-) TimerEvent: {}
+[12.133845] (-) TimerEvent: {}
+[12.190526] (custom_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/custom_interfaces/libcustom_interfaces__python.so\x1b[0m\n'}
+[12.233940] (-) TimerEvent: {}
+[12.248434] (custom_interfaces) StdoutLine: {'line': b'[ 89%] Built target custom_interfaces__python\n'}
+[12.263052] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[12.267157] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[12.267726] (custom_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target custom_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[12.300287] (custom_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[12.308945] (custom_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[12.312420] (custom_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/custom_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[12.334067] (-) TimerEvent: {}
+[12.434669] (-) TimerEvent: {}
+[12.455254] (custom_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[12.475514] (custom_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[12.508678] (custom_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[12.534801] (-) TimerEvent: {}
+[12.539030] (custom_interfaces) StdoutLine: {'line': b'[100%] Built target custom_interfaces__rosidl_typesupport_c__pyext\n'}
+[12.554385] (custom_interfaces) StdoutLine: {'line': b'[100%] Built target custom_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[12.629600] (custom_interfaces) StdoutLine: {'line': b'[100%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[12.634924] (-) TimerEvent: {}
+[12.644532] (custom_interfaces) CommandEnded: {'returncode': 0}
+[12.735120] (-) TimerEvent: {}
+[12.767327] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'install'}
+[12.786028] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robofei/ROS2/vision_pkg/build/custom_interfaces'], 'cwd': '/home/robofei/ROS2/vision_pkg/build/custom_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'robofei'), ('LC_TIME', 'pt_BR.UTF-8'), ('SSH_AGENT_PID', '1421'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/robofei'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pt_BR.UTF-8'), ('MANAGERPID', '1246'), ('LC_CTYPE', 'pt_BR.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=e9b6a4ead35af6ee624c0d4662bf1850'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/robofei/ROS2/vision_pkg/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'robofei'), ('JOURNAL_STREAM', '8:38779'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'robofei'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/robofei-desktop:@/tmp/.ICE-unix/1459,unix/robofei-desktop:/tmp/.ICE-unix/1459'), ('INVOCATION_ID', '400a696e66a344f7b502236341845d5b'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pt_BR.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/72d3acce_ea6d_44ec_b37c_681222c1e6d0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pt_BR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.114'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/robofei/ROS2/vision_pkg/install/vision_pkg:/home/robofei/ROS2/vision_pkg/install/custom_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pt_BR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pt_BR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pt_BR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/robofei/ROS2/vision_pkg/build/custom_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=e9b6a4ead35af6ee624c0d4662bf1850'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/robofei/ROS2/vision_pkg/build/vision_pkg:/home/robofei/ROS2/vision_pkg/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research:'), ('LC_NUMERIC', 'pt_BR.UTF-8'), ('LC_PAPER', 'pt_BR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/robofei/ROS2/vision_pkg/install/custom_interfaces:/home/robofei/ROS2/vision_pkg/install/vision_pkg:/opt/ros/foxy')]), 'shell': False}
+[12.797500] (custom_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[12.798312] (custom_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[12.798999] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/custom_interfaces\n'}
+[12.811485] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/decision.h\n'}
+[12.822959] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/decision__functions.h\n'}
+[12.833964] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/decision__struct.h\n'}
+[12.835191] (-) TimerEvent: {}
+[12.845349] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/decision__type_support.h\n'}
+[12.856582] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/humanoid_league_msgs__functions.h\n'}
+[12.868907] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/humanoid_league_msgs__struct.h\n'}
+[12.880238] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/humanoid_league_msgs__type_support.h\n'}
+[12.894165] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__functions.h\n'}
+[12.906074] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__struct.h\n'}
+[12.917223] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__type_support.h\n'}
+[12.928497] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/vision__functions.h\n'}
+[12.935292] (-) TimerEvent: {}
+[12.940092] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/vision__struct.h\n'}
+[12.951682] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/vision__type_support.h\n'}
+[12.963837] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/humanoid_league_msgs.h\n'}
+[12.975300] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[12.986351] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/set_position.h\n'}
+[12.997484] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/vision.h\n'}
+[13.009050] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/environment/library_path.sh\n'}
+[13.020263] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/environment/library_path.dsv\n'}
+[13.032100] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/decision__rosidl_typesupport_fastrtps_c.h\n'}
+[13.035405] (-) TimerEvent: {}
+[13.043377] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/humanoid_league_msgs__rosidl_typesupport_fastrtps_c.h\n'}
+[13.055231] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_c.h\n'}
+[13.067407] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/vision__rosidl_typesupport_fastrtps_c.h\n'}
+[13.079114] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[13.090912] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[13.103672] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/decision__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[13.115190] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/humanoid_league_msgs__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[13.129895] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[13.135533] (-) TimerEvent: {}
+[13.141988] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/vision__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[13.153932] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[13.166615] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[13.179058] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/decision__rosidl_typesupport_introspection_c.h\n'}
+[13.190996] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/humanoid_league_msgs__rosidl_typesupport_introspection_c.h\n'}
+[13.202733] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_c.h\n'}
+[13.215068] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/vision__rosidl_typesupport_introspection_c.h\n'}
+[13.226906] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[13.235668] (-) TimerEvent: {}
+[13.239968] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/decision.hpp\n'}
+[13.251769] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/decision__builder.hpp\n'}
+[13.264170] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/decision__struct.hpp\n'}
+[13.280274] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/decision__traits.hpp\n'}
+[13.293895] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/humanoid_league_msgs__builder.hpp\n'}
+[13.305100] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/humanoid_league_msgs__struct.hpp\n'}
+[13.316214] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/humanoid_league_msgs__traits.hpp\n'}
+[13.327458] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__builder.hpp\n'}
+[13.335800] (-) TimerEvent: {}
+[13.338633] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__struct.hpp\n'}
+[13.350220] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__traits.hpp\n'}
+[13.365465] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/vision__builder.hpp\n'}
+[13.378094] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/vision__struct.hpp\n'}
+[13.390315] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/vision__traits.hpp\n'}
+[13.402290] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/humanoid_league_msgs.hpp\n'}
+[13.414630] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/set_position.hpp\n'}
+[13.426518] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/vision.hpp\n'}
+[13.435936] (-) TimerEvent: {}
+[13.438339] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/decision__rosidl_typesupport_introspection_cpp.hpp\n'}
+[13.450136] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/humanoid_league_msgs__rosidl_typesupport_introspection_cpp.hpp\n'}
+[13.461379] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/set_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[13.473696] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/include/custom_interfaces/msg/detail/vision__rosidl_typesupport_introspection_cpp.hpp\n'}
+[13.485063] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.sh\n'}
+[13.496403] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.dsv\n'}
+[13.507900] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/__init__.py\n'}
+[13.519901] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/msg/__init__.py\n'}
+[13.531258] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/msg/_decision.py\n'}
+[13.536061] (-) TimerEvent: {}
+[13.542950] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/msg/_humanoid_league_msgs.py\n'}
+[13.557635] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/msg/_set_position.py\n'}
+[13.569787] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/msg/_vision.py\n'}
+[13.581959] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[13.593749] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[13.605656] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[13.617589] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/libcustom_interfaces__python.so\n'}
+[13.629342] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/msg/SetPosition.idl\n'}
+[13.636181] (-) TimerEvent: {}
+[13.641052] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/msg/Decision.idl\n'}
+[13.652798] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/msg/Vision.idl\n'}
+[13.668314] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/msg/HumanoidLeagueMsgs.idl\n'}
+[13.680640] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/msg/SetPosition.msg\n'}
+[13.692230] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/msg/Decision.msg\n'}
+[13.703638] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/msg/Vision.msg\n'}
+[13.715059] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/msg/HumanoidLeagueMsgs.msg\n'}
+[13.726969] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/ament_index/resource_index/package_run_dependencies/custom_interfaces\n'}
+[13.736306] (-) TimerEvent: {}
+[13.738470] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/ament_index/resource_index/parent_prefix_path/custom_interfaces\n'}
+[13.753696] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.sh\n'}
+[13.767942] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.dsv\n'}
+[13.780331] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/environment/path.sh\n'}
+[13.792090] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/environment/path.dsv\n'}
+[13.803462] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/local_setup.bash\n'}
+[13.814786] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/local_setup.sh\n'}
+[13.827389] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/local_setup.zsh\n'}
+[13.836455] (-) TimerEvent: {}
+[13.840063] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/local_setup.dsv\n'}
+[13.852053] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/package.dsv\n'}
+[13.864916] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/ament_index/resource_index/packages/custom_interfaces\n'}
+[13.879084] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[13.890934] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[13.902520] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[13.913789] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[13.925061] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[13.936615] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[13.936822] (-) TimerEvent: {}
+[13.948433] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[13.960394] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig.cmake\n'}
+[13.972802] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig-version.cmake\n'}
+[13.986640] (custom_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/package.xml\n'}
+[13.998372] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so\n'}
+[13.998923] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so" to ""\n'}
+[13.999234] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[13.999849] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[14.000064] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so\n'}
+[14.000614] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[14.001035] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[14.001886] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[14.002115] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so\n'}
+[14.002688] (custom_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[14.036927] (-) TimerEvent: {}
+[14.050805] (custom_interfaces) StdoutLine: {'line': b"Compiling '/home/robofei/ROS2/vision_pkg/install/custom_interfaces/lib/python3.8/site-packages/custom_interfaces/__init__.py'...\n"}
+[14.057971] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_generator_cExport.cmake\n'}
+[14.058412] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[14.058905] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[14.059248] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[14.059748] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[14.060094] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[14.060534] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_generator_cppExport.cmake\n'}
+[14.061010] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[14.061381] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[14.061837] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[14.062213] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/robofei/ROS2/vision_pkg/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[14.065833] (custom_interfaces) CommandEnded: {'returncode': 0}
+[14.137196] (-) TimerEvent: {}
+[14.229398] (custom_interfaces) JobEnded: {'identifier': 'custom_interfaces', 'rc': 0}
+[14.230574] (-) EventReactorShutdown: {}

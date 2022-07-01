@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/robo/ROS2/GC/build/messages/libmessages__rosidl_typesupport_fastrtps_c.so" "TARGETS" "messages__rosidl_typesupport_fastrtps_c" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/robofei/ROS2/GC/build/messages/libmessages__rosidl_typesupport_fastrtps_c.so" "TARGETS" "messages__rosidl_typesupport_fastrtps_c" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

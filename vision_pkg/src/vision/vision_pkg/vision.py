@@ -1,5 +1,8 @@
 ####################################################################################################################################
 # ros2 run vision_pkg vision
+#
+# Para ver o que a camera esta vendo:
+# ros2 run vision_pkg vision --vb
 ####################################################################################################################################
 from telnetlib import NOP
 import rclpy
@@ -47,7 +50,7 @@ class ballStatus(Node):
         self.config = config
         super().__init__('minimal_publisher')
         self.publisher_ = self.create_publisher(Vision, 'ball_position', 10)
-        self.vcap = WebcamVideoStream(src=1).start() #Abrindo camera)
+        self.vcap = WebcamVideoStream(src=0).start() #Abrindo camera)
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.thread_DNN)
         self.i = 0
@@ -165,9 +168,9 @@ def main(args=None):
     ballS = ballStatus(config)
     
     
-    os.system("v4l2-ctl -d /dev/video1 -c focus_auto=0 && v4l2-ctl -d /dev/video1 -c focus_absolute=0")
-    os.system("v4l2-ctl -d /dev/video1 -c saturation=200")#manter 200 para nao estourar LARC
-    os.system("v4l2-ctl -d /dev/video1 -c brightness=2")
+    os.system("v4l2-ctl -d /dev/video0 -c focus_auto=0 && v4l2-ctl -d /dev/video0 -c focus_absolute=0")
+    os.system("v4l2-ctl -d /dev/video0 -c saturation=200")#manter 200 para nao estourar LARC
+    os.system("v4l2-ctl -d /dev/video0 -c brightness=2")
 
     rclpy.spin(ballS)
 

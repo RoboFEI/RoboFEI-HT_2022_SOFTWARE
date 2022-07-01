@@ -1,1 +1,1 @@
-/home/robo/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/Walk.msg
+/home/robofei/ROS2/walk_test/src/dynamixel_sdk_custom_interfaces/msg/Walk.msg

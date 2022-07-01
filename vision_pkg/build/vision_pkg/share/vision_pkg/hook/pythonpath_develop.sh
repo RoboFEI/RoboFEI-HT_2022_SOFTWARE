@@ -1,3 +1,3 @@
 # generated from colcon_core/shell/template/hook_prepend_value.sh.em
 
-_colcon_prepend_unique_value PYTHONPATH "/home/robo/ROS2/vision_pkg/build/vision_pkg"
+_colcon_prepend_unique_value PYTHONPATH "/home/robofei/ROS2/vision_pkg/build/vision_pkg"

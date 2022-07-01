@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/robo/ROS2/decision_pkg/install/custom_interfaces/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/robofei/ROS2/decision_pkg/install/custom_interfaces/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/robo/ROS2/decision_pkg/install/custom_interfaces/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/robofei/ROS2/decision_pkg/install/custom_interfaces/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/robo/ROS2/decision_pkg/install/custom_interfaces/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/robofei/ROS2/decision_pkg/install/custom_interfaces/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/robo/ROS2/decision_pkg/install/custom_interfaces/${destination}")
+      set(destination "/home/robofei/ROS2/decision_pkg/install/custom_interfaces/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -310,146 +310,146 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
 
-# install(DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_c/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.h")
-ament_cmake_symlink_install_directory("/home/robo/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_c/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.h")
+# install(DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_c/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.h")
+ament_cmake_symlink_install_directory("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_c/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.h")
 
 # install(FILES "/opt/ros/foxy/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/custom_interfaces/environment")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/opt/ros/foxy/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/custom_interfaces/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/opt/ros/foxy/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/custom_interfaces/environment")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/custom_interfaces/environment")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/custom_interfaces/environment")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/custom_interfaces/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/custom_interfaces/environment")
 
-# install(DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_fastrtps_c/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN_EXCLUDE" "*.cpp")
-ament_cmake_symlink_install_directory("/home/robo/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_fastrtps_c/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN_EXCLUDE" "*.cpp")
+# install(DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_fastrtps_c/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN_EXCLUDE" "*.cpp")
+ament_cmake_symlink_install_directory("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_fastrtps_c/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN_EXCLUDE" "*.cpp")
 
 # install("TARGETS" "custom_interfaces__rosidl_typesupport_fastrtps_c" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
-include("/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_fastrtps_cpp/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN_EXCLUDE" "*.cpp")
-ament_cmake_symlink_install_directory("/home/robo/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_fastrtps_cpp/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN_EXCLUDE" "*.cpp")
+# install(DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_fastrtps_cpp/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN_EXCLUDE" "*.cpp")
+ament_cmake_symlink_install_directory("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_fastrtps_cpp/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN_EXCLUDE" "*.cpp")
 
 # install("TARGETS" "custom_interfaces__rosidl_typesupport_fastrtps_cpp" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
-include("/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.h")
-ament_cmake_symlink_install_directory("/home/robo/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.h")
+# install(DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.h")
+ament_cmake_symlink_install_directory("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_introspection_c/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.h")
 
-# install(DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.hpp")
-ament_cmake_symlink_install_directory("/home/robo/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.hpp")
+# install(DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.hpp")
+ament_cmake_symlink_install_directory("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_cpp/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.hpp")
 
-# install(DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_introspection_cpp/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.hpp")
-ament_cmake_symlink_install_directory("/home/robo/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_introspection_cpp/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.hpp")
+# install(DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_introspection_cpp/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.hpp")
+ament_cmake_symlink_install_directory("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_typesupport_introspection_cpp/custom_interfaces/" "DESTINATION" "include/custom_interfaces" "PATTERN" "*.hpp")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/custom_interfaces/environment")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/custom_interfaces/environment")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/custom_interfaces/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/custom_interfaces/environment")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/custom_interfaces/environment")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/custom_interfaces/environment")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/custom_interfaces/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/custom_interfaces/environment")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_py/custom_interfaces/__init__.py" "DESTINATION" "lib/python3.8/site-packages/custom_interfaces")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_py/custom_interfaces/__init__.py" "DESTINATION" "lib/python3.8/site-packages/custom_interfaces")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_py/custom_interfaces/__init__.py" "DESTINATION" "lib/python3.8/site-packages/custom_interfaces")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_py/custom_interfaces/__init__.py" "DESTINATION" "lib/python3.8/site-packages/custom_interfaces")
 
-# install(DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_py/custom_interfaces/msg/" "DESTINATION" "lib/python3.8/site-packages/custom_interfaces/msg" "PATTERN" "*.py")
-ament_cmake_symlink_install_directory("/home/robo/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_py/custom_interfaces/msg/" "DESTINATION" "lib/python3.8/site-packages/custom_interfaces/msg" "PATTERN" "*.py")
+# install(DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_py/custom_interfaces/msg/" "DESTINATION" "lib/python3.8/site-packages/custom_interfaces/msg" "PATTERN" "*.py")
+ament_cmake_symlink_install_directory("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" DIRECTORY "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_generator_py/custom_interfaces/msg/" "DESTINATION" "lib/python3.8/site-packages/custom_interfaces/msg" "PATTERN" "*.py")
 
 # install("TARGETS" "custom_interfaces__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "lib/python3.8/site-packages/custom_interfaces")
-include("/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install("TARGETS" "custom_interfaces__rosidl_typesupport_introspection_c__pyext" "DESTINATION" "lib/python3.8/site-packages/custom_interfaces")
-include("/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_symlink_install_targets_3_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_symlink_install_targets_3_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install("TARGETS" "custom_interfaces__rosidl_typesupport_c__pyext" "DESTINATION" "lib/python3.8/site-packages/custom_interfaces")
-include("/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_symlink_install_targets_4_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_symlink_install_targets_4_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install("TARGETS" "custom_interfaces__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
-include("/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_symlink_install_targets_5_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_symlink_install_targets_5_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/SetPosition.idl" "DESTINATION" "share/custom_interfaces/msg")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/SetPosition.idl" "DESTINATION" "share/custom_interfaces/msg")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/SetPosition.idl" "DESTINATION" "share/custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/SetPosition.idl" "DESTINATION" "share/custom_interfaces/msg")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/Decision.idl" "DESTINATION" "share/custom_interfaces/msg")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/Decision.idl" "DESTINATION" "share/custom_interfaces/msg")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/Decision.idl" "DESTINATION" "share/custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/Decision.idl" "DESTINATION" "share/custom_interfaces/msg")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/Vision.idl" "DESTINATION" "share/custom_interfaces/msg")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/Vision.idl" "DESTINATION" "share/custom_interfaces/msg")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/Vision.idl" "DESTINATION" "share/custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/Vision.idl" "DESTINATION" "share/custom_interfaces/msg")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/HumanoidLeagueMsgs.idl" "DESTINATION" "share/custom_interfaces/msg")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/HumanoidLeagueMsgs.idl" "DESTINATION" "share/custom_interfaces/msg")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/HumanoidLeagueMsgs.idl" "DESTINATION" "share/custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_adapter/custom_interfaces/msg/HumanoidLeagueMsgs.idl" "DESTINATION" "share/custom_interfaces/msg")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/src/custom_interfaces/msg/SetPosition.msg" "DESTINATION" "share/custom_interfaces/msg")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/src/custom_interfaces/msg/SetPosition.msg" "DESTINATION" "share/custom_interfaces/msg")
+# install(FILES "/home/robofei/ROS2/decision_pkg/src/custom_interfaces/msg/SetPosition.msg" "DESTINATION" "share/custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/src/custom_interfaces/msg/SetPosition.msg" "DESTINATION" "share/custom_interfaces/msg")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/src/custom_interfaces/msg/Decision.msg" "DESTINATION" "share/custom_interfaces/msg")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/src/custom_interfaces/msg/Decision.msg" "DESTINATION" "share/custom_interfaces/msg")
+# install(FILES "/home/robofei/ROS2/decision_pkg/src/custom_interfaces/msg/Decision.msg" "DESTINATION" "share/custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/src/custom_interfaces/msg/Decision.msg" "DESTINATION" "share/custom_interfaces/msg")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/src/custom_interfaces/msg/Vision.msg" "DESTINATION" "share/custom_interfaces/msg")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/src/custom_interfaces/msg/Vision.msg" "DESTINATION" "share/custom_interfaces/msg")
+# install(FILES "/home/robofei/ROS2/decision_pkg/src/custom_interfaces/msg/Vision.msg" "DESTINATION" "share/custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/src/custom_interfaces/msg/Vision.msg" "DESTINATION" "share/custom_interfaces/msg")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/src/custom_interfaces/msg/HumanoidLeagueMsgs.msg" "DESTINATION" "share/custom_interfaces/msg")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/src/custom_interfaces/msg/HumanoidLeagueMsgs.msg" "DESTINATION" "share/custom_interfaces/msg")
+# install(FILES "/home/robofei/ROS2/decision_pkg/src/custom_interfaces/msg/HumanoidLeagueMsgs.msg" "DESTINATION" "share/custom_interfaces/msg")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/src/custom_interfaces/msg/HumanoidLeagueMsgs.msg" "DESTINATION" "share/custom_interfaces/msg")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/custom_interfaces/environment")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/custom_interfaces/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/custom_interfaces/environment")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/custom_interfaces/environment")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/custom_interfaces/environment")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/custom_interfaces/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/custom_interfaces/environment")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/custom_interfaces/environment")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/custom_interfaces/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/custom_interfaces/environment")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/custom_interfaces/environment")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/custom_interfaces/environment")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/custom_interfaces/environment")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/custom_interfaces/environment")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/custom_interfaces")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/custom_interfaces")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/custom_interfaces")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/custom_interfaces")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/custom_interfaces")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/custom_interfaces")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/custom_interfaces")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/custom_interfaces")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/custom_interfaces")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/custom_interfaces")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/custom_interfaces")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/custom_interfaces")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/custom_interfaces")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/custom_interfaces")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/custom_interfaces")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/custom_interfaces")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/custom_interfaces")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/custom_interfaces")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/custom_interfaces")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/custom_interfaces")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/packages/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/packages/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/packages/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_index/share/ament_index/resource_index/packages/custom_interfaces" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/custom_interfaces/cmake")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_core/custom_interfacesConfig.cmake" "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_core/custom_interfacesConfig-version.cmake" "DESTINATION" "share/custom_interfaces/cmake")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_core/custom_interfacesConfig.cmake" "/home/robo/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_core/custom_interfacesConfig-version.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+# install(FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_core/custom_interfacesConfig.cmake" "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_core/custom_interfacesConfig-version.cmake" "DESTINATION" "share/custom_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_core/custom_interfacesConfig.cmake" "/home/robofei/ROS2/decision_pkg/build/custom_interfaces/ament_cmake_core/custom_interfacesConfig-version.cmake" "DESTINATION" "share/custom_interfaces/cmake")
 
-# install(FILES "/home/robo/ROS2/decision_pkg/src/custom_interfaces/package.xml" "DESTINATION" "share/custom_interfaces")
-ament_cmake_symlink_install_files("/home/robo/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robo/ROS2/decision_pkg/src/custom_interfaces/package.xml" "DESTINATION" "share/custom_interfaces")
+# install(FILES "/home/robofei/ROS2/decision_pkg/src/custom_interfaces/package.xml" "DESTINATION" "share/custom_interfaces")
+ament_cmake_symlink_install_files("/home/robofei/ROS2/decision_pkg/src/custom_interfaces" FILES "/home/robofei/ROS2/decision_pkg/src/custom_interfaces/package.xml" "DESTINATION" "share/custom_interfaces")

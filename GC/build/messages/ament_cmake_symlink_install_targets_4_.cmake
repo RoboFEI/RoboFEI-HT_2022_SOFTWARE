@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/robo/ROS2/GC/build/messages/rosidl_generator_py/messages/messages_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" "TARGETS" "messages__rosidl_typesupport_c__pyext" "DESTINATION" "lib/python3.8/site-packages/messages")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/robofei/ROS2/GC/build/messages/rosidl_generator_py/messages/messages_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" "TARGETS" "messages__rosidl_typesupport_c__pyext" "DESTINATION" "lib/python3.8/site-packages/messages")
