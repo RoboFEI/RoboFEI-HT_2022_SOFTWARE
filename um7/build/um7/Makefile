@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robo/ROS2/um7
+CMAKE_SOURCE_DIR = /home/robofei/ROS2/um7/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robo/ROS2/um7/build/um7
+CMAKE_BINARY_DIR = /home/robofei/ROS2/um7/build/um7
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ROS2/um7/build/um7/CMakeFiles /home/robo/ROS2/um7/build/um7/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/ROS2/um7/build/um7/CMakeFiles /home/robofei/ROS2/um7/build/um7/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/ROS2/um7/build/um7/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robofei/ROS2/um7/build/um7/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -166,32 +166,6 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named um7_test_comms
-
-# Build rule for target.
-um7_test_comms: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 um7_test_comms
-.PHONY : um7_test_comms
-
-# fast build rule for target.
-um7_test_comms/fast:
-	$(MAKE) -f CMakeFiles/um7_test_comms.dir/build.make CMakeFiles/um7_test_comms.dir/build
-.PHONY : um7_test_comms/fast
-
-#=============================================================================
-# Target rules for targets named um7_test_registers
-
-# Build rule for target.
-um7_test_registers: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 um7_test_registers
-.PHONY : um7_test_registers
-
-# fast build rule for target.
-um7_test_registers/fast:
-	$(MAKE) -f CMakeFiles/um7_test_registers.dir/build.make CMakeFiles/um7_test_registers.dir/build
-.PHONY : um7_test_registers/fast
 
 #=============================================================================
 # Target rules for targets named um7_driver
@@ -426,32 +400,6 @@ um7__py: cmake_check_build_system
 um7__py/fast:
 	$(MAKE) -f um7__py/CMakeFiles/um7__py.dir/build.make um7__py/CMakeFiles/um7__py.dir/build
 .PHONY : um7__py/fast
-
-#=============================================================================
-# Target rules for targets named gtest_main
-
-# Build rule for target.
-gtest_main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
-.PHONY : gtest_main
-
-# fast build rule for target.
-gtest_main/fast:
-	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-.PHONY : gtest_main/fast
-
-#=============================================================================
-# Target rules for targets named gtest
-
-# Build rule for target.
-gtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gtest
-.PHONY : gtest
-
-# fast build rule for target.
-gtest/fast:
-	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
 
 rclcpp_components/node_main_um7_node.o: rclcpp_components/node_main_um7_node.cpp.o
 
@@ -777,149 +725,86 @@ rosidl_typesupport_introspection_cpp/um7/srv/detail/reset__type_support.cpp.s:
 	$(MAKE) -f CMakeFiles/um7__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/um7__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/um7/srv/detail/reset__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/um7/srv/detail/reset__type_support.cpp.s
 
-src/comms.o: src/comms.cpp.o
+um7/comms.o: um7/comms.cpp.o
 
-.PHONY : src/comms.o
-
-# target to build an object file
-src/comms.cpp.o:
-	$(MAKE) -f CMakeFiles/um7_test_comms.dir/build.make CMakeFiles/um7_test_comms.dir/src/comms.cpp.o
-	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/src/comms.cpp.o
-.PHONY : src/comms.cpp.o
-
-src/comms.i: src/comms.cpp.i
-
-.PHONY : src/comms.i
-
-# target to preprocess a source file
-src/comms.cpp.i:
-	$(MAKE) -f CMakeFiles/um7_test_comms.dir/build.make CMakeFiles/um7_test_comms.dir/src/comms.cpp.i
-	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/src/comms.cpp.i
-.PHONY : src/comms.cpp.i
-
-src/comms.s: src/comms.cpp.s
-
-.PHONY : src/comms.s
-
-# target to generate assembly for a file
-src/comms.cpp.s:
-	$(MAKE) -f CMakeFiles/um7_test_comms.dir/build.make CMakeFiles/um7_test_comms.dir/src/comms.cpp.s
-	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/src/comms.cpp.s
-.PHONY : src/comms.cpp.s
-
-src/main.o: src/main.cpp.o
-
-.PHONY : src/main.o
+.PHONY : um7/comms.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+um7/comms.cpp.o:
+	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/um7/comms.cpp.o
+.PHONY : um7/comms.cpp.o
 
-src/main.i: src/main.cpp.i
+um7/comms.i: um7/comms.cpp.i
 
-.PHONY : src/main.i
+.PHONY : um7/comms.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+um7/comms.cpp.i:
+	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/um7/comms.cpp.i
+.PHONY : um7/comms.cpp.i
 
-src/main.s: src/main.cpp.s
+um7/comms.s: um7/comms.cpp.s
 
-.PHONY : src/main.s
+.PHONY : um7/comms.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+um7/comms.cpp.s:
+	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/um7/comms.cpp.s
+.PHONY : um7/comms.cpp.s
 
-src/registers.o: src/registers.cpp.o
+um7/main.o: um7/main.cpp.o
 
-.PHONY : src/registers.o
+.PHONY : um7/main.o
 
 # target to build an object file
-src/registers.cpp.o:
-	$(MAKE) -f CMakeFiles/um7_test_comms.dir/build.make CMakeFiles/um7_test_comms.dir/src/registers.cpp.o
-	$(MAKE) -f CMakeFiles/um7_test_registers.dir/build.make CMakeFiles/um7_test_registers.dir/src/registers.cpp.o
-	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/src/registers.cpp.o
-.PHONY : src/registers.cpp.o
+um7/main.cpp.o:
+	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/um7/main.cpp.o
+.PHONY : um7/main.cpp.o
 
-src/registers.i: src/registers.cpp.i
+um7/main.i: um7/main.cpp.i
 
-.PHONY : src/registers.i
+.PHONY : um7/main.i
 
 # target to preprocess a source file
-src/registers.cpp.i:
-	$(MAKE) -f CMakeFiles/um7_test_comms.dir/build.make CMakeFiles/um7_test_comms.dir/src/registers.cpp.i
-	$(MAKE) -f CMakeFiles/um7_test_registers.dir/build.make CMakeFiles/um7_test_registers.dir/src/registers.cpp.i
-	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/src/registers.cpp.i
-.PHONY : src/registers.cpp.i
+um7/main.cpp.i:
+	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/um7/main.cpp.i
+.PHONY : um7/main.cpp.i
 
-src/registers.s: src/registers.cpp.s
+um7/main.s: um7/main.cpp.s
 
-.PHONY : src/registers.s
+.PHONY : um7/main.s
 
 # target to generate assembly for a file
-src/registers.cpp.s:
-	$(MAKE) -f CMakeFiles/um7_test_comms.dir/build.make CMakeFiles/um7_test_comms.dir/src/registers.cpp.s
-	$(MAKE) -f CMakeFiles/um7_test_registers.dir/build.make CMakeFiles/um7_test_registers.dir/src/registers.cpp.s
-	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/src/registers.cpp.s
-.PHONY : src/registers.cpp.s
+um7/main.cpp.s:
+	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/um7/main.cpp.s
+.PHONY : um7/main.cpp.s
 
-test/test_comms.o: test/test_comms.cpp.o
+um7/registers.o: um7/registers.cpp.o
 
-.PHONY : test/test_comms.o
+.PHONY : um7/registers.o
 
 # target to build an object file
-test/test_comms.cpp.o:
-	$(MAKE) -f CMakeFiles/um7_test_comms.dir/build.make CMakeFiles/um7_test_comms.dir/test/test_comms.cpp.o
-.PHONY : test/test_comms.cpp.o
+um7/registers.cpp.o:
+	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/um7/registers.cpp.o
+.PHONY : um7/registers.cpp.o
 
-test/test_comms.i: test/test_comms.cpp.i
+um7/registers.i: um7/registers.cpp.i
 
-.PHONY : test/test_comms.i
-
-# target to preprocess a source file
-test/test_comms.cpp.i:
-	$(MAKE) -f CMakeFiles/um7_test_comms.dir/build.make CMakeFiles/um7_test_comms.dir/test/test_comms.cpp.i
-.PHONY : test/test_comms.cpp.i
-
-test/test_comms.s: test/test_comms.cpp.s
-
-.PHONY : test/test_comms.s
-
-# target to generate assembly for a file
-test/test_comms.cpp.s:
-	$(MAKE) -f CMakeFiles/um7_test_comms.dir/build.make CMakeFiles/um7_test_comms.dir/test/test_comms.cpp.s
-.PHONY : test/test_comms.cpp.s
-
-test/test_registers.o: test/test_registers.cpp.o
-
-.PHONY : test/test_registers.o
-
-# target to build an object file
-test/test_registers.cpp.o:
-	$(MAKE) -f CMakeFiles/um7_test_registers.dir/build.make CMakeFiles/um7_test_registers.dir/test/test_registers.cpp.o
-.PHONY : test/test_registers.cpp.o
-
-test/test_registers.i: test/test_registers.cpp.i
-
-.PHONY : test/test_registers.i
+.PHONY : um7/registers.i
 
 # target to preprocess a source file
-test/test_registers.cpp.i:
-	$(MAKE) -f CMakeFiles/um7_test_registers.dir/build.make CMakeFiles/um7_test_registers.dir/test/test_registers.cpp.i
-.PHONY : test/test_registers.cpp.i
+um7/registers.cpp.i:
+	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/um7/registers.cpp.i
+.PHONY : um7/registers.cpp.i
 
-test/test_registers.s: test/test_registers.cpp.s
+um7/registers.s: um7/registers.cpp.s
 
-.PHONY : test/test_registers.s
+.PHONY : um7/registers.s
 
 # target to generate assembly for a file
-test/test_registers.cpp.s:
-	$(MAKE) -f CMakeFiles/um7_test_registers.dir/build.make CMakeFiles/um7_test_registers.dir/test/test_registers.cpp.s
-.PHONY : test/test_registers.cpp.s
+um7/registers.cpp.s:
+	$(MAKE) -f CMakeFiles/um7_driver.dir/build.make CMakeFiles/um7_driver.dir/um7/registers.cpp.s
+.PHONY : um7/registers.cpp.s
 
 # Help Target
 help:
@@ -930,8 +815,6 @@ help:
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... um7_test_comms"
-	@echo "... um7_test_registers"
 	@echo "... um7_driver"
 	@echo "... um7__rosidl_typesupport_introspection_c__pyext"
 	@echo "... install/strip"
@@ -954,8 +837,6 @@ help:
 	@echo "... um7__rosidl_generator_c"
 	@echo "... um7__python"
 	@echo "... um7__py"
-	@echo "... gtest_main"
-	@echo "... gtest"
 	@echo "... rclcpp_components/node_main_um7_node.o"
 	@echo "... rclcpp_components/node_main_um7_node.i"
 	@echo "... rclcpp_components/node_main_um7_node.s"
@@ -992,21 +873,15 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/um7/srv/detail/reset__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/um7/srv/detail/reset__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/um7/srv/detail/reset__type_support.s"
-	@echo "... src/comms.o"
-	@echo "... src/comms.i"
-	@echo "... src/comms.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
-	@echo "... src/registers.o"
-	@echo "... src/registers.i"
-	@echo "... src/registers.s"
-	@echo "... test/test_comms.o"
-	@echo "... test/test_comms.i"
-	@echo "... test/test_comms.s"
-	@echo "... test/test_registers.o"
-	@echo "... test/test_registers.i"
-	@echo "... test/test_registers.s"
+	@echo "... um7/comms.o"
+	@echo "... um7/comms.i"
+	@echo "... um7/comms.s"
+	@echo "... um7/main.o"
+	@echo "... um7/main.i"
+	@echo "... um7/main.s"
+	@echo "... um7/registers.o"
+	@echo "... um7/registers.i"
+	@echo "... um7/registers.s"
 .PHONY : help
 
 

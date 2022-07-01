@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -pthread -std=gnu++14
 
 CXX_DEFINES = -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"um7\" -DSPDLOG_COMPILED_LIB -Dum7_driver_EXPORTS
 
-CXX_INCLUDES = -I/home/robo/ROS2/um7/include -I/home/robo/ROS2/um7/build/um7/rosidl_generator_cpp -isystem /opt/ros/foxy/include 
+CXX_INCLUDES = -I/home/robofei/ROS2/um7/src/include -I/home/robofei/ROS2/um7/install/serial/include -I/home/robofei/ROS2/um7/build/um7/rosidl_generator_cpp -isystem /opt/ros/foxy/include 
 

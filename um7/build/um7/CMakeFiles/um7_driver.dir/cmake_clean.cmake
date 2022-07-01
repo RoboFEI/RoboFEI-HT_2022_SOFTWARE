@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/um7_driver.dir/src/comms.cpp.o"
-  "CMakeFiles/um7_driver.dir/src/main.cpp.o"
-  "CMakeFiles/um7_driver.dir/src/registers.cpp.o"
+  "CMakeFiles/um7_driver.dir/um7/comms.cpp.o"
+  "CMakeFiles/um7_driver.dir/um7/main.cpp.o"
+  "CMakeFiles/um7_driver.dir/um7/registers.cpp.o"
   "libum7_driver.pdb"
   "libum7_driver.so"
 )

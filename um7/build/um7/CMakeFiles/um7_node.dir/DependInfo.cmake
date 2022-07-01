@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/robo/ROS2/um7/build/um7/rclcpp_components/node_main_um7_node.cpp" "/home/robo/ROS2/um7/build/um7/CMakeFiles/um7_node.dir/rclcpp_components/node_main_um7_node.cpp.o"
+  "/home/robofei/ROS2/um7/build/um7/rclcpp_components/node_main_um7_node.cpp" "/home/robofei/ROS2/um7/build/um7/CMakeFiles/um7_node.dir/rclcpp_components/node_main_um7_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,7 +18,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../../include"
+  "/home/robofei/ROS2/um7/src/include"
   "/opt/ros/foxy/include"
   )
 

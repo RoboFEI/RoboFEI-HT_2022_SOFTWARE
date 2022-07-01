@@ -1,8 +1,8 @@
-# Install script for directory: /home/robo/ROS2/um7/build/um7/um7__py
+# Install script for directory: /home/robofei/ROS2/um7/build/um7/um7__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robo/ROS2/um7/install/um7")
+  set(CMAKE_INSTALL_PREFIX "/home/robofei/ROS2/um7/install/um7")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

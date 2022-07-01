@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/robo/ROS2/um7/build/um7/rosidl_typesupport_cpp/um7/srv/reset__type_support.cpp" "/home/robo/ROS2/um7/build/um7/CMakeFiles/um7__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/um7/srv/reset__type_support.cpp.o"
+  "/home/robofei/ROS2/um7/build/um7/rosidl_typesupport_cpp/um7/srv/reset__type_support.cpp" "/home/robofei/ROS2/um7/build/um7/CMakeFiles/um7__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/um7/srv/reset__type_support.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,7 +18,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "rosidl_generator_cpp"
-  "../../include"
+  "/home/robofei/ROS2/um7/src/include"
   "/opt/ros/foxy/include"
   )
 

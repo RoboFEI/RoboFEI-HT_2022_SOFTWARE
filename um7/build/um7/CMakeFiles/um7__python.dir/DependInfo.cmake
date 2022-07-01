@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/robo/ROS2/um7/build/um7/rosidl_generator_py/um7/srv/_reset_s.c" "/home/robo/ROS2/um7/build/um7/CMakeFiles/um7__python.dir/rosidl_generator_py/um7/srv/_reset_s.c.o"
+  "/home/robofei/ROS2/um7/build/um7/rosidl_generator_py/um7/srv/_reset_s.c" "/home/robofei/ROS2/um7/build/um7/CMakeFiles/um7__python.dir/rosidl_generator_py/um7/srv/_reset_s.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -21,14 +21,14 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "rosidl_generator_py"
   "/usr/include/python3.8"
   "rosidl_typesupport_c"
-  "../../include"
+  "/home/robofei/ROS2/um7/src/include"
   "/opt/ros/foxy/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/robo/ROS2/um7/build/um7/CMakeFiles/um7__rosidl_generator_c.dir/DependInfo.cmake"
-  "/home/robo/ROS2/um7/build/um7/CMakeFiles/um7__rosidl_typesupport_c.dir/DependInfo.cmake"
+  "/home/robofei/ROS2/um7/build/um7/CMakeFiles/um7__rosidl_generator_c.dir/DependInfo.cmake"
+  "/home/robofei/ROS2/um7/build/um7/CMakeFiles/um7__rosidl_typesupport_c.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
