@@ -1,1 +1,0 @@
-/home/robofei/ROS2/decision_pkg/src/custom_interfaces/msg/SetPosition.msg

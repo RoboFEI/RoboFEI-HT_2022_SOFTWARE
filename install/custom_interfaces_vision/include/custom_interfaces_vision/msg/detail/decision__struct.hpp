@@ -1,0 +1,1 @@
+/home/robofei/ROS2/build/custom_interfaces_vision/rosidl_generator_cpp/custom_interfaces_vision/msg/detail/decision__struct.hpp

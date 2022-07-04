@@ -1,0 +1,7 @@
+[01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:727:70:[m[K [01;35m[Kwarning: [m[K‘[01m[Kecho robofei-bellatrix 12345...[m[K’ directive writing 53 bytes into a region of size 50 [[01;35m[K-Wformat-overflow=[m[K]
+  727 |   sprintf(string1,"[01;35m[Kecho robofei-bellatrix 123456| sudo -S renice -20 -p [m[K%d", getpid());
+      |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:727:10:[m[K [01;36m[Knote: [m[K‘[01m[Ksprintf[m[K’ output between 55 and 65 bytes into a destination of size 50
+  727 |   [01;36m[Ksprintf(string1,"echo robofei-bellatrix 123456| sudo -S renice -20 -p %d", getpid())[m[K;
+      |   [01;36m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K

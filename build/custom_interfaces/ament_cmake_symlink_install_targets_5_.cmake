@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/robofei/ROS2/build/custom_interfaces/rosidl_generator_py/custom_interfaces/libcustom_interfaces__python.so" "TARGETS" "custom_interfaces__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

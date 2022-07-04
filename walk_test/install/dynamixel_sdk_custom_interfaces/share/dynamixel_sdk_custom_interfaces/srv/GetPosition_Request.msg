@@ -1,1 +1,0 @@
-/home/robofei/ROS2/walk_test/build/dynamixel_sdk_custom_interfaces/rosidl_cmake/srv/GetPosition_Request.msg
