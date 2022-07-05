@@ -100,6 +100,7 @@ class DecisionNode(Node):
                 		self.search_ball(message) # Procura a bola, no primeiro vira a cabeça p esq, depois volta p meio e dps p dir
                 self.stand_still(message)
                 
+                
 
             elif(msg.game_state == 2): # Espera o jogo começar
                 self.get_logger().info('Keep ready')
@@ -110,10 +111,10 @@ class DecisionNode(Node):
                     self.get_logger().info('Achou a bola')
                     if BALL_LEFT ==  True:  #30 ou 60
                         self.get_logger().info('Bola na esquerda')
-                        self.turn_90_degrees(message, 1) # Vira para o lado esquerdo
+                        self.turn(message, 1) # Vira para o lado esquerdo
                     elif BALL_RIGHT ==  True: #-30 ou -60
                         self.get_logger().info('Bola na direita')
-                        self.turn_90_degrees(message, 0) # Vira para o lado direito
+                        self.turn(message, 0) # Vira para o lado direito
                     else: # A bola está alinhada, fica parado
                         self.get_logger().info('Bola alinhada')
                         self.stand_still(message)
@@ -129,7 +130,7 @@ class DecisionNode(Node):
                 elif(msg.secondary_state == 3): # Timeout
                     self.stand_still(message)
                     ## COLOCAR IMU TALVEZ P ROBO IR P LATERAL MSM
-                    self.turn_90_degrees(message, LADO)
+                    self.turn(message, LADO)
                     self.walking_tempo(message) # Anda (esse tempo NÂO é em segundos)
                     self.stand_still(message)
 
@@ -176,17 +177,17 @@ class DecisionNode(Node):
                         self.search_ball(message)
                         if(BALL_DETECTED == False):
                             for x in (0, 4):
-                                self.turn_90_degrees(message, LADO)
+                                self.turn(message, LADO)
                             self.walking_tempo(message, 20) # EU QUE COLOQUEI ISSO, NÃO FAZIA MT SENTIDO O ROBÔ FICAR GIRANDO PARA SEMPRE NO MESMO LUGAR, SE NÃO ACHOU DÁ UMA ANDADA
 
 
                     elif(BALL_DETECTED == True):
                         if(BALL_LEFT == True):
                             if(BALL_CENTER_LEFT == False):
-                                self.turn_90_degrees(message, 0) # Se a bola tiver na esquerda, ele vira para a direita para deixar a bola centralizada
+                                self.turn(message, 0) # Se a bola tiver na esquerda, ele vira para a direita para deixar a bola centralizada
                         elif(BALL_RIGHT == True):
                             if(BALL_CENTER_RIGHT == False):
-                                self.turn_90_degrees(message, 1) # Se a bola tiver na direita, ele vira para a esquerda para deixar a bola centralizada
+                                self.turn(message, 1) # Se a bola tiver na direita, ele vira para a esquerda para deixar a bola centralizada
 
                         if BALL_CLOSE == True and BALL_CENTER_RIGHT == True:
                             if orientation <= 30 and orientation >= -30:
@@ -208,7 +209,6 @@ class DecisionNode(Node):
 
                         elif BALL_FAR == True or BALL_MED == True: # longe
                             self.walking(message)
-
                         else:
                             self.walking(message)
 
@@ -216,7 +216,7 @@ class DecisionNode(Node):
             elif(msg.game_state == 4): # Jogo terminou, robô sai do campo
                 self.stand_still(message)
                 ## COLOCAR IMU TALVEZ P ROBO IR P LATERAL MSM
-                self.turn_90_degrees(message, LADO)
+                self.turn(message, LADO)
                 self.walking_tempo(message, 20) # Anda (esse tempo NÂO é em segundos)
                 self.stand_still(message)
                 sleep(100)
@@ -242,10 +242,10 @@ class DecisionNode(Node):
                     self.get_logger().info('Achou a bola')
                     if BALL_LEFT ==  True:  #30 ou 60
                         self.get_logger().info('Bola na esquerda')
-                        self.turn_90_degrees(message, 1) # Vira para o lado esquerdo
+                        self.turn(message, 1) # Vira para o lado esquerdo
                     elif BALL_RIGHT ==  True: #-30 ou -60
                         self.get_logger().info('Bola na direita')
-                        self.turn_90_degrees(message, 0) # Vira para o lado direito
+                        self.turn(message, 0) # Vira para o lado direito
                     else: # A bola está alinhada, fica parado
                         self.get_logger().info('Bola alinhada')
                         self.stand_still(message)
@@ -266,7 +266,7 @@ class DecisionNode(Node):
             elif(msg.game_state == 4): # Jogo terminou, robô sai do campo
                 self.stand_still(message)
                 ## COLOCAR IMU TALVEZ P ROBO IR P LATERAL MSM
-                self.turn_90_degrees(message, LADO)
+                self.turn(message, LADO)
                 self.walking_tempo(message, 20) # Anda (esse tempo NÂO é em segundos)
                 self.stand_still(message)
                 sleep(100)
@@ -301,23 +301,6 @@ class DecisionNode(Node):
         message.decision = 14 # Anda
         self.publisher_.publish(message)
         self.get_logger().info('Publishing: "%d"' % message.decision)
-
-    def turn_90_degrees(self, message, side):
-        cont = 0
-        while(cont<10): # Vira
-            if(side == 0):
-                message.decision = 5 # Direita
-                self.publisher_.publish(message)
-                self.get_logger().info('Publishing: "%d"' % message.decision)
-                cont = cont+1
-            else:
-                message.decision = 6 # Esquerda
-                self.publisher_.publish(message)
-                self.get_logger().info('Publishing: "%d"' % message.decision)
-                cont = cont+1
-        self.get_logger().info('TERMINOU O TURN')
-        sleep(5)
-
 
     def search_ball(self, message):
         if(BALL_DETECTED == False):

@@ -66,42 +66,33 @@ class ballStatus(Node):
         if status  == 1:
 			#Bola a esquerda
             if (x <= self.config.x_left):
-                msg.ball_left = True
+                msg.ball_close = True
                 self.publisher_.publish(msg)
-                #self.get_logger().info('Publishing: "%s"' % msg.ball_left)
-
-            #Bola ao centro esquerda
-            if (x > self.config.x_left and x < self.config.x_center):
-                msg.ball_center_left = True
-                self.publisher_.publish(msg)
-                #self.get_logger().info('Publishing: "%s"' % msg.ball_center_left)
+                print("Bola Abaixo")
 
 			#Bola centro direita
             if (x < self.config.x_right and x > self.config.x_center):
-                msg.ball_center_right = True
+                msg.ball_med = True
                 self.publisher_.publish(msg)
-                #self.get_logger().info('Publishing: "%s"' % msg.ball_center_right)
+                print("Bola Centralizada")
 
 			#Bola a direita
             if (x >= self.config.x_right):
-                msg.ball_right = True
+                msg.ball_far = True
                 self.publisher_.publish(msg)
-                #self.get_logger().info('Publishing: "%s"' % msg.ball_right)
+                print("Bola Acima")
+                self.config.max_count_lost_frame
+                
 
         else:
             if (status ==2):
-                msg.ball_left = True
+                msg.ball_close = True
                 self.publisher_.publish(msg)
-                #self.get_logger().info('Publishing: "%s"' % msg.ball_left)
+                print("Bola Abaixo")
             else:
-                msg.ball_right = True
+                msg.ball_far = True
                 self.publisher_.publish(msg)
-                #self.get_logger().info('Publishing: "%s"' % msg.ball_right)
-        print("Status:  '%s'" % status)
-        print("Bola a Esquerda:  '%s'" % msg.ball_left)
-        print("Bola ao Centro Esquerda '%s'" % msg.ball_center_left)
-        print("Bola ao Centro Direita '%s'" % msg.ball_right)
-        print("Bola a Direita '%s'" % msg.ball_center_right)
+                print("Bola Acima")
 		
     #	#CUIDADO AO ALTERAR OS VALORES ABAIXO!! O código abaixo possui inversão de eixos!
 	#	# O eixo em pixels é de cima para baixo ja as distancias são ao contrario.
@@ -112,22 +103,31 @@ class ballStatus(Node):
             msg.ball_far = True
             self.publisher_.publish(msg)
             #self.get_logger().info('Publishing: "%s"' % msg.ball_far)
-            print("Bola acima")
+            print("Bola a Esquerda")
             self.config.max_count_lost_frame
 
-		#Bola ao centro
-        if (y < self.config.y_chute and y > self.config.y_longe):
+		#Bola ao centro esquerda
+        if (y > self.config.y_longe and y < self.config.x_center):
             msg.ball_med = True
             self.publisher_.publish(msg)
             #self.get_logger().info('Publishing: "%s"' % msg.ball_med)
-            print("Bola Centralizada")
+            print("Bola ao Centro Esquerda")
+
+        #Bola ao centro direita
+        if (y < self.config.y_chute and y > self.config.x_center):
+            msg.ball_med = True
+            self.publisher_.publish(msg)
+            #self.get_logger().info('Publishing: "%s"' % msg.ball_med)
+            print("Bola ao Centro Direita")
 
 		#Bola abaixo
         if (y >= self.config.y_chute):
-            msg.ball_close = True
+            # msg.ball_close = True
+            # self.publisher_.publish(msg)
+            msg.ball_right = True
             self.publisher_.publish(msg)
             #self.get_logger().info('Publishing: "%s"' % msg.ball_close)
-            print("Bola abaixo")
+            print("Bola a Direita")
 		
     def thread_DNN(self):
 #	time.sleep(1)
