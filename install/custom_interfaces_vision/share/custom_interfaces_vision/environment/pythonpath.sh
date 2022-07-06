@@ -1,1 +1,0 @@
-/home/robofei/ROS2/build/custom_interfaces_vision/ament_cmake_environment_hooks/pythonpath.sh

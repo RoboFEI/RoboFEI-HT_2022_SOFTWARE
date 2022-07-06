@@ -1,1 +1,0 @@
-/home/robofei/ROS2/build/dynamixel_sdk_custom_interfaces/ament_cmake_core/dynamixel_sdk_custom_interfacesConfig.cmake

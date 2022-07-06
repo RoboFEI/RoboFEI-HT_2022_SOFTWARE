@@ -18,6 +18,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(dynamixel_sdk_custom_interfaces REQUIRED)
+find_package(custom_interfaces REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
@@ -89,6 +90,7 @@ rclcpp_components_register_node(motion
 add_executable(control src/control.cpp)
 ament_target_dependencies(control
   dynamixel_sdk_custom_interfaces
+  custom_interfaces
   rclcpp
   sensor_msgs
 )

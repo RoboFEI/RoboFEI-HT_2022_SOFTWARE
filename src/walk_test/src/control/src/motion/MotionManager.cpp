@@ -39,8 +39,8 @@
 #include "dynamixel_sdk_custom_interfaces/msg/walk.hpp"
 #include "dynamixel_sdk_custom_interfaces/msg/param_walk.hpp"
 
-#define INI_FILE_PATH       "/home/robo/ROS2/walk_test/src/control/Data/config.ini"
-#define MOTION_FILE_PATH    "/home/robo/ROS2/walk_test/src/control/Data/motion_4096.bin"
+#define INI_FILE_PATH       "/home/robofei/ROS2/src/walk_test/src/control/Data/config.ini"
+#define MOTION_FILE_PATH    "/home/robofei/ROS2/src/walk_test/src/control/Data/motion_4096.bin"
 
 using namespace Robot;
 using namespace std::chrono_literals;

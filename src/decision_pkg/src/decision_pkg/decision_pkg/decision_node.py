@@ -94,7 +94,7 @@ class DecisionNode(Node):
             elif(msg.game_state == 1): # Robô vai para a posição inicial
                 self.get_logger().info('Go to start position')
                 if(BALL_DETECTED == False):
-                    self.walking_tempo(message, 20) # Anda até chegar no meio de campo
+                    self.walking(message) # Anda até chegar no meio de campo
                 for x in range(0,3):
                 	if(BALL_DETECTED == False):
                 		self.search_ball(message) # Procura a bola, no primeiro vira a cabeça p esq, depois volta p meio e dps p dir
@@ -131,12 +131,12 @@ class DecisionNode(Node):
                     self.stand_still(message)
                     ## COLOCAR IMU TALVEZ P ROBO IR P LATERAL MSM
                     self.turn(message, LADO)
-                    self.walking_tempo(message) # Anda (esse tempo NÂO é em segundos)
+                    self.walking(message) # Anda 
                     self.stand_still(message)
 
                 elif(msg.secondary_state == 1 and msg.secondary_state_team == TEAM_ROBOFEI): # Penalti nosso
                     self.search_ball(message) # Procura a bola
-                    self.walking_tempo(message, 20)
+                    self.walking(message)
                     self.kicking(message, 1)
 
                 elif(msg.secondary_state == 1 and msg.secondary_state_team != TEAM_ROBOFEI): # Penalti do outro time
@@ -144,7 +144,7 @@ class DecisionNode(Node):
 
                 elif(msg.secondary_state == 4 and msg.secondary_state_team == TEAM_ROBOFEI): # Direct freekick nosso
                     self.search_ball(message) # Procura a bola
-                    self.walking_tempo(message, 20)
+                    self.walking(message)
                     self.kicking(message, 1)
 
                 elif(msg.secondary_state == 4 and msg.secondary_state_team != TEAM_ROBOFEI): # Direct freekick do oponente
@@ -152,7 +152,7 @@ class DecisionNode(Node):
 
                 elif(msg.secondary_state == 5 and msg.secondary_state_team == TEAM_ROBOFEI): # Indirect freekick nosso
                     self.search_ball(message) # Procura a bola
-                    self.walking_tempo(message, 20)
+                    self.walking(message)
                     self.kicking(message, 1)
 
                 elif(msg.secondary_state == 5 and msg.secondary_state_team != TEAM_ROBOFEI): # Indirect freekick do oponente
@@ -170,7 +170,7 @@ class DecisionNode(Node):
                 else: 
                     #if(msg.secondary_state == 0 or msg.secondary_state == 2):
                     if(msg.has_kick_off == True): # Nosso kick off
-                        self.walking_tempo(message, 10)
+                        self.walking(message)
                         self.kicking(message, 1) # Chuta com o pé direito
                 
                     if BALL_DETECTED == False: 
@@ -178,7 +178,7 @@ class DecisionNode(Node):
                         if(BALL_DETECTED == False):
                             for x in (0, 4):
                                 self.turn(message, LADO)
-                            self.walking_tempo(message, 20) # EU QUE COLOQUEI ISSO, NÃO FAZIA MT SENTIDO O ROBÔ FICAR GIRANDO PARA SEMPRE NO MESMO LUGAR, SE NÃO ACHOU DÁ UMA ANDADA
+                            self.walking(message) # EU QUE COLOQUEI ISSO, NÃO FAZIA MT SENTIDO O ROBÔ FICAR GIRANDO PARA SEMPRE NO MESMO LUGAR, SE NÃO ACHOU DÁ UMA ANDADA
 
 
                     elif(BALL_DETECTED == True):
@@ -217,7 +217,7 @@ class DecisionNode(Node):
                 self.stand_still(message)
                 ## COLOCAR IMU TALVEZ P ROBO IR P LATERAL MSM
                 self.turn(message, LADO)
-                self.walking_tempo(message, 20) # Anda (esse tempo NÂO é em segundos)
+                self.walking(message) # Anda
                 self.stand_still(message)
                 sleep(100)
         
@@ -229,7 +229,7 @@ class DecisionNode(Node):
             elif(msg.game_state == 1): # Robô vai para a posição inicial
                 self.get_logger().info('Go to start position')
                 if(BALL_DETECTED == False):
-                    self.walking_tempo(message, 20) # Anda até chegar no meio de campo
+                    self.walking(message) # Anda até chegar no meio de campo
                 self.search_ball(message) # Procura a bola
                 self.stand_still(message)
 
@@ -267,7 +267,7 @@ class DecisionNode(Node):
                 self.stand_still(message)
                 ## COLOCAR IMU TALVEZ P ROBO IR P LATERAL MSM
                 self.turn(message, LADO)
-                self.walking_tempo(message, 20) # Anda (esse tempo NÂO é em segundos)
+                self.walking(message) # Anda 
                 self.stand_still(message)
                 sleep(100)
 
@@ -288,15 +288,6 @@ class DecisionNode(Node):
             self.get_logger().info('Publishing: "%d"' % message.decision)
         sleep(3)
 
-    def walking_tempo(self, message, time):
-        cont = 0
-        while(cont<time):
-            message.decision = 14 # Anda
-            self.publisher_.publish(message)
-            self.get_logger().info('Publishing: "%d"' % message.decision)
-            cont = cont+1
-        cont = 0
-
     def walking(self, message):
         message.decision = 14 # Anda
         self.publisher_.publish(message)
@@ -307,7 +298,6 @@ class DecisionNode(Node):
             message.decision = 8 # Move o motor da cabeça para o robô procurar a bola
             self.publisher_.publish(message)
             self.get_logger().info('Publishing: "%d"' % message.decision)
-        sleep(3)
 
     def turn(self, message, side):
         if(side == 0):
