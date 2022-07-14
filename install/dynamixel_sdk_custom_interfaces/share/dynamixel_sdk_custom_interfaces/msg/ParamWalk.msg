@@ -1,1 +1,0 @@
-/home/robofei/ROS2/src/walk_test/src/dynamixel_sdk_custom_interfaces/msg/ParamWalk.msg
