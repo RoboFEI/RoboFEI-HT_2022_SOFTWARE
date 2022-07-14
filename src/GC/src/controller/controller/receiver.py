@@ -1,46 +1,51 @@
-#!/usr/bin/env python3
-# -*- coding:utf-8 -*-
-
 import socket
 import time
 import rclpy
-from rclpy.node import Node
 
 from construct import Container, ConstError
-
-from std_msgs.msg import String,Bool
-import std_msgs.msg
+from rclpy import logging
+from rclpy.node import Node
+from std_msgs.msg import Bool
 from controller.gamestate import GameState, ReturnData, GAME_CONTROLLER_RESPONSE_VERSION
 from custom_interfaces.msg import HumanoidLeagueMsgs as GameStateMsg
-from rclpy.exceptions import ParameterNotDeclaredException
-from rcl_interfaces.msg import ParameterType
+
+logger = logging.get_logger('humanoid_league_game_controller')
+
 
 class GameStateReceiver(Node):
+    """ This class puts up a simple UDP Server which receives the
+    *addr* parameter to listen to the packages from the game_controller.
+    If it receives a package it will be interpreted with the construct data
+    structure and the :func:`on_new_gamestate` will be called with the content.
+    After this we send a package back to the GC """
 
     def __init__(self):
-        super().__init__('game_controller')
-        self.declare_parameter('TEAM_ROBOFEI', 22)
+        super().__init__('game_controller', automatically_declare_parameters_from_overrides=True)
+
+        self.declare_parameter('TEAM_ROBOFEI', 7)
         self.declare_parameter('ROBOT_NUMBER', 1)
         self.team = self.get_parameter('TEAM_ROBOFEI').get_parameter_value().integer_value
-        self.player = self.get_parameter('ROBOT_NUMBER').get_parameter_value().integer_value
-        self.get_logger().info('We are playing as player {} in team {}'.format(self.player,self.team))
-
+        self.player_number = self.get_parameter('ROBOT_NUMBER').get_parameter_value().integer_value
+        logger.info('We are playing as player {} in team {}'.format(self.player_number, self.team))
 
         self.state_publisher = self.create_publisher(GameStateMsg, 'gamestate', 1)
 
         self.man_penalize = False
         self.game_controller_lost_time = 20
+        self.game_controller_connected_publisher = self.create_publisher(Bool, 'game_controller_connected', 1)
 
-        self.game_controller_connected_publisher = self.create_publisher(Bool,'game_controller_connected',1)
+        # The address listening on and the port for sending back the robots meta data
+        self.declare_parameter('listen_host', '0.0.0.0')
+        self.declare_parameter('listen_port',3838)
+        listen_host = self.get_parameter('listen_host').value
+        listen_port = self.get_parameter('listen_port').value
+        self.declare_parameter('answer_port',3939)
 
-        self.declare_parameter('DEFAULT_LISTENING_HOST', '0.0.0.0')
-        self.declare_parameter('GAME_CONTROLLER_LISTEN_PORT',3838)
-        self.addr = (self.get_parameter('DEFAULT_LISTENING_HOST').get_parameter_value().string_value,self.get_parameter('GAME_CONTROLLER_LISTEN_PORT').get_parameter_value().integer_value)
-        #self.get_logger().info('host: "%s"' % self.addr[0])
-        #self.get_logger().info('port: "%d"' % self.addr[1])
-        self.declare_parameter('GAME_CONTROLLER_ANSWER_PORT',3939)
-        self.answer_port = self.get_parameter('GAME_CONTROLLER_ANSWER_PORT').get_parameter_value().integer_value
 
+        self.addr = (listen_host, listen_port)
+        self.answer_port = self.get_parameter('answer_port').value
+
+        # The state and time we received last form the GC
         self.state = None
         self.time = time.time()
 
@@ -49,11 +54,6 @@ class GameStateReceiver(Node):
         self.running = True
 
         self._open_socket()
-        self.receive_forever()
-
-        timer_period = 0.5  # seconds
-        self.timer = self.create_timer(timer_period, self.timer_callback)
-        self.i = 0
 
     def _open_socket(self):
         """ Creates the socket """
@@ -66,17 +66,16 @@ class GameStateReceiver(Node):
 
     def receive_forever(self):
         """ Waits in a loop that is terminated by setting self.running = False """
-        while rclpy.ok():
+        while True:
             try:
                 self.receive_once()
             except IOError as e:
-                node.get_logger().warn("Error while sending keepalive: " + str(e))
-
+                logger.warn("Error while sending keepalive: " + str(e))
 
     def receive_once(self):
-            #Receives a package and interprets it.
-            #Calls :func:`on_new_gamestate`
-            #Sends an answer to the GC
+        """ Receives a package and interprets it.
+            Calls :func:`on_new_gamestate`
+            Sends an answer to the GC """
         try:
             data, peer = self.socket.recvfrom(GameState.sizeof())
 
@@ -99,19 +98,18 @@ class GameStateReceiver(Node):
             self.answer_to_gamecontroller(peer)
 
         except AssertionError as ae:
-            self.get_logger().info(ae.message)
+            logger.error(ae)
         except socket.timeout:
-            self.get_logger().info("No GameController message received (socket timeout)") #Rever depois
+            logger.info("No GameController message received (socket timeout)", throttle_duration_sec=5)
         except ConstError:
-            self.get_logger().warn("Parse Error: Probably using an old protocol!")
+            logger.warn("Parse Error: Probably using an old protocol!")
         finally:
             if self.get_time_since_last_package() > self.game_controller_lost_time:
                 self.time += 5  # Resend message every five seconds
-                self.get_logger().warn('No game controller messages received, allowing robot to move') #Rever depois
+                logger.info("No GameController message received, allowing robot to move", throttle_duration_sec=5)
                 msg = GameStateMsg()
                 msg.game_state = 3  # PLAYING
                 self.state_publisher.publish(msg)
-                self.state_gc.publish(msg)
                 msg2 = Bool()
                 msg2.data = False
                 self.game_controller_connected_publisher.publish(msg2)
@@ -120,40 +118,39 @@ class GameStateReceiver(Node):
         """ Sends a life sign to the game controller """
         return_message = 0 if self.man_penalize else 2
 
-        data = Container(
-            header=b"RGrt",
-            version=GAME_CONTROLLER_RESPONSE_VERSION,
-            team=self.team,
-            player=self.player,
-            message=return_message)
+        data = Container(header=b"RGrt",
+                         version=GAME_CONTROLLER_RESPONSE_VERSION,
+                         team=self.team,
+                         player=self.player_number,
+                         message=return_message)
         try:
             destination = peer[0], self.answer_port
-            self.get_logger().info('Sending answer to {} port {}'.format(destination[0], destination[1]))
+            logger.debug('Sending answer to {} port {}'.format(destination[0], destination[1]))
             self.socket.sendto(ReturnData.build(data), destination)
         except Exception as e:
-            self.get_logger().info("Network Error: %s" % str(e))
+            logger.error("Network Error: %s" % str(e))
 
     def on_new_gamestate(self, state):
         """ Is called with the new game state after receiving a package.
             The information is processed and published as a standard message to a ROS topic.
             :param state: Game State
         """
-        if state.teams[0].team_number == self.team:
-            own_team = state.teams[0]
-            rival_team = state.teams[1]
-        elif state.teams[1].team_number == self.team:
-            own_team = state.teams[1]
-            rival_team = state.teams[0]
-        else:
-            self.get_logger().info('Team {} not playing, only {} and {}'.format(self.team,
-                                                                      state.teams[0].team_number,
+
+        is_own_team = lambda number: number == self.team
+        own_team = self.select_team_by(is_own_team, state.teams)
+
+        is_not_own_team = lambda number: number != self.team
+        rival_team = self.select_team_by(is_not_own_team, state.teams)
+
+        if not own_team or not rival_team:
+            logger.error('Team {} not playing, only {} and {}'.format(self.team, state.teams[0].team_number,
                                                                       state.teams[1].team_number))
             return
 
         try:
-            me = own_team.players[self.player - 1]
+            me = own_team.players[self.player_number - 1]
         except IndexError:
-            self.get_logger().info('Robot {} not playing'.format(self.player))
+            logger.error('Robot {} not playing'.format(self.player_number))
             return
 
         msg = GameStateMsg()
@@ -186,16 +183,35 @@ class GameStateReceiver(Node):
         msg.team_mates_with_red_card = red_cards
         self.state_publisher.publish(msg)
 
+    def get_last_state(self):
+        return self.state, self.time
+
     def get_time_since_last_package(self):
         return time.time() - self.time
 
+    def stop(self):
+        self.running = False
+
+    def set_manual_penalty(self, flag):
+        self.man_penalize = flag
+
+    def select_team_by(self, predicate, teams):
+        selected = [team for team in teams if predicate(team.team_number)]
+        return next(iter(selected), None)
 
 
 def main(args=None):
     rclpy.init(args=args)
-    game_controller = GameStateReceiver()
+    receiver = GameStateReceiver()
 
+    try:
+        receiver.receive_forever()
+
+    except KeyboardInterrupt:
+        receiver.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':
     main()
+    

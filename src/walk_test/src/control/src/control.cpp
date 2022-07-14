@@ -33,9 +33,11 @@ using std::placeholders::_1;
 int movement = 0;
 int contador = 0;
 int cont_vision = 2047;
+int cont_fall_side = 0;
 bool stop_gait = true;
 bool fallen = false;
 bool fallenFront = false;
+bool fallen_side = false;
 double X_amplitude = 4;
 double Y_amplitude = 4;
 double A_amplitude = 4;
@@ -69,6 +71,7 @@ public:
     void topic_callback_imu(const std::shared_ptr<sensor_msgs::msg::Imu> imu_msg_) const
     {
       float IMU_ACCEL_Z = imu_msg_->linear_acceleration.z/10;
+      float IMU_ACCEL_Y = imu_msg_->linear_acceleration.y/10;
       RCLCPP_INFO(this->get_logger(),"ACEL Z %f\n", IMU_ACCEL_Z);
       if(IMU_ACCEL_Z > 0.7 || IMU_ACCEL_Z < -0.7)
         contador++;
@@ -76,18 +79,28 @@ public:
         contador = 0;
       RCLCPP_INFO(this->get_logger(),"Contador %d \n", contador);
       
-      if(contador>=3)
+      if(contador>=5)
       {
         RCLCPP_INFO(this->get_logger(),"Caido");
         fallen = true; // Robô caido
-      }
-      if (fallen == true){ // Robô esta caido
         if(IMU_ACCEL_Z > 0){  // Robô caido de frente
           fallenFront = true;
         }
         else{  // Robô caido de costas
           fallenFront = false;
         }
+      }
+      
+      if(IMU_ACCEL_Y > 0.7 || IMU_ACCEL_Y < -0.7)
+        cont_fall_side++;
+      else
+        cont_fall_side = 0;
+      RCLCPP_INFO(this->get_logger(),"Contador fall side %d \n", cont_fall_side);
+      
+      if(cont_fall_side>=3)
+      {
+        RCLCPP_INFO(this->get_logger(),"Caido");
+        fallen_side = true; // Robô caido
       }
     }
 
@@ -106,40 +119,40 @@ public:
         message_walk.walk = 0; 
         publisher_walk->publish(message_walk);
         if (fallenFront == true){ // Caido de frente      
-          RCLCPP_INFO(this->get_logger(), "Stand Up Back");                     
+          RCLCPP_INFO(this->get_logger(), "Stand Up Front");                     
           message_single.id = 254;
           message_single.address = 112;
           message_single.position = 80;
           publisher_single->publish(message_single);
 
-          //RETO
-          message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          message.position = {2048,2048,2048,2048,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
-          publisher_->publish(message);
-          usleep(1000000);
+          // //RETO
+          // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+          // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+          // message.position = {2048,2048,2048,2048,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
+          // publisher_->publish(message);
+          // usleep(1000000);
 
 
-          //SE JOGA PRA FRENTE
-          message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          message.position = {2450,2450,2316,1802,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
-          publisher_->publish(message);
-          usleep(1000000);
+          // //SE JOGA PRA FRENTE
+          // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+          // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+          // message.position = {2450,2450,2316,1802,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
+          // publisher_->publish(message);
+          // usleep(1000000);
 
           //next
-          message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          message.position = {3871,244,2994,1047,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
-          publisher_->publish(message);
-          usleep(1000000);
+          // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+          // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+          // message.position = {3871,244,2994,1047,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
+          // publisher_->publish(message);
+          // usleep(1000000);
 
 
-          message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          message.position = {3871,244,2037,2048,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
-          publisher_->publish(message);
-          usleep(2000000);
+          // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+          // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+          // message.position = {3871,244,2037,2048,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
+          // publisher_->publish(message);
+          // usleep(2000000);
 
           message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
           //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
@@ -217,147 +230,162 @@ public:
         }
         else{ // Robô caido de costas
           RCLCPP_INFO(this->get_logger(), "Stand Up Back");
-          message_single.id = 254;
-          message_single.address = 112;
-          message_single.position = 40;
-          publisher_single->publish(message_single);
+            message_single.id = 254;
+            message_single.address = 112;
+            message_single.position = 40;
+            publisher_single->publish(message_single);
 
 
-          message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          message.position = {2850,2850,2734,1362,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
-          publisher_->publish(message);
-          usleep(3000000);
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            message.position = {2048,2048,2096,2000,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
+            publisher_->publish(message);
+            usleep(3000000);
 
-          message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          message.position = {2048,2048,2096,2000,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
-          publisher_->publish(message);
-          usleep(3000000);
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {2048,2048,2096,2000,2048,2048,2048,2048,2048,2060,1348,2748,3500,596,1748,2348,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(3000000);
 
-          // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          // message.position = {2048,2048,2096,2000,2048,2048,2048,2048,2048,2060,1348,2748,3500,596,1748,2348,2048,2048,2048};   
-          // publisher_->publish(message);
-          // usleep(3000000);
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {2048,2048,2096,2000,1024,3072,2048,2048,2048,2060,1227,2869,3621,475,2596,1500,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(3000000);
 
-          // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          // message.position = {2048,2048,2096,2000,1024,3072,2048,2048,2048,2060,1227,2869,3621,475,2596,1500,2048,2048,2048};   
-          // publisher_->publish(message);
-          // usleep(3000000);
-
-          message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //                    1    2    3    4   5   6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          message.position = {944,3203,2096,2000,804,3292,2048,2048,2048,2060,1315,2781,3665,442,2000,2096,2048,2048,2048};   
-          publisher_->publish(message);
-          usleep(3000000);
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1    2    3    4   5   6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            message.position = {944,3203,2096,2000,804,3292,2048,2048,2048,2060,1315,2781,3665,442,2000,2096,2048,2048,2048};   
+            publisher_->publish(message);
+            usleep(3000000);
 
 
-          message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //                    1   2     3    4   5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          message.position = {882,3214,2096,2000,1178,2918,2048,2048,2048,2060,952,3144,3665,442,1978,2118,2048,2048,2048};   
-          publisher_->publish(message);
-          usleep(3000000);
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2     3    4   5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            message.position = {882,3214,2096,2000,1178,2918,2048,2048,2048,2060,952,3144,3665,442,1978,2118,2048,2048,2048};   
+            publisher_->publish(message);
+            usleep(3000000);
 
-          message_single.id = 254;
-          message_single.address = 112;
-          message_single.position = 70;
-          publisher_single->publish(message_single);
+            message_single.id = 254;
+            message_single.address = 112;
+            message_single.position = 70;
+            publisher_single->publish(message_single);
 
-          message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          message.position = {1769,2294,2096,2000,2048,2048,2048,2103,2048,2060,1146,2950,3621,475,2596,1500,2048,2048,2048};   
-          publisher_->publish(message);
-          usleep(3000000);
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            message.position = {1769,2294,2096,2000,2048,2048,2048,2048,2048,2060,1146,2950,3621,475,2596,1500,2048,2048,2048};   
+            publisher_->publish(message);
+            usleep(3000000);
 
-          // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          // message.position = {2011,2122,2096,2000,2048,2048,2048,2103,2048,2060,853,3243,3621,475,2211,1885,2048,2048,2048};   
-          // publisher_->publish(message);
-          // usleep(3000000);
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {2011,2122,2096,2000,2048,2048,2048,2103,2048,2060,853,3243,3621,475,2211,1885,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(3000000);
 
-          message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          message.position = {2121,1975,2096,2000,2048,2048,2048,2103,2048,2060,589,3507,3621,475,2296,1800,2048,2048,2048};   
-          publisher_->publish(message);
-          usleep(4000000);
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            message.position = {2121,1975,2096,2000,2048,2048,2048,2048,2048,2060,589,3507,3621,475,2296,1800,2048,2048,2048};   
+            publisher_->publish(message);
+            usleep(4000000);
 
-          // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          // message.position = {2011,2122,2096,2000,2048,2048,2048,2048,2048,2060,636,3474,3665,442,2145,1951,2048,2048,2048};   
-          // publisher_->publish(message);
-          // usleep(2000000);
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {2011,2122,2096,2000,2048,2048,2048,2048,2048,2060,636,3474,3665,442,2145,1951,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(2000000);
 
-          // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          // message.position = {1952,2192,2096,2000,2048,2048,2048,2048,2048,2060,1029,3067,3665,442,2442,1654,2048,2048,2048};   
-          // publisher_->publish(message);
-          // usleep(4000000);
-
-
-          // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-          // message.position = {2121,1975,2096,2000,2048,2048,2048,2048,2048,2060,1070,3020,3621,475,2714,1382,2048,2048,2048};   
-          // publisher_->publish(message);
-          // usleep(3000000);
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {1952,2192,2096,2000,2048,2048,2048,2048,2048,2060,1029,3067,3665,442,2442,1654,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(4000000);
 
 
-          message_single.id = 254;
-          message_single.address = 112;
-          message_single.position = 30;
-          publisher_single->publish(message_single);
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {2121,1975,2096,2000,2048,2048,2048,2048,2048,2060,1070,3020,3621,475,2714,1382,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(3000000);
 
-          message_single.id = 13;
-          message_single.address = 112;
-          message_single.position = 60;
-          publisher_single->publish(message_single);
 
-          message_single.id = 14;
-          message_single.address = 112;
-          message_single.position = 60;
-          publisher_single->publish(message_single);
+            message_single.id = 254;
+            message_single.address = 112;
+            message_single.position = 30;
+            publisher_single->publish(message_single);
+
+            message_single.id = 13;
+            message_single.address = 112;
+            message_single.position = 60;
+            publisher_single->publish(message_single);
+
+            message_single.id = 14;
+            message_single.address = 112;
+            message_single.position = 60;
+            publisher_single->publish(message_single);
 
 
 
-          // 15 = 2048 + 800 // 16 = 2048 - 800 //
-          // 11 = 2048 - 800 // 12 = 2048 + 800 //
-          message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
-          message.position = {2048,2048,2148,1948,1024,3072,2048,2048,2047,2047,1248,2848,3644,452,2848,1248,2047,2047,2047};   
-          publisher_->publish(message);
-          usleep(1600000);
+            // 15 = 2048 + 800 // 16 = 2048 - 800 //
+            // 11 = 2048 - 800 // 12 = 2048 + 800 //
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+            message.position = {2048,2048,2148,1948,1024,3072,2048,2048,2047,2047,1248,2848,3644,452,2848,1248,2047,2047,2047};   
+            publisher_->publish(message);
+            usleep(1600000);
 
 
-          // 11 += 224 // 12 -= 224
-          // 15 -= 224 // 16 += 224
-          // 13 -= 448 // 14 += 448
-          // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //  //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
-          //  message.position = {2048,2048,2148,1948,1024,3072,1917,2067,2047,2047,1472,2624,3196,900,2624,1472,2047,2047,2047};   
-          // publisher_->publish(message);
-          // std::this_thread::sleep_for(std::chrono::seconds(2)); // Seg_1
+            // 11 += 224 // 12 -= 224
+            // 15 -= 224 // 16 += 224
+            // 13 -= 448 // 14 += 448
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //  //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+            //  message.position = {2048,2048,2148,1948,1024,3072,1917,2067,2047,2047,1472,2624,3196,900,2624,1472,2047,2047,2047};   
+            // publisher_->publish(message);
+            // std::this_thread::sleep_for(std::chrono::seconds(2)); // Seg_1
 
-          // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //  //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
-          //  message.position = {2048,2048,2148,1948,1024,3072,1917,2067,2047,2047,1696,2400,2748,1348,2400,1696,2047,2047,2047};   
-          // publisher_->publish(message);
-          // std::this_thread::sleep_for(std::chrono::seconds(1)); // Seg_2
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //  //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+            //  message.position = {2048,2048,2148,1948,1024,3072,1917,2067,2047,2047,1696,2400,2748,1348,2400,1696,2047,2047,2047};   
+            // publisher_->publish(message);
+            // std::this_thread::sleep_for(std::chrono::seconds(1)); // Seg_2
 
-          message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-          //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
-          message.position = {2048,2048,2148,1948,1024,3072,2048,2048,2047,2047,1920,2176,2300,1748,2176,1920,2047,2047,2047};   
-          publisher_->publish(message);
-          usleep(20000000);
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+            message.position = {2048,2048,2148,1948,1024,3072,2048,2048,2047,2047,1920,2176,2300,1748,2176,1920,2047,2047,2047};   
+            publisher_->publish(message);
+            usleep(20000000);
 
-          message_single.id = 254;
-          message_single.address = 112;
-          message_single.position = 60;
-          publisher_single->publish(message_single);
+            message_single.id = 254;
+            message_single.address = 112;
+            message_single.position = 60;
+            publisher_single->publish(message_single);
     
           fallen = false;
         }
       }
+      // else if(fallen_side == true){
+      //   RCLCPP_INFO(this->get_logger(), "Stand Up Side");                     
+      //   message_single.id = 254;
+      //   message_single.address = 112;
+      //   message_single.position = 80;
+      //   publisher_single->publish(message_single);
+
+      //   //RETO
+      //   message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+      //   //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+      //   message.position = {2048,2048,2048,2048,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
+      //   publisher_->publish(message);
+      //   usleep(1000000);
+
+      //   //SE JOGA PRA FRENTE
+      //   message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+      //   //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+      //   message.position = {2450,2450,2316,1802,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
+      //   publisher_->publish(message);
+      //   usleep(1000000);
+      // }
       else{
         switch (movement){
           case 1: // Parado
@@ -388,17 +416,27 @@ public:
             message_single.address = 112;
             message_single.position = 60;
             publisher_single->publish(message_single);
+            std::this_thread::sleep_for(std::chrono::seconds(1)); //1
+
+
 
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
-            message.position = {1701,2351,2219,1877,626,3470,2047,2111,2005,2095,1664,2329,2677,1420,2360,1635,2021,2082,2047};
+            message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,2047};
             publisher_->publish(message);
-            std::this_thread::sleep_for(std::chrono::seconds(2)); //1
+            std::this_thread::sleep_for(std::chrono::seconds(5)); //1
+
+            message_single.id = 254;
+            message_single.address = 112;
+            message_single.position = 10;
+            publisher_single->publish(message_single);
+            std::this_thread::sleep_for(std::chrono::seconds(1)); //1
+
 
             // 3 = 2048 + 70 // 4 = 248 - 70
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
-            message.position = {2047,2047,2118,1978,2048,2048,2047,2047,1930,2054,1770,2350,2440,1696,2292,1900,2048,1980,2047};
+            message.position = {2047,2047,2118,1978,2048,2048,2047,2047,1930,2054,1770,2350,2440,1696,2212,1863,1903,1980,2047};
       
             publisher_->publish(message);
             std::this_thread::sleep_for(std::chrono::seconds(3)); //1
@@ -406,7 +444,7 @@ public:
             // Dobrar joelhos
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1930,2054,1746,2368,2622,1696,2298,1900,1954,1928,2047};   
+            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1930,2054,1746,2368,2622,1696,2298,1863,1954,1980,2047};   
             publisher_->publish(message);
             std::this_thread::sleep_for(std::chrono::seconds(1)); //1
 
@@ -414,7 +452,7 @@ public:
             // Equilibrar em uma perna
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1930,2054,1343,2368,3239,1696,2543,1900,2048,1930,2047};   
+            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1930,2054,1343,2368,3239,1696,2543,1900,2048,1980,2047};   
             publisher_->publish(message);
             std::this_thread::sleep_for(std::chrono::seconds(1)); //1
             
@@ -422,7 +460,7 @@ public:
                 // Perna pra trás
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1850,2054,2356,2368,3239,1696,2296,1900,2048,1930,2047};   
+            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1850,2054,2356,2368,3239,1696,2296,1900,2048,1980,2047};   
             publisher_->publish(message);
 
             message_single.id = 11;
@@ -444,14 +482,14 @@ public:
                 // Quase chute
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1850,2054,1350,2368,2996,1696,2048,1900,2048,1950,2047};   
+            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1850,2054,1350,2368,2996,1696,2048,1900,2048,1980,2047};   
             publisher_->publish(message);
             usleep(200000);
 
                 // Chute
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1850,2054,1200,2368,2050,1696,2048,1900,2048,1950,2047};   
+            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1850,2054,1200,2368,2050,1696,2048,1900,2048,1980,2047};   
             publisher_->publish(message);
             std::this_thread::sleep_for(std::chrono::seconds(2)); //1
 
@@ -698,25 +736,66 @@ public:
             publisher_->publish(message);
             std::this_thread::sleep_for(std::chrono::seconds(1));
             break;
-          case 13:
+          case 13: // Agachando
             message_walk.walk = 0; 
             publisher_walk->publish(message_walk);
             RCLCPP_INFO(this->get_logger(), "Agachando");  
 
             message_single.id = 254;
             message_single.address = 112;
+            message_single.position = 30;
+            publisher_single->publish(message_single);
+
+            message_single.id = 13;
+            message_single.address = 112;
             message_single.position = 60;
-            publisher_single->publish(message_single);  
+            publisher_single->publish(message_single);
+
+            message_single.id = 14;
+            message_single.address = 112;
+            message_single.position = 60;
+            publisher_single->publish(message_single);
 
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
-            message.position = {2048,2048,2260,1836,2048,2048,2052,2044,2032,2106,1712,2384,3290,806,2911,1185,2048,2048,2047};  
+            message.position = {2048,2048,2260,1847,2048,2048,2052,2044,2032,2106,1414,2682,3153,943,2588,1508,2048,2048,2047};  
             publisher_->publish(message);
-            std::this_thread::sleep_for(std::chrono::seconds(1));
+            std::this_thread::sleep_for(std::chrono::seconds(2));
+
+
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+            message.position = {2048,2048,2260,1847,2048,2048,2048,2067,2047,2047,1248,2848,3644,452,2848,1248,2047,2047,2047};   
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(15));
 
             message_single.id = 254;
             message_single.address = 112;
-            message_single.position = 128;
+            message_single.position = 30;
+            publisher_single->publish(message_single);
+
+            message_single.id = 13;
+            message_single.address = 112;
+            message_single.position = 60;
+            publisher_single->publish(message_single);
+
+            message_single.id = 14;
+            message_single.address = 112;
+            message_single.position = 60;
+            publisher_single->publish(message_single);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
+            message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,2047};
+      
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(10));
+
+            message_single.id = 254;
+            message_single.address = 112;
+            message_single.position = 60;
             publisher_single->publish(message_single);
 
             break;
@@ -733,14 +812,271 @@ public:
             break;
           case 15: // Gait
             RCLCPP_INFO(this->get_logger(), "Gait"); 
-            message_param.walk = 3;   
-            message_param.sidle = 21;  
+            message_param.walk = 0;   
+            message_param.sidle = 0;  
             message_param.turn = 0;
             publisher_param->publish(message_param);
             //std::this_thread::sleep_for(std::chrono::seconds(2));
             message_walk.walk = 2; 
             publisher_walk->publish(message_walk);
             std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+          case 16:
+            RCLCPP_INFO(this->get_logger(), "Stand Up Back");
+            message_single.id = 254;
+            message_single.address = 112;
+            message_single.position = 40;
+            publisher_single->publish(message_single);
+
+
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            message.position = {2048,2048,2096,2000,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
+            publisher_->publish(message);
+            usleep(7000000);
+
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {2048,2048,2096,2000,2048,2048,2048,2048,2048,2060,1348,2748,3500,596,1748,2348,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(3000000);
+
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {2048,2048,2096,2000,1024,3072,2048,2048,2048,2060,1227,2869,3621,475,2596,1500,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(3000000);
+
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1    2    3    4   5   6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            message.position = {944,3203,2096,2000,804,3292,2048,2048,2048,2060,1315,2781,3665,442,2000,2096,2048,2048,2048};   
+            publisher_->publish(message);
+            usleep(3000000);
+
+
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2     3    4   5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            message.position = {882,3214,2096,2000,1178,2918,2048,2048,2048,2060,952,3144,3665,442,1978,2118,2048,2048,2048};   
+            publisher_->publish(message);
+            usleep(3000000);
+
+            message_single.id = 254;
+            message_single.address = 112;
+            message_single.position = 70;
+            publisher_single->publish(message_single);
+
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            message.position = {1769,2294,2096,2000,2048,2048,2048,2048,2048,2060,1146,2950,3621,475,2596,1500,2048,2048,2048};   
+            publisher_->publish(message);
+            usleep(3000000);
+
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {2011,2122,2096,2000,2048,2048,2048,2103,2048,2060,853,3243,3621,475,2211,1885,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(3000000);
+
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            message.position = {2121,1975,2096,2000,2048,2048,2048,2048,2048,2060,589,3507,3621,475,2296,1800,2048,2048,2048};   
+            publisher_->publish(message);
+            usleep(4000000);
+
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {2011,2122,2096,2000,2048,2048,2048,2048,2048,2060,636,3474,3665,442,2145,1951,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(2000000);
+
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {1952,2192,2096,2000,2048,2048,2048,2048,2048,2060,1029,3067,3665,442,2442,1654,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(4000000);
+
+
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {2121,1975,2096,2000,2048,2048,2048,2048,2048,2060,1070,3020,3621,475,2714,1382,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(3000000);
+
+
+            message_single.id = 254;
+            message_single.address = 112;
+            message_single.position = 30;
+            publisher_single->publish(message_single);
+
+            message_single.id = 13;
+            message_single.address = 112;
+            message_single.position = 60;
+            publisher_single->publish(message_single);
+
+            message_single.id = 14;
+            message_single.address = 112;
+            message_single.position = 60;
+            publisher_single->publish(message_single);
+
+
+
+            // 15 = 2048 + 800 // 16 = 2048 - 800 //
+            // 11 = 2048 - 800 // 12 = 2048 + 800 //
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+            message.position = {2400,1696,2148,1948,1024,3072,2048,2048,2047,2047,1248,2848,3644,452,2848,1248,2047,2047,2047};   
+            publisher_->publish(message);
+            usleep(1600000);
+
+
+            // 11 += 224 // 12 -= 224
+            // 15 -= 224 // 16 += 224
+            // 13 -= 448 // 14 += 448
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //  //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+            //  message.position = {2048,2048,2148,1948,1024,3072,1917,2067,2047,2047,1472,2624,3196,900,2624,1472,2047,2047,2047};   
+            // publisher_->publish(message);
+            // std::this_thread::sleep_for(std::chrono::seconds(2)); // Seg_1
+
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //  //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+            //  message.position = {2048,2048,2148,1948,1024,3072,1917,2067,2047,2047,1696,2400,2748,1348,2400,1696,2047,2047,2047};   
+            // publisher_->publish(message);
+            // std::this_thread::sleep_for(std::chrono::seconds(1)); // Seg_2
+
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+            message.position = {2048,2048,2148,1948,1024,3072,2048,2048,2047,2047,1920,2176,2300,1748,2176,1920,2047,2047,2047};   
+            publisher_->publish(message);
+            usleep(20000000);
+
+            message_single.id = 254;
+            message_single.address = 112;
+            message_single.position = 60;
+            publisher_single->publish(message_single);
+            break;
+          case 17: // Stand up front
+            RCLCPP_INFO(this->get_logger(), "Stand Up Front");                     
+            message_single.id = 254;
+            message_single.address = 112;
+            message_single.position = 80;
+            publisher_single->publish(message_single);
+            usleep(150000);
+
+            // //RETO
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {2048,2048,2048,2048,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(1000000);
+
+
+            // //SE JOGA PRA FRENTE
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {2450,2450,2316,1802,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(1000000);
+
+            //next
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {3871,244,2994,1047,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(1000000);
+
+
+            // message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            // //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            // message.position = {3871,244,2037,2048,2048,2048,2048,2103,2048,2060,2048,2048,2048,2048,2048,2048,2048,2048,2048};   
+            // publisher_->publish(message);
+            // usleep(2000000);
+
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            message.position = {2047,2047,2048,2048,417,3679,2048,2048,2047,2047,2047,2047,2047,2047,2047,2047,2047,2047,3072};   
+            publisher_->publish(message);
+            usleep(7000000);
+            
+
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
+            message.position = {2152,1942,2096,2000,766,3328,2048,2048,2047,2047,837,3259,3028,1066,2919,1175,2047,2047,3072};   
+            publisher_->publish(message);
+            // usleep(1500000);
+                        usleep(5000000);
+
+
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+            message.position = {2755,1339,2096,2000,2048,2048,2048,2048,2047,2047,837,3259,3523,573,2742,1354,2047,2047,3072};   
+            publisher_->publish(message);
+            //usleep(1500000);
+            usleep(5000000);
+
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+            message.position = {2048,2048,2148,1948,1024,3072,2048,2048,2047,2047,841,3259,3644,452,2657,1494,2047,2047,3072};   
+            publisher_->publish(message);
+            //usleep(2500000); //1500000
+            usleep(5000000);
+
+            //aqui
+
+            message_single.id = 254;
+            message_single.address = 112;
+            message_single.position = 30;
+            publisher_single->publish(message_single);
+                        std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+            message_single.id = 11;
+            message_single.address = 112;
+            message_single.position = 25;
+            publisher_single->publish(message_single);
+                        std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+            message_single.id = 12;
+            message_single.address = 112;
+            message_single.position = 25;
+            publisher_single->publish(message_single);
+                        std::this_thread::sleep_for(std::chrono::seconds(1));
+
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+            message.position = {1886,2207,2182,1913,825,3268,2050,2046,2040,2077,1276,2821,3217,879,2596,1527,2047,2047,3072};   
+            publisher_->publish(message);
+            //usleep(2500000); //1500000
+            usleep(5000000);
+
+            message_single.id = 13;
+            message_single.address = 112;
+            message_single.position = 25;
+            publisher_single->publish(message_single);
+                        std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+            message_single.id = 14;
+            message_single.address = 112;
+            message_single.position = 25;
+            publisher_single->publish(message_single);
+                        std::this_thread::sleep_for(std::chrono::seconds(1));
+
+
+            // Finish position / init position
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19 
+            message.position = {1724,2367,2217,1878,627,3465,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,2047};
+            //message.position = {2048,2048,2148,1948, 1024,3072,2048,2048,2048,2048,1920,2176,2300,1748,2176,1920,2048,2048,3072};   
+            publisher_->publish(message);
+            usleep(20000000);
+
+            message_single.id = 254;
+            message_single.address = 112;
+            message_single.position = 60;
+            publisher_single->publish(message_single);
+            usleep(150000);
             break;
         }
       }
@@ -766,17 +1102,8 @@ public:
     rclcpp::TimerBase::SharedPtr timer_;
 };
 
-void change_current_dir()
-{
-    char exepath[1024] = {0};
-    if(readlink("/proc/self/exe", exepath, sizeof(exepath)) != -1)
-        chdir(dirname(exepath));
-}
-
 int main(int argc, char * argv[])
 {
-  change_current_dir();
-
   
   //Configurando para prioridade maxima para executar este processo-------
   char string1[50]; //String

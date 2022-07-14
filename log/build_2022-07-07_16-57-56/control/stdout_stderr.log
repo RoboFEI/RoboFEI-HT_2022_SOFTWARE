@@ -1,0 +1,73 @@
+[35m[1mScanning dependencies of target control[0m
+[  4%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[ 13%] Built target gait_publisher
+[ 21%] Built target decision
+[ 95%] Built target motion
+[01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:[m[K In member function ‘[01m[Kvoid Control::topic_callback_vision(std::shared_ptr<custom_interfaces::msg::Vision_<std::allocator<void> > >) const[m[K’:
+[01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:97:22:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 2 has type ‘[01m[Kint[m[K’ [[01;35m[K-Wformat=[m[K]
+   97 |       printf("Ball: [01;35m[K%s[m[K\n", [32m[Kball[m[K);
+      |                     [01;35m[K~^[m[K     [32m[K~~~~[m[K
+      |                      [01;35m[K|[m[K     [32m[K|[m[K
+      |                      [01;35m[Kchar*[m[K [32m[Kint[m[K
+      |                     [32m[K%d[m[K
+[01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:820:70:[m[K [01;35m[Kwarning: [m[K‘[01m[Kecho robofei-desktop 123456|...[m[K’ directive writing 51 bytes into a region of size 50 [[01;35m[K-Wformat-overflow=[m[K]
+  820 |   sprintf(string1,"[01;35m[Kecho robofei-desktop 123456| sudo -S renice -20 -p [m[K%d", getpid());
+      |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:820:10:[m[K [01;36m[Knote: [m[K‘[01m[Ksprintf[m[K’ output between 53 and 63 bytes into a destination of size 50
+  820 |   [01;36m[Ksprintf(string1,"echo robofei-desktop 123456| sudo -S renice -20 -p %d", getpid())[m[K;
+      |   [01;36m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable control[0m
+[100%] Built target control
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/lib/control/gait_publisher
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/lib/control/control
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/lib/control/decision
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/lib/libmotion.so
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Action.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//AngleEstimator.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//DARwIn.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//FSR.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//GaitMove.hpp
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//JointData.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Kinematics.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//LinuxActionScript.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//LinuxCM730.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//LinuxDARwIn.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//LinuxMotionTimer.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//LinuxNetwork.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//MX28.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Matrix.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//MotionManager.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//MotionModule.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//MotionState.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//MotionStatus.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Plane.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Point.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//QuadraticStateTransform.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//RadonTransform.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//ReadConfig.hpp
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//RegionProps.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Vector.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Walking.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//cmd_process.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/include//minIni.h
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control//launch/action.launch.py
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/ament_index/resource_index/package_run_dependencies/control
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/ament_index/resource_index/parent_prefix_path/control
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/environment/path.sh
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/environment/path.dsv
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/local_setup.bash
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/local_setup.sh
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/local_setup.zsh
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/local_setup.dsv
+-- Symlinking: /home/robofei/ROS2/install/control/share/control/package.dsv
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/ament_index/resource_index/packages/control
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/ament_index/resource_index/rclcpp_components/control
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/cmake/controlConfig.cmake
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/cmake/controlConfig-version.cmake
+-- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/package.xml

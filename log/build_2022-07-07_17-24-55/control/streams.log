@@ -1,0 +1,24 @@
+[0.044s] Invoking command in '/home/robofei/ROS2/build/control': AMENT_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --build /home/robofei/ROS2/build/control -- -j8 -l8
+[0.135s] [35m[1mScanning dependencies of target control[0m
+[0.180s] [ 73%] Built target motion
+[0.190s] [ 82%] Built target decision
+[0.193s] [ 91%] Built target gait_publisher
+[0.197s] [ 95%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[1.695s] [01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:[m[K In member function ‘[01m[Kvoid Control::topic_callback_vision(std::shared_ptr<custom_interfaces::msg::Vision_<std::allocator<void> > >) const[m[K’:
+[1.695s] [01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:110:22:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 2 has type ‘[01m[Kint[m[K’ [[01;35m[K-Wformat=[m[K]
+[1.695s]   110 |       printf("Ball: [01;35m[K%s[m[K\n", [32m[Kball[m[K);
+[1.695s]       |                     [01;35m[K~^[m[K     [32m[K~~~~[m[K
+[1.695s]       |                      [01;35m[K|[m[K     [32m[K|[m[K
+[1.695s]       |                      [01;35m[Kchar*[m[K [32m[Kint[m[K
+[1.696s]       |                     [32m[K%d[m[K
+[4.775s] [01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[4.775s] [01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:862:70:[m[K [01;35m[Kwarning: [m[K‘[01m[Kecho robofei-desktop 123456|...[m[K’ directive writing 51 bytes into a region of size 50 [[01;35m[K-Wformat-overflow=[m[K]
+[4.775s]   862 |   sprintf(string1,"[01;35m[Kecho robofei-desktop 123456| sudo -S renice -20 -p [m[K%d", getpid());
+[4.775s]       |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[4.775s] [01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:862:10:[m[K [01;36m[Knote: [m[K‘[01m[Ksprintf[m[K’ output between 53 and 63 bytes into a destination of size 50
+[4.776s]   862 |   [01;36m[Ksprintf(string1,"echo robofei-desktop 123456| sudo -S renice -20 -p %d", getpid())[m[K;
+[4.776s]       |   [01;36m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.563s] make[2]: *** [CMakeFiles/control.dir/build.make:63: CMakeFiles/control.dir/src/control.cpp.o] Interrupt
+[7.563s] make[1]: *** [CMakeFiles/Makefile2:111: CMakeFiles/control.dir/all] Interrupt
+[7.564s] make: *** [Makefile:141: all] Interrupt
+[7.611s] Invoked command in '/home/robofei/ROS2/build/control' returned '-2': AMENT_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/custom_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --build /home/robofei/ROS2/build/control -- -j8 -l8

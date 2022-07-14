@@ -1,5 +1,6 @@
 // Open terminal #2 
 // $ ros2 run dynamixel_sdk_examples minimal_pub
+// $ ros2 run control decision
 #include <chrono>
 #include <memory>
 #include <thread>
@@ -26,9 +27,21 @@ private:
   void timer_callback()
   {
     auto message = dynamixel_sdk_custom_interfaces::msg::Decision();   
-      message.decision = 8;          
+      message.decision = 1;          
       publisher_->publish(message);
-      std::this_thread::sleep_for(std::chrono::seconds(10));  
+      std::this_thread::sleep_for(std::chrono::seconds(5));  
+      message.decision = 14;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(10)); 
+      message.decision = 15;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(5)); 
+      message.decision = 3;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(5)); 
+      message.decision = 1;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(100));
   
 
   }

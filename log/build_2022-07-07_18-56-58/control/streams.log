@@ -1,0 +1,77 @@
+[0.035s] Invoking command in '/home/robofei/ROS2/build/control': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/custom_interfaces/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --build /home/robofei/ROS2/build/control -- -j8 -l8
+[0.112s] [35m[1mScanning dependencies of target control[0m
+[0.153s] [  8%] Built target gait_publisher
+[0.163s] [ 82%] Built target motion
+[0.167s] [ 86%] [32mBuilding CXX object CMakeFiles/control.dir/src/control.cpp.o[0m
+[0.192s] [ 95%] Built target decision
+[1.674s] [01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:[m[K In member function ‘[01m[Kvoid Control::topic_callback_vision(std::shared_ptr<custom_interfaces::msg::Vision_<std::allocator<void> > >) const[m[K’:
+[1.674s] [01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:110:22:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 2 has type ‘[01m[Kint[m[K’ [[01;35m[K-Wformat=[m[K]
+[1.674s]   110 |       printf("Ball: [01;35m[K%s[m[K\n", [32m[Kball[m[K);
+[1.674s]       |                     [01;35m[K~^[m[K     [32m[K~~~~[m[K
+[1.674s]       |                      [01;35m[K|[m[K     [32m[K|[m[K
+[1.674s]       |                      [01;35m[Kchar*[m[K [32m[Kint[m[K
+[1.674s]       |                     [32m[K%d[m[K
+[4.713s] [01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[4.713s] [01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:858:70:[m[K [01;35m[Kwarning: [m[K‘[01m[Kecho robofei-desktop 123456|...[m[K’ directive writing 51 bytes into a region of size 50 [[01;35m[K-Wformat-overflow=[m[K]
+[4.713s]   858 |   sprintf(string1,"[01;35m[Kecho robofei-desktop 123456| sudo -S renice -20 -p [m[K%d", getpid());
+[4.714s]       |                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[4.714s] [01m[K/home/robofei/ROS2/src/walk_test/src/control/src/control.cpp:858:10:[m[K [01;36m[Knote: [m[K‘[01m[Ksprintf[m[K’ output between 53 and 63 bytes into a destination of size 50
+[4.714s]   858 |   [01;36m[Ksprintf(string1,"echo robofei-desktop 123456| sudo -S renice -20 -p %d", getpid())[m[K;
+[4.714s]       |   [01;36m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.682s] [100%] [32m[1mLinking CXX executable control[0m
+[10.109s] [100%] Built target control
+[10.120s] Invoked command in '/home/robofei/ROS2/build/control' returned '0': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/custom_interfaces/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --build /home/robofei/ROS2/build/control -- -j8 -l8
+[10.170s] Invoking command in '/home/robofei/ROS2/build/control': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/custom_interfaces/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --install /home/robofei/ROS2/build/control
+[10.178s] -- Install configuration: ""
+[10.179s] -- Execute custom install script
+[10.179s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/lib/control/gait_publisher
+[10.179s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/lib/control/control
+[10.180s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/lib/control/decision
+[10.180s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/lib/libmotion.so
+[10.181s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Action.h
+[10.181s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//AngleEstimator.h
+[10.181s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//DARwIn.h
+[10.181s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//FSR.h
+[10.181s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//GaitMove.hpp
+[10.181s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//JointData.h
+[10.181s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Kinematics.h
+[10.182s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//LinuxActionScript.h
+[10.182s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//LinuxCM730.h
+[10.182s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//LinuxDARwIn.h
+[10.182s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//LinuxMotionTimer.h
+[10.182s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//LinuxNetwork.h
+[10.182s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//MX28.h
+[10.182s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Matrix.h
+[10.183s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//MotionManager.h
+[10.183s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//MotionModule.h
+[10.183s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//MotionState.h
+[10.183s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//MotionStatus.h
+[10.183s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Plane.h
+[10.183s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Point.h
+[10.183s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//QuadraticStateTransform.h
+[10.183s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//RadonTransform.h
+[10.184s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//ReadConfig.hpp
+[10.184s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//RegionProps.h
+[10.184s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Vector.h
+[10.184s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//Walking.h
+[10.184s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//cmd_process.h
+[10.184s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/include//minIni.h
+[10.185s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control//launch/action.launch.py
+[10.185s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/ament_index/resource_index/package_run_dependencies/control
+[10.185s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/ament_index/resource_index/parent_prefix_path/control
+[10.185s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/environment/ament_prefix_path.sh
+[10.186s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/environment/ament_prefix_path.dsv
+[10.186s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/environment/path.sh
+[10.186s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/environment/path.dsv
+[10.186s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/local_setup.bash
+[10.187s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/local_setup.sh
+[10.187s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/local_setup.zsh
+[10.187s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/local_setup.dsv
+[10.187s] -- Symlinking: /home/robofei/ROS2/install/control/share/control/package.dsv
+[10.196s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/ament_index/resource_index/packages/control
+[10.196s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/ament_index/resource_index/rclcpp_components/control
+[10.197s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/cmake/ament_cmake_export_dependencies-extras.cmake
+[10.197s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/cmake/controlConfig.cmake
+[10.197s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/cmake/controlConfig-version.cmake
+[10.197s] -- Up-to-date symlink: /home/robofei/ROS2/install/control/share/control/package.xml
+[10.201s] Invoked command in '/home/robofei/ROS2/build/control' returned '0': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/custom_interfaces/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --install /home/robofei/ROS2/build/control

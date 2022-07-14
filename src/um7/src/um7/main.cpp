@@ -327,7 +327,7 @@ Driver::Driver(const rclcpp::NodeOptions & options) :
   axes_(OutputAxisOptions::DEFAULT)
 {
   // Load parameters
-  port_ = this->declare_parameter<std::string>("port", "/dev/ttyUSB2");
+  port_ = this->declare_parameter<std::string>("port", "/dev/ttyUSB1");
   int32_t baud = this->declare_parameter<int32_t>("baud", 115200);
 
   serial_.setPort(port_);
