@@ -33,7 +33,6 @@ using std::placeholders::_1;
 int movement = 0;
 int contador = 0;
 int cont_vision = 2047;
-int cont_fall_side = 0;
 bool stop_gait = true;
 bool fallen = false;
 bool fallenFront = false;
@@ -91,23 +90,23 @@ public:
         }
       }
       
-      if(IMU_ACCEL_Y > 0.7 || IMU_ACCEL_Y < -0.7)
-        cont_fall_side++;
-      else
-        cont_fall_side = 0;
-      RCLCPP_INFO(this->get_logger(),"Contador fall side %d \n", cont_fall_side);
+      // if(IMU_ACCEL_Y > 0.7 || IMU_ACCEL_Y < -0.7)
+      //   cont_fall_side++;
+      // else
+      //   cont_fall_side = 0;
+      // RCLCPP_INFO(this->get_logger(),"Contador fall side %d \n", cont_fall_side);
       
-      if(cont_fall_side>=3)
-      {
-        RCLCPP_INFO(this->get_logger(),"Caido");
-        fallen_side = true; // Robô caido
-      }
+      // if(cont_fall_side>=3)
+      // {
+      //   RCLCPP_INFO(this->get_logger(),"Caido");
+      //   fallen_side = true; // Robô caido
+      // }
     }
 
     void topic_callback_vision(const std::shared_ptr<custom_interfaces::msg::Vision> vision_msg) const
     {
       ball = vision_msg->ball_detected;
-      printf("Ball: %s\n", ball);
+      printf("Ball: %d\n", ball);
     }
 
     void Process(){
@@ -436,7 +435,7 @@ public:
             // 3 = 2048 + 70 // 4 = 248 - 70
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
-            message.position = {2047,2047,2118,1978,2048,2048,2047,2047,1930,2054,1770,2350,2440,1696,2212,1863,1903,1980,2047};
+            message.position = {2047,2047,2118,1978,2048,2048,2047,2047,1930,2054,1770,2350,2440,1696,2212,1863,1903,1975,2047};
       
             publisher_->publish(message);
             std::this_thread::sleep_for(std::chrono::seconds(3)); //1
@@ -444,7 +443,7 @@ public:
             // Dobrar joelhos
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1930,2054,1746,2368,2622,1696,2298,1863,1954,1980,2047};   
+            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1930,2054,1746,2368,2622,1696,2298,1863,1954,1965,2047};   
             publisher_->publish(message);
             std::this_thread::sleep_for(std::chrono::seconds(1)); //1
 
@@ -452,7 +451,7 @@ public:
             // Equilibrar em uma perna
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1930,2054,1343,2368,3239,1696,2543,1900,2048,1980,2047};   
+            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1930,2054,1343,2368,3239,1696,2543,1900,2048,1960,2047};   
             publisher_->publish(message);
             std::this_thread::sleep_for(std::chrono::seconds(1)); //1
             
@@ -460,23 +459,26 @@ public:
                 // Perna pra trás
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
-            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1850,2054,2356,2368,3239,1696,2296,1900,2048,1980,2047};   
+            message.position = {2047,2047,2137,1446,496,2854,2047,2047,1850,2054,2356,2368,3239,1696,2296,1900,2048,1975,2047};   
             publisher_->publish(message);
 
             message_single.id = 11;
             message_single.address = 112;
-            message_single.position = 4000;
+            message_single.position = 8000;
             publisher_single->publish(message_single);
+             std::this_thread::sleep_for(std::chrono::seconds(1)); //1
 
             message_single.id = 13;
             message_single.address = 112;
-            message_single.position = 2000;
+            message_single.position = 4000;
             publisher_single->publish(message_single);
+             std::this_thread::sleep_for(std::chrono::seconds(1)); //1
 
             message_single.id = 15;
             message_single.address = 112;
-            message_single.position = 2000;
+            message_single.position = 4000;
             publisher_single->publish(message_single);
+             std::this_thread::sleep_for(std::chrono::seconds(1)); //1
 
             std::this_thread::sleep_for(std::chrono::seconds(1)); //1
                 // Quase chute
@@ -674,19 +676,17 @@ public:
             message_walk.walk = 0; 
             publisher_walk->publish(message_walk);        
             RCLCPP_INFO(this->get_logger(), "Moving head"); 
-            if(ball == false){
-              if(cont_vision>=3072) 
-                valor = -255;
-              if(cont_vision<=1024)
-                valor=255;  
-              cont_vision = cont_vision + valor; 
-              message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
-              //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
-              message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,cont_vision};
-        
-              publisher_->publish(message);
-              std::this_thread::sleep_for(std::chrono::seconds(1));         
-            }    
+            if(cont_vision>=3072) 
+              valor = -255;
+            if(cont_vision<=1024)
+              valor=255;  
+            cont_vision = cont_vision + valor; 
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
+            message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,cont_vision};
+      
+            publisher_->publish(message);
+            std::this_thread::sleep_for(std::chrono::seconds(1));   
             
             break;
           case 9: // Turn ball clockwise
@@ -805,7 +805,7 @@ public:
             message_param.sidle = 0;  
             message_param.turn = 2.5;  
             publisher_param->publish(message_param);
-            //std::this_thread::sleep_for(std::chrono::seconds(2));
+            std::this_thread::sleep_for(std::chrono::seconds(1));
             message_walk.walk = 1; 
             publisher_walk->publish(message_walk);
             std::this_thread::sleep_for(std::chrono::seconds(1));
@@ -814,10 +814,10 @@ public:
             RCLCPP_INFO(this->get_logger(), "Gait"); 
             message_param.walk = 0;   
             message_param.sidle = 0;  
-            message_param.turn = 0;
+            message_param.turn = -20;   
             publisher_param->publish(message_param);
-            //std::this_thread::sleep_for(std::chrono::seconds(2));
-            message_walk.walk = 2; 
+            //std::this_thread::sleep_for(std::chrono::seconds(1));
+            message_walk.walk = 11; 
             publisher_walk->publish(message_walk);
             std::this_thread::sleep_for(std::chrono::seconds(1));
             break;
@@ -1102,9 +1102,16 @@ public:
     rclcpp::TimerBase::SharedPtr timer_;
 };
 
+void change_current_dir()
+{
+    char exepath[1024] = {0};
+    if(readlink("/proc/self/exe", exepath, sizeof(exepath)) != -1)
+        chdir(dirname(exepath));
+}
+
 int main(int argc, char * argv[])
 {
-  
+  change_current_dir();
   //Configurando para prioridade maxima para executar este processo-------
   char string1[50]; //String
   sprintf(string1,"echo robofei 123456| sudo -S renice -20 -p %d", getpid());

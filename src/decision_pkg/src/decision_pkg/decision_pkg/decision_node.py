@@ -18,17 +18,7 @@ TEAM_ROBOFEI = 7
 ROBOT_NUMBER = 1 # JOGADOR, PARA GOLEIRO COLOCAR 0
 LADO = 0 # 0 vira para o lado DIREITO e 1 para o lado ESQUERDO, depende de que lado o nosso time vai começar
 
-BALL_DETECTED = False
-BALL_LEFT = False
-BALL_CENTER_LEFT = False
-BALL_RIGHT = False
-BALL_CENTER_RIGHT = False
-orientation = 0
-BALL_FAR = False # bola longe
-BALL_CLOSE = False # bola perto
-BALL_MED = False # bola centralizada
-distance_to_kick = 40 #real robot
-ready_goalie=False
+
 
 class DecisionNode(Node):
 
@@ -36,7 +26,7 @@ class DecisionNode(Node):
         super().__init__('decision_node')
         self.get_logger().info('Running Decision Node')
         self.ready_robot=False
-        self.cont_vision=0
+        # self.cont_vision=0
         # Publisher da decisão
         self.publisher_ = self.create_publisher(Decision, '/decision', 10)
         # Subscriber do Game Controller
@@ -61,30 +51,41 @@ class DecisionNode(Node):
         self.subscription  
         self.subscription_vision
         self.subscription_imu
+        self.BALL_DETECTED = False
+        self.BALL_LEFT = False
+        self.BALL_CENTER_LEFT = False
+        self.BALL_RIGHT = False
+        self.BALL_CENTER_RIGHT = False
+        self.orientation = 0
+        self.BALL_FAR = False # bola longe
+        self.BALL_CLOSE = False # bola perto
+        self.BALL_MED = False # bola centralizada
+        self.distance_to_kick = 40 #real robot
+        self.ready_goalie=False
 
     def listener_callback_vision(self, msg):
-        BALL_DETECTED = msg.ball_detected
-        self.get_logger().info('I see the ball "%s"' % BALL_DETECTED)
-        BALL_LEFT = msg.ball_left
-        self.get_logger().info('Ball left "%s"' % BALL_LEFT)
-        BALL_CENTER_LEFT = msg.ball_center_left
-        self.get_logger().info('Ball center left "%s"' % BALL_CENTER_LEFT)
-        BALL_RIGHT = msg.ball_right
-        self.get_logger().info('Ball right "%s"' % BALL_RIGHT)
-        BALL_CENTER_RIGHT = msg.ball_center_right
-        self.get_logger().info('Ball center right "%s"' % BALL_CENTER_RIGHT)
-        BALL_FAR = msg.ball_far
-        self.get_logger().info('Ball far "%s"' % BALL_FAR)
-        BALL_MED = msg.ball_med
-        self.get_logger().info('Ball med "%s"' % BALL_MED)
-        BALL_CLOSE = msg.ball_close
-        self.get_logger().info('Ball close "%s"' % BALL_CLOSE)
+        self.BALL_DETECTED = msg.ball_detected
+        self.get_logger().info('I see the ball "%s"' % self.BALL_DETECTED)
+        self.BALL_LEFT = msg.ball_left
+        #self.get_logger().info('Ball left "%s"' % BALL_LEFT)
+        self.BALL_CENTER_LEFT = msg.ball_center_left
+        #self.get_logger().info('Ball center left "%s"' % BALL_CENTER_LEFT)
+        self.BALL_RIGHT = msg.ball_right
+        #self.get_logger().info('Ball right "%s"' % BALL_RIGHT)
+        self.BALL_CENTER_RIGHT = msg.ball_center_right
+        #self.get_logger().info('Ball center right "%s"' % BALL_CENTER_RIGHT)
+        self.BALL_FAR = msg.ball_far
+        #self.get_logger().info('Ball far "%s"' % BALL_FAR)
+        self.BALL_MED = msg.ball_med
+        #self.get_logger().info('Ball med "%s"' % BALL_MED)
+        self.BALL_CLOSE = msg.ball_close
+        #self.get_logger().info('Ball close "%s"' % BALL_CLOSE)
            
 
 
     def listener_callback_imu(self, msg):
-        orientation = msg.rpy_msg.vector.z
-        self.get_logger().info('Orientation "%d"' % orientation)
+        self.orientation = msg.rpy_msg.vector.z
+        self.get_logger().info('Orientation "%d"' % self.orientation)
 
     # def timer_callback(self):
     #     message= Decision()
@@ -135,6 +136,8 @@ class DecisionNode(Node):
             elif(msg.game_state == 1): # Robô vai para a posição inicial
                 if(self.ready_robot==False):
                     self.get_logger().info('READY: Go to start position')
+                    self.stand_still(message)
+                    sleep(2)
                     self.walking(message) # Anda até chegar no meio de campo
                     sleep(8)
                     self.gait(message) 
@@ -142,10 +145,15 @@ class DecisionNode(Node):
                     self.turn(message, LADO) # Anda até chegar no meio de campo
                     sleep(4)
                     self.ready_robot=True
-                if(BALL_DETECTED == False):
-                	self.search_ball(message) # Procura a bola
+                self.get_logger().info('Ball b4 ifs "%s"' % self.BALL_DETECTED)
+                if(self.BALL_DETECTED == False):
+                    self.search_ball(message) # Procura a bola
+                    self.get_logger().info('PROCURANDOOOO ')
+                	
                 else:
                     self.stand_still(message)
+                    self.get_logger().info('ACHEEEEEI' )
+                    
                 
             elif(msg.game_state == 2): # Espera o jogo começar
                 self.get_logger().info('SET: Keep ready')
@@ -153,6 +161,12 @@ class DecisionNode(Node):
 
 
             elif(msg.game_state == 3): # Jogo começou
+                self.stand_still(message)
+                sleep(5)
+                self.walking(message)
+                sleep(50)
+                self.gait(message) 
+                sleep(8)
                 if(msg.secondary_state == 6): # Penalti do oponente
                     self.stand_still(message)
 
@@ -185,36 +199,45 @@ class DecisionNode(Node):
                     self.stand_still(message)
 
                 else: 
-                    if(BALL_DETECTED == False):
+                    if(self.BALL_DETECTED == False):
                         self.search_ball(message) # Procura a bola
-                        self.cont_vision = self.cont_vision+1
-                        if self.cont_vision>=20:
-                            self.walking(message)
-                            sleep(5)
-                            self.gait(message) 
-                            sleep(3)
-                            self.cont_vision=0
+                        # self.cont_vision = self.cont_vision+1
+                        # print("cont_vision %d", self.cont_vision)
+                        # if self.cont_vision>=10:
+                        self.stand_still(message)
+                        sleep(2)
+                        self.walking(message)
+                        sleep(5)
+                        self.gait(message) 
+                        sleep(3)
+                            # self.cont_vision=0
+                        print("Bola nao achada")
                     else:
-                        if(BALL_LEFT==True):
-                            self.turn(message, 1) # Vira para o lado direito
-                            sleep(8)
+                        print("Bola achada")
+                        if(self.BALL_LEFT==True):
+                            self.turn(message, 1) # Vira para o lado esquerdo
                         elif (BALL_RIGHT==True):
                             self.turn(message, 0) # Vira para o lado direito
                             sleep(8)
-                        if(BALL_FAR==True):
+                        if(self.BALL_FAR==True):
+                            self.stand_still(message)
+                            sleep(2)
                             self.walking(message) 
                             sleep(8)
                             self.gait(message)
                             sleep(4)
-                        if(BALL_MED==True):
+                        if(self.BALL_MED==True):
+                            self.stand_still(message)
+                            sleep(2)
                             self.walking(message) 
                             sleep(4)
                             self.gait(message)
                             sleep(4)
-                        if(BALL_CLOSE==True and BALL_CENTER_LEFT==True):
+                        if(self.BALL_CLOSE==True and self.BALL_CENTER_LEFT==True):
                             self.kicking(message, 0) # chuta com pe esquerdo
-                        if(BALL_CLOSE==True and BALL_CENTER_RIGHT==True):
+                        if(self.BALL_CLOSE==True and self.BALL_CENTER_RIGHT==True):
                             self.kicking(message, 1) # chuta com pe direito
+
 
 
 
@@ -232,7 +255,7 @@ class DecisionNode(Node):
                     self.walking(message) 
                     sleep(8)
                     ready_goalie=True
-                if(BALL_DETECTED == False):
+                if(self.BALL_DETECTED == False):
                 	self.search_ball(message) # Procura a bola
                 else:
                     self.stand_still(message)
@@ -243,13 +266,33 @@ class DecisionNode(Node):
 
             elif(msg.game_state == 3): # Jogo começou
                 self.search_ball(message)
-                if(BALL_DETECTED == True):  # Bola achada
+                if(self.BALL_DETECTED == True):  # Bola achada
                     if BALL_LEFT ==  True:  
                         self.goalkeeper(message, 1) # Bola na esquerda se joga para a esquerda
                     elif BALL_RIGHT ==  True: 
                         self.goalkeeper(message, 2) # Bola na direita se joga para a direita
                     else: # A bola está alinhada, goleiro agacha
                         self.goalkeeper(message, 0) 
+                if(self.BALL_LEFT==True):
+                    self.turn(message, 1) # Vira para o lado direito
+                    sleep(8)
+                elif (self.BALL_RIGHT==True):
+                    self.turn(message, 0) # Vira para o lado direito
+                    sleep(8)
+                if(self.BALL_FAR==True):
+                    self.walking(message) 
+                    sleep(8)
+                    self.gait(message)
+                    sleep(4)
+                if(self.BALL_MED==True):
+                    self.walking(message) 
+                    sleep(4)
+                    self.gait(message)
+                    sleep(4)
+                if(self.BALL_CLOSE==True and self.BALL_CENTER_LEFT==True):
+                    self.kicking(message, 0) # chuta com pe esquerdo
+                if(self.BALL_CLOSE==True and self.BALL_CENTER_RIGHT==True):
+                    self.kicking(message, 1) # chuta com pe direito
 
             elif(msg.game_state == 4): # Jogo terminou, robô sai do campo
                 self.stand_still(message)
@@ -282,7 +325,7 @@ class DecisionNode(Node):
         self.get_logger().info('Publishing: "%d"' % message.decision)
 
     def search_ball(self, message):
-        if(BALL_DETECTED == False):
+        if(self.BALL_DETECTED == False):
             message.decision = 8 # Move o motor da cabeça para o robô procurar a bola
             self.publisher_.publish(message)
             self.get_logger().info('Publishing: "%d"' % message.decision)

@@ -1,0 +1,1 @@
+/home/robofei/ROS2/build/um7/rosidl_generator_c/um7/srv/detail/reset__type_support.h

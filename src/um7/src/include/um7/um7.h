@@ -82,7 +82,7 @@ private:
 
   // ROS2 Interfaces
   rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr imu_pub_;
-  rclcpp::Publisher<sensor_msgs::msg::MagneticField>::SharedPtr mag_pub_;
+  // rclcpp::Publisher<sensor_msgs::msg::MagneticField>::SharedPtr mag_pub_;
   rclcpp::Publisher<geometry_msgs::msg::Vector3Stamped>::SharedPtr rpy_pub_;
   rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr temperature_pub_;
 

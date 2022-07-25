@@ -49,7 +49,7 @@ class ballStatus(Node):
     def __init__(self, config):
         self.config = config
         super().__init__('minimal_publisher')
-        self.publisher_ = self.create_publisher(Vision, 'ball_position', 10)
+        self.publisher_ = self.create_publisher(Vision, '/ball_position', 10)
         self.vcap = WebcamVideoStream(src=0).start() #Abrindo camera)
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.thread_DNN)
@@ -100,7 +100,7 @@ class ballStatus(Node):
 	#	# e mais longe estará a bola do robô
 		#Bola acima
         if (y < self.config.y_longe):
-            msg.ball_far = True
+            msg.ball_left = True
             self.publisher_.publish(msg)
             #self.get_logger().info('Publishing: "%s"' % msg.ball_far)
             print("Bola a Esquerda")
@@ -108,14 +108,14 @@ class ballStatus(Node):
 
 		#Bola ao centro esquerda
         if (y > self.config.y_longe and y < self.config.x_center):
-            msg.ball_med = True
+            msg.ball_center_left = True
             self.publisher_.publish(msg)
             #self.get_logger().info('Publishing: "%s"' % msg.ball_med)
             print("Bola ao Centro Esquerda")
 
         #Bola ao centro direita
         if (y < self.config.y_chute and y > self.config.x_center):
-            msg.ball_med = True
+            msg.ball_center_right = True
             self.publisher_.publish(msg)
             #self.get_logger().info('Publishing: "%s"' % msg.ball_med)
             print("Bola ao Centro Direita")
@@ -133,6 +133,7 @@ class ballStatus(Node):
 #	time.sleep(1)
 #	script_start_time = time.time()
 #	print "FRAME = ", time.time() - script_start_time
+        msg=Vision()
        
         #cut_right = 1280-config.cut_edge_image
         frame = self.vcap.read()
@@ -148,6 +149,9 @@ class ballStatus(Node):
         if ball == True:
             self.BallStatus(x,y,status)
         else:
+            msg = Vision()
+            msg.ball_detected =False
+            self.publisher_.publish(msg)
             print("Sem bola :( ")
         if self.args2.visionball:
             cv2.circle(frame_b, (int(x), int(y)), int(raio), (255, 0, 0), 4)
@@ -167,8 +171,8 @@ def main(args=None):
     
     
     os.system("v4l2-ctl -d /dev/video0 -c focus_auto=0 && v4l2-ctl -d /dev/video0 -c focus_absolute=0")
-    os.system("v4l2-ctl -d /dev/video0 -c saturation=200")#manter 200 para nao estourar LARC
-    os.system("v4l2-ctl -d /dev/video0 -c brightness=2")
+    os.system("v4l2-ctl -d /dev/video0 -c saturation=10")#manter 200 para nao estourar LARC
+    os.system("v4l2-ctl -d /dev/video0 -c brightness=0")
 
     rclpy.spin(ballS)
 

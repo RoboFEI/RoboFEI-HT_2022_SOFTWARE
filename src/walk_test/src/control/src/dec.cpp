@@ -26,22 +26,23 @@ public:
 private:
   void timer_callback()
   {
-    auto message = dynamixel_sdk_custom_interfaces::msg::Decision();   
+    auto message = dynamixel_sdk_custom_interfaces::msg::Decision();  
+      
       message.decision = 1;          
       publisher_->publish(message);
-      std::this_thread::sleep_for(std::chrono::seconds(5));  
-      message.decision = 14;          
-      publisher_->publish(message);
-      std::this_thread::sleep_for(std::chrono::seconds(10)); 
+      std::this_thread::sleep_for(std::chrono::seconds(40));  
       message.decision = 15;          
       publisher_->publish(message);
-      std::this_thread::sleep_for(std::chrono::seconds(5)); 
+      std::this_thread::sleep_for(std::chrono::seconds(2));
+      message.decision = 14;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(5));
+      message.decision = 15;          
+      publisher_->publish(message);
+      std::this_thread::sleep_for(std::chrono::seconds(2));
       message.decision = 3;          
       publisher_->publish(message);
-      std::this_thread::sleep_for(std::chrono::seconds(5)); 
-      message.decision = 1;          
-      publisher_->publish(message);
-      std::this_thread::sleep_for(std::chrono::seconds(100));
+      std::this_thread::sleep_for(std::chrono::seconds(8));
   
 
   }
