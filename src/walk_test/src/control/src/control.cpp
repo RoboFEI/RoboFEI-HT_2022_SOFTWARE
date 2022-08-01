@@ -63,7 +63,7 @@ public:
     publisher_single = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal>("set_position_single", 10);
     publisher_walk = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::Walk>("walking", 10); 
     publisher_param = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::ParamWalk>("param_walk", 10); 
-    timer_ = this->create_wall_timer(4ms, std::bind(&Control::Process, this));
+    timer_ = this->create_wall_timer(8ms, std::bind(&Control::Process, this));
   }
 
   private:
@@ -396,7 +396,6 @@ public:
             message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,2047};
       
             publisher_->publish(message);
-            std::this_thread::sleep_for(std::chrono::seconds(1));
             break;
           case 2:
             message_walk.walk = 0; 
@@ -678,7 +677,7 @@ public:
             RCLCPP_INFO(this->get_logger(), "Moving head"); 
             if(cont_vision>=3072) 
               valor = -255;
-            if(cont_vision<=1024)
+            else if(cont_vision<=1024)
               valor=255;  
             cont_vision = cont_vision + valor; 
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
@@ -1086,8 +1085,7 @@ public:
     {
       
       auto message_dec = dynamixel_sdk_custom_interfaces::msg::Decision();
-      message_dec.decision = msg->decision;
-      movement = (int)message_dec.decision;
+      movement = (int)msg->decision;
       RCLCPP_INFO(this->get_logger(), "I heard %d", movement);
       
     } 
@@ -1114,7 +1112,7 @@ int main(int argc, char * argv[])
   change_current_dir();
   //Configurando para prioridade maxima para executar este processo-------
   char string1[50]; //String
-  sprintf(string1,"echo robofei 123456| sudo -S renice -20 -p %d", getpid());
+  sprintf(string1,"echo 123456| sudo -S renice -20 -p %d", getpid());
   system(string1);//prioridade
   //GaitMove gaitMove(ini);
   rclcpp::init(argc, argv);

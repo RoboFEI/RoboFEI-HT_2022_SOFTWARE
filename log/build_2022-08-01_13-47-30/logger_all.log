@@ -1,0 +1,999 @@
+[0.214s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.214s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fb93be09610>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=8, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fb93be09610>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fb93be09b50>)
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.260s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.260s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/robofei/ROS2'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extension 'ignore_ament_install'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extensions ['colcon_pkg']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extension 'colcon_pkg'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extensions ['colcon_meta']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extension 'colcon_meta'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extensions ['ros']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extension 'ros'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extensions ['cmake', 'python']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extension 'cmake'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extension 'python'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extensions ['python_setup_py']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC) by extension 'python_setup_py'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extensions ['ignore', 'ignore_ament_install']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extension 'ignore'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extension 'ignore_ament_install'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extensions ['colcon_pkg']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extension 'colcon_pkg'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extensions ['colcon_meta']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extension 'colcon_meta'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extensions ['ros']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extension 'ros'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extensions ['cmake', 'python']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extension 'cmake'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extension 'python'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extensions ['python_setup_py']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src) by extension 'python_setup_py'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src/controller) by extensions ['ignore', 'ignore_ament_install']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src/controller) by extension 'ignore'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src/controller) by extension 'ignore_ament_install'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src/controller) by extensions ['colcon_pkg']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src/controller) by extension 'colcon_pkg'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src/controller) by extensions ['colcon_meta']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src/controller) by extension 'colcon_meta'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src/controller) by extensions ['ros']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/GC/src/controller) by extension 'ros'
+[0.283s] DEBUG:colcon.colcon_core.package_identification:Package 'src/GC/src/controller' with type 'ros.ament_python' and name 'controller'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extension 'ignore_ament_install'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extension 'colcon_meta'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extensions ['ros']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extension 'ros'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extensions ['cmake', 'python']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extension 'cmake'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extension 'python'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extensions ['python_setup_py']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg) by extension 'python_setup_py'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extensions ['ignore', 'ignore_ament_install']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extension 'ignore'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extension 'ignore_ament_install'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extension 'colcon_meta'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extensions ['ros']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extension 'ros'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extensions ['cmake', 'python']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extension 'cmake'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extension 'python'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extensions ['python_setup_py']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src) by extension 'python_setup_py'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/custom_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/custom_interfaces) by extension 'ignore'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/custom_interfaces) by extension 'ignore_ament_install'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/custom_interfaces) by extensions ['colcon_pkg']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/custom_interfaces) by extension 'colcon_pkg'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/custom_interfaces) by extensions ['colcon_meta']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/custom_interfaces) by extension 'colcon_meta'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/custom_interfaces) by extensions ['ros']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/custom_interfaces) by extension 'ros'
+[0.286s] DEBUG:colcon.colcon_core.package_identification:Package 'src/decision_pkg/src/custom_interfaces' with type 'ros.ament_cmake' and name 'custom_interfaces'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/decision_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/decision_pkg) by extension 'ignore'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/decision_pkg) by extension 'ignore_ament_install'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/decision_pkg) by extensions ['colcon_pkg']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/decision_pkg) by extension 'colcon_pkg'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/decision_pkg) by extensions ['colcon_meta']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/decision_pkg) by extension 'colcon_meta'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/decision_pkg) by extensions ['ros']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/decision_pkg/src/decision_pkg) by extension 'ros'
+[0.287s] DEBUG:colcon.colcon_core.package_identification:Package 'src/decision_pkg/src/decision_pkg' with type 'ros.ament_python' and name 'decision_pkg'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extension 'ignore_ament_install'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extensions ['colcon_pkg']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extension 'colcon_pkg'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extensions ['colcon_meta']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extension 'colcon_meta'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extensions ['ros']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extension 'ros'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extensions ['cmake', 'python']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extension 'cmake'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extension 'python'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extensions ['python_setup_py']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws) by extension 'python_setup_py'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extension 'ignore'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extension 'ignore_ament_install'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extensions ['colcon_pkg']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extension 'colcon_pkg'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extensions ['colcon_meta']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extension 'colcon_meta'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extensions ['ros']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extension 'ros'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extensions ['cmake', 'python']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extension 'cmake'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extension 'python'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extensions ['python_setup_py']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src) by extension 'python_setup_py'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk) by extensions ['ignore', 'ignore_ament_install']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk) by extension 'ignore'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk) by extension 'ignore_ament_install'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk) by extensions ['colcon_pkg']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk) by extension 'colcon_pkg'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk) by extensions ['colcon_meta']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk) by extension 'colcon_meta'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk) by extensions ['ros']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk) by extension 'ros'
+[0.291s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robotis_ws/src/dynamixel_sdk' with type 'ros.ament_cmake' and name 'dynamixel_sdk'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk_examples) by extensions ['ignore', 'ignore_ament_install']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk_examples) by extension 'ignore'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk_examples) by extension 'ignore_ament_install'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk_examples) by extensions ['colcon_pkg']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk_examples) by extension 'colcon_pkg'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk_examples) by extensions ['colcon_meta']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk_examples) by extension 'colcon_meta'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk_examples) by extensions ['ros']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/robotis_ws/src/dynamixel_sdk_examples) by extension 'ros'
+[0.293s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robotis_ws/src/dynamixel_sdk_examples' with type 'ros.ament_cmake' and name 'dynamixel_sdk_examples'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extensions ['ignore', 'ignore_ament_install']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extension 'ignore'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extension 'ignore_ament_install'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extensions ['colcon_pkg']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extension 'colcon_pkg'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extensions ['colcon_meta']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extension 'colcon_meta'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extensions ['ros']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extension 'ros'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extensions ['cmake', 'python']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extension 'cmake'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extension 'python'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extensions ['python_setup_py']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7) by extension 'python_setup_py'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/serial-ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/serial-ros2) by extension 'ignore'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/serial-ros2) by extension 'ignore_ament_install'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/serial-ros2) by extensions ['colcon_pkg']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/serial-ros2) by extension 'colcon_pkg'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/serial-ros2) by extensions ['colcon_meta']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/serial-ros2) by extension 'colcon_meta'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/serial-ros2) by extensions ['ros']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/serial-ros2) by extension 'ros'
+[0.295s] DEBUG:colcon.colcon_core.package_identification:Package 'src/um7/serial-ros2' with type 'ros.ament_cmake' and name 'serial'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/src) by extensions ['ignore', 'ignore_ament_install']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/src) by extension 'ignore'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/src) by extension 'ignore_ament_install'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/src) by extensions ['colcon_pkg']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/src) by extension 'colcon_pkg'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/src) by extensions ['colcon_meta']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/src) by extension 'colcon_meta'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/src) by extensions ['ros']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/um7/src) by extension 'ros'
+[0.296s] DEBUG:colcon.colcon_core.package_identification:Package 'src/um7/src' with type 'ros.ament_cmake' and name 'um7'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extension 'ignore'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extension 'ignore_ament_install'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extensions ['colcon_pkg']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extension 'colcon_pkg'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extensions ['colcon_meta']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extension 'colcon_meta'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extensions ['ros']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extension 'ros'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extensions ['cmake', 'python']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extension 'cmake'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extension 'python'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extensions ['python_setup_py']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg) by extension 'python_setup_py'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extension 'ignore'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extension 'ignore_ament_install'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extensions ['colcon_meta']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extension 'colcon_meta'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extensions ['ros']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extension 'ros'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extensions ['cmake', 'python']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extension 'cmake'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extension 'python'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extensions ['python_setup_py']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src) by extension 'python_setup_py'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extensions ['ignore', 'ignore_ament_install']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extension 'ignore'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extension 'ignore_ament_install'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extensions ['colcon_meta']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extension 'colcon_meta'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extensions ['ros']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extension 'ros'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extensions ['cmake', 'python']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extension 'cmake'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extension 'python'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extensions ['python_setup_py']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/Data) by extension 'python_setup_py'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/custom_interfaces_vision) by extensions ['ignore', 'ignore_ament_install']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/custom_interfaces_vision) by extension 'ignore'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/custom_interfaces_vision) by extension 'ignore_ament_install'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/custom_interfaces_vision) by extensions ['colcon_pkg']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/custom_interfaces_vision) by extension 'colcon_pkg'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/custom_interfaces_vision) by extensions ['colcon_meta']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/custom_interfaces_vision) by extension 'colcon_meta'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/custom_interfaces_vision) by extensions ['ros']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/custom_interfaces_vision) by extension 'ros'
+[0.300s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_pkg/src/custom_interfaces_vision' with type 'ros.ament_cmake' and name 'custom_interfaces_vision'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/vision) by extensions ['ignore', 'ignore_ament_install']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/vision) by extension 'ignore'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/vision) by extension 'ignore_ament_install'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/vision) by extensions ['colcon_pkg']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/vision) by extension 'colcon_pkg'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/vision) by extensions ['colcon_meta']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/vision) by extension 'colcon_meta'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/vision) by extensions ['ros']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_pkg/src/vision) by extension 'ros'
+[0.301s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_pkg/src/vision' with type 'ros.ament_python' and name 'vision_pkg'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extensions ['ignore', 'ignore_ament_install']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extension 'ignore_ament_install'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extensions ['colcon_pkg']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extension 'colcon_pkg'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extensions ['colcon_meta']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extension 'colcon_meta'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extensions ['ros']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extension 'ros'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extensions ['cmake', 'python']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extension 'cmake'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extension 'python'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extensions ['python_setup_py']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test) by extension 'python_setup_py'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extension 'ignore_ament_install'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extensions ['colcon_pkg']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extension 'colcon_pkg'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extensions ['colcon_meta']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extension 'colcon_meta'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extensions ['ros']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extension 'ros'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extensions ['cmake', 'python']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extension 'cmake'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extension 'python'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extensions ['python_setup_py']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src) by extension 'python_setup_py'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/control) by extensions ['ignore', 'ignore_ament_install']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/control) by extension 'ignore'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/control) by extension 'ignore_ament_install'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/control) by extensions ['colcon_pkg']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/control) by extension 'colcon_pkg'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/control) by extensions ['colcon_meta']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/control) by extension 'colcon_meta'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/control) by extensions ['ros']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/control) by extension 'ros'
+[0.305s] DEBUG:colcon.colcon_core.package_identification:Package 'src/walk_test/src/control' with type 'ros.ament_cmake' and name 'control'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/dynamixel_sdk_custom_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/dynamixel_sdk_custom_interfaces) by extension 'ignore'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/dynamixel_sdk_custom_interfaces) by extension 'ignore_ament_install'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/dynamixel_sdk_custom_interfaces) by extensions ['colcon_pkg']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/dynamixel_sdk_custom_interfaces) by extension 'colcon_pkg'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/dynamixel_sdk_custom_interfaces) by extensions ['colcon_meta']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/dynamixel_sdk_custom_interfaces) by extension 'colcon_meta'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/dynamixel_sdk_custom_interfaces) by extensions ['ros']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/walk_test/src/dynamixel_sdk_custom_interfaces) by extension 'ros'
+[0.306s] DEBUG:colcon.colcon_core.package_identification:Package 'src/walk_test/src/dynamixel_sdk_custom_interfaces' with type 'ros.ament_cmake' and name 'dynamixel_sdk_custom_interfaces'
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.347s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.347s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.352s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 11 installed packages in /home/robofei/ROS2/install
+[0.353s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 168 installed packages in /opt/ros/foxy
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.408s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.408s] DEBUG:colcon.colcon_core.verb:Building package 'controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robofei/ROS2/build/controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robofei/ROS2/install/controller', 'merge_install': False, 'path': '/home/robofei/ROS2/src/GC/src/controller', 'symlink_install': True, 'test_result_base': None}
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.409s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.409s] DEBUG:colcon.colcon_core.verb:Building package 'custom_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robofei/ROS2/build/custom_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robofei/ROS2/install/custom_interfaces', 'merge_install': False, 'path': '/home/robofei/ROS2/src/decision_pkg/src/custom_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces_vision' build argument 'cmake_args' from command line to 'None'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces_vision' build argument 'cmake_target' from command line to 'None'
+[0.410s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces_vision' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.411s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces_vision' build argument 'cmake_clean_cache' from command line to 'False'
+[0.411s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces_vision' build argument 'cmake_clean_first' from command line to 'False'
+[0.411s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces_vision' build argument 'cmake_force_configure' from command line to 'False'
+[0.411s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces_vision' build argument 'ament_cmake_args' from command line to 'None'
+[0.411s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces_vision' build argument 'catkin_cmake_args' from command line to 'None'
+[0.411s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces_vision' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.411s] DEBUG:colcon.colcon_core.verb:Building package 'custom_interfaces_vision' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robofei/ROS2/build/custom_interfaces_vision', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robofei/ROS2/install/custom_interfaces_vision', 'merge_install': False, 'path': '/home/robofei/ROS2/src/vision_pkg/src/custom_interfaces_vision', 'symlink_install': True, 'test_result_base': None}
+[0.412s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'cmake_args' from command line to 'None'
+[0.412s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'cmake_target' from command line to 'None'
+[0.412s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.412s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'cmake_clean_cache' from command line to 'False'
+[0.412s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'cmake_clean_first' from command line to 'False'
+[0.412s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'cmake_force_configure' from command line to 'False'
+[0.412s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'ament_cmake_args' from command line to 'None'
+[0.412s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'catkin_cmake_args' from command line to 'None'
+[0.412s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.412s] DEBUG:colcon.colcon_core.verb:Building package 'dynamixel_sdk' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robofei/ROS2/build/dynamixel_sdk', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robofei/ROS2/install/dynamixel_sdk', 'merge_install': False, 'path': '/home/robofei/ROS2/src/robotis_ws/src/dynamixel_sdk', 'symlink_install': True, 'test_result_base': None}
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_custom_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.413s] DEBUG:colcon.colcon_core.verb:Building package 'dynamixel_sdk_custom_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robofei/ROS2/build/dynamixel_sdk_custom_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces', 'merge_install': False, 'path': '/home/robofei/ROS2/src/walk_test/src/dynamixel_sdk_custom_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_args' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_target' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_clean_cache' from command line to 'False'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_clean_first' from command line to 'False'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'cmake_force_configure' from command line to 'False'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'ament_cmake_args' from command line to 'None'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'catkin_cmake_args' from command line to 'None'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'serial' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.415s] DEBUG:colcon.colcon_core.verb:Building package 'serial' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robofei/ROS2/build/serial', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robofei/ROS2/install/serial', 'merge_install': False, 'path': '/home/robofei/ROS2/src/um7/serial-ros2', 'symlink_install': True, 'test_result_base': None}
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'vision_pkg' build argument 'cmake_args' from command line to 'None'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'vision_pkg' build argument 'cmake_target' from command line to 'None'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'vision_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'vision_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'vision_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'vision_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'vision_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'vision_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.416s] Level 5:colcon.colcon_core.verb:set package 'vision_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.416s] DEBUG:colcon.colcon_core.verb:Building package 'vision_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robofei/ROS2/build/vision_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robofei/ROS2/install/vision_pkg', 'merge_install': False, 'path': '/home/robofei/ROS2/src/vision_pkg/src/vision', 'symlink_install': True, 'test_result_base': None}
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_args' from command line to 'None'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_target' from command line to 'None'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_clean_first' from command line to 'False'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'cmake_force_configure' from command line to 'False'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'ament_cmake_args' from command line to 'None'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.417s] Level 5:colcon.colcon_core.verb:set package 'control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.417s] DEBUG:colcon.colcon_core.verb:Building package 'control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robofei/ROS2/build/control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robofei/ROS2/install/control', 'merge_install': False, 'path': '/home/robofei/ROS2/src/walk_test/src/control', 'symlink_install': True, 'test_result_base': None}
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'decision_pkg' build argument 'cmake_args' from command line to 'None'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'decision_pkg' build argument 'cmake_target' from command line to 'None'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'decision_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'decision_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'decision_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'decision_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'decision_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'decision_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.418s] Level 5:colcon.colcon_core.verb:set package 'decision_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.418s] DEBUG:colcon.colcon_core.verb:Building package 'decision_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robofei/ROS2/build/decision_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robofei/ROS2/install/decision_pkg', 'merge_install': False, 'path': '/home/robofei/ROS2/src/decision_pkg/src/decision_pkg', 'symlink_install': True, 'test_result_base': None}
+[0.420s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'cmake_args' from command line to 'None'
+[0.420s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'cmake_target' from command line to 'None'
+[0.420s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.420s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'cmake_clean_cache' from command line to 'False'
+[0.420s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'cmake_clean_first' from command line to 'False'
+[0.420s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'cmake_force_configure' from command line to 'False'
+[0.420s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'ament_cmake_args' from command line to 'None'
+[0.420s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'catkin_cmake_args' from command line to 'None'
+[0.420s] Level 5:colcon.colcon_core.verb:set package 'dynamixel_sdk_examples' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.421s] DEBUG:colcon.colcon_core.verb:Building package 'dynamixel_sdk_examples' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robofei/ROS2/build/dynamixel_sdk_examples', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robofei/ROS2/install/dynamixel_sdk_examples', 'merge_install': False, 'path': '/home/robofei/ROS2/src/robotis_ws/src/dynamixel_sdk_examples', 'symlink_install': True, 'test_result_base': None}
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'um7' build argument 'cmake_args' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'um7' build argument 'cmake_target' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'um7' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'um7' build argument 'cmake_clean_cache' from command line to 'False'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'um7' build argument 'cmake_clean_first' from command line to 'False'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'um7' build argument 'cmake_force_configure' from command line to 'False'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'um7' build argument 'ament_cmake_args' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'um7' build argument 'catkin_cmake_args' from command line to 'None'
+[0.422s] Level 5:colcon.colcon_core.verb:set package 'um7' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.422s] DEBUG:colcon.colcon_core.verb:Building package 'um7' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robofei/ROS2/build/um7', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robofei/ROS2/install/um7', 'merge_install': False, 'path': '/home/robofei/ROS2/src/um7/src', 'symlink_install': True, 'test_result_base': None}
+[0.423s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.427s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.428s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robofei/ROS2/src/decision_pkg/src/custom_interfaces' with build type 'ament_cmake'
+[0.428s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robofei/ROS2/src/decision_pkg/src/custom_interfaces'
+[0.436s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.436s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.436s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.442s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robofei/ROS2/src/walk_test/src/dynamixel_sdk_custom_interfaces' with build type 'ament_cmake'
+[0.443s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robofei/ROS2/src/walk_test/src/dynamixel_sdk_custom_interfaces'
+[0.445s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.445s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.450s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robofei/ROS2/src/um7/serial-ros2' with build type 'ament_cmake'
+[0.451s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robofei/ROS2/src/um7/serial-ros2'
+[0.452s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.453s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.458s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robofei/ROS2/src/robotis_ws/src/dynamixel_sdk' with build type 'ament_cmake'
+[0.458s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robofei/ROS2/src/robotis_ws/src/dynamixel_sdk'
+[0.460s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.460s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.466s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/robofei/ROS2/src/GC/src/controller' with build type 'ament_python'
+[0.466s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'ament_prefix_path')
+[0.468s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/controller/share/controller/hook/ament_prefix_path.ps1'
+[0.470s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/controller/share/controller/hook/ament_prefix_path.dsv'
+[0.470s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/controller/share/controller/hook/ament_prefix_path.sh'
+[0.473s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.473s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.478s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robofei/ROS2/src/vision_pkg/src/custom_interfaces_vision' with build type 'ament_cmake'
+[0.478s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robofei/ROS2/src/vision_pkg/src/custom_interfaces_vision'
+[0.480s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.480s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.486s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/robofei/ROS2/src/vision_pkg/src/vision' with build type 'ament_python'
+[0.486s] Level 1:colcon.colcon_core.shell:create_environment_hook('vision_pkg', 'ament_prefix_path')
+[0.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/vision_pkg/share/vision_pkg/hook/ament_prefix_path.ps1'
+[0.489s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/vision_pkg/share/vision_pkg/hook/ament_prefix_path.dsv'
+[0.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/vision_pkg/share/vision_pkg/hook/ament_prefix_path.sh'
+[0.491s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.491s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.502s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/build/custom_interfaces -- -j8 -l8
+[0.511s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/dynamixel_sdk_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/build/dynamixel_sdk_custom_interfaces -- -j8 -l8
+[0.515s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/build/serial -- -j8 -l8
+[0.520s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/dynamixel_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/build/dynamixel_sdk -- -j8 -l8
+[0.803s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/robofei/ROS2/src/GC/src/controller'
+[0.808s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.808s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.824s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/custom_interfaces_vision': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/build/custom_interfaces_vision -- -j8 -l8
+[1.079s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/robofei/ROS2/src/vision_pkg/src/vision'
+[1.081s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.081s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.110s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/build/custom_interfaces -- -j8 -l8
+[1.111s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/dynamixel_sdk_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/build/dynamixel_sdk_custom_interfaces -- -j8 -l8
+[1.111s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/build/serial -- -j8 -l8
+[1.112s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/build/dynamixel_sdk -- -j8 -l8
+[1.112s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/custom_interfaces_vision' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/build/custom_interfaces_vision -- -j8 -l8
+[1.147s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/robofei/ROS2/build/serial
+[1.157s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/dynamixel_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/robofei/ROS2/build/dynamixel_sdk
+[1.193s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial)
+[1.198s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/robofei/ROS2/build/serial
+[1.213s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial' for CMake module files
+[1.215s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial' for CMake config files
+[1.216s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial', 'cmake_prefix_path')
+[1.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/serial/share/serial/hook/cmake_prefix_path.ps1'
+[1.219s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/serial/share/serial/hook/cmake_prefix_path.dsv'
+[1.220s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/serial/share/serial/hook/cmake_prefix_path.sh'
+[1.221s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial/lib'
+[1.221s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial/bin'
+[1.222s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial/lib/pkgconfig/serial.pc'
+[1.222s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial/lib/python3.8/site-packages'
+[1.222s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial/bin'
+[1.225s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/serial/share/serial/package.ps1'
+[1.227s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/serial/share/serial/package.dsv'
+[1.228s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/serial/share/serial/package.sh'
+[1.230s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/serial/share/serial/package.bash'
+[1.231s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/serial/share/serial/package.zsh'
+[1.233s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/serial/share/colcon-core/packages/serial)
+[1.238s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_sdk)
+[1.243s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk' for CMake module files
+[1.244s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/dynamixel_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/robofei/ROS2/build/dynamixel_sdk
+[1.245s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk' for CMake config files
+[1.245s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk', 'cmake_prefix_path')
+[1.248s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/hook/cmake_prefix_path.ps1'
+[1.249s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/hook/cmake_prefix_path.dsv'
+[1.250s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/hook/cmake_prefix_path.sh'
+[1.251s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk/lib'
+[1.251s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk', 'ld_library_path_lib')
+[1.253s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/hook/ld_library_path_lib.ps1'
+[1.254s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/hook/ld_library_path_lib.dsv'
+[1.255s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/hook/ld_library_path_lib.sh'
+[1.256s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk/bin'
+[1.256s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk/lib/pkgconfig/dynamixel_sdk.pc'
+[1.256s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk/lib/python3.8/site-packages'
+[1.256s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk/bin'
+[1.259s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/package.ps1'
+[1.260s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv'
+[1.261s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/package.sh'
+[1.261s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/package.bash'
+[1.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/package.zsh'
+[1.262s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/dynamixel_sdk/share/colcon-core/packages/dynamixel_sdk)
+[1.269s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/robofei/ROS2/build/custom_interfaces
+[1.274s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/custom_interfaces_vision': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/robofei/ROS2/build/custom_interfaces_vision
+[1.279s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/dynamixel_sdk_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/robofei/ROS2/build/dynamixel_sdk_custom_interfaces
+[1.286s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial)
+[1.291s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial' for CMake module files
+[1.295s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial' for CMake config files
+[1.299s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial', 'cmake_prefix_path')
+[1.302s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/serial/share/serial/hook/cmake_prefix_path.ps1'
+[1.303s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/serial/share/serial/hook/cmake_prefix_path.dsv'
+[1.305s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/serial/share/serial/hook/cmake_prefix_path.sh'
+[1.310s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial/lib'
+[1.310s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial/bin'
+[1.310s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial/lib/pkgconfig/serial.pc'
+[1.311s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial/lib/python3.8/site-packages'
+[1.311s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/serial/bin'
+[1.315s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/serial/share/serial/package.ps1'
+[1.316s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/serial/share/serial/package.dsv'
+[1.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/serial/share/serial/package.sh'
+[1.319s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/serial/share/serial/package.bash'
+[1.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/serial/share/serial/package.zsh'
+[1.322s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/serial/share/colcon-core/packages/serial)
+[1.325s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robofei/ROS2/src/um7/src' with build type 'ament_cmake'
+[1.325s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robofei/ROS2/src/um7/src'
+[1.327s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.327s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.358s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_sdk)
+[1.361s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk' for CMake module files
+[1.362s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk' for CMake config files
+[1.364s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk', 'cmake_prefix_path')
+[1.367s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/hook/cmake_prefix_path.ps1'
+[1.369s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/hook/cmake_prefix_path.dsv'
+[1.370s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/hook/cmake_prefix_path.sh'
+[1.377s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk/lib'
+[1.377s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk', 'ld_library_path_lib')
+[1.380s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/hook/ld_library_path_lib.ps1'
+[1.383s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/hook/ld_library_path_lib.dsv'
+[1.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/hook/ld_library_path_lib.sh'
+[1.385s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk/bin'
+[1.385s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk/lib/pkgconfig/dynamixel_sdk.pc'
+[1.385s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk/lib/python3.8/site-packages'
+[1.385s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk/bin'
+[1.387s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/package.ps1'
+[1.388s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/package.dsv'
+[1.389s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/package.sh'
+[1.390s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/package.bash'
+[1.390s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk/share/dynamixel_sdk/package.zsh'
+[1.391s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/dynamixel_sdk/share/colcon-core/packages/dynamixel_sdk)
+[1.410s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/um7': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/build/um7 -- -j8 -l8
+[1.435s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_interfaces_vision)
+[1.439s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision' for CMake module files
+[1.440s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/custom_interfaces_vision' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/robofei/ROS2/build/custom_interfaces_vision
+[1.441s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision' for CMake config files
+[1.441s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces_vision', 'cmake_prefix_path')
+[1.443s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/cmake_prefix_path.ps1'
+[1.443s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/cmake_prefix_path.dsv'
+[1.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/cmake_prefix_path.sh'
+[1.445s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision/lib'
+[1.445s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces_vision', 'ld_library_path_lib')
+[1.446s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/ld_library_path_lib.ps1'
+[1.447s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/ld_library_path_lib.dsv'
+[1.447s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/ld_library_path_lib.sh'
+[1.448s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision/bin'
+[1.448s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision/lib/pkgconfig/custom_interfaces_vision.pc'
+[1.448s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages'
+[1.448s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces_vision', 'pythonpath')
+[1.450s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/pythonpath.ps1'
+[1.451s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/pythonpath.dsv'
+[1.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/pythonpath.sh'
+[1.452s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision/bin'
+[1.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/package.ps1'
+[1.454s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/package.dsv'
+[1.455s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/package.sh'
+[1.456s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/package.bash'
+[1.456s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/package.zsh'
+[1.457s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/custom_interfaces_vision/share/colcon-core/packages/custom_interfaces_vision)
+[1.466s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_interfaces)
+[1.470s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces' for CMake module files
+[1.471s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/robofei/ROS2/build/custom_interfaces
+[1.472s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces' for CMake config files
+[1.474s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'cmake_prefix_path')
+[1.477s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.ps1'
+[1.478s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.dsv'
+[1.479s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.sh'
+[1.480s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces/lib'
+[1.480s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'ld_library_path_lib')
+[1.482s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.ps1'
+[1.483s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.dsv'
+[1.484s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.sh'
+[1.484s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces/bin'
+[1.484s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces/lib/pkgconfig/custom_interfaces.pc'
+[1.485s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages'
+[1.485s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'pythonpath')
+[1.488s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.ps1'
+[1.488s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.dsv'
+[1.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.sh'
+[1.490s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces/bin'
+[1.493s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/package.ps1'
+[1.497s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/package.dsv'
+[1.497s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/package.sh'
+[1.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/package.bash'
+[1.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/package.zsh'
+[1.499s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/custom_interfaces/share/colcon-core/packages/custom_interfaces)
+[1.509s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_sdk_custom_interfaces)
+[1.510s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/dynamixel_sdk_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/robofei/ROS2/build/dynamixel_sdk_custom_interfaces
+[1.514s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces' for CMake module files
+[1.515s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces' for CMake config files
+[1.518s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_custom_interfaces', 'cmake_prefix_path')
+[1.521s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/cmake_prefix_path.ps1'
+[1.522s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/cmake_prefix_path.dsv'
+[1.523s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/cmake_prefix_path.sh'
+[1.524s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib'
+[1.524s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_custom_interfaces', 'ld_library_path_lib')
+[1.527s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/ld_library_path_lib.ps1'
+[1.528s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/ld_library_path_lib.dsv'
+[1.528s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/ld_library_path_lib.sh'
+[1.529s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/bin'
+[1.529s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/pkgconfig/dynamixel_sdk_custom_interfaces.pc'
+[1.530s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages'
+[1.530s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_custom_interfaces', 'pythonpath')
+[1.533s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/pythonpath.ps1'
+[1.534s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/pythonpath.dsv'
+[1.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/pythonpath.sh'
+[1.536s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/bin'
+[1.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.ps1'
+[1.541s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv'
+[1.543s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.sh'
+[1.544s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.bash'
+[1.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.zsh'
+[1.545s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/colcon-core/packages/dynamixel_sdk_custom_interfaces)
+[1.578s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_interfaces_vision)
+[1.582s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision' for CMake module files
+[1.583s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision' for CMake config files
+[1.584s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces_vision', 'cmake_prefix_path')
+[1.587s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/cmake_prefix_path.ps1'
+[1.588s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/cmake_prefix_path.dsv'
+[1.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/cmake_prefix_path.sh'
+[1.589s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision/lib'
+[1.590s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces_vision', 'ld_library_path_lib')
+[1.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/ld_library_path_lib.ps1'
+[1.593s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/ld_library_path_lib.dsv'
+[1.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/ld_library_path_lib.sh'
+[1.594s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision/bin'
+[1.594s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision/lib/pkgconfig/custom_interfaces_vision.pc'
+[1.594s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages'
+[1.595s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces_vision', 'pythonpath')
+[1.597s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/pythonpath.ps1'
+[1.598s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/pythonpath.dsv'
+[1.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/hook/pythonpath.sh'
+[1.599s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces_vision/bin'
+[1.601s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/package.ps1'
+[1.602s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/package.dsv'
+[1.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/package.sh'
+[1.604s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/package.bash'
+[1.605s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces_vision/share/custom_interfaces_vision/package.zsh'
+[1.606s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/custom_interfaces_vision/share/colcon-core/packages/custom_interfaces_vision)
+[1.619s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_interfaces)
+[1.623s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces' for CMake module files
+[1.624s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces' for CMake config files
+[1.625s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'cmake_prefix_path')
+[1.628s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.ps1'
+[1.629s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.dsv'
+[1.629s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.sh'
+[1.630s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces/lib'
+[1.630s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'ld_library_path_lib')
+[1.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.ps1'
+[1.633s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.dsv'
+[1.634s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.sh'
+[1.634s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces/bin'
+[1.634s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces/lib/pkgconfig/custom_interfaces.pc'
+[1.635s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages'
+[1.635s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'pythonpath')
+[1.637s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.ps1'
+[1.637s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.dsv'
+[1.638s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/hook/pythonpath.sh'
+[1.639s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/custom_interfaces/bin'
+[1.641s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/package.ps1'
+[1.642s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/package.dsv'
+[1.643s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/package.sh'
+[1.644s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/package.bash'
+[1.645s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/custom_interfaces/share/custom_interfaces/package.zsh'
+[1.645s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/custom_interfaces/share/colcon-core/packages/custom_interfaces)
+[1.647s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/robofei/ROS2/src/decision_pkg/src/decision_pkg' with build type 'ament_python'
+[1.648s] Level 1:colcon.colcon_core.shell:create_environment_hook('decision_pkg', 'ament_prefix_path')
+[1.650s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/decision_pkg/share/decision_pkg/hook/ament_prefix_path.ps1'
+[1.651s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/decision_pkg/share/decision_pkg/hook/ament_prefix_path.dsv'
+[1.652s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/decision_pkg/share/decision_pkg/hook/ament_prefix_path.sh'
+[1.655s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.656s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.015s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/robofei/ROS2/src/decision_pkg/src/decision_pkg'
+[2.022s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.022s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.057s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_sdk_custom_interfaces)
+[2.067s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces' for CMake module files
+[2.070s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces' for CMake config files
+[2.074s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_custom_interfaces', 'cmake_prefix_path')
+[2.079s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/cmake_prefix_path.ps1'
+[2.081s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/cmake_prefix_path.dsv'
+[2.082s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/cmake_prefix_path.sh'
+[2.084s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib'
+[2.085s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_custom_interfaces', 'ld_library_path_lib')
+[2.090s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/ld_library_path_lib.ps1'
+[2.092s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/ld_library_path_lib.dsv'
+[2.093s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/ld_library_path_lib.sh'
+[2.094s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/bin'
+[2.095s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/pkgconfig/dynamixel_sdk_custom_interfaces.pc'
+[2.096s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages'
+[2.096s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_custom_interfaces', 'pythonpath')
+[2.101s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/pythonpath.ps1'
+[2.103s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/pythonpath.dsv'
+[2.104s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/hook/pythonpath.sh'
+[2.106s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/bin'
+[2.112s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.ps1'
+[2.114s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.dsv'
+[2.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.sh'
+[2.118s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.bash'
+[2.119s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/dynamixel_sdk_custom_interfaces/package.zsh'
+[2.121s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/share/colcon-core/packages/dynamixel_sdk_custom_interfaces)
+[2.129s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/controller': PYTHONPATH=/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/robofei/ROS2/install/controller --editable --build-directory /home/robofei/ROS2/build/controller/build --no-deps install_data --install-dir /home/robofei/ROS2/install/controller
+[2.136s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robofei/ROS2/src/walk_test/src/control' with build type 'ament_cmake'
+[2.137s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robofei/ROS2/src/walk_test/src/control'
+[2.140s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.140s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.143s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/vision_pkg': PYTHONPATH=/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/robofei/ROS2/install/vision_pkg --editable --build-directory /home/robofei/ROS2/build/vision_pkg/build --no-deps install_data --install-dir /home/robofei/ROS2/install/vision_pkg
+[2.155s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robofei/ROS2/src/robotis_ws/src/dynamixel_sdk_examples' with build type 'ament_cmake'
+[2.156s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robofei/ROS2/src/robotis_ws/src/dynamixel_sdk_examples'
+[2.160s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.160s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.177s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/um7' returned '0': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/robofei/ROS2/build/um7 -- -j8 -l8
+[2.204s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/control': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/custom_interfaces/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --build /home/robofei/ROS2/build/control -- -j8 -l8
+[2.208s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/home/robofei/ROS2/install/custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --build /home/robofei/ROS2/build/dynamixel_sdk_examples -- -j8 -l8
+[2.297s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/um7': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/robofei/ROS2/build/um7
+[2.374s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/control' returned '0': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/custom_interfaces/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --build /home/robofei/ROS2/build/control -- -j8 -l8
+[2.471s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/control': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/custom_interfaces/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --install /home/robofei/ROS2/build/control
+[2.474s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(um7)
+[2.480s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7' for CMake module files
+[2.481s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/um7' returned '0': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/robofei/ROS2/build/um7
+[2.482s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7' for CMake config files
+[2.483s] Level 1:colcon.colcon_core.shell:create_environment_hook('um7', 'cmake_prefix_path')
+[2.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/um7/share/um7/hook/cmake_prefix_path.ps1'
+[2.489s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/um7/share/um7/hook/cmake_prefix_path.dsv'
+[2.490s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/um7/share/um7/hook/cmake_prefix_path.sh'
+[2.491s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7/lib'
+[2.491s] Level 1:colcon.colcon_core.shell:create_environment_hook('um7', 'ld_library_path_lib')
+[2.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/um7/share/um7/hook/ld_library_path_lib.ps1'
+[2.495s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/um7/share/um7/hook/ld_library_path_lib.dsv'
+[2.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/um7/share/um7/hook/ld_library_path_lib.sh'
+[2.497s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7/bin'
+[2.497s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7/lib/pkgconfig/um7.pc'
+[2.497s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7/lib/python3.8/site-packages'
+[2.498s] Level 1:colcon.colcon_core.shell:create_environment_hook('um7', 'pythonpath')
+[2.499s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/um7/share/um7/hook/pythonpath.ps1'
+[2.502s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/um7/share/um7/hook/pythonpath.dsv'
+[2.504s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/um7/share/um7/hook/pythonpath.sh'
+[2.505s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7/bin'
+[2.508s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/um7/share/um7/package.ps1'
+[2.510s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/um7/share/um7/package.dsv'
+[2.511s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/um7/share/um7/package.sh'
+[2.512s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/um7/share/um7/package.bash'
+[2.513s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/um7/share/um7/package.zsh'
+[2.513s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/um7/share/colcon-core/packages/um7)
+[2.524s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control)
+[2.527s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control' for CMake module files
+[2.528s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/control' returned '0': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/custom_interfaces/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --install /home/robofei/ROS2/build/control
+[2.528s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control' for CMake config files
+[2.529s] Level 1:colcon.colcon_core.shell:create_environment_hook('control', 'cmake_prefix_path')
+[2.530s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/control/share/control/hook/cmake_prefix_path.ps1'
+[2.531s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/control/share/control/hook/cmake_prefix_path.dsv'
+[2.531s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/control/share/control/hook/cmake_prefix_path.sh'
+[2.532s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control/lib'
+[2.532s] Level 1:colcon.colcon_core.shell:create_environment_hook('control', 'ld_library_path_lib')
+[2.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/control/share/control/hook/ld_library_path_lib.ps1'
+[2.535s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/control/share/control/hook/ld_library_path_lib.dsv'
+[2.535s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/control/share/control/hook/ld_library_path_lib.sh'
+[2.536s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control/bin'
+[2.536s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control/lib/pkgconfig/control.pc'
+[2.536s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control/lib/python3.8/site-packages'
+[2.536s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control/bin'
+[2.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/control/share/control/package.ps1'
+[2.539s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/control/share/control/package.dsv'
+[2.540s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/control/share/control/package.sh'
+[2.540s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/control/share/control/package.bash'
+[2.541s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/control/share/control/package.zsh'
+[2.541s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/control/share/colcon-core/packages/control)
+[2.601s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(um7)
+[2.605s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7' for CMake module files
+[2.606s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7' for CMake config files
+[2.607s] Level 1:colcon.colcon_core.shell:create_environment_hook('um7', 'cmake_prefix_path')
+[2.610s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/um7/share/um7/hook/cmake_prefix_path.ps1'
+[2.610s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/um7/share/um7/hook/cmake_prefix_path.dsv'
+[2.611s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/um7/share/um7/hook/cmake_prefix_path.sh'
+[2.612s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7/lib'
+[2.612s] Level 1:colcon.colcon_core.shell:create_environment_hook('um7', 'ld_library_path_lib')
+[2.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/um7/share/um7/hook/ld_library_path_lib.ps1'
+[2.616s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/um7/share/um7/hook/ld_library_path_lib.dsv'
+[2.616s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/um7/share/um7/hook/ld_library_path_lib.sh'
+[2.617s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7/bin'
+[2.617s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7/lib/pkgconfig/um7.pc'
+[2.617s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7/lib/python3.8/site-packages'
+[2.617s] Level 1:colcon.colcon_core.shell:create_environment_hook('um7', 'pythonpath')
+[2.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/um7/share/um7/hook/pythonpath.ps1'
+[2.621s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/um7/share/um7/hook/pythonpath.dsv'
+[2.621s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/um7/share/um7/hook/pythonpath.sh'
+[2.622s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/um7/bin'
+[2.625s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/um7/share/um7/package.ps1'
+[2.626s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/um7/share/um7/package.dsv'
+[2.627s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/um7/share/um7/package.sh'
+[2.628s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/um7/share/um7/package.bash'
+[2.629s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/um7/share/um7/package.zsh'
+[2.631s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/um7/share/colcon-core/packages/um7)
+[2.634s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control)
+[2.638s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control' for CMake module files
+[2.639s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control' for CMake config files
+[2.640s] Level 1:colcon.colcon_core.shell:create_environment_hook('control', 'cmake_prefix_path')
+[2.643s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/control/share/control/hook/cmake_prefix_path.ps1'
+[2.645s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/control/share/control/hook/cmake_prefix_path.dsv'
+[2.646s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/control/share/control/hook/cmake_prefix_path.sh'
+[2.647s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control/lib'
+[2.647s] Level 1:colcon.colcon_core.shell:create_environment_hook('control', 'ld_library_path_lib')
+[2.649s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/control/share/control/hook/ld_library_path_lib.ps1'
+[2.650s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/control/share/control/hook/ld_library_path_lib.dsv'
+[2.650s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/control/share/control/hook/ld_library_path_lib.sh'
+[2.651s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control/bin'
+[2.651s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control/lib/pkgconfig/control.pc'
+[2.651s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control/lib/python3.8/site-packages'
+[2.652s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/control/bin'
+[2.655s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/control/share/control/package.ps1'
+[2.655s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/control/share/control/package.dsv'
+[2.656s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/control/share/control/package.sh'
+[2.657s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/control/share/control/package.bash'
+[2.657s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/control/share/control/package.zsh'
+[2.658s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/control/share/colcon-core/packages/control)
+[2.749s] Level 1:colcon.colcon_core.shell:create_environment_hook('vision_pkg', 'pythonpath_develop')
+[2.752s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/build/vision_pkg/share/vision_pkg/hook/pythonpath_develop.ps1'
+[2.753s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/vision_pkg' returned '0': PYTHONPATH=/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/robofei/ROS2/install/vision_pkg --editable --build-directory /home/robofei/ROS2/build/vision_pkg/build --no-deps install_data --install-dir /home/robofei/ROS2/install/vision_pkg
+[2.754s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/build/vision_pkg/share/vision_pkg/hook/pythonpath_develop.dsv'
+[2.755s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/build/vision_pkg/share/vision_pkg/hook/pythonpath_develop.sh'
+[2.760s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/vision_pkg' for CMake module files
+[2.760s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/vision_pkg' for CMake config files
+[2.761s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/vision_pkg/lib'
+[2.761s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/vision_pkg/bin'
+[2.761s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/vision_pkg/lib/pkgconfig/vision_pkg.pc'
+[2.762s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages'
+[2.762s] Level 1:colcon.colcon_core.shell:create_environment_hook('vision_pkg', 'pythonpath')
+[2.765s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/vision_pkg/share/vision_pkg/hook/pythonpath.ps1'
+[2.765s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/vision_pkg/share/vision_pkg/hook/pythonpath.dsv'
+[2.766s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/vision_pkg/share/vision_pkg/hook/pythonpath.sh'
+[2.767s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/vision_pkg/bin'
+[2.767s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vision_pkg)
+[2.770s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/vision_pkg/share/vision_pkg/package.ps1'
+[2.772s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/vision_pkg/share/vision_pkg/package.dsv'
+[2.773s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/vision_pkg/share/vision_pkg/package.sh'
+[2.774s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/vision_pkg/share/vision_pkg/package.bash'
+[2.775s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/vision_pkg/share/vision_pkg/package.zsh'
+[2.776s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/vision_pkg/share/colcon-core/packages/vision_pkg)
+[2.790s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'pythonpath_develop')
+[2.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/build/controller/share/controller/hook/pythonpath_develop.ps1'
+[2.793s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/controller' returned '0': PYTHONPATH=/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/robofei/ROS2/install/controller --editable --build-directory /home/robofei/ROS2/build/controller/build --no-deps install_data --install-dir /home/robofei/ROS2/install/controller
+[2.793s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/build/controller/share/controller/hook/pythonpath_develop.dsv'
+[2.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/build/controller/share/controller/hook/pythonpath_develop.sh'
+[2.798s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/controller' for CMake module files
+[2.799s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/controller' for CMake config files
+[2.799s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/controller/lib'
+[2.800s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/controller/bin'
+[2.800s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/controller/lib/pkgconfig/controller.pc'
+[2.800s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/controller/lib/python3.8/site-packages'
+[2.800s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'pythonpath')
+[2.802s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/controller/share/controller/hook/pythonpath.ps1'
+[2.803s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/controller/share/controller/hook/pythonpath.dsv'
+[2.803s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/controller/share/controller/hook/pythonpath.sh'
+[2.804s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/controller/bin'
+[2.804s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller)
+[2.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/controller/share/controller/package.ps1'
+[2.807s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/controller/share/controller/package.dsv'
+[2.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/controller/share/controller/package.sh'
+[2.808s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/controller/share/controller/package.bash'
+[2.808s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/controller/share/controller/package.zsh'
+[2.809s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/controller/share/colcon-core/packages/controller)
+[2.835s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/decision_pkg': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision LD_LIBRARY_PATH=/home/robofei/ROS2/install/custom_interfaces/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/python3 setup.py develop --prefix /home/robofei/ROS2/install/decision_pkg --editable --build-directory /home/robofei/ROS2/build/decision_pkg/build --no-deps install_data --install-dir /home/robofei/ROS2/install/decision_pkg
+[3.265s] Level 1:colcon.colcon_core.shell:create_environment_hook('decision_pkg', 'pythonpath_develop')
+[3.268s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/build/decision_pkg/share/decision_pkg/hook/pythonpath_develop.ps1'
+[3.268s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/decision_pkg' returned '0': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/custom_interfaces_vision LD_LIBRARY_PATH=/home/robofei/ROS2/install/custom_interfaces/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/python3 setup.py develop --prefix /home/robofei/ROS2/install/decision_pkg --editable --build-directory /home/robofei/ROS2/build/decision_pkg/build --no-deps install_data --install-dir /home/robofei/ROS2/install/decision_pkg
+[3.269s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/build/decision_pkg/share/decision_pkg/hook/pythonpath_develop.dsv'
+[3.269s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/build/decision_pkg/share/decision_pkg/hook/pythonpath_develop.sh'
+[3.272s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/decision_pkg' for CMake module files
+[3.273s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/decision_pkg' for CMake config files
+[3.273s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/decision_pkg/lib'
+[3.273s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/decision_pkg/bin'
+[3.273s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/decision_pkg/lib/pkgconfig/decision_pkg.pc'
+[3.274s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages'
+[3.274s] Level 1:colcon.colcon_core.shell:create_environment_hook('decision_pkg', 'pythonpath')
+[3.275s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/decision_pkg/share/decision_pkg/hook/pythonpath.ps1'
+[3.276s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/decision_pkg/share/decision_pkg/hook/pythonpath.dsv'
+[3.276s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/decision_pkg/share/decision_pkg/hook/pythonpath.sh'
+[3.277s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/decision_pkg/bin'
+[3.277s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(decision_pkg)
+[3.279s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/decision_pkg/share/decision_pkg/package.ps1'
+[3.279s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/decision_pkg/share/decision_pkg/package.dsv'
+[3.280s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/decision_pkg/share/decision_pkg/package.sh'
+[3.280s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/decision_pkg/share/decision_pkg/package.bash'
+[3.280s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/decision_pkg/share/decision_pkg/package.zsh'
+[3.281s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/decision_pkg/share/colcon-core/packages/decision_pkg)
+[10.218s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/dynamixel_sdk_examples' returned '0': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/home/robofei/ROS2/install/custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --build /home/robofei/ROS2/build/dynamixel_sdk_examples -- -j8 -l8
+[10.246s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robofei/ROS2/build/dynamixel_sdk_examples': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/home/robofei/ROS2/install/custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --install /home/robofei/ROS2/build/dynamixel_sdk_examples
+[10.273s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_sdk_examples)
+[10.276s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples' for CMake module files
+[10.276s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robofei/ROS2/build/dynamixel_sdk_examples' returned '0': CMAKE_PREFIX_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces:/home/robofei/ROS2/install/dynamixel_sdk:/home/robofei/ROS2/install/um7:/home/robofei/ROS2/install/control:/home/robofei/ROS2/install/serial:/home/robofei/ROS2/install/dynamixel_sdk_examples:/home/robofei/ROS2/install/custom_interfaces_vision:/home/robofei/ROS2/install/custom_interfaces:/home/robofei/ROS2/install/vision_pkg:/home/robofei/ROS2/install/decision_pkg:/home/robofei/ROS2/install/controller:/opt/ros/foxy LD_LIBRARY_PATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib:/home/robofei/ROS2/install/dynamixel_sdk/lib:/home/robofei/ROS2/install/um7/lib:/home/robofei/ROS2/install/control/lib:/home/robofei/ROS2/install/serial/lib:/home/robofei/ROS2/install/custom_interfaces_vision/lib:/home/robofei/ROS2/install/custom_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/robofei/ROS2/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/vision_pkg:/home/robofei/ROS2/install/vision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/um7/lib/python3.8/site-packages:/home/robofei/ROS2/build/decision_pkg:/home/robofei/ROS2/install/decision_pkg/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces_vision/lib/python3.8/site-packages:/home/robofei/ROS2/install/custom_interfaces/lib/python3.8/site-packages:/home/robofei/ROS2/build/controller:/home/robofei/ROS2/install/controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/robofei/models/research/slim:/home/robofei/models/research/object_detection/utils:/home/robofei/models/research /usr/bin/cmake --install /home/robofei/ROS2/build/dynamixel_sdk_examples
+[10.277s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples' for CMake config files
+[10.277s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_examples', 'cmake_prefix_path')
+[10.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/hook/cmake_prefix_path.ps1'
+[10.279s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/hook/cmake_prefix_path.dsv'
+[10.279s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/hook/cmake_prefix_path.sh'
+[10.280s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples/lib'
+[10.280s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples/bin'
+[10.280s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples/lib/pkgconfig/dynamixel_sdk_examples.pc'
+[10.280s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples/lib/python3.8/site-packages'
+[10.280s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples/bin'
+[10.282s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.ps1'
+[10.282s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.dsv'
+[10.282s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.sh'
+[10.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.bash'
+[10.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.zsh'
+[10.283s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/dynamixel_sdk_examples/share/colcon-core/packages/dynamixel_sdk_examples)
+[10.310s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamixel_sdk_examples)
+[10.312s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples' for CMake module files
+[10.313s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples' for CMake config files
+[10.313s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamixel_sdk_examples', 'cmake_prefix_path')
+[10.314s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/hook/cmake_prefix_path.ps1'
+[10.315s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/hook/cmake_prefix_path.dsv'
+[10.315s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/hook/cmake_prefix_path.sh'
+[10.316s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples/lib'
+[10.316s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples/bin'
+[10.316s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples/lib/pkgconfig/dynamixel_sdk_examples.pc'
+[10.316s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples/lib/python3.8/site-packages'
+[10.316s] Level 1:colcon.colcon_core.environment:checking '/home/robofei/ROS2/install/dynamixel_sdk_examples/bin'
+[10.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.ps1'
+[10.318s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.dsv'
+[10.319s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.sh'
+[10.319s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.bash'
+[10.320s] INFO:colcon.colcon_core.shell:Creating package script '/home/robofei/ROS2/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.zsh'
+[10.320s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robofei/ROS2/install/dynamixel_sdk_examples/share/colcon-core/packages/dynamixel_sdk_examples)
+[10.320s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.321s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.321s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.321s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.329s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.329s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.330s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.346s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.348s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robofei/ROS2/install/local_setup.ps1'
+[10.349s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/robofei/ROS2/install/_local_setup_util_ps1.py'
+[10.351s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robofei/ROS2/install/setup.ps1'
+[10.354s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robofei/ROS2/install/local_setup.sh'
+[10.355s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/robofei/ROS2/install/_local_setup_util_sh.py'
+[10.356s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robofei/ROS2/install/setup.sh'
+[10.358s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robofei/ROS2/install/local_setup.bash'
+[10.358s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robofei/ROS2/install/setup.bash'
+[10.360s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robofei/ROS2/install/local_setup.zsh'
+[10.360s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robofei/ROS2/install/setup.zsh'
