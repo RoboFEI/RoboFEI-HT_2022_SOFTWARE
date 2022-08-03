@@ -393,7 +393,7 @@ public:
             RCLCPP_INFO(this->get_logger(), "Parado");                            
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
-            message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,2047};
+            message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,cont_vision};
       
             publisher_->publish(message);
             break;
@@ -415,7 +415,6 @@ public:
             message_single.position = 60;
             publisher_single->publish(message_single);
             std::this_thread::sleep_for(std::chrono::seconds(1)); //1
-
 
 
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
@@ -477,9 +476,8 @@ public:
             message_single.address = 112;
             message_single.position = 4000;
             publisher_single->publish(message_single);
-             std::this_thread::sleep_for(std::chrono::seconds(1)); //1
-
             std::this_thread::sleep_for(std::chrono::seconds(1)); //1
+
                 // Quase chute
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19
@@ -499,6 +497,7 @@ public:
             message_single.position = 128;
             publisher_single->publish(message_single);
             break;
+
           case 4: // Left kick
             message_walk.walk = 0; 
             publisher_walk->publish(message_walk);
@@ -559,10 +558,7 @@ public:
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
             message.position = {2020,2351,3066,1877,956,3470,2048,2048,2104,2256,1540,3000,2677,1860,2360,2196,2175,2048,2047};
             publisher_->publish(message);
-            std::this_thread::sleep_for(std::chrono::seconds(20)); //1
-
-
-
+            std::this_thread::sleep_for(std::chrono::seconds(2)); //1
 
 
             // Dobrar joelhos
@@ -578,7 +574,7 @@ public:
             //                   1   2     3*   4*  5*   6*   7*   8*   9*   10*  11*  12*  13*  14*  15*  16*  17*  18*  19*
             message.position = {2047,2047,2782,1960,1242,3600,2047,2131,2042,2166,1728,2753,2400,857,2196,1553,2166,2048,2047};
             publisher_->publish(message);
-            std::this_thread::sleep_for(std::chrono::seconds(100)); //1
+            std::this_thread::sleep_for(std::chrono::seconds(3)); //1
             
 
 
@@ -624,6 +620,7 @@ public:
             message_single.position = 128;
             publisher_single->publish(message_single);
             break;
+
           case 5: // Turn right
             RCLCPP_INFO(this->get_logger(), "Turn Right");                        
             message_param.walk = 0;   
@@ -676,9 +673,9 @@ public:
             publisher_walk->publish(message_walk);        
             RCLCPP_INFO(this->get_logger(), "Moving head"); 
             if(cont_vision>=3072) 
-              valor = -255;
+              valor = -256;
             else if(cont_vision<=1024)
-              valor=255;  
+              valor=256;  
             cont_vision = cont_vision + valor; 
             message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
@@ -820,7 +817,7 @@ public:
             publisher_walk->publish(message_walk);
             std::this_thread::sleep_for(std::chrono::seconds(1));
             break;
-          case 16:
+          case 16: // Stand up back
             RCLCPP_INFO(this->get_logger(), "Stand Up Back");
             message_single.id = 254;
             message_single.address = 112;

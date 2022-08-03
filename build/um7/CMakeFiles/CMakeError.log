@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/robofei/ROS2/build/um7/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_b78ab/fast && /usr/bin/make -f CMakeFiles/cmTC_b78ab.dir/build.make CMakeFiles/cmTC_b78ab.dir/build
+Run Build Command(s):/usr/bin/make cmTC_e895e/fast && /usr/bin/make -f CMakeFiles/cmTC_e895e.dir/build.make CMakeFiles/cmTC_e895e.dir/build
 make[1]: Entering directory '/home/robofei/ROS2/build/um7/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b78ab.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b78ab.dir/src.c.o   -c /home/robofei/ROS2/build/um7/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_b78ab
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b78ab.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_b78ab.dir/src.c.o  -o cmTC_b78ab 
-/usr/bin/ld: CMakeFiles/cmTC_b78ab.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_e895e.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e895e.dir/src.c.o   -c /home/robofei/ROS2/build/um7/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e895e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e895e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_e895e.dir/src.c.o  -o cmTC_e895e 
+/usr/bin/ld: CMakeFiles/cmTC_e895e.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_b78ab.dir/build.make:87: cmTC_b78ab] Error 1
+make[1]: *** [CMakeFiles/cmTC_e895e.dir/build.make:87: cmTC_e895e] Error 1
 make[1]: Leaving directory '/home/robofei/ROS2/build/um7/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_b78ab/fast] Error 2
+make: *** [Makefile:121: cmTC_e895e/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/robofei/ROS2/build/um7/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_7ca53/fast && /usr/bin/make -f CMakeFiles/cmTC_7ca53.dir/build.make CMakeFiles/cmTC_7ca53.dir/build
+Run Build Command(s):/usr/bin/make cmTC_e0f98/fast && /usr/bin/make -f CMakeFiles/cmTC_e0f98.dir/build.make CMakeFiles/cmTC_e0f98.dir/build
 make[1]: Entering directory '/home/robofei/ROS2/build/um7/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7ca53.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_7ca53.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_7ca53
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7ca53.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_7ca53.dir/CheckFunctionExists.c.o  -o cmTC_7ca53  -lpthreads 
+Building C object CMakeFiles/cmTC_e0f98.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e0f98.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e0f98
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0f98.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e0f98.dir/CheckFunctionExists.c.o  -o cmTC_e0f98  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_7ca53.dir/build.make:87: cmTC_7ca53] Error 1
+make[1]: *** [CMakeFiles/cmTC_e0f98.dir/build.make:87: cmTC_e0f98] Error 1
 make[1]: Leaving directory '/home/robofei/ROS2/build/um7/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_7ca53/fast] Error 2
+make: *** [Makefile:121: cmTC_e0f98/fast] Error 2
 
 
 
