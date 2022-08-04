@@ -36,9 +36,10 @@ except ImportError:
 
 
 parser = argparse.ArgumentParser(description='Robot Vision', epilog= 'Responsavel pela deteccao dos objetos em campo / Responsible for detection of Field objects')
-parser.add_argument('--visionball', '--vb', action="store_true", help = 'Calibra valor para a visao da bola')
-parser.add_argument('--withoutservo', '--ws', action="store_true", help = 'Servos desligado')
-parser.add_argument('--head', '--he', action="store_true", help = 'Configurando parametros do controle da cabeca')
+parser.add_argument('--visionball', '--vb', action="store_true", help = 'Calibra valor para a visao da bola', default=True)
+parser.add_argument('--withoutservo', '--ws', action="store_true", help = 'Servos desligado', default=False)
+parser.add_argument('--head', '--he', action="store_true", help = 'Configurando parametros do controle da cabeca', default=False)
+parser.add_argument('--ros-args', action="store_true", help = ' ', default=True)
 
 
 #----------------------------------------------------------------------------------------------------------------------------------
@@ -161,8 +162,6 @@ class ballStatus(Node):
                 
 
 				
-			
-
 def main(args=None):
     rclpy.init(args=args)
     

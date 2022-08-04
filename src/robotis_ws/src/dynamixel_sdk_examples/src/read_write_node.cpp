@@ -34,6 +34,7 @@
 #include <cstdio>
 #include <memory>
 #include <string>
+#include <unistd.h>
 
 #include "dynamixel_sdk/dynamixel_sdk.h"
 #include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
@@ -64,7 +65,7 @@ PacketHandler * packetHandler = PacketHandler::getPacketHandler(PROTOCOL_VERSION
 GroupSyncWrite groupSyncWrite(portHandler, packetHandler, ADDR_GOAL_POSITION, 4);
 
 uint8_t dxl_error = 0;
-uint32_t goal_position[3] = {0};
+uint32_t goal_position[19] = {0};
 int dxl_comm_result = COMM_TX_FAIL;
 int dxl_addparam_result = false;
 
@@ -462,6 +463,9 @@ void setupDynamixel(uint8_t dxl_id)
 
 int main(int argc, char * argv[])
 {
+  char string1[50]; //String
+  sprintf(string1,"echo 123456| sudo -S renice -20 -p %d", getpid());
+  system(string1);//prioridade
 
   // Open Serial Port
   dxl_comm_result = portHandler->openPort();
