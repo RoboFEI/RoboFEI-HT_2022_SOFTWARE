@@ -51,8 +51,8 @@ class ballStatus(Node):
         self.config = config
         super().__init__('minimal_publisher')
         self.publisher_ = self.create_publisher(Vision, '/ball_position', 10)
-        self.vcap = WebcamVideoStream(src=0).start() #Abrindo camera)
-        timer_period = 0.5  # seconds
+        self.vcap = WebcamVideoStream(src=0).start() # Abrindo camera
+        timer_period = 0.008  # seconds
         self.timer = self.create_timer(timer_period, self.thread_DNN)
         self.i = 0
         self.args2 = parser.parse_args()
@@ -83,7 +83,6 @@ class ballStatus(Node):
                 self.publisher_.publish(msg)
                 print("Bola Acima")
                 self.config.max_count_lost_frame
-                
 
         else:
             if (status ==2):
@@ -95,15 +94,10 @@ class ballStatus(Node):
                 self.publisher_.publish(msg)
                 print("Bola Acima")
 		
-    #	#CUIDADO AO ALTERAR OS VALORES ABAIXO!! O código abaixo possui inversão de eixos!
-	#	# O eixo em pixels é de cima para baixo ja as distancias são ao contrario.
-	#	# Quanto mais alto a bola na tela menor o valor em pixels 
-	#	# e mais longe estará a bola do robô
 		#Bola acima
         if (y < self.config.y_longe):
             msg.ball_left = True
             self.publisher_.publish(msg)
-            #self.get_logger().info('Publishing: "%s"' % msg.ball_far)
             print("Bola a Esquerda")
             self.config.max_count_lost_frame
 
@@ -111,23 +105,18 @@ class ballStatus(Node):
         if (y > self.config.y_longe and y < self.config.x_center):
             msg.ball_center_left = True
             self.publisher_.publish(msg)
-            #self.get_logger().info('Publishing: "%s"' % msg.ball_med)
             print("Bola ao Centro Esquerda")
 
         #Bola ao centro direita
         if (y < self.config.y_chute and y > self.config.x_center):
             msg.ball_center_right = True
             self.publisher_.publish(msg)
-            #self.get_logger().info('Publishing: "%s"' % msg.ball_med)
             print("Bola ao Centro Direita")
 
 		#Bola abaixo
         if (y >= self.config.y_chute):
-            # msg.ball_close = True
-            # self.publisher_.publish(msg)
             msg.ball_right = True
             self.publisher_.publish(msg)
-            #self.get_logger().info('Publishing: "%s"' % msg.ball_close)
             print("Bola a Direita")
 		
     def thread_DNN(self):
@@ -135,8 +124,6 @@ class ballStatus(Node):
 #	script_start_time = time.time()
 #	print "FRAME = ", time.time() - script_start_time
         msg=Vision()
-       
-        #cut_right = 1280-config.cut_edge_image
         frame = self.vcap.read()
         #cv2.imwrite('file.jpg', frame)
         #print(frame)
@@ -150,7 +137,6 @@ class ballStatus(Node):
         if ball == True:
             self.BallStatus(x,y,status)
         else:
-            msg = Vision()
             msg.ball_detected =False
             self.publisher_.publish(msg)
             print("Sem bola :( ")
