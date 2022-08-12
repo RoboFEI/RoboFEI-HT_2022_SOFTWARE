@@ -31,3 +31,4 @@ sudo pip3 install tensorflow
 pip install MarkupSafe
 pip install markupsafe==2.0.1
 sudo apt-get install python3-matplotlib
+pip install pygame

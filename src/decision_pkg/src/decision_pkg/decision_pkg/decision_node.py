@@ -56,7 +56,6 @@ class DecisionNode(Node):
         self.BALL_CENTER_LEFT = False
         self.BALL_RIGHT = False
         self.BALL_CENTER_RIGHT = False
-        self.orientation = 0
         self.BALL_FAR = False # bola longe
         self.BALL_CLOSE = False # bola perto
         self.BALL_MED = False # bola centralizada
@@ -86,11 +85,6 @@ class DecisionNode(Node):
         self.BALL_CLOSE = msg.ball_close
         #self.get_logger().info('Ball close "%s"' % BALL_CLOSE)
            
-
-    def listener_callback_imu(self, msg):
-        self.orientation = msg.rpy_msg.vector.z
-        self.get_logger().info('Orientation "%d"' % self.orientation)
- 
 
     def listener_callback(self, msg):
         self.get_logger().info('I heard: "%s"' % msg.game_state)
