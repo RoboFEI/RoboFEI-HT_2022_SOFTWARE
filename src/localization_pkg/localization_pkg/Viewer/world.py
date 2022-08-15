@@ -1,4 +1,4 @@
-from screen import *
+from .screen import *
 
 class SoccerField():
     def __init__(self, screen):

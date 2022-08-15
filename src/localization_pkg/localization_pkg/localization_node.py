@@ -6,6 +6,9 @@ from geometry_msgs.msg import Vector3Stamped
 from dynamixel_sdk_custom_interfaces.msg import Decision 
 
 from .Viewer.screen import * # Imports the environment of the viewer
+from .Viewer.simulation import *
+from .Viewer.world import *
+from .Viewer.part import *
 import time 
 
 # To pass arguments to the function
@@ -65,22 +68,21 @@ class Localization(Node):
         # Timestamp to use on the time step used for motion
         self.timestamp = time.time()
 
-        screen = Screen(self.args.graphs) # Creates a new screen
+        self.screen = Screen(self.args.graphs) # Creates a new screen
 
         if self.args.graphs:
             simul = Simulation(screen) # Creates the interface structure
             field = SoccerField(screen) # Draws the field
             simul.field = field # Passes the field to the simulation
 
-        PF = MonteCarlo(5000) # Starts the Particle Filter
+        self.PF = MonteCarlo(5000) # Starts the Particle Filter
 
-        print("AQUI")
 
-        zb = []
-        zr = []
-        zy = []
-        zp = []
-        timecount = []
+        self.zb = []
+        self.zr = []
+        self.zy = []
+        self.zp = []
+        self.timecount = []
 
         self.subscription_imu = self.create_subscription(
             Vector3Stamped, 
@@ -105,6 +107,7 @@ class Localization(Node):
         self.get_logger().info('Decision "%d"' % self.dec)
 
     def timer_callback(self):
+        print("Callback")
         z0 = 0
         z1 = 0
         z2 = 0
@@ -117,13 +120,56 @@ class Localization(Node):
         u = self.GetU(self.dec)
 
         auxtime = time.time()
-            try:
-                if auxtime-timecount[0] > 0:
-                    timecount.pop(0)
-                    for zn in [zb, zr, zy, zp]:
-                        zn.pop(0)
-            except:
-                pass
+        try:
+            if auxtime-self.timecount[0] > 0:
+                self.timecount.pop(0)
+                for zn in [self.zb, self.zr, self.zy, self.zp]:
+                    zn.pop(0)
+        except:
+            pass
+        self.timecount.append(auxtime)
+        self.zb.append(64)
+        self.zr.append(81)
+        self.zy.append(142)
+        self.zp.append(55)
+
+
+        z0 = mean(self.zb)
+        z1 = mean(self.zr)
+        z2 = mean(self.zy)
+        z3 = mean(self.zp)
+        z4 = degrees(self.orientation)
+
+        # Mounts the vector to be sent
+        z = (z0, z1, z2, z3, z4)
+        # print z
+            
+        # Performs Particle Filter's Update
+        pos, std = self.PF.main(u,z)
+
+        if self.args.log:
+            print('\t\x1b[32mRobot at') # Prints header
+            print ('\x1b[32m[x:\x1b[34m{} cm'.format(int(pos[0]))) #  Prints the x position
+            print ('\x1b[32m| y:\x1b[34m{} cm'.format(int(pos[1]))) # Prints the y position
+            print (u'\x1b[32m| \u03B8:\x1b[34m{}\u00B0'.format(int(pos[2]))) # Prints the theta
+            print (u'\x1b[32m| \u03C3:\x1b[34m{} cm\x1b[32m]'.format(int(std))) # Prints the standard deviation
+
+            # Wirte the robot's position on Black Board to be read by telemetry
+            # self.bkb.write_int(self.Mem, 'LOCALIZATION_X', int(pos[0]))
+            # self.bkb.write_int(self.Mem, 'LOCALIZATION_Y', int(pos[1]))
+            # self.bkb.write_int(self.Mem, 'LOCALIZATION_THETA', int(pos[2]))
+            # self.bkb.write_float(self.Mem, 'LOCALIZATION_RBT01_X', std)
+
+        if self.args.graphs:
+            # Redraws the screen background
+            field.draw_soccer_field()
+
+            # Draws all particles on screen
+            simul.display_update(PF.particles)
+
+        # Updates for the next clock
+        self.screen.clock.tick(60)
+
 
     #----------------------------------------------------------------------------------------------
     #   This method returns a command instruction to the particles.
