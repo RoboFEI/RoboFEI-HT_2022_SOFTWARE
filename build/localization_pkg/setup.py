@@ -1,1 +1,0 @@
-/home/robofei/ROS2/src/localization_pkg/setup.py

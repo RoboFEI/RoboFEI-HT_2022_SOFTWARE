@@ -4,7 +4,7 @@ __license__ = "GNU General Public License v3.0"
 
 from math import *
 import random as rnd
-from particle import *
+from .particle import *
 
 #--------------------------------------------------------------------------------------------------
 #   This class implements the Monte Carlo's Particle Filter

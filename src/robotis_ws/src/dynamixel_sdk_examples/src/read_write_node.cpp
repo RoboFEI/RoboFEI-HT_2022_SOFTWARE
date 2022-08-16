@@ -22,11 +22,11 @@
 // ros2 topic pub -1 decision custom_interfaces/Decision "{decision: 1}"
 //
 // Open terminal #2 (run one of below commands at a time)
-// $ ros2 topic pub -1 /set_position_single dynamixel_sdk_custom_interfaces/SetPositionOriginal "{id: 30, address: 116, position: 1000}"
-// $ ros2 topic pub -1 /set_position dynamixel_sdk_custom_interfaces/SetPosition "{id: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}, position: {300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300}}"
-// $ ros2 topic pub -1 /set_position dynamixel_sdk_custom_interfaces/SetPosition "{id: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, position: {2500, 1900, 2100, 2048, 2047, 2046, 2049, 2050, 2051, 2052, 2045, 2044}}"
-// $ ros2 topic pub -1 /set_position dynamixel_sdk_custom_interfaces/SetPosition "{id: {1, 2, 5, 6}, position: {2500, 1900, 2048, 2048}}"
-// $ ros2 service call /get_position dynamixel_sdk_custom_interfaces/srv/GetPosition "id: 1"
+// $ ros2 topic pub -1 /set_position_single custom_interfaces/SetPositionOriginal "{id: 30, address: 116, position: 1000}"
+// $ ros2 topic pub -1 /set_position custom_interfaces/SetPosition "{id: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}, position: {300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300}}"
+// $ ros2 topic pub -1 /set_position custom_interfaces/SetPosition "{id: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, position: {2500, 1900, 2100, 2048, 2047, 2046, 2049, 2050, 2051, 2052, 2045, 2044}}"
+// $ ros2 topic pub -1 /set_position custom_interfaces/SetPosition "{id: {1, 2, 5, 6}, position: {2500, 1900, 2048, 2048}}"
+// $ ros2 service call /get_position custom_interfaces/srv/GetPosition "id: 1"
 //
 // Author: Will Son
 *******************************************************************************/
@@ -37,9 +37,9 @@
 #include <unistd.h>
 
 #include "dynamixel_sdk/dynamixel_sdk.h"
-#include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
-#include "dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp"
-#include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
+#include "custom_interfaces/msg/set_position.hpp"
+#include "custom_interfaces/msg/set_position_original.hpp"
+#include "custom_interfaces/srv/get_position.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rcutils/cmdline_parser.h"
 

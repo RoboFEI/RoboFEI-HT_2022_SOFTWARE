@@ -18,7 +18,7 @@ endif()
 # Find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(dynamixel_sdk REQUIRED)
-find_package(dynamixel_sdk_custom_interfaces REQUIRED)
+find_package(custom_interfaces REQUIRED)
 find_package(rclcpp REQUIRED)
 
 include_directories(include)
@@ -26,21 +26,21 @@ include_directories(include)
 # Build
 add_executable(read_write_node src/read_write_node.cpp)
 ament_target_dependencies(read_write_node
-  dynamixel_sdk_custom_interfaces
+  custom_interfaces
   dynamixel_sdk
   rclcpp
 )
 
 add_executable(only_one_motor src/read_write_node_original.cpp)
 ament_target_dependencies(only_one_motor
-  dynamixel_sdk_custom_interfaces
+  custom_interfaces
   dynamixel_sdk
   rclcpp
 )
 
 add_executable(minimal_pub src/minimal_pub.cpp)
 ament_target_dependencies(minimal_pub
-  dynamixel_sdk_custom_interfaces
+  custom_interfaces
   rclcpp
 )
 

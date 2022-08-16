@@ -22,15 +22,15 @@
 #include "rclcpp/rclcpp.hpp"
 #include "rcutils/cmdline_parser.h"
 #include "dynamixel_sdk/dynamixel_sdk.h"
-#include "dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp"
-#include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
+#include "custom_interfaces/msg/set_position_original.hpp"
+#include "custom_interfaces/srv/get_position.hpp"
 
 
 class ReadWriteNode : public rclcpp::Node
 {
 public:
-  using SetPositionOriginal = dynamixel_sdk_custom_interfaces::msg::SetPositionOriginal;
-  using GetPosition = dynamixel_sdk_custom_interfaces::srv::GetPosition;
+  using SetPositionOriginal = custom_interfaces::msg::SetPositionOriginal;
+  using GetPosition = custom_interfaces::srv::GetPosition;
 
   ReadWriteNode();
   virtual ~ReadWriteNode();

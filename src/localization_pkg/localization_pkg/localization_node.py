@@ -3,7 +3,8 @@ from rclpy.node import Node
 
 from sensor_msgs.msg import Imu
 from geometry_msgs.msg import Vector3Stamped  
-from dynamixel_sdk_custom_interfaces.msg import Decision 
+from custom_interfaces.msg import Decision 
+from custom_interfaces.msg import Localization 
 
 from .Viewer.screen import * # Imports the environment of the viewer
 from .Viewer.simulation import *
@@ -44,7 +45,7 @@ else:
 #--------------------------------------------------
 
 
-class Localization(Node):
+class LocalizationNode(Node):
     #----------------------------------------------------------------------------------------------
     #   Class constructor and pre-processing.
     #----------------------------------------------------------------------------------------------
@@ -71,12 +72,11 @@ class Localization(Node):
         self.screen = Screen(self.args.graphs) # Creates a new screen
 
         if self.args.graphs:
-            simul = Simulation(screen) # Creates the interface structure
-            field = SoccerField(screen) # Draws the field
-            simul.field = field # Passes the field to the simulation
+            self.simul = Simulation(self.screen) # Creates the interface structure
+            self.field = SoccerField(self.screen) # Draws the field
+            self.simul.field = self.field # Passes the field to the simulation
 
         self.PF = MonteCarlo(5000) # Starts the Particle Filter
-
 
         self.zb = []
         self.zr = []
@@ -96,6 +96,8 @@ class Localization(Node):
             self.listener_callback_decision,
             10)
         self.subscription_decision
+        self.publisher_ = self.create_publisher(Localization, '/localization', 10)
+        self.publisher_
         self.timer=self.create_timer(0.05,self.timer_callback)
 
     def listener_callback_imu(self, msg):
@@ -107,6 +109,7 @@ class Localization(Node):
         self.get_logger().info('Decision "%d"' % self.dec)
 
     def timer_callback(self):
+        msg = Localization()
         print("Callback")
         z0 = 0
         z1 = 0
@@ -115,7 +118,7 @@ class Localization(Node):
 
         # Process interactions events
         if self.args.graphs:
-            simul.perform_events()
+            self.simul.perform_events()
 
         u = self.GetU(self.dec)
 
@@ -159,13 +162,21 @@ class Localization(Node):
             # self.bkb.write_int(self.Mem, 'LOCALIZATION_Y', int(pos[1]))
             # self.bkb.write_int(self.Mem, 'LOCALIZATION_THETA', int(pos[2]))
             # self.bkb.write_float(self.Mem, 'LOCALIZATION_RBT01_X', std)
+        msg.xpos = pos[0]
+        self.publisher_.publish(msg)
+        msg.ypos = pos[1]
+        self.publisher_.publish(msg)
+        msg.theta = pos[2]
+        self.publisher_.publish(msg)
+        msg.standard_deviation = std
+        self.publisher_.publish(msg)
 
         if self.args.graphs:
             # Redraws the screen background
-            field.draw_soccer_field()
+            self.field.draw_soccer_field()
 
             # Draws all particles on screen
-            simul.display_update(PF.particles)
+            self.simul.display_update(self.PF.particles)
 
         # Updates for the next clock
         self.screen.clock.tick(60)
@@ -175,35 +186,35 @@ class Localization(Node):
     #   This method returns a command instruction to the particles.
     #----------------------------------------------------------------------------------------------
     def GetU(self, Action):
-        if Action in [0, 4, 5, 12, 13, 19, 20, 21, 22]:
-            return (0,0,0,0,self.dt()) # Stop or kick
+        if Action in [1, 2, 3, 4, 7, 8, 16, 17]: # Stop or kick
+            return (0,0,0,0,self.dt()) # x, y, rotacao, provavelmente algo relacionado ao tipo de movimento
+        elif Action == 15: # Gait
+            return (0,0,0,1,self.dt()) 
+        elif Action == 14: # Fast Walk Forward
+            return (20,0,0,1,self.dt()) 
+        elif Action == 20: # Slow Walk Forward
+            return (10,0,0,1,self.dt()) 
+        elif Action == 20: # Fast Walk Backward
+            return (-20,0,0,1,self.dt()) 
+        elif Action == 20: # Slow Walk Backward
+            return (-10,0,0,1,self.dt()) 
+        elif Action == 20: # Walk Left
+            return (0,-10,0,1,self.dt()) 
+        elif Action == 20: # Walk Right
+            return (0,10,0,1,self.dt()) 
+        elif Action == 5: # Turn Right
+            return (0,0,20,1,self.dt()) 
+        elif Action == 6: # Turn Left
+            return (0,0,-20,1,self.dt()) 
+        elif Action == 10: # Turn Left Around the Ball
+            return (0,-10,-20,1,self.dt()) 
+        elif Action == 9: # Turn Right Around the Ball
+            return (0,10,20,1,self.dt()) 
+        elif Action == 16: # Get up, back up
+            return (0,0,0,2,self.dt()) 
+        elif Action == 15: # Get up, front up
+            return (0,0,0,3,self.dt()) 
         elif Action == 11:
-            return (0,0,0,1,self.dt()) # Gait
-        elif Action == 1:
-            return (20,0,0,1,self.dt()) # Fast Walk Forward
-        elif Action == 8:
-            return (10,0,0,1,self.dt()) # Slow Walk Forward
-        elif Action == 17:
-            return (-20,0,0,1,self.dt()) # Fast Walk Backward
-        elif Action == 18:
-            return (-10,0,0,1,self.dt()) # Slow Walk Backward
-        elif Action == 6:
-            return (0,-10,0,1,self.dt()) # Walk Left
-        elif Action == 7:
-            return (0,10,0,1,self.dt()) # Walk Right
-        elif Action == 2:
-            return (0,0,20,1,self.dt()) # Turn Right
-        elif Action == 3:
-            return (0,0,-20,1,self.dt()) # Turn Left
-        elif Action == 9:
-            return (0,-10,-20,1,self.dt()) # Turn Left Around the Ball
-        elif Action == 14:
-            return (0,10,20,1,self.dt()) # Turn Right Around the Ball
-        elif Action == 16:
-            return (0,0,0,2,self.dt()) # Get up, back up
-        elif Action == 15:
-            return (0,0,0,3,self.dt()) # Get up, front up
-        elif Action == 10:
             print ("ERROR - Please, edit Localization.GetU() for Goalkeeper before resuming!")
             return (0,0,0,0,self.dt())
 
@@ -233,7 +244,7 @@ def mean(vec):
 def main(args=None):
     rclpy.init(args=args)
 
-    localization = Localization()
+    localization = LocalizationNode()
 
     rclpy.spin(localization)
 

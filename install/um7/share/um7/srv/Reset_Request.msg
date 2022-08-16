@@ -1,1 +1,0 @@
-/home/robofei/ROS2/build/um7/rosidl_cmake/srv/Reset_Request.msg

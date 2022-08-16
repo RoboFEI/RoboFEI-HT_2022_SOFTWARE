@@ -21,9 +21,9 @@
 // $ ros2 run dynamixel_sdk_examples read_write_node
 //
 // Open terminal #2 (run one of below commands at a time)
-// $ ros2 topic pub -1 /set_position_single dynamixel_sdk_custom_interfaces/SetPositionOriginal "{id: 30, address: 116, position: 1000}"
-// $ ros2 topic pub -1 /set_position_single dynamixel_sdk_custom_interfaces/SetPositionOriginal "{id: 30, address: 64, position: 0}"
-// $ ros2 service call /get_position dynamixel_sdk_custom_interfaces/srv/GetPosition "id: 1"
+// $ ros2 topic pub -1 /set_position_single custom_interfaces/SetPositionOriginal "{id: 30, address: 116, position: 1000}"
+// $ ros2 topic pub -1 /set_position_single custom_interfaces/SetPositionOriginal "{id: 30, address: 64, position: 0}"
+// $ ros2 service call /get_position custom_interfaces/srv/GetPosition "id: 1"
 //
 // Author: Will Son
 *******************************************************************************/
@@ -33,8 +33,8 @@
 #include <string>
 
 #include "dynamixel_sdk/dynamixel_sdk.h"
-#include "dynamixel_sdk_custom_interfaces/msg/set_position_original.hpp"
-#include "dynamixel_sdk_custom_interfaces/srv/get_position.hpp"
+#include "custom_interfaces/msg/set_position_original.hpp"
+#include "custom_interfaces/srv/get_position.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rcutils/cmdline_parser.h"
 

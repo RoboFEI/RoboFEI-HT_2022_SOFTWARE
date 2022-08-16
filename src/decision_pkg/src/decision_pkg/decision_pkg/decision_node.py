@@ -3,7 +3,7 @@ import rclpy
 from rclpy.node import Node
 
 from std_msgs.msg import String
-from dynamixel_sdk_custom_interfaces.msg import Decision 
+from custom_interfaces.msg import Decision 
 from custom_interfaces.msg import Vision
 from custom_interfaces.msg import HumanoidLeagueMsgs as GC
 from std_msgs.msg import Bool
@@ -41,16 +41,9 @@ class DecisionNode(Node):
             '/ball_position',
             self.listener_callback_vision,
             10)
-        # Subscriber da IMU
-        self.subscription_imu = self.create_subscription(
-            Imu, 
-            '/imu/rpy',
-            self.listener_callback_imu,
-            10)
         self.timer=self.create_timer(0.008,self.timer_callback)
         self.subscription  
         self.subscription_vision
-        self.subscription_imu
         self.BALL_DETECTED = False
         self.BALL_LEFT = False
         self.BALL_CENTER_LEFT = False

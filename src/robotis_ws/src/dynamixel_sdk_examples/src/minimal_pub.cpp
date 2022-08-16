@@ -6,7 +6,7 @@
 #include <functional>
 
 #include "rclcpp/rclcpp.hpp"
-#include "dynamixel_sdk_custom_interfaces/msg/set_position.hpp"
+#include "custom_interfaces/msg/set_position.hpp"
 
 using namespace std::chrono_literals;
 
@@ -17,7 +17,7 @@ public:
   : Node("minimal_publisher")
   {
     RCLCPP_INFO(this->get_logger(), "Run read minimal publisher");
-    publisher_ = this->create_publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>("set_position", 10); 
+    publisher_ = this->create_publisher<custom_interfaces::msg::SetPosition>("set_position", 10); 
     timer_ = this->create_wall_timer(
       500ms, std::bind(&MinimalPublisher::timer_callback, this));
   }
@@ -25,7 +25,7 @@ public:
 private:
   void timer_callback()
   {
-    auto message = dynamixel_sdk_custom_interfaces::msg::SetPosition();   
+    auto message = custom_interfaces::msg::SetPosition();   
       message.id = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18};          
       message.position = {1024, 1024, 2593, 1024, 1024, 2593, 1024, 1024, 2593, 1024, 1024, 2593, 1024, 1024, 2593, 1024, 1024, 2593};   
       // for (int i=0; i<=18; i++){
@@ -36,7 +36,7 @@ private:
       std::this_thread::sleep_for(std::chrono::seconds(1));
   }
   rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::Publisher<dynamixel_sdk_custom_interfaces::msg::SetPosition>::SharedPtr publisher_;     
+  rclcpp::Publisher<custom_interfaces::msg::SetPosition>::SharedPtr publisher_;     
 };
 
 int main(int argc, char * argv[])
