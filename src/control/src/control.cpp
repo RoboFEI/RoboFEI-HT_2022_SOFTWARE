@@ -33,6 +33,7 @@ using std::placeholders::_1;
 int movement = 0;
 int contador = 0;
 int cont_vision = 2047;
+int cont_fall_side = 0;
 bool stop_gait = true;
 bool fallen = false;
 bool fallenFront = false;
@@ -70,7 +71,7 @@ public:
     void topic_callback_imu(const std::shared_ptr<sensor_msgs::msg::Imu> imu_msg_) const
     {
       float IMU_ACCEL_Z = imu_msg_->linear_acceleration.z/10;
-      float IMU_ACCEL_Y = imu_msg_->linear_acceleration.y/10;
+      float IMU_ACCEL_X = imu_msg_->linear_acceleration.x/10;
       RCLCPP_INFO(this->get_logger(),"ACEL Z %f\n", IMU_ACCEL_Z);
       if(IMU_ACCEL_Z > 0.7 || IMU_ACCEL_Z < -0.7)
         contador++;
@@ -82,7 +83,7 @@ public:
       {
         RCLCPP_INFO(this->get_logger(),"Caido");
         fallen = true; // Robô caido
-        if(IMU_ACCEL_Z > 0){  // Robô caido de frente
+        if(IMU_ACCEL_Z < 0){  // Robô caido de frente
           fallenFront = true;
         }
         else{  // Robô caido de costas
@@ -90,17 +91,17 @@ public:
         }
       }
       
-      // if(IMU_ACCEL_Y > 0.7 || IMU_ACCEL_Y < -0.7)
-      //   cont_fall_side++;
-      // else
-      //   cont_fall_side = 0;
-      // RCLCPP_INFO(this->get_logger(),"Contador fall side %d \n", cont_fall_side);
+      if(IMU_ACCEL_X > 0.7 || IMU_ACCEL_X < -0.7)
+        cont_fall_side++;
+      else
+        cont_fall_side = 0;
+      RCLCPP_INFO(this->get_logger(),"Contador fall side %d \n", cont_fall_side);
       
-      // if(cont_fall_side>=3)
-      // {
-      //   RCLCPP_INFO(this->get_logger(),"Caido");
-      //   fallen_side = true; // Robô caido
-      // }
+      if(cont_fall_side>=3)
+      {
+        RCLCPP_INFO(this->get_logger(),"Caido");
+        fallen_side = true; // Robô caido
+      }
     }
 
     void topic_callback_vision(const std::shared_ptr<custom_interfaces::msg::Vision> vision_msg) const
@@ -1080,11 +1081,9 @@ public:
 
     void topic_callback(const std::shared_ptr<custom_interfaces::msg::Decision> msg) const
     {
-      
       auto message_dec = custom_interfaces::msg::Decision();
       movement = (int)msg->decision;
       RCLCPP_INFO(this->get_logger(), "I heard %d", movement);
-      
     } 
 
     rclcpp::Subscription<custom_interfaces::msg::Decision>::SharedPtr subscription_;

@@ -33,8 +33,11 @@
  *
  */
 
+// ros2 service call /imu/reset um7/srv/Reset "{reset_ekf: True}"
+
 #include <string>
 #include "um7/um7.h"
+#include "custom_interfaces/srv/reset.hpp"
 
 const char VERSION[10] = "0.0.2";   // um7_driver version
 
@@ -62,13 +65,13 @@ void Driver::send_command(
 }
 
 void Driver::handle_reset_service(
-  const std::shared_ptr<um7::srv::Reset::Request> req,
-  std::shared_ptr<um7::srv::Reset::Response> resp)
+  const std::shared_ptr<custom_interfaces::srv::Reset::Request> req,
+  std::shared_ptr<custom_interfaces::srv::Reset::Response> resp)
 {
   um7::Registers r;
   if (req->zero_gyros) send_command(r.cmd_zero_gyros, "zero gyroscopes");
   if (req->reset_ekf) send_command(r.cmd_reset_ekf, "reset EKF");
-  // if (req->set_mag_ref) send_command(r.cmd_set_mag_ref, "set magnetometer reference");
+  if (req->set_mag_ref) send_command(r.cmd_set_mag_ref, "set magnetometer reference");
 }
 
 /**
@@ -128,16 +131,16 @@ void Driver::configure_sensor(std::shared_ptr<um7::Comms> sensor)
   uint32_t misc_config_reg = 0;  // initialize all options off
 
   // Optionally disable mag updates in the sensor's EKF.
-  // bool mag_updates;
-  // this->get_parameter("mag_updates", mag_updates);
-  // if (mag_updates)
-  // {
-  //   misc_config_reg |= MAG_UPDATES_ENABLED;
-  // }
-  // else
-  // {
-  //   RCLCPP_WARN(this->get_logger(), "Excluding magnetometer updates from EKF.");
-  // }
+  bool mag_updates;
+  this->get_parameter("mag_updates", mag_updates);
+  if (mag_updates)
+  {
+    misc_config_reg |= MAG_UPDATES_ENABLED;
+  }
+  else
+  {
+    RCLCPP_WARN(this->get_logger(), "Excluding magnetometer updates from EKF.");
+  }
 
   // Optionally enable quaternion mode .
   bool quat_mode;
@@ -240,41 +243,41 @@ void Driver::publish(um7::Registers& r)
   }
 
   // Magnetometer.  transform to ROS axes
-  // if (mag_pub_->get_subscription_count() > 0)
-  // {
-  //   sensor_msgs::msg::MagneticField mag_msg;
-  //   mag_msg.header = imu_msg_.header;
+  if (mag_pub_->get_subscription_count() > 0)
+  {
+    sensor_msgs::msg::MagneticField mag_msg;
+    mag_msg.header = imu_msg_.header;
 
-  //   switch (axes_)
-  //   {
-  //     case OutputAxisOptions::ENU:
-  //     {
-  //       mag_msg.magnetic_field.x = r.mag.get_scaled(1);
-  //       mag_msg.magnetic_field.y = r.mag.get_scaled(0);
-  //       mag_msg.magnetic_field.z = -r.mag.get_scaled(2);
-  //       break;
-  //     }
-  //     case OutputAxisOptions::ROBOT_FRAME:
-  //     {
-  //       // body-fixed frame
-  //       mag_msg.magnetic_field.x =  r.mag.get_scaled(0);
-  //       mag_msg.magnetic_field.y = -r.mag.get_scaled(1);
-  //       mag_msg.magnetic_field.z = -r.mag.get_scaled(2);
-  //       break;
-  //     }
-  //     case OutputAxisOptions::DEFAULT:
-  //     {
-  //       mag_msg.magnetic_field.x = r.mag.get_scaled(0);
-  //       mag_msg.magnetic_field.y = r.mag.get_scaled(1);
-  //       mag_msg.magnetic_field.z = r.mag.get_scaled(2);
-  //       break;
-  //     }
-  //     default:
-  //       RCLCPP_ERROR(this->get_logger(), "OuputAxes enum value invalid");
-  //   }
+    switch (axes_)
+    {
+      case OutputAxisOptions::ENU:
+      {
+        mag_msg.magnetic_field.x = r.mag.get_scaled(1);
+        mag_msg.magnetic_field.y = r.mag.get_scaled(0);
+        mag_msg.magnetic_field.z = -r.mag.get_scaled(2);
+        break;
+      }
+      case OutputAxisOptions::ROBOT_FRAME:
+      {
+        // body-fixed frame
+        mag_msg.magnetic_field.x =  r.mag.get_scaled(0);
+        mag_msg.magnetic_field.y = -r.mag.get_scaled(1);
+        mag_msg.magnetic_field.z = -r.mag.get_scaled(2);
+        break;
+      }
+      case OutputAxisOptions::DEFAULT:
+      {
+        mag_msg.magnetic_field.x = r.mag.get_scaled(0);
+        mag_msg.magnetic_field.y = r.mag.get_scaled(1);
+        mag_msg.magnetic_field.z = r.mag.get_scaled(2);
+        break;
+      }
+      default:
+        RCLCPP_ERROR(this->get_logger(), "OuputAxes enum value invalid");
+    }
 
-  //   mag_pub_->publish(mag_msg);
-  // }
+    mag_pub_->publish(mag_msg);
+  }
 
   // Euler attitudes.  transform to ROS axes
   if (rpy_pub_->get_subscription_count() > 0)
@@ -370,7 +373,7 @@ Driver::Driver(const rclcpp::NodeOptions & options) :
 
   // Parameters for configure_sensor
   this->declare_parameter<int>("update_rate", 20);
-  // this->declare_parameter<bool>("mag_updates", false);
+  this->declare_parameter<bool>("mag_updates", false);
   this->declare_parameter<bool>("quat_mode", true);
   this->declare_parameter<bool>("zero_gyros", true);
 
@@ -389,7 +392,7 @@ Driver::Driver(const rclcpp::NodeOptions & options) :
 
   // Create ROS interfaces
   imu_pub_ = this->create_publisher<sensor_msgs::msg::Imu>("imu/data", 1);
-  // mag_pub_ = this->create_publisher<sensor_msgs::msg::MagneticField>("imu/mag", 1);
+  mag_pub_ = this->create_publisher<sensor_msgs::msg::MagneticField>("imu/mag", 1);
   rpy_pub_ = this->create_publisher<geometry_msgs::msg::Vector3Stamped>("imu/rpy", 1);
   temperature_pub_ = this->create_publisher<std_msgs::msg::Float32>("imu/temperature", 1);
 
@@ -420,7 +423,7 @@ void Driver::update_loop(void)
         sensor_.reset(new um7::Comms(&serial_));
         configure_sensor(sensor_);
         um7::Registers registers;
-        auto service = this->create_service<um7::srv::Reset>("imu/reset",
+        auto service = this->create_service<custom_interfaces::srv::Reset>("imu/reset",
           std::bind(&Driver::handle_reset_service, this, std::placeholders::_1, std::placeholders::_2));
 
         while (rclcpp::ok())

@@ -12,10 +12,7 @@ find_package(rclcpp_components REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(serial REQUIRED)
 find_package(sensor_msgs REQUIRED)
-
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "srv/Reset.srv"
-)
+find_package(custom_interfaces REQUIRED)
 
 ###########
 ## Build ##
@@ -33,8 +30,9 @@ ament_target_dependencies(um7_driver
   rclcpp_components
   serial
   sensor_msgs
+  custom_interfaces
 )
-rosidl_target_interfaces(um7_driver ${PROJECT_NAME} "rosidl_typesupport_cpp")
+
 rclcpp_components_register_node(um7_driver
   PLUGIN "um7::Driver"
   EXECUTABLE um7_node

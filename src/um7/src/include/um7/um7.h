@@ -47,7 +47,7 @@
 #include "std_msgs/msg/float32.hpp"
 #include "um7/comms.h"
 #include "um7/registers.h"
-#include "um7/srv/reset.hpp"
+#include "custom_interfaces/srv/reset.hpp"
 
 namespace um7
 {
@@ -77,12 +77,12 @@ private:
   void send_command(const um7::Accessor<RegT>& reg, std::string human_name);
 
   void handle_reset_service(
-    const std::shared_ptr<um7::srv::Reset::Request> req,
-    std::shared_ptr<um7::srv::Reset::Response> resp);
+    const std::shared_ptr<custom_interfaces::srv::Reset::Request> req,
+    std::shared_ptr<custom_interfaces::srv::Reset::Response> resp);
 
   // ROS2 Interfaces
   rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr imu_pub_;
-  // rclcpp::Publisher<sensor_msgs::msg::MagneticField>::SharedPtr mag_pub_;
+  rclcpp::Publisher<sensor_msgs::msg::MagneticField>::SharedPtr mag_pub_;
   rclcpp::Publisher<geometry_msgs::msg::Vector3Stamped>::SharedPtr rpy_pub_;
   rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr temperature_pub_;
 
