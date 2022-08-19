@@ -27,6 +27,7 @@
 #include "sensor_msgs/msg/imu.hpp"
 #include "GaitMove.hpp"
 #include "custom_interfaces/msg/set_position_original.hpp"
+#include "custom_interfaces/srv/reset.hpp"
 
 using namespace std::chrono_literals;
 using std::placeholders::_1;
@@ -64,8 +65,27 @@ public:
     publisher_single = this->create_publisher<custom_interfaces::msg::SetPositionOriginal>("set_position_single", 10);
     publisher_walk = this->create_publisher<custom_interfaces::msg::Walk>("walking", 10); 
     publisher_param = this->create_publisher<custom_interfaces::msg::ParamWalk>("param_walk", 10); 
+    client = this->create_client<custom_interfaces::srv::Reset>("imu/reset");
+    auto req = std::make_shared<custom_interfaces::srv::Reset::Request>();
+    req->reset_ekf = true;
+    while (!client->wait_for_service(1s)) {
+      if (!rclcpp::ok()) {
+        RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Interrupted while waiting for the service. Exiting.");
+      }
+      RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "service not available, waiting again...");
+    }
+    auto result = client->async_send_request(req);
+    // Wait for the result.
+    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), result) ==
+      rclcpp::FutureReturnCode::SUCCESS)
+      {
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Reset successful");
+      } 
+      else {
+        RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to reset");
+      }
     timer_ = this->create_wall_timer(8ms, std::bind(&Control::Process, this));
-  }
+    }
 
   private:
     void topic_callback_imu(const std::shared_ptr<sensor_msgs::msg::Imu> imu_msg_) const
@@ -1081,7 +1101,6 @@ public:
 
     void topic_callback(const std::shared_ptr<custom_interfaces::msg::Decision> msg) const
     {
-      auto message_dec = custom_interfaces::msg::Decision();
       movement = (int)msg->decision;
       RCLCPP_INFO(this->get_logger(), "I heard %d", movement);
     } 
@@ -1093,6 +1112,7 @@ public:
     rclcpp::Publisher<custom_interfaces::msg::Walk>::SharedPtr publisher_walk;   
     rclcpp::Publisher<custom_interfaces::msg::ParamWalk>::SharedPtr publisher_param;  
     rclcpp::Subscription<custom_interfaces::msg::Vision>::SharedPtr subscription_vision;    
+    rclcpp::Client<custom_interfaces::srv::Reset>::SharedPtr client;
     rclcpp::TimerBase::SharedPtr timer_;
 };
 

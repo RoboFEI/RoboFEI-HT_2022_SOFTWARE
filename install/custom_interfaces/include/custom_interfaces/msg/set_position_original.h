@@ -1,1 +1,0 @@
-/home/robofei/ROS2/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/set_position_original.h
