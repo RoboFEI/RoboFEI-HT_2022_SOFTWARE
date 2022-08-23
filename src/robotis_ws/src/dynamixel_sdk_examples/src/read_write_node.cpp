@@ -23,7 +23,7 @@
 //
 // Open terminal #2 (run one of below commands at a time)
 // $ ros2 topic pub -1 /set_position_single custom_interfaces/SetPositionOriginal "{id: 30, address: 116, position: 1000}"
-// $ ros2 topic pub -1 /set_position custom_interfaces/SetPosition "{id: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}, position: {300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300, 500, 400, 300}}"
+// $ ros2 topic pub -1 /set_position custom_interfaces/SetPosition "{id: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}, position: {2048, 2031, 2032, 2033, 2034, 2035, 2036, 2037, 2039, 2038, 2049, 2040, 2041, 2042, 2043, 2044, 2045, 2046, 2047, 2050}}"
 // $ ros2 topic pub -1 /set_position custom_interfaces/SetPosition "{id: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, position: {2500, 1900, 2100, 2048, 2047, 2046, 2049, 2050, 2051, 2052, 2045, 2044}}"
 // $ ros2 topic pub -1 /set_position custom_interfaces/SetPosition "{id: {1, 2, 5, 6}, position: {2500, 1900, 2048, 2048}}"
 // $ ros2 service call /get_position custom_interfaces/srv/GetPosition "id: 1"
@@ -35,6 +35,7 @@
 #include <memory>
 #include <string>
 #include <unistd.h>
+#include <list>
 
 #include "dynamixel_sdk/dynamixel_sdk.h"
 #include "custom_interfaces/msg/set_position.hpp"
@@ -92,204 +93,25 @@ ReadWriteNode::ReadWriteNode()
       
       uint8_t dxl_error = 0;
 
-      uint8_t param_goal_position0[4]; 
-      uint8_t param_goal_position1[4];
-      uint8_t param_goal_position2[4];
-      uint8_t param_goal_position3[4];
-      uint8_t param_goal_position4[4];
-      uint8_t param_goal_position5[4];
-      uint8_t param_goal_position6[4];
-      uint8_t param_goal_position7[4];
-      uint8_t param_goal_position8[4];
-      uint8_t param_goal_position9[4];
-      uint8_t param_goal_position10[4];
-      uint8_t param_goal_position11[4];
-      uint8_t param_goal_position12[4];
-      uint8_t param_goal_position13[4];
-      uint8_t param_goal_position14[4];
-      uint8_t param_goal_position15[4];
-      uint8_t param_goal_position16[4];
-      uint8_t param_goal_position17[4];
-      uint8_t param_goal_position18[4];
+      uint8_t motors [20][4];
 
-      //for(int i=0; i<=2; i++){
-        // Write Goal Position (length : 4 bytes)
-        // When writing 2 byte data to AX / MX(1.0), use write2ByteTxRx() instead.
-      uint32_t position0 = (unsigned int)msg->position[0]; // Convert int32 -> uint32
-      param_goal_position0[0] = DXL_LOBYTE(DXL_LOWORD(position0));
-      param_goal_position0[1] = DXL_HIBYTE(DXL_LOWORD(position0));
-      param_goal_position0[2] = DXL_LOBYTE(DXL_HIWORD(position0));
-      param_goal_position0[3] = DXL_HIBYTE(DXL_HIWORD(position0));  
-      uint32_t position1 = (unsigned int)msg->position[1]; // Convert int32 -> uint32
-      param_goal_position1[0] = DXL_LOBYTE(DXL_LOWORD(position1));
-      param_goal_position1[1] = DXL_HIBYTE(DXL_LOWORD(position1));
-      param_goal_position1[2] = DXL_LOBYTE(DXL_HIWORD(position1));
-      param_goal_position1[3] = DXL_HIBYTE(DXL_HIWORD(position1));
-      uint32_t position2 = (unsigned int)msg->position[2]; // Convert int32 -> uint32
-      param_goal_position2[0] = DXL_LOBYTE(DXL_LOWORD(position2));
-      param_goal_position2[1] = DXL_HIBYTE(DXL_LOWORD(position2));
-      param_goal_position2[2] = DXL_LOBYTE(DXL_HIWORD(position2));
-      param_goal_position2[3] = DXL_HIBYTE(DXL_HIWORD(position2));
-      uint32_t position3 = (unsigned int)msg->position[3]; // Convert int32 -> uint32
-      param_goal_position3[0] = DXL_LOBYTE(DXL_LOWORD(position3));
-      param_goal_position3[1] = DXL_HIBYTE(DXL_LOWORD(position3));
-      param_goal_position3[2] = DXL_LOBYTE(DXL_HIWORD(position3));
-      param_goal_position3[3] = DXL_HIBYTE(DXL_HIWORD(position3));
-      uint32_t position4 = (unsigned int)msg->position[4]; // Convert int32 -> uint32
-      param_goal_position4[0] = DXL_LOBYTE(DXL_LOWORD(position4));
-      param_goal_position4[1] = DXL_HIBYTE(DXL_LOWORD(position4));
-      param_goal_position4[2] = DXL_LOBYTE(DXL_HIWORD(position4));
-      param_goal_position4[3] = DXL_HIBYTE(DXL_HIWORD(position4));
-      uint32_t position5 = (unsigned int)msg->position[5]; // Convert int32 -> uint32
-      param_goal_position5[0] = DXL_LOBYTE(DXL_LOWORD(position5));
-      param_goal_position5[1] = DXL_HIBYTE(DXL_LOWORD(position5));
-      param_goal_position5[2] = DXL_LOBYTE(DXL_HIWORD(position5));
-      param_goal_position5[3] = DXL_HIBYTE(DXL_HIWORD(position5));
-      uint32_t position6 = (unsigned int)msg->position[6]; // Convert int32 -> uint32
-      param_goal_position6[0] = DXL_LOBYTE(DXL_LOWORD(position6));
-      param_goal_position6[1] = DXL_HIBYTE(DXL_LOWORD(position6));
-      param_goal_position6[2] = DXL_LOBYTE(DXL_HIWORD(position6));
-      param_goal_position6[3] = DXL_HIBYTE(DXL_HIWORD(position6));
-      uint32_t position7 = (unsigned int)msg->position[7]; // Convert int32 -> uint32
-      param_goal_position7[0] = DXL_LOBYTE(DXL_LOWORD(position7));
-      param_goal_position7[1] = DXL_HIBYTE(DXL_LOWORD(position7));
-      param_goal_position7[2] = DXL_LOBYTE(DXL_HIWORD(position7));
-      param_goal_position7[3] = DXL_HIBYTE(DXL_HIWORD(position7));
-      uint32_t position8 = (unsigned int)msg->position[8]; // Convert int32 -> uint32
-      param_goal_position8[0] = DXL_LOBYTE(DXL_LOWORD(position8));
-      param_goal_position8[1] = DXL_HIBYTE(DXL_LOWORD(position8));
-      param_goal_position8[2] = DXL_LOBYTE(DXL_HIWORD(position8));
-      param_goal_position8[3] = DXL_HIBYTE(DXL_HIWORD(position8));
-      uint32_t position9 = (unsigned int)msg->position[9]; // Convert int32 -> uint32
-      param_goal_position9[0] = DXL_LOBYTE(DXL_LOWORD(position9));
-      param_goal_position9[1] = DXL_HIBYTE(DXL_LOWORD(position9));
-      param_goal_position9[2] = DXL_LOBYTE(DXL_HIWORD(position9));
-      param_goal_position9[3] = DXL_HIBYTE(DXL_HIWORD(position9));
-      uint32_t position10 = (unsigned int)msg->position[10]; // Convert int32 -> uint32
-      param_goal_position10[0] = DXL_LOBYTE(DXL_LOWORD(position10));
-      param_goal_position10[1] = DXL_HIBYTE(DXL_LOWORD(position10));
-      param_goal_position10[2] = DXL_LOBYTE(DXL_HIWORD(position10));
-      param_goal_position10[3] = DXL_HIBYTE(DXL_HIWORD(position10));
-      uint32_t position11 = (unsigned int)msg->position[11]; // Convert int32 -> uint32
-      param_goal_position11[0] = DXL_LOBYTE(DXL_LOWORD(position11));
-      param_goal_position11[1] = DXL_HIBYTE(DXL_LOWORD(position11));
-      param_goal_position11[2] = DXL_LOBYTE(DXL_HIWORD(position11));
-      param_goal_position11[3] = DXL_HIBYTE(DXL_HIWORD(position11));
-      uint32_t position12 = (unsigned int)msg->position[12]; // Convert int32 -> uint32
-      param_goal_position12[0] = DXL_LOBYTE(DXL_LOWORD(position12));
-      param_goal_position12[1] = DXL_HIBYTE(DXL_LOWORD(position12));
-      param_goal_position12[2] = DXL_LOBYTE(DXL_HIWORD(position12));
-      param_goal_position12[3] = DXL_HIBYTE(DXL_HIWORD(position12));
-      uint32_t position13 = (unsigned int)msg->position[13]; // Convert int32 -> uint32
-      param_goal_position13[0] = DXL_LOBYTE(DXL_LOWORD(position13));
-      param_goal_position13[1] = DXL_HIBYTE(DXL_LOWORD(position13));
-      param_goal_position13[2] = DXL_LOBYTE(DXL_HIWORD(position13));
-      param_goal_position13[3] = DXL_HIBYTE(DXL_HIWORD(position13));
-      uint32_t position14 = (unsigned int)msg->position[14]; // Convert int32 -> uint32
-      param_goal_position14[0] = DXL_LOBYTE(DXL_LOWORD(position14));
-      param_goal_position14[1] = DXL_HIBYTE(DXL_LOWORD(position14));
-      param_goal_position14[2] = DXL_LOBYTE(DXL_HIWORD(position14));
-      param_goal_position14[3] = DXL_HIBYTE(DXL_HIWORD(position14));
-      uint32_t position15 = (unsigned int)msg->position[15]; // Convert int32 -> uint32
-      param_goal_position15[0] = DXL_LOBYTE(DXL_LOWORD(position15));
-      param_goal_position15[1] = DXL_HIBYTE(DXL_LOWORD(position15));
-      param_goal_position15[2] = DXL_LOBYTE(DXL_HIWORD(position15));
-      param_goal_position15[3] = DXL_HIBYTE(DXL_HIWORD(position15));
-      uint32_t position16 = (unsigned int)msg->position[16]; // Convert int32 -> uint32
-      param_goal_position16[0] = DXL_LOBYTE(DXL_LOWORD(position16));
-      param_goal_position16[1] = DXL_HIBYTE(DXL_LOWORD(position16));
-      param_goal_position16[2] = DXL_LOBYTE(DXL_HIWORD(position16));
-      param_goal_position16[3] = DXL_HIBYTE(DXL_HIWORD(position16));
-      uint32_t position17 = (unsigned int)msg->position[17]; // Convert int32 -> uint32
-      param_goal_position17[0] = DXL_LOBYTE(DXL_LOWORD(position17));
-      param_goal_position17[1] = DXL_HIBYTE(DXL_LOWORD(position17));
-      param_goal_position17[2] = DXL_LOBYTE(DXL_HIWORD(position17));
-      param_goal_position17[3] = DXL_HIBYTE(DXL_HIWORD(position17));
-      uint32_t position18 = (unsigned int)msg->position[18]; // Convert int32 -> uint32
-      param_goal_position18[0] = DXL_LOBYTE(DXL_LOWORD(position18));
-      param_goal_position18[1] = DXL_HIBYTE(DXL_LOWORD(position18));
-      param_goal_position18[2] = DXL_LOBYTE(DXL_HIWORD(position18));
-      param_goal_position18[3] = DXL_HIBYTE(DXL_HIWORD(position18));
-
+      for (int i=0; i<20; i++){
+        uint32_t position = (unsigned int)msg->position[i]; // Convert int32 -> uint32
+                
+        motors[i][0] = DXL_LOBYTE(DXL_LOWORD(position));
+        motors[i][1] = DXL_HIBYTE(DXL_LOWORD(position));
+        motors[i][2] = DXL_LOBYTE(DXL_HIWORD(position));
+        motors[i][3] = DXL_HIBYTE(DXL_HIWORD(position));  
+      }
+      
       RCLCPP_INFO(this->get_logger(), "Fez os parametros");
 
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[0], param_goal_position0);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[0]);
-      }
-
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[1], param_goal_position1);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[1]);
-      }
-
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[2], param_goal_position2);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[2]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[3], param_goal_position3);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[3]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[4], param_goal_position4);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[4]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[5], param_goal_position5);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[5]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[6], param_goal_position6);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[6]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[7], param_goal_position7);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[7]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[8], param_goal_position8);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[8]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[9], param_goal_position9);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[9]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[10], param_goal_position10);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[10]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[11], param_goal_position11);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[11]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[12], param_goal_position12);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[12]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[13], param_goal_position13);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[13]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[14], param_goal_position14);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[14]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[15], param_goal_position15);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[15]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[16], param_goal_position16);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[16]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[17], param_goal_position17);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[17]);
-      }
-      dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[18], param_goal_position18);
-      if (dxl_addparam_result != true) {
-        RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[18]);
+      for(int i=0; i<20; i++)
+      {
+        dxl_addparam_result = groupSyncWrite.addParam((uint8_t)msg->id[i], motors[i]);
+        if (dxl_addparam_result != true) {
+          RCLCPP_INFO(this->get_logger(), "Failed to addparam to groupSyncWrite for Dynamixel ID %d", msg->id[i]);
+        }
       }
 
       dxl_comm_result = groupSyncWrite.txPacket();
@@ -301,9 +123,9 @@ ReadWriteNode::ReadWriteNode()
         RCLCPP_INFO(this->get_logger(), "%s", packetHandler->getRxPacketError(dxl_error));
       } 
       else {
-        RCLCPP_INFO(this->get_logger(), "Set [ID: {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d,%d,%d}] [Goal Position: {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d,%d, %d}]", 
-        msg->id[0], msg->id[1], msg->id[2], msg->id[3], msg->id[4], msg->id[5], msg->id[6], msg->id[7], msg->id[8], msg->id[9], msg->id[10], msg->id[11], msg->id[12], msg->id[13], msg->id[14], msg->id[15], msg->id[16], msg->id[17], msg->id[18],
-        msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11], msg->position[12], msg->position[13], msg->position[14], msg->position[15], msg->position[16], msg->position[17],msg->position[18]);
+        RCLCPP_INFO(this->get_logger(), "Set [ID: {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d,%d,%d,%d}] [Goal Position: {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d,%d, %d,%d}]", 
+        msg->id[0], msg->id[1], msg->id[2], msg->id[3], msg->id[4], msg->id[5], msg->id[6], msg->id[7], msg->id[8], msg->id[9], msg->id[10], msg->id[11], msg->id[12], msg->id[13], msg->id[14], msg->id[15], msg->id[16], msg->id[17], msg->id[18], msg->id[19],
+        msg->position[0], msg->position[1], msg->position[2], msg->position[3], msg->position[4], msg->position[5], msg->position[6], msg->position[7], msg->position[8], msg->position[9], msg->position[10], msg->position[11], msg->position[12], msg->position[13], msg->position[14], msg->position[15], msg->position[16], msg->position[17],msg->position[18], msg->position[19]);
       }
 
       RCLCPP_INFO(this->get_logger(), "Terminou");

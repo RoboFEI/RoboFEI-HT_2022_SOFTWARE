@@ -412,9 +412,9 @@ public:
             message_walk.walk = 0; 
             publisher_walk->publish(message_walk);
             RCLCPP_INFO(this->get_logger(), "Parado");                            
-            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20};
             //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
-            message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,cont_vision};
+            message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,cont_vision, 0};
       
             publisher_->publish(message);
             break;

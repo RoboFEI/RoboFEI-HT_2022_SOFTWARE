@@ -48,6 +48,7 @@ ament_target_dependencies(minimal_pub
 install(TARGETS
   read_write_node
   only_one_motor
+  minimal_pub
   DESTINATION lib/${PROJECT_NAME}
 )
 
