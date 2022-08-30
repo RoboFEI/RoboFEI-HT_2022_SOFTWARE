@@ -49,7 +49,7 @@ class ballStatus(Node):
 
     def __init__(self, config):
         self.config = config
-        super().__init__('minimal_publisher')
+        super().__init__('vision_node')
         self.publisher_ = self.create_publisher(Vision, '/ball_position', 10)
         self.vcap = WebcamVideoStream(src=0).start() # Abrindo camera
         timer_period = 0.008  # seconds
