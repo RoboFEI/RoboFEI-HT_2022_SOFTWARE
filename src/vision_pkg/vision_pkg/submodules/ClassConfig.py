@@ -50,7 +50,7 @@ class classConfig():
 	def CheckConfig(self):
 		# Read file config.ini
 		#while True:
-		if self.Config.read('src/vision_pkg/src/Data/config.ini') != []:
+		if self.Config.read('src/vision_pkg/vision_pkg/Data/config.ini') != []:
 			print('Leitura do config.ini')
 			self.CENTER_SERVO_PAN = 	self.Config.getint('Basic Settings', 'center_servo_pan')
 			self.POSITION_SERVO_TILT  = 	self.Config.getint('Basic Settings', 'position_servo_tilt')
@@ -81,7 +81,7 @@ class classConfig():
 		else:
 			print('Falha na leitura do config.ini, criando arquivo\nVision Ball inexistente, criando valores padrao')
 			self.Config = ConfigParser()
-			self.Config.write('src/vision_pkg/src/Data/config.ini')
+			self.Config.write('src/vision_pkg/vision_pkg/Data/config.ini')
 
 			self.Config.add_section('Basic Settings')
 			self.Config.set('Basic Settings', 'center_servo_pan'       , str(512)+'\t\t\t;Center Servo PAN Position')
@@ -110,5 +110,5 @@ class classConfig():
 			self.Config.set('Distance Limits (Pixels)', 'when_ball_up', str(222) + '\t\t\t;Y screen for ball on up screen')
 			self.Config.set('Distance Limits (Pixels)', 'when_ball_dpwn', str(333) + '\t\t\t;Y screen for ball on down screen')	
 
-			with open('src/vision_pkg/src/Data/config.ini', 'wb') as configfile:
+			with open('src/vision_pkg/vision_pkg/Data/config.ini', 'wb') as configfile:
 				self.Config.write(configfile)
