@@ -51,12 +51,12 @@ namespace Robot
 		rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr subscription_imu;
 		rclcpp::Subscription<custom_interfaces::msg::Walk>::SharedPtr subscription_walk;
 		rclcpp::Subscription<custom_interfaces::msg::ParamWalk>::SharedPtr subscription_param;
-rclcpp::Publisher<custom_interfaces::msg::SetPosition>::SharedPtr publisher_;  
-rclcpp::Publisher<custom_interfaces::msg::SetPositionOriginal>::SharedPtr publisher_single; 
-rclcpp::Client<custom_interfaces::srv::GetPosition>::SharedPtr client;
+		rclcpp::Publisher<custom_interfaces::msg::SetPosition>::SharedPtr publisher_;  
+		rclcpp::Publisher<custom_interfaces::msg::SetPositionOriginal>::SharedPtr publisher_single; 
+		rclcpp::Client<custom_interfaces::srv::GetPosition>::SharedPtr client;
  
 		
-	rclcpp::TimerBase::SharedPtr timer_;
+		rclcpp::TimerBase::SharedPtr timer_;
 		std::ofstream m_LogFileStream;
 
 	AngleEstimator m_angleEstimator;

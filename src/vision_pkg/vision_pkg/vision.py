@@ -10,7 +10,6 @@ from rclpy.node import Node
 
 #from std_msgs.msg import String
 from custom_interfaces.msg import Vision
-from custom_interfaces.srv import GetPosition
 
 import sys
 sys.path.append("./src")
@@ -59,26 +58,11 @@ class ballStatus(Node):
         self.args2 = parser.parse_args()
         self.detectBall = objectDetect(self.args2.withoutservo, self.config)
 
-        #create a Client
-        self.cli = self.create_client(GetPosition, 'get_position')
-        while not self.cli.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('service not available, waiting again...')
-        self.req = GetPosition.Request()
-
-    def send_request(self, id):
-        self.req.id = id
-        self.future = self.cli.call_async(self.req)
-        rclpy.spin_until_future_complete(self, self.future)
-        return self.future.result()
-
-
     def BallStatus(self, x,y,status):
         msg = Vision()
         msg.ball_detected = True
         self.publisher_.publish(msg)
         print("Bola detectada '%s'" % msg.ball_detected)
-        position = self.send_request(19)
-        print(position)
         if status  == 1:
 			#Bola a esquerda
             if (x <= self.config.x_left):
