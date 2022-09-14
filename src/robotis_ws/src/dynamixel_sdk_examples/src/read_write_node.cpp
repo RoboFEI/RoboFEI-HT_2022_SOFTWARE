@@ -90,6 +90,8 @@ ReadWriteNode::ReadWriteNode()
   
   //Create a publisher to send the neck position for vision.py
   neck_position_publisher = this->create_publisher<custom_interfaces::msg::NeckPosition>("neck_position", 10);
+  timer_ = this->create_wall_timer(
+  8ms, std::bind(&ReadWriteNode::timer_callback, this));
 
   set_position_subscriber_ =
     this->create_subscription<SetPosition>(
@@ -226,13 +228,6 @@ ReadWriteNode::ReadWriteNode()
       response->position = present_position;
     };
   get_position_server_ = create_service<GetPosition>("get_position", get_present_position);
-
-
-
-  timer_ = this->create_wall_timer(
-  8ms, std::bind(&ReadWriteNode::timer_callback, this));
-
-  
 
 }
 

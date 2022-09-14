@@ -4,12 +4,14 @@
 # Para ver o que a camera esta vendo:
 # ros2 run vision_pkg vision --vb
 ####################################################################################################################################
+import imp
 from telnetlib import NOP
 import rclpy
 from rclpy.node import Node
 
 #from std_msgs.msg import String
 from custom_interfaces.msg import Vision
+from custom_interfaces.msg import NeckPosition
 
 import sys
 sys.path.append("./src")
@@ -51,12 +53,18 @@ class ballStatus(Node):
         self.config = config
         super().__init__('vision_node')
         self.publisher_ = self.create_publisher(Vision, '/ball_position', 10)
+        self.neck_position_subscriber = self.create_subscription(NeckPosition, '/neck_position', self.listener_callback, 10)
         self.vcap = WebcamVideoStream(src=0).start() # Abrindo camera
         timer_period = 0.008  # seconds
         self.timer = self.create_timer(timer_period, self.thread_DNN)
         self.i = 0
         self.args2 = parser.parse_args()
         self.detectBall = objectDetect(self.args2.withoutservo, self.config)
+
+    def listener_callback(self, msg):
+        self.get_logger().info('motor 19: "%d"' % msg.position19)
+        self.get_logger().info('motor 20: "%d"' % msg.position20)
+        
 
     def BallStatus(self, x,y,status):
         msg = Vision()
