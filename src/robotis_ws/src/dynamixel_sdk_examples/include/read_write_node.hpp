@@ -50,8 +50,7 @@ private:
   rclcpp::TimerBase::SharedPtr timer_; // declaration of timer to publish the neck position
 
   int present_position;
-  int motor19;
-  int motor20;
+  int motor[2];
 };
 
 #endif  // READ_WRITE_NODE_HPP_

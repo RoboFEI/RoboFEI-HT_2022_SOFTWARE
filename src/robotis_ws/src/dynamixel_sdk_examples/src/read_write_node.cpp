@@ -233,23 +233,20 @@ ReadWriteNode::ReadWriteNode()
 
 void ReadWriteNode::timer_callback(){
     auto message = custom_interfaces::msg::NeckPosition();
-    dxl_comm_result = packetHandler->read4ByteTxRx(
-      portHandler,
-      (uint8_t) 19,
-      ADDR_PRESENT_POSITION,
-      reinterpret_cast<uint32_t *>(&motor19),
-      &dxl_error
-    );
-    dxl_comm_result = packetHandler->read4ByteTxRx(
-      portHandler,
-      (uint8_t) 19,
-      ADDR_PRESENT_POSITION,
-      reinterpret_cast<uint32_t *>(&motor20),
-      &dxl_error
-    );      
-    
-    message.position19 = motor19;
-    message.position20 = motor20;
+
+    for(int i=0; i<2; i++)
+    {
+      dxl_comm_result = packetHandler->read4ByteTxRx(
+        portHandler,
+        (uint8_t) (19+i), //for motor with id 19 and 20
+        ADDR_PRESENT_POSITION,
+        reinterpret_cast<uint32_t *>(&motor[i]),
+        &dxl_error
+      );
+    }
+   
+    message.position19 = motor[0];
+    message.position20 = motor[1];
 
     neck_position_publisher->publish(message);
 

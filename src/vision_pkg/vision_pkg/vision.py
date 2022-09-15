@@ -58,12 +58,12 @@ class ballStatus(Node):
         timer_period = 0.008  # seconds
         self.timer = self.create_timer(timer_period, self.thread_DNN)
         self.i = 0
+        self.neck_position = [0,0]
         self.args2 = parser.parse_args()
         self.detectBall = objectDetect(self.args2.withoutservo, self.config)
 
     def listener_callback(self, msg):
-        self.get_logger().info('motor 19: "%d"' % msg.position19)
-        self.get_logger().info('motor 20: "%d"' % msg.position20)
+        self.neck_position = [msg.position19, msg.position20]
         
 
     def BallStatus(self, x,y,status):
@@ -140,6 +140,7 @@ class ballStatus(Node):
         ball = False
         frame_b, x, y, raio, ball, status, statusLost = self.detectBall.searchball(frame)
         print("tempo de varredura = ", time.time() - start1)
+        print("neck Position: ", self.neck_position[0], ", ", self.neck_position[1])
         #self.get_logger().info('Ball detected: "%s"' % msg.ball_detected)
         if ball == True:
             self.BallStatus(x,y,status)
