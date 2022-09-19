@@ -4,13 +4,14 @@
 # Para ver o que a camera esta vendo:
 # ros2 run vision_pkg vision --vb
 ####################################################################################################################################
+import imp
 from telnetlib import NOP
 import rclpy
 from rclpy.node import Node
 
 #from std_msgs.msg import String
 from custom_interfaces.msg import Vision
-from custom_interfaces.srv import GetPosition
+from custom_interfaces.msg import NeckPosition
 
 import sys
 sys.path.append("./src")
@@ -52,33 +53,24 @@ class ballStatus(Node):
         self.config = config
         super().__init__('vision_node')
         self.publisher_ = self.create_publisher(Vision, '/ball_position', 10)
+        self.neck_position_subscriber = self.create_subscription(NeckPosition, '/neck_position', self.listener_callback, 10)
         self.vcap = WebcamVideoStream(src=0).start() # Abrindo camera
         timer_period = 0.008  # seconds
         self.timer = self.create_timer(timer_period, self.thread_DNN)
         self.i = 0
+        self.neck_position = [0,0]
         self.args2 = parser.parse_args()
         self.detectBall = objectDetect(self.args2.withoutservo, self.config)
 
-        #create a Client
-        self.cli = self.create_client(GetPosition, 'get_position')
-        while not self.cli.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('service not available, waiting again...')
-        self.req = GetPosition.Request()
-
-    def send_request(self, id):
-        self.req.id = id
-        self.future = self.cli.call_async(self.req)
-        rclpy.spin_until_future_complete(self, self.future)
-        return self.future.result()
-
+    def listener_callback(self, msg):
+        self.neck_position = [msg.position19, msg.position20]
+        
 
     def BallStatus(self, x,y,status):
         msg = Vision()
         msg.ball_detected = True
         self.publisher_.publish(msg)
         print("Bola detectada '%s'" % msg.ball_detected)
-        position = self.send_request(19)
-        print(position)
         if status  == 1:
 			#Bola a esquerda
             if (x <= self.config.x_left):
@@ -148,6 +140,7 @@ class ballStatus(Node):
         ball = False
         frame_b, x, y, raio, ball, status, statusLost = self.detectBall.searchball(frame)
         print("tempo de varredura = ", time.time() - start1)
+        print("neck Position: ", self.neck_position[0], ", ", self.neck_position[1])
         #self.get_logger().info('Ball detected: "%s"' % msg.ball_detected)
         if ball == True:
             self.BallStatus(x,y,status)

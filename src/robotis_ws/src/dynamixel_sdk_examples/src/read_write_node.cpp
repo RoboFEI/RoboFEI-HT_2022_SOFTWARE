@@ -36,11 +36,14 @@
 #include <string>
 #include <unistd.h>
 #include <list>
+#include <chrono>
+#include <functional>
 
 #include "dynamixel_sdk/dynamixel_sdk.h"
 #include "custom_interfaces/msg/set_position.hpp"
 #include "custom_interfaces/msg/set_position_original.hpp"
 #include "custom_interfaces/srv/get_position.hpp"
+#include "custom_interfaces/msg/neck_position.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rcutils/cmdline_parser.h"
 
@@ -60,6 +63,9 @@
 #define DEVICE_NAME "/dev/ttyUSB0"  // [Linux]: "/dev/ttyUSB*", [Windows]: "COM*"
 
 using namespace dynamixel;
+
+using namespace std::chrono_literals;
+
 
 PortHandler * portHandler = PortHandler::getPortHandler(DEVICE_NAME);
 PacketHandler * packetHandler = PacketHandler::getPacketHandler(PROTOCOL_VERSION);
@@ -82,6 +88,11 @@ ReadWriteNode::ReadWriteNode()
   const auto QOS_RKL10V =
     rclcpp::QoS(rclcpp::KeepLast(qos_depth)).reliable().durability_volatile();
   
+  //Create a publisher to send the neck position for vision.py
+  neck_position_publisher = this->create_publisher<custom_interfaces::msg::NeckPosition>("neck_position", 10);
+  timer_ = this->create_wall_timer(
+  8ms, std::bind(&ReadWriteNode::timer_callback, this));
+
   set_position_subscriber_ =
     this->create_subscription<SetPosition>(
     "set_position",
@@ -216,10 +227,30 @@ ReadWriteNode::ReadWriteNode()
 
       response->position = present_position;
     };
-
   get_position_server_ = create_service<GetPosition>("get_position", get_present_position);
 
 }
+
+void ReadWriteNode::timer_callback(){
+    auto message = custom_interfaces::msg::NeckPosition();
+
+    for(int i=0; i<2; i++)
+    {
+      dxl_comm_result = packetHandler->read4ByteTxRx(
+        portHandler,
+        (uint8_t) (19+i), //for motor with id 19 and 20
+        ADDR_PRESENT_POSITION,
+        reinterpret_cast<uint32_t *>(&motor[i]),
+        &dxl_error
+      );
+    }
+   
+    message.position19 = motor[0];
+    message.position20 = motor[1];
+
+    neck_position_publisher->publish(message);
+
+  }
 
 // RCLCPP_INFO(this->get_logger(), "Set [ID: {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}] [Goal Position: {%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}]", 
 //          msg->id[0], msg->id[1], msg->id[3], msg->id[4], msg->id[5], msg->id[6], msg->id[7], msg->id[8], msg->id[9], msg->id[10],

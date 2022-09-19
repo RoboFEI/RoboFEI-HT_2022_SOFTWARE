@@ -25,6 +25,7 @@
 #include "custom_interfaces/msg/set_position.hpp"
 #include "custom_interfaces/msg/set_position_original.hpp"
 #include "custom_interfaces/srv/get_position.hpp"
+#include "custom_interfaces/msg/neck_position.hpp"
 
 
 class ReadWriteNode : public rclcpp::Node
@@ -33,6 +34,9 @@ public:
   using SetPosition = custom_interfaces::msg::SetPosition;
   using SetPositionOriginal = custom_interfaces::msg::SetPositionOriginal;
   using GetPosition = custom_interfaces::srv::GetPosition;
+  using NeckPosition = custom_interfaces::msg::NeckPosition;
+
+  void timer_callback();
 
   ReadWriteNode();
   virtual ~ReadWriteNode();
@@ -41,8 +45,12 @@ private:
   rclcpp::Subscription<SetPosition>::SharedPtr set_position_subscriber_;
   rclcpp::Subscription<SetPositionOriginal>::SharedPtr set_position_subscriber_single;
   rclcpp::Service<GetPosition>::SharedPtr get_position_server_;
+  rclcpp::Publisher<NeckPosition>::SharedPtr neck_position_publisher;
+
+  rclcpp::TimerBase::SharedPtr timer_; // declaration of timer to publish the neck position
 
   int present_position;
+  int motor[2];
 };
 
 #endif  // READ_WRITE_NODE_HPP_

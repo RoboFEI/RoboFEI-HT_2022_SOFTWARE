@@ -30,6 +30,7 @@ set(msg_files
   "msg/Decision.msg"
   "msg/Walk.msg"
   "msg/ParamWalk.msg"
+  "msg/NeckPosition.msg"
 )
 
 set(srv_files
