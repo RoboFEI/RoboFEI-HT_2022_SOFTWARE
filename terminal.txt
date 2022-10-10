@@ -1,0 +1,11 @@
+# Para rodar todos os códigos de uma vez
+ros2 launch start start.launch.py 
+
+# Para rodar todos os códigos separadamente
+ros2 run dynamixel_sdk_examples read_write_node
+ros2 launch control action.launch.py
+ros2 run vision_pkg vision --vb
+ros2 run um7 um7_node
+ros2 run controller talker
+ros2 run decision_pkg decision_node
+ros2 run localization_pkg localization_node --mcl -l -g
