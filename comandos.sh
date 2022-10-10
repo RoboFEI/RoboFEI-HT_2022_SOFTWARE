@@ -28,3 +28,8 @@ cd src/vision_test/vision_test
 pip install -r requirements.txt 
 sudo pip install construct
 
+echo -e "${blue} setup new rules for usb names${NC}"
+sudo mv robot-usb-ports.rules /etc/udev/rules.d/
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+

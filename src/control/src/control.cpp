@@ -1153,6 +1153,17 @@ public:
             publisher_->publish(message);
             usleep(300000);
             break;
+          case 21: // Centralizar bola à esquerda
+            RCLCPP_INFO(this->get_logger(), "Centralizando bola à esquerda"); 
+            message_walk.walk_number = 0; 
+            publisher_walk->publish(message_walk);  
+            cont_vision-=15;
+            message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+            //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19           20
+            message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,cont_vision, cont_vision_up};
+            publisher_->publish(message);
+            usleep(300000);
+            break;
         }
       }
     }

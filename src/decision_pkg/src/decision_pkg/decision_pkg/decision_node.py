@@ -69,7 +69,7 @@ class DecisionNode(Node):
         self.game_already_started = True
 
     def listener_callback_neck(self, msg):
-            self.neck_position = [msg.position19, msg.position20]
+        self.neck_position = [msg.position19, msg.position20]
 
     def listener_callback_vision(self, msg):
         self.BALL_DETECTED = msg.ball_detected
@@ -107,7 +107,7 @@ class DecisionNode(Node):
                 self.walking(message) # Anda até chegar no meio de campo
                 sleep(25)
                 self.turn(message, 0) # Virar para a direita quando chegar no meio de campo
-                sleep(3)
+                sleep(7)
                 self.stand_still(message) 
                 sleep(2)
                 self.ready_robot=True
@@ -248,11 +248,11 @@ class DecisionNode(Node):
                             self.turn(message, 1)
                         elif (self.BALL_RIGHT==True):
                             self.turn(message, 0) # Vira para o lado direito
-                        if(self.BALL_LEFT==True):
-                            self.turn_head_left(message)
-                        elif(self.BALL_RIGHT==True):
+                        if(self.neck_position[0]<1948):
                             self.turn_head_right(message)
-                        if (self.BALL_CENTER_LEFT or self.BALL_CENTER_RIGHT) and (self.neck_position[19] >=1948 or self.neck_position[19]<=2148):
+                        elif(self.neck_position[0]>2148):
+                            self.turn_head_left(message)
+                        if (self.BALL_CENTER_LEFT==True or self.BALL_CENTER_RIGHT==True) and (self.neck_position[0] >=1948 or self.neck_position[0]<=2148):
                             if(self.BALL_FAR==True):
                                 self.get_logger().info('LONGEEEEEEEE')
                                 self.stand_still(message)
@@ -416,6 +416,11 @@ class DecisionNode(Node):
 
     def turn_head_left(self, message):
         message.decision = 20
+        self.publisher_.publish(message)
+        self.get_logger().info('Publishing: "%d"' % message.decision)
+        
+    def turn_head_right(self, message):
+        message.decision = 21
         self.publisher_.publish(message)
         self.get_logger().info('Publishing: "%d"' % message.decision)
 

@@ -54,7 +54,7 @@ PATH_TO_WEIGHTS = 'src/vision_test/vision_test/best.pt'
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--weights', nargs='+', type=str, default='yolov7.pt', help='model.pt path(s)')
-parser.add_argument('--source', type=str, default='0', help='source')  # file/folder, 0 for webcam
+parser.add_argument('--source', type=str, default='/dev/camera', help='source')  # file/folder, 0 for webcam
 parser.add_argument('--img-size', type=int, default=640, help='inference size (pixels)')
 parser.add_argument('--conf-thres', type=float, default=0.25, help='object confidence threshold')
 parser.add_argument('--iou-thres', type=float, default=0.45, help='IOU threshold for NMS')
@@ -178,7 +178,7 @@ class ballStatus(Node):
             gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]  # normalization gain whwh
             if len(det): # Entra nessa função se detectou a bola
                 # Rescale boxes from img_size to im0 size
-                print("Tensor det:" + str(det))
+                #print("Tensor det:" + str(det))
                 det[:, :4] = scale_coords(img.shape[2:], det[:, :4], im0.shape).round()
                 BallFound = True
                 xmed = det[0][0].item() + (det[0][1].item())/2
@@ -217,49 +217,65 @@ class ballStatus(Node):
                 if cv2.waitKey(25) & 0xFF == ord('q'):
                     NOP
 
-            print(self.status)
+            # print(self.status)
 
-            print(f'Done. ({time.time() - t0:.3f}s)')
+            #print(f'Done. ({time.time() - t0:.3f}s)')
 
             if self.status:
                 msg.ball_detected = True
                 self.publisher_.publish(msg)
                 print("Bola detectada '%s'" % msg.ball_detected)
-                print("Y: " + str(c2))
+                #print("Y: " + str(c2))
                     #Bola a esquerda
                 if (int(c1) <= self.config.x_left):
-                    msg.ball_close = True
+                    msg.ball_left = True
+                    msg.ball_center_left = False
+                    msg.ball_center_right = False
+                    msg.ball_right = False
                     self.publisher_.publish(msg)
-                    print("Bola Esquerda")
+                    print("Bola à Esquerda")
 
                 #Bola centro esquerda
                 elif (int(c1) > self.config.x_left and int(c1) < self.config.x_center):
-                    msg.ball_med = True
+                    msg.ball_center_left = True
+                    msg.ball_left = False
+                    msg.ball_center_right = False
+                    msg.ball_right = False
                     self.publisher_.publish(msg)
                     print("Bola Centralizada a esquerda")
 
-                #Bola centro esquerda
+                #Bola centro direita
                 elif (int(c1) < self.config.x_right and int(c1) > self.config.x_center):
-                    msg.ball_med = True
+                    msg.ball_center_right = True
+                    msg.ball_center_left = False
+                    msg.ball_left = False
+                    msg.ball_right = False
                     self.publisher_.publish(msg)
                     print("Bola Centralizada a direita")
 
                 #Bola a direita
                 else:
-                    msg.ball_far = True
+                    msg.ball_right = True
+                    msg.ball_center_right = True
+                    msg.ball_center_left = False
+                    msg.ball_left = False
                     self.publisher_.publish(msg)
-                    print("Bola Direita")
+                    print("Bola à Direita")
                     self.config.max_count_lost_frame
                 
                 #Bola Perto
                 if (int(c2) > self.config.y_chute):
-                    msg.ball_center_right = True
+                    msg.ball_close = True
+                    msg.ball_far = False
+                    msg.ball_med = False
                     self.publisher_.publish(msg)
                     print("Bola Perto")
 
                 #Bola Longe
                 elif (int(c2) <= self.config.y_longe):
-                    msg.ball_left = True
+                    msg.ball_far = True
+                    msg.ball_close = False
+                    msg.ball_med = False
                     self.publisher_.publish(msg)
                     print("Bola Longe")
                     self.config.max_count_lost_frame
@@ -267,7 +283,9 @@ class ballStatus(Node):
                 #Bola ao centro
                 # elif (int(c2) > self.config.y_longe and int(c2) < self.config.y_chute):
                 else:
-                    msg.ball_center_left = True
+                    msg.ball_med = True
+                    msg.ball_far = False
+                    msg.ball_close = False
                     self.publisher_.publish(msg)
                     print("Bola ao Centro")
 
