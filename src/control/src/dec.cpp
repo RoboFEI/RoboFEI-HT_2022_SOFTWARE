@@ -29,7 +29,7 @@ private:
     auto message = custom_interfaces::msg::Decision();
     // PARADO  
     RCLCPP_INFO(this->get_logger(), "PARADO");
-    message.decision = 20;          
+    message.decision = 15;          
     publisher_->publish(message);
   }
 

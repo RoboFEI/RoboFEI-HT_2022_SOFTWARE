@@ -14,6 +14,7 @@ from sensor_msgs.msg import Imu
 # ros2 topic pub -1 /gamestate custom_interfaces/msg/HumanoidLeagueMsgs "{game_state: 1}"
 # ros2 topic pub -1 /gamestate custom_interfaces/msg/HumanoidLeagueMsgs "{game_state: 1, secondary_state_mode: 2}"
 # ros2 topic pub -1 /ball_position std_msgs/Bool "data: True"
+# ros2 topic pub -1 /neck_position custom_interfaces/msg/NeckPosition "{position19: 2048, position20: 2048}"
 
 TEAM_ROBOFEI = 7
 ROBOT_NUMBER = 1 # JOGADOR, PARA GOLEIRO COLOCAR 0
@@ -67,6 +68,8 @@ class DecisionNode(Node):
         self.cont_falses = 0
         self.has_kick_off = False
         self.game_already_started = True
+        self.last_movement = 1
+        self.movement = 1
 
     def listener_callback_neck(self, msg):
         self.neck_position = [msg.position19, msg.position20]
@@ -228,7 +231,7 @@ class DecisionNode(Node):
                 else: 
                     if(self.BALL_DETECTED == False):
                         self.cont_falses += 1
-                        self.search_ball(message) # Procura a bola
+                        # self.search_ball(message) # Procura a bola
                         self.get_logger().info('PROCURANDOOOO')
                         if(self.cont_falses>=4000):
                             self.stand_still(message)
@@ -241,41 +244,90 @@ class DecisionNode(Node):
                             self.cont_falses = 0
                 	
                     else:
+                        #BY THIAGO E MARI
+                        # self.get_logger().info('BALL DETECTED')
+                        # if(self.neck_position[0]>2600):
+                        #     self.get_logger().info('BALL LEFT')
+                        #     self.get_logger().info('TURNING LEFT')
+                        #     self.turn(message, 1)
+                        # elif(self.neck_position[0]>1496):
+                        #     self.get_logger().info('BALL RIGHT')
+                        #     self.get_logger().info('TURNING RIGHT')
+                        #     self.turn(message, 0)
+                        # else:
+                        #     self.get_logger().info('BALL CENTER')
+                        #     if(self.neck_position[1]< 1600):
+                        #         self.get_logger().info('NECK DOWN')
+                        #         if(self.BALL_CENTER_LEFT or self.BALL_CENTER_RIGHT):
+                        #             self.get_logger().info('WALKING')
+                        #             self.stand_still(message)
+                        #             sleep(2)
+                        #             self.walking(message) 
+                        #             sleep(10)
+                        #             self.gait(message)
+                        #             sleep(4)
+                        #         elif(self.BALL_RIGHT):
+                        #             self.get_logger().info('TURNING RIGHT')
+                        #             self.turn(message, 0)
+                        #         else:
+                        #             self.get_logger().info('TURNING LEFT')
+                        #             self.turn(message, 1)    
+                        #     elif(self.neck_position[1]<1700):
+                        #         self.get_logger().info('NECK CENTER')  
+                        #         if(self.BALL_CENTER_LEFT or self.BALL_CENTER_RIGHT):
+                        #             self.get_logger().info('WALKING')
+                        #             self.stand_still(message)
+                        #             sleep(2)
+                        #             self.walking(message) 
+                        #             sleep(10)
+                        #             self.gait(message)
+                        #             sleep(4)
+                        #         elif(self.BALL_RIGHT):
+                        #             self.get_logger().info('TURNING RIGHT')
+                        #             self.turn(message, 0)
+                        #         else:
+                        #             self.get_logger().info('TURNING LEFT')
+                        #             self.turn(message, 1)
+                        #     else:
+                        #         self.get_logger().info('NECK UP')
+                        #         self.get_logger().info('WALKING')
+                        #         self.stand_still(message)
+                        #         sleep(2)
+                        #         self.walking(message) 
+                        #         sleep(20)
+                        #         self.gait(message)
+                        #         sleep(4)
+
+                        
                         self.get_logger().info('BALL DETECTED "%s"' % self.BALL_DETECTED)
-                        self.stand_still(message)
                         self.cont_falses = 0
                         if(self.BALL_LEFT==True):
                             self.turn(message, 1)
                         elif (self.BALL_RIGHT==True):
                             self.turn(message, 0) # Vira para o lado direito
-                        if(self.neck_position[0]<1948):
-                            self.turn_head_right(message)
-                        elif(self.neck_position[0]>2148):
-                            self.turn_head_left(message)
-                        if (self.BALL_CENTER_LEFT==True or self.BALL_CENTER_RIGHT==True) and (self.neck_position[0] >=1948 or self.neck_position[0]<=2148):
+                        if (self.BALL_CENTER_LEFT==True or self.BALL_CENTER_RIGHT==True):
+                            # if(self.neck_position[0]<1948):
+                            #     self.turn_head_right(message)
+                            # elif(self.neck_position[0]>2148):
+                            #     self.turn_head_left(message)
+                            # else:
                             if(self.BALL_FAR==True):
                                 self.get_logger().info('LONGEEEEEEEE')
-                                self.stand_still(message)
-                                sleep(2)
                                 self.walking(message) 
-                                sleep(10)
-                                self.gait(message)
-                                sleep(4)
                             if(self.BALL_MED==True):
                                 self.get_logger().info('MEDIOOOOOOOOOOOOO')
-                                self.stand_still(message)
-                                sleep(2)
                                 self.walking(message) 
-                                sleep(4)
-                                self.gait(message)
-                                sleep(4)
-                            if(self.BALL_CLOSE==True and self.BALL_CENTER_LEFT==True):
+                            # if (self.BALL_CLOSE and self.neck_position[1]<=1345):
+                            if (self.BALL_CLOSE==True and self.BALL_CENTER_LEFT==True):
                                 self.get_logger().info('PERTOOOOOOOOO ESQ')
                                 self.kicking(message, 0) # chuta com pe esquerdo
-                            if(self.BALL_CLOSE==True and self.BALL_CENTER_RIGHT==True):
+                            elif (self.BALL_CLOSE==True and self.BALL_CENTER_RIGHT==True):
                                 self.get_logger().info('PERTOOOOOOOOO DIR')
                                 self.kicking(message, 1) # chuta com pe direito
+                            # elif(self.BALL_CLOSE and self.neck_position[1]>1345):
+                            #     self.turn_head_down(message)
 
+                    
 
             elif(self.gamestate == 4): # Jogo terminou, robô sai do campo
                 self.stand_still(message)
@@ -338,91 +390,90 @@ class DecisionNode(Node):
         
 
     def stand_still(self, message): # Robô em pé parado
+        self.movement = 1
         message.decision = 1
         self.publisher_.publish(message)
-        self.get_logger().info('Publishing: "%d"' % message.decision)
+        self.get_logger().info('Stand still')
 
     def kicking(self, message, side):
+        self.movement = 2
         if(side == 1): # Chuta com pé direito
             message.decision = 3 
             self.publisher_.publish(message)
-            self.get_logger().info('Publishing: "%d"' % message.decision)
+            self.get_logger().info('Right kick')
         else:
             message.decision = 4 # Chuta com o pé esquerdo
             self.publisher_.publish(message)
-            self.get_logger().info('Publishing: "%d"' % message.decision)
-        sleep(3)
+            self.get_logger().info('Left kick')
 
     def walking(self, message):
+        self.movement = 3
         message.decision = 14 # Anda
         self.publisher_.publish(message)
-        self.get_logger().info('Publishing: "%d"' % message.decision)
+        self.get_logger().info('Walking')
 
     def gait(self, message):
+        self.movement = 4
         message.decision = 15 # Gait
         self.publisher_.publish(message)
-        self.get_logger().info('Publishing: "%d"' % message.decision)
+        self.get_logger().info('Gait')
 
     def search_ball(self, message):
         message.decision = 8 # Move o motor da cabeça para o robô procurar a bola
         self.publisher_.publish(message)
-        self.get_logger().info('Publishing: "%d"' % message.decision)
+        self.get_logger().info('Searching ball')
 
     def turn(self, message, side):
+        self.movement = 5
         if(side == 0):
             message.decision = 5 # Direita
             self.publisher_.publish(message)
-            self.get_logger().info('Publishing: "%d"' % message.decision)
+            self.get_logger().info('Turn right')
         else:
             message.decision = 6 # Esquerda
             self.publisher_.publish(message)
-            self.get_logger().info('Publishing: "%d"' % message.decision)
+            self.get_logger().info('Turn left')
 
     def turn_around_ball(self, message, side):
+        self.movement = 6
         if (side == 0):
             message.decision = 9 # Horario
             self.publisher_.publish(message)
-            self.get_logger().info('Publishing: "%d"' % message.decision)
+            self.get_logger().info('Turning around ball clockwise')
         else:
             message.decision = 10 # Antihorario
             self.publisher_.publish(message)
-            self.get_logger().info('Publishing: "%d"' % message.decision)
-        sleep(4)
-
-    def turn_around_ball(self, message, side):
-        if (side == 0):
-            message.decision = 9 # Horario
-            self.publisher_.publish(message)
-            self.get_logger().info('Publishing: "%d"' % message.decision)
-        else:
-            message.decision = 10 # Antihorario
-            self.publisher_.publish(message)
-            self.get_logger().info('Publishing: "%d"' % message.decision)
-        sleep(4)
+            self.get_logger().info('Turning around ball anti-clockwise')
 
     def goalkeeper(self, message, action):
+        self.movement = 7
         if(action == 0): # Agachar
             message.decision = 13
             self.publisher_.publish(message)
-            self.get_logger().info('Publishing: "%d"' % message.decision)
+            self.get_logger().info('Squat')
         elif(action == 1): # Se joga para a esquerda
             message.decision = 11 
             self.publisher_.publish(message)
-            self.get_logger().info('Publishing: "%d"' % message.decision)
+            self.get_logger().info('Falling right')
         elif(action == 2): # Se joga para a direita
             message.decision = 12 
             self.publisher_.publish(message)
-            self.get_logger().info('Publishing: "%d"' % message.decision)
+            self.get_logger().info('Falling left')
 
     def turn_head_left(self, message):
         message.decision = 20
         self.publisher_.publish(message)
-        self.get_logger().info('Publishing: "%d"' % message.decision)
+        self.get_logger().info('Turning head left')
         
     def turn_head_right(self, message):
         message.decision = 21
         self.publisher_.publish(message)
-        self.get_logger().info('Publishing: "%d"' % message.decision)
+        self.get_logger().info('Turning head right')
+
+    def turn_head_down(self, message):
+        message.decision = 22
+        self.publisher_.publish(message)
+        self.get_logger().info('Turning head down')
 
 def main(args=None):
     rclpy.init(args=args)

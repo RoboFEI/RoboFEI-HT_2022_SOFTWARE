@@ -84,7 +84,7 @@ MotionManager::MotionManager(const rclcpp::NodeOptions & options) :
 	publisher_ = this->create_publisher<custom_interfaces::msg::SetPosition>("set_position", 10); 
 	publisher_single = this->create_publisher<custom_interfaces::msg::SetPositionOriginal>("set_position_single", 10); 
 	client = this->create_client<custom_interfaces::srv::GetPosition>("get_position");
-    timer_ = this->create_wall_timer(8ms, std::bind(&MotionManager::Process, this));
+    timer_ = this->create_wall_timer(4ms, std::bind(&MotionManager::Process, this));
 	keep_walking = false;
 	for(int i = 0; i < JointData::NUMBER_OF_JOINTS; i++)
         m_Offset[i] = 0;
@@ -98,8 +98,8 @@ void MotionManager::topic_callback_neck(const std::shared_ptr<custom_interfaces:
     {
       neck_sides = neck_msg->position19;
       neck_up = neck_msg->position20;
-	  RCLCPP_INFO(this->get_logger(), "Motor 19: %d", neck_sides);
-	  RCLCPP_INFO(this->get_logger(), "Motor 20: %d", neck_up);
+	//   RCLCPP_INFO(this->get_logger(), "Motor 19: %d", neck_sides);
+	//   RCLCPP_INFO(this->get_logger(), "Motor 20: %d", neck_up);
     }
 
 void MotionManager::update_loop(void)
@@ -121,6 +121,7 @@ void MotionManager::topic_callback(const std::shared_ptr<sensor_msgs::msg::Imu> 
         float IMU_GYRO_Y  = -imu_msg_->angular_velocity.y/10;
 	}
 
+
 void MotionManager::topic_callback_walk(const std::shared_ptr<custom_interfaces::msg::Walk> walk_msg_) const
     {
 		X_AMPLITUDE = walk_msg_->walk;
@@ -129,8 +130,8 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<custom_interfaces:
 		RCLCPP_INFO(this->get_logger(), "SIDLE VALUE: %f", Y_AMPLITUDE);
 		A_AMPLITUDE = walk_msg_->turn;
 		RCLCPP_INFO(this->get_logger(), "TURN VALUE: %f", A_AMPLITUDE);
-        walk = (int)walk_msg_->walk_number;
-		// printf("MOVEMENT %d\n", walk);
+        walk = walk_msg_->walk_number;
+		printf("MOVEMENT %d\n", walk);
 		// printf("LAST MOVEMENT %d\n", last_movement);
 		// printf("KEEP WALKING %d\n", MotionManager::GetInstance()->keep_walking);
 
@@ -140,9 +141,9 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<custom_interfaces:
 			MotionManager::GetInstance()->keep_walking=false;
 		}
 		//printf("KEEP WALKING DEPOIS DO IF %d\n", MotionManager::GetInstance()->keep_walking);
-		//printf("FASE DEPOIS DO IF %d\n", Walking::GetInstance()->GetCurrentPhase());
+		printf("FASE  %d\n", Walking::GetInstance()->m_Phase);
 		
-		if (MotionManager::GetInstance()->keep_walking==false && Walking::GetInstance()->GetCurrentPhase()==0){
+		if (MotionManager::GetInstance()->keep_walking==false && Walking::GetInstance()->m_Phase==0){
 			//printf("MOVEMENT DENTRO DO IF %d\n", walk);
 			//printf("LAST MOVEMENT DENTRO DO IF %d\n", last_movement);
 			if (walk == 1 && last_movement!=1){
@@ -240,8 +241,6 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<custom_interfaces:
 			
 			else{ // parar o walking
 				printf("WALK PARADDO :( \n");
-				MotionManager::GetInstance()->LoadINISettings(ini);
-				Walking::GetInstance()->LoadINISettings(ini);
 				if (MotionManager::GetInstance()->keep_walking==false && Walking::GetInstance()->GetCurrentPhase()==0){
 					Action::GetInstance()->Stop();
 					MotionManager::GetInstance()->AddModule((MotionModule*)Walking::GetInstance());
@@ -279,7 +278,7 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<custom_interfaces:
 		}
 		
 		else{
-				printf("CALLBACK NAO WALK\n");
+			printf("CALLBACK NAO WALK\n");
 		}
 	}
 
@@ -468,6 +467,7 @@ void MotionManager::SaveINISettings(minIni* ini, const std::string &section)
 #define MARGIN_OF_SD        2.0
 void MotionManager::Process()
 {
+	printf("WALK CALLBACK %d \n", walk);
 	if(walk!=0){
 		//RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "dentro do process");
 		if((Walking::GetInstance())->m_Joint.GetEnable(5) == true)
@@ -630,6 +630,9 @@ void MotionManager::Process()
 		// }
 
 		//rclcpp::spin_some(std::make_shared<GaitPublisher>());
+	}
+	else{
+		printf("AAAAAAAAAAAAAAAAAAAAAAAAAa");
 	}
 }
 

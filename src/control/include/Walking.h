@@ -89,7 +89,7 @@ namespace Robot
 		bool m_Real_Running;
 		double m_Time;
 
-		int    m_Phase;
+		
 		double m_Body_Swing_Y;
 		double m_Body_Swing_Z;
 
@@ -104,6 +104,7 @@ namespace Robot
 		double splineBalance(double angle, double vel, double gain);
 
 	public:
+		int    m_Phase;
 		void update_param_time();
 		void update_param_move();
 		void update_param_balance();	

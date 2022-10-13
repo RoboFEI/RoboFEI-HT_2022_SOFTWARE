@@ -82,6 +82,8 @@ class ballStatus(Node):
         self.config = config
         self.publisher_ = self.create_publisher(Vision, '/ball_position', 10)
         timer_period = 0.008  # seconds
+        self.cont_vision = 0
+        self.status = 0
         self.weights = PATH_TO_WEIGHTS
         self.timer = self.create_timer(timer_period, self.detect())
         self.update = True
@@ -181,12 +183,10 @@ class ballStatus(Node):
                 #print("Tensor det:" + str(det))
                 det[:, :4] = scale_coords(img.shape[2:], det[:, :4], im0.shape).round()
                 BallFound = True
-                xmed = det[0][0].item() + (det[0][1].item())/2
-                x = det[0][0].item() 
-                ymed = det[0][2].item() + (det[0][3].item())/2
-                y = det[0][2].item() 
-                raio = (det[0][1].item() - det[0][0].item())/2 
-                self.status = 1
+                self.cont_vision += 1
+                print(self.cont_vision)
+                if (self.cont_vision == 13):
+                    self.status = 1
                 s=1
                 # Write results
                 for *xyxy, conf, cls in reversed(det):
@@ -206,6 +206,7 @@ class ballStatus(Node):
 
             else:
                 self.status = 0
+                self.cont_vision = 0
                 s=0
 
             # Print time (inference + NMS)
@@ -256,7 +257,7 @@ class ballStatus(Node):
                 #Bola a direita
                 else:
                     msg.ball_right = True
-                    msg.ball_center_right = True
+                    msg.ball_center_right = False
                     msg.ball_center_left = False
                     msg.ball_left = False
                     self.publisher_.publish(msg)
@@ -291,6 +292,13 @@ class ballStatus(Node):
 
             else:
                 msg.ball_detected =False
+                msg.ball_left = False
+                msg.ball_center_left = False
+                msg.ball_center_right = False
+                msg.ball_right = False
+                msg.ball_med = False
+                msg.ball_far = False
+                msg.ball_close = False
                 self.publisher_.publish(msg)
                 print("Não achei")
 
