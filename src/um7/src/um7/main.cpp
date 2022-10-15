@@ -330,7 +330,7 @@ Driver::Driver(const rclcpp::NodeOptions & options) :
   axes_(OutputAxisOptions::DEFAULT)
 {
   // Load parameters
-  port_ = this->declare_parameter<std::string>("port", "/dev/ttyUSB0");
+  port_ = this->declare_parameter<std::string>("port", "/dev/imu");
   int32_t baud = this->declare_parameter<int32_t>("baud", 115200);
 
   serial_.setPort(port_);
@@ -373,7 +373,7 @@ Driver::Driver(const rclcpp::NodeOptions & options) :
 
   // Parameters for configure_sensor
   this->declare_parameter<int>("update_rate", 20);
-  this->declare_parameter<bool>("mag_updates", false);
+  this->declare_parameter<bool>("mag_updates", true);
   this->declare_parameter<bool>("quat_mode", true);
   this->declare_parameter<bool>("zero_gyros", true);
 

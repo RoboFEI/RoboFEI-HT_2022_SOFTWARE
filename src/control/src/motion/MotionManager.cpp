@@ -40,8 +40,8 @@
 #include "custom_interfaces/msg/param_walk.hpp"
 #include "custom_interfaces/msg/neck_position.hpp"
 
-#define INI_FILE_PATH       "/home/robo/ROS2/src/control/Data/config.ini"
-#define MOTION_FILE_PATH    "/home/robo/ROS2/src/control/Data/motion_4096.bin"
+#define INI_FILE_PATH       "src/control/Data/config.ini"
+#define MOTION_FILE_PATH    "src/control/Data/motion_4096.bin"
 
 using namespace Robot;
 using namespace std::chrono_literals;
@@ -141,7 +141,7 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<custom_interfaces:
 			MotionManager::GetInstance()->keep_walking=false;
 		}
 		//printf("KEEP WALKING DEPOIS DO IF %d\n", MotionManager::GetInstance()->keep_walking);
-		printf("FASE  %d\n", Walking::GetInstance()->m_Phase);
+		// printf("FASE  %d\n", Walking::GetInstance()->m_Phase);
 		
 		if (MotionManager::GetInstance()->keep_walking==false && Walking::GetInstance()->m_Phase==0){
 			//printf("MOVEMENT DENTRO DO IF %d\n", walk);
@@ -278,7 +278,7 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<custom_interfaces:
 		}
 		
 		else{
-			printf("CALLBACK NAO WALK\n");
+			printf("CALLBACK NÃO WALK\n");
 		}
 	}
 
@@ -467,7 +467,7 @@ void MotionManager::SaveINISettings(minIni* ini, const std::string &section)
 #define MARGIN_OF_SD        2.0
 void MotionManager::Process()
 {
-	printf("WALK CALLBACK %d \n", walk);
+	// printf("WALK CALLBACK %d \n", walk);
 	if(walk!=0){
 		//RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "dentro do process");
 		if((Walking::GetInstance())->m_Joint.GetEnable(5) == true)
@@ -630,9 +630,6 @@ void MotionManager::Process()
 		// }
 
 		//rclcpp::spin_some(std::make_shared<GaitPublisher>());
-	}
-	else{
-		printf("AAAAAAAAAAAAAAAAAAAAAAAAAa");
 	}
 }
 
