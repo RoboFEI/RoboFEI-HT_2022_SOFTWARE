@@ -185,7 +185,7 @@ class ballStatus(Node):
                 BallFound = True
                 self.cont_vision += 1
                 print(self.cont_vision)
-                if (self.cont_vision == 13):
+                if (self.cont_vision == 2):
                     self.status = 1
                 s=1
                 # Write results
