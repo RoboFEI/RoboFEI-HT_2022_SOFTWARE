@@ -78,12 +78,12 @@ ament_target_dependencies(motion
   sensor_msgs
 )
 
-#rosidl_target_interfaces(motion ${PROJECT_NAME} "rosidl_typesupport_cpp")
+# rosidl_target_interfaces(motion ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
-rclcpp_components_register_node(motion
-  PLUGIN "Robot::MotionManager"
-  EXECUTABLE gait_publisher
-)
+ rclcpp_components_register_node(motion
+   PLUGIN "Robot::MotionManager"
+   EXECUTABLE gait_publisher
+ )
 
 # Build
 add_executable(control src/control.cpp)

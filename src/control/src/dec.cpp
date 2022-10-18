@@ -11,6 +11,7 @@
 #include "custom_interfaces/msg/decision.hpp"
 
 using namespace std::chrono_literals;
+int a = 0;
 
 class DecisionNode : public rclcpp::Node
 {
@@ -22,15 +23,28 @@ public:
     publisher_ = this->create_publisher<custom_interfaces::msg::Decision>("/decision", 10); 
     timer_ = this->create_wall_timer(
       8ms, std::bind(&DecisionNode::timer_callback, this));
+    
   }
 
 private:
   void executeTest(){
     auto message = custom_interfaces::msg::Decision();
     // PARADO  
-    RCLCPP_INFO(this->get_logger(), "PARADO");
+    if (a == 0){
+RCLCPP_INFO(this->get_logger(), "parado");
+    message.decision = 1;          
+    publisher_->publish(message);
+    std::this_thread::sleep_for(std::chrono::seconds(5));
+    }
+    a = 1;
+    RCLCPP_INFO(this->get_logger(), "gait");
     message.decision = 15;          
     publisher_->publish(message);
+    std::this_thread::sleep_for(std::chrono::seconds(5));
+    RCLCPP_INFO(this->get_logger(), "walk");
+    message.decision = 14;          
+    publisher_->publish(message);
+    std::this_thread::sleep_for(std::chrono::seconds(5));
   }
 
   void timer_callback()
