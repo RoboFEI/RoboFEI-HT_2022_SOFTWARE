@@ -119,28 +119,14 @@ class DecisionNode(Node):
                 self.publisher_.publish(message)
                 self.get_logger().info('INITIAL: Initial State')
 
-            elif(self.gamestate == 1 and not self.ready_robot): # Robô vai para a posição inicial
-                self.get_logger().info('READY: Go to start position')
-                self.walking(message) # Anda até chegar no meio de campo
-                sleep(25)
-                
-                if (self.gyro_z < 0): # gyro < 0 tem que virar para a esquerda
-                    self.turn(message, 1) # Virar para a esquerda quando chegar no meio de campo
-                else:
-                    self.turn(message, 0) # Virar para a direita quando chegar no meio de campo    
-                sleep(7)
-                self.stand_still(message) 
-                sleep(2)
-                
-                self.ready_robot=True
-
+            elif(self.gamestate == 1 and not self.ready_robot): # Robô vai para a posição inicial                
                 
                 if(self.BALL_DETECTED == False):
                         #print(self.contador)
                         if (self.contador >= 250):
                             if(self.go_ball==7):
                                 self.walking(message)
-                                sleep(3)
+                                sleep(8)
                                 self.go_ball = 0
                             elif(self.cont_falses>=4):
                                 self.turn(message, 0)
@@ -193,16 +179,19 @@ class DecisionNode(Node):
                     self.stand_still(message)
                 
                 elif(self.secstate == 1 and self.has_kick_off == True): # Penalti nosso 
-                    self.get_logger().info('PENALTI NOSSO')           
-                    if (self.BALL_CLOSE):
-                        if(self.BALL_CENTER_RIGHT):
-                            print("direita DECISION")
-                            self.kicking(message, 1)
-                        elif(self.BALL_CENTER_LEFT):
-                            print("esquerda DECISION")
-                            self.kicking(message, 0)
-                    else:
+                    self.get_logger().info('PENALTI NOSSO')      
+                    if (self.BALL_DETECTED == False):
                         self.walking(message)
+                    else:
+                        if (self.BALL_CLOSE):
+                            if(self.BALL_CENTER_RIGHT):
+                                print("direita DECISION")
+                                self.kicking(message, 1)
+                            elif(self.BALL_CENTER_LEFT):
+                                print("esquerda DECISION")
+                                self.kicking(message, 0)
+                        else:
+                            self.walking(message)
 
                         
 
