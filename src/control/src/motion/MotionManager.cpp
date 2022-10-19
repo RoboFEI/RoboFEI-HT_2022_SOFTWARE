@@ -141,7 +141,7 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<custom_interfaces:
 			MotionManager::GetInstance()->keep_walking=false;
 		}
 		//printf("KEEP WALKING DEPOIS DO IF %d\n", MotionManager::GetInstance()->keep_walking);
-		// printf("FASE  %d\n", Walking::GetInstance()->m_Phase);
+		printf("FASE  %d\n", Walking::GetInstance()->m_Phase);
 		
 		if (MotionManager::GetInstance()->keep_walking==false && Walking::GetInstance()->m_Phase==0){
 			//printf("MOVEMENT DENTRO DO IF %d\n", walk);
@@ -468,6 +468,7 @@ void MotionManager::SaveINISettings(minIni* ini, const std::string &section)
 void MotionManager::Process()
 {
 	// printf("WALK CALLBACK %d \n", walk);
+	printf("FASE  PROCESS %d\n", Walking::GetInstance()->m_Phase);
 	if(walk!=0){
 		//RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "dentro do process");
 		if((Walking::GetInstance())->m_Joint.GetEnable(5) == true)
