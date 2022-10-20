@@ -18,7 +18,7 @@ from geometry_msgs.msg import Vector3Stamped
 # ros2 topic pub -1 /neck_position custom_interfaces/msg/NeckPosition "{position19: 2048, position20: 2048}"
 
 TEAM_ROBOFEI = 7
-ROBOT_NUMBER = 1 # JOGADOR, PARA GOLEIRO COLOCAR 0
+ROBOT_NUMBER = 1 # Goleiro = 1, jogadores != 1
 LADO = 0 # 0 vira para o lado DIREITO e 1 para o lado ESQUERDO, depende de que lado o nosso time vai começar
 
 
@@ -112,7 +112,7 @@ class DecisionNode(Node):
 
     def timer_callback(self):
         message = Decision()
-        if(ROBOT_NUMBER == 1): # JOGADOR
+        if(ROBOT_NUMBER != 1): # JOGADOR
             if(self.gamestate == 0): # Initial state - Robô parado em pé
                 self.ready_robot = False
                 self.stand_still(message)
@@ -278,7 +278,7 @@ class DecisionNode(Node):
             elif(self.gamestate == 4): # Jogo terminou, robô sai do campo
                 self.stand_still(message)
         
-        elif(ROBOT_NUMBER == 0): # GOLEIRO
+        else: # GOLEIRO
             if(self.gamestate == 0): # Initial state - Robô parado em pé
                 self.stand_still(message)
                 self.get_logger().info('INITIAL: Initial State')
