@@ -22,7 +22,6 @@
 #include "custom_interfaces/msg/set_position.hpp"
 #include "custom_interfaces/msg/decision.hpp"
 #include "custom_interfaces/msg/walk.hpp"
-#include "custom_interfaces/msg/param_walk.hpp"
 #include "custom_interfaces/msg/vision.hpp"
 #include "sensor_msgs/msg/imu.hpp"
 #include "custom_interfaces/msg/neck_position.hpp"
@@ -52,6 +51,7 @@ int neck_sides = 2048;
 int neck_up = 2048;
 
 
+int contador_gait = 0;
 
 int cont = 0;
 int limit[2][3] = {{1826, 1528, 1230}, {2270, 1972, 2866}};
@@ -74,25 +74,25 @@ public:
     publisher_ = this->create_publisher<custom_interfaces::msg::SetPosition>("set_position", 10); 
     publisher_single = this->create_publisher<custom_interfaces::msg::SetPositionOriginal>("set_position_single", 10);
     publisher_walk = this->create_publisher<custom_interfaces::msg::Walk>("walking", 10); 
-    client = this->create_client<custom_interfaces::srv::Reset>("imu/reset");
-    auto req = std::make_shared<custom_interfaces::srv::Reset::Request>();
-    req->reset_ekf = true;
-    if (!client->wait_for_service(1s)) {
-      if (!rclcpp::ok()) {
-        RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Interrupted while waiting for the service. Exiting.");
-      }
-      RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "service not available, waiting again...");
-    }
-    auto result = client->async_send_request(req);
-    // Wait for the result.
-    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), result) ==
-      rclcpp::FutureReturnCode::SUCCESS)
-      {
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Reset successful");
-      } 
-      else {
-        RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to reset");
-      }
+    // client = this->create_client<custom_interfaces::srv::Reset>("imu/reset");
+    // auto req = std::make_shared<custom_interfaces::srv::Reset::Request>();
+    // req->reset_ekf = true;
+    // if (!client->wait_for_service(1s)) {
+    //   if (!rclcpp::ok()) {
+    //     RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Interrupted while waiting for the service. Exiting.");
+    //   }
+    //   RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "service not available, waiting again...");
+    // }
+    // auto result = client->async_send_request(req);
+    // // Wait for the result.
+    // if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), result) ==
+    //   rclcpp::FutureReturnCode::SUCCESS)
+    //   {
+    //     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Reset successful");
+    //   } 
+    //   else {
+    //     RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to reset");
+    //   }
     }
 
   private:
@@ -100,12 +100,12 @@ public:
     {
       float IMU_ACCEL_Z = imu_msg_->linear_acceleration.z/10;
       float IMU_ACCEL_X = imu_msg_->linear_acceleration.x/10;
-      RCLCPP_INFO(this->get_logger(),"ACEL Z %f\n", IMU_ACCEL_Z);
+      //RCLCPP_INFO(this->get_logger(),"ACEL Z %f\n", IMU_ACCEL_Z);
       if(IMU_ACCEL_Z > 0.7 || IMU_ACCEL_Z < -0.7)
         contador++;
       else
         contador = 0;
-      RCLCPP_INFO(this->get_logger(),"Contador %d \n", contador);
+      //RCLCPP_INFO(this->get_logger(),"Contador %d \n", contador);
       
       if(contador>=30)
       {
@@ -123,7 +123,7 @@ public:
         cont_fall_side++;
       else
         cont_fall_side = 0;
-      RCLCPP_INFO(this->get_logger(),"Contador fall side %d \n", cont_fall_side);
+      //RCLCPP_INFO(this->get_logger(),"Contador fall side %d \n", cont_fall_side);
       
       if(cont_fall_side>=30)
       {
@@ -139,10 +139,15 @@ public:
     }
 
     void topic_callback_decision(const std::shared_ptr<custom_interfaces::msg::Decision> msg) const{
+      RCLCPP_INFO(this->get_logger(), "Decision Callback " );   
       movement = (int)msg->decision;
       auto message_walk = custom_interfaces::msg::Walk();  
       auto message = custom_interfaces::msg::SetPosition();   
       auto message_single = custom_interfaces::msg::SetPositionOriginal();  
+      RCLCPP_INFO(this->get_logger(), "decision: %d", movement); 
+      
+      //printf("decision: %d", movement);
+
       if(fallen == true){ // Robô caido, tem que levantar antes de qualquer movimento
         message_walk.walk = 0; 
         publisher_walk->publish(message_walk);
@@ -384,21 +389,30 @@ public:
       }
       else{
 
-        if (movement != last_movement){
-          RCLCPP_INFO(this->get_logger(), "Gait"); 
-          message_single.id = 254;
-          message_single.address = 112;
-          message_single.position = 128;
-          publisher_single->publish(message_single);
-          message_walk.walk = 0;   
-          message_walk.sidle = 0;  
-          message_walk.turn = 0;   
-          message_walk.walk_number = 2; 
-          publisher_walk->publish(message_walk);
-          sleep(5);
-          last_movement = movement;
-        }
-        else{
+        // if (movement != last_movement && (movement == 5 || movement == 6 || movement == 9 || movement == 10  || movement ==14 || movement == 15 || movement == 18 || movement == 19) ){
+          
+        //   if(fallen == true || fallen_side == true || contador_gait >= 500){
+        //     printf("CAIU Durante Gait\n");
+        //     contador_gait = 0;
+        //     last_movement = movement;
+        //   } 
+        //   else if (contador_gait < 500){
+        //     RCLCPP_INFO(this->get_logger(), "Gait"); 
+        //     message_single.id = 254;
+        //     message_single.address = 112;
+        //     message_single.position = 128;
+        //     publisher_single->publish(message_single);
+        //     message_walk.walk = 0;   
+        //     message_walk.sidle = 0;  
+        //     message_walk.turn = 0;   
+        //     message_walk.walk_number = 2; 
+        //     publisher_walk->publish(message_walk);
+        //     contador_gait += 1; 
+        //   }
+          
+        //   //sleep(5);
+
+        // }
           switch (movement){
             case 1: // Parado
               message_walk.walk_number = 0; 
@@ -406,7 +420,7 @@ public:
               RCLCPP_INFO(this->get_logger(), "Parado");                            
               message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
               //                    1   2     3    4    5    6    7    8   9   10   11   12   13   14   15   16   17   18      19       20
-              message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2136,   2048,    1300};
+              message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2136,   2048,    1586};
               publisher_->publish(message);
               break;
             case 2: // Greeting
@@ -415,7 +429,7 @@ public:
               RCLCPP_INFO(this->get_logger(), "Greeting");                            
               message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
               //                    1   2     3    4    5    6    7    8   9   10   11   12   13   14   15   16   17   18      19       20
-              message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2136,   2048,    1300};
+              message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2136,   2048,    1586};
               publisher_->publish(message);
               std::this_thread::sleep_for(std::chrono::seconds(1));
               break;
@@ -917,14 +931,32 @@ public:
             case 11: // Fall left OK
               message_walk.walk_number = 0; 
               publisher_walk->publish(message_walk);
-              RCLCPP_INFO(this->get_logger(), "Fall left");                              
+              RCLCPP_INFO(this->get_logger(), "Fall left");   
+
+              message_single.id = 254;
+              message_single.address = 112;
+              message_single.position = 2000;
+              publisher_single->publish(message_single); 
+                  
+
               message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
-              //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19  20 
-              message.position = {4095,0,2004,2078,2048,2048,2125,2103,2082,2160,1960,2264,2048,1962,2048,2048,2048,2048,2047,2048};
+              //                    1   2     3    4    5    6    7    8   9   10   11   12   13   14   15   16   17   18      19       20
+              message.position = {1724,2367,2217,1878,627,3468,2052,2044,2048,2048,1712,2384,2791,1305,2536,1560,2048,2048,   cont_vision, cont_vision_up};
               publisher_->publish(message);
-              std::this_thread::sleep_for(std::chrono::seconds(1));
+              usleep(100000);
+
               //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19  20 
-              message.position = {4095,0,2004,2078,2048,2048,2125,2103,2082,2160,1960,2264,2048,1962,2048,2048,1751,1817,2047,2048};
+              message.position = {2047,2047,2047,2047,2048,2048,2052,2044,2048,2048,1712,2384,2791,1305,2536,1560,2048,2048,   cont_vision, cont_vision_up};
+              publisher_->publish(message);
+              usleep(100000);
+
+              //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19  20 
+              message.position = {2047,2047,4034,40,2048,2048,2052,2044,2048,2048,1712,2384,2791,1305,2536,1560,2048,2048,   cont_vision, cont_vision_up};
+              publisher_->publish(message);
+              usleep(100000);
+
+              //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19  20 
+              message.position = {2047,2047,4034,40,2048,2048,2052,2044,2048,2048,1712,2998,2791,469,2536,1560,1794,1763,   cont_vision, cont_vision_up};
               publisher_->publish(message);
               std::this_thread::sleep_for(std::chrono::seconds(20));
               break;
@@ -932,58 +964,34 @@ public:
               message_walk.walk_number = 0; 
               publisher_walk->publish(message_walk);
               RCLCPP_INFO(this->get_logger(), "Fall right");
-              message_single.id = 254;
-              message_single.address = 112;
-              message_single.position = 100;
-              publisher_single->publish(message_single);
-              
-              //Posição inicial:
-              message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
-              //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
-              message.position = {1724,2367,2294,1812,627,3468,2052,2044,2032,2106,1670,2406,2791,1306,2495,1634,2048,2081,2047,2047};
-              publisher_->publish(message);
-              usleep(800000);
 
               message_single.id = 254;
               message_single.address = 112;
-              message_single.position = 100;
+              message_single.position = 2000;
               publisher_single->publish(message_single);
-              message_single.id = 2;
+                  
 
-              //Levantando as pernas e afastando os ombros:
               message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
-              //                    1    2    3    4   5    6    7    8    9   10   11   12   13   14   15   16   17   18   19    20
-              message.position = {1724,2367,2405,1691,627,3468,2052,2044,2032,2106,1670,2406,2505,1570,2231,1788,2048,2081,2047,2047};
+              //                    1   2     3    4    5    6    7    8   9   10   11   12   13   14   15   16   17   18      19       20
+              message.position = {1724,2367,2217,1878,627,3468,2052,2044,2048,2048,1712,2384,2791,1305,2536,1560,2048,2048,   cont_vision, cont_vision_up};
               publisher_->publish(message);
-              usleep(600000); 
-              
-              //levantar os braços e tentar estender as pernas
-              message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
-              //                    1    2    3    4   5    6    7    8    9   10   11   12   13   14   15   16   17   18   19    20
-              message.position = {4017,79,2405,1691,627,3468,2052,2044,2032,2106,1670,2406,2505,1570,2231,1788,2048,2081,2047,2047};
-              publisher_->publish(message);
-              usleep(600000);          
+              usleep(200000);
 
-              //estendendo os braços (preparando para defender)
-              message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
-              //                    1    2    3    4   5    6    7    8    9   10   11   12   13   14   15   16   17   18   19    20
-              message.position = {4017,79,1921,2241,2013,2083,2052,2044,2032,2106,1670,2406,2505,1570,2231,1788,2048,2081,2047,2047};
+              //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19  20 
+              message.position = {2047,2047,2047,2047,2048,2048,2052,2044,2048,2048,1712,2384,2791,1305,2536,1560,2048,2048,   cont_vision, cont_vision_up};
               publisher_->publish(message);
-              usleep(600000);    
+              usleep(200000);
 
-              //estendendo as pernas (preparando para cair)
-              message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
-              //                    1    2    3    4   5    6    7    8    9   10   11   12   13   14   15   16   17   18   19    20
-              message.position = {4017,79,1921,2241,2013,2083,2052,2044,2032,2106,1899,2230,2384,1712,2231,1788,2048,2081,2047,2047};
+              //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19  20 
+              message.position = {2047,2047,4034,40,2048,2048,2052,2044,2048,2048,1712,2384,2791,1305,2536,1560,2048,2048,   cont_vision, cont_vision_up};
+              publisher_->publish(message); // 892 3662
+              usleep(200000);
+
+              //                    1   2     3   4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19  20 
+              message.position = {2047,2047,4034,40,2048,2048,2052,2044,2048,2048,892,2384,3662,1305,2536,1560,2302,2333,   cont_vision, cont_vision_up};
               publisher_->publish(message);
-              usleep(300000);    
-              
-              //prepando para cair a direita
-              message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
-              //                    1    2    3    4   5    6    7    8    9   10   11   12   13   14   15   16   17   18   19    20
-              message.position = {4017,79,1921,2241,2013,2083,2052,2044,2087,2381,1899,2230,2384,1712,2231,1788,2345,2125,2047,2047};
-              publisher_->publish(message);
-              std::this_thread::sleep_for(std::chrono::seconds(5)); //1    
+              std::this_thread::sleep_for(std::chrono::seconds(20)); 
+          
               break;
             case 13: // Agachando OK
               message_walk.walk_number = 0;
@@ -1306,6 +1314,7 @@ public:
               usleep(200000);
               break;
             case 22: // Centralizar bola no pé
+
               RCLCPP_INFO(this->get_logger(), "Centralizando bola no pé"); 
               message_walk.walk_number = 0; 
               publisher_walk->publish(message_walk);  
@@ -1316,8 +1325,52 @@ public:
               publisher_->publish(message);
               usleep(200000);
               break;
+            case 23: // Levantando de lado
+              message_walk.walk_number = 0; 
+              RCLCPP_INFO(this->get_logger(), "Levantando de lado"); 
+              publisher_walk->publish(message_walk);
+
+              message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+              //                    1   2     3    4    5    6    7    8   9   10   11   12   13   14   15   16   17   18      19       20
+              message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,2048,2048};
+              publisher_->publish(message);
+              std::this_thread::sleep_for(std::chrono::seconds(2)); //1
+
+              message_single.id = 254;
+              message_single.address = 112;
+              message_single.position = 10000;
+              publisher_single->publish(message_single);
+              std::this_thread::sleep_for(std::chrono::seconds(1)); //1
+
+
+              message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+              //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
+              message.position = {3154,2367,2294,1812,1463,3468,2052,2044,2032,2106,611,1178,2791,1306,2536,1560,2048,2081,2047,2047};
+              publisher_->publish(message);
+              std::this_thread::sleep_for(std::chrono::seconds(2)); //1 
+
+              message_single.id = 254;
+              message_single.address = 112;
+              message_single.position = 10000;
+              publisher_single->publish(message_single);
+              std::this_thread::sleep_for(std::chrono::seconds(2)); //1
+
+              message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+              //                    1   2     3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18  19 
+              message.position = {3154,2367,2294,998,1463,3468,2052,2044,2032,2106,1168,1178,3244,2483,2536,1560,2048,2081,2047,2047};
+              publisher_->publish(message);
+              std::this_thread::sleep_for(std::chrono::seconds(1)); //1 
+
+              message.id = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+              //                    1   2     3    4    5    6    7    8   9   10   11   12   13   14   15   16   17   18      19       20
+              message.position = {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,2048,2048};
+              publisher_->publish(message);
+              std::this_thread::sleep_for(std::chrono::seconds(2)); //1
+
+              fallen_side = false;
+              break;
           }
-        }
+        
       }
     }
 

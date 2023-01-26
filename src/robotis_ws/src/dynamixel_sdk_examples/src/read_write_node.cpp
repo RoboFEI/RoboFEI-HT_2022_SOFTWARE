@@ -60,7 +60,7 @@
 
 // Default setting
 #define BAUDRATE 1000000  // Default Baudrate of DYNAMIXEL X series
-#define DEVICE_NAME "/dev/motors"  // [Linux]: "/dev/ttyUSB*", [Windows]: "COM*"
+#define DEVICE_NAME "/dev/ttyUSB0"  // [Linux]: "/dev/ttyUSB*", [Windows]: "COM*"
 
 using namespace dynamixel;
 

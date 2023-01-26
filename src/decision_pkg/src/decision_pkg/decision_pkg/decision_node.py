@@ -18,7 +18,7 @@ from geometry_msgs.msg import Vector3Stamped
 # ros2 topic pub -1 /neck_position custom_interfaces/msg/NeckPosition "{position19: 2048, position20: 2048}"
 
 TEAM_ROBOFEI = 7
-ROBOT_NUMBER = 1 # Goleiro = 1, jogadores != 1
+ROBOT_NUMBER = 0 # Goleiro = 1, jogadores != 1
 LADO = 0 # 0 vira para o lado DIREITO e 1 para o lado ESQUERDO, depende de que lado o nosso time vai começar
 
 
@@ -78,8 +78,6 @@ class DecisionNode(Node):
         self.game_already_started = True
         self.last_movement = 1
         self.movement = 1
-        self.penaltyshoot_mode = 0
-        self.gyro_z = 0
         self.contador = 0
 
     def listener_callback_neck(self, msg):
@@ -90,6 +88,7 @@ class DecisionNode(Node):
         # print(self.gyro_z)
 
     def listener_callback_vision(self, msg):
+        print("Vision Callback")
         self.BALL_DETECTED = msg.ball_detected
         self.get_logger().info('BALL "%s"' % self.BALL_DETECTED)
         self.BALL_LEFT = msg.ball_left
@@ -115,43 +114,69 @@ class DecisionNode(Node):
         if(ROBOT_NUMBER != 1): # JOGADOR
             if(self.gamestate == 0): # Initial state - Robô parado em pé
                 self.ready_robot = False
-                self.stand_still(message)
+                self.gait(message)
                 self.publisher_.publish(message)
                 self.get_logger().info('INITIAL: Initial State')
 
             elif(self.gamestate == 1 and not self.ready_robot): # Robô vai para a posição inicial                
                 
-                if(self.BALL_DETECTED == False):
-                        #print(self.contador)
-                        if (self.contador >= 250):
-                            if(self.go_ball==7):
-                                self.walking(message)
-                                sleep(8)
-                                self.go_ball = 0
-                            elif(self.cont_falses>=4):
-                                self.turn(message, 0)
-                                sleep(2)
-                                self.cont_falses = 0
-                                self.go_ball += 1
-                            else:
-                                self.cont_falses += 1
-                                self.search_ball(message) # Procura a bola
+                self.gait(message)
+                # if(self.BALL_DETECTED == False):
+                #         #print(self.contador)# if(self.BALL_DETECTED == False):
+                #         #print(self.contador)
+                #         if (self.contador >= 250):
+                #             if(self.go_ball==7):
+                #                 self.walking(message)
+                #                 sleep(8)
+                #                 self.go_ball = 0
+                #             elif(self.cont_falses>=4):
+                #                 self.turn(message, 0)
+                #                 sleep(2)
+                #                 self.cont_falses = 0
+                #                 self.go_ball += 1
+                #             else:
+                #                 self.cont_falses += 1
+                #                 self.search_ball(message) # Procura a bola
                                 
-                                self.get_logger().info('PROCURANDOOOO')
-                                #print(self.cont_falses)
-                            self.contador = 0
-                        else:
-                            self.contador += 1
+                #                 self.get_logger().info('PROCURANDOOOO')
+                #                 #print(self.cont_falses)
+                #             self.contador = 0
+                #         else:
+                #             self.contador += 1
                 	
-                else:
-                    self.stand_still(message)
-                    self.cont_falses = 0
-                    self.get_logger().info('ACHEEEEEI' )
+                # else:
+                #     self.gait(message)
+                #     self.cont_falses = 0
+                #     self.get_logger().info('ACHEEEEEI' )
+                #         if (self.contador >= 250):
+                #             if(self.go_ball==7):
+                #                 self.walking(message)
+                #                 sleep(8)
+                #                 self.go_ball = 0
+                #             elif(self.cont_falses>=4):
+                #                 self.turn(message, 0)
+                #                 sleep(2)
+                #                 self.cont_falses = 0
+                #                 self.go_ball += 1
+                #             else:
+                #                 self.cont_falses += 1
+                #                 self.search_ball(message) # Procura a bola
+                                
+                #                 self.get_logger().info('PROCURANDOOOO')
+                #                 #print(self.cont_falses)
+                #             self.contador = 0
+                #         else:
+                #             self.contador += 1
+                	
+                # else:
+                #     self.gait(message)
+                #     self.cont_falses = 0
+                #     self.get_logger().info('ACHEEEEEI' )
                     
                 
             elif(self.gamestate == 2): # Espera o jogo começar
                 self.get_logger().info('SET: Keep ready')
-                self.stand_still(message)
+                self.gait(message)
 
 
             elif(self.gamestate == 3): # Jogo começou
@@ -173,10 +198,10 @@ class DecisionNode(Node):
                 #         self.game_already_started = False
 
                 if(self.secstate == 6): # Penalti do oponente
-                    self.stand_still(message)
+                    self.gait(message)
 
                 elif(self.secstate == 3): # Timeout
-                    self.stand_still(message)
+                    self.gait(message)
                 
                 elif(self.secstate == 1 and self.has_kick_off == True): # Penalti nosso 
                     self.get_logger().info('PENALTI NOSSO')      
@@ -196,82 +221,56 @@ class DecisionNode(Node):
                         
 
                 elif(self.secstate == 1 and self.has_kick_off == False): # Penalti do outro time
-                    self.stand_still(message)
+                    self.gait(message)
 
                 elif(self.secstate == 4 and self.secteam != TEAM_ROBOFEI): # Direct freekick do oponente
-                    self.stand_still(message)
+                    self.gait(message)
 
                 elif(self.secstate == 5 and self.secteam != TEAM_ROBOFEI): # Indirect freekick do oponente
-                    self.stand_still(message)
+                    self.gait(message)
 
                 elif(self.secstate == 7 and self.secteam != TEAM_ROBOFEI): # Escanteio do oponente
-                    self.stand_still(message)
+                    self.gait(message)
                 
                 elif(self.secstate == 8): # Tiro de meta do goleiro
-                    self.stand_still(message)
+                    self.gait(message)
 
                 elif(self.secstate == 9 and self.secteam != TEAM_ROBOFEI): # Lateral do oponente
-                    self.stand_still(message)
+                    self.gait(message)
                         
                 elif(self.penalized==True):
-                    self.stand_still(message)
+                    self.gait(message)
 
                 else: 
-                    print("BALL DETECTED " , self.BALL_DETECTED)
                     if(self.BALL_DETECTED == False):
+                        self.ballLeftTimes = 0
+                        self.ballrightTimes = 0
+                        self.get_logger().info('BALL NOT FOUND')
                         #print(self.contador)
                         if (self.contador >= 250):
-                            if(self.go_ball==7):
-                                self.walking(message)
+                            if(self.cont_falses>=4):
+                                # self.walking(message)
+                                self.gait(message)
                                 sleep(3)
-                                self.go_ball = 0
-                            elif(self.cont_falses>=4):
-                                self.turn(message, 0)
-                                sleep(2)
                                 self.cont_falses = 0
                                 self.go_ball += 1
                             else:
+                                self.get_logger().info('PROCURANDOOOO')
                                 self.cont_falses += 1
                                 self.search_ball(message) # Procura a bola
+                                sleep(1)
+
+
                                 
-                                self.get_logger().info('PROCURANDOOOO')
                                 #print(self.cont_falses)
                             self.contador = 0
                         else:
                             self.contador += 1
                             
-                	
                     else:
-                        self.get_logger().info('BALL DETECTED "%s"' % self.BALL_DETECTED)
+                        self.get_logger().info('BALL DETECTED ')
                         self.cont_falses = 0
-                        if(self.BALL_LEFT==True):
-                            self.turn(message, 1)
-                        elif (self.BALL_RIGHT==True):
-                            self.turn(message, 0) # Vira para o lado direito
-                        if (self.BALL_CENTER_LEFT==True or self.BALL_CENTER_RIGHT==True):
-                        #     if(self.neck_position[0]<1948):
-                        #         self.turn_head_left(message)
-                        #     elif(self.neck_position[0]>2148):
-                        #         self.turn_head_right(message)
-                        #     else:
-                            if(self.BALL_FAR==True):
-                                self.get_logger().info('LONGEEEEEEEE')
-                                self.walking(message) 
-                            if(self.BALL_MED==True):
-                                self.get_logger().info('MEDIOOOOOOOOOOOOO')
-                                self.walking(message) 
-                            if (self.BALL_CLOSE and self.neck_position[1]<=1400):
-                                if (self.gyro_z < 1.57 and self.gyro_z > -1.57):
-                                    if (self.BALL_CENTER_LEFT==True):
-                                        self.get_logger().info('PERTOOOOOOOOO ESQ')
-                                        self.kicking(message, 0) # chuta com pe esquerdo
-                                    elif (self.BALL_CENTER_RIGHT==True):
-                                        self.get_logger().info('PERTOOOOOOOOO DIR')
-                                        self.kicking(message, 1) # chuta com pe direito
-                                else: 
-                                    self.turn_around_ball(message, 0)
-                            elif(self.BALL_CLOSE and self.neck_position[1]>1345):
-                                self.turn_head_down(message)
+                        self.walking(message)
 
                     
 
@@ -285,54 +284,21 @@ class DecisionNode(Node):
 
             elif(self.gamestate == 1): # Robô vai para a posição inicial
                 self.get_logger().info('READY: Go to start position')
-                if(ready_goalie==False):
-                    self.walking(message) 
-                    sleep(10)
-                    self.turn(message, 0) # Virar para a direita quando chegar no meio de campo
-                    sleep(6)
-                    ready_goalie=True
-                if(self.BALL_DETECTED == False):
-                	self.search_ball(message) # Procura a bola
-                else:
-                    self.stand_still(message)
+                self.stand_still(message)
 
             elif(self.gamestate == 2): # Espera o jogo começar
                 self.get_logger().info('Keep ready')
                 self.stand_still(message)
 
             elif(self.gamestate == 3): # Jogo começou
-                if(self.BALL_DETECTED == False):
-                        #print(self.contador)
-                        if (self.contador >= 250):
-                            self.search_ball(message) # Procura a bola
-                            
-                            self.get_logger().info('PROCURANDOOOO')
-                            #print(self.cont_falses)
-                            self.contador = 0
+                if(self.BALL_DETECTED):
+                    if (self.BALL_CLOSE or self.BALL_MED):
+                        if(self.BALL_CENTER_LEFT or self.BALL_LEFT):
+                            self.goalkeeper(message, 1)
                         else:
-                            self.contador += 1
+                            self.goalkeeper(message, 2)
                 else:
-                    self.get_logger().info('BALL DETECTED "%s"' % self.BALL_DETECTED)
-                    if (self.gyro_z > 1.57 or self.gyro_z < -1.57):
-                        self.turn(message, 0)
-                    else:
-                        if(self.BALL_CLOSE and self.neck_position[1]>1650):
-                            self.turn_head_down(message)
-                        else:
-                            if(self.BALL_LEFT or self.BALL_CENTER_LEFT):
-                                self.goalkeeper(message, 1) # Bola na esquerda se joga para a esquerda
-                            elif (self.BALL_RIGHT or self.BALL_CENTER_RIGHT):
-                                self.goalkeeper(message, 2) # Bola na direita se joga para a direita
-                            if (self.BALL_CLOSE and self.neck_position[1]<=1400):
-                                if (self.BALL_CENTER_LEFT==True):
-                                    self.get_logger().info('PERTOOOOOOOOO ESQ')
-                                    self.kicking(message, 0) # chuta com pe esquerdo
-                                elif (self.BALL_CENTER_RIGHT==True):
-                                    self.get_logger().info('PERTOOOOOOOOO DIR')
-                                    self.kicking(message, 1) # chuta com pe direito
-                            elif(self.BALL_CLOSE and self.neck_position[1]>1400):
-                                self.turn_head_down(message)
-
+                    self.stand_still(message)
 
             elif(self.gamestate == 4): # Jogo terminou, robô sai do campo
                 self.stand_still(message)
@@ -397,11 +363,11 @@ class DecisionNode(Node):
         elif(action == 1): # Se joga para a esquerda
             message.decision = 11 
             self.publisher_.publish(message)
-            self.get_logger().info('Falling right')
+            self.get_logger().info('Falling left')
         elif(action == 2): # Se joga para a direita
             message.decision = 12 
             self.publisher_.publish(message)
-            self.get_logger().info('Falling left')
+            self.get_logger().info('Falling right')
 
     def turn_head_left(self, message):
         message.decision = 20

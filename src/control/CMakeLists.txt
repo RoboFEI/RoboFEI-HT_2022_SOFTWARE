@@ -23,6 +23,7 @@ find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(rclcpp_components REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(rclcpp_action REQUIRED)
 include_directories(${CURSES_INCLUDE_DIR})
 #find_package(rt REQUIRED)
 # find_package(<dependency> REQUIRED)
@@ -93,10 +94,21 @@ ament_target_dependencies(control
   sensor_msgs
 )
 
-add_executable(client src/client.cpp)
+add_executable(teste src/teste.cpp)
+ament_target_dependencies(teste
+  custom_interfaces
+  rclcpp
+  sensor_msgs
+  rclcpp_action
+)
+
+add_executable(client src/teste_client.cpp)
 ament_target_dependencies(client
   custom_interfaces
   rclcpp
+  sensor_msgs
+  rclcpp_action
+  rclcpp_components
 )
 
 # Build
@@ -106,11 +118,13 @@ ament_target_dependencies(decision
   rclcpp
 )
 
+
 # Install
 install(TARGETS
   control
   decision
   client
+  teste
   DESTINATION lib/${PROJECT_NAME}
 )
 

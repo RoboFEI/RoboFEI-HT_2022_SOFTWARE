@@ -29,7 +29,6 @@ set(msg_files
   "msg/SetPositionOriginal.msg"
   "msg/Decision.msg"
   "msg/Walk.msg"
-  "msg/ParamWalk.msg"
   "msg/NeckPosition.msg"
 )
 
@@ -38,9 +37,15 @@ set(srv_files
   "srv/Reset.srv"
 )
 
+set(action_files
+  "action/Control.action"
+)
+
+
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
   ${srv_files}
+  ${action_files}
   DEPENDENCIES builtin_interfaces std_msgs
 )
 

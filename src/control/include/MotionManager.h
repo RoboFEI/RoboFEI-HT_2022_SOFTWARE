@@ -24,7 +24,6 @@
 #include "custom_interfaces/msg/set_position_original.hpp"
 #include "custom_interfaces/srv/get_position.hpp"
 #include "custom_interfaces/msg/walk.hpp"
-#include "custom_interfaces/msg/param_walk.hpp"
 #include "custom_interfaces/msg/neck_position.hpp"
 
 #define OFFSET_SECTION "Offset"

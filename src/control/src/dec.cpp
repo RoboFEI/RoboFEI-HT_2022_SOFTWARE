@@ -30,21 +30,11 @@ private:
   void executeTest(){
     auto message = custom_interfaces::msg::Decision();
     // PARADO  
-    if (a == 0){
-RCLCPP_INFO(this->get_logger(), "parado");
-    message.decision = 1;          
-    publisher_->publish(message);
-    std::this_thread::sleep_for(std::chrono::seconds(5));
-    }
-    a = 1;
-    RCLCPP_INFO(this->get_logger(), "gait");
+    sleep(20);
+    RCLCPP_INFO(this->get_logger(), "walk");
     message.decision = 15;          
     publisher_->publish(message);
-    std::this_thread::sleep_for(std::chrono::seconds(5));
-    RCLCPP_INFO(this->get_logger(), "walk");
-    message.decision = 14;          
-    publisher_->publish(message);
-    std::this_thread::sleep_for(std::chrono::seconds(5));
+    
   }
 
   void timer_callback()

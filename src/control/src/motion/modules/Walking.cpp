@@ -385,7 +385,9 @@ bool Walking::IsRunning()
 void Walking::Process()
 {
     // X_MOVE_AMPLITUDE = -2;
-    // printf("WALKING process comeco %f\n", X_MOVE_AMPLITUDE);
+    printf("WALKING process comeco %f\n", X_MOVE_AMPLITUDE);
+    printf("TURN process comeco %f\n", A_MOVE_AMPLITUDE);
+    printf("SIDLE process comeco %f\n", Y_MOVE_AMPLITUDE);
     // printf("PERIOD TIME PROCESS %f\n", PERIOD_TIME);
 
     // printf("FASE WALKING %d\n", Walking::GetInstance()->GetCurrentPhase());

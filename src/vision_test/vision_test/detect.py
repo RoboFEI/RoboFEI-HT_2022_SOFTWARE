@@ -67,7 +67,7 @@ parser.add_argument('--classes', nargs='+', type=int, help='filter by class: --c
 parser.add_argument('--agnostic-nms', action='store_true', help='class-agnostic NMS')
 parser.add_argument('--augment', action='store_true', help='augmented inference')
 parser.add_argument('--update', action='store_true', help='update all models')
-parser.add_argument('--project', default='runs/detect', help='save results to project/name')
+# parser.add_argument('--project', default='runs/detect', help='save results to project/name')
 parser.add_argument('--name', default='exp', help='save results to project/name')
 parser.add_argument('--exist-ok', action='store_true', help='existing project/name ok, do not increment')
 parser.add_argument('--no-trace', action='store_true', help='don`t trace model')
@@ -172,10 +172,12 @@ class ballStatus(Node):
             # Directories
             p = path[0]
             p = Path(p)  # to Path
-            save_dir = Path(increment_path(Path(opt.project) / opt.name, exist_ok=opt.exist_ok))  # increment run
-            (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
-            save_img = not opt.nosave and not source.endswith('.txt')  # save inference images
-            txt_path = str(save_dir / 'labels' / p.stem) + ('' if dataset.mode == 'image' else f'_{frame}')  # img.txt
+            # save_dir = Path(increment_path(Path(opt.project) / opt.name, exist_ok=opt.exist_ok))  # increment run
+            # (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
+            # save_img = not opt.nosave and not source.endswith('.txt')  # save inference images
+            save_img = False
+            save_txt = False
+            # txt_path = str(save_dir / 'labels' / p.stem) + ('' if dataset.mode == 'image' else f'_{frame}')  # img.txt
 
             gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]  # normalization gain whwh
             if len(det): # Entra nessa função se detectou a bola
@@ -183,10 +185,7 @@ class ballStatus(Node):
                 #print("Tensor det:" + str(det))
                 det[:, :4] = scale_coords(img.shape[2:], det[:, :4], im0.shape).round()
                 BallFound = True
-                self.cont_vision += 1
-                print(self.cont_vision)
-                if (self.cont_vision == 2):
-                    self.status = 1
+                self.status = 1
                 s=1
                 # Write results
                 for *xyxy, conf, cls in reversed(det):
@@ -213,11 +212,14 @@ class ballStatus(Node):
             print(f'{s}Done. ({(1E3 * (t2 - t1)):.1f}ms) Inference, ({(1E3 * (t3 - t2)):.1f}ms) NMS')
 
             # Stream results
+            # winName = 'Prometheus'
+            # cv2.namedWindow(winName, cv2.WINDOW_NORMAL)
+            # cv2.setWindowProperty(winName, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
             if view_img:
                 cv2.imshow(str(0), im0)
                 if cv2.waitKey(25) & 0xFF == ord('q'):
                     NOP
-
+                    
             # print(self.status)
 
             #print(f'Done. ({time.time() - t0:.3f}s)')

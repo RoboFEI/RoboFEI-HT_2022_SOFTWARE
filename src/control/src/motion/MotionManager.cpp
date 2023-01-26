@@ -37,7 +37,6 @@
 #include "custom_interfaces/msg/set_position_original.hpp"
 #include "custom_interfaces/srv/get_position.hpp"
 #include "custom_interfaces/msg/walk.hpp"
-#include "custom_interfaces/msg/param_walk.hpp"
 #include "custom_interfaces/msg/neck_position.hpp"
 
 #define INI_FILE_PATH       "src/control/Data/config.ini"
@@ -125,13 +124,13 @@ void MotionManager::topic_callback(const std::shared_ptr<sensor_msgs::msg::Imu> 
 void MotionManager::topic_callback_walk(const std::shared_ptr<custom_interfaces::msg::Walk> walk_msg_) const
     {
 		X_AMPLITUDE = walk_msg_->walk;
-		RCLCPP_INFO(this->get_logger(), "WALK VALUE: %f", X_AMPLITUDE);
+		//RCLCPP_INFO(this->get_logger(), "WALK VALUE: %f", X_AMPLITUDE);
         Y_AMPLITUDE = walk_msg_->sidle;
-		RCLCPP_INFO(this->get_logger(), "SIDLE VALUE: %f", Y_AMPLITUDE);
+		//RCLCPP_INFO(this->get_logger(), "SIDLE VALUE: %f", Y_AMPLITUDE);
 		A_AMPLITUDE = walk_msg_->turn;
-		RCLCPP_INFO(this->get_logger(), "TURN VALUE: %f", A_AMPLITUDE);
+		//RCLCPP_INFO(this->get_logger(), "TURN VALUE: %f", A_AMPLITUDE);
         walk = walk_msg_->walk_number;
-		printf("MOVEMENT %d\n", walk);
+		//printf("MOVEMENT %d\n", walk);
 		// printf("LAST MOVEMENT %d\n", last_movement);
 		// printf("KEEP WALKING %d\n", MotionManager::GetInstance()->keep_walking);
 
@@ -141,7 +140,7 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<custom_interfaces:
 			MotionManager::GetInstance()->keep_walking=false;
 		}
 		//printf("KEEP WALKING DEPOIS DO IF %d\n", MotionManager::GetInstance()->keep_walking);
-		printf("FASE  %d\n", Walking::GetInstance()->m_Phase);
+		//printf("FASE  %d\n", Walking::GetInstance()->m_Phase);
 		
 		if (MotionManager::GetInstance()->keep_walking==false && Walking::GetInstance()->m_Phase==0){
 			//printf("MOVEMENT DENTRO DO IF %d\n", walk);
@@ -227,11 +226,11 @@ void MotionManager::topic_callback_walk(const std::shared_ptr<custom_interfaces:
 				MotionManager::GetInstance()->SetEnable(true);
 				printf("%d\n", MotionManager::GetInstance()->GetEnable());
 				Walking::GetInstance()->X_MOVE_AMPLITUDE = X_AMPLITUDE; 
-				RCLCPP_INFO(this->get_logger(), "WALK INSIDE WAALKING VALUE: %f", X_AMPLITUDE);
+				//RCLCPP_INFO(this->get_logger(), "WALK INSIDE WAALKING VALUE: %f", X_AMPLITUDE);
 				Walking::GetInstance()->Y_MOVE_AMPLITUDE = Y_AMPLITUDE; 
-				RCLCPP_INFO(this->get_logger(), "SIDLE INSIDE WAALKING VALUE: %f", Y_AMPLITUDE);
+				//RCLCPP_INFO(this->get_logger(), "SIDLE INSIDE WAALKING VALUE: %f", Y_AMPLITUDE);
 				Walking::GetInstance()->A_MOVE_AMPLITUDE = A_AMPLITUDE; 
-				RCLCPP_INFO(this->get_logger(), "TURN INSIDE WAALKING VALUE: %f", A_AMPLITUDE);
+				//RCLCPP_INFO(this->get_logger(), "TURN INSIDE WAALKING VALUE: %f", A_AMPLITUDE);
 				Walking::GetInstance()->Start();
 				// printf("WALKING %d\n", Walking::GetInstance()->IsRunning());
 				// printf("ACTION %d\n", Action::GetInstance()->IsRunning());
@@ -468,7 +467,7 @@ void MotionManager::SaveINISettings(minIni* ini, const std::string &section)
 void MotionManager::Process()
 {
 	// printf("WALK CALLBACK %d \n", walk);
-	printf("FASE  PROCESS %d\n", Walking::GetInstance()->m_Phase);
+	//printf("FASE  PROCESS %d\n", Walking::GetInstance()->m_Phase);
 	if(walk!=0){
 		//RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "dentro do process");
 		if((Walking::GetInstance())->m_Joint.GetEnable(5) == true)

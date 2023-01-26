@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'decision_node = decision_pkg.decision_node:main'
+            'decision_node = decision_pkg.decision_node:main',
+            'decision_action = decision_pkg.decision_action:main'
         ],
     },
 )

@@ -1,7 +1,7 @@
 from setuptools import setup
 
-package_name = 'vision_pkg'
-submodules = "vision_pkg/submodules"
+package_name = 'vision_mobileNet'
+submodules = "vision_mobileNet/submodules"
 
 setup(
     name=package_name,
@@ -21,7 +21,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'vision = vision_pkg.vision:main'
+            'vision = vision_mobileNet.vision:main'
         ],
     },
 )
