@@ -43,10 +43,10 @@ class objectDetect():
         self.config = config
         
         # Path to frozen detection graph. This is the actual model that is used for the object detection.
-        PATH_TO_CKPT = 'src/vision_pkg/src/vision/vision_pkg/submodules/nets/rede/frozen_inference_graph.pb'
+        PATH_TO_CKPT = 'src/vision_mobilenet/src/vision/vision_mobilenet/submodules/nets/rede/frozen_inference_graph.pb'
 
         # List of the strings that is used to add correct label for each box.
-        PATH_TO_LABELS = os.path.join('src/vision_pkg//src/vision/vision_pkg/submodules/nets/rede/object-detection.pbtxt')
+        PATH_TO_LABELS = os.path.join('src/vision_mobilenet//src/vision/vision_mobilenet/submodules/nets/rede/object-detection.pbtxt')
 
         NUM_CLASSES = 1
 

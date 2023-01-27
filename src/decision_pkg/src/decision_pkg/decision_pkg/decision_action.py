@@ -358,14 +358,13 @@ class DecisionNode(Node):
 
                     else: 
                         if(self.BALL_DETECTED == False):
-                            self.ballLeftTimes = 0
-                            self.ballrightTimes = 0
                             self.get_logger().info('BALL NOT FOUND')
-                            #print(self.contador)
+                            # print(self.contador)
                             if (self.contador >= 250):
                                 if(self.cont_falses>=4):
-                                    # self.walking()
                                     self.gait()
+                                    sleep(3)
+                                    self.walking()
                                     sleep(3)
                                     self.cont_falses = 0
                                     self.go_ball += 1
@@ -380,9 +379,31 @@ class DecisionNode(Node):
                                 self.contador += 1
                                 
                         else:
-                            self.get_logger().info('BALL DETECTED ')
-                            self.cont_falses = 0
-                            self.walking()
+                            self.get_logger().info('BALL DETECTED')
+                            if(self.BALL_LEFT):
+                                self.get_logger().info('BALL LEFT: turning left')
+                                self.turn_left()
+                            elif(self.BALL_RIGHT):
+                                self.get_logger().info('BALL RIGHT - turning right')
+                                self.turn_right()
+                            elif(self.BALL_FAR or self.BALL_MED):
+                                self.walking() 
+                            elif (self.BALL_CLOSE):
+                                if(self.neck_position[1]>1345):
+                                    self.get_logger().info("BALL CLOSE AND CENTERED - turning head down to be sure it's close")
+                                    self.turn_head_down()
+                                else:
+                                    if (self.gyro_z < 1.57 and self.gyro_z > -1.57): 
+                                        self.get_logger().info('FACING THE OPPONENT GOAL')
+                                        if (self.BALL_CENTER_LEFT==True):
+                                            self.get_logger().info('LEFT KICK!!!')
+                                            self.kick_left()
+                                        elif (self.BALL_CENTER_RIGHT==True):
+                                            self.get_logger().info('RIGHT KICK!!!')
+                                            self.kick_right()
+                                    else: 
+                                        self.turn_around_ball_clockwise()
+
 
                 elif(self.gamestate == 4): # Jogo terminou, robô sai do campo
                     self.stand_still()

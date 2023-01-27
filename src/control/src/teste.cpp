@@ -129,7 +129,7 @@ private:
         auto message_single = custom_interfaces::msg::SetPositionOriginal();  
         
 
-        vector<int> motors { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 };
+        vector<int> motors { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 };
         vector<vector<int>> position;
         vector<int> address;
         vector<float> sleep;
@@ -151,13 +151,34 @@ private:
         switch (movement) {
             case 1: // Parado
               parameters = false;
-              position = { { 2047,2047,2048,2048,417,3679,2048,2067,2047,2047,2047,2047,2047,2047,2047,2047,2047,2047,2047 },
-                      { 2152, 1942, 2096, 2000, 766, 3328, 2048, 2067, 2047, 2047, 837, 3259, 3028, 1066, 2919, 1175, 2047, 2047, 2047 },
-                      {1111,1111,1111,1111,1111,2048,2048,2048,2048,2060,589,3507,3621,475,2296,1800,2048,2048,2048} };
-              sleep = { 6, 10, 8}; // sleep em SEGUNDOS
-              address = { 116, 116, 112, 116 }; // 116 para definir a posi��o, 112 para modificar a velocidade
-              id = { 254 }; // id dos motores para mudar a velocidade, 254 = todos os motores
-              position_single = { 70 }; // velocidade
+              //             1    2     3   4    5   6    7    8     9   10   11   12   13   14   15   16   17   18   19   20
+              position =  { {1724,2367,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2136,2048,1586} };
+              sleep = { 2 }; // sleep em SEGUNDOS
+              address = { 116 }; // 116 para definir a posição, 112 para modificar a velocidade
+              id = {  }; // id dos motores para mudar a velocidade, 254 = todos os motores
+              position_single = {  }; // velocidade
+              break;
+            case 4: // Left kick OK
+              RCLCPP_INFO(this->get_logger(), "Left kick");
+              parameters = false;
+              //             1    2     3   4    5   6    7    8     9   10   11   12   13   14   15   16   17   18   19        20
+              position =  { {1724,2367,2294,1812,627,3468,2052,2044,2032,2106,1767,2329,2791,1306,2536,1560,2048,2048,2047,cont_vision_up},
+                          {2047,2047,2116,1976,2046,2046,2047,2047,2040,2164,1744,2324,2398,1654,2231,1882,2119,2191,2047,cont_vision_up},
+                          {2047,2047,2648,1957,1240,3598,2047,2047,2040,2144,1726,2348,2398,1472,2238,1823,2152,1974,2047,cont_vision_up}, 
+                          {2047,2047,2579,1957,1240,3587,2047,2047,2040,2144,1616,1738,2508,943,2281,1551,2152,1915,2793,cont_vision_up},
+                          {2047,2047,2579,1957,1240,3587,2047,2047,2040,2144,1616,1738,2508,943,2281,1798,2152,2046,2793,cont_vision_up},
+                          {2047,2047,2579,1957,1240,3587,2047,2047,2040,2144,1616,1738,2508,877,2281,1903,2152,2046,2793,cont_vision_up},
+                          {2047,2047,2579,1957,1240,3587,2047,2047,2040,2144,1616,3215,2508,1534,2216,1798,2152,1991,2793,cont_vision_up},
+                          {2047,2047,2579,1957,1240,3587,2047,2047,2040,2144,1616,1738,2508,877,2205,1903,2152,2046,2793,cont_vision_up},
+                          {2047,2047,2579,1957,1240,3587,2047,2047,2040,2144,1616,1738,2508,943,2205,1798,2152,2046,2793,cont_vision_up},
+                          {2047,2047,2579,1957,1240,3587,2047,2047,2040,2144,1616,1738,2508,943,2205,1551,2152,1915,2793,cont_vision_up},
+                          {2047,2047,2648,1957,1240,3598,2047,2047,2040,2164,1726,2348,2508,1472,2238,1796,2152,2140,2047,cont_vision_up},
+                          {1724,2367,2294,1812,627,3468,2052,2044,2032,2106,1767,2329,2791,1306,2536,1560,2048,2048,2047,cont_vision_up}
+              };
+              sleep = { 3, 3, 1, 1, 3, 2, 3, 2, 1, 1, 1, 2 }; // sleep em SEGUNDOS
+              address = { 116, 112, 116, 116, 116, 116, 112, 112, 112, 116, 112, 112, 112, 116, 112, 116, 116, 116, 112, 112, 116, 116 }; // 116 para definir a posição, 112 para modificar a velocidade
+              id = { 254, 12, 14, 16, 12, 14, 15, 254, 254, 17 }; // id dos motores para mudar a velocidade, 254 = todos os motores
+              position_single = { 15, 8400, 4200, 4200, 15000, 15000, 750, 10, 4000, 10 }; // velocidade
               break;
             case 14: // Walking
               parameters = true;
@@ -175,32 +196,38 @@ private:
               turn = 0; 
               parameter_number = 2;  
               break;
-            case 16: // Stand
+            case 17: // Stand up Front
+              RCLCPP_INFO(this->get_logger(), "Stand Up Front");  
               parameters = false;
-              position = { {2121,1975,2096,2000,2048,2048,2048,2048,2048,2060,589,3507,3621,475,2296,1800,2048,2048,2048},
-                          {2048,2048,2148,1948,1024,3072,2048,2048,2047,2047,1248,2848,3644,452,2848,1248,2047,2047,2047} };
-              sleep = { 9, 7 }; // sleep em SEGUNDOS
-              address = { 116, 112,  116}; // 116 para definir a posi��o, 112 para modificar a velocidade
-              id = { 254 }; // id dos motores para mudar a velocidade, 254 = todos os motores
-              position_single = { 75 }; // velocidade
+              //              1    2     3   4    5   6    7    8     9   10   11   12   13   14   15   16   17   18   19   20
+              position = {  {2047,2047,2183,1896,417,3679,2048,2067,2047,2047,2047,2047,2047,2047,2047,2047,2047,2047,2047,1300},
+                            {2152,1942,2183,1896,766,3328,2048,2067,2047,2047,837,3259,3028,1066,2919,1175,2047,2047,2047,1300},
+                            {2755,1339,2183,1896,2048,2048,2048,2067,2047,2047,837,3259,3275,819,2657,1494,2047,2047,2047,1300},
+                            {2612,1484,2183,1896,2048,2048,2048,2067,2047,2047,837,3259,3574,522,2705,1391,2047,2047,2047,1300},
+                            {2755,1339,2183,1896,2048,2048,2048,2067,2047,2047,841,3259,3644,452,2551,1545,2047,2047,2047,1300},
+                            {2048,2048,2148,1948,1024,3072,2048,2067,2047,2047,1248,2848,3644,452,2848,1248,2047,2047,2047,1300},
+                            {2048,2048,2148,1948,1024,3072,2048,2067,2047,2047,1248,2848,3181,909,2533,1555,2047,2047,2047,1300},
+                            {1724,2372,2217,1878,627,3468,2052,2044,2032,2106,1712,2384,2791,1306,2536,1560,2048,2048,2048,1300}
+                           };
+              sleep = { 3, 1.5, 1.5, 1.5, 1.5, 4, 3, 2 }; // sleep em SEGUNDOS
+              address = { 112, 116, 116, 116, 112, 116, 112, 116, 112, 112, 112, 116, 112, 116, 116}; // 116 para definir a posição, 112 para modificar a velocidade
+              id = { 254, 254, 254, 254, 13, 14, 254 }; // id dos motores para mudar a velocidade, 254 = todos os motores
+              position_single = { 80, 128, 10, 30, 60, 60, 10 }; // velocidade
               break;
         }
 
         if (parameters){
-          while(true){
-            if (goal_handle->is_canceling()) {
-                result->finished = false;
-                goal_handle->canceled(result);
-                RCLCPP_INFO(this->get_logger(), "Goal canceled");
-                return;
-            }
-            message_walk.walk = walk;   
-            message_walk.sidle = sidle;  
-            message_walk.turn = turn; 
-            message_walk.walk_number = parameter_number;  
-            publisher_walk->publish(message_walk);
-            break;
+          if (goal_handle->is_canceling()) {
+              result->finished = false;
+              goal_handle->canceled(result);
+              RCLCPP_INFO(this->get_logger(), "Goal canceled");
+              return;
           }
+          message_walk.walk = walk;   
+          message_walk.sidle = sidle;  
+          message_walk.turn = turn; 
+          message_walk.walk_number = parameter_number;  
+          publisher_walk->publish(message_walk);
         }
         else{
           message_walk.walk_number = 0; 

@@ -50,7 +50,7 @@ class classConfig():
 	def CheckConfig(self):
 		# Read file config.ini
 		#while True:
-		if self.Config.read('src/vision_test/vision_test/config.ini') != []:
+		if self.Config.read('src/vision_mobilenet/src/Data/config.ini') != []:
 			print('Leitura do config.ini')
 			self.CENTER_SERVO_PAN = 	self.Config.getint('Basic Settings', 'center_servo_pan')
 			self.POSITION_SERVO_TILT  = 	self.Config.getint('Basic Settings', 'position_servo_tilt')
@@ -70,7 +70,6 @@ class classConfig():
 			self.cut_edge_image = self.Config.getint('Basic Settings', 'cut_edge_image')
 
 			self.x_left = 			self.Config.getint('Distance Limits (Pixels)', 'Left_Region_Division')
-			print(self.x_left)
 			self.x_center = 		self.Config.getint('Distance Limits (Pixels)', 'Center_Region_Division')
 			self.x_right = 			self.Config.getint('Distance Limits (Pixels)', 'Right_Region_Division')
 			self.y_chute = 			self.Config.getint('Distance Limits (Pixels)', 'Down_Region_Division')
@@ -82,7 +81,7 @@ class classConfig():
 		else:
 			print('Falha na leitura do config.ini, criando arquivo\nVision Ball inexistente, criando valores padrao')
 			self.Config = ConfigParser()
-			self.Config.write('vision_test/vision_test/config.ini')
+			self.Config.write('src/vision_mobilenet/src/Data/config.ini')
 
 			self.Config.add_section('Basic Settings')
 			self.Config.set('Basic Settings', 'center_servo_pan'       , str(512)+'\t\t\t;Center Servo PAN Position')
@@ -111,5 +110,5 @@ class classConfig():
 			self.Config.set('Distance Limits (Pixels)', 'when_ball_up', str(222) + '\t\t\t;Y screen for ball on up screen')
 			self.Config.set('Distance Limits (Pixels)', 'when_ball_dpwn', str(333) + '\t\t\t;Y screen for ball on down screen')	
 
-			with open('src/vision_test/vision_test/config.ini', 'wb') as configfile:
+			with open('src/vision_mobilenet/src/Data/config.ini', 'wb') as configfile:
 				self.Config.write(configfile)

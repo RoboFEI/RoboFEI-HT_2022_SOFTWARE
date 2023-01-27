@@ -198,7 +198,7 @@ def main(args=None):
     # print(neck.position)
     os.system("v4l2-ctl -d /dev/video0 -c focus_auto=0 && v4l2-ctl -d /dev/video0 -c focus_absolute=0")
     os.system("v4l2-ctl -d /dev/video0 -c saturation=150")#manter 200 para nao estourar LARC
-    os.system("v4l2-ctl -d /dev/video0 -c brightness=0")
+    os.system("v4l2-ctl -d /dev/video0 -c brightness=120")
 
     rclpy.spin(ballS)
     

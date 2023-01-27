@@ -1,8 +1,8 @@
 from setuptools import setup
 
-package_name = 'vision_test'
-models = "vision_test/models"
-utils = "vision_test/utils"
+package_name = 'vision_yolov7'
+models = "vision_yolov7/models"
+utils = "vision_yolov7/utils"
 
 setup(
     name=package_name,
@@ -22,7 +22,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'detect = vision_test.detect:main',
+            'detect = vision_yolov7.detect:main',
         ],
     },
 )
